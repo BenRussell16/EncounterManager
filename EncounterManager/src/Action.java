@@ -1,3 +1,4 @@
+package EncounterManager.src;
 
 public abstract class Action {
 

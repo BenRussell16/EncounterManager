@@ -1,3 +1,4 @@
+package EncounterManager.src;
 
 import java.util.ArrayList;
 import java.util.HashMap;

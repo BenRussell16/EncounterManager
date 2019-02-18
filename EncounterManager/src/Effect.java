@@ -1,3 +1,4 @@
+package EncounterManager.src;
 
 public class Effect extends Action{
 	

@@ -1,3 +1,4 @@
+package EncounterManager.src;
 
 public class Attack extends Action{
 	

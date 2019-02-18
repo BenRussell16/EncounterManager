@@ -1,3 +1,4 @@
+package EncounterManager.src;
 
 public class LegendaryAction extends Action {
 	private final int cost;
