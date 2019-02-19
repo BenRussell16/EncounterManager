@@ -1,7 +1,7 @@
 <spell>
 	<name>firebolt</name>
 	<level>0</level>
-	<classes>sorcerer, wizard</classes>
 	<school>evocation</school>
+	<classes>sorcerer,wizard</classes>
 	<source>playershandbook</source>
 </spell>

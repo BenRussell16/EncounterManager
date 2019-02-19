@@ -1,6 +1,8 @@
 package EncounterManager.src.Creatures;
+
 import java.util.List;
 import java.util.Map;
+import EncounterManager.Resources.Source;
 
 public interface Creature {
 	public void constructor(String name, Size size, Type type, Alignment align, int ac, int hp, Map<Speeds,Integer> speed,
@@ -103,8 +105,5 @@ public interface Creature {
 	}
 	public enum Languages{//TODO complete
 		AQUAN,COMMON,DRACONIC,DWARVISH,ELVEN,GOBLIN,ORCISH;
-	}
-	public enum Source{
-		PLAYERSHANDBOOK,MONSTERMANUAL,VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL,TOMBOFANNIHILATION,CUSTOM;
 	}
 }

@@ -1,4 +1,5 @@
 package EncounterManager.src.Creatures;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -7,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+import EncounterManager.Resources.Source;
 
 
 public class CreatureParser {
@@ -39,7 +41,7 @@ public class CreatureParser {
 					List<Action.DamageType> regenBlocks = new ArrayList<Action.DamageType>();
 					List<String> passives = new ArrayList<String>();
 					List<Action> actions = new ArrayList<Action>();
-					List<Creature.Source> sources = new ArrayList<Creature.Source>();
+					List<Source> sources = new ArrayList<Source>();
 					scan.next();
 					
 					while(!scan.hasNext("/creature")) {
@@ -379,7 +381,7 @@ public class CreatureParser {
 						if(scan.hasNext("source")) {
 							scan.next();
 							while(!scan.hasNext("/source")) {
-								for(Creature.Source s:Creature.Source.values()) {
+								for(Source s:Source.values()) {
 									if(scan.hasNext(s.toString().toLowerCase())) {
 										sources.add(s);
 										scan.next();
@@ -415,14 +417,14 @@ public class CreatureParser {
 						List<String> passives = new ArrayList<String>();
 						List<Action> actions = new ArrayList<Action>();
 						int legendaryActions = 0;
-						List<Creature.Source> sources = new ArrayList<Creature.Source>();
+						List<Source> sources = new ArrayList<Source>();
 						
 						public void constructor(String name, Size size, Type type, Alignment align, int ac, int hp, Map<Creature.Speeds,Integer> speed,
 								int[] stats, Map<Creature.Stats,Integer> saves,Map<Skills,Integer> skills,
 								Map<Action.DamageType, Creature.DamageMultiplier> damageMultipliers, List<Creature.StatusCondition> conditionImmunities,
 								Map<Senses,Integer> senses, List<Languages> languages, double cr, int legendaryResistances,  int regen, 
 								List<Action.DamageType> regenBlocks, List<String> passives, List<Action> actions,  int legendaryActions, 
-								List<Creature.Source> sources) {
+								List<Source> sources) {
 							this.name = name;
 							this.size = size;
 							this.type = type;
@@ -608,7 +610,7 @@ public class CreatureParser {
 							if(!getLairActions().isEmpty()) {builtString+="Lair Actions:\n";}
 							for(Action a:actions) {if(a.time==Action.Time.LAIR){builtString+=a.toString()+"\n";}}
 							builtString+="From: ";
-							for(Creature.Source s:sources) {builtString+=s.toString()+"\t";}
+							for(Source s:sources) {builtString+=s.toString()+"\t";}
 							return builtString;
 						}
 					};
