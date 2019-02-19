@@ -30,5 +30,7 @@ public class CreatureBuilder {
 //	lair actions
 //	sources
 
+	
+	//List of existing creatures
 
 }

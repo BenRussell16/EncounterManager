@@ -1,7 +1,14 @@
 <spell>
-	<name>firebolt</name>
+	<name>Firebolt</name>
 	<level>0</level>
 	<school>evocation</school>
 	<classes>sorcerer,wizard</classes>
+	<source>playershandbook</source>
+</spell>
+<spell>
+	<name>Charm person</name>
+	<level>1</level>
+	<school>enchantment</school>
+	<classes>bard,druid,sorcerer,warlock,wizard</classes>
 	<source>playershandbook</source>
 </spell>

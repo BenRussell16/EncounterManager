@@ -113,7 +113,7 @@ public class SpellParser {
 				else {/*System.out.println(*/scan.next()/*)*/;}//Skip to next spell
 			}//where parsing ends
 			scan.close();
-			System.out.println("Parsing complete");
+			System.out.println("Spell parsing complete");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

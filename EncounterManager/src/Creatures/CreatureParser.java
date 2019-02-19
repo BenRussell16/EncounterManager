@@ -623,7 +623,7 @@ public class CreatureParser {
 				else {/*System.out.println(*/scan.next()/*)*/;}
 			}//where parsing ends
 			scan.close();
-			System.out.println("Parsing complete");
+			System.out.println("Creature parsing complete");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}

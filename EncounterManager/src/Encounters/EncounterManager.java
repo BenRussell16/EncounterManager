@@ -8,6 +8,9 @@ import java.util.Map;
 import EncounterManager.src.Creatures.Action;
 import EncounterManager.src.Creatures.Creature;
 import EncounterManager.src.Creatures.CreatureParser;
+import EncounterManager.src.Spells.Spell;
+import EncounterManager.src.Spells.SpellBuilder;
+import EncounterManager.src.Spells.SpellParser;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -30,9 +33,11 @@ public class EncounterManager extends Application{
 	//TODO lair actions
 	
 	//TODO fancy grid shit? lighting?
-	
+
 	private List<Creature> creatures;
+	private List<Spell> spells;
 	private EncounterBuilder builder;
+	private SpellBuilder spellbuilder;
 
 	public static void main(String[] args) {
 		launch(args);
@@ -40,7 +45,9 @@ public class EncounterManager extends Application{
 	
 	public EncounterManager() {
 		creatures = new CreatureParser().Parse();
+		spells = new SpellParser().Parse();
 		builder = new EncounterBuilder(creatures, this);
+		spellbuilder = new SpellBuilder(spells);
 	}
 
 	private GridPane encounterPanel;
@@ -76,6 +83,13 @@ public class EncounterManager extends Application{
         			}
         		});
         grid.add(loadEncounter,2,0);
+
+        Button spellButton = new Button("Spells");//Creates a button for spawning SpellBuilder windows
+        spellButton.setOnAction(new EventHandler<ActionEvent>() {
+        			@Override
+        			public void handle(ActionEvent event) {spellbuilder.makeDisplay();}
+        		});
+        grid.add(spellButton,3,0);
         
         encounterPanel = new GridPane();
         encounterPanel.setVgap(10);

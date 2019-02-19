@@ -135,7 +135,7 @@ public class EncounterBuilder {
 			
 			//TODO build queries
 			GridPane topBar = new GridPane();
-				Button export = new Button("Export enounter");
+				Button export = new Button("Export encounter");
 				export.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
