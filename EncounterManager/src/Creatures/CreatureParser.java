@@ -1,4 +1,4 @@
-package EncounterManager.src;
+package EncounterManager.src.Creatures;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class CreatureParser {
 		Scanner scan;
 		List<Creature> creatures = new ArrayList<Creature>();
 		try {
-			scan = new Scanner(new File("CreatureList"));
+			scan = new Scanner(new File("EncounterManager/Resources/CreatureList"));
 			scan.useDelimiter("<|>|\n|\t| |,");
 			while(scan.hasNext()) {
 				if(scan.hasNext("creature")) {

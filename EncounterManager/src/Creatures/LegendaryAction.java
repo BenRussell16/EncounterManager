@@ -1,4 +1,4 @@
-package EncounterManager.src;
+package EncounterManager.src.Creatures;
 
 public class LegendaryAction extends Action {
 	private final int cost;

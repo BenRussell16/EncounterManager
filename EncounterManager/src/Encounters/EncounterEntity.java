@@ -1,6 +1,9 @@
-package EncounterManager.src;
+package EncounterManager.src.Encounters;
 import java.util.ArrayList;
 import java.util.List;
+
+import EncounterManager.src.Creatures.Action;
+import EncounterManager.src.Creatures.Creature;
 
 public class EncounterEntity {
 	//TODO limited use actions/spells

@@ -1,4 +1,4 @@
-package EncounterManager.src;
+package EncounterManager.src.Creatures;
 
 public class Effect extends Action{
 	

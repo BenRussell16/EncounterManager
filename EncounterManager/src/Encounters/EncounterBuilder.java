@@ -1,9 +1,10 @@
-package EncounterManager.src;
+package EncounterManager.src.Encounters;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import EncounterManager.src.Creatures.Creature;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.beans.value.ChangeListener;

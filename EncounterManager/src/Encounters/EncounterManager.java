@@ -1,10 +1,13 @@
-package EncounterManager.src;
+package EncounterManager.src.Encounters;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import EncounterManager.src.Creatures.Action;
+import EncounterManager.src.Creatures.Creature;
+import EncounterManager.src.Creatures.CreatureParser;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
