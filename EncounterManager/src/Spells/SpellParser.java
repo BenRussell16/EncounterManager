@@ -70,7 +70,7 @@ public class SpellParser {
 							scan.next();
 							while(!scan.hasNext("/source")) {
 								for(Source s:Source.values()) {
-									if(scan.hasNext(s.toString().toLowerCase())) {
+									if(scan.hasNext(s.name().toLowerCase())) {
 										sources.add(s);
 										scan.next();
 									}
@@ -90,7 +90,7 @@ public class SpellParser {
 						List<Classes> classes = null;
 						List<Source> sources = null;
 						
-						public void constructor(String name, int level, School school, List<Classes> classes, List<Source> source){
+						public void constructor(String name, int level, School school, List<Classes> classes, List<Source> sources){
 							this.name = name;
 							this.level = level;
 							this.school = school;
@@ -104,7 +104,6 @@ public class SpellParser {
 						@Override public List<Classes> getClasses() {return classes;}
 						@Override public boolean fromClass(Classes curClass) {return classes.contains(curClass);}
 						@Override public boolean fromSource(Source source) {return sources.contains(source);}
-						
 						@Override public String toString() {return name;}
 					};
 					current.constructor(name, level, school, classes, sources);

@@ -50,32 +50,21 @@ public class SpellBuilder {
       	
       		query = new ArrayList<Spell>();
       		query.addAll(spells);
-			List<Label> amounts = new ArrayList<Label>();
 			names = new ArrayList<Label>();
 			levels = new ArrayList<Label>();
 			
 			GridPane topBar = new GridPane();
-			//TODO make a button to save new spells
-//				Button export = new Button("Export enounter");
-//				export.setOnAction(new EventHandler<ActionEvent>() {
-//					@Override
-//					public void handle(ActionEvent event) {
-//						System.out.println("Exporting encounter");
-//						List<EncounterEntity> encounter = new ArrayList<EncounterEntity>();
-//						for(Creature c:creatures) {
-//							if(built.get(c)==1) {
-//								encounter.add(new EncounterEntity(c,c.getName()));
-//							}else {
-//								for(int i=0; i<built.get(c); i++) {
-//									encounter.add(new EncounterEntity(c,c.getName()+" "+(i+1)));
-//								}
-//							}
-//						}
-//						secondaryStage.close();
-//						mainWindow.showEncounter(encounter);
-//					}
-//				});
-//				topBar.add(export, 0, 0);
+			
+				Button save = new Button("Save changes");
+				save.setOnAction(new EventHandler<ActionEvent>() {
+					@Override
+					public void handle(ActionEvent event) {
+						System.out.println("Saving spells");
+						//TODO - Save the new spells. create a new XML?
+							//include sort. sort alphabetically then iterate by level?
+					}
+				});
+				topBar.add(save, 0, 0);
 				
 			
 				Label label = new Label("\t\t");topBar.add(label, 1, 0);//TODO make this not suck
@@ -174,7 +163,7 @@ public class SpellBuilder {
       		ScrollPane sp = new ScrollPane();//allow scrolling down the spell list
       		spellList = new GridPane();
       		spellList.setHgap(10);
-	  		label = new Label(" Spells");//make the list of spells and their levels
+	  		label = new Label(" Spell");//make the list of spells and their levels
 	  		spellList.add(label, 0, 0);
 	  		label = new Label(" Level");
 	  		spellList.add(label, 1, 0);
@@ -246,7 +235,6 @@ public class SpellBuilder {
 			sourceSelect.setValue(null);
 	      	curSpell.add(sourceSelect, 1, 4);
 	      	
-//	      	Apply button
 			Button add = new Button("Add spell");
 			add.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
@@ -258,7 +246,7 @@ public class SpellBuilder {
 						List<Classes> classes = null;
 						List<Source> sources = null;
 						
-						public void constructor(String name, int level, School school, List<Classes> classes, List<Source> source){
+						public void constructor(String name, int level, School school, List<Classes> classes, List<Source> sources){
 							this.name = name;
 							this.level = level;
 							this.school = school;
@@ -272,7 +260,6 @@ public class SpellBuilder {
 						@Override public List<Classes> getClasses() {return classes;}
 						@Override public boolean fromClass(Classes curClass) {return classes.contains(curClass);}
 						@Override public boolean fromSource(Source source) {return sources.contains(source);}
-						
 						@Override public String toString() {return name;}
 					};
 					
@@ -310,7 +297,7 @@ public class SpellBuilder {
 	      	
 	      	
 	    //make the window
-	    secondaryStage.setScene(new Scene(grid, 800, 600));
+	    secondaryStage.setScene(new Scene(grid, 850, 400));
 		secondaryStage.show();
 		return secondaryStage;
 	}
