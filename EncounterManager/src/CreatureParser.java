@@ -14,7 +14,7 @@ public class CreatureParser {
 		Scanner scan;
 		List<Creature> creatures = new ArrayList<Creature>();
 		try {
-			scan = new Scanner(new File("EncounterManager/src/CreatureList"));
+			scan = new Scanner(new File("CreatureList"));
 			scan.useDelimiter("<|>|\n|\t| |,");
 			while(scan.hasNext()) {
 				if(scan.hasNext("creature")) {
