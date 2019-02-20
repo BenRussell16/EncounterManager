@@ -48,10 +48,14 @@ public interface Spell {
 	public enum School{
 		ABJURATION,CONJURATION,DIVINATION,ENCHANTMENT,
 		EVOCATION,ILLUSION,NECROMANCY,TRANSMUTATION;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum Classes{
 		// Barbarian, Bard, Cleric, Druid, Fighter, Monk,
 			// Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard
 		BARD,CLERIC,DRUID,PALADIN,RANGER,SORCERER,WARLOCK,WIZARD;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 }

@@ -101,7 +101,7 @@ public class SpellParser {
 						@Override public String toString() {
 							String builtString = name+"\n";
 							//Nicely formatted level and school
-							if(getLevel()==0){builtString += getSchool()+" cantrip\n";}
+							if(getLevel()==0){builtString += getSchool().toNiceString()+" cantrip\n";}
 							else{
 								builtString += getLevel();
 								switch (getLevel()){
@@ -110,7 +110,7 @@ public class SpellParser {
 								case 3:	builtString+="rd";break;
 								default:builtString+="th";break;
 								}
-								builtString += " level "+getSchool()+"\n";
+								builtString += " level "+getSchool().toNiceString()+"\n";
 							}
 							
 							builtString += "Classes: ";
@@ -118,7 +118,7 @@ public class SpellParser {
 							for(Classes c:Classes.values()){
 								if(fromClass(c)){
 									if(i>0){builtString+=",";}
-									builtString+=c.toString();
+									builtString+=c.toNiceString();
 									i++;
 								}
 							}
@@ -127,7 +127,7 @@ public class SpellParser {
 							for(Source s:Source.values()){
 								if(fromSource(s)){
 									if(i>0){builtString+=",";}
-									builtString+=s.toString();
+									builtString+=s.toNiceString();
 									i++;
 								}
 							}

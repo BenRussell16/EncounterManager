@@ -22,6 +22,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 
 @SuppressWarnings("restriction")
 public class SpellBuilder {
@@ -84,7 +85,7 @@ public class SpellBuilder {
 						for(int i=0; i<spells.size(); i++){xml+=spells.get(i).toXML();}
 						//Save the new spells.
 						try (PrintWriter out = new PrintWriter(new File("EncounterManager/Resources/SpellList"))) {
-						    out.println(xml);
+						    out.print(xml);
 						    System.out.println("Spell saving complete");
 						} catch (FileNotFoundException e) {
 							e.printStackTrace();
@@ -106,16 +107,40 @@ public class SpellBuilder {
 				schoolPicker.getItems().add(null);
 				schoolPicker.getItems().addAll(Spell.School.values());
 				schoolPicker.setValue(null);
+				schoolPicker.setConverter(new StringConverter<School>(){
+					@Override public School fromString(String arg0) {// TODO Auto-generated method stub
+						return null;}
+					@Override public String toString(School school) {
+						if(school != null){
+							return school.toNiceString();}
+						return null;
+					}});
 				
 				ChoiceBox<Classes> classPicker = new ChoiceBox<Classes>(FXCollections.observableArrayList());
 				classPicker.getItems().add(null);
 				classPicker.getItems().addAll(Spell.Classes.values());
 				classPicker.setValue(null);
+				classPicker.setConverter(new StringConverter<Classes>(){
+					@Override public Classes fromString(String arg0) {// TODO Auto-generated method stub
+						return null;}
+					@Override public String toString(Classes classes) {
+						if(classes != null){
+							return classes.toNiceString();}
+						return null;
+					}});
 				
 				ChoiceBox<Source> sourcePicker = new ChoiceBox<Source>(FXCollections.observableArrayList());
 				sourcePicker.getItems().add(null);
 				sourcePicker.getItems().addAll(Source.values());
 				sourcePicker.setValue(null);
+				sourcePicker.setConverter(new StringConverter<Source>(){
+					@Override public Source fromString(String arg0) {// TODO Auto-generated method stub
+						return null;}
+					@Override public String toString(Source source) {
+						if(source != null){
+							return source.toNiceString();}
+						return null;
+					}});
 				
 				//Define the filtering action
 				EventHandler<ActionEvent> filterQuery =new EventHandler<ActionEvent>() {
@@ -229,6 +254,14 @@ public class SpellBuilder {
 			schoolSelect.getItems().add(null);
 			schoolSelect.getItems().addAll(Spell.School.values());
 			schoolSelect.setValue(null);
+			schoolSelect.setConverter(new StringConverter<School>(){
+				@Override public School fromString(String arg0) {// TODO Auto-generated method stub
+					return null;}
+				@Override public String toString(School school) {
+					if(school != null){
+						return school.toNiceString();}
+					return null;
+				}});
 	      	curSpell.add(schoolSelect, 1, 2);
 
 	      	label = new Label(" Classes");
@@ -259,6 +292,14 @@ public class SpellBuilder {
 			sourceSelect.getItems().add(null);
 			sourceSelect.getItems().addAll(Source.values());
 			sourceSelect.setValue(null);
+			sourceSelect.setConverter(new StringConverter<Source>(){
+				@Override public Source fromString(String arg0) {// TODO Auto-generated method stub
+					return null;}
+				@Override public String toString(Source source) {
+					if(source != null){
+						return source.toNiceString();}
+					return null;
+				}});
 	      	curSpell.add(sourceSelect, 1, 4);
 	      	
 			Button add = new Button("Add spell");
