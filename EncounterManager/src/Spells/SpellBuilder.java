@@ -1,5 +1,8 @@
 package EncounterManager.src.Spells;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,14 +63,38 @@ public class SpellBuilder {
 					@Override
 					public void handle(ActionEvent event) {
 						System.out.println("Saving spells");
-						//TODO - Save the new spells. create a new XML?
-							//include sort. sort alphabetically then iterate by level?
+						//Perform a bubble sort to place new spells in the list.
+						Spell slot;
+						boolean sorted = false;
+						while(!sorted){
+							sorted = true;
+							for(int i=spells.size()-1; i>0; i--){
+								if(spells.get(i).getLevel()<spells.get(i-1).getLevel()
+									|| (spells.get(i).getLevel()==spells.get(i-1).getLevel()
+										&& spells.get(i).getName().compareToIgnoreCase(spells.get(i-1).getName())<0)){
+									sorted = false;
+									slot = spells.get(i);
+									spells.set(i, spells.get(i-1));
+									spells.set(i-1, slot);
+								}
+							}
+						}
+						//Build the new XML string
+						String xml = "";
+						for(int i=0; i<spells.size(); i++){xml+=spells.get(i).toXML();}
+						//Save the new spells.
+						try (PrintWriter out = new PrintWriter(new File("EncounterManager/Resources/SpellList"))) {
+						    out.println(xml);
+						    System.out.println("Spell saving complete");
+						} catch (FileNotFoundException e) {
+							e.printStackTrace();
+						}
 					}
 				});
 				topBar.add(save, 0, 0);
 				
 			
-				Label label = new Label("\t\t");topBar.add(label, 1, 0);//TODO make this not suck
+				Label label = new Label("\t\t");topBar.add(label, 1, 0);
 				//Set up filter inputs
 				TextField nameFilter = new TextField();
 
@@ -130,7 +157,6 @@ public class SpellBuilder {
 							for(Spell s:toRemove) {query.remove(s);}
 						}
 						if(sourcePicker.getValue()!=null) {//source filter
-							//TODO - fix
 							List<Spell> toRemove = new ArrayList<Spell>();
 							for(Spell s:query) {
 								if(!s.fromSource(sourcePicker.getValue())) {

@@ -7,16 +7,10 @@ import java.util.List;
 import java.util.Scanner;
 
 import EncounterManager.Resources.Source;
-import EncounterManager.src.Creatures.Creature;
 import EncounterManager.src.Spells.Spell.Classes;
 import EncounterManager.src.Spells.Spell.School;
 
 public class SpellParser {
-
-	public SpellParser() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public List<Spell> Parse() {
 		Scanner scan;
 		List<Spell> spells = new ArrayList<Spell>();
@@ -49,7 +43,7 @@ public class SpellParser {
 						if(scan.hasNext("school")) {
 							scan.next();
 							for(Spell.School s:Spell.School.values()) {
-								if(scan.hasNext(s.toString().toLowerCase())) {school = s;}
+								if(scan.hasNext(s.toString())) {school = s;}
 							}
 							scan.next();
 							scan.next();
@@ -58,7 +52,7 @@ public class SpellParser {
 							scan.next();
 							while(!scan.hasNext("/classes")) {
 								for(Spell.Classes c:Spell.Classes.values()) {
-									if(scan.hasNext(c.toString().toLowerCase())) {
+									if(scan.hasNext(c.toString())) {
 										classes.add(c);
 										scan.next();
 									}
@@ -70,7 +64,7 @@ public class SpellParser {
 							scan.next();
 							while(!scan.hasNext("/source")) {
 								for(Source s:Source.values()) {
-									if(scan.hasNext(s.name().toLowerCase())) {
+									if(scan.hasNext(s.name())) {
 										sources.add(s);
 										scan.next();
 									}
@@ -104,7 +98,41 @@ public class SpellParser {
 						@Override public List<Classes> getClasses() {return classes;}
 						@Override public boolean fromClass(Classes curClass) {return classes.contains(curClass);}
 						@Override public boolean fromSource(Source source) {return sources.contains(source);}
-						@Override public String toString() {return name;}
+						@Override public String toString() {
+							String builtString = name+"\n";
+							//Nicely formatted level and school
+							if(getLevel()==0){builtString += getSchool()+" cantrip\n";}
+							else{
+								builtString += getLevel();
+								switch (getLevel()){
+								case 1: builtString+="st";break;
+								case 2: builtString+="nd";break;
+								case 3:	builtString+="rd";break;
+								default:builtString+="th";break;
+								}
+								builtString += " level "+getSchool()+"\n";
+							}
+							
+							builtString += "Classes: ";
+							int i=0;
+							for(Classes c:Classes.values()){
+								if(fromClass(c)){
+									if(i>0){builtString+=",";}
+									builtString+=c.toString();
+									i++;
+								}
+							}
+							builtString += "\nSource: ";
+							i=0;
+							for(Source s:Source.values()){
+								if(fromSource(s)){
+									if(i>0){builtString+=",";}
+									builtString+=s.toString();
+									i++;
+								}
+							}
+							return builtString;
+						}
 					};
 					current.constructor(name, level, school, classes, sources);
 					spells.add(current);

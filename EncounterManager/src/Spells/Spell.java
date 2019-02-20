@@ -2,8 +2,6 @@ package EncounterManager.src.Spells;
 
 import java.util.List;
 import EncounterManager.Resources.Source;
-import EncounterManager.src.Spells.Spell.Classes;
-import EncounterManager.src.Spells.Spell.School;
 
 public interface Spell {
 
@@ -42,7 +40,7 @@ public interface Spell {
 			}
 		}
 		builtString += "</source>\n";
-		builtString += "</spell>";
+		builtString += "</spell>\n";
 		return builtString;
 	}
 	

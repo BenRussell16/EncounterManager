@@ -1,14 +1,29 @@
 <spell>
 	<name>Firebolt</name>
 	<level>0</level>
-	<school>evocation</school>
-	<classes>sorcerer,wizard</classes>
-	<source>playershandbook</source>
+	<school>EVOCATION</school>
+	<classes>SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
 	<name>Charm person</name>
 	<level>1</level>
-	<school>enchantment</school>
-	<classes>bard,druid,sorcerer,warlock,wizard</classes>
-	<source>playershandbook</source>
+	<school>ENCHANTMENT</school>
+	<classes>BARD,DRUID,SORCERER,WARLOCK,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
 </spell>
+<spell>
+	<name>Blink</name>
+	<level>3</level>
+	<school>TRANSMUTATION</school>
+	<classes>SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Fireball</name>
+	<level>3</level>
+	<school>EVOCATION</school>
+	<classes>SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+
