@@ -15,7 +15,7 @@ public class SpellParser {
 		Scanner scan;
 		List<Spell> spells = new ArrayList<Spell>();
 		try {
-			scan = new Scanner(new File("EncounterManager/Resources/SpellList"));
+			scan = new Scanner(new File("Resources/SpellList"));
 			scan.useDelimiter("<|>|\n|\t| |,");
 			while(scan.hasNext()) {
 				if(scan.hasNext("spell")) {
