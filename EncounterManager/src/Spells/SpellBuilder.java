@@ -47,7 +47,7 @@ public class SpellBuilder {
 	public Stage makeDisplay() {
 		if(secondaryStage != null) {secondaryStage.close();}
 		secondaryStage = new Stage();//make the window
-		secondaryStage.setTitle("Spells");
+		secondaryStage.setTitle("Spell List");
 		GridPane grid = new GridPane();
         grid.setHgap(10);
       	grid.setVgap(10);
@@ -105,7 +105,7 @@ public class SpellBuilder {
 				
 				ChoiceBox<School> schoolPicker = new ChoiceBox<School>(FXCollections.observableArrayList());
 				schoolPicker.getItems().add(null);
-				schoolPicker.getItems().addAll(Spell.School.values());
+				schoolPicker.getItems().addAll(School.values());
 				schoolPicker.setValue(null);
 				schoolPicker.setConverter(new StringConverter<School>(){
 					@Override public School fromString(String arg0) {// TODO Auto-generated method stub
@@ -118,7 +118,7 @@ public class SpellBuilder {
 				
 				ChoiceBox<Classes> classPicker = new ChoiceBox<Classes>(FXCollections.observableArrayList());
 				classPicker.getItems().add(null);
-				classPicker.getItems().addAll(Spell.Classes.values());
+				classPicker.getItems().addAll(Classes.values());
 				classPicker.setValue(null);
 				classPicker.setConverter(new StringConverter<Classes>(){
 					@Override public Classes fromString(String arg0) {// TODO Auto-generated method stub
@@ -374,7 +374,7 @@ public class SpellBuilder {
 			boolean visible = query.contains(spells.get(i));
 			Label curName = names.get(i);
 			Label curLevel = levels.get(i);
-			curName.setVisible(visible);//hide the spell in the list for excluded creatures
+			curName.setVisible(visible);//hide the entry in the list for excluded spells
 			curLevel.setVisible(visible);
 			if(!visible) {
 				spellList.getChildren().remove(curName);

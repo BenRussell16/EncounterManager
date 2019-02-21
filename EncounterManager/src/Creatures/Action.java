@@ -5,10 +5,14 @@ public abstract class Action {
 	public enum Time{
 		ACTION,BONUS,MOVE,REACTION,
 		FREE,LAIR,LEGENDARY;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum Shape{
 		SELF,SINGLE,CONE,LINE,
 		CYLINDER,SPHERE,CUBE;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum DamageType{
 		ACID,BLUDGEONING,COLD,FIRE,FORCE,
@@ -16,6 +20,8 @@ public abstract class Action {
 		RADIANT,SLASHING,THUNDER,
 		NONMAGICALBASIC,
 		HEALING;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	protected final String name;
 	protected final int recharge;

@@ -48,37 +48,67 @@ public interface Creature {
 	
 	public static int scoreToMod(int score) {return (score-10)/2;}
 
+	
+	
+	
+	
+	
 	public enum DamageMultiplier{
 		IMMUNITY(0),RESISTANCE(0.5),NONE(1),VULNERABILITY(2),HEALING(-1);
 		private double multiplier;
 		private DamageMultiplier(double multiplier) {this.multiplier = multiplier;}
 		public double getMult() {return multiplier;}
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum Size {
 		TINY(1/4),SMALL(1),MEDIUM(1),LARGE(2),HUGE(3),GARGANTUAN(4);
 		private float squares;
 		private Size(float squares) {this.squares = squares;}
 		public float getSquares() {return squares;}
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
-	public enum Type{//TODO humanoid subtypes
+	public enum Type{
 		ABBERATION,BEAST,CELESTIAL,CONSTRUCT,
 		DRAGON,ELEMENTAL,FEY,FIEND,
 		GIANT,HUMANOID,MONSTOSITY,OOZE,
 		PLANT,UNDEAD;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
+		//TODO - make these work.
+		private enum fiendSubype{
+			DEMON,DEVIL;
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
+		private enum humanoidSubype{
+			HUMAN,ELF,ORC;//TODO humanoid subtypes
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
 	}
 	public enum Region{
 		ARCTIC,COAST,DESERT,FOREST,
 		GRASSLAND,MOUNTAIN,SWAMP,UNDERDARK,
 		URBAN;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum Alignment{
-		LG,NG,CG,
-		LN,TN,CN,
-		LE,NE,CE,
-		UNALIGNED;
+		LG("Lawful Good"),NG("Neutral Good"),CG("Chaotic Good"),
+		LN("Lawful Neutral"),TN("True Neutral"),CN("Chaotic neutral"),
+		LE("Lawful Evil"),NE("Neutral Evil"),CE("Chaotic Evil"),
+		UNALIGNED("Unaligned");
+		
+		private String niceFormat;
+		private Alignment(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	public enum Speeds{//TODO complete
 		WALK,SWIM,CLIMB,FLY,BURROW;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum StatusCondition{
 		BLINDED,CHARMED,
@@ -89,6 +119,8 @@ public interface Creature {
 		PRONE,RESTRAINED,
 		STUNNED,UNCONCIOUS,
 		EXHAUSTION;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum Stats{
 		STR,DEX,CON,INT,WIS,CHA;
@@ -99,11 +131,19 @@ public interface Creature {
 		INVESTIGATION,MEDICINE,NATURE,PERCEPTION,
 		PERFORMANCE,PERSUASION,RELIGION,SLIGHTOFHAND,
 		STEALTH,SURVIVAL;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum Senses{//TODO complete
 		DARKVISION,BLINDSIGHT,TRUESIGHT;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 	public enum Languages{//TODO complete
-		AQUAN,COMMON,DRACONIC,DWARVISH,ELVEN,GOBLIN,ORCISH;
+		COMMON,DRACONIC,DWARVISH,ELVEN,
+		GOBLIN,ORCISH,
+		AQUAN;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
 	}
 }

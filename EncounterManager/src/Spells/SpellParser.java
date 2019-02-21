@@ -117,7 +117,7 @@ public class SpellParser {
 							int i=0;
 							for(Classes c:Classes.values()){
 								if(fromClass(c)){
-									if(i>0){builtString+=",";}
+									if(i>0){builtString+=", ";}
 									builtString+=c.toNiceString();
 									i++;
 								}
@@ -126,7 +126,7 @@ public class SpellParser {
 							i=0;
 							for(Source s:Source.values()){
 								if(fromSource(s)){
-									if(i>0){builtString+=",";}
+									if(i>0){builtString+=", ";}
 									builtString+=s.toNiceString();
 									i++;
 								}

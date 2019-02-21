@@ -7,6 +7,7 @@ import java.util.Map;
 
 import EncounterManager.src.Creatures.Action;
 import EncounterManager.src.Creatures.Creature;
+import EncounterManager.src.Creatures.CreatureBuilder;
 import EncounterManager.src.Creatures.CreatureParser;
 import EncounterManager.src.Spells.Spell;
 import EncounterManager.src.Spells.SpellBuilder;
@@ -38,6 +39,7 @@ public class EncounterManager extends Application{
 	private List<Spell> spells;
 	private EncounterBuilder builder;
 	private SpellBuilder spellbuilder;
+	private CreatureBuilder creaturebuilder;
 
 	public static void main(String[] args) {
 		launch(args);
@@ -48,6 +50,7 @@ public class EncounterManager extends Application{
 		spells = new SpellParser().Parse();
 		builder = new EncounterBuilder(creatures, this);
 		spellbuilder = new SpellBuilder(spells);
+		creaturebuilder = new CreatureBuilder(creatures);
 	}
 
 	private GridPane encounterPanel;
@@ -84,12 +87,19 @@ public class EncounterManager extends Application{
         		});
         grid.add(loadEncounter,2,0);
 
-        Button spellButton = new Button("Spells");//Creates a button for spawning SpellBuilder windows
+        Button creatureButton = new Button("Creature list");//Creates a button for spawning CreatureBuilder windows
+        creatureButton.setOnAction(new EventHandler<ActionEvent>() {
+        			@Override
+        			public void handle(ActionEvent event) {creaturebuilder.makeDisplay();}
+        		});
+        grid.add(creatureButton,3,0);
+
+        Button spellButton = new Button("Spell list");//Creates a button for spawning SpellBuilder windows
         spellButton.setOnAction(new EventHandler<ActionEvent>() {
         			@Override
         			public void handle(ActionEvent event) {spellbuilder.makeDisplay();}
         		});
-        grid.add(spellButton,3,0);
+        grid.add(spellButton,4,0);
         
         encounterPanel = new GridPane();
         encounterPanel.setVgap(10);

@@ -6,6 +6,55 @@
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Guidance</name>
+	<level>0</level>
+	<school>DIVINATION</school>
+	<classes>CLERIC,DRUID</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Light</name>
+	<level>0</level>
+	<school>EVOCATION</school>
+	<classes>BARD,CLERIC,SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Mending</name>
+	<level>0</level>
+	<school>TRANSMUTATION</school>
+	<classes>BARD,CLERIC,DRUID,SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Resistance</name>
+	<level>0</level>
+	<school>ABJURATION</school>
+	<classes>CLERIC,DRUID</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Sacred flame</name>
+	<level>0</level>
+	<school>EVOCATION</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Spare the dying</name>
+	<level>0</level>
+	<school>NECROMANCY</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Thaumaturgy</name>
+	<level>0</level>
+	<school>TRANSMUTATION</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Charm person</name>
 	<level>1</level>
 	<school>ENCHANTMENT</school>
