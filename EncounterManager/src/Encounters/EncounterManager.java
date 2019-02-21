@@ -62,20 +62,29 @@ public class EncounterManager extends Application{
         //grid.setAlignment(Pos.UPPER_LEFT);
         grid.setHgap(10);
       	grid.setVgap(10);
+      	GridPane encounterBar = new GridPane();
+      	encounterBar.setHgap(10);
+      	GridPane creatureBar = new GridPane();
+      	creatureBar.setHgap(10);
+      	GridPane spellBar = new GridPane();
+      	spellBar.setHgap(10);
 
+      	Label label = new Label(" Encounter management");
+      	grid.add(label,0,0);
+      	
         Button encounterBuilderSpawner = new Button("Encounter builder");//Creates a button for spawning EncounterBuilder windows
         encounterBuilderSpawner.setOnAction(new EventHandler<ActionEvent>() {
         			@Override
         			public void handle(ActionEvent event) {builder.makeDisplay();}
         		});
-        grid.add(encounterBuilderSpawner,0,0);
+        encounterBar.add(encounterBuilderSpawner,0,0);
 
         Button saveEncounter = new Button("Save encounter");//Creates a button for saving encounters
         saveEncounter.setOnAction(new EventHandler<ActionEvent>() {
         			@Override
         			public void handle(ActionEvent event) {saveEncounter(encounterEntities);}
         		});
-        grid.add(saveEncounter,1,0);
+        encounterBar.add(saveEncounter,1,0);
 
         Button loadEncounter = new Button("Load encounter");//Creates a button for loading encounters
         loadEncounter.setOnAction(new EventHandler<ActionEvent>() {
@@ -85,25 +94,46 @@ public class EncounterManager extends Application{
         				showEncounter(encounterEntities);
         			}
         		});
-        grid.add(loadEncounter,2,0);
+        encounterBar.add(loadEncounter,2,0);
+        
+        grid.add(encounterBar,1,0);
 
+
+      	label = new Label(" Creature management");
+      	grid.add(label,0,1);
+      	
         Button creatureButton = new Button("Creature list");//Creates a button for spawning CreatureBuilder windows
         creatureButton.setOnAction(new EventHandler<ActionEvent>() {
         			@Override
         			public void handle(ActionEvent event) {creaturebuilder.makeDisplay();}
         		});
-        grid.add(creatureButton,3,0);
+        creatureBar.add(creatureButton,0,0);
+        
+        grid.add(creatureBar,1,1);
 
+
+      	label = new Label(" Spell management");
+      	grid.add(label,0,2);
+      	
         Button spellButton = new Button("Spell list");//Creates a button for spawning SpellBuilder windows
         spellButton.setOnAction(new EventHandler<ActionEvent>() {
         			@Override
         			public void handle(ActionEvent event) {spellbuilder.makeDisplay();}
         		});
-        grid.add(spellButton,4,0);
+        spellBar.add(spellButton,0,0);
+      	
+        Button spellBookButton = new Button("Spellbook");//Creates a button for spawning Spellbook windows
+        spellButton.setOnAction(new EventHandler<ActionEvent>() {
+        			@Override
+        			public void handle(ActionEvent event) {spellbuilder.makeDisplay();}
+        		});
+        spellBar.add(spellBookButton,1,0);
+
+        grid.add(spellBar,1,2);
         
         encounterPanel = new GridPane();
         encounterPanel.setVgap(10);
-        grid.add(encounterPanel, 0, 1, 3, 2);
+        grid.add(encounterPanel, 0, 3);
         
         primaryStage.setScene(new Scene(grid, 600, 500));
         primaryStage.show();
