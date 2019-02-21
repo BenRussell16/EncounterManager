@@ -10,6 +10,7 @@ import src.Creatures.Creature;
 import src.Creatures.CreatureBuilder;
 import src.Creatures.CreatureParser;
 import src.Spells.Spell;
+import src.Spells.SpellBook;
 import src.Spells.SpellBuilder;
 import src.Spells.SpellParser;
 import javafx.application.Application;
@@ -39,6 +40,7 @@ public class EncounterManager extends Application{
 	private List<Spell> spells;
 	private EncounterBuilder builder;
 	private SpellBuilder spellbuilder;
+	private SpellBook spellbook;
 	private CreatureBuilder creaturebuilder;
 
 	public static void main(String[] args) {
@@ -50,6 +52,7 @@ public class EncounterManager extends Application{
 		spells = new SpellParser().Parse();
 		builder = new EncounterBuilder(creatures, this);
 		spellbuilder = new SpellBuilder(spells);
+		spellbook = new SpellBook(spells);
 		creaturebuilder = new CreatureBuilder(creatures);
 	}
 
@@ -125,7 +128,7 @@ public class EncounterManager extends Application{
         Button spellBookButton = new Button("Spellbook");//Creates a button for spawning Spellbook windows
         spellButton.setOnAction(new EventHandler<ActionEvent>() {
         			@Override
-        			public void handle(ActionEvent event) {spellbuilder.makeDisplay();}
+        			public void handle(ActionEvent event) {spellbook.makeDisplay();}
         		});
         spellBar.add(spellBookButton,1,0);
 
