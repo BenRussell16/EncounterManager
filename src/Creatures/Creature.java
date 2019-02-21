@@ -70,20 +70,34 @@ public interface Creature {
 				+ name().toLowerCase().substring(1);}
 	}
 	public enum Type{
-		ABBERATION,BEAST,CELESTIAL,CONSTRUCT,
-		DRAGON,ELEMENTAL,FEY,FIEND,
-		GIANT,HUMANOID,MONSTOSITY,OOZE,
-		PLANT,UNDEAD;
+		ABBERATION(false),BEAST(false),CELESTIAL(false),CONSTRUCT(false),
+		DRAGON(false),ELEMENTAL(false),FEY(false),FIEND(true),
+		GIANT(false),HUMANOID(true),MONSTOSITY(false),OOZE(false),
+		PLANT(false),UNDEAD(false);
+		
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
-		//TODO - make these work.
-		private enum fiendSubype{
+
+		
+		private final boolean hasSub;
+		private Type(boolean hasSub){this.hasSub = hasSub;}
+		public boolean hasSubtype(){return hasSub;}
+		public subType[] getSubtype(Type superType){
+			if(superType == Type.FIEND){return fiendSubtype.values();}
+			if(superType == Type.HUMANOID){return humanoidSubtype.values();}
+			return null;
+		}		
+		
+		public interface subType{
+			public String toNiceString();
+		}
+		private enum fiendSubtype implements subType{
 			DEMON,DEVIL;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
-		private enum humanoidSubype{
-			HUMAN,ELF,ORC;//TODO humanoid subtypes
+		private enum humanoidSubtype implements subType{
+			ANY,HUMAN,ELF,ORC;//TODO humanoid subtypes
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}

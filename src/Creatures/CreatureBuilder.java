@@ -17,6 +17,8 @@ import src.Creatures.Creature.Type;
 import src.Spells.Spell;
 import src.Spells.Spell.Classes;
 import src.Spells.Spell.School;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -48,30 +50,16 @@ public class CreatureBuilder {
 		private List<Label> names;
 		private List<Label> crs;
 	private GridPane curCreature;
-	//Good for encounter building.
   		private TextField nameField;
   		private ChoiceBox<Double> crPicker;
   		private ToggleGroup sizePicker = new ToggleGroup();
   		private ToggleGroup typePicker = new ToggleGroup();
-  			private ToggleGroup subTypePicker = new ToggleGroup();
+  			private ToggleGroup subtypePicker = new ToggleGroup();
+  			private GridPane subtypePanel;
+  			private Label subtypeLabel;
   	  	private ToggleGroup alignPicker = new ToggleGroup();
-  		//private RadioButton lg, ng, cg, ln, tn, cn, le, ne, ce, un,
-  		//						nonG, nonE, nonL, nonC, g, e, l, c;
+  	  	private TextField hpPicker, acPicker;
   		private ChoiceBox<Source> sourceSelect;
-  	//Nice to have
-  		//AC
-  		//HP
-  		//Stats
-  		//Saves
-  		//Skills
-  		//Speeds
-  		//Senses
-  		//Damage multipliers.
-  		//	Condition immunities
-  		//Languages
-  		//Spells
-  		//Passive effects, regen, actions...
-  			//Legendary actions, legendary resistances, lair actions
   		
 
   		public Stage makeDisplay() {
@@ -268,6 +256,14 @@ public class CreatureBuilder {
 
   				
   				
+  				
+  				
+  				
+  				
+  				
+  				
+  				
+  				
   				//1st pane for creature list
   	      		ScrollPane sp = new ScrollPane();//allow scrolling down the creature list
   	      		creatureList = new GridPane();
@@ -282,7 +278,17 @@ public class CreatureBuilder {
   		      		label.setTooltip(toolTip);
   		      		names.add(label);
   		      		creatureList.add(label, 0, i+1);
-  		      		label = new Label(" "+creatures.get(i).getCR());
+  		      		String crText = "0";
+  		      		if(creatures.get(i).getCR()>=1 || creatures.get(i).getCR()==0){
+  		      			crText = ""+((int)creatures.get(i).getCR());
+  		      		}else if(creatures.get(i).getCR() == 0.5){
+  		      			crText = "1/2";
+  		      		}else if(creatures.get(i).getCR() == 0.25){
+  		      			crText = "1/4";
+  		      		}else if(creatures.get(i).getCR() == 0.125){
+  		      			crText = "1/8";
+  		      		}
+  		      		label = new Label(" "+crText);
   		      		crs.add(label);
   		      		creatureList.add(label, 1, i+1);
   		      	}
@@ -291,27 +297,44 @@ public class CreatureBuilder {
 
   		      	
   		      	
-  		      	//2nd pane for spell addition
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	
+  		      	//2nd pane for creature addition
   		      	curCreature = new GridPane();
   		      	curCreature.setHgap(10);
   		      	curCreature.setVgap(10);
+  		      	int layer = 0;
 
   		      	label = new Label(" Name");
-  		      	curCreature.add(label, 0, 0);
+  		      	curCreature.add(label, 0, layer);
   		      	nameField = new TextField();
-  		      	curCreature.add(nameField, 1, 0);
+  		      	curCreature.add(nameField, 1, layer);
+  		      	layer++;
 
   		      	label = new Label(" CR");
-  		      	curCreature.add(label, 0, 1);
+  		      	curCreature.add(label, 0, layer);
   		    	crPicker = new ChoiceBox<Double>(FXCollections.observableArrayList(
 						//null,0,0.125,0.25,0.5,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
 						//TODO fill this list
 						));
   		    	crPicker.setValue(null);
-  		    	curCreature.add(crPicker, 1, 1);
+  		    	curCreature.add(crPicker, 1, layer);
+  		    	layer++;
   		      	
   	  		    label = new Label(" Size");
-  	  		    curCreature.add(label, 0, 2);
+  	  		    curCreature.add(label, 0, layer);
   	  		    GridPane sizePanel = new GridPane();
   	  		    sizePanel.setHgap(5);
   	  		    int i = 0;
@@ -321,23 +344,39 @@ public class CreatureBuilder {
   	  		    	sizePanel.add(rb, i, 0);
   	  		    	i++;
   	  		    }
-  	  		    curCreature.add(sizePanel, 1, 2);
+  	  		    curCreature.add(sizePanel, 1, layer);
+  	  		    layer++;
   		    	
   		      	label = new Label(" Type");
-  		      	curCreature.add(label, 0, 3);
+  		      	curCreature.add(label, 0, layer);
   		      	GridPane typePanel = new GridPane();
   		      	typePanel.setHgap(5);
   		      	i = 0;
   		      	for(Type t:Type.values()){
   		      		RadioButton rb = new RadioButton(t.toNiceString());
   		      		rb.setToggleGroup(typePicker);
+  		      		rb.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {
+							// TODO Auto-generated method stub
+							updateSubtypeOptions(t);
+						}});
   		      		typePanel.add(rb, i%4, i/4);
   	  		    	i++;
   		      	}
-  		      	curCreature.add(typePanel, 1, 3);
+  		      	curCreature.add(typePanel, 1, layer);
+  		      	layer++;
+  		//TODO - this
+  		      	subtypeLabel = new Label(" Subtype");
+  		      	curCreature.add(subtypeLabel, 0, layer);
+  		      	subtypeLabel.setVisible(false);
+  		      	subtypePanel = new GridPane();
+  		      	subtypePanel.setHgap(5);
+  		      	subtypePanel.setVisible(false);
+  		      	curCreature.add(subtypePanel, 1, layer);
+  		      	layer++;
 
   	  	  		label = new Label(" Alignment");
-  	  	  		curCreature.add(label, 0, 4);
+  	  	  		curCreature.add(label, 0, layer);
   	  	  		GridPane alignPanel = new GridPane();
   	  	  		alignPanel.setHgap(5);
   	  	  		i = 0;
@@ -347,10 +386,63 @@ public class CreatureBuilder {
   	  	  			alignPanel.add(rb, i%3, i/3);
   	  		    	i++;
   	  	  		}
-  	  	  		curCreature.add(alignPanel, 1, 4);
-  		    	
+  	  	  		curCreature.add(alignPanel, 1, layer);
+  	  	  		layer++;
+  	  	  		
+  		      	label = new Label(" AC");
+  		      	curCreature.add(label, 0, layer);
+  		      	GridPane HPandAC = new GridPane();
+  		      	HPandAC.setHgap(10);
+  		      	acPicker = new TextField();
+  		      	acPicker.setText("0");
+  		      	acPicker.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+					@Override
+					public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+						if (!newValue.matches("\\d*")) {//remove non ints
+							acPicker.setText(newValue.replaceAll("[^\\d]", ""));
+	      	            }
+						if(newValue.isEmpty()) {acPicker.setText("0");}//ensure not empty
+						acPicker.setText(""+Integer.parseInt(acPicker.getText()));//remove leading 0's
+					}
+	      	    });
+  		      	HPandAC.add(acPicker, 0, 0);
+  		      	
+  		      	label = new Label(" HP");
+  		      	HPandAC.add(label, 1, 0);
+  		      	hpPicker = new TextField();
+  		      	hpPicker.setText("0");
+  		      	hpPicker.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+					@Override
+					public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+						if (!newValue.matches("\\d*")) {//remove non ints
+							hpPicker.setText(newValue.replaceAll("[^\\d]", ""));
+	      	            }
+						if(newValue.isEmpty()) {acPicker.setText("0");}//ensure not empty
+						hpPicker.setText(""+Integer.parseInt(hpPicker.getText()));//remove leading 0's
+					}
+	      	    });
+  		      	HPandAC.add(hpPicker, 2, 0);
+  		      	curCreature.add(HPandAC, 1, layer);
+  		      	layer++;
+  	  	  		//TODO more inputs
+  		      	//Map of speed to number
+  		      	//Subtypes.
+
+  		    	//Nice to have
+  		    		//Stats
+  		    		//Saves
+  		    		//Skills
+  		    		//Speeds
+  		    		//Senses
+  		    		//Damage multipliers.
+  		    		//	Condition immunities
+  		    		//Languages
+  		    		//Spells
+  		    		//Passive effects, regen, actions...
+  		    			//Legendary actions, legendary resistances, lair actions
+  		      	
   		      	label = new Label(" Source");
-  		      	curCreature.add(label, 0, 5);
+  		      	curCreature.add(label, 0, layer);
   				sourceSelect = new ChoiceBox<Source>(FXCollections.observableArrayList());
   				sourceSelect.getItems().add(null);
   				sourceSelect.getItems().addAll(Source.values());
@@ -363,7 +455,8 @@ public class CreatureBuilder {
   							return source.toNiceString();}
   						return null;
   					}});
-  				curCreature.add(sourceSelect, 1, 5);
+  				curCreature.add(sourceSelect, 1, layer);
+  				layer++;
   		      	
   				Button add = new Button("Add creature");
   				add.setOnAction(new EventHandler<ActionEvent>() {
@@ -420,7 +513,7 @@ public class CreatureBuilder {
   						updateCreatureList();
   					}
   				});
-  				curCreature.add(add, 0, 6);
+  				curCreature.add(add, 0, layer);
   		      	
   		      	grid.add(curCreature, 1, 1);
 
@@ -451,6 +544,29 @@ public class CreatureBuilder {
 				creatureList.getChildren().add(curName);
 				creatureList.getChildren().add(curCR);
 			}			
+		}
+	}
+	
+	private void updateSubtypeOptions(Type t) {//When a type is selected, display the appropriate subtypes.
+		//TODO - needs to purge the old set
+		subtypeLabel.setVisible(false);
+		subtypePanel.setVisible(false);
+		
+		if(t.hasSubtype()){
+			subtypeLabel.setVisible(true);
+			subtypePanel.setVisible(true);
+			
+      		RadioButton rb = new RadioButton("None");
+      		rb.setToggleGroup(subtypePicker);
+      		subtypePicker.selectToggle(rb);
+      		subtypePanel.add(rb, 0, 0);
+	      	int i = 1;
+	      	for(Type.subType sub:t.getSubtype(t)){
+	      		rb = new RadioButton(sub.toNiceString());
+	      		rb.setToggleGroup(subtypePicker);
+	      		subtypePanel.add(rb, i, 0);
+		    	i++;
+	      	}
 		}
 	}
 }
