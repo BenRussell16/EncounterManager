@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 import Resources.Source;
 import Resources.Classes.Subclass;
@@ -66,7 +67,87 @@ public class SpellParser {
 							scan.next();
 							scan.next();
 						}
-						//TODO add new fields
+						
+						if(scan.hasNext("components")) {
+							scan.next();
+							while(!scan.hasNextBoolean()){scan.next();}//Skip indent
+							components[0] = scan.nextBoolean();//Scan the components
+							components[1] = scan.nextBoolean();
+							components[2] = scan.nextBoolean();
+							if(components[2]){//Get details if there's a material component
+								while(!scan.hasNext("gold")){scan.next();}//Skip indent
+								scan.next();
+								gpcost = scan.nextBoolean();
+								while(!scan.hasNext("material")){scan.next();}//Skip indent
+								scan.next();
+								Pattern oldDelimiter = scan.delimiter();
+								scan.useDelimiter(">|<");
+								materials = scan.next();//Read the materials
+								scan.useDelimiter(oldDelimiter);
+							}
+							while(!scan.hasNext("/components")){scan.next();}//Skip garbage
+							scan.next();
+						}
+						
+						if(scan.hasNext("casttime")) {
+							scan.next();
+							ritual = scan.nextBoolean();//Read the ritual tag
+							Pattern oldDelimiter = scan.delimiter();
+							scan.useDelimiter(">|<");
+							duration = scan.next();//Read the cast time
+							scan.useDelimiter(oldDelimiter);
+							scan.next();
+						}
+						if(scan.hasNext("duration")) {
+							scan.next();
+							Pattern oldDelimiter = scan.delimiter();
+							scan.useDelimiter(">|<");
+							duration = scan.next();
+							scan.useDelimiter(oldDelimiter);
+							scan.next();
+						}
+						
+						if(scan.hasNext("area")) {
+							scan.next();
+							boolean areaFound = false;
+							for(Area a: Area.values()){//Read the shape of the area.
+								if(!areaFound && scan.hasNext(a.toString())){
+									areaFound = true;
+									area = a;
+									scan.next();
+								}
+							}
+							if(area != Area.SELF){
+								range = scan.nextInt();//Range should be first if not area of self.
+								switch (area) {
+								case CONE://Areas with 1 needed length
+								case SPHERE:
+								case CUBE:
+									dimensions = new int[1];
+									dimensions[0] = scan.nextInt();
+									break;
+								case LINE://Areas with 2 needed lengths
+								case CYLINDER:
+									dimensions = new int[2];
+									dimensions[0] = scan.nextInt();
+									dimensions[1] = scan.nextInt();
+									break;
+								default://Self or Single, shouldn't need a length
+									break;
+								}
+							}
+							scan.next();
+						}
+						
+						if(scan.hasNext("effect")) {
+							scan.next();
+							Pattern oldDelimiter = scan.delimiter();
+							scan.useDelimiter(">|<");
+							effect = scan.next();
+							scan.useDelimiter(oldDelimiter);
+							scan.next();
+						}
+						
 						if(scan.hasNext("classes")) {
 							scan.next();
 							while(!scan.hasNext("/classes")) {
@@ -93,6 +174,7 @@ public class SpellParser {
 							}
 							scan.next();
 						}
+						
 						if(scan.hasNext("source")) {
 							scan.next();
 							while(!scan.hasNext("/source")) {
@@ -180,7 +262,7 @@ public class SpellParser {
 						
 						@Override public boolean fromSource(Source source) {return sources.contains(source);}
 						
-						@Override public String toString() {//TODO add new fields
+						@Override public String toString() {
 							String builtString = name+"\n";
 							//Nicely formatted level and school
 							if(getLevel()==0){builtString += getSchool().toNiceString()+" cantrip\n";}
@@ -195,7 +277,26 @@ public class SpellParser {
 								builtString += " level "+getSchool().toNiceString()+"\n";
 							}
 							
-							builtString += "Classes: ";
+							//Components
+							if(components[0]){
+								builtString+="V";
+								if(components[1]||components[2]){builtString+=", ";}
+							}if(components[1]){
+								builtString+="S";
+								if(components[2]){builtString+=", ";}
+							}if(components[2]){
+								builtString+="M ("+materials+")";
+							}
+							
+							//Casting time
+							builtString += "\nCasting time: "+castTime;
+							if(isRitual){builtString += "(R)";}
+							//Duration
+							builtString += "\nDuration: "+duration;
+							
+							builtString += "\n"+effect;//List spell body
+							
+							builtString += "\nClasses: ";
 							int i=0;
 							for(Classes c:Classes.values()){
 								if(fromClass(c)){
@@ -204,6 +305,14 @@ public class SpellParser {
 									i++;
 								}
 							}
+							for(Classes c:Classes.values()){//Reiterate for subclasses to come after full classes
+								for(Subclass s:c.getSubclass(c)){
+									if(fromArchetype(s)){
+										builtString+=", "+s.toNiceString();
+									}
+								}
+							}
+							
 							builtString += "\nSource: ";
 							i=0;
 							for(Source s:Source.values()){

@@ -10,7 +10,10 @@ import Resources.Source;
 import Resources.Area;
 import Resources.Classes;
 import Resources.Classes.Subclass;
+import src.Creatures.Effect;
 import src.Spells.Spell.School;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -43,7 +46,25 @@ public class SpellBuilder {
   		private TextField nameField;
   		private ChoiceBox<Integer> levelPicker;
   		private ChoiceBox<School> schoolSelect;
+  		
+  		private RadioButton vRadio, sRadio, mRadio;
+  		private RadioButton gpCostToggle;
+  		private TextField materialsField;
+  		
+  		private ChoiceBox<String> castTimeSelect;
+  		private TextField arbitraryCastField;
+  		private RadioButton ritualSelect;
+  		private ChoiceBox<String> durationSelect;
+  		private TextField arbitraryDurationField;
+  		
+  		private ChoiceBox<Area> areaSelect;
+  		private TextField rangeField;
+  		private TextField lengthAField, lengthBField;
+  		
+  		private TextField spellBodyField;
+  		
   		private RadioButton c1, c2, c3, c4, c5, c6, c7, c8;
+  		//TODO - archetypes
   		private ChoiceBox<Source> sourceSelect;
 	
 	public Stage makeDisplay() {
@@ -97,11 +118,10 @@ public class SpellBuilder {
 				topBar.add(save, 0, 0);
 				
 			
-				Label label = new Label("\t\t");topBar.add(label, 1, 0);
 				//Set up filter inputs
+				//TODO - new values
+				Label label = new Label("\t\t");topBar.add(label, 1, 0);
 				TextField nameFilter = new TextField();
-
-				//TODO - allow selection of multiple
 				ChoiceBox<Integer> levelFilter = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
 				levelFilter.setValue(null);
 				
@@ -238,20 +258,23 @@ public class SpellBuilder {
 	      	//2nd pane for spell addition
 	      	curSpell = new GridPane();
 	      	curSpell.setHgap(10);
+	      	int layer = 0;
 
 	      	label = new Label(" Name");
-	      	curSpell.add(label, 0, 0);
+	      	curSpell.add(label, 0, layer);
 	      	nameField = new TextField();
-	      	curSpell.add(nameField, 1, 0);
+	      	curSpell.add(nameField, 1, layer);
+	      	layer++;
 
 	      	label = new Label(" Level");
-	      	curSpell.add(label, 0, 1);
+	      	curSpell.add(label, 0, layer);
 	    	levelPicker = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
 	    	levelPicker.setValue(null);
-	      	curSpell.add(levelPicker, 1, 1);
+	      	curSpell.add(levelPicker, 1, layer);
+	      	layer++;
 
 	      	label = new Label(" School");
-	      	curSpell.add(label, 0, 2);
+	      	curSpell.add(label, 0, layer);
 			schoolSelect = new ChoiceBox<School>(FXCollections.observableArrayList());
 			schoolSelect.getItems().add(null);
 			schoolSelect.getItems().addAll(Spell.School.values());
@@ -264,10 +287,98 @@ public class SpellBuilder {
 						return school.toNiceString();}
 					return null;
 				}});
-	      	curSpell.add(schoolSelect, 1, 2);
+	      	curSpell.add(schoolSelect, 1, layer);
+	      	layer++;
+	      	
+	      	label = new Label(" Components");
+	      	curSpell.add(label, 0, layer);
+	      	GridPane componentsBar = new GridPane();
+	      	componentsBar.setHgap(10);
+	      	vRadio = new RadioButton();
+	      	sRadio = new RadioButton();
+	      	mRadio = new RadioButton();
+	      	mRadio.setOnAction(new EventHandler<ActionEvent>() {
+				@Override public void handle(ActionEvent event) {
+					//Make the material details visible if theres material components.
+					if(mRadio.isSelected()){
+						gpCostToggle.setVisible(true);
+						materialsField.setVisible(true);
+					}else{
+						gpCostToggle.setSelected(false);
+						materialsField.setText("");
+						gpCostToggle.setVisible(false);
+						materialsField.setVisible(false);
+					}
+				}
+	      	});
+	      	componentsBar.add(vRadio, 0, 0);
+	      	componentsBar.add(sRadio, 1, 0);
+	      	componentsBar.add(mRadio, 2, 0);
+	  		gpCostToggle = new RadioButton("Has gold cost");
+	  		materialsField = new TextField();
+	      	componentsBar.add(gpCostToggle, 3, 0);
+	      	componentsBar.add(materialsField, 4, 0);
+	      	curSpell.add(componentsBar, 1, layer);
+	      	layer++;
+	      	
+	      	//TODO times
+//	  		private ChoiceBox<String> castTimeSelect;
+//	  		private TextField arbitraryCastField;
+//	  		private RadioButton ritualSelect;
+//	  		private ChoiceBox<String> durationSelect;
+//	  		private TextField arbitraryDurationField;
+	      	
+	      	
+	      	
+	      	//TODO area
+//	  		private ChoiceBox<Area> areaSelect;
+//	  		private TextField rangeField;
+//	  		private TextField lengthAField, lengthBField;
+	      	label = new Label(" Area");
+	      	curSpell.add(label, 0, layer);
+	      	GridPane areaPanel = new GridPane();
+	      	areaPanel.setHgap(10);
+	      	areaSelect = new ChoiceBox<Area>(FXCollections.observableArrayList());
+	      	areaSelect.getItems().add(null);
+	      	areaSelect.getItems().addAll(Area.values());
+	      	areaSelect.setValue(null);
+	      	areaSelect.setConverter(new StringConverter<Area>(){
+				@Override public Area fromString(String arg0) {// TODO Auto-generated method stub
+					return null;}
+				@Override public String toString(Area area) {
+					if(area != null){
+						return area.toNiceString();}
+					return null;
+				}});
+	      	areaPanel.add(areaSelect, 0, 0);
 
+//	      	rangeField = new TextField();
+//	      	rangeField.setText("0");
+//	      	rangeField.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+//	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//	      			if (!newValue.matches("\\d*")) {//remove non ints
+//	      				rangeField.setText(newValue.replaceAll("[^\\d]", ""));
+//	      			}
+//	      			if(newValue.isEmpty()) {rangeField.setText("0");}//ensure not empty
+//	      			rangeField.setText(""+Integer.parseInt(rangeField.getText()));//remove leading 0's
+//				}
+//      	    });
+//	      	areaPanel.add(rangeField, 1, 0);
+	      	
+	      	curSpell.add(areaPanel, 1, layer);
+	      	layer++;
+	      	
+	      	
+	      	
+	      	//Spell description
+	      	label = new Label(" Description");
+	      	curSpell.add(label, 0, layer);
+	      	spellBodyField = new TextField();
+	      	curSpell.add(spellBodyField, 1, layer);
+	      	layer++;
+	      	
 	      	label = new Label(" Classes");
-	      	curSpell.add(label, 0, 3);
+	      	curSpell.add(label, 0, layer);
 	      	GridPane classPanel = new GridPane();
 	      	classPanel.setHgap(10);
 	      		c1 = new RadioButton("Bard");
@@ -286,10 +397,12 @@ public class SpellBuilder {
 	      		classPanel.add(c7, 6, 0);
 	      		c8 = new RadioButton("Wizard");
 	      		classPanel.add(c8, 7, 0);
-	      	curSpell.add(classPanel, 1, 3);
-
+	      	curSpell.add(classPanel, 1, layer);
+	      	layer++;
+	      	//TODO - archetype entry
+	      	
 	      	label = new Label(" Source");
-	      	curSpell.add(label, 0, 4);
+	      	curSpell.add(label, 0, layer);
 			sourceSelect = new ChoiceBox<Source>(FXCollections.observableArrayList());
 			sourceSelect.getItems().add(null);
 			sourceSelect.getItems().addAll(Source.values());
@@ -302,7 +415,8 @@ public class SpellBuilder {
 						return source.toNiceString();}
 					return null;
 				}});
-	      	curSpell.add(sourceSelect, 1, 4);
+	      	curSpell.add(sourceSelect, 1, layer);
+	      	layer++;
 	      	
 			Button add = new Button("Add spell");
 			add.setOnAction(new EventHandler<ActionEvent>() {
@@ -417,7 +531,7 @@ public class SpellBuilder {
 							null, false, null,
 							null, 0, null,
 							null,
-							classList, null, sourcesList);
+							classList, null, sourcesList);//TODO
 					
 					System.out.println("Adding spell "+newSpell.getName());
 		      			Label label = new Label(" "+newSpell.getName());
@@ -432,7 +546,7 @@ public class SpellBuilder {
 					updateSpellList();
 				}
 			});
-			curSpell.add(add, 0, 5);
+			curSpell.add(add, 0, layer);
 	      	
 	      	grid.add(curSpell, 1, 1);
 
