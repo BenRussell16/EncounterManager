@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Resources.Source;
-import src.Spells.Spell.Classes;
+import Resources.Area;
+import Resources.Classes;
+import Resources.Classes.Subclass;
 import src.Spells.Spell.School;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -313,7 +315,10 @@ public class SpellBuilder {
 						List<Classes> classes = null;
 						List<Source> sources = null;
 						
-						public void constructor(String name, int level, School school, List<Classes> classes, List<Source> sources){
+						public void constructor(String name, int level, School school, boolean[] components,
+								boolean gold, String materials, String time, boolean ritual, String duration, Area area,
+								int range, int[] dimensions, String effect, List<Classes> classes,
+								List<Subclass> archetypes, List<Source> sources) {
 							this.name = name;
 							this.level = level;
 							this.school = school;
@@ -328,6 +333,72 @@ public class SpellBuilder {
 						@Override public boolean fromClass(Classes curClass) {return classes.contains(curClass);}
 						@Override public boolean fromSource(Source source) {return sources.contains(source);}
 						@Override public String toString() {return name;}
+
+						@Override
+						public boolean[] getComponents() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+
+						@Override
+						public boolean gpCost() {
+							// TODO Auto-generated method stub
+							return false;
+						}
+
+						@Override
+						public String materials() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+
+						@Override
+						public String castTime() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+
+						@Override
+						public boolean isRitual() {
+							// TODO Auto-generated method stub
+							return false;
+						}
+
+						@Override
+						public String duration() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+
+						@Override
+						public Area getArea() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+
+						@Override
+						public int getRange() {
+							// TODO Auto-generated method stub
+							return 0;
+						}
+
+						@Override
+						public int[] getDimensions() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+
+						@Override
+						public String getEffect() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+
+						@Override
+						public boolean fromArchetype(Subclass curClass) {
+							// TODO Auto-generated method stub
+							return false;
+						}
 					};
 					
 					List<Classes> classList = new ArrayList<Classes>();
@@ -342,7 +413,11 @@ public class SpellBuilder {
 					List<Source> sourcesList = new ArrayList<Source>();
 						sourcesList.add(sourceSelect.getValue());
 					newSpell.constructor(nameField.getText(), levelPicker.getValue(), schoolSelect.getValue(),
-							classList, sourcesList);
+							null, false, null,
+							null, false, null,
+							null, 0, null,
+							null,
+							classList, null, sourcesList);
 					
 					System.out.println("Adding spell "+newSpell.getName());
 		      			Label label = new Label(" "+newSpell.getName());

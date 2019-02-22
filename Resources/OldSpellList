@@ -1,0 +1,182 @@
+<spell>
+	<name>Firebolt</name>
+	<level>0</level>
+	<school>EVOCATION</school>
+	<classes>SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Guidance</name>
+	<level>0</level>
+	<school>DIVINATION</school>
+	<classes>CLERIC,DRUID</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Light</name>
+	<level>0</level>
+	<school>EVOCATION</school>
+	<classes>BARD,CLERIC,SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Mending</name>
+	<level>0</level>
+	<school>TRANSMUTATION</school>
+	<classes>BARD,CLERIC,DRUID,SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Resistance</name>
+	<level>0</level>
+	<school>ABJURATION</school>
+	<classes>CLERIC,DRUID</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Sacred flame</name>
+	<level>0</level>
+	<school>EVOCATION</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Spare the dying</name>
+	<level>0</level>
+	<school>NECROMANCY</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Thaumaturgy</name>
+	<level>0</level>
+	<school>TRANSMUTATION</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Bane</name>
+	<level>1</level>
+	<school>ENCHANTMENT</school>
+	<classes>BARD,CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Bless</name>
+	<level>1</level>
+	<school>ENCHANTMENT</school>
+	<classes>CLERIC,PALADIN</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Charm person</name>
+	<level>1</level>
+	<school>ENCHANTMENT</school>
+	<classes>BARD,DRUID,SORCERER,WARLOCK,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Command</name>
+	<level>1</level>
+	<school>ENCHANTMENT</school>
+	<classes>CLERIC,PALADIN</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Create or destroy water</name>
+	<level>1</level>
+	<school>TRANSMUTATION</school>
+	<classes>CLERIC,DRUID</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Cure wounds</name>
+	<level>1</level>
+	<school>EVOCATION</school>
+	<classes>BARD,CLERIC,DRUID,PALADIN,RANGER</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Detect evil and good</name>
+	<level>1</level>
+	<school>DIVINATION</school>
+	<classes>CLERIC,PALADIN</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Detect magic</name>
+	<level>1</level>
+	<school>DIVINATION</school>
+	<classes>BARD,CLERIC,DRUID,PALADIN,RANGER,SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Detect poison and disease</name>
+	<level>1</level>
+	<school>DIVINATION</school>
+	<classes>CLERIC,DRUID,PALADIN,RANGER</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Guiding bolt</name>
+	<level>1</level>
+	<school>EVOCATION</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Healing word</name>
+	<level>1</level>
+	<school>EVOCATION</school>
+	<classes>BARD,CLERIC,DRUID</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Inflict wounds</name>
+	<level>1</level>
+	<school>NECROMANCY</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Protection from evil and good</name>
+	<level>1</level>
+	<school>ABJURATION</school>
+	<classes>CLERIC,PALADIN,WARLOCK,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Purify food and drink</name>
+	<level>1</level>
+	<school>TRANSMUTATION</school>
+	<classes>CLERIC,DRUID,PALADIN</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Sanctuary</name>
+	<level>1</level>
+	<school>ABJURATION</school>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Shield of faith</name>
+	<level>1</level>
+	<school>ABJURATION</school>
+	<classes>CLERIC,PALADIN</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Blink</name>
+	<level>3</level>
+	<school>TRANSMUTATION</school>
+	<classes>SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Fireball</name>
+	<level>3</level>
+	<school>EVOCATION</school>
+	<classes>SORCERER,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>

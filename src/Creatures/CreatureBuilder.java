@@ -6,17 +6,10 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.plaf.basic.BasicBorders.RadioButtonBorder;
-
 import Resources.Source;
 import src.Creatures.Creature.Alignment;
-import src.Creatures.Creature.Senses;
 import src.Creatures.Creature.Size;
-import src.Creatures.Creature.Speeds;
 import src.Creatures.Creature.Type;
-import src.Spells.Spell;
-import src.Spells.Spell.Classes;
-import src.Spells.Spell.School;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -549,6 +542,7 @@ public class CreatureBuilder {
 	
 	private void updateSubtypeOptions(Type t) {//When a type is selected, display the appropriate subtypes.
 		//TODO - needs to purge the old set
+		//Rotate through a set of premade subtype lines mapped from supertype?
 		subtypeLabel.setVisible(false);
 		subtypePanel.setVisible(false);
 		

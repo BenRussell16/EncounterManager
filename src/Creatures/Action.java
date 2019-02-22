@@ -8,12 +8,6 @@ public abstract class Action {
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
-	public enum Shape{
-		SELF,SINGLE,CONE,LINE,
-		CYLINDER,SPHERE,CUBE;
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
-	}
 	public enum DamageType{
 		ACID,BLUDGEONING,COLD,FIRE,FORCE,
 		LIGHTNING,NECROTIC,PIERCING,POISON,PSYCHIC,

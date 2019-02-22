@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import Resources.Source;
-import src.Spells.Spell.Classes;
+import Resources.Classes;
 import src.Spells.Spell.School;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;

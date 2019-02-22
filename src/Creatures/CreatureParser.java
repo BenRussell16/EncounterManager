@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
+
+import Resources.Area;
 import Resources.Source;
 
 
@@ -298,13 +300,13 @@ public class CreatureParser {
 										scan.next();
 										limit = scan.nextInt();
 									}
-									Action.Shape shape = null;
+									Area shape = null;
 									int area = 0;
 									int secondaryArea = 0;
-									for(Action.Shape s:Action.Shape.values()) {if(scan.hasNext(s.toString().toLowerCase())) {shape = s;}}
+									for(Area s:Area.values()) {if(scan.hasNext(s.toString().toLowerCase())) {shape = s;}}
 									scan.next();
-									if(scan.hasNextInt() && shape!=Action.Shape.SINGLE) {area = scan.nextInt();}
-									if(scan.hasNextInt() && shape==Action.Shape.CYLINDER) {secondaryArea = scan.nextInt();}
+									if(scan.hasNextInt() && shape!=Area.SINGLE) {area = scan.nextInt();}
+									if(scan.hasNextInt() && shape==Area.CYLINDER) {secondaryArea = scan.nextInt();}
 									int range = -1;
 									if(scan.hasNextInt()) {range = scan.nextInt();}
 									scan.next();
@@ -340,9 +342,9 @@ public class CreatureParser {
 										limit = scan.nextInt();
 										scan.next();
 									}
-									Action.Shape shape = null;
+									Area shape = null;
 									int area = 0;
-									for(Action.Shape s:Action.Shape.values()) {if(scan.hasNext(s.toString().toLowerCase())) {shape = s;}}
+									for(Area s:Area.values()) {if(scan.hasNext(s.toString().toLowerCase())) {shape = s;}}
 									scan.next();
 									if(scan.hasNextInt()) {area = scan.nextInt();}
 									String effect = "";
