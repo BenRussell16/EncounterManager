@@ -33,6 +33,7 @@ public class SpellParser {
 					String casttime = "";
 					boolean ritual = false;
 					String duration = "";
+					boolean conc = false;
 					Area area = null;
 					int range = 0;
 					int[] dimensions = null;
@@ -100,6 +101,7 @@ public class SpellParser {
 						}
 						if(scan.hasNext("duration")) {
 							scan.next();
+							conc = scan.nextBoolean();//Read the concentration tag
 							Pattern oldDelimiter = scan.delimiter();
 							scan.useDelimiter(">|<");
 							duration = scan.next();
@@ -206,6 +208,7 @@ public class SpellParser {
 						String castTime = null;
 						boolean isRitual = false;
 						String duration = null;
+						boolean isConc = false;
 						Area area = null;
 						int range = 0;
 						int[] dimensions = null;
@@ -216,7 +219,7 @@ public class SpellParser {
 						
 						@Override public void constructor(String name, int level, School school,
 								boolean[] components, boolean gold, String materials,
-								String time, boolean ritual, String duration,
+								String time, boolean ritual, String duration, boolean concentration,
 								Area area, int range, int[] dimensions,
 								String effect, List<Classes> classes, List<Subclass> archetypes,
 								List<Source> sources) {
@@ -229,6 +232,7 @@ public class SpellParser {
 							this.castTime = time;
 							this.isRitual = ritual;
 							this.duration = duration;
+							this.isConc = concentration;
 							this.area = area;
 							this.range = range;
 							this.dimensions = dimensions;
@@ -249,6 +253,7 @@ public class SpellParser {
 						@Override public String castTime(){return castTime;}
 						@Override public boolean isRitual(){return isRitual;}
 						@Override public String duration(){return duration;}
+						@Override public boolean isConcentration() {return isConc;}
 
 						@Override public Area getArea(){return area;}
 						@Override public int getRange(){return range;}
@@ -290,9 +295,10 @@ public class SpellParser {
 							
 							//Casting time
 							builtString += "\nCasting time: "+castTime;
-							if(isRitual){builtString += "(R)";}
+							if(isRitual){builtString += " (R)";}
 							//Duration
 							builtString += "\nDuration: "+duration;
+							if(isConc){builtString += " (Concentration)";}
 							
 							builtString += "\n"+effect;//List spell body
 							
@@ -327,7 +333,7 @@ public class SpellParser {
 					};
 					current.constructor(name, level, school,
 							components, gpcost, materials,
-							casttime,ritual,duration,
+							casttime,ritual,duration,conc,
 							area,range,dimensions,
 							effect,
 							classes,archetypes,

@@ -11,7 +11,7 @@ public interface Spell {
 
 	public void constructor(String name, int level, School school,
 			boolean[] components, boolean gold, String materials,
-			String time, boolean ritual, String duration,
+			String time, boolean ritual, String duration, boolean concentration,
 			Area area, int range, int[] dimensions,
 			String effect,
 			List<Classes> classes, List<Subclass> archetypes,
@@ -28,6 +28,7 @@ public interface Spell {
 	public String castTime();
 	public boolean isRitual();
 	public String duration();
+	public boolean isConcentration();
 	
 	public Area getArea();
 	public int getRange();
@@ -61,7 +62,7 @@ public interface Spell {
 		//Cast time
 		builtString += "\t<casttime>"+isRitual()+","+castTime()+"</casttime>\n";
 		//Duration
-		builtString += "\t<duration>"+duration()+"</duration>\n";
+		builtString += "\t<duration>"+isConcentration()+","+duration()+"</duration>\n";
 
 		//Area
 		builtString += "\t<area>" + getArea();
