@@ -166,7 +166,7 @@ public class SpellParser {
 							scan.next();
 							while(!scan.hasNext("/subclasses")) {
 								for(Classes c: Classes.values()) {
-									for(Subclass s: c.getSubclass(c)) {
+									for(Subclass s: c.getSubclasses(c)) {
 										if(scan.hasNext(s.toString())) {
 											archetypes.add(s);
 											scan.next();
@@ -312,7 +312,7 @@ public class SpellParser {
 								}
 							}
 							for(Classes c:Classes.values()){//Reiterate for subclasses to come after full classes
-								for(Subclass s:c.getSubclass(c)){
+								for(Subclass s:c.getSubclasses(c)){
 									if(fromArchetype(s)){
 										builtString+=", "+s.toNiceString();
 									}

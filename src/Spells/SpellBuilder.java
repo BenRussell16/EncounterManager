@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import Resources.Source;
 import Resources.Area;
@@ -61,9 +63,8 @@ public class SpellBuilder {
   		private Label rangeLabel, lengthALabel, lengthBLabel; //Labels need to be here to be hidden and changed.
   		
   		private TextField spellBodyField;
-  		
-  		private RadioButton c1, c2, c3, c4, c5, c6, c7, c8;
-  		//TODO - archetypes
+  		private Map<Classes, RadioButton> classButtons;
+  		private Map<Classes, Map<Subclass, RadioButton>> archetypes;
   		private ChoiceBox<Source> sourceSelect;
 	
 	public Stage makeDisplay() {
@@ -117,9 +118,9 @@ public class SpellBuilder {
 				topBar.add(save, 0, 0);
 				
 			
+				Label label = new Label("\t\t");
+				topBar.add(label, 1, 0);
 				//Set up filter inputs
-				//TODO - new values
-				Label label = new Label("\t\t");topBar.add(label, 1, 0);
 				TextField nameFilter = new TextField();
 				ChoiceBox<Integer> levelFilter = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
 				levelFilter.setValue(null);
@@ -133,9 +134,117 @@ public class SpellBuilder {
 					@Override public String toString(School school) {
 						if(school != null){
 							return school.toNiceString();}
-						return null;
+						return "School";
+					}});
+
+				//Components
+				ChoiceBox<Boolean> vPicker = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+				vPicker.getItems().addAll(null, false, true);
+				vPicker.setValue(null);
+				vPicker.setConverter(new StringConverter<Boolean>(){
+					@Override public Boolean fromString(String arg0) {return null;}
+					@Override public String toString(Boolean component) {
+						if(component != null){
+							if(component){
+								return "Y";
+							}else{return "N";}
+						}
+						return "V";
+					}});
+				ChoiceBox<Boolean> sPicker = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+				sPicker.getItems().addAll(null, false, true);
+				sPicker.setValue(null);
+				sPicker.setConverter(new StringConverter<Boolean>(){
+					@Override public Boolean fromString(String arg0) {return null;}
+					@Override public String toString(Boolean component) {
+						if(component != null){
+							if(component){
+								return "Y";
+							}else{return "N";}
+						}
+						return "S";
+					}});
+				ChoiceBox<Boolean> mPicker = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+				mPicker.getItems().addAll(null, false, true);
+				mPicker.setValue(null);
+				mPicker.setConverter(new StringConverter<Boolean>(){
+					@Override public Boolean fromString(String arg0) {return null;}
+					@Override public String toString(Boolean component) {
+						if(component != null){
+							if(component){
+								return "Y";
+							}else{return "N";}
+						}
+						return "M";
+					}});
+				//Gold cost filter
+				ChoiceBox<Boolean> costPicker = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+				costPicker.getItems().addAll(null, false, true);
+				costPicker.setValue(null);
+				costPicker.setConverter(new StringConverter<Boolean>(){
+					@Override public Boolean fromString(String arg0) {return null;}
+					@Override public String toString(Boolean cost) {
+						if(cost != null){
+							if(cost){
+								return "Yes";
+							}else{return "No";}
+						}
+						return "GP cost";
 					}});
 				
+				//Cast time filter
+				ChoiceBox<String> timePicker = new ChoiceBox<String>(FXCollections.observableArrayList());
+				timePicker.getItems().addAll(null,"Action","Bonus Action","Reaction",
+		      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours");
+				timePicker.setValue(null);
+				timePicker.setConverter(new StringConverter<String>(){
+					@Override public String fromString(String arg0) {return arg0;}
+					@Override public String toString(String time) {
+						if(time == null){return "Cast time";}
+						return time;}});
+				//Ritual filter
+				ChoiceBox<Boolean> ritualPicker = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+				ritualPicker.getItems().addAll(null, false, true);
+				ritualPicker.setValue(null);
+				ritualPicker.setConverter(new StringConverter<Boolean>(){
+					@Override public Boolean fromString(String arg0) {return null;}
+					@Override public String toString(Boolean ritual) {
+						if(ritual != null){
+							if(ritual){
+								return "Yes";
+							}else{return "No";}
+						}
+						return "Ritual";
+					}});
+				//Concentration filter
+				ChoiceBox<Boolean> concPicker = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+				concPicker.getItems().addAll(null, false, true);
+				concPicker.setValue(null);
+				concPicker.setConverter(new StringConverter<Boolean>(){
+					@Override public Boolean fromString(String arg0) {return null;}
+					@Override public String toString(Boolean conc) {
+						if(conc != null){
+							if(conc){
+								return "Yes";
+							}else{return "No";}
+						}
+						return "Concentration";
+					}});
+				
+				//Area filter
+				ChoiceBox<Area> areaPicker = new ChoiceBox<Area>(FXCollections.observableArrayList());
+				areaPicker.getItems().add(null);
+				areaPicker.getItems().addAll(Area.values());
+				areaPicker.setValue(null);
+				areaPicker.setConverter(new StringConverter<Area>(){
+					@Override public Area fromString(String arg0) {return null;}
+					@Override public String toString(Area area) {
+						if(area != null){
+							return area.toNiceString();}
+						return "Area";
+					}});
+
+				//Class filters
 				ChoiceBox<Classes> classPicker = new ChoiceBox<Classes>(FXCollections.observableArrayList());
 				classPicker.getItems().add(null);
 				classPicker.getItems().addAll(Classes.values());
@@ -145,9 +254,37 @@ public class SpellBuilder {
 					@Override public String toString(Classes classes) {
 						if(classes != null){
 							return classes.toNiceString();}
-						return null;
+						return "Class";
 					}});
-				
+				ChoiceBox<Subclass> subclassPicker = new ChoiceBox<Subclass>(FXCollections.observableArrayList());
+				subclassPicker.getItems().add(null);
+				subclassPicker.setValue(null);
+				subclassPicker.setConverter(new StringConverter<Subclass>(){
+					@Override public Subclass fromString(String arg0) {return null;}
+					@Override public String toString(Subclass classes) {
+						if(classes != null){
+							return classes.toNiceString();}
+						return "Subclass";
+					}});
+				subclassPicker.setVisible(false);
+				//TODO - remove if unneeded
+//				classPicker.setOnAction(new EventHandler<ActionEvent>() {
+//					//Set subclasses based on classes
+//					@Override public void handle(ActionEvent event) {
+//						if(classPicker.getValue() == null){
+//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
+//							subclassPicker.setValue(null);
+//							subclassPicker.setVisible(false);
+//						}else{
+//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
+//							subclassPicker.getItems().addAll(
+//									classPicker.getValue().getSubclasses(classPicker.getValue()));
+//							subclassPicker.setValue(null);
+//							subclassPicker.setVisible(true);
+//						}
+//					}});
+
+				//Source filter
 				ChoiceBox<Source> sourcePicker = new ChoiceBox<Source>(FXCollections.observableArrayList());
 				sourcePicker.getItems().add(null);
 				sourcePicker.getItems().addAll(Source.values());
@@ -157,73 +294,156 @@ public class SpellBuilder {
 					@Override public String toString(Source source) {
 						if(source != null){
 							return source.toNiceString();}
-						return null;
+						return "Source";
 					}});
 				
 				//Define the filtering action
-				EventHandler<ActionEvent> filterQuery =new EventHandler<ActionEvent>() {
+				EventHandler<ActionEvent> filterQuery = new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
 						query.removeAll(spells);//text filter
 						for(Spell s:spells) {
 							if(s.getName().toLowerCase().contains(nameFilter.getText().toLowerCase())) {
-								query.add(s);
-							}
-						}
+								query.add(s);}}
 						if(query.isEmpty()) {query.addAll(spells);}
 
 						if(levelFilter.getValue()!=null) {//level filter
 							List<Spell> toRemove = new ArrayList<Spell>();
 							for(Spell s:query) {
 								if(!(s.getLevel()==levelFilter.getValue())) {
-									toRemove.add(s);
-								}
-							}
-							for(Spell s:toRemove) {query.remove(s);}
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
 						}
 						if(schoolPicker.getValue()!=null) {//school filter
 							List<Spell> toRemove = new ArrayList<Spell>();
 							for(Spell s:query) {
 								if(!(s.getSchool()==schoolPicker.getValue())) {
-									toRemove.add(s);
-								}
-							}
-							for(Spell s:toRemove) {query.remove(s);}
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
 						}
+						
+						if(vPicker.getValue()!=null) {//verbal component filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.getComponents()[0]==vPicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						if(sPicker.getValue()!=null) {//somatic component filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.getComponents()[1]==sPicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						if(mPicker.getValue()!=null) {//material component filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.getComponents()[2]==mPicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						if(costPicker.getValue()!=null) {//gp cost filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.gpCost()==costPicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						
+
+						if(timePicker.getValue()!=null) {//cast time filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.castTime()==timePicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						if(ritualPicker.getValue()!=null) {//ritual filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.isRitual()==ritualPicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						if(concPicker.getValue()!=null) {//concentration filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.isConcentration()==concPicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						if(areaPicker.getValue()!=null) {//area of effect filter
+							List<Spell> toRemove = new ArrayList<Spell>();
+							for(Spell s:query) {
+								if(!(s.getArea()==areaPicker.getValue())) {
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
+						}
+						
 						if(classPicker.getValue()!=null) {//class filter
 							List<Spell> toRemove = new ArrayList<Spell>();
 							for(Spell s:query) {
 								if(!s.fromClass(classPicker.getValue())) {
-									toRemove.add(s);
-								}
-							}
-							for(Spell s:toRemove) {query.remove(s);}
+									//Treats it as an or. If its not on that class list but is on the archetypes, it stays.
+									if(subclassPicker.getValue() == null){toRemove.add(s);}
+									else if(!s.fromArchetype(subclassPicker.getValue())){
+										toRemove.add(s);}}
+							}for(Spell s:toRemove) {query.remove(s);}
 						}
+						
 						if(sourcePicker.getValue()!=null) {//source filter
 							List<Spell> toRemove = new ArrayList<Spell>();
 							for(Spell s:query) {
 								if(!s.fromSource(sourcePicker.getValue())) {
-									toRemove.add(s);
-								}
-							}
-							for(Spell s:toRemove) {query.remove(s);}
+									toRemove.add(s);}
+							}for(Spell s:toRemove) {query.remove(s);}
 						}
+						
 						updateSpellList();
 					}
 				};
 				//Add filter inputs to panel, and set them up to apply when used.
-				nameFilter.setOnAction(filterQuery);
-				topBar.add(nameFilter, 2, 0);
-				levelFilter.setOnAction(filterQuery);
-				topBar.add(levelFilter, 3, 0);
-				schoolPicker.setOnAction(filterQuery);
-				topBar.add(schoolPicker, 4, 0);
-				classPicker.setOnAction(filterQuery);
-				topBar.add(classPicker, 5, 0);
-				sourcePicker.setOnAction(filterQuery);
-				topBar.add(sourcePicker, 6, 0);
+					//TODO - make sure classes other onaction isn't overridden
+				nameFilter.setOnAction(filterQuery);		topBar.add(nameFilter, 2, 0);
+				levelFilter.setOnAction(filterQuery);		topBar.add(levelFilter, 3, 0);
+				schoolPicker.setOnAction(filterQuery);		topBar.add(schoolPicker, 4, 0);
+				label = new Label("\t");					topBar.add(label, 5, 0);
+				vPicker.setOnAction(filterQuery);			topBar.add(vPicker, 6, 0);
+				sPicker.setOnAction(filterQuery);			topBar.add(sPicker, 7, 0);
+				mPicker.setOnAction(filterQuery);			topBar.add(mPicker, 8, 0);
+				costPicker.setOnAction(filterQuery);		topBar.add(costPicker, 9, 0);
+				
+				//Start the 2nd row
+				GridPane secondBar = new GridPane();
+				label = new Label("\t\t\t\t\t\t");			secondBar.add(label, 0, 0);
+				timePicker.setOnAction(filterQuery);		secondBar.add(timePicker, 1, 0);
+				ritualPicker.setOnAction(filterQuery);		secondBar.add(ritualPicker, 2, 0);
+				concPicker.setOnAction(filterQuery);		secondBar.add(concPicker, 3, 0);
+				areaPicker.setOnAction(filterQuery);		secondBar.add(areaPicker, 4, 0);
+				label = new Label("\t");					secondBar.add(label, 5, 0);
+				classPicker.setOnAction(filterQuery);		secondBar.add(classPicker, 6, 0);
+				subclassPicker.setOnAction(filterQuery);	secondBar.add(subclassPicker, 7, 0);
+				sourcePicker.setOnAction(filterQuery);		secondBar.add(sourcePicker, 8, 0);
+
+//				classPicker.setOnAction(new EventHandler<ActionEvent>() {
+//					//Set subclasses based on classes
+//					@Override public void handle(ActionEvent event) {
+//						if(classPicker.getValue() == null){
+//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
+//							subclassPicker.setValue(null);
+//							subclassPicker.setVisible(false);
+//						}else{
+//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
+//							subclassPicker.getItems().addAll(
+//									classPicker.getValue().getSubclasses(classPicker.getValue()));
+//							subclassPicker.setValue(null);
+//							subclassPicker.setVisible(true);
+//						}
+//					}});
 				
 			grid.add(topBar, 0, 0, 2, 1);
+			grid.add(secondBar, 0, 1, 2, 1);
 			
 
 			
@@ -247,7 +467,8 @@ public class SpellBuilder {
 	      		spellList.add(label, 1, i+1);
 	      	}
 	      	sp.setContent(spellList);
-	      	grid.add(sp,0,1);
+	      	sp.setMinSize(250, 0);
+	      	grid.add(sp,0,2);
 
 	      	
 	      	
@@ -259,6 +480,7 @@ public class SpellBuilder {
 	      	label = new Label(" Name");
 	      	curSpell.add(label, 0, layer);
 	      	nameField = new TextField();
+	      	nameField.setMaxWidth(800);
 	      	curSpell.add(nameField, 1, layer);
 	      	layer++;
 
@@ -292,9 +514,9 @@ public class SpellBuilder {
 	      	curSpell.add(label, 0, layer);
 	      	GridPane componentsBar = new GridPane();
 	      	componentsBar.setHgap(10);
-	      	vRadio = new RadioButton();
-	      	sRadio = new RadioButton();
-	      	mRadio = new RadioButton();
+	      	vRadio = new RadioButton("V");
+	      	sRadio = new RadioButton("S");
+	      	mRadio = new RadioButton("M");
 	      	mRadio.setOnAction(new EventHandler<ActionEvent>() {
 				@Override public void handle(ActionEvent event) {
 					//Make the material details visible if theres material components.
@@ -313,55 +535,42 @@ public class SpellBuilder {
 	      	componentsBar.add(sRadio, 1, 0);
 	      	componentsBar.add(mRadio, 2, 0);
 	      	//Material details
-	  		gpCostToggle = new RadioButton("Has gold cost");
 	  		materialsField = new TextField();
-	      	componentsBar.add(gpCostToggle, 3, 0);
-	      	componentsBar.add(materialsField, 4, 0);
+	  		gpCostToggle = new RadioButton("Has gold cost");
+	      	componentsBar.add(materialsField, 3, 0);
+	      	componentsBar.add(gpCostToggle, 4, 0);
+	      	materialsField.setVisible(false);
+	      	gpCostToggle.setVisible(false);
 	      	curSpell.add(componentsBar, 1, layer);
 	      	layer++;
 	      	
 	      	//times
-//	  		private ChoiceBox<String> durationSelect;
-//	  		private TextField arbitraryDurationField;
 	      	label = new Label(" Cast time");
 	      	curSpell.add(label, 0, layer);
 	      	GridPane timePanel = new GridPane();
 	      	//Cast time
-//	      	arbitraryCastField = new TextField("1");//Text comes before the select so it formats nicer, eg |1| |minute(s)|
-//	      	arbitraryCastField.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
-//	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-//	      			if (!newValue.matches("\\d*")) {//remove non ints
-//	      				arbitraryCastField.setText(newValue.replaceAll("[^\\d]", ""));
-//	      			}
-//	      			if(newValue.isEmpty()) {arbitraryCastField.setText("1");}//ensure not empty
-//	      			arbitraryCastField.setText(""+Integer.parseInt(arbitraryCastField.getText()));//remove leading 0's
-//	      			if(Integer.parseInt(arbitraryCastField.getText())<1) {
-//	      				arbitraryCastField.setText("1");}//no instant speed spells
-//				}
-//      	    });
-//	      	timePanel.add(arbitraryCastField, 0, 1);
-//	      	arbitraryCastField.setVisible(false);
 	      	castTimeSelect = new ChoiceBox<String>(FXCollections.observableArrayList());
 	      	castTimeSelect.getItems().addAll(null,"Action","Bonus Action","Reaction",
 	      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours");
 	      	castTimeSelect.setValue(null);
-	      		//Stuff for visibility of arbitrary field would go here.
-	      	timePanel.add(castTimeSelect, 0, 1);
+	      	timePanel.add(castTimeSelect, 0, 0);
 	      	ritualSelect = new RadioButton("Ritual");
-	      	timePanel.add(ritualSelect, 0, 2);
+	      	timePanel.add(ritualSelect, 1, 0);
 	      	//Duration
 	      	label = new Label("\tDuration");
-	      	timePanel.add(label, 0, 3);
+	      	timePanel.add(label, 2, 0);
 	      	//arbitrary duration skipped
 	      	durationSelect = new ChoiceBox<String>(FXCollections.observableArrayList());
 	      	durationSelect.getItems().addAll(null,"Instantaneous","1 Round","6 Rounds","1 Minute","10 Minutes",
 	      			"1 Hour","2 Hours","8 Hours","24 Hours","1 Day","7 Days","10 Days","30 Days",
 	      			"Special","Until Dispelled","Until Dispelled or Triggered");
 	      	durationSelect.setValue(null);
-	      	timePanel.add(durationSelect, 0, 4);
+	      	timePanel.add(durationSelect, 3, 0);
 	      	concSelect = new RadioButton("Concentration");
-	      	timePanel.add(concSelect, 0, 5);
+	      	timePanel.add(concSelect, 4, 0);
+	      	timePanel.setHgap(5);
 	      	curSpell.add(timePanel, 1, layer);
+	      	layer++;
 	      	
 	      	
 	      	
@@ -485,8 +694,8 @@ public class SpellBuilder {
 	      			lengthBField.setText(""+Integer.parseInt(lengthBField.getText()));//remove leading 0's
 				}
       	    });
-	      	areaPanel.add(rangeField, 6, 0);
-	      	rangeField.setVisible(false);
+	      	areaPanel.add(lengthBField, 6, 0);
+	      	lengthBField.setVisible(false);
 	      	
 	      	curSpell.add(areaPanel, 1, layer);
 	      	layer++;
@@ -497,6 +706,7 @@ public class SpellBuilder {
 	      	label = new Label(" Description");
 	      	curSpell.add(label, 0, layer);
 	      	spellBodyField = new TextField();
+	      	spellBodyField.setMaxWidth(800);
 	      	curSpell.add(spellBodyField, 1, layer);
 	      	layer++;
 	      	
@@ -505,25 +715,74 @@ public class SpellBuilder {
 	      	curSpell.add(label, 0, layer);
 	      	GridPane classPanel = new GridPane();
 	      	classPanel.setHgap(10);
-	      		c1 = new RadioButton("Bard");
-	      		classPanel.add(c1, 0, 0);
-	      		c2 = new RadioButton("Cleric");
-	      		classPanel.add(c2, 1, 0);
-	      		c3 = new RadioButton("Druid");
-	      		classPanel.add(c3, 2, 0);
-	      		c4 = new RadioButton("Paladin");
-	      		classPanel.add(c4, 3, 0);
-	      		c5 = new RadioButton("Ranger");
-	      		classPanel.add(c5, 4, 0);
-	      		c6 = new RadioButton("Sorcerer");
-	      		classPanel.add(c6, 5, 0);
-	      		c7 = new RadioButton("Warlock");
-	      		classPanel.add(c7, 6, 0);
-	      		c8 = new RadioButton("Wizard");
-	      		classPanel.add(c8, 7, 0);
+	      	classButtons = new HashMap<Classes, RadioButton>();
+      			classButtons.put(Classes.BARD, null);//Set up the key list
+      			classButtons.put(Classes.CLERIC, null);
+      			classButtons.put(Classes.DRUID, null);
+      			classButtons.put(Classes.PALADIN, null);
+      			classButtons.put(Classes.RANGER, null);
+      			classButtons.put(Classes.SORCERER, null);
+      			classButtons.put(Classes.WARLOCK, null);
+      			classButtons.put(Classes.WIZARD, null);
+      		int x = 0;
+	      	for(Classes c: classButtons.keySet()){
+	      		RadioButton rb = new RadioButton(c.toNiceString());
+	      		classButtons.put(c, rb);
+	      		classPanel.add(rb, x, 0);
+	      		x++;
+	      	}
 	      	curSpell.add(classPanel, 1, layer);
 	      	layer++;
-	      	//TODO - archetype entry
+	      	//Archetypes.
+	      	label = new Label(" Archetypes");
+	      	curSpell.add(label, 0, layer);
+	      	GridPane subclassPanel = new GridPane();
+	      	subclassPanel.setVgap(5);
+	      	archetypes = new HashMap<Classes, Map<Subclass, RadioButton>>();
+	      	x = 0;
+	      	int y=0;
+	      	GridPane classRow = new GridPane();
+	      	classRow.setHgap(5);
+	      	for(Classes c: Classes.values()){
+	      		RadioButton rb = new RadioButton(c.toNiceString());
+		      	rb.setOnAction(new EventHandler<ActionEvent>() {
+					@Override public void handle(ActionEvent event) {
+						//Make the archetype buttons hideable by groups of class.
+						if(rb.isSelected()){
+							for(Subclass s: c.getSubclasses(c)){
+								archetypes.get(c).get(s).setVisible(true);
+								archetypes.get(c).get(s).setSelected(false);
+							}
+						}else{
+							for(Subclass s: c.getSubclasses(c)){
+								archetypes.get(c).get(s).setVisible(false);
+								archetypes.get(c).get(s).setSelected(false);
+							}
+						}
+					}
+		      	});
+		      	classRow.add(rb, x, 0);
+	      		x++;
+	      	}
+	      	subclassPanel.add(classRow, 0, 0);
+	      	for(Classes c: Classes.values()){
+	      		//Gridpane each row for spacing to be independent.
+	      		y++;
+	      		x=0;
+	      		classRow = new GridPane();
+		      	classRow.setHgap(5);
+		      	archetypes.put(c, new HashMap<Subclass, RadioButton>());
+	      		for(Subclass s: c.getSubclasses(c)){
+		      		RadioButton rb = new RadioButton(s.toNiceString());
+		      		archetypes.get(c).put(s, rb);//Fill the maps so all the buttons can be easily iterated later
+			      	classRow.add(rb, x, 0);
+			      	rb.setVisible(false);
+	      			x++;
+	      		}
+		      	subclassPanel.add(classRow, 0, y);
+	      	}
+	      	curSpell.add(subclassPanel, 1, layer);
+	      	layer++;
 	      	
 	      	label = new Label(" Source");
 	      	curSpell.add(label, 0, layer);
@@ -660,7 +919,7 @@ public class SpellBuilder {
 								}
 							}
 							for(Classes c:Classes.values()){//Reiterate for subclasses to come after full classes
-								for(Subclass s:c.getSubclass(c)){
+								for(Subclass s:c.getSubclasses(c)){
 									if(fromArchetype(s)){
 										builtString+=", "+s.toNiceString();
 									}
@@ -691,14 +950,12 @@ public class SpellBuilder {
 						dimensions[0] = Integer.parseInt(lengthAField.getText());
 						dimensions[1] = Integer.parseInt(lengthBField.getText());
 					List<Classes> classList = new ArrayList<Classes>();
-						if(c1.isSelected()){classList.add(Classes.BARD);}
-						if(c2.isSelected()){classList.add(Classes.CLERIC);}
-						if(c3.isSelected()){classList.add(Classes.DRUID);}
-						if(c4.isSelected()){classList.add(Classes.PALADIN);}
-						if(c5.isSelected()){classList.add(Classes.RANGER);}
-						if(c6.isSelected()){classList.add(Classes.SORCERER);}
-						if(c7.isSelected()){classList.add(Classes.WARLOCK);}
-						if(c8.isSelected()){classList.add(Classes.WIZARD);}
+						for(Classes c: classButtons.keySet()){
+							if(classButtons.get(c).isSelected()){classList.add(c);}}
+					List<Subclass> subclassList = new ArrayList<Subclass>();
+						for(Classes c: archetypes.keySet()){
+							for(Subclass s: archetypes.get(c).keySet()){
+								if(archetypes.get(c).get(s).isSelected()){subclassList.add(s);}}}
 					List<Source> sourcesList = new ArrayList<Source>();
 						sourcesList.add(sourceSelect.getValue());
 						
@@ -708,7 +965,7 @@ public class SpellBuilder {
 							castTimeSelect.getValue(), ritualSelect.isSelected(), durationSelect.getValue(), concSelect.isSelected(),
 							areaSelect.getValue(), Integer.parseInt(rangeField.getText()), dimensions,
 							spellBodyField.getText(),
-							classList, null,//TODO - Archetypes
+							classList, subclassList,
 							sourcesList);
 					
 					System.out.println("Adding spell "+newSpell.getName());
@@ -724,14 +981,17 @@ public class SpellBuilder {
 					updateSpellList();
 				}
 			});
+	      	add.setMinWidth(100);
+	      	//The widest part of the first column, so this min width should apply to the column.
 			curSpell.add(add, 0, layer);
 	      	
-	      	grid.add(curSpell, 1, 1);
+			curSpell.setVgap(5);
+	      	grid.add(curSpell, 1, 2);
 
 	      	
 	      	
 	    //make the window
-	    secondaryStage.setScene(new Scene(grid, 850, 400));
+	    secondaryStage.setScene(new Scene(grid, 1600, 700));
 		secondaryStage.show();
 		return secondaryStage;
 	}

@@ -7,7 +7,7 @@ public enum Classes{
 			+ name().toLowerCase().substring(1);}
 	
 
-	public Subclass[] getSubclass(Classes superClass){
+	public Subclass[] getSubclasses(Classes superClass){
 		if(superClass == Classes.BARBARIAN){return barbarianSubclass.values();}
 		if(superClass == Classes.BARD){return bardSubclass.values();}
 		if(superClass == Classes.CLERIC){return clericSubclass.values();}
@@ -92,7 +92,7 @@ public enum Classes{
 	}
 	private enum sorcererSubclass implements Subclass{
 		DRACONICBLOODLINE,WILDMAGIC,//PHB	TODO-spaces in both
-		STROMSORCERY,//SCAG	TODO-space
+		STRORMSORCERY,//SCAG	TODO-space
 		DIVINESOUL,SHADOWMAGIC;//XGtE, also contains storm sorcery	TODO-spaces
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}

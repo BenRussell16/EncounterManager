@@ -126,7 +126,7 @@ public class EncounterManager extends Application{
         spellBar.add(spellButton,0,0);
       	
         Button spellBookButton = new Button("Spellbook");//Creates a button for spawning Spellbook windows
-        spellButton.setOnAction(new EventHandler<ActionEvent>() {
+        spellBookButton.setOnAction(new EventHandler<ActionEvent>() {
         			@Override
         			public void handle(ActionEvent event) {spellbook.makeDisplay();}
         		});

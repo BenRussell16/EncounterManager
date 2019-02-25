@@ -93,7 +93,7 @@ public interface Spell {
 		//Subclasses
 		i=0;
 		for(Classes c:Classes.values()){
-			for(Subclass a: c.getSubclass(c)){
+			for(Subclass a: c.getSubclasses(c)){
 				if(fromArchetype(a)){
 					if(i>0){builtString+=",";}
 					else{builtString += "\t<subclasses>";} // Only apply the surrounding tags if it is needed
