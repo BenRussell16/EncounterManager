@@ -92,7 +92,7 @@ public enum Classes{
 	}
 	private enum sorcererSubclass implements Subclass{
 		DRACONICBLOODLINE,WILDMAGIC,//PHB	TODO-spaces in both
-		STRORMSORCERY,//SCAG	TODO-space
+		STORMSORCERY,//SCAG	TODO-space
 		DIVINESOUL,SHADOWMAGIC;//XGtE, also contains storm sorcery	TODO-spaces
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}

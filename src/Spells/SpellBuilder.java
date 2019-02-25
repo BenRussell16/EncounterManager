@@ -715,17 +715,11 @@ public class SpellBuilder {
 	      	curSpell.add(label, 0, layer);
 	      	GridPane classPanel = new GridPane();
 	      	classPanel.setHgap(10);
+	      	Classes[] casterClasses = {Classes.BARD, Classes.CLERIC, Classes.DRUID, Classes.PALADIN,
+	      			Classes.RANGER, Classes.SORCERER, Classes.WARLOCK, Classes.WIZARD};
 	      	classButtons = new HashMap<Classes, RadioButton>();
-      			classButtons.put(Classes.BARD, null);//Set up the key list
-      			classButtons.put(Classes.CLERIC, null);
-      			classButtons.put(Classes.DRUID, null);
-      			classButtons.put(Classes.PALADIN, null);
-      			classButtons.put(Classes.RANGER, null);
-      			classButtons.put(Classes.SORCERER, null);
-      			classButtons.put(Classes.WARLOCK, null);
-      			classButtons.put(Classes.WIZARD, null);
       		int x = 0;
-	      	for(Classes c: classButtons.keySet()){
+	      	for(Classes c: casterClasses){
 	      		RadioButton rb = new RadioButton(c.toNiceString());
 	      		classButtons.put(c, rb);
 	      		classPanel.add(rb, x, 0);
