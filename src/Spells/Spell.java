@@ -77,7 +77,7 @@ public interface Spell {
 		builtString += "</area>\n";
 
 		//Effect
-		builtString += "\t<effect>"+getEffect()+"</effect>\n";
+		builtString += "\t<effect>\n"+getEffect()+"\n\t</effect>\n";
 			
 		//Classes
 		builtString += "\t<classes>";

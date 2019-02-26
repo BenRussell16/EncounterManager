@@ -8,7 +8,9 @@
 	<casttime>false,Action</casttime>
 	<duration>true,1 Minute</duration>
 	<area>SINGLE,0</area>
-	<effect>You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.</effect>
+	<effect>
+You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends.
+	</effect>
 	<classes>CLERIC,DRUID</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
@@ -24,9 +26,11 @@
 	<casttime>false,Action</casttime>
 	<duration>false,1 Hour</duration>
 	<area>SINGLE,5</area>
-	<effect>You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.
+	<effect>
+You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.
 
-If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.</effect>
+If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell.
+	</effect>
 	<classes>CLERIC,DRUID,SORCERER,WIZARD</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
@@ -42,9 +46,11 @@ If you target an object held or worn by a hostile creature, that creature must s
 	<casttime>false,1 Minute</casttime>
 	<duration>false,Instantaneous</duration>
 	<area>SINGLE,5</area>
-	<effect>This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.
+	<effect>
+This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.
 
-This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.</effect>
+This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object.
+	</effect>
 	<classes>BARD,CLERIC,DRUID,SORCERER,WIZARD</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
@@ -60,7 +66,9 @@ This spell can physically repair a magic item or construct, but the spell can't 
 	<casttime>false,Action</casttime>
 	<duration>true,1 Minute</duration>
 	<area>SINGLE,5</area>
-	<effect>You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.</effect>
+	<effect>
+You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one saving throw of its choice. It can roll the die before or after making the saving throw. The spell then ends.
+	</effect>
 	<classes>CLERIC,DRUID</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
@@ -74,9 +82,11 @@ This spell can physically repair a magic item or construct, but the spell can't 
 	<casttime>false,Action</casttime>
 	<duration>false,Instantaneous</duration>
 	<area>SINGLE,60</area>
-	<effect>Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.
+	<effect>
+Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take 1d8 radiant damage. The target gains no benefit from cover for this saving throw.
 
-The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).</effect>
+The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (3d8), and 17th level (4d8).
+	</effect>
 	<classes>CLERIC</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
@@ -90,7 +100,9 @@ The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (
 	<casttime>false,Action</casttime>
 	<duration>false,Instantaneous</duration>
 	<area>SINGLE,5</area>
-	<effect>You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.</effect>
+	<effect>
+You touch a living creature that has 0 hit points. The creature becomes stable. This spell has no effect on undead or constructs.
+	</effect>
 	<classes>CLERIC</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
@@ -104,7 +116,8 @@ The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (
 	<casttime>false,Action</casttime>
 	<duration>false,1 Minute</duration>
 	<area>SELF</area>
-	<effect>You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:
+	<effect>
+You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:
  - Your voice booms up to three times as loud as normal for 1 minute.
  - You cause flames to flicker, brighten, dim, or change color for 1 minute.
  - You cause harmless tremors in the ground for 1 minute.
@@ -112,7 +125,8 @@ The spell's damage increases by 1d8 when you reach 5th level (2d8), 11th level (
  - You instantaneously cause an unlocked door or window to fly open or slam shut.
  - You alter the appearance of your eyes for 1 minute.
 
-If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.</effect>
+If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
+	</effect>
 	<classes>CLERIC</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>

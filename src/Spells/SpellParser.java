@@ -300,7 +300,7 @@ public class SpellParser {
 							builtString += "\nDuration: "+duration;
 							if(isConc){builtString += " (Concentration)";}
 							
-							builtString += "\n\n"+effect+"\n";//List spell body
+							builtString += "\n"+effect;//List spell body
 							
 							builtString += "\nClasses: ";
 							int i=0;
