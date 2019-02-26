@@ -45,7 +45,7 @@ public class SpellParser {
 					
 					
 					
-					//Parse the spell.
+					//Parse the spell.									//TODO - Label for parsing start
 					while(!scan.hasNext("/spell")) {
 						if(scan.hasNext("name")) {
 							scan.next();
@@ -95,7 +95,7 @@ public class SpellParser {
 							ritual = scan.nextBoolean();//Read the ritual tag
 							Pattern oldDelimiter = scan.delimiter();
 							scan.useDelimiter(">|<");
-							duration = scan.next();//Read the cast time
+							casttime = scan.next();//Read the cast time
 							scan.useDelimiter(oldDelimiter);
 							scan.next();
 						}
@@ -198,7 +198,7 @@ public class SpellParser {
 					
 					
 					
-					Spell current = new Spell() {
+					Spell current = new Spell() {						//TODO - label for spell creation start.
 						String name="";
 						int level=0;
 						School school = null;

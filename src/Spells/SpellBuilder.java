@@ -82,7 +82,7 @@ public class SpellBuilder {
 			
 			GridPane topBar = new GridPane();
 			
-				Button save = new Button("Save changes");
+				Button save = new Button("Save changes");		//TODO - Label for save button
 				save.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
@@ -120,7 +120,7 @@ public class SpellBuilder {
 			
 				Label label = new Label("\t\t");
 				topBar.add(label, 1, 0);
-				//Set up filter inputs
+				//Set up filter inputs							//TODO - Label for filter setup
 				TextField nameFilter = new TextField();
 				ChoiceBox<Integer> levelFilter = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
 				levelFilter.setValue(null);
@@ -297,7 +297,7 @@ public class SpellBuilder {
 						return "Source";
 					}});
 				
-				//Define the filtering action
+				//Define the filtering action					//TODO Label for filter application
 				EventHandler<ActionEvent> filterQuery = new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
@@ -403,7 +403,7 @@ public class SpellBuilder {
 						updateSpellList();
 					}
 				};
-				//Add filter inputs to panel, and set them up to apply when used.
+				//Add filter inputs to panel, and set them up to apply when used.			//TODO - Label for adding filters.
 					//TODO - make sure classes other onaction isn't overridden
 				nameFilter.setOnAction(filterQuery);		topBar.add(nameFilter, 2, 0);
 				levelFilter.setOnAction(filterQuery);		topBar.add(levelFilter, 3, 0);
@@ -448,7 +448,7 @@ public class SpellBuilder {
 
 			
 			
-			//1st pane for spell list
+			//1st pane for spell list							//TODO - Label for Pane 1
       		ScrollPane sp = new ScrollPane();//allow scrolling down the spell list
       		spellList = new GridPane();
       		spellList.setHgap(10);
@@ -472,7 +472,7 @@ public class SpellBuilder {
 
 	      	
 	      	
-	      	//2nd pane for spell addition
+	      	//2nd pane for spell addition						//TODO - Label for pane 2
 	      	curSpell = new GridPane();
 	      	curSpell.setHgap(10);
 	      	int layer = 0;
@@ -794,7 +794,7 @@ public class SpellBuilder {
 	      	curSpell.add(sourceSelect, 1, layer);
 	      	layer++;
 	      	
-			Button add = new Button("Add spell");
+			Button add = new Button("Add spell");				//TODO - Label for spell creation.
 			add.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
