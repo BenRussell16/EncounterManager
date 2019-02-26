@@ -95,7 +95,7 @@ public class SpellParser {
 							ritual = scan.nextBoolean();//Read the ritual tag
 							Pattern oldDelimiter = scan.delimiter();
 							scan.useDelimiter(">|<");
-							casttime = scan.next();//Read the cast time
+							casttime = scan.next().substring(1);//Read the cast time skipping the comma
 							scan.useDelimiter(oldDelimiter);
 							scan.next();
 						}
@@ -104,7 +104,7 @@ public class SpellParser {
 							conc = scan.nextBoolean();//Read the concentration tag
 							Pattern oldDelimiter = scan.delimiter();
 							scan.useDelimiter(">|<");
-							duration = scan.next();
+							duration = scan.next().substring(1);//Read the duration skipping the comma
 							scan.useDelimiter(oldDelimiter);
 							scan.next();
 						}
@@ -300,7 +300,7 @@ public class SpellParser {
 							builtString += "\nDuration: "+duration;
 							if(isConc){builtString += " (Concentration)";}
 							
-							builtString += "\n"+effect;//List spell body
+							builtString += "\n\n"+effect+"\n";//List spell body
 							
 							builtString += "\nClasses: ";
 							int i=0;

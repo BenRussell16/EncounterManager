@@ -26,6 +26,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
@@ -62,7 +63,7 @@ public class SpellBuilder {
   		private TextField lengthAField, lengthBField;
   		private Label rangeLabel, lengthALabel, lengthBLabel; //Labels need to be here to be hidden and changed.
   		
-  		private TextField spellBodyField;
+  		private TextArea spellBodyField;
   		private Map<Classes, RadioButton> classButtons;
   		private Map<Classes, Map<Subclass, RadioButton>> archetypes;
   		private ChoiceBox<Source> sourceSelect;
@@ -267,22 +268,6 @@ public class SpellBuilder {
 						return "Subclass";
 					}});
 				subclassPicker.setVisible(false);
-				//TODO - remove if unneeded
-//				classPicker.setOnAction(new EventHandler<ActionEvent>() {
-//					//Set subclasses based on classes
-//					@Override public void handle(ActionEvent event) {
-//						if(classPicker.getValue() == null){
-//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
-//							subclassPicker.setValue(null);
-//							subclassPicker.setVisible(false);
-//						}else{
-//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
-//							subclassPicker.getItems().addAll(
-//									classPicker.getValue().getSubclasses(classPicker.getValue()));
-//							subclassPicker.setValue(null);
-//							subclassPicker.setVisible(true);
-//						}
-//					}});
 
 				//Source filter
 				ChoiceBox<Source> sourcePicker = new ChoiceBox<Source>(FXCollections.observableArrayList());
@@ -297,7 +282,7 @@ public class SpellBuilder {
 						return "Source";
 					}});
 				
-				//Define the filtering action					//TODO Label for filter application
+				//Define the filtering action					//TODO - Label for filter application
 				EventHandler<ActionEvent> filterQuery = new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
@@ -355,7 +340,7 @@ public class SpellBuilder {
 						if(timePicker.getValue()!=null) {//cast time filter
 							List<Spell> toRemove = new ArrayList<Spell>();
 							for(Spell s:query) {
-								if(!(s.castTime()==timePicker.getValue())) {
+								if(!(s.castTime().equals(timePicker.getValue()))) {
 									toRemove.add(s);}
 							}for(Spell s:toRemove) {query.remove(s);}
 						}
@@ -403,8 +388,8 @@ public class SpellBuilder {
 						updateSpellList();
 					}
 				};
-				//Add filter inputs to panel, and set them up to apply when used.			//TODO - Label for adding filters.
-					//TODO - make sure classes other onaction isn't overridden
+				//Add filter inputs to panel, and set them up to apply when used.
+																//TODO - Label for adding filters.
 				nameFilter.setOnAction(filterQuery);		topBar.add(nameFilter, 2, 0);
 				levelFilter.setOnAction(filterQuery);		topBar.add(levelFilter, 3, 0);
 				schoolPicker.setOnAction(filterQuery);		topBar.add(schoolPicker, 4, 0);
@@ -422,25 +407,26 @@ public class SpellBuilder {
 				concPicker.setOnAction(filterQuery);		secondBar.add(concPicker, 3, 0);
 				areaPicker.setOnAction(filterQuery);		secondBar.add(areaPicker, 4, 0);
 				label = new Label("\t");					secondBar.add(label, 5, 0);
-				classPicker.setOnAction(filterQuery);		secondBar.add(classPicker, 6, 0);
+				/*classPicker.setOnAction(filterQuery);*/	secondBar.add(classPicker, 6, 0);
 				subclassPicker.setOnAction(filterQuery);	secondBar.add(subclassPicker, 7, 0);
 				sourcePicker.setOnAction(filterQuery);		secondBar.add(sourcePicker, 8, 0);
 
-//				classPicker.setOnAction(new EventHandler<ActionEvent>() {
-//					//Set subclasses based on classes
-//					@Override public void handle(ActionEvent event) {
-//						if(classPicker.getValue() == null){
-//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
-//							subclassPicker.setValue(null);
-//							subclassPicker.setVisible(false);
-//						}else{
-//							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
-//							subclassPicker.getItems().addAll(
-//									classPicker.getValue().getSubclasses(classPicker.getValue()));
-//							subclassPicker.setValue(null);
-//							subclassPicker.setVisible(true);
-//						}
-//					}});
+				classPicker.setOnAction(new EventHandler<ActionEvent>() {
+					//Set subclasses options based on selected class
+					@Override public void handle(ActionEvent event) {
+						if(classPicker.getValue() == null){
+							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
+							subclassPicker.setValue(null);
+							subclassPicker.setVisible(false);
+						}else{
+							subclassPicker.getItems().remove(1, subclassPicker.getItems().size());
+							subclassPicker.getItems().addAll(
+									classPicker.getValue().getSubclasses(classPicker.getValue()));
+							subclassPicker.setValue(null);
+							subclassPicker.setVisible(true);
+						}
+						subclassPicker.getOnAction().handle(event);//Execute the filter method.
+					}});
 				
 			grid.add(topBar, 0, 0, 2, 1);
 			grid.add(secondBar, 0, 1, 2, 1);
@@ -459,6 +445,8 @@ public class SpellBuilder {
 	      	for(int i=0; i<spells.size(); i++) {
 	      		label = new Label(" "+spells.get(i).getName());
 	      		Tooltip toolTip = new Tooltip(spells.get(i).toString());
+	      		toolTip.setWrapText(true);
+	      		toolTip.setMaxWidth(600);
 	      		label.setTooltip(toolTip);
 	      		names.add(label);
 	      		spellList.add(label, 0, i+1);
@@ -475,6 +463,7 @@ public class SpellBuilder {
 	      	//2nd pane for spell addition						//TODO - Label for pane 2
 	      	curSpell = new GridPane();
 	      	curSpell.setHgap(10);
+			curSpell.setVgap(5);
 	      	int layer = 0;
 
 	      	label = new Label(" Name");
@@ -705,7 +694,8 @@ public class SpellBuilder {
 	      	//Spell description
 	      	label = new Label(" Description");
 	      	curSpell.add(label, 0, layer);
-	      	spellBodyField = new TextField();
+	      	spellBodyField = new TextArea();
+	      	spellBodyField.setWrapText(true);
 	      	spellBodyField.setMaxWidth(800);
 	      	curSpell.add(spellBodyField, 1, layer);
 	      	layer++;
@@ -901,7 +891,7 @@ public class SpellBuilder {
 							builtString += "\nDuration: "+duration;
 							if(isConc){builtString += " (Concentration)";}
 							
-							builtString += "\n"+effect;//List spell body
+							builtString += "\n\n"+effect+"\n";//List spell body
 							
 							builtString += "\nClasses: ";
 							int i=0;
@@ -979,13 +969,12 @@ public class SpellBuilder {
 	      	//The widest part of the first column, so this min width should apply to the column.
 			curSpell.add(add, 0, layer);
 	      	
-			curSpell.setVgap(5);
 	      	grid.add(curSpell, 1, 2);
 
 	      	
 	      	
 	    //make the window
-	    secondaryStage.setScene(new Scene(grid, 1600, 700));
+	    secondaryStage.setScene(new Scene(grid, 1200, 800));
 		secondaryStage.show();
 		return secondaryStage;
 	}
