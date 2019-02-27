@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -45,7 +46,6 @@ public class SpellBook {
 	private List<Spell> known;
 	private List<Spell> knownQuery;
 	private GridPane knownList;
-		private int knownDepth = 1;
 		private List<Label> knownNames;
 		private List<Label> knownLevels;
 		private List<Button> prepare;
@@ -53,7 +53,7 @@ public class SpellBook {
 		
 	private GridPane curSpell;
 		private Map<Integer, List<Spell>> slots;
-		private int[] numSlots = new int[9];
+		private int[] numSlots = new int[10];
 		private List<List<Spell>> dailys;
 			private List<Integer> dailyUses;
 	
@@ -415,8 +415,9 @@ public class SpellBook {
 								if(knownQuery.contains(s)){knownQuery.remove(s);}
 							}
 						}
-						
+
 						updateSpellList();
+						updateKnownList();
 					}
 				};
 				//Add filter inputs to panel, and set them up to apply when used.
@@ -474,8 +475,37 @@ public class SpellBook {
 			
 			
 			//1st pane for spell list							//TODO - Label for Pane 1
-			label = new Label(" Spell list");
-			grid.add(label, 0, 2);
+			GridPane listHeader = new GridPane();
+			label = new Label(" Spell list\t\t\t\t");
+			listHeader.add(label, 0, 0);
+			Button addAll = new Button("Learn all"); //Button for adding all queried.
+				//Good for clerics and druids and things which can prepare from the whole class list
+			addAll.setOnAction(new EventHandler<ActionEvent>() {
+				@Override public void handle(ActionEvent event) {
+					for(Spell s: query){
+						if(!known.contains(s)){
+							known.add(s);
+							if(s.getLevel()==0){							//Cantrips are always prepared
+								slots.get(0).add(s);}
+						}
+						if(subclassPicker.getValue()!=null){				//Automatically prepare domain spells.
+							//Cleric, Druid, Paladin, and Ranger archetypes have always prepared domain spells.
+								//Warlock just gives more choices
+								//TODO - Druid land subsubtypes.
+							if(classPicker.getValue()==Classes.CLERIC || classPicker.getValue()==Classes.DRUID
+								|| classPicker.getValue()==Classes.PALADIN || classPicker.getValue()==Classes.RANGER){
+								if(s.fromArchetype(subclassPicker.getValue()) && !slots.get(s.getLevel()).contains(s)){
+									slots.get(s.getLevel()).add(s);
+								}
+							}
+						}
+					}
+					nameFilter.getOnAction().handle(event);//Update filtered list with the new spell		TODO - this nicer
+					//TODO - update the prepared window
+				}
+			});
+			listHeader.add(addAll, 1, 0);
+			grid.add(listHeader, 0, 2);
 			
 			names = new ArrayList<Label>();
 			levels = new ArrayList<Label>();
@@ -513,40 +543,11 @@ public class SpellBook {
 							//Add the spell to the known list.
 							System.out.println("Learning spell: "+spellI.getName());
 							known.add(spellI);
-							//Perform a bubble sort to place new spells in the list.
-							Spell slot;
-							boolean sorted = false;
-							while(!sorted){
-								sorted = true;
-								for(int i=known.size()-1; i>0; i--){
-									if(known.get(i).getLevel()<known.get(i-1).getLevel()
-										|| (known.get(i).getLevel()==known.get(i-1).getLevel()
-											&& known.get(i).getName().compareToIgnoreCase(known.get(i-1).getName())<0)){
-										sorted = false;
-										slot = known.get(i);
-										known.set(i, known.get(i-1));
-										known.set(i-1, slot);
-									}
-								}
-							}
-							//Make the spell visible in the known list.
-							int i=0;	boolean found = false;
-					      	for(Spell s:spells) {
-					      		if(!found){
-					      			if(!s.getName().equals(spellI.getName())){ i++;	
-					      			}else{found = true;}
-					      		}}
-					      	knownNames.get(i).setVisible(true);
-					      	knownLevels.get(i).setVisible(true);
-					      	prepare.get(i).setVisible(true);
-					      	forget.get(i).setVisible(true);
+							if(spellI.getLevel()==0){slots.get(0).add(spellI);}//Cantrips are always prepared.
+							nameFilter.getOnAction().handle(event);//Update filtered list with the new spell		TODO - this nicer
 						}else{
 							System.out.println("Already know "+spellI.getName());
 						}
-						//TODO - remove this once it's represented elsewhere
-						System.out.print("Know: ");
-						for(Spell s:known){System.out.print(s.getName()+" ");}
-						System.out.println();
 					}
 				});
 	      		learn.add(button);
@@ -602,64 +603,42 @@ public class SpellBook {
 	      		knownList.add(levellabel, 1, i+1);
 	      		levellabel.setVisible(false);
 	      		//Prepare button
-	      		Button prepbutton = new Button("\t");
+	      		Button prepbutton = null;
+	      		if(spellI.getLevel()!=0){//Cantrips don't need prepared
+	      			prepbutton = new Button("\t");
+	      			knownList.add(prepbutton, 2, i+1);
+	      			prepbutton.setVisible(false);
+	      		}
 	      		prepare.add(prepbutton);
-	      		knownList.add(prepbutton, 2, i+1);
-	      		prepbutton.setVisible(false);
 	      		//Forget button
 	      		Button forgetbutton = new Button("\t");
 	      		forget.add(forgetbutton);
 	      		knownList.add(forgetbutton, 3, i+1);
 	      		forgetbutton.setVisible(false);
 	      		//Button functions
-	      		prepbutton.setOnAction(new EventHandler<ActionEvent>() {
-					@Override public void handle(ActionEvent event) {
-						if(!slots.get(spellI.getLevel()).contains(spellI)){
-							//Add the spell to the prepared list.
-							System.out.println("Learning spell: "+spellI.getName());
-							slots.get(spellI.getLevel()).add(spellI);
-							//Perform a bubble sort to place new spells in the list.
-							Spell slot;
-							boolean sorted = false;
-							while(!sorted){
-								sorted = true;
-								for(int i=slots.get(spellI.getLevel()).size()-1; i>0; i--){
-									if(slots.get(spellI.getLevel()).get(i).getLevel()<slots.get(spellI.getLevel()).get(i-1).getLevel()
-										|| (slots.get(spellI.getLevel()).get(i).getLevel()==slots.get(spellI.getLevel()).get(i-1).getLevel()
-											&& slots.get(spellI.getLevel()).get(i).getName().compareToIgnoreCase(slots.get(spellI.getLevel()).get(i-1).getName())<0)){
-										sorted = false;
-										slot = slots.get(spellI.getLevel()).get(i);
-										slots.get(spellI.getLevel()).set(i, slots.get(spellI.getLevel()).get(i-1));
-										slots.get(spellI.getLevel()).set(i-1, slot);
-									}
-								}
+	      		if(prepbutton!=null){
+		      		prepbutton.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {
+							if(!slots.get(spellI.getLevel()).contains(spellI)){
+								//Add the spell to the prepared list.
+								System.out.println("Preparing spell: "+spellI.getName());
+								slots.get(spellI.getLevel()).add(spellI);
+							}else{
+								System.out.println("Already prepared "+spellI.getName());
 							}
-						}else{
-							System.out.println("Already prepared "+spellI.getName());
 						}
-						//TODO - remove this once it's represented elsewhere
-						System.out.print("Prepared at level "+spellI.getLevel()+": ");
-						for(Spell s:slots.get(spellI.getLevel())){System.out.print(s.getName()+" ");}
-						System.out.println();
-					}
-				});
+					});
+		      	}
 	      		forgetbutton.setOnAction(new EventHandler<ActionEvent>() {
 					@Override public void handle(ActionEvent event) {
 						//Remove from the lists
+						System.out.println("Forgetting spell: "+spellI.getName());
 						known.remove(spellI);
+						if(knownQuery.contains(spellI)){knownQuery.remove(spellI);}
 						if(slots.get(spellI.getLevel()).contains(spellI)){
 							slots.get(spellI.getLevel()).remove(spellI);
-							//TODO - remove window features for the spell
 						}
-						//Hide the entry in the known lists
-			      		namelabel.setVisible(false);
-			      		levellabel.setVisible(false);
-			      		prepbutton.setVisible(false);
-			      		forgetbutton.setVisible(false);
-						//TODO - remove this once it's represented elsewhere
-						System.out.print("Know: ");
-						for(Spell s:known){System.out.print(s.getName()+" ");}
-						System.out.println();
+						updateKnownList();//Remove spell from the window.
 					}
 				});
 	      	}
@@ -679,11 +658,21 @@ public class SpellBook {
 			label = new Label(" Prepared spells");
 			grid.add(label, 2, 2);
 			
-			//TODO - set up spell lists to be filled
+			slots = new HashMap<Integer, List<Spell>>();//Set up lists.
+			for(int i=0; i<10; i++){
+				numSlots[i] = 0;
+				slots.put(i, new ArrayList<Spell>());
+			}
+			
+      		sp = new ScrollPane();//allow scrolling down the spell list
+			curSpell = new GridPane();
+			
 			//TODO - spell unprepping
 	      	//TODO - - cant unprep cantrips
 			
-	      	//grid.add(curSpell, 2, 3);
+	      	sp.setContent(curSpell);
+	      	sp.setMinSize(500, 0);
+	      	grid.add(sp, 2, 3);
 
 	      	
 	      	
@@ -693,101 +682,97 @@ public class SpellBook {
 		return secondaryStage;
 	}
 
-	//TODO - update known list entries (add and remove)
-	//TODO - known list queries
+	
+	
+	
+	
+	
+	
+	
+	
 	//TODO - update prepared list entries (add and remove)
-  	//TODO - autoprep known cantrips.
 	
 	private void updateSpellList() {
 		for(int i=0; i<spells.size(); i++) {
 			boolean visible = query.contains(spells.get(i));
 			Label curName = names.get(i);
 			Label curLevel = levels.get(i);
+			Button curLearn = learn.get(i);
 			curName.setVisible(visible);//hide the entry in the list for excluded spells
 			curLevel.setVisible(visible);
+			curLearn.setVisible(visible);
 			if(!visible) {
 				spellList.getChildren().remove(curName);
 				spellList.getChildren().remove(curLevel);
-			}else if(!(spellList.getChildren().contains(curName)||spellList.getChildren().contains(curLevel))){
+				spellList.getChildren().remove(curLearn);
+			}else if(!(spellList.getChildren().contains(curName)||spellList.getChildren().contains(curLevel)
+					 ||spellList.getChildren().contains(curLearn))){
 				spellList.getChildren().add(curName);
 				spellList.getChildren().add(curLevel);
+				spellList.getChildren().add(curLearn);
 			}			
 		}
 	}
 	
-	//TODO - remove
-//	private void learnSpell(Spell spell){		
-//      		//Name label
-//      		Label namelabel = new Label(" "+spell.getName());
-//      		Tooltip toolTip = new Tooltip(spell.toString());
-//      		toolTip.setWrapText(true);
-//      		toolTip.setMaxWidth(600);
-//      		namelabel.setTooltip(toolTip);
-//      		knownNames.add(namelabel);
-//      		knownList.add(namelabel, 0, knownDepth);
-//      		
-//      		//Level label
-//      		Label levellabel = new Label(" "+spell.getLevel());
-//      		knownLevels.add(levellabel);
-//      		knownList.add(levellabel, 1, knownDepth);
-//      		
-//      		//Prepare buttons
-//      		Button prepbutton = new Button("\t");
-//      		prepbutton.setOnAction(new EventHandler<ActionEvent>() {
-//				@Override public void handle(ActionEvent event) {
-//					if(!slots.get(spell.getLevel()).contains(spell)){
-//						//Add the spell to the prepared list.
-//						System.out.println("Preparing spell: "+spell.getName());
-//						slots.get(spell.getLevel()).add(spell);
-//						//Perform a bubble sort to place new spells in the list.
-//						Spell slot;
-//						boolean sorted = false;
-//						while(!sorted){
-//							sorted = true;
-//							for(int i=slots.get(spell.getLevel()).size()-1; i>0; i--){
-//								if(slots.get(spell.getLevel()).get(i).getLevel()<slots.get(spell.getLevel()).get(i-1).getLevel()
-//									|| (slots.get(spell.getLevel()).get(i).getLevel()==slots.get(spell.getLevel()).get(i-1).getLevel()
-//										&& slots.get(spell.getLevel()).get(i).getName().compareToIgnoreCase(slots.get(spell.getLevel()).get(i-1).getName())<0)){
-//									sorted = false;
-//									slot = slots.get(spell.getLevel()).get(i);
-//									slots.get(spell.getLevel()).set(i, slots.get(spell.getLevel()).get(i-1));
-//									slots.get(spell.getLevel()).set(i-1, slot);
-//								}
-//							}
-//						}
-//					}else{
-//						System.out.println("Already prepared "+spell.getName());
-//					}
-//					//TODO - remove this once it's represented elsewhere
-//					System.out.print("Prepared at level "+spell.getLevel()+": ");
-//					for(Spell s:slots.get(spell.getLevel())){System.out.print(s.getName()+" ");}
-//					System.out.println();
-//				}
-//			});
-//      		prepare.add(prepbutton);
-//      		knownList.add(prepbutton, 2, knownDepth);
-//      		
-//      		//Forget button
-//      		Button forgetbutton = new Button("\t");
-//      		forgetbutton.setOnAction(new EventHandler<ActionEvent>() {
-//				@Override public void handle(ActionEvent event) {
-//					//Remove the spell from the list
-//					known.remove(spell);
-//					//Remove window elements from tracking lists
-//		      		knownNames.remove(namelabel);
-//		      		knownLevels.remove(levellabel);
-//		      		prepare.remove(prepbutton);
-//		      		forget.remove(forgetbutton);
-//		      		//Remove window elements from the window
-//		      		knownList.add(namelabel, 0, knownDepth);
-//		      		knownList.add(levellabel, 1, knownDepth);
-//		      		knownList.add(prepbutton, 2, knownDepth);
-//		      		knownList.add(forgetbutton, 3, knownDepth);
-//				}
-//			});
-//      		forget.add(forgetbutton);
-//      		knownList.add(forgetbutton, 3, knownDepth);
-//      		
-//      		knownDepth++;
-//	}
+	private void updateKnownList() {
+		//Perform a bubble sort to place new spells in the list.
+		Spell slot;
+		boolean sorted = false;
+		while(!sorted){
+			sorted = true;
+			for(int i=known.size()-1; i>0; i--){
+				if(known.get(i).getLevel()<known.get(i-1).getLevel()
+					|| (known.get(i).getLevel()==known.get(i-1).getLevel()
+						&& known.get(i).getName().compareToIgnoreCase(known.get(i-1).getName())<0)){
+					sorted = false;
+					slot = known.get(i);
+					known.set(i, known.get(i-1));
+					known.set(i-1, slot);
+				}
+			}
+		}
+		//Update the display of the known list.
+		for(int i=0; i<spells.size(); i++) {
+			boolean visible = knownQuery.contains(spells.get(i));
+			Label curName = knownNames.get(i);
+			Label curLevel = knownLevels.get(i);
+			Button curPrep = prepare.get(i);
+			Button curForget = forget.get(i);
+			curName.setVisible(visible);//hide the entry in the list for excluded spells
+			curLevel.setVisible(visible);
+			if(curPrep!=null){curPrep.setVisible(visible);}
+			curForget.setVisible(visible);
+			if(!visible) {
+				knownList.getChildren().remove(curName);
+				knownList.getChildren().remove(curLevel);
+				if(curPrep!=null){knownList.getChildren().remove(curPrep);}
+				knownList.getChildren().remove(curForget);
+			}else if(!(knownList.getChildren().contains(curName)				   ||knownList.getChildren().contains(curLevel)
+				    ||(curPrep!=null && knownList.getChildren().contains(curPrep)) ||knownList.getChildren().contains(curForget))){
+				knownList.getChildren().add(curName);
+				knownList.getChildren().add(curLevel);
+				if(curPrep!=null){knownList.getChildren().add(curPrep);}
+				knownList.getChildren().add(curForget);
+			}			
+		}
+	}
+	
+	
+//prepped list sort
+	//							//Perform a bubble sort to place new spells in the list.
+	//							Spell slot;
+	//							boolean sorted = false;
+	//							while(!sorted){
+	//								sorted = true;
+	//								for(int i=slots.get(spellI.getLevel()).size()-1; i>0; i--){
+	//									if(slots.get(spellI.getLevel()).get(i).getLevel()<slots.get(spellI.getLevel()).get(i-1).getLevel()
+	//										|| (slots.get(spellI.getLevel()).get(i).getLevel()==slots.get(spellI.getLevel()).get(i-1).getLevel()
+	//											&& slots.get(spellI.getLevel()).get(i).getName().compareToIgnoreCase(slots.get(spellI.getLevel()).get(i-1).getName())<0)){
+	//										sorted = false;
+	//										slot = slots.get(spellI.getLevel()).get(i);
+	//										slots.get(spellI.getLevel()).set(i, slots.get(spellI.getLevel()).get(i-1));
+	//										slots.get(spellI.getLevel()).set(i-1, slot);
+	//									}
+	//								}
+	//							}
 }

@@ -5,7 +5,7 @@ public enum Classes{
 	PALADIN,RANGER,ROGUE,SORCERER,WARLOCK,WIZARD;
 	public String toNiceString(){return name().toUpperCase().substring(0, 1)
 			+ name().toLowerCase().substring(1);}
-	
+//TODO - druid land subsubtypes.
 
 	public Subclass[] getSubclasses(Classes superClass){
 		if(superClass == Classes.BARBARIAN){return barbarianSubclass.values();}

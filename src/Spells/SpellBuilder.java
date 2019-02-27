@@ -948,7 +948,7 @@ public class SpellBuilder {
 							materials, gpCostToggle.isSelected(), materialsField.getText(),
 							castTimeSelect.getValue(), ritualSelect.isSelected(), durationSelect.getValue(), concSelect.isSelected(),
 							areaSelect.getValue(), Integer.parseInt(rangeField.getText()), dimensions,
-							spellBodyField.getText(),
+							"\n"+spellBodyField.getText()+"\n\t",//Some extra formatting so it can be formatted nicely.
 							classList, subclassList,
 							sourcesList);
 					
