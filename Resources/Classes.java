@@ -5,7 +5,6 @@ public enum Classes{
 	PALADIN,RANGER,ROGUE,SORCERER,WARLOCK,WIZARD;
 	public String toNiceString(){return name().toUpperCase().substring(0, 1)
 			+ name().toLowerCase().substring(1);}
-//TODO - druid land subsubtypes.
 
 	public Subclass[] getSubclasses(Classes superClass){
 		if(superClass == Classes.BARBARIAN){return barbarianSubclass.values();}
@@ -27,17 +26,24 @@ public enum Classes{
 		public String toNiceString();
 	}
 	private enum barbarianSubclass implements Subclass{
-		BERSERKER,TOTEMWARRIOR,//PHB	TODO-totem warrior space
-		BATTLERAGER,//SCAG
-		ANCESTRALGUARDIAN,STORMHERALD,ZEALOT;//XGtE	TODO - AG,SH space
-		public String toNiceString(){return "Path of the "+name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		BERSERKER("Path of the Berserker"),TOTEMWARRIOR("Path of the Totem Warrior"),//PHB
+		BATTLERAGER("Path of the Battlerager"),//SCAG
+		ANCESTRALGUARDIAN("Path of the Ancestral Guardian"),STORMHERALD("Path of the Storm Herald"),
+			ZEALOT("Path of the Zealot");//XGtE
+		private String niceFormat;
+		private barbarianSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum bardSubclass implements Subclass{
 		LORE,VALOR,//PHB
 		GLAMOUR,SWORDS,WHISPERS;//XGtE
 		public String toNiceString(){return "College of "+name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
+//		LORE("College of Lore"),VALOR("College of Valor"),//PHB
+//		GLAMOUR("College of Glamour"),SWORDS("College of Swords"),WHISPERS("College of Whispers");//XGtE
+//		private String niceFormat;
+//		private bardSubclass(String niceFormat){this.niceFormat = niceFormat;}
+//		public String toNiceString(){return niceFormat;}
 	}
 	private enum clericSubclass implements Subclass{
 		KNOWLEDGE,LIFE,LIGHT,NATURE,TEMPEST,TRICKERY,WAR,//PHB
@@ -49,66 +55,81 @@ public enum Classes{
 				+ name().toLowerCase().substring(1)+" Domain";}
 	}
 	private enum druidSubclass implements Subclass{
-		LAND,MOON,//PHB
-		DREAMS,SHEPHERD,//XGtE	TODO - dreams no the
-		SPORES;//GGtR	TODO - no the
-		public String toNiceString(){return "Circle of the "+name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		LANDARCTIC("Circle of the Land(Arctic)"),LANDCOAST("Circle of the Land(Coast)"),LANDDESERT("Circle of the Land(Desert)"),
+		LANDFOREST("Circle of the Land(Forest)"),LANDGRASSLAND("Circle of the Land(Grassland)"),LANDMOUNTAIN("Circle of the Land(Mountain)"),
+		LANDSWAMP("Circle of the Land(Swamp)"),LANDUNDERDARK("Circle of the Land(Underdark)"),
+			//Land subsubclasses from PHB
+		MOON("Circle of the Moon"),//PHB
+		DREAMS("Circle of Dreams"),SHEPHERD("Circle of the Shepherd"),//XGtE
+		SPORES("Circle of Spores");//GGtR
+		private String niceFormat;
+		private druidSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum fighterSubclass implements Subclass{
-		CHAMPION,BATTLEMASTER,ELDRITCHKNIGHT,//PHB	TODO-battle master and eldritch knight space
-		BANNERET,//SCAG Purple Dragon Knight
-		ARCANEARCHER,CAVALIER,SAMURAI;//XGtE	TODO - AA space
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		CHAMPION("Champion"),BATTLEMASTER("Battle Master"),ELDRITCHKNIGHT("Eldritch Knight"),//PHB
+		BANNERET("Bannaret"),//SCAG Purple Dragon Knight
+		ARCANEARCHER("Arcane Archer"),CAVALIER("Cavalier"),SAMURAI("Samurai");//XGtE
+		private String niceFormat;
+		private fighterSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum monkSubclass implements Subclass{
-		OPENHAND,SHADOW,FOURELEMENTS,//PHB	TODO-open hand and four elements space, shadow no the
-		LONGDEATH,SUNSOUL,//SCAG	TODO-long death and sun soul space
-		DRUNKENMASTER,KENSEI;//XGtE, also contains sun soul	TODO - DM space
-		public String toNiceString(){return "Way of the "+name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		OPENHAND("Way of the Open Hand"),SHADOW("Way of Shadow"),FOURELEMENTS("Way of the Four Elements"),//PHB
+		LONGDEATH("Way of the Long Death"),SUNSOUL("Way of the Sun Soul"),//SCAG
+		DRUNKENMASTER("Way of the Drunken Master"),KENSEI("Way of the Kensei");//XGtE, also contains sun soul
+		private String niceFormat;
+		private monkSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum paladinSubclass implements Subclass{
-		DEVOTION,ANCIENTS,VENGEANCE,//PHB	TODO-ancients the
-		OATHBREAKER,//DMG	TODO - no prefix
-		CROWN,//SCAG
-		CONQUEST,REDEMPTION;//XGtE
-		public String toNiceString(){return "Oath of "+name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		DEVOTION("Oath of Devotion"),ANCIENTS("Oath of the Ancients"),VENGEANCE("Oath of Vengeance"),//PHB
+		OATHBREAKER("Oathbreaker"),//DMG
+		CROWN("Oath of the Crown"),//SCAG
+		CONQUEST("Oath of Conquest"),REDEMPTION("Oath of Redemption");//XGtE
+		private String niceFormat;
+		private paladinSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum rangerSubclass implements Subclass{
-		HUNTER,BEASTMASTER,//PHB	TODO - beast master space
-		GLOOMSTALKER,HORIZONWALKER,MONSTERSLAYER;//XGtE	TODO - spaces
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		HUNTER("Hunter"),BEASTMASTER("Beast Master"),//PHB
+		GLOOMSTALKER("Gloom Stalker"),HORIZONWALKER("Horizon Walker"),MONSTERSLAYER("Monster Slayer");//XGtE
+		private String niceFormat;
+		private rangerSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum rogueSubclass implements Subclass{
-		THIEF,ASSASSIN,ARCANETRICKSTER,//PHB	TODO-arcane trickster space
-		MASTERMIND,SWASHBUCKLER,//SCAG
-		INQUISITIVE,SCOUT;//XGtE, also contains mastermind and swashbuckler
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		THIEF("Thief"),ASSASSIN("Assassin"),ARCANETRICKSTER("Arcane Trickster"),//PHB
+		MASTERMIND("Mastermind"),SWASHBUCKLER("Swashbuckler"),//SCAG
+		INQUISITIVE("Inquisitive"),SCOUT("Scout");//XGtE, also contains mastermind and swashbuckler
+		private String niceFormat;
+		private rogueSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum sorcererSubclass implements Subclass{
-		DRACONICBLOODLINE,WILDMAGIC,//PHB	TODO-spaces in both
-		STORMSORCERY,//SCAG	TODO-space
-		DIVINESOUL,SHADOWMAGIC;//XGtE, also contains storm sorcery	TODO-spaces
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		DRACONICBLOODLINE("Draconic Bloodline"),WILDMAGIC("Wild Magic"),//PHB
+		STORMSORCERY("Storm Sorcery"),//SCAG
+		DIVINESOUL("Divine Soul"),SHADOWMAGIC("Shadow Magic");//XGtE, also contains storm sorcery
+		private String niceFormat;
+		private sorcererSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum warlockSubclass implements Subclass{
-		ARCHFEY,FIEND,GREATOLDONE,//PHB	TODO-GOO spaces
-		UNDYING,//SCAG
-		CELESTIAL,HEXBLADE;//XGtE
-		public String toNiceString(){return "The "+name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		ARCHFEY("The Archfey"),FIEND("The Fiend"),GREATOLDONE("The Great Old One"),//PHB
+		UNDYING("The Undying"),//SCAG
+		CELESTIAL("The Celestial"),HEXBLADE("The Hexblade");//XGtE
+		private String niceFormat;
+		private warlockSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	private enum wizardSubclass implements Subclass{
-		ABJURATION,CONJURATION,DIVINATION,ENCHANTMENT,EVOCATION,ILLUSION,NECROMANCY,TRANSMUTATION,//PHB
-		BLADESINGING,//SCAG	TODO - no prefix
-		WARMAGIC;//XGtE	TODO - space and no prefix
-		public String toNiceString(){return "School of "+name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
+		ABJURATION("School of Abjuration"),CONJURATION("School of Conjuration"),DIVINATION("School of Divination"),
+		ENCHANTMENT("School of Enchantment"),EVOCATION("School of Evocation"),ILLUSION("School of Illusion"),
+		NECROMANCY("School of Necromancy"),TRANSMUTATION("School of Transmutation"),//PHB
+		BLADESINGING("Bladesinging"),//SCAG
+		WARMAGIC("School of War Magic");//XGtE
+		private String niceFormat;
+		private wizardSubclass(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 }

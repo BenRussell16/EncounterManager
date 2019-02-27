@@ -759,7 +759,7 @@ public class SpellBuilder {
 	      		for(Subclass s: c.getSubclasses(c)){
 		      		RadioButton rb = new RadioButton(s.toNiceString());
 		      		archetypes.get(c).put(s, rb);//Fill the maps so all the buttons can be easily iterated later
-			      	classRow.add(rb, x, 0);
+			      	classRow.add(rb, x%7, x/7);
 			      	rb.setVisible(false);
 	      			x++;
 	      		}
@@ -974,7 +974,7 @@ public class SpellBuilder {
 	      	
 	      	
 	    //make the window
-	    secondaryStage.setScene(new Scene(grid, 1200, 800));
+	    secondaryStage.setScene(new Scene(grid, 1550, 900));
 		secondaryStage.show();
 		return secondaryStage;
 	}
