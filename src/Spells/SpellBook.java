@@ -27,6 +27,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
@@ -75,24 +76,21 @@ public class SpellBook {
       		known = new ArrayList<Spell>();
       		knownQuery = new ArrayList<Spell>();
 			
-			GridPane topBar = new GridPane();
-			
-				owner = new TextField("Owner");		//TODO - Label for save and load inputs
-				topBar.add(owner, 0, 0);
-				Button save = new Button("Save spellbook");
+			GridPane topBar = new GridPane();			
+				Button save = new Button("Save spellbook");		//TODO - Label for save and load inputs
 				save.setOnAction(new EventHandler<ActionEvent>() {
 					@Override public void handle(ActionEvent event) {
-						saveBook(owner.getText());}});
-				topBar.add(save, 1, 0);
+						saveBook();}});
+				topBar.add(save, 0, 0);
 				Button load = new Button("Load spellbook");
 				load.setOnAction(new EventHandler<ActionEvent>() {
 					@Override public void handle(ActionEvent event) {
-						loadBook(owner.getText());}});
-				topBar.add(load, 2, 0);
+						loadBook();}});
+				topBar.add(load, 1, 0);
 				
 			
 				Label label = new Label("\t\t");
-				topBar.add(label, 3, 0);
+				topBar.add(label, 2, 0);
 				//Set up filter inputs							//TODO - Label for filter setup
 				nameFilter = new TextField();
 				ChoiceBox<Integer> levelFilter = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
@@ -404,18 +402,18 @@ public class SpellBook {
 				};
 				//Add filter inputs to panel, and set them up to apply when used.
 																//TODO - Label for adding filters.
-				nameFilter.setOnAction(filterQuery);				topBar.add(nameFilter, 4, 0);
-				levelFilter.setOnAction(filterQuery);				topBar.add(levelFilter, 5, 0);
-				schoolPicker.setOnAction(filterQuery);				topBar.add(schoolPicker, 6, 0);
-				label = new Label("\t");							topBar.add(label, 7, 0);
-				vPicker.setOnAction(filterQuery);					topBar.add(vPicker, 8, 0);
-				sPicker.setOnAction(filterQuery);					topBar.add(sPicker, 9, 0);
-				mPicker.setOnAction(filterQuery);					topBar.add(mPicker, 10, 0);
-				costPicker.setOnAction(filterQuery);				topBar.add(costPicker, 11, 0);
+				nameFilter.setOnAction(filterQuery);				topBar.add(nameFilter, 3, 0);
+				levelFilter.setOnAction(filterQuery);				topBar.add(levelFilter, 4, 0);
+				schoolPicker.setOnAction(filterQuery);				topBar.add(schoolPicker, 5, 0);
+				label = new Label("\t");							topBar.add(label, 6, 0);
+				vPicker.setOnAction(filterQuery);					topBar.add(vPicker, 7, 0);
+				sPicker.setOnAction(filterQuery);					topBar.add(sPicker, 8, 0);
+				mPicker.setOnAction(filterQuery);					topBar.add(mPicker, 9, 0);
+				costPicker.setOnAction(filterQuery);				topBar.add(costPicker, 10, 0);
 				
 				//Start the 2nd row
 				GridPane secondBar = new GridPane();
-				label = new Label("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t");secondBar.add(label, 0, 0);
+				label = new Label("\t\t\t\t\t\t\t\t\t\t");secondBar.add(label, 0, 0);
 				timePicker.setOnAction(filterQuery);				secondBar.add(timePicker, 1, 0);
 				ritualPicker.setOnAction(filterQuery);				secondBar.add(ritualPicker, 2, 0);
 				concPicker.setOnAction(filterQuery);				secondBar.add(concPicker, 3, 0);
@@ -473,7 +471,6 @@ public class SpellBook {
 						if(subclassPicker.getValue()!=null){				//Automatically prepare domain spells.
 							//Cleric, Druid, Paladin, and Ranger archetypes have always prepared domain spells.
 								//Warlock just gives more choices
-								//TODO - Druid land subsubtypes.
 							if(classPicker.getValue()==Classes.CLERIC || classPicker.getValue()==Classes.DRUID
 								|| classPicker.getValue()==Classes.PALADIN || classPicker.getValue()==Classes.RANGER){
 								if(s.fromArchetype(subclassPicker.getValue()) && !slots.get(s.getLevel()).contains(s)){
@@ -744,7 +741,7 @@ public class SpellBook {
 	      	
 	    nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	    //make the window
-		secondaryStage.setScene(new Scene(grid, 1300, 500));
+		secondaryStage.setScene(new Scene(grid, 1200, 500));
 		secondaryStage.show();
 		return secondaryStage;
 	}
@@ -753,134 +750,149 @@ public class SpellBook {
 	
 	
 	
-	//TODO - distinguish between pc & creature spellbooks?
 	
 	
 	
-	public void saveBook(String bookowner){						//TODO - Label for book saving
-		System.out.println("Saving spellbook for "+bookowner);
-		//Build the new XML string
-		String xml = "<spellbook>\n";
-		xml+="\t<name>"+bookowner+"</name>\n";
+	
+	
+	
+	
+	public void saveBook(){							//TODO - Label for book saving
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setInitialDirectory(new File("Resources/Spellbooks/"));
+		File file = fileChooser.showSaveDialog(secondaryStage);
 		
-		xml+="\t<slot>\n";//Slot based spells
-		xml+="\t\t<known>";//Known spells
-		boolean first = true;
-		for(Spell s:known){
-			if(!first){xml+=",";}
-			else{first = false;}
-			xml+=s.getName();
-		}
-		xml+="</known>\n";
-		
-		for(int i=0; i<=9;i++){//Prepared spells
-			if(!slots.get(i).isEmpty() || (i!=0 && slotCounts.get(i).getValue()>0)){//only make an entry if that level has slots or spells
-				xml+="\t\t<"+i+">";
-				if(i!=0){xml+=slotCounts.get(i).getValue()+",";}//Cantrips dont have slots.
-				first = true;
-				for(Spell s:slots.get(i)){
-					if(!first){xml+=",";}
-					else{first = false;}
-					xml+=s.getName();
-				}
-				xml+="</"+i+">\n";
+		if(file!=null){
+			System.out.println("Saving spellbook for "+file.getName());
+			//Build the new XML string
+			String xml = "<spellbook>\n";
+			xml+="\t<name>"+file.getName()+"</name>\n";
+			
+			xml+="\t<slot>\n";//Slot based spells
+			xml+="\t\t<known>";//Known spells
+			boolean first = true;
+			for(Spell s:known){
+				if(!first){xml+=",";}
+				else{first = false;}
+				xml+=s.getName();
 			}
-		}
-		xml+="\t</slot>\n";
-		
-		//TODO - Daily uses
-		//		<daily>
-		//			<3(uses per day)>dancing lights, faerie fire (list of spells)</3>
-		//			<3>can have multiple of the some number of uses.</3>
-		//		</daily>
-		xml+="</spellbook>\n";
-		//Save the new spells.
-		try (PrintWriter out = new PrintWriter(new File("Resources/Spellbooks/"+bookowner))) {
-		    out.print(xml);
-		    System.out.println("Spellbook saving complete");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
+			xml+="</known>\n";
+			
+			for(int i=0; i<=9;i++){//Prepared spells
+				if(!slots.get(i).isEmpty() || (i!=0 && slotCounts.get(i).getValue()>0)){//only make an entry if that level has slots or spells
+					xml+="\t\t<"+i+">";
+					if(i!=0){xml+=slotCounts.get(i).getValue()+",";}//Cantrips dont have slots.
+					first = true;
+					for(Spell s:slots.get(i)){
+						if(!first){xml+=",";}
+						else{first = false;}
+						xml+=s.getName();
+					}
+					xml+="</"+i+">\n";
+				}
+			}
+			xml+="\t</slot>\n";
+			
+			//TODO - Daily uses
+			//		<daily>
+			//			<3(uses per day)>dancing lights, faerie fire (list of spells)</3>
+			//			<3>can have multiple of the some number of uses.</3>
+			//		</daily>
+			
+			xml+="</spellbook>\n";
+			//Save the new spells.
+			try (PrintWriter out = new PrintWriter(file)) {
+			    out.print(xml);
+			    System.out.println("Spellbook saving complete");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}else{System.out.println("Spellbook saving failed");}
 	}
 
-	//TODO - load spellbook
-	public void loadBook(String bookowner){						//TODO - Label for book loading
-		Scanner scan;
-		System.out.println("Loading spellbook for "+bookowner);
-		try {
-			scan = new Scanner(new File("Resources/Spellbooks/"+bookowner));
-			scan.useDelimiter("<|>|\n|\t| |,");
-			while(scan.hasNext()) {
-				if(scan.hasNext("spellbook")) {
-					//Setting fields to store spell values.
-					List<Spell> knownspells = new ArrayList<Spell>();
-					Map<Integer, Integer> numSlots = new HashMap<Integer,Integer>();
-						for(int i=1; i<=9; i++){numSlots.put(i, 0);}
-					Map<Integer, List<Spell>> preparedSpells = new HashMap<Integer,List<Spell>>();
-						for(int i=0; i<=9; i++){preparedSpells.put(i, new ArrayList<Spell>());};
-					
-					//Parse the spellbook.
-					while(!scan.hasNext("/spellbook")) {
-						if(scan.hasNext("name")){//Skip the name, it's there for human readers
-							while(!scan.hasNext("/name")){scan.next();}
-						}else if(scan.hasNext("slot")){
-							scan.next();
-							while(!scan.hasNext("/slot")){//Parse the slot based spells
-								if(scan.hasNext("known")){
-									scan.next();
-									Pattern oldDelimiter = scan.delimiter();
-									scan.useDelimiter(">|<|,");
-									List<String> knowns = new ArrayList<String>();
-									while(!scan.hasNext("/known")){//Read known spells
-										knowns.add(scan.next());
-									}
-									scan.useDelimiter(oldDelimiter);
-									for(Spell s:spells){//Translate names to spells
-										if(knowns.contains(s.getName())){
-											knownspells.add(s);
+	public void loadBook(){							//TODO - Label for book loading
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setInitialDirectory(new File("Resources/Spellbooks/"));
+		File file = fileChooser.showOpenDialog(secondaryStage);
+		
+		if(file!=null){
+			Scanner scan;
+			System.out.println("Loading spellbook for "+file.getName());
+			try {
+				scan = new Scanner(file);
+				scan.useDelimiter("<|>|\n|\t| |,");
+				while(scan.hasNext()) {
+					if(scan.hasNext("spellbook")) {
+						//Setting fields to store spell values.
+						List<Spell> knownspells = new ArrayList<Spell>();
+						Map<Integer, Integer> numSlots = new HashMap<Integer,Integer>();
+							for(int i=1; i<=9; i++){numSlots.put(i, 0);}
+						Map<Integer, List<Spell>> preparedSpells = new HashMap<Integer,List<Spell>>();
+							for(int i=0; i<=9; i++){preparedSpells.put(i, new ArrayList<Spell>());};
+						
+						//Parse the spellbook.
+						while(!scan.hasNext("/spellbook")) {
+							if(scan.hasNext("name")){//Skip the name, it's there for human readers
+								while(!scan.hasNext("/name")){scan.next();}
+							}else if(scan.hasNext("slot")){
+								scan.next();
+								while(!scan.hasNext("/slot")){//Parse the slot based spells
+									if(scan.hasNext("known")){
+										scan.next();
+										Pattern oldDelimiter = scan.delimiter();
+										scan.useDelimiter(">|<|,");
+										List<String> knowns = new ArrayList<String>();
+										while(!scan.hasNext("/known")){//Read known spells
+											knowns.add(scan.next());
 										}
-									}
-									
-								}else if(scan.hasNextInt()){
-									int level = scan.nextInt();//Read level, and if not cantrip read number of slots
-									if(level!=0){numSlots.put(level, scan.nextInt());}
-									Pattern oldDelimiter = scan.delimiter();
-									scan.useDelimiter(">|<|,");
-									List<String> prepped = new ArrayList<String>();
-									while(!scan.hasNext("/"+level)){//Read prepared spells
-										prepped.add(scan.next());
-									}
-									scan.useDelimiter(oldDelimiter);
-									for(Spell s:spells){//Translate names to spells
-										if(prepped.contains(s.getName())){
-											preparedSpells.get(level).add(s);
+										scan.useDelimiter(oldDelimiter);
+										for(Spell s:spells){//Translate names to spells
+											if(knowns.contains(s.getName())){
+												knownspells.add(s);
+											}
 										}
-									}
-									scan.next();
-								}else {scan.next();}
-							}
-						}else{scan.next();}
-					}
-					
-					//Apply the data to the window
-					owner.setText(bookowner);
-					known = knownspells;
-					for(int i=0; i<=9; i++){
-						if(i!=0){
-							slotCounts.get(i).setValue(numSlots.get(i));
+										
+									}else if(scan.hasNextInt()){
+										int level = scan.nextInt();//Read level, and if not cantrip read number of slots
+										if(level!=0){numSlots.put(level, scan.nextInt());}
+										Pattern oldDelimiter = scan.delimiter();
+										scan.useDelimiter(">|<|,");
+										List<String> prepped = new ArrayList<String>();
+										while(!scan.hasNext("/"+level)){//Read prepared spells
+											prepped.add(scan.next());
+										}
+										scan.useDelimiter(oldDelimiter);
+										for(Spell s:spells){//Translate names to spells
+											if(prepped.contains(s.getName())){
+												preparedSpells.get(level).add(s);
+											}
+										}
+										scan.next();
+									}else {scan.next();}
+								}
+							}else{scan.next();}
 						}
-						slots.put(i, preparedSpells.get(i));
+						
+						//Apply the data to the window
+						owner.setText(file.getName());
+						known = knownspells;
+						for(int i=0; i<=9; i++){
+							if(i!=0){
+								slotCounts.get(i).setValue(numSlots.get(i));
+							}
+							slots.put(i, preparedSpells.get(i));
+						}
 					}
-				}
-				scan.next();
-			}//where parsing ends
-			scan.close();
-			System.out.println("Spellbook loading complete");
-			nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
-		} catch (FileNotFoundException e) {
-			System.out.println("Spellbook loading failed");
-			e.printStackTrace();
-		}
+					scan.next();
+				}//where parsing ends
+				scan.close();
+				System.out.println("Spellbook loading complete");
+				nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
+			} catch (FileNotFoundException e) {
+				System.out.println("Spellbook loading failed");
+				e.printStackTrace();
+			}
+		}else{System.out.println("Spellbook loading failed");}
 	}
 	
 	

@@ -1,8 +1,0 @@
-<spellbook>
-	<name>TestCleric</name>
-	<slot>
-		<known>Guidance,Light,Mending,Command,Identify</known>
-		<0>Guidance,Light,Mending</0>
-		<1>2,Command</1>
-	</slot>
-</spellbook>
