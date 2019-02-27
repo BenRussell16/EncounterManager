@@ -1,8 +1,5 @@
 package src.Spells;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -51,11 +48,9 @@ public class SpellBook {
 		private List<Button> prepare;
 		private List<Button> forget;
 		
-	private GridPane curSpell;
+	private GridPane preparedList;
 		private Map<Integer, List<Spell>> slots;
-		private int[] numSlots = new int[10];
-		private List<List<Spell>> dailys;
-			private List<Integer> dailyUses;
+		private Map<Integer, GridPane> levelPanes;
 	
 	public Stage makeDisplay() {
 		if(secondaryStage != null) {secondaryStage.close();}
@@ -76,7 +71,7 @@ public class SpellBook {
 				save.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
-						//TODO - save the spell
+						//TODO - save the spellbook, and load a spellbook
 //						System.out.println("Saving spells");
 //						//Perform a bubble sort to place new spells in the list.
 //						Spell slot;
@@ -541,12 +536,9 @@ public class SpellBook {
 					@Override public void handle(ActionEvent event) {
 						if(!known.contains(spellI)){
 							//Add the spell to the known list.
-							System.out.println("Learning spell: "+spellI.getName());
 							known.add(spellI);
 							if(spellI.getLevel()==0){slots.get(0).add(spellI);}//Cantrips are always prepared.
 							nameFilter.getOnAction().handle(event);//Update filtered list with the new spell		TODO - this nicer
-						}else{
-							System.out.println("Already know "+spellI.getName());
 						}
 					}
 				});
@@ -621,10 +613,7 @@ public class SpellBook {
 						@Override public void handle(ActionEvent event) {
 							if(!slots.get(spellI.getLevel()).contains(spellI)){
 								//Add the spell to the prepared list.
-								System.out.println("Preparing spell: "+spellI.getName());
 								slots.get(spellI.getLevel()).add(spellI);
-							}else{
-								System.out.println("Already prepared "+spellI.getName());
 							}
 						}
 					});
@@ -632,7 +621,6 @@ public class SpellBook {
 	      		forgetbutton.setOnAction(new EventHandler<ActionEvent>() {
 					@Override public void handle(ActionEvent event) {
 						//Remove from the lists
-						System.out.println("Forgetting spell: "+spellI.getName());
 						known.remove(spellI);
 						if(knownQuery.contains(spellI)){knownQuery.remove(spellI);}
 						if(slots.get(spellI.getLevel()).contains(spellI)){
@@ -659,25 +647,92 @@ public class SpellBook {
 			grid.add(label, 2, 2);
 			
 			slots = new HashMap<Integer, List<Spell>>();//Set up lists.
-			for(int i=0; i<10; i++){
-				numSlots[i] = 0;
+			for(int i=0; i<=9; i++){
 				slots.put(i, new ArrayList<Spell>());
 			}
+			levelPanes = new HashMap<Integer, GridPane>();
 			
-      		sp = new ScrollPane();//allow scrolling down the spell list
-			curSpell = new GridPane();
+			preparedList = new GridPane();
+				GridPane slotPane = new GridPane();
+					//Header row.
+					label = new Label("Spell level");
+					slotPane.add(label, 0, 0);
+					label = new Label("Slots");
+					slotPane.add(label, 1, 0, 2, 1);
+					label = new Label("Spell list");
+					slotPane.add(label, 3, 0);
+					//Each spell level
+					for(int i=0; i<=9; i++){
+						//Level label
+						label = new Label("Level "+i);
+						if(i==0){label.setText("Cantrip");}
+						slotPane.add(label, 0, i+1);
+						//Slot management						//TODO - Label for slot management
+						if(i!=0){//Cantrips don't have slots
+							//Slot count select
+							final ChoiceBox<Integer> slotcount;
+							if(i == 1){
+								slotcount = new ChoiceBox<Integer>(FXCollections.observableArrayList(0,1,2,3,4));
+							}else if(i >= 2 && i <=5){
+								slotcount = new ChoiceBox<Integer>(FXCollections.observableArrayList(0,1,2,3));
+							}else if(i == 6 || i == 7){
+								slotcount = new ChoiceBox<Integer>(FXCollections.observableArrayList(0,1,2));
+							}else/*(i == 8 || i == 9)*/{
+								slotcount = new ChoiceBox<Integer>(FXCollections.observableArrayList(0,1));
+							}
+							slotcount.setValue(0);
+							slotPane.add(slotcount, 1, i+1);
+							//Slot tracker
+							GridPane slotRadioPane = new GridPane();
+								List<RadioButton> slotRadios = new ArrayList<RadioButton>();
+								for(int j=0; j<slotcount.getItems().size(); j++){
+									RadioButton rb = new RadioButton();
+									slotRadios.add(rb);
+									slotRadioPane.add(rb, j, 0);
+									rb.setVisible(false);
+								}
+							slotPane.add(slotRadioPane, 2, i+1);
+							//Slot count varying visibility
+							slotcount.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {
+									for(int j=0; j<slotcount.getItems().size(); j++){
+										if(j<slotcount.getValue()){
+											slotRadios.get(j).setVisible(true);
+										}else{//Deselect when they're no longer visible.
+												//This means when visible again they aren't selected.
+											slotRadios.get(j).setSelected(false);
+											slotRadios.get(j).setVisible(false);
+										}
+									}
+								}
+							});
+						}
+						//Spell list							//TODO - Label for prepared spell lists
+						GridPane preppedSpellList = new GridPane();
+							//TODO - spell list
+						levelPanes.put(i, preppedSpellList);
+						slotPane.add(preppedSpellList, 3, i+1);
+					}
+				slotPane.setHgap(10);
+				slotPane.setVgap(5);
+				preparedList.add(slotPane, 0, 0);
+			/* TODO
+			 * Slots panel
+			 * * Labels;	Level					Slots											Spells
+			 * * Rows;		Spell level label		Num slots dropdown. Slot used radios.			Spell name (with tooltip), unprep button (not cantrips), repeat
+			 * Daily panel
+			 */
 			
 			//TODO - spell unprepping
 	      	//TODO - - cant unprep cantrips
+			//TODO - note level of daily uses
 			
-	      	sp.setContent(curSpell);
-	      	sp.setMinSize(500, 0);
-	      	grid.add(sp, 2, 3);
+	      	grid.add(preparedList, 2, 3);
 
 	      	
 	      	
 	    //make the window
-		secondaryStage.setScene(new Scene(grid, 1000, 400));
+		secondaryStage.setScene(new Scene(grid, 1000, 500));
 		secondaryStage.show();
 		return secondaryStage;
 	}
@@ -691,6 +746,7 @@ public class SpellBook {
 	
 	
 	//TODO - update prepared list entries (add and remove)
+	//TODO - - Don't sort them
 	
 	private void updateSpellList() {
 		for(int i=0; i<spells.size(); i++) {
@@ -757,22 +813,4 @@ public class SpellBook {
 		}
 	}
 	
-	
-//prepped list sort
-	//							//Perform a bubble sort to place new spells in the list.
-	//							Spell slot;
-	//							boolean sorted = false;
-	//							while(!sorted){
-	//								sorted = true;
-	//								for(int i=slots.get(spellI.getLevel()).size()-1; i>0; i--){
-	//									if(slots.get(spellI.getLevel()).get(i).getLevel()<slots.get(spellI.getLevel()).get(i-1).getLevel()
-	//										|| (slots.get(spellI.getLevel()).get(i).getLevel()==slots.get(spellI.getLevel()).get(i-1).getLevel()
-	//											&& slots.get(spellI.getLevel()).get(i).getName().compareToIgnoreCase(slots.get(spellI.getLevel()).get(i-1).getName())<0)){
-	//										sorted = false;
-	//										slot = slots.get(spellI.getLevel()).get(i);
-	//										slots.get(spellI.getLevel()).set(i, slots.get(spellI.getLevel()).get(i-1));
-	//										slots.get(spellI.getLevel()).set(i-1, slot);
-	//									}
-	//								}
-	//							}
 }
