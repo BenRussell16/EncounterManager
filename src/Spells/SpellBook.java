@@ -51,6 +51,8 @@ public class SpellBook {
 	private GridPane preparedList;
 		private Map<Integer, List<Spell>> slots;
 		private Map<Integer, GridPane> levelPanes;
+		private List<Label> preppedNames;
+		private List<Button> unprep;
 	
 	public Stage makeDisplay() {
 		if(secondaryStage != null) {secondaryStage.close();}
@@ -495,8 +497,7 @@ public class SpellBook {
 							}
 						}
 					}
-					nameFilter.getOnAction().handle(event);//Update filtered list with the new spell		TODO - this nicer
-					//TODO - update the prepared window
+					nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 				}
 			});
 			listHeader.add(addAll, 1, 0);
@@ -538,7 +539,7 @@ public class SpellBook {
 							//Add the spell to the known list.
 							known.add(spellI);
 							if(spellI.getLevel()==0){slots.get(0).add(spellI);}//Cantrips are always prepared.
-							nameFilter.getOnAction().handle(event);//Update filtered list with the new spell		TODO - this nicer
+							nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 						}
 					}
 				});
@@ -614,6 +615,7 @@ public class SpellBook {
 							if(!slots.get(spellI.getLevel()).contains(spellI)){
 								//Add the spell to the prepared list.
 								slots.get(spellI.getLevel()).add(spellI);
+								updatePreppedList();
 							}
 						}
 					});
@@ -651,11 +653,14 @@ public class SpellBook {
 				slots.put(i, new ArrayList<Spell>());
 			}
 			levelPanes = new HashMap<Integer, GridPane>();
+			preppedNames = new ArrayList<Label>();
+			unprep = new ArrayList<Button>();
 			
 			preparedList = new GridPane();
 				GridPane slotPane = new GridPane();
 					//Header row.
 					label = new Label("Spell level");
+					label.setMinWidth(60);
 					slotPane.add(label, 0, 0);
 					label = new Label("Slots");
 					slotPane.add(label, 1, 0, 2, 1);
@@ -709,30 +714,50 @@ public class SpellBook {
 						}
 						//Spell list							//TODO - Label for prepared spell lists
 						GridPane preppedSpellList = new GridPane();
-							//TODO - spell list
+					      	for(int j=0; j<spells.size(); j++) {
+					      		if(spells.get(j).getLevel()==i){
+						      		Spell spellI = spells.get(j);
+						      		if(i!=0){
+							      		//Unprepare button
+							      		Button button = new Button("x");
+							      		button.setOnAction(new EventHandler<ActionEvent>() {
+											@Override public void handle(ActionEvent event) {
+												slots.get(spellI.getLevel()).remove(spellI);
+												updatePreppedList();
+											}
+										});
+							      		unprep.add(button);
+							      		preppedSpellList.add(button, preppedSpellList.getChildren().size(), 0);
+							      		button.setVisible(false);
+						      		}else{unprep.add(null);}//Cantrips are always prepared
+						      		//Name label
+						      		label = new Label(" "+spellI.getName()+"\t");
+						      		Tooltip toolTip = new Tooltip(spellI.toString());
+						      		toolTip.setWrapText(true);
+						      		toolTip.setMaxWidth(600);
+						      		label.setTooltip(toolTip);
+						      		preppedNames.add(label);
+						      		preppedSpellList.add(label, preppedSpellList.getChildren().size(), 0);
+						      		label.setVisible(false);
+					      		}
+					      	}
 						levelPanes.put(i, preppedSpellList);
 						slotPane.add(preppedSpellList, 3, i+1);
 					}
 				slotPane.setHgap(10);
 				slotPane.setVgap(5);
 				preparedList.add(slotPane, 0, 0);
-			/* TODO
-			 * Slots panel
-			 * * Labels;	Level					Slots											Spells
-			 * * Rows;		Spell level label		Num slots dropdown. Slot used radios.			Spell name (with tooltip), unprep button (not cantrips), repeat
-			 * Daily panel
-			 */
-			
-			//TODO - spell unprepping
-	      	//TODO - - cant unprep cantrips
+
+				
+			//TODO - Daily panel
 			//TODO - note level of daily uses
 			
 	      	grid.add(preparedList, 2, 3);
 
 	      	
-	      	
+	    nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	    //make the window
-		secondaryStage.setScene(new Scene(grid, 1000, 500));
+		secondaryStage.setScene(new Scene(grid, 1200, 500));
 		secondaryStage.show();
 		return secondaryStage;
 	}
@@ -744,9 +769,6 @@ public class SpellBook {
 	
 	
 	
-	
-	//TODO - update prepared list entries (add and remove)
-	//TODO - - Don't sort them
 	
 	private void updateSpellList() {
 		for(int i=0; i<spells.size(); i++) {
@@ -809,6 +831,26 @@ public class SpellBook {
 				knownList.getChildren().add(curLevel);
 				if(curPrep!=null){knownList.getChildren().add(curPrep);}
 				knownList.getChildren().add(curForget);
+			}			
+		}
+		updatePreppedList();
+	}
+	
+	private void updatePreppedList() {
+		for(int i=0; i<spells.size(); i++) {
+			int level = spells.get(i).getLevel();
+			boolean visible = slots.get(level).contains(spells.get(i));
+			GridPane spellLevel = levelPanes.get(level);
+			Label curName = preppedNames.get(i);
+			Button curUnprep = unprep.get(i);
+			curName.setVisible(visible);//hide the entry in the list for excluded spells
+			if(curUnprep!=null){curUnprep.setVisible(visible);}
+			if(!visible) {
+				spellLevel.getChildren().remove(curName);
+				if(curUnprep!=null){spellLevel.getChildren().remove(curUnprep);}
+			}else if(!(spellLevel.getChildren().contains(curName)||(curUnprep!=null && spellLevel.getChildren().contains(curUnprep)))){
+				spellLevel.getChildren().add(curName);
+				if(curUnprep!=null){spellLevel.getChildren().add(curUnprep);}
 			}			
 		}
 	}
