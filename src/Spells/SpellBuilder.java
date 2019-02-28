@@ -88,25 +88,26 @@ public class SpellBuilder {
 					@Override
 					public void handle(ActionEvent event) {
 						System.out.println("Saving spells");
+						List<Spell> sortedspells = new ArrayList<Spell>(spells);
 						//Perform a bubble sort to place new spells in the list.
 						Spell slot;
 						boolean sorted = false;
 						while(!sorted){
 							sorted = true;
-							for(int i=spells.size()-1; i>0; i--){
-								if(spells.get(i).getLevel()<spells.get(i-1).getLevel()
-									|| (spells.get(i).getLevel()==spells.get(i-1).getLevel()
-										&& spells.get(i).getName().compareToIgnoreCase(spells.get(i-1).getName())<0)){
+							for(int i=sortedspells.size()-1; i>0; i--){
+								if(sortedspells.get(i).getLevel()<sortedspells.get(i-1).getLevel()
+									|| (sortedspells.get(i).getLevel()==sortedspells.get(i-1).getLevel()
+										&& sortedspells.get(i).getName().compareToIgnoreCase(sortedspells.get(i-1).getName())<0)){
 									sorted = false;
-									slot = spells.get(i);
-									spells.set(i, spells.get(i-1));
-									spells.set(i-1, slot);
+									slot = sortedspells.get(i);
+									sortedspells.set(i, sortedspells.get(i-1));
+									sortedspells.set(i-1, slot);
 								}
 							}
 						}
 						//Build the new XML string
 						String xml = "";
-						for(int i=0; i<spells.size(); i++){xml+=spells.get(i).toXML();}
+						for(int i=0; i<sortedspells.size(); i++){xml+=sortedspells.get(i).toXML();}
 						//Save the new spells.
 						try (PrintWriter out = new PrintWriter(new File("Resources/SpellList"))) {
 						    out.print(xml);
@@ -196,7 +197,7 @@ public class SpellBuilder {
 				//Cast time filter
 				ChoiceBox<String> timePicker = new ChoiceBox<String>(FXCollections.observableArrayList());
 				timePicker.getItems().addAll(null,"Action","Bonus Action","Reaction",
-		      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours");
+		      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours","Special");
 				timePicker.setValue(null);
 				timePicker.setConverter(new StringConverter<String>(){
 					@Override public String fromString(String arg0) {return arg0;}
@@ -540,7 +541,7 @@ public class SpellBuilder {
 	      	//Cast time
 	      	castTimeSelect = new ChoiceBox<String>(FXCollections.observableArrayList());
 	      	castTimeSelect.getItems().addAll(null,"Action","Bonus Action","Reaction",
-	      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours");
+	      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours","Special");
 	      	castTimeSelect.setValue(null);
 	      	timePanel.add(castTimeSelect, 0, 0);
 	      	ritualSelect = new RadioButton("Ritual");
@@ -583,7 +584,7 @@ public class SpellBuilder {
 	      		//Adjust visibility and labelling of other area fields based on selection.
 				@Override public void handle(ActionEvent event) {
 					Area value = areaSelect.getValue();
-					if(value == null || value == Area.SELF) { //Hide other fields if unneeded.
+					if(value == null || value == Area.SELF || value == Area.UNLIMITED) { //Hide other fields if unneeded.
 				  		rangeField.setText("0");
 				  		lengthAField.setText("0");
 						lengthBField.setText("0");
@@ -930,7 +931,7 @@ public class SpellBuilder {
 						materials[0] = vRadio.isSelected();
 						materials[1] = sRadio.isSelected();
 						materials[2] = mRadio.isSelected();
-					int[] dimensions = new int[2];
+					int[] dimensions = new int[2];//Includes some redundancy on the initial entry. Subsequent saves remove the dead entries.
 						dimensions[0] = Integer.parseInt(lengthAField.getText());
 						dimensions[1] = Integer.parseInt(lengthBField.getText());
 					List<Classes> classList = new ArrayList<Classes>();
@@ -955,6 +956,7 @@ public class SpellBuilder {
 					System.out.println("Adding spell "+newSpell.getName());
 		      			Label label = new Label(" "+newSpell.getName());
 		      			Tooltip toolTip = new Tooltip(newSpell.toString());
+			      		toolTip.setMaxWidth(600);
 		      			label.setTooltip(toolTip);
 		      			names.add(label);
 		      			spellList.add(label, 0, spells.size()+1);
@@ -962,7 +964,7 @@ public class SpellBuilder {
 		      			levels.add(label);
 		      			spellList.add(label, 1, spells.size()+1);
 					spells.add(newSpell);
-					updateSpellList();
+					nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 				}
 			});
 	      	add.setMinWidth(100);

@@ -119,7 +119,7 @@ public class SpellParser {
 									scan.next();
 								}
 							}
-							if(area != Area.SELF){
+							if(area != Area.SELF && area != Area.UNLIMITED){
 								range = scan.nextInt();//Range should be first if not area of self.
 								switch (area) {
 								case CONE://Areas with 1 needed length
