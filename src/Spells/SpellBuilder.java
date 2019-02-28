@@ -955,6 +955,7 @@ public class SpellBuilder {
 					System.out.println("Adding spell "+newSpell.getName());
 		      			Label label = new Label(" "+newSpell.getName());
 		      			Tooltip toolTip = new Tooltip(newSpell.toString());
+			      		toolTip.setMaxWidth(600);
 		      			label.setTooltip(toolTip);
 		      			names.add(label);
 		      			spellList.add(label, 0, spells.size()+1);

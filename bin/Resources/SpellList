@@ -197,6 +197,25 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Heroism</name>
+	<level>1</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SINGLE,5</area>
+	<effect>
+A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to being frightened and gains temporary hit points equal to your spellcasting ability modifier at the start of each of its turns. When the spell ends, the target loses any remaining temporary hit points from this spell.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
+	</effect>
+	<classes>BARD,PALADIN</classes>
+	<subclasses>ORDER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Identify</name>
 	<level>1</level>
 	<school>DIVINATION</school>
@@ -306,7 +325,7 @@ On subsequent turns, you must use your action to maintain control over the targe
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>true,10 Minutes</duration>
-	<area>SPHERE,60,15,0</area>
+	<area>SPHERE,60,15</area>
 	<effect>
 Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.
 
@@ -316,6 +335,48 @@ If any of this spell's area overlaps with an area of light created by a spell of
 	</effect>
 	<classes>SORCERER,WARLOCK,WIZARD</classes>
 	<subclasses>LANDSWAMP,OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Gentle repose</name>
+	<level>2</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration</material>
+	</components>
+	<casttime>true,Action</casttime>
+	<duration>false,10 Days</duration>
+	<area>SELF</area>
+	<effect>
+You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead.
+
+The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as raise dead.
+	</effect>
+	<classes>CLERIC,WIZARD</classes>
+	<subclasses>GRAVE,SPORES</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Hold person</name>
+	<level>2</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a small, straight piece of iron</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SINGLE,60</area>
+	<effect>
+Choose a humanoid that you can see within range. The target must succeed on a Wisdom saving throw or be paralyzed for the duration. At the end of each of its turns, the target can make another Wisdom saving throw. On a success, the spell ends on the target.
+
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional humanoid for each slot level above 2nd. The humanoids must be within 30 feet of each other when you target them.
+	</effect>
+	<classes>BARD,CLERIC,DRUID,SORCERER,WARLOCK,WIZARD</classes>
+	<subclasses>ORDER,LANDARCTIC,VENGEANCE,CONQUEST,REDEMPTION</subclasses>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -335,6 +396,25 @@ At the end of each of the target's turns, it can make a Constitution saving thro
 	</effect>
 	<classes>WARLOCK,WIZARD</classes>
 	<subclasses>DEATH,GRAVE,SPORES</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Zone of truth</name>
+	<level>2</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,10 Minutes</duration>
+	<area>SPHERE,60,15,0</area>
+	<effect>
+You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point of your choice within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.
+
+An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such a creature can be evasive in its answers as long as it remains within the boundaries of the truth.
+	</effect>
+	<classes>BARD,CLERIC,PALADIN</classes>
+	<subclasses>ORDER,DEVOTION,CROWN</subclasses>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -388,6 +468,73 @@ At Higher Levels. If you cast this spell using a spell slot of 4th level or high
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Gaseous form</name>
+	<level>3</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a bit of gauze and a wisp of smoke</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Hour</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You transform a willing creature you touch, along with everything it's wearing and carrying, into a misty cloud for the duration. The spell ends if the creature drops to 0 hit points. An incorporeal creature isn't affected.
+
+While in this form, the target's only method of movement is a flying speed of 10 feet. The target can enter and occupy the space of another creature. The target has resistance to nonmagical damage, and it has advantage on Strength, Dexterity, and Constitution saving throws. The target can pass through small holes, narrow openings, and even mere cracks, though it treats liquids as though they were solid surfaces. The target can't fall and remains hovering in the air even when stunned or otherwise incapacitated.
+
+While in the form of a misty cloud, the target can't talk or manipulate objects, and any objects it was carrying or holding can't be dropped, used, or otherwise interacted with. The target can't attack or cast spells.
+	</effect>
+	<classes>SORCERER,WARLOCK,WIZARD</classes>
+	<subclasses>LANDUNDERDARK,SPORES</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Mass healing word</name>
+	<level>3</level>
+	<school>EVOCATION</school>
+	<components>
+		true,false,false
+	</components>
+	<casttime>false,Bonus Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SPHERE,0,60,0</area>
+	<effect>
+As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the healing increases by 1d4 for each slot level above 3rd.
+	</effect>
+	<classes>CLERIC</classes>
+	<subclasses>ORDER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Slow</name>
+	<level>3</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a drop of molasses</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>CUBE,120,40,0</area>
+	<effect>
+You alter time around up to six creatures of your choice in a 40-foot cube within range. Each target must succeed on a Wisdom saving throw or be affected by this spell for the duration.
+
+An affected target's speed is halved, it takes a ?2 penalty to AC and Dexterity saving throws, and it can't use reactions. On its turn, it can use either an action or a bonus action, not both. Regardless of the creature's abilities or magic items, it can't make more than one melee or ranged attack during its turn.
+
+If the creature attempts to cast a spell with a casting time of 1 action, roll a d20. On an 11 or higher, the spell doesn't take effect until the creature's next turn, and the creature must use its action on that turn to complete the spell. If it can't, the spell is wasted.
+
+A creature affected by this spell makes another Wisdom saving throw at the end of each of its turns. On a successful save, the effect ends for it.
+	</effect>
+	<classes>SORCERER,WIZARD</classes>
+	<subclasses>ORDER,LANDARCTIC</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Vampiric touch</name>
 	<level>3</level>
 	<school>NECROMANCY</school>
@@ -430,6 +577,27 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Compulsion</name>
+	<level>4</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SINGLE,30</area>
+	<effect>
+Creatures of your choice that you can see within range and that can hear you must make a Wisdom saving throw. A target automatically succeeds on this saving throw if it can't be charmed. On a failed save, a target is affected by this spell. Until the spell ends, you can use a bonus action on each of your turns to designate a direction that is horizontal to you.
+
+Each affected target must use as much of its movement as possible to move in that direction on its next turn. It can take its action before it moves. After moving in this way, it can make another Wisdom saving throw to try to end the effect.
+
+A target isn't compelled to move into an obviously deadly hazard, such as a fire or pit, but it will provoke opportunity attacks to move in the designated direction.
+	</effect>
+	<classes>BARD</classes>
+	<subclasses>ORDER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Confusion</name>
 	<level>4</level>
 	<school>ENCHANTMENT</school>
@@ -440,7 +608,7 @@ At Higher Levels. When you cast this spell using a spell slot of 5th level or hi
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>true,1 Minute</duration>
-	<area>SPHERE,90,10,0</area>
+	<area>SPHERE,90,10</area>
 	<effect>
 This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action. Each creature in a 10-foot-radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or be affected by it.
 
@@ -483,6 +651,29 @@ If the spell is still in effect when the target is subjected to an effect that w
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Locate creature</name>
+	<level>4</level>
+	<school>DIVINATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a bit of fur from a bloodhound</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Hour</duration>
+	<area>SELF</area>
+	<effect>
+Describe or name a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.
+
+The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a unicorn), so long as you have seen such a creature up close--within 30 feet--at least once. If the creature you described or named is in a different form, such as being under the effects of a polymorph spell, this spell doesn't locate the creature.
+
+This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature.
+	</effect>
+	<classes>BARD,CLERIC,DRUID,PALADIN,RANGER,WIZARD</classes>
+	<subclasses>ORDER,LANDSWAMP</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Antilife shell</name>
 	<level>5</level>
 	<school>ABJURATION</school>
@@ -491,7 +682,7 @@ If the spell is still in effect when the target is subjected to an effect that w
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>true,1 Hour</duration>
-	<area>SPHERE,0,10,0</area>
+	<area>SPHERE,0,10</area>
 	<effect>
 A shimmering barrier extends out from you in a 10- foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration.
 
@@ -512,7 +703,7 @@ If you move so that an affected creature is forced to pass through the barrier, 
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>true,10 Minutes</duration>
-	<area>SPHERE,120,20,0</area>
+	<area>SPHERE,120,20</area>
 	<effect>
 You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.
 
@@ -524,6 +715,29 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 	</effect>
 	<classes>SORCERER,WIZARD</classes>
 	<subclasses>DEATH,LANDUNDERDARK,SPORES,CONQUEST</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Commune</name>
+	<level>5</level>
+	<school>DIVINATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>incense and a vial of holy or unholy water</material>
+	</components>
+	<casttime>true,1 Minute</casttime>
+	<duration>false,1 Minute</duration>
+	<area>SELF</area>
+	<effect>
+You contact your deity or a divine proxy and ask up to three questions that can be answered with a yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.
+
+Divine beings aren't necessarily omniscient, so you might receive "unclear" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the GM might offer a short phrase as an answer instead.
+
+If you cast the spell two or more times before finishing your next long rest, there is a cumulative 25 percent chance for each casting after the first that you get no answer. The GM makes this roll in secret.
+	</effect>
+	<classes>CLERIC</classes>
+	<subclasses>ORDER,DEVOTION</subclasses>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
