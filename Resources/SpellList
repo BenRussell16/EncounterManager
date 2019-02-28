@@ -157,6 +157,46 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>False life</name>
+	<level>1</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a small amount of alcohol or distilled spirits</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,1 Hour</duration>
+	<area>SELF</area>
+	<effect>
+Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you gain 5 additional temporary hit points for each slot level above 1st.
+	</effect>
+	<classes>SORCERER,WIZARD</classes>
+	<subclasses>DEATH,GRAVE,UNDYING</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Hellish rebuke</name>
+	<level>1</level>
+	<school>EVOCATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Reaction</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,60</area>
+	<effect>
+You point your finger, and the creature that damaged you is momentarily surrounded by hellish flames. The creature must make a Dexterity saving throw. It takes 2d10 fire damage on a failed save, or half as much damage on a successful one.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.
+	</effect>
+	<classes>WARLOCK</classes>
+	<subclasses>OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Identify</name>
 	<level>1</level>
 	<school>DIVINATION</school>
@@ -175,5 +215,372 @@ If you instead touch a creature throughout the casting, you learn what spells, i
 	</effect>
 	<classes>BARD,WIZARD</classes>
 	<subclasses>KNOWLEDGE,FORGE</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Inflict wounds</name>
+	<level>1</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,5</area>
+	<effect>
+Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.
+	</effect>
+	<classes>CLERIC</classes>
+	<subclasses>OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Ray of sickness</name>
+	<level>1</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,60</area>
+	<effect>
+Bolstering yourself with a necromantic facsimile of life, you gain 1d4 + 4 temporary hit points for the duration.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d8 for each slot level above 1st.
+	</effect>
+	<classes>SORCERER,WIZARD</classes>
+	<subclasses>DEATH,UNDYING</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Blindness/Deafness</name>
+	<level>2</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,false,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,1 Minute</duration>
+	<area>SINGLE,30</area>
+	<effect>
+You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.
+
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
+	</effect>
+	<classes>BARD,CLERIC,SORCERER,WIZARD</classes>
+	<subclasses>DEATH,SPORES,FIEND,UNDYING</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Crown of madness</name>
+	<level>2</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SINGLE,120</area>
+	<effect>
+One humanoid of your choice that you can see within range must succeed on a Wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.
+
+The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if none are within its reach.
+
+On subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a Wisdom saving throw at the end of each of its turns. On a success, the spell ends.
+	</effect>
+	<classes>BARD,SORCERER,WARLOCK,WIZARD</classes>
+	<subclasses>OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Darkness</name>
+	<level>2</level>
+	<school>EVOCATION</school>
+	<components>
+		true,false,true
+		<gold>false</gold>
+		<material>bat fur and a drop of pitch or piece of coal</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>SPHERE,60,15,0</area>
+	<effect>
+Magical darkness spreads from a point you choose within range to fill a 15-foot-radius sphere for the duration. The darkness spreads around corners. A creature with darkvision can't see through this darkness, and nonmagical light can't illuminate it.
+
+If the point you choose is on an object you are holding or one that isn't being worn or carried, the darkness emanates from the object and moves with it. Completely covering the source of the darkness with an opaque object, such as a bowl or a helm, blocks the darkness.
+
+If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled.
+	</effect>
+	<classes>SORCERER,WARLOCK,WIZARD</classes>
+	<subclasses>LANDSWAMP,OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Ray of enfeeblement</name>
+	<level>2</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SINGLE,60</area>
+	<effect>
+A black beam of enervating energy springs from your finger toward a creature within range. Make a ranged spell attack against the target. On a hit, the target deals only half damage with weapon attacks that use Strength until the spell ends.
+
+At the end of each of the target's turns, it can make a Constitution saving throw against the spell. On a success, the spell ends.
+	</effect>
+	<classes>WARLOCK,WIZARD</classes>
+	<subclasses>DEATH,GRAVE,SPORES</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Animate dead</name>
+	<level>3</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a drop of blood, a piece of flesh, and a pinch of bone dust</material>
+	</components>
+	<casttime>false,1 Minute</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,10</area>
+	<effect>
+This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse (the GM has the creature's game statistics).
+
+On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.
+
+The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones.
+	</effect>
+	<classes>CLERIC,WIZARD</classes>
+	<subclasses>DEATH,SPORES,OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Bestow curse</name>
+	<level>3</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:
+ - Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.
+ - While cursed, the target has disadvantage on attack rolls against you.
+ - While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.
+ - While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target.
+
+A remove curse spell ends this effect. At the GM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The GM has final say on such a curse's effect.
+
+At Higher Levels. If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.
+	</effect>
+	<classes>BARD,CLERIC,WIZARD</classes>
+	<subclasses>OATHBREAKER,CONQUEST</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Vampiric touch</name>
+	<level>3</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SELF</area>
+	<effect>
+The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature within your reach. On a hit, the target takes 3d6 necrotic damage, and you regain hit points equal to half the amount of necrotic damage dealt. Until the spell ends, you can make the attack again on each of your turns as an action.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd.
+	</effect>
+	<classes>WARLOCK,WIZARD</classes>
+	<subclasses>DEATH,GRAVE</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Blight</name>
+	<level>4</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,30</area>
+	<effect>
+Necromantic energy washes over a creature of your choice that you can see within range, draining moisture and vitality from it. The target must make a Constitution saving throw. The target takes 8d8 necrotic damage on a failed save, or half as much damage on a successful one. This spell has no effect on undead or constructs.
+
+If you target a plant creature or a magical plant, it makes the saving throw with disadvantage, and the spell deals maximum damage to it.
+
+If you target a nonmagical plant that isn't a creature, such as a tree or shrub, it doesn't make a saving throw; it simply withers and dies.
+
+At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the damage increases by 1d8 for each slot level above 4th.
+	</effect>
+	<classes>DRUID,SORCERER,WARLOCK,WIZARD</classes>
+	<subclasses>DEATH,GRAVE,LANDDESERT,SPORES,OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Confusion</name>
+	<level>4</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>three nut shells</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SPHERE,90,10,0</area>
+	<effect>
+This spell assaults and twists creatures' minds, spawning delusions and provoking uncontrolled action. Each creature in a 10-foot-radius sphere centered on a point you choose within range must succeed on a Wisdom saving throw when you cast this spell or be affected by it.
+
+An affected target can't take reactions and must roll a d10 at the start of each of its turns to determine its behavior for that turn.
+
+d10	Behavior
+1	The creature uses all its movement to move in a random direction. To determine the direction, roll a d8 and assign a direction to each die face. The creature doesn't take an action this turn.
+2-6	The creature doesn't move or take actions this turn.
+7-8	The creature uses its action to make a melee attack against a randomly determined creature within its reach. If there is no creature within its reach, the creature does nothing this turn.
+9-10	The creature can act and move normally.
+ 
+
+At the end of each of its turns, an affected target can make a Wisdom saving throw. If it succeeds, this effect ends for that target.
+
+At Higher Levels. When you cast this spell using a spell slot of 5th level or higher, the radius of the sphere increases by 5 feet for each slot level above 4th.
+	</effect>
+	<classes>BARD,DRUID,SORCERER,WIZARD</classes>
+	<subclasses>KNOWLEDGE,SPORES,OATHBREAKER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Death ward</name>
+	<level>4</level>
+	<school>ABJURATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,8 Hours</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You touch a creature and grant it a measure of protection from death.
+
+The first time the target would drop to 0 hit points as a result of taking damage, the target instead drops to 1 hit point, and the spell ends.
+
+If the spell is still in effect when the target is subjected to an effect that would kill it instantaneously without dealing damage, that effect is instead negated against the target, and the spell ends.
+	</effect>
+	<classes>CLERIC,PALADIN</classes>
+	<subclasses>LIFE,DEATH,GRAVE,UNDYING</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Antilife shell</name>
+	<level>5</level>
+	<school>ABJURATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Hour</duration>
+	<area>SPHERE,0,10,0</area>
+	<effect>
+A shimmering barrier extends out from you in a 10- foot radius and moves with you, remaining centered on you and hedging out creatures other than undead and constructs. The barrier lasts for the duration.
+
+The barrier prevents an affected creature from passing or reaching through. An affected creature can cast spells or make attacks with ranged or reach weapons through the barrier.
+
+If you move so that an affected creature is forced to pass through the barrier, the spell ends.
+	</effect>
+	<classes>DRUID</classes>
+	<subclasses>DEATH,GRAVE</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Cloudkill</name>
+	<level>5</level>
+	<school>CONJURATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>SPHERE,120,20,0</area>
+	<effect>
+You create a 20-foot-radius sphere of poisonous, yellow-green fog centered on a point you choose within range. The fog spreads around corners. It lasts for the duration or until strong wind disperses the fog, ending the spell. Its area is heavily obscured.
+
+When a creature enters the spell's area for the first time on a turn or starts its turn there, that creature must make a Constitution saving throw. The creature takes 5d8 poison damage on a failed save, or half as much damage on a successful one. Creatures are affected even if they hold their breath or don't need to breathe.
+
+The fog moves 10 feet away from you at the start of each of your turns, rolling along the surface of the ground. The vapors, being heavier than air, sink to the lowest level of the land, even pouring down openings.
+
+At Higher Levels. When you cast this spell using a spell slot of 6th level or higher, the damage increases by 1d8 for each slot level above 5th.
+	</effect>
+	<classes>SORCERER,WIZARD</classes>
+	<subclasses>DEATH,LANDUNDERDARK,SPORES,CONQUEST</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Contagion</name>
+	<level>5</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,7 Days</duration>
+	<area>SINGLE,5</area>
+	<effect>
+Your touch inflicts disease. Make a melee spell attack against a creature within your reach. On a hit, the target is poisoned.
+
+At the end of each of the poisoned target's turns, the target must make a Constitution saving throw. If the target succeeds on three of these saves, it is no longer poisoned, and the spell ends. If the target fails three of these saves, the target is no longer poisoned, but choose one of the diseases below. The target is subjected to the chosen disease for the spell's duration.
+
+Since this spell induces a natural disease in its target, any effect that removes a disease or otherwise ameliorates a disease's effects apply to it.
+
+Blinding Sickness. Pain grips the creature's mind, and its eyes turn milky white. The creature has disadvantage on Wisdom checks and Wisdom saving throws and is blinded.
+
+Filth Fever. A raging fever sweeps through the creature's body. The creature has disadvantage on Strength checks, Strength saving throws, and attack rolls that use Strength.
+
+Flesh Rot. The creature's flesh decays. The creature has disadvantage on Charisma checks and vulnerability to all damage.
+
+Mindfire. The creature's mind becomes feverish. The creature has disadvantage on Intelligence checks and Intelligence saving throws, and the creature behaves as if under the effects of the confusion spell during combat.
+
+Seizure. The creature is overcome with shaking. The creature has disadvantage on Dexterity checks, Dexterity saving throws, and attack rolls that use Dexterity.
+
+Slimy Doom. The creature begins to bleed uncontrollably. The creature has disadvantage on Constitution checks and Constitution saving throws. In addition, whenever the creature takes damage, it is stunned until the end of its next turn.
+	</effect>
+	<classes>CLERIC,DRUID</classes>
+	<subclasses>SPORES,OATHBREAKER,UNDYING</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Dominate person</name>
+	<level>5</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Minute</duration>
+	<area>SINGLE,60</area>
+	<effect>
+You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.
+
+While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as "Attack that creature," "Run over there," or "Fetch that object." If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.
+
+You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.
+
+Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.
+
+At Higher Levels. When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.
+	</effect>
+	<classes>BARD,SORCERER,WIZARD</classes>
+	<subclasses>TRICKERY,ORDER,OATHBREAKER,CONQUEST,ARCHFEY,GREATOLDONE</subclasses>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
