@@ -207,6 +207,44 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Toll the dead</name>
+	<level>0</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,60</area>
+	<effect>
+You point at one creature you can see within range, and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a Wisdom saving throw or take 1d8 necrotic damage. If the target is missing any of its hit points, it instead takes 1d12 necrotic damage.
+
+The spell's damage increases by one die when you reach 5th level (2d8 or 2d12), 11th level (3d8 or 3d12), and 17th level (4d8 or 4d12).
+	</effect>
+	<classes>CLERIC,WARLOCK,WIZARD</classes>
+	<source>XANATHARSGUIDETOEVERYTHING</source>
+</spell>
+<spell>
+	<name>Word of radiance</name>
+	<level>0</level>
+	<school>EVOCATION</school>
+	<components>
+		true,false,true
+		<gold>false</gold>
+		<material>a holy symbol</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SPHERE,0,5,0</area>
+	<effect>
+You utter a divine word, and burning radiance erupts from you. Each creature of your choice that you can see within range must succeed on a Constitution saving throw or take 1d6 radiant damage.
+
+The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).
+	</effect>
+	<classes>CLERIC</classes>
+	<source>XANATHARSGUIDETOEVERYTHING</source>
+</spell>
+<spell>
 	<name>Animal friendship</name>
 	<level>1</level>
 	<school>ENCHANTMENT</school>
@@ -280,7 +318,7 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>true,1 Minute</duration>
-	<area>SPHERE,0,30,0</area>
+	<area>SPHERE,0,30</area>
 	<effect>
 You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.
 
@@ -310,6 +348,36 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	<classes>SORCERER,WIZARD</classes>
 	<subclasses>LIGHT,FIEND</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Ceremony</name>
+	<level>1</level>
+	<school>ABJURATION</school>
+	<components>
+		true,true,true
+		<gold>true</gold>
+		<material>25gp worth of powdered silver, which the spell consumes</material>
+	</components>
+	<casttime>true,1 Hour</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You perform a special religious ceremony that is infused with magic. When you cast the spell, choose one of the following rites, the target of which must be within 10 feet of you throughout the casting.
+
+Atonement. You touch one willing creature whose alignment has changed, and you make a DC20 Wisdom (Insight) check. on a successful check, you restore the target to its original alignment.
+
+Bless Water. You touch one vial of water and cause it to become holy water.
+
+Coming of Age. You touch one humanoid who is a young adult. For the next 24 hours, whenever the target makes an ability check, it can roll a d4 and add the number rolled to the ability check. A creature can benefit from this rite only once.
+
+Dedication. You touch one humanoid who wishes to be dedicated to your god's service. For the next 24 hours, whenever the target makes a saving throw, it can roll a d4 and add the number rolled to the save. A creature can benefit from this rite only once.
+
+Funeral Rite. You touch one corpse, and for the next 7 days, the target can't become undead by any means short of a wish spell.
+
+Wedding. You touch adult humanoids willing to be bonded together in marriage. For the next 7 days, each target gains a +2 bonus to AC while they are within 30 feet of each other. A creature can benefit from this rite again only if widowed.
+	</effect>
+	<classes>CLERIC,PALADIN</classes>
+	<source>XANATHARSGUIDETOEVERYTHING</source>
 </spell>
 <spell>
 	<name>Charm person</name>
@@ -376,6 +444,30 @@ The spell ends if you attack any other creature, if you cast a spell that target
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Create or destroy water</name>
+	<level>1</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a drop of water if creating water or a few grains of sand if destroying it</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,Instantaneous</duration>
+	<area>CUBE,30,30</area>
+	<effect>
+You either create or destroy water.
+
+Create Water. You create up to 10 gallons of clean water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames in the area.
+
+Destroy Water. You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.
+	</effect>
+	<classes>CLERIC,DRUID</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Cure wounds</name>
 	<level>1</level>
 	<school>EVOCATION</school>
@@ -395,6 +487,24 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Detect evil and good</name>
+	<level>1</level>
+	<school>DIVINATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>SELF</area>
+	<effect>
+For the duration, you know if there is an aberration, celestial, elemental, fey, fiend, or undead within 30 feet of you, as well as where the creature is located. Similarly, you know if there is a place or object within 30 feet of you that has been magically consecrated or desecrated.
+
+The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
+	</effect>
+	<classes>CLERIC,PALADIN</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Detect magic</name>
 	<level>1</level>
 	<school>DIVINATION</school>
@@ -411,6 +521,26 @@ The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 i
 	</effect>
 	<classes>BARD,CLERIC,DRUID,PALADIN,RANGER,SORCERER,WIZARD</classes>
 	<subclasses>ARCANA</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Detect poison and disease</name>
+	<level>1</level>
+	<school>DIVINATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a yew leaf</material>
+	</components>
+	<casttime>true,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>SELF</area>
+	<effect>
+For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.
+
+The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
+	</effect>
+	<classes>CLERIC,DRUID,PALADIN,RANGER</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -540,7 +670,7 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>true,1 Hour</duration>
-	<area>SPHERE,120,20,0</area>
+	<area>SPHERE,120,20</area>
 	<effect>
 You create a 20-foot-radius sphere of fog centered on a point within range. The sphere spreads around corners, and its area is heavily obscured. It lasts for the duration or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it.
 
@@ -567,6 +697,24 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	</effect>
 	<classes>CLERIC</classes>
 	<subclasses>CELESTIAL</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Healing word</name>
+	<level>1</level>
+	<school>EVOCATION</school>
+	<components>
+		true,false,false
+	</components>
+	<casttime>false,Bonus Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,60</area>
+	<effect>
+A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.
+	</effect>
+	<classes>BARD,CLERIC,DRUID</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -704,6 +852,22 @@ The protection grants several benefits. Creatures of those types have disadvanta
 	</effect>
 	<classes>CLERIC,PALADIN,WARLOCK,WIZARD</classes>
 	<subclasses>DEVOTION,HORIZONWALKER,MONSTERSLAYER</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Purify food and drink</name>
+	<level>1</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>true,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SPHERE,10,5</area>
+	<effect>
+All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.
+	</effect>
+	<classes>CLERIC,DRUID,PALADIN</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -873,7 +1037,7 @@ At the end of each of its turns, and each time it takes damage, the target can m
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>false,Instantaneous</duration>
-	<area>CUBE,0,15,0</area>
+	<area>CUBE,0,15</area>
 	<effect>
 A wave of thunderous force sweeps out from you. Each creature in a 15-foot cube originating from you must make a Constitution saving throw. On a failed save, a creature takes 2d8 thunder damage and is pushed 10 feet away from you. On a successful save, the creature takes half as much damage and isn't pushed.
 
@@ -900,6 +1064,26 @@ The next time you hit with a melee weapon attack during the spell's duration, yo
 	</effect>
 	<classes>PALADIN</classes>
 	<subclasses>HEXBLADE</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Aid</name>
+	<level>2</level>
+	<school>ABJURATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a tiny strip of white cloth</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,8 Hours</duration>
+	<area>SPHERE,0,30</area>
+	<effect>
+Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration.
+
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd.
+	</effect>
+	<classes>CLERIC,PALADIN</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -1025,6 +1209,24 @@ Alternatively, you can make a target indifferent about creatures of your choice 
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Continual flame</name>
+	<level>2</level>
+	<school>EVOCATION</school>
+	<components>
+		true,true,true
+		<gold>true</gold>
+		<material>ruby dust worth 50 gp, which the spell consumes</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Until Dispelled</duration>
+	<area>SINGLE,5</area>
+	<effect>
+A flame, equivalent in brightness to a torch, springs forth from an object that you touch. The effect looks like a regular flame, but it creates no heat and doesn't use oxygen. A continual flame can be covered or hidden but not smothered or quenched.
+	</effect>
+	<classes>CLERIC,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Crown of madness</name>
 	<level>2</level>
 	<school>ENCHANTMENT</school>
@@ -1093,6 +1295,56 @@ Once you detect the presence of a creature in this way, you can read its thought
 	</effect>
 	<classes>BARD,SORCERER,WIZARD</classes>
 	<subclasses>GREATOLDONE</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Enhance ability</name>
+	<level>2</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>fur or a feather from a beast</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Hour</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.
+
+Bear's Endurance. The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends.
+
+Bull's Strength. The target has advantage on Strength checks, and his or her carrying capacity doubles.
+
+Cat's Grace. The target has advantage on Dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated.
+
+Eagle's Splendor. The target has advantage on Charisma checks.
+
+Fox's Cunning. The target has advantage on Intelligence checks.
+
+Owl's Wisdom. The target has advantage on Wisdom checks.
+
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
+	</effect>
+	<classes>BARD,CLERIC,DRUID,SORCERER</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Find traps</name>
+	<level>2</level>
+	<school>DIVINATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,Instantaneous</duration>
+	<area>SPHERE,0,120</area>
+	<effect>
+You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.
+
+This spell merely reveals that a trap is present. You don't learn the location of each trap, but you do learn the general nature of the danger posed by a trap you sense.
+	</effect>
+	<classes>CLERIC,DRUID,RANGER</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -1246,6 +1498,28 @@ You touch a creature and can end either one disease or one condition afflicting 
 	</effect>
 	<classes>BARD,CLERIC,DRUID,PALADIN,RANGER</classes>
 	<subclasses>LIFE,DEVOTION,CELESTIAL</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Locate object</name>
+	<level>2</level>
+	<school>DIVINATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a forked twig</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>SELF</area>
+	<effect>
+Describe or name an object that is familiar to you. You sense the direction to the object's location, as long as that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.
+
+The spell can locate a specific object known to you, as long as you have seen it up close--within 30 feet--at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.
+
+This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object.
+	</effect>
+	<classes>BARD,CLERIC,DRUID,PALADIN,RANGER,WIZARD</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -1428,6 +1702,42 @@ An affected target is so convinced of the phantasm's reality that it can even ta
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Prayer of healing</name>
+	<level>2</level>
+	<school>EVOCATION</school>
+	<components>
+		true,false,false
+	</components>
+	<casttime>false,10 Minutes</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SPHERE,0,30</area>
+	<effect>
+Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, the healing increases by 1d8 for each slot level above 2nd.
+	</effect>
+	<classes>CLERIC</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Protection from poison</name>
+	<level>2</level>
+	<school>ABJURATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,1 Hour</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You touch a creature. If it is poisoned, you neutralize the poison. If more than one poison afflicts the target, you neutralize one poison that you know is present, or you neutralize one at random.
+
+For the duration, the target has advantage on saving throws against being poisoned, and it has resistance to poison damage.
+	</effect>
+	<classes>CLERIC,DRUID,PALADIN,RANGER</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Ray of enfeeblement</name>
 	<level>2</level>
 	<school>NECROMANCY</school>
@@ -1503,7 +1813,7 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>false,Instantaneous</duration>
-	<area>SPHERE,60,10,0</area>
+	<area>SPHERE,60,10</area>
 	<effect>
 A sudden loud ringing noise, painfully intense, erupts from a point of your choice within range. Each creature in a 10-foot-radius sphere centered on that point must make a Constitution saving throw. A creature takes 3d8 thunder damage on a failed save, or half as much damage on a successful one. A creature made of inorganic material such as stone, crystal, or metal has disadvantage on this saving throw.
 
@@ -2036,6 +2346,38 @@ While in the form of a misty cloud, the target can't talk or manipulate objects,
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Glyph of warding</name>
+	<level>3</level>
+	<school>ABJURATION</school>
+	<components>
+		true,true,true
+		<gold>true</gold>
+		<material>incense and powdered diamond worth at least 200 gp, which the spell consumes</material>
+	</components>
+	<casttime>false,1 Hour</casttime>
+	<duration>false,Until Dispelled or Triggered</duration>
+	<area>SINGLE,5</area>
+	<effect>
+When you cast this spell, you inscribe a glyph that later unleashes a magical effect. You inscribe it either on a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. The glyph can cover an area no larger than 10 feet in diameter. If the surface or object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.
+
+The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.
+
+You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.
+
+You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don’t trigger the glyph, such as those who say a certain password.
+
+When you inscribe the glyph, choose explosive runes or a spell glyph.
+
+Explosive Runes. When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes 5d8 acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.
+
+Spell Glyph. You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by 1d8 for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.
+	</effect>
+	<classes>BARD,CLERIC,WIZARD</classes>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
 	<name>Haste</name>
 	<level>3</level>
 	<school>TRANSMUTATION</school>
@@ -2076,6 +2418,24 @@ The spell ends for an affected creature if it takes any damage or if someone els
 	<classes>BARD,SORCERER,WARLOCK,WIZARD</classes>
 	<subclasses>REDEMPTION</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Life transference</name>
+	<level>3</level>
+	<school>NECROMANCY</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,30</area>
+	<effect>
+You sacrifice some of your health to mend another creature's injuries. You take 4d8 necrotic damage, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d8 for each slot level above 3rd.
+	</effect>
+	<classes>CLERIC,WIZARD</classes>
+	<source>XANATHARSGUIDETOEVERYTHING</source>
 </spell>
 <spell>
 	<name>Lightning bolt</name>
@@ -2224,6 +2584,22 @@ For the duration, the willing creature you touch has resistance to one damage ty
 	</effect>
 	<classes>CLERIC,DRUID,RANGER,SORCERER,WIZARD</classes>
 	<subclasses>FORGE,LANDDESERT,ANCIENTS,VENGEANCE</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Remove curse</name>
+	<level>3</level>
+	<school>ABJURATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SINGLE,5</area>
+	<effect>
+At your touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's attunement to the object so it can be removed or discarded.
+	</effect>
+	<classes>CLERIC,PALADIN,WARLOCK,WIZARD</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -2379,6 +2755,24 @@ A moderate wind (at least 10 miles per hour) disperses the cloud after 4 rounds.
 	</effect>
 	<classes>BARD,SORCERER,WIZARD</classes>
 	<subclasses>LANDSWAMP,LANDUNDERDARK,FIEND</subclasses>
+	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Tongues</name>
+	<level>3</level>
+	<school>DIVINATION</school>
+	<components>
+		true,false,true
+		<gold>false</gold>
+		<material>a small clay model of a ziggurat</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,1 Hour</duration>
+	<area>SINGLE,5</area>
+	<effect>
+This spell grants the creature you touch the ability to understand any spoken language it hears. Moreover, when the target speaks, any creature that knows at least one language and can hear the target understands what it says.
+	</effect>
+	<classes>BARD,CLERIC,SORCERER,WARLOCK,WIZARD</classes>
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
@@ -3430,7 +3824,7 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>false,Instantaneous</duration>
-	<area>SPHERE,0,30,0</area>
+	<area>SPHERE,0,30</area>
 	<effect>
 You strike the ground creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet must succeed on a Constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone.
 	</effect>
@@ -3672,7 +4066,7 @@ The information you learn is accurate but might be couched in figurative languag
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>false,Instantaneous</duration>
-	<area>SPHERE,60,30,0</area>
+	<area>SPHERE,60,30</area>
 	<effect>
 A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to 3d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
 

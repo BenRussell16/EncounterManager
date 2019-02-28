@@ -874,7 +874,6 @@ public class SpellBook {
 						}
 						
 						//Apply the data to the window
-						owner.setText(file.getName());
 						known = knownspells;
 						for(int i=0; i<=9; i++){
 							if(i!=0){

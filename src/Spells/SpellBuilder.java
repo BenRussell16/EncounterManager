@@ -931,7 +931,7 @@ public class SpellBuilder {
 						materials[0] = vRadio.isSelected();
 						materials[1] = sRadio.isSelected();
 						materials[2] = mRadio.isSelected();
-					int[] dimensions = new int[2];
+					int[] dimensions = new int[2];//Includes some redundancy on the initial entry. Subsequent saves remove the dead entries.
 						dimensions[0] = Integer.parseInt(lengthAField.getText());
 						dimensions[1] = Integer.parseInt(lengthBField.getText());
 					List<Classes> classList = new ArrayList<Classes>();
