@@ -166,7 +166,7 @@ public class SpellBook {
 				//Cast time filter
 				ChoiceBox<String> timePicker = new ChoiceBox<String>(FXCollections.observableArrayList());
 				timePicker.getItems().addAll(null,"Action","Bonus Action","Reaction",
-		      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours");
+		      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours","Special");
 				timePicker.setValue(null);
 				timePicker.setConverter(new StringConverter<String>(){
 					@Override public String fromString(String arg0) {return arg0;}

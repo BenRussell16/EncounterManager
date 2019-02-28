@@ -66,7 +66,7 @@ public interface Spell {
 
 		//Area
 		builtString += "\t<area>" + getArea();
-		if(getArea() != Area.SELF){//Self targetting spells don't need a range
+		if(getArea() != Area.SELF && getArea() != Area.UNLIMITED){//Self targetting spells don't need a range
 			builtString += ","+getRange();//If centered on self have 0;
 			if(getArea() != Area.SINGLE){//Single target spells don't need an area
 				for(int i=0; i<getDimensions().length; i++){

@@ -197,7 +197,7 @@ public class SpellBuilder {
 				//Cast time filter
 				ChoiceBox<String> timePicker = new ChoiceBox<String>(FXCollections.observableArrayList());
 				timePicker.getItems().addAll(null,"Action","Bonus Action","Reaction",
-		      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours");
+		      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours","Special");
 				timePicker.setValue(null);
 				timePicker.setConverter(new StringConverter<String>(){
 					@Override public String fromString(String arg0) {return arg0;}
@@ -541,7 +541,7 @@ public class SpellBuilder {
 	      	//Cast time
 	      	castTimeSelect = new ChoiceBox<String>(FXCollections.observableArrayList());
 	      	castTimeSelect.getItems().addAll(null,"Action","Bonus Action","Reaction",
-	      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours");
+	      			"1 Minute","10 Minutes","1 Hour","8 Hours","12 Hours","24 Hours","Special");
 	      	castTimeSelect.setValue(null);
 	      	timePanel.add(castTimeSelect, 0, 0);
 	      	ritualSelect = new RadioButton("Ritual");
@@ -584,7 +584,7 @@ public class SpellBuilder {
 	      		//Adjust visibility and labelling of other area fields based on selection.
 				@Override public void handle(ActionEvent event) {
 					Area value = areaSelect.getValue();
-					if(value == null || value == Area.SELF) { //Hide other fields if unneeded.
+					if(value == null || value == Area.SELF || value == Area.UNLIMITED) { //Hide other fields if unneeded.
 				  		rangeField.setText("0");
 				  		lengthAField.setText("0");
 						lengthBField.setText("0");
