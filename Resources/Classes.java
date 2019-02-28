@@ -55,9 +55,9 @@ public enum Classes{
 				+ name().toLowerCase().substring(1)+" Domain";}
 	}
 	private enum druidSubclass implements Subclass{
-		LANDARCTIC("Circle of the Land(Arctic)"),LANDCOAST("Circle of the Land(Coast)"),LANDDESERT("Circle of the Land(Desert)"),
-		LANDFOREST("Circle of the Land(Forest)"),LANDGRASSLAND("Circle of the Land(Grassland)"),LANDMOUNTAIN("Circle of the Land(Mountain)"),
-		LANDSWAMP("Circle of the Land(Swamp)"),LANDUNDERDARK("Circle of the Land(Underdark)"),
+		LANDARCTIC("Circle of the Land (Arctic)"),LANDCOAST("Circle of the Land (Coast)"),LANDDESERT("Circle of the Land (Desert)"),
+		LANDFOREST("Circle of the Land (Forest)"),LANDGRASSLAND("Circle of the Land (Grassland)"),LANDMOUNTAIN("Circle of the Land (Mountain)"),
+		LANDSWAMP("Circle of the Land (Swamp)"),LANDUNDERDARK("Circle of the Land (Underdark)"),
 			//Land subsubclasses from PHB
 		MOON("Circle of the Moon"),//PHB
 		DREAMS("Circle of Dreams"),SHEPHERD("Circle of the Shepherd"),//XGtE

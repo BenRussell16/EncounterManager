@@ -88,25 +88,26 @@ public class SpellBuilder {
 					@Override
 					public void handle(ActionEvent event) {
 						System.out.println("Saving spells");
+						List<Spell> sortedspells = new ArrayList<Spell>(spells);
 						//Perform a bubble sort to place new spells in the list.
 						Spell slot;
 						boolean sorted = false;
 						while(!sorted){
 							sorted = true;
-							for(int i=spells.size()-1; i>0; i--){
-								if(spells.get(i).getLevel()<spells.get(i-1).getLevel()
-									|| (spells.get(i).getLevel()==spells.get(i-1).getLevel()
-										&& spells.get(i).getName().compareToIgnoreCase(spells.get(i-1).getName())<0)){
+							for(int i=sortedspells.size()-1; i>0; i--){
+								if(sortedspells.get(i).getLevel()<sortedspells.get(i-1).getLevel()
+									|| (sortedspells.get(i).getLevel()==sortedspells.get(i-1).getLevel()
+										&& sortedspells.get(i).getName().compareToIgnoreCase(sortedspells.get(i-1).getName())<0)){
 									sorted = false;
-									slot = spells.get(i);
-									spells.set(i, spells.get(i-1));
-									spells.set(i-1, slot);
+									slot = sortedspells.get(i);
+									sortedspells.set(i, sortedspells.get(i-1));
+									sortedspells.set(i-1, slot);
 								}
 							}
 						}
 						//Build the new XML string
 						String xml = "";
-						for(int i=0; i<spells.size(); i++){xml+=spells.get(i).toXML();}
+						for(int i=0; i<sortedspells.size(); i++){xml+=sortedspells.get(i).toXML();}
 						//Save the new spells.
 						try (PrintWriter out = new PrintWriter(new File("Resources/SpellList"))) {
 						    out.print(xml);
@@ -963,7 +964,7 @@ public class SpellBuilder {
 		      			levels.add(label);
 		      			spellList.add(label, 1, spells.size()+1);
 					spells.add(newSpell);
-					updateSpellList();
+					nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 				}
 			});
 	      	add.setMinWidth(100);
