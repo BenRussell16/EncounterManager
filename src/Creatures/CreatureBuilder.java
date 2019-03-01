@@ -10,10 +10,15 @@ import java.util.Map;
 
 import Resources.Source;
 import src.Creatures.Creature.Alignment;
+import src.Creatures.Creature.DamageMultiplier;
+import src.Creatures.Creature.DamageType;
+import src.Creatures.Creature.Languages;
+import src.Creatures.Creature.Senses;
 import src.Creatures.Creature.Size;
 import src.Creatures.Creature.Skills;
 import src.Creatures.Creature.Speeds;
 import src.Creatures.Creature.Stats;
+import src.Creatures.Creature.StatusCondition;
 import src.Creatures.Creature.Type;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -55,6 +60,7 @@ public class CreatureBuilder {
   			private GridPane subtypePanel;
   			private Map<Type,List<RadioButton>> subtypePicker;
   	  	private List<RadioButton> alignPicker;
+  		private ChoiceBox<Double> crPicker;
   	  	private TextField hpPicker, acPicker;
   	  	private Map<Speeds, TextField> speedPicker;
   	  	private Map<Stats, TextField> statPicker;
@@ -62,14 +68,11 @@ public class CreatureBuilder {
 	  		private Map<Stats, TextField> savesSetter;
   	  	private Map<Skills, RadioButton> skillPicker;
   	  		private Map<Skills, TextField> skillSetter;
-
-	  		//TODO more inputs
-	    		//Damage multipliers.
-	    		//	Condition immunities
-	    		//Senses
-	    		//Languages
-  	  	
-  		private ChoiceBox<Double> crPicker;
+  	  	private Map<DamageMultiplier,Map<DamageType,RadioButton>> resistancePicker;
+  	  	private Map<StatusCondition, RadioButton> conditionPicker;
+  	  	private Map<Senses, RadioButton> sensePicker;
+	  		private Map<Senses, TextField> senseSetter;
+	  	private Map<Languages, RadioButton> languagePicker;
 	    	
 	  		//TODO more inputs
 	    		//Passives
@@ -463,6 +466,27 @@ public class CreatureBuilder {
   	  	  		}
   	  	  		curCreature.add(alignPanel, 1, layer);
   	  	  		layer++;
+
+  		      	label = new Label(" CR");
+  		      	curCreature.add(label, 0, layer);
+  		    	crPicker = new ChoiceBox<Double>(FXCollections.observableArrayList(
+						null,0.0,0.125,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,
+						10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,
+						20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0
+						));
+  		    	crPicker.setConverter(new StringConverter<Double>() {
+					@Override public Double fromString(String string) {return null;}
+					@Override public String toString(Double object) {
+						if(object==null){return null;}
+						else if(object == 0.125){return "1/8";}
+						else if(object == 0.25){return "1/4";}
+						else if(object == 0.5){return "1/2";}
+						else{return ((Integer)object.intValue()).toString();}
+					}
+				});
+  		    	crPicker.setValue(null);
+  		    	curCreature.add(crPicker, 1, layer);
+  		    	layer++;
   	  	  		
   		      	label = new Label(" AC");							//TODO - Label for ac and hp input
   		      	curCreature.add(label, 0, layer);
@@ -597,7 +621,7 @@ public class CreatureBuilder {
 	  		      	for(Stats s:Stats.values()){
 	  		  	      	RadioButton rb = new RadioButton(s.name());
 	  		  	      	savesPicker.put(s, rb);
-	  		  	      	savesPane.add(rb, i, 0);
+	  		  	      	savesPane.add(rb, i%6, i/6);
 	  	  		      	i++;
 	  			      	TextField curSave = new TextField();
 	  			      	curSave.setText("0");
@@ -612,7 +636,7 @@ public class CreatureBuilder {
 	  						}
 	  			        });
 	  			      	savesSetter.put(s, curSave);
-	  		  		    savesPane.add(curSave, i, 0);
+	  		  		    savesPane.add(curSave, i%6, i/6);
 	  		  		    curSave.setVisible(false);
 	  		  	      	i++;
 	  		  	      	savesPane.getChildren().remove(curSave);
@@ -639,7 +663,7 @@ public class CreatureBuilder {
 	  		      	for(Skills s:Skills.values()){
 	  		  	      	RadioButton rb = new RadioButton(s.toNiceString());
 	  		  	      	skillPicker.put(s, rb);
-	  		  	      	skillsPane.add(rb, i%8, i/8);
+	  		  	      	skillsPane.add(rb, i%4, i/4);
 	  	  		      	i++;
 	  			      	TextField curSkill = new TextField();
 	  			      	curSkill.setText("0");
@@ -654,7 +678,7 @@ public class CreatureBuilder {
 	  						}
 	  			        });
 	  			      	skillSetter.put(s, curSkill);
-	  			      	skillsPane.add(curSkill, i%8, i/8);
+	  			      	skillsPane.add(curSkill, i%4, i/4);
 	  			      	curSkill.setVisible(false);
 	  		  	      	i++;
 	  		  	      	skillsPane.getChildren().remove(curSkill);
@@ -670,33 +694,116 @@ public class CreatureBuilder {
 	  		      	}
   		      	curCreature.add(skillsPane, 1, layer);
   		      	layer++;
-  		  	  		
-  	  	  		//TODO more inputs
-  		    		//Damage multipliers.
-  		    		//	Condition immunities
-  		    		//Senses
-  		    		//Languages
 
-  		      	label = new Label(" CR");
+  		      														//TODO - Label for start of resistance/immunity... input
+  		      	resistancePicker = new HashMap<DamageMultiplier,Map<DamageType,RadioButton>>();
+  		      	for(DamageMultiplier mult: DamageMultiplier.values()){
+  		      		if(mult != DamageMultiplier.NONE){
+  		      			resistancePicker.put(mult, new HashMap<DamageType,RadioButton>());
+  		      			if(mult == DamageMultiplier.RESISTANCE){label = new Label("Resistances");}
+  		      			else if(mult == DamageMultiplier.IMMUNITY){label = new Label("Immunities");}
+  		      			else if(mult == DamageMultiplier.VULNERABILITY){label = new Label("Vulnerabilities");}
+  		      			else if(mult == DamageMultiplier.HEALING){label = new Label("Healed by");}
+  		  		      	curCreature.add(label, 0, layer);
+  		  		      	GridPane multsPane = new GridPane();
+  		  		      	multsPane.setHgap(10);
+  		  		      	i=0;
+  		  		      	for(DamageType type:DamageType.values()){
+  		  		      		RadioButton rb = new RadioButton(type.toNiceString());
+  		  		      		if(type==DamageType.NONMAGICALBASIC){rb.setText("Nonmagical basic");}
+  		  		      		resistancePicker.get(mult).put(type, rb);
+  		  		      		rb.setOnAction(new EventHandler<ActionEvent>() {//Only one row can be selected for each type.
+								@Override public void handle(ActionEvent event) {
+									if(rb.isSelected()){
+										for(DamageMultiplier m:resistancePicker.keySet()){
+											if(m != mult){resistancePicker.get(m).get(type).setSelected(false);}
+										}
+									}
+								}
+							});
+  		  		      		multsPane.add(rb, i%8, i/8);
+  		  		      		i++;
+  		  		      	}
+  		  		      	curCreature.add(multsPane, 1, layer);
+  		      			layer++;
+  		      		}
+  		      	}
+  		      	
+  		      	label = new Label("Condition immunities");
+	  		    curCreature.add(label, 0, layer);
+	  		    conditionPicker = new HashMap<StatusCondition, RadioButton>();
+	  		    GridPane conditionPane = new GridPane();
+	  		    conditionPane.setHgap(10);
+	  		    i=0;
+	  		    for(StatusCondition c: StatusCondition.values()){
+	  		    	RadioButton rb = new RadioButton(c.toNiceString());
+	  		    	conditionPane.add(rb, i%8, i/8);
+	  		    	conditionPicker.put(c, rb);
+	  		    	i++;
+	  		    }
+	  		    curCreature.add(conditionPane, 1, layer);
+	  		    layer++;
+
+  		      	label = new Label("Senses");
   		      	curCreature.add(label, 0, layer);
-  		    	crPicker = new ChoiceBox<Double>(FXCollections.observableArrayList(
-						null,0.0,0.125,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,
-						10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,
-						20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0
-						));
-  		    	crPicker.setConverter(new StringConverter<Double>() {
-					@Override public Double fromString(String string) {return null;}
-					@Override public String toString(Double object) {
-						if(object==null){return null;}
-						else if(object == 0.125){return "1/8";}
-						else if(object == 0.25){return "1/4";}
-						else if(object == 0.5){return "1/2";}
-						else{return ((Integer)object.intValue()).toString();}
-					}
-				});
-  		    	crPicker.setValue(null);
-  		    	curCreature.add(crPicker, 1, layer);
-  		    	layer++;
+  		      	sensePicker = new HashMap<Senses,RadioButton>();
+  		      	senseSetter = new HashMap<Senses,TextField>();
+  		      	GridPane sensePane = new GridPane();
+  		      	sensePane.setHgap(10);
+	  		      	i = 0;
+	  		      	for(Senses s:Senses.values()){
+	  		  	      	RadioButton rb = new RadioButton(s.toNiceString());
+	  		  	      	sensePicker.put(s, rb);
+	  		  	      	sensePane.add(rb, i%4, i/4);
+	  	  		      	i++;
+	  			      	TextField curSense = new TextField();
+	  			      	curSense.setText("0");
+	  			      	curSense.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+	  						@Override
+	  						public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+	  							if (!newValue.matches("\\d*")) {//remove non ints
+	  								curSense.setText(newValue.replaceAll("[^\\d]", ""));
+	  			   	            }
+	  							if(newValue.isEmpty()) {curSense.setText("0");}//ensure not empty
+	  							curSense.setText(""+Integer.parseInt(curSense.getText()));//remove leading 0's
+	  						}
+	  			        });
+	  			      	senseSetter.put(s, curSense);
+	  			      	sensePane.add(curSense, i%4, i/4);
+	  			      	curSense.setVisible(false);
+	  		  	      	i++;
+	  		  	      	sensePane.getChildren().remove(curSense);
+	  		  		   	rb.setOnAction(new EventHandler<ActionEvent>() {//Radio toggles visibility of the textbox.
+							@Override public void handle(ActionEvent event) {
+								curSense.setText("0");
+								if(rb.isSelected() && !sensePane.getChildren().contains(curSense)){
+									sensePane.getChildren().add(curSense);
+								}else{sensePane.getChildren().remove(curSense);}
+								curSense.setVisible(rb.isSelected());
+							}
+						});
+	  		      	}
+  		      	curCreature.add(sensePane, 1, layer);
+  		      	layer++;
+
+  		      	label = new Label("Languages");
+	  		    curCreature.add(label, 0, layer);
+	  		    languagePicker = new HashMap<Languages, RadioButton>();
+	  		    GridPane languagePane = new GridPane();
+	  		    languagePane.setHgap(10);
+	  		    i=0;
+	  		    for(Languages l: Languages.values()){
+	  		    	RadioButton rb = new RadioButton(l.toNiceString());
+	  		    	languagePane.add(rb, i%8, i/8);
+	  		    	languagePicker.put(l, rb);
+	  		    	i++;
+	  		    }
+	  		    curCreature.add(languagePane, 1, layer);
+	  		    layer++;
+  		    	
+	  		    
+  		    	layer = 1;											//TODO - Label for start of 2nd column
+  		    	
   		    	
   		  		//TODO more inputs
   		    		//Passives
@@ -712,7 +819,7 @@ public class CreatureBuilder {
   		    		//Lair actions
   		      	
   		      	label = new Label(" Source");
-  		      	curCreature.add(label, 0, layer);
+  		      	curCreature.add(label, 2, layer);
   				sourceSelect = new ChoiceBox<Source>(FXCollections.observableArrayList());
   				sourceSelect.getItems().add(null);
   				sourceSelect.getItems().addAll(Source.values());
@@ -724,7 +831,7 @@ public class CreatureBuilder {
   							return source.toNiceString();}
   						return null;
   					}});
-  				curCreature.add(sourceSelect, 1, layer);
+  				curCreature.add(sourceSelect, 3, layer);
   				layer++;
   		      	
   				
@@ -783,14 +890,14 @@ public class CreatureBuilder {
   						updateCreatureList();
   					}
   				});
-  				curCreature.add(add, 0, layer);
+  				curCreature.add(add, 2, layer);
   		      	
   		      	grid.add(curCreature, 1, 1);
 
   		      	
   		      	
   		    //make the window
-  		    secondaryStage.setScene(new Scene(grid, 1600, 800));
+  		    secondaryStage.setScene(new Scene(grid, 1700, 1000));
   			secondaryStage.show();
   			return secondaryStage;
   		}

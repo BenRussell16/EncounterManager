@@ -127,7 +127,7 @@ public interface Creature {
 	}
 	
 	public enum DamageMultiplier{
-		IMMUNITY(0),RESISTANCE(0.5),NONE(1),VULNERABILITY(2),HEALING(-1);
+		NONE(1),RESISTANCE(0.5),IMMUNITY(0),VULNERABILITY(2),HEALING(-1);
 		private double multiplier;
 		private DamageMultiplier(double multiplier) {this.multiplier = multiplier;}
 		public double getMult() {return multiplier;}
@@ -136,10 +136,9 @@ public interface Creature {
 	}
 
 	public enum DamageType{
-		ACID,BLUDGEONING,COLD,FIRE,FORCE,
-		LIGHTNING,NECROTIC,PIERCING,POISON,PSYCHIC,
-		RADIANT,SLASHING,THUNDER,
-		NONMAGICALBASIC,
+		BLUDGEONING,PIERCING,SLASHING,NONMAGICALBASIC,
+		ACID,COLD,FIRE,LIGHTNING,POISON,PSYCHIC,THUNDER,
+		FORCE,NECROTIC,RADIANT,
 		HEALING;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
