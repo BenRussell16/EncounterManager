@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import Resources.Source;
 import src.Creatures.Creature.Alignment;
@@ -38,7 +40,7 @@ public class CreatureBuilder {
 		this.creatures = creatures;
 	}
 	
-	private List<Creature> query;
+	private List<Creature> query;									//TODO - Label for global fields
 	private GridPane creatureList;
 		private List<Label> names;
 		private List<Label> crs;
@@ -47,10 +49,10 @@ public class CreatureBuilder {
   		private ChoiceBox<Double> crPicker;
   		private ToggleGroup sizePicker = new ToggleGroup();
   		private ToggleGroup typePicker = new ToggleGroup();
-  			private ToggleGroup subtypePicker = new ToggleGroup();
-  			private GridPane subtypePanel;
   			private Label subtypeLabel;
-  	  	private ToggleGroup alignPicker = new ToggleGroup();
+  			private GridPane subtypePanel;
+  			private Map<Type,List<RadioButton>> subtypePicker;
+  	  	private List<RadioButton> alignPicker;
   	  	private TextField hpPicker, acPicker;
   		private ChoiceBox<Source> sourceSelect;
   		
@@ -70,7 +72,7 @@ public class CreatureBuilder {
   				
   				GridPane topBar = new GridPane();
   				
-  					Button save = new Button("Save changes");
+  					Button save = new Button("Save changes");		//TODO - Label for the save button
   					save.setOnAction(new EventHandler<ActionEvent>() {
   						@Override
   						public void handle(ActionEvent event) {
@@ -109,13 +111,24 @@ public class CreatureBuilder {
   				
   					Label label = new Label("\t\t");topBar.add(label, 1, 0);
   					//Set up filter inputs
-  					TextField nameFilter = new TextField();
+  					TextField nameFilter = new TextField();			//TODO - label for start of filter fields
 
-  					//TODO - allow selection of multiple
   					ChoiceBox<Double> crFilter = new ChoiceBox<Double>(FXCollections.observableArrayList(
-  							//null,0,0.125,0.25,0.5,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
-  							//TODO fill this list
+  							null,0.0,0.125,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,
+  							10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,
+  							20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0
   							));
+  					crFilter.setConverter(new StringConverter<Double>() {
+  						@Override public Double fromString(String string) {return null;}
+  						@Override public String toString(Double object) {
+  							if(object==null){return null;}
+  							else if(object == 0.125){return "1/8";}
+  							else if(object == 0.25){return "1/4";}
+  							else if(object == 0.5){return "1/2";}
+  							else{return ((Integer)object.intValue()).toString();}
+  						}
+  					});
+  					//TODO - allow selection of multiple
   					crFilter.setValue(null);
   					
   					ChoiceBox<Type> typeFilter = new ChoiceBox<Type>(FXCollections.observableArrayList());
@@ -123,8 +136,7 @@ public class CreatureBuilder {
   					typeFilter.getItems().addAll(Type.values());
   					typeFilter.setValue(null);
   					typeFilter.setConverter(new StringConverter<Type>(){
-  						@Override public Type fromString(String arg0) {// TODO Auto-generated method stub
-  							return null;}
+  						@Override public Type fromString(String arg0) {return null;}
   						@Override public String toString(Type type) {
   							if(type != null){
   								return type.toNiceString();}
@@ -149,8 +161,7 @@ public class CreatureBuilder {
   					alignFilter.getItems().addAll(Alignment.values());
   					alignFilter.setValue(null);
   					alignFilter.setConverter(new StringConverter<Alignment>(){
-  						@Override public Alignment fromString(String arg0) {// TODO Auto-generated method stub
-  							return null;}
+  						@Override public Alignment fromString(String arg0) {return null;}
   						@Override public String toString(Alignment align) {
   							if(align != null){
   								return align.toNiceString();}
@@ -162,15 +173,14 @@ public class CreatureBuilder {
   					sourceFilter.getItems().addAll(Source.values());
   					sourceFilter.setValue(null);
   					sourceFilter.setConverter(new StringConverter<Source>(){
-  						@Override public Source fromString(String arg0) {// TODO Auto-generated method stub
-  							return null;}
+  						@Override public Source fromString(String arg0) {return null;}
   						@Override public String toString(Source source) {
   							if(source != null){
   								return source.toNiceString();}
   							return null;
   						}});
   					
-  					//Define the filtering action
+  					//Define the filtering action					//TODO - label for applying the filter
   					EventHandler<ActionEvent> filterQuery =new EventHandler<ActionEvent>() {
   						@Override
   						public void handle(ActionEvent event) {
@@ -257,7 +267,7 @@ public class CreatureBuilder {
   				
   				
   				
-  				//1st pane for creature list
+  				//1st pane for creature list						//TODO - Label for first pane
   	      		ScrollPane sp = new ScrollPane();//allow scrolling down the creature list
   	      		creatureList = new GridPane();
   	      		creatureList.setHgap(10);
@@ -304,7 +314,7 @@ public class CreatureBuilder {
   		      	
   		      	
   		      	
-  		      	//2nd pane for creature addition
+  		      	//2nd pane for creature addition					//TODO - Label for second pane
   		      	curCreature = new GridPane();
   		      	curCreature.setHgap(10);
   		      	curCreature.setVgap(10);
@@ -319,9 +329,20 @@ public class CreatureBuilder {
   		      	label = new Label(" CR");
   		      	curCreature.add(label, 0, layer);
   		    	crPicker = new ChoiceBox<Double>(FXCollections.observableArrayList(
-						//null,0,0.125,0.25,0.5,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30
-						//TODO fill this list
+						null,0.0,0.125,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,
+						10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,
+						20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0
 						));
+  		    	crPicker.setConverter(new StringConverter<Double>() {
+					@Override public Double fromString(String string) {return null;}
+					@Override public String toString(Double object) {
+						if(object==null){return null;}
+						else if(object == 0.125){return "1/8";}
+						else if(object == 0.25){return "1/4";}
+						else if(object == 0.5){return "1/2";}
+						else{return ((Integer)object.intValue()).toString();}
+					}
+				});
   		    	crPicker.setValue(null);
   		    	curCreature.add(crPicker, 1, layer);
   		    	layer++;
@@ -350,7 +371,6 @@ public class CreatureBuilder {
   		      		rb.setToggleGroup(typePicker);
   		      		rb.setOnAction(new EventHandler<ActionEvent>() {
 						@Override public void handle(ActionEvent event) {
-							// TODO Auto-generated method stub
 							updateSubtypeOptions(t);
 						}});
   		      		typePanel.add(rb, i%4, i/4);
@@ -358,12 +378,50 @@ public class CreatureBuilder {
   		      	}
   		      	curCreature.add(typePanel, 1, layer);
   		      	layer++;
-  		//TODO - this
+
   		      	subtypeLabel = new Label(" Subtype");
   		      	curCreature.add(subtypeLabel, 0, layer);
   		      	subtypeLabel.setVisible(false);
   		      	subtypePanel = new GridPane();
-  		      	subtypePanel.setHgap(5);
+  		      	subtypePicker = new HashMap<Type,List<RadioButton>>();
+  		      	i=0;
+  		      	for(Type t: Type.values()){
+  		      		if(t.hasSubtype()){
+  		      			subtypePicker.put(t, new ArrayList<RadioButton>());
+		      			RadioButton rb = new RadioButton("None\t");
+		      			rb.setOnAction(new EventHandler<ActionEvent>() {
+							@Override public void handle(ActionEvent event) {
+								for(RadioButton radio:subtypePicker.get(t)){
+									if(radio.getText().equals("None\t")){radio.setSelected(true);}
+									else{radio.setSelected(false);}
+								}
+							}
+						});
+		      			subtypePicker.get(t).add(rb);
+		      			subtypePanel.add(rb, i, 0);
+		      			rb.setVisible(false);
+		      			i++;
+  		      			for(Type.subType s:t.getSubtype(t)){
+  		      				rb = new RadioButton(s.toNiceString()+"\t");
+  			      			rb.setOnAction(new EventHandler<ActionEvent>() {
+  								@Override public void handle(ActionEvent event) {//Deselect other options. If deseleting then set none to on.
+  									RadioButton rb = null;
+  									for(RadioButton radio:subtypePicker.get(t)){
+  										if(radio.getText().equals(s.toNiceString()+"\t")){rb = radio;}
+  									}
+  									for(RadioButton radio:subtypePicker.get(t)){
+  										if(radio.getText().equals("None\t")){radio.setSelected(!rb.isSelected());}
+  										else if(radio != rb){radio.setSelected(false);}
+  									}
+  								}
+  							});
+  		      				subtypePicker.get(t).add(rb);
+  		      				subtypePanel.add(rb, i, 0);
+  		      				rb.setVisible(false);
+  		      				i++;
+  		      			}
+  		      		}
+  		      	}
   		      	subtypePanel.setVisible(false);
   		      	curCreature.add(subtypePanel, 1, layer);
   		      	layer++;
@@ -372,10 +430,25 @@ public class CreatureBuilder {
   	  	  		curCreature.add(label, 0, layer);
   	  	  		GridPane alignPanel = new GridPane();
   	  	  		alignPanel.setHgap(5);
+  	  	  		alignPicker = new ArrayList<RadioButton>();
   	  	  		i = 0;
   	  	  		for(Alignment a:Alignment.values()){
   	  	  			RadioButton rb = new RadioButton(a.toNiceString());
-  	  	  			rb.setToggleGroup(alignPicker);
+  	  	  			alignPicker.add(rb);
+  	  	  			rb.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {
+							//If unaligned can't have other alignments.
+							if(rb.getText().equals("Unaligned")){
+								for(RadioButton radio:alignPicker){
+									if(radio!=rb){radio.setSelected(false);}
+								}
+							}else{//Cannot be unaligned if has other alignments.
+								for(RadioButton radio:alignPicker){
+									if(radio.getText().equals("Unaligned")){radio.setSelected(false);}
+								}
+							}
+						}
+					});
   	  	  			alignPanel.add(rb, i%3, i/3);
   	  		    	i++;
   	  	  		}
@@ -441,8 +514,7 @@ public class CreatureBuilder {
   				sourceSelect.getItems().addAll(Source.values());
   				sourceSelect.setValue(null);
   				sourceSelect.setConverter(new StringConverter<Source>(){
-  					@Override public Source fromString(String arg0) {// TODO Auto-generated method stub
-  						return null;}
+  					@Override public Source fromString(String arg0) {return null;}
   					@Override public String toString(Source source) {
   						if(source != null){
   							return source.toNiceString();}
@@ -451,7 +523,7 @@ public class CreatureBuilder {
   				curCreature.add(sourceSelect, 1, layer);
   				layer++;
   		      	
-  				Button add = new Button("Add creature");
+  				Button add = new Button("Add creature");			//TODO - Label for creature constructor
   				add.setOnAction(new EventHandler<ActionEvent>() {
   					@Override
   					public void handle(ActionEvent event) {
@@ -523,7 +595,7 @@ public class CreatureBuilder {
   		
   		
 
-	private void updateCreatureList() {
+	private void updateCreatureList() {								//TODO - Label for query update
 		for(int i=0; i<creatures.size(); i++) {
 			boolean visible = query.contains(creatures.get(i));
 			Label curName = names.get(i);
@@ -541,26 +613,24 @@ public class CreatureBuilder {
 	}
 	
 	private void updateSubtypeOptions(Type t) {//When a type is selected, display the appropriate subtypes.
-		//TODO - needs to purge the old set
-		//Rotate through a set of premade subtype lines mapped from supertype?
-		subtypeLabel.setVisible(false);
-		subtypePanel.setVisible(false);
+		subtypeLabel.setVisible(t.hasSubtype());
+		subtypePanel.setVisible(t.hasSubtype());
 		
-		if(t.hasSubtype()){
-			subtypeLabel.setVisible(true);
-			subtypePanel.setVisible(true);
-			
-      		RadioButton rb = new RadioButton("None");
-      		rb.setToggleGroup(subtypePicker);
-      		subtypePicker.selectToggle(rb);
-      		subtypePanel.add(rb, 0, 0);
-	      	int i = 1;
-	      	for(Type.subType sub:t.getSubtype(t)){
-	      		rb = new RadioButton(sub.toNiceString());
-	      		rb.setToggleGroup(subtypePicker);
-	      		subtypePanel.add(rb, i, 0);
-		    	i++;
-	      	}
+		for(Type type:subtypePicker.keySet()){
+			for(RadioButton rb:subtypePicker.get(type)) {
+				boolean visible = type == t;
+				rb.setVisible(visible);
+				if(!visible) {
+					rb.setSelected(false);
+					subtypePanel.getChildren().remove(rb);
+				}else{
+					if(!subtypePanel.getChildren().contains(rb)){
+						subtypePanel.getChildren().add(rb);
+					}
+					if(rb.getText().equals("None\t")){rb.setSelected(true);}
+					else{rb.setSelected(false);}
+				}			
+			}
 		}
 	}
 }

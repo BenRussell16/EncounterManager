@@ -61,6 +61,7 @@ public interface Creature {
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
+	
 	public enum Size {
 		TINY(1/4),SMALL(1),MEDIUM(1),LARGE(2),HUGE(3),GARGANTUAN(4);
 		private float squares;
@@ -69,16 +70,15 @@ public interface Creature {
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
+	
 	public enum Type{
 		ABBERATION(false),BEAST(false),CELESTIAL(false),CONSTRUCT(false),
 		DRAGON(false),ELEMENTAL(false),FEY(false),FIEND(true),
 		GIANT(false),HUMANOID(true),MONSTOSITY(false),OOZE(false),
 		PLANT(false),UNDEAD(false);
-		
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 
-		
 		private final boolean hasSub;
 		private Type(boolean hasSub){this.hasSub = hasSub;}
 		public boolean hasSubtype(){return hasSub;}
@@ -102,6 +102,7 @@ public interface Creature {
 					+ name().toLowerCase().substring(1);}
 		}
 	}
+	
 	public enum Region{
 		ARCTIC,COAST,DESERT,FOREST,
 		GRASSLAND,MOUNTAIN,SWAMP,UNDERDARK,
@@ -109,21 +110,23 @@ public interface Creature {
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
+	
 	public enum Alignment{
 		LG("Lawful Good"),NG("Neutral Good"),CG("Chaotic Good"),
 		LN("Lawful Neutral"),TN("True Neutral"),CN("Chaotic neutral"),
 		LE("Lawful Evil"),NE("Neutral Evil"),CE("Chaotic Evil"),
 		UNALIGNED("Unaligned");
-		
 		private String niceFormat;
 		private Alignment(String niceFormat){this.niceFormat = niceFormat;}
 		public String toNiceString(){return niceFormat;}
 	}
+	
 	public enum Speeds{//TODO complete
 		WALK,SWIM,CLIMB,FLY,BURROW;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
+	
 	public enum StatusCondition{
 		BLINDED,CHARMED,
 		DEAFENED,FRIGHTENED,
@@ -136,9 +139,11 @@ public interface Creature {
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
+	
 	public enum Stats{
 		STR,DEX,CON,INT,WIS,CHA;
 	}
+	
 	public enum Skills{
 		ACROBATICS,ANIMALHANDLING,ARCANCA,ATHLETICS,
 		DECEPTION,HISTORY,INSIGHT,INTIMIDATION,
@@ -148,11 +153,13 @@ public interface Creature {
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
+	
 	public enum Senses{//TODO complete
 		DARKVISION,BLINDSIGHT,TRUESIGHT;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
+	
 	public enum Languages{//TODO complete
 		COMMON,DRACONIC,DWARVISH,ELVEN,
 		GOBLIN,ORCISH,
