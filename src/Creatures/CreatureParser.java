@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 
 import Resources.Area;
 import Resources.Source;
+import src.Creatures.Creature.DamageType;
 
 
 public class CreatureParser {
@@ -32,7 +33,7 @@ public class CreatureParser {
 					int[] stats = new int[6];
 					Map<Creature.Stats,Integer> saves = new HashMap<Creature.Stats,Integer>();
 					Map<Creature.Skills,Integer> skills = new HashMap<Creature.Skills,Integer>();
-					Map<Action.DamageType, Creature.DamageMultiplier> damageMultipliers = new HashMap<Action.DamageType, Creature.DamageMultiplier>();
+					Map<DamageType, Creature.DamageMultiplier> damageMultipliers = new HashMap<DamageType, Creature.DamageMultiplier>();
 					List<Creature.StatusCondition> conditionImmunities = new ArrayList<Creature.StatusCondition>();
 					Map<Creature.Senses,Integer> senses = new HashMap<Creature.Senses,Integer>();
 					List<Creature.Languages> languages = new ArrayList<Creature.Languages>();
@@ -40,7 +41,7 @@ public class CreatureParser {
 					int legendaryResistances = 0;
 					int legendaryActions = 0;
 					int regen = 0;
-					List<Action.DamageType> regenBlocks = new ArrayList<Action.DamageType>();
+					List<DamageType> regenBlocks = new ArrayList<DamageType>();
 					List<String> passives = new ArrayList<String>();
 					List<Action> actions = new ArrayList<Action>();
 					List<Source> sources = new ArrayList<Source>();
@@ -163,7 +164,7 @@ public class CreatureParser {
 							else if(tag.equals("healed")) {mult = Creature.DamageMultiplier.HEALING;}
 							else {System.out.println("Unknown multiplier: "+tag);}
 							while(!scan.hasNext("/"+tag)) {
-								for(Action.DamageType d:Action.DamageType.values()) {
+								for(DamageType d:DamageType.values()) {
 									if(scan.hasNext(d.toString().toLowerCase())) {
 										damageMultipliers.put(d, mult);
 										scan.next();
@@ -225,7 +226,7 @@ public class CreatureParser {
 							scan.next();
 							regen = scan.nextInt();
 							while(!scan.hasNext("/regen")) {
-								for(Action.DamageType d:Action.DamageType.values()) {
+								for(DamageType d:DamageType.values()) {
 									if(scan.hasNext(d.toString().toLowerCase())) {
 										regenBlocks.add(d);
 										scan.next();
@@ -408,14 +409,14 @@ public class CreatureParser {
 						int[] stats = new int[6];
 						Map<Creature.Stats,Integer> saves = new HashMap<Creature.Stats,Integer>();
 						Map<Skills,Integer> skills = new HashMap<Skills,Integer>();
-						Map<Action.DamageType, Creature.DamageMultiplier> damageMultipliers = new HashMap<Action.DamageType, Creature.DamageMultiplier>();
+						Map<DamageType, Creature.DamageMultiplier> damageMultipliers = new HashMap<DamageType, Creature.DamageMultiplier>();
 						List<Creature.StatusCondition> conditionImmunities = new ArrayList<Creature.StatusCondition>();
 						Map<Senses,Integer> senses = new HashMap<Senses,Integer>();
 						List<Languages> languages = new ArrayList<Languages>();
 						double cr = -1;
 						int legendaryResistances = 0;
 						int regen = 0;
-						List<Action.DamageType> regenBlocks = new ArrayList<Action.DamageType>();
+						List<DamageType> regenBlocks = new ArrayList<DamageType>();
 						List<String> passives = new ArrayList<String>();
 						List<Action> actions = new ArrayList<Action>();
 						int legendaryActions = 0;
@@ -423,9 +424,9 @@ public class CreatureParser {
 						
 						public void constructor(String name, Size size, Type type, Alignment align, int ac, int hp, Map<Creature.Speeds,Integer> speed,
 								int[] stats, Map<Creature.Stats,Integer> saves,Map<Skills,Integer> skills,
-								Map<Action.DamageType, Creature.DamageMultiplier> damageMultipliers, List<Creature.StatusCondition> conditionImmunities,
+								Map<DamageType, Creature.DamageMultiplier> damageMultipliers, List<Creature.StatusCondition> conditionImmunities,
 								Map<Senses,Integer> senses, List<Languages> languages, double cr, int legendaryResistances,  int regen, 
-								List<Action.DamageType> regenBlocks, List<String> passives, List<Action> actions,  int legendaryActions, 
+								List<DamageType> regenBlocks, List<String> passives, List<Action> actions,  int legendaryActions, 
 								List<Source> sources) {
 							this.name = name;
 							this.size = size;
@@ -462,8 +463,8 @@ public class CreatureParser {
 						@Override public List<String> passiveEffects() {return passives;}
 						@Override public int getRegen() {return regen;}
 						@Override public boolean conditionImmune(Creature.StatusCondition condition) {return conditionImmunities.contains(condition);}
-						@Override public double damageMult(Action.DamageType damageType) {
-							if(damageType == Action.DamageType.HEALING) {return -1;}
+						@Override public double damageMult(DamageType damageType) {
+							if(damageType == DamageType.HEALING) {return -1;}
 							if(!damageMultipliers.containsKey(damageType)) {return 1;}
 							return damageMultipliers.get(damageType).getMult();
 						}
@@ -560,11 +561,11 @@ public class CreatureParser {
 							for(Creature.Skills s: skills.keySet()) {builtString+=s.toString()+": "+skills.get(s)+"\t";}
 							if(!skills.isEmpty()) {builtString+="\n";}
 
-							List<Action.DamageType> vuln =new ArrayList<Action.DamageType>();
-							List<Action.DamageType> res =new ArrayList<Action.DamageType>();
-							List<Action.DamageType> immune =new ArrayList<Action.DamageType>();
-							List<Action.DamageType> heal =new ArrayList<Action.DamageType>();
-							for(Action.DamageType d:damageMultipliers.keySet()) {
+							List<DamageType> vuln =new ArrayList<DamageType>();
+							List<DamageType> res =new ArrayList<DamageType>();
+							List<DamageType> immune =new ArrayList<DamageType>();
+							List<DamageType> heal =new ArrayList<DamageType>();
+							for(DamageType d:damageMultipliers.keySet()) {
 								Creature.DamageMultiplier mult = damageMultipliers.get(d);
 								if(mult==Creature.DamageMultiplier.VULNERABILITY) {vuln.add(d);}
 								if(mult==Creature.DamageMultiplier.RESISTANCE) {res.add(d);}
@@ -572,20 +573,20 @@ public class CreatureParser {
 								if(mult==Creature.DamageMultiplier.HEALING) {heal.add(d);}
 							}
 							if(!vuln.isEmpty()) {builtString+="Vulnerabilities:";}
-							for(Action.DamageType d: vuln) {builtString+=" "+d.toString();}
+							for(DamageType d: vuln) {builtString+=" "+d.toString();}
 							if(!vuln.isEmpty()) {
 								if(res.isEmpty()&&immune.isEmpty()) {builtString+="\n";}
 								else{builtString+="\t";}}
 							if(!res.isEmpty()) {builtString+="Resistances:";}
-							for(Action.DamageType d: res) {builtString+=" "+d.toString();}
+							for(DamageType d: res) {builtString+=" "+d.toString();}
 							if(!res.isEmpty()) {
 								if(immune.isEmpty()) {builtString+="\n";}
 								else{builtString+="\t";}}
 							if(!immune.isEmpty()) {builtString+="Immunities:";}
-							for(Action.DamageType d: immune) {builtString+=" "+d.toString();}
+							for(DamageType d: immune) {builtString+=" "+d.toString();}
 							if(!immune.isEmpty()) {builtString+="\n";}
 							if(!heal.isEmpty()) {builtString+="Healed by:";}
-							for(Action.DamageType d: heal) {builtString+=" "+d.toString();}
+							for(DamageType d: heal) {builtString+=" "+d.toString();}
 							if(!heal.isEmpty()) {builtString+="\n";}
 							if(!conditionImmunities.isEmpty()) {
 								builtString+="Condition immunities:";
@@ -601,7 +602,7 @@ public class CreatureParser {
 								builtString+="\nRegen "+regen;
 								if(!regenBlocks.isEmpty()) {
 									builtString+=", blocked for the turn by:";
-									for(Action.DamageType d:regenBlocks) {builtString+=" "+d.toString();}
+									for(DamageType d:regenBlocks) {builtString+=" "+d.toString();}
 								}
 							}
 							for(String s:passives) {builtString+="\n"+s;}

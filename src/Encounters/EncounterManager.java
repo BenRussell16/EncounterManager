@@ -7,6 +7,7 @@ import java.util.Map;
 
 import src.Creatures.Action;
 import src.Creatures.Creature;
+import src.Creatures.Creature.DamageType;
 import src.Creatures.CreatureBuilder;
 import src.Creatures.CreatureParser;
 import src.Spells.Spell;
@@ -160,9 +161,9 @@ public class EncounterManager extends Application{
 				label = new Label(entity.getHP()+" / "+entity.creature.getHP()+" ("+(entity.creature.getHP()/2)+")");
 				statBlock.add(label, 1, 0);
 				
-				ChoiceBox<Action.DamageType> damType = new ChoiceBox<Action.DamageType>();
-				damType.getItems().addAll(Action.DamageType.values());
-				damType.setValue(Action.DamageType.NONMAGICALBASIC);
+				ChoiceBox<DamageType> damType = new ChoiceBox<DamageType>();
+				damType.getItems().addAll(DamageType.values());
+				damType.setValue(DamageType.NONMAGICALBASIC);
 				statBlock.add(damType, 3, 0);
 				TextField damAmount = new TextField();
 				damAmount.setText("0");

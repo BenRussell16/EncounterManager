@@ -4,6 +4,7 @@ import java.util.List;
 
 import src.Creatures.Action;
 import src.Creatures.Creature;
+import src.Creatures.Creature.DamageType;
 
 public class EncounterEntity {
 	//TODO limited use actions/spells
@@ -32,7 +33,7 @@ public class EncounterEntity {
 	}
 	
 	public int getHP() {return curHP;}
-	public void dealDamage(int amount, Action.DamageType type) {
+	public void dealDamage(int amount, DamageType type) {
 		curHP -= amount*creature.damageMult(type);
 		if(curHP<0) {curHP = 0;}
 	}

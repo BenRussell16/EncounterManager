@@ -7,9 +7,9 @@ import Resources.Source;
 public interface Creature {
 	public void constructor(String name, Size size, Type type, Alignment align, int ac, int hp, Map<Speeds,Integer> speed,
 			int[] stats, Map<Creature.Stats,Integer> saves, Map<Skills,Integer> skills, 
-			Map<Action.DamageType, Creature.DamageMultiplier> damageMultipliers, List<StatusCondition> conditionImmunities,
+			Map<DamageType, Creature.DamageMultiplier> damageMultipliers, List<StatusCondition> conditionImmunities,
 			Map<Senses,Integer> senses, List<Languages> languages, double cr, int legendaryResistances, int regen, 
-			List<Action.DamageType> regenBlocks, List<String> passives, List<Action> actions, int legendaryActions, 
+			List<DamageType> regenBlocks, List<String> passives, List<Action> actions, int legendaryActions, 
 			List<Source> sources);
 	
 	public String getName();
@@ -26,7 +26,7 @@ public interface Creature {
 	public int getRegen();//TODO figure out blocks
 	
 	public boolean conditionImmune(StatusCondition condition);
-	public double damageMult(Action.DamageType damageType);
+	public double damageMult(DamageType damageType);
 	public int getLegendaryRes();
 	public int getLegendaryAct();
 	public List<Action> getActions();
@@ -53,14 +53,6 @@ public interface Creature {
 	
 	
 	
-	public enum DamageMultiplier{
-		IMMUNITY(0),RESISTANCE(0.5),NONE(1),VULNERABILITY(2),HEALING(-1);
-		private double multiplier;
-		private DamageMultiplier(double multiplier) {this.multiplier = multiplier;}
-		public double getMult() {return multiplier;}
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
-	}
 	
 	public enum Size {
 		TINY(1/4),SMALL(1),MEDIUM(1),LARGE(2),HUGE(3),GARGANTUAN(4);
@@ -103,14 +95,6 @@ public interface Creature {
 		}
 	}
 	
-	public enum Region{
-		ARCTIC,COAST,DESERT,FOREST,
-		GRASSLAND,MOUNTAIN,SWAMP,UNDERDARK,
-		URBAN;
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
-	}
-	
 	public enum Alignment{
 		LG("Lawful Good"),NG("Neutral Good"),CG("Chaotic Good"),
 		LN("Lawful Neutral"),TN("True Neutral"),CN("Chaotic neutral"),
@@ -122,7 +106,41 @@ public interface Creature {
 	}
 	
 	public enum Speeds{//TODO complete
-		WALK,SWIM,CLIMB,FLY,BURROW;
+		WALK,SWIM,FLY,CLIMB,BURROW;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
+	}
+	
+	public enum Stats{
+		STR,DEX,CON,INT,WIS,CHA;
+	}
+	
+	public enum Skills{
+		ACROBATICS("Acrobatics"),ANIMALHANDLING("Animal Handling"),ARCANA("Arcana"),ATHLETICS("Athletics"),
+		DECEPTION("Deception"),HISTORY("History"),INSIGHT("Insight"),INTIMIDATION("Intimidation"),
+		INVESTIGATION("Investigation"),MEDICINE("Medicine"),NATURE("Nature"),PERCEPTION("Perception"),
+		PERFORMANCE("Performance"),PERSUASION("Persuasion"),RELIGION("Religion"),SLIGHTOFHAND("Slight of Hand"),
+		STEALTH("Stealth"),SURVIVAL("Survival");
+		private String niceFormat;
+		private Skills(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
+	}
+	
+	public enum DamageMultiplier{
+		IMMUNITY(0),RESISTANCE(0.5),NONE(1),VULNERABILITY(2),HEALING(-1);
+		private double multiplier;
+		private DamageMultiplier(double multiplier) {this.multiplier = multiplier;}
+		public double getMult() {return multiplier;}
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
+	}
+
+	public enum DamageType{
+		ACID,BLUDGEONING,COLD,FIRE,FORCE,
+		LIGHTNING,NECROTIC,PIERCING,POISON,PSYCHIC,
+		RADIANT,SLASHING,THUNDER,
+		NONMAGICALBASIC,
+		HEALING;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
@@ -140,19 +158,6 @@ public interface Creature {
 				+ name().toLowerCase().substring(1);}
 	}
 	
-	public enum Stats{
-		STR,DEX,CON,INT,WIS,CHA;
-	}
-	
-	public enum Skills{
-		ACROBATICS,ANIMALHANDLING,ARCANCA,ATHLETICS,
-		DECEPTION,HISTORY,INSIGHT,INTIMIDATION,
-		INVESTIGATION,MEDICINE,NATURE,PERCEPTION,
-		PERFORMANCE,PERSUASION,RELIGION,SLIGHTOFHAND,
-		STEALTH,SURVIVAL;
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
-	}
 	
 	public enum Senses{//TODO complete
 		DARKVISION,BLINDSIGHT,TRUESIGHT;
@@ -164,6 +169,14 @@ public interface Creature {
 		COMMON,DRACONIC,DWARVISH,ELVEN,
 		GOBLIN,ORCISH,
 		AQUAN;
+		public String toNiceString(){return name().toUpperCase().substring(0, 1)
+				+ name().toLowerCase().substring(1);}
+	}
+	
+	public enum Region{
+		ARCTIC,COAST,DESERT,FOREST,
+		GRASSLAND,MOUNTAIN,SWAMP,UNDERDARK,
+		URBAN;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
