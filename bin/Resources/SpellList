@@ -235,7 +235,7 @@ The spell's damage increases by one die when you reach 5th level (2d8 or 2d12), 
 	</components>
 	<casttime>false,Action</casttime>
 	<duration>false,Instantaneous</duration>
-	<area>SPHERE,0,5,0</area>
+	<area>SPHERE,0,5</area>
 	<effect>
 You utter a divine word, and burning radiance erupts from you. Each creature of your choice that you can see within range must succeed on a Constitution saving throw or take 1d6 radiant damage.
 
@@ -1337,7 +1337,7 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 		true,true,false
 	</components>
 	<casttime>false,Action</casttime>
-	<duration>true,Instantaneous</duration>
+	<duration>false,Instantaneous</duration>
 	<area>SPHERE,0,120</area>
 	<effect>
 You sense the presence of any trap within range that is within line of sight. A trap, for the purpose of this spell, includes anything that would inflict a sudden or unexpected effect you consider harmful or undesirable, which was specifically intended as such by its creator. Thus, the spell would sense an area affected by the alarm spell, a glyph of warding, or a mechanical pit trap, but it would not reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.
@@ -1371,6 +1371,28 @@ At Higher Levels. When you cast this spell using a spell slot of 3rd level or hi
 	<classes>DRUID,WIZARD</classes>
 	<subclasses>LIGHT,CELESTIAL</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Flock of familiars</name>
+	<level>2</level>
+	<school>CONJURATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,1 Minute</casttime>
+	<duration>true,1 Hour</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You temporarily summon three familiars - spirits that take animal forms of your choice. Each familiar uses the same rules and options for a familiar conjured by the find familiar spell. All the familiars conjured by this spell must be the same type of creature (celestials, fey, or fiends; your choice). If you already have a familiar conjured by the find familiar spell or similar means, then one fewer familiars are conjured by this spell.
+
+Familiars summoned by this spell can telepathically communicate with you and share their visual or auditory senses while they are within 1 mile of you.
+
+When you cast a spell with a range of touch, one of the familiars conjured by this spell can deliver the spell, as normal. However, you can cast a touch spell through only one familiar per turn.
+
+At Higher Levels. When you cast this spell using a spell slot of 3rd level or higher, you conjure an additional familiar for each slot level above 2nd.
+	</effect>
+	<classes>WARLOCK,WIZARD</classes>
+	<source>LOSTLABORATORYOFKWALISH</source>
 </spell>
 <spell>
 	<name>Gentle repose</name>
@@ -2323,6 +2345,36 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Galder's tower</name>
+	<level>3</level>
+	<school>CONJURATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a fragment of stone, wood, or other building material</material>
+	</components>
+	<casttime>false,10 Minutes</casttime>
+	<duration>false,24 Hours</duration>
+	<area>CYLINDER,30,5,20</area>
+	<effect>
+You conjure a two story tower made of stone, wood, or similarly sturdy materials. The tower can be round or square in shape. Each level of the tower is 10 feet tall and has an area of up to 100 square feet. Access between levels consists of a simple ladder and hatch. Each level takes one of the following forms, chosen by you when you cast the spell:
+ - A bedroom with bed, chairs, chest, and a magical fireplace.
+ - A study wit desks, books, bookshelves, parchments, ink, and ink pens.
+ - A dining space with a table, chairs, magical fireplace, containers, and cooking utensils.
+ - A lounge with couches, armchairs, side tables and footstools.
+ - A washroom with toilets, washtubs, a magical brazier, and sauna benches.
+ - An observatory with a telescope and maps of the night sky.
+ - An unfurnished, empty room.
+The interior is warm and dry, regardless of conditions outside. Any equipment or furnishings conjured with the tower dissipate into smoke if removed from it. At the end of the spell's duration, all creatures and objects within the tower that were not created by the spell appear safely outside on the ground, and all tracings of the tower an its furnishings disappear.
+
+You can cast this spell again while it is active to maintain the tower's existence for another 24 hours. You can create a perminant tower by casting this spell in the same location and with the same configuration every day for one year.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the tower can have one additional story for each slot level beyond 3rd.
+	</effect>
+	<classes>WIZARD</classes>
+	<source>LOSTLABORATORYOFKWALISH</source>
+</spell>
+<spell>
 	<name>Gaseous form</name>
 	<level>3</level>
 	<school>TRANSMUTATION</school>
@@ -2795,6 +2847,26 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Wall of water</name>
+	<level>3</level>
+	<school>EVOCATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a drop of water</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>LINE,60,30,1</area>
+	<effect>
+You conjure up a wall of water on the ground at a point you can see within range. You can make the wall up to 30 feet long, 10 feet high, and 1 foot thick, or you can make a ringed wall up to 20 feet in diameter, 20 feet high, and 1 foot thick. The wall vanishes when the spell ends. The wall's space is difficult terrain.
+
+Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause  the area of the wall they pass through to freeze solid (at least a 5 foot square section is frozen). Each 5 foot square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it.
+	</effect>
+	<classes></classes>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</spell>
+<spell>
 	<name>Water breathing</name>
 	<level>3</level>
 	<school>TRANSMUTATION</school>
@@ -3210,6 +3282,30 @@ The target can also spend 5 feet of movement to automatically escape from nonmag
 	<classes>BARD,CLERIC,DRUID,RANGER</classes>
 	<subclasses>WAR,LANDARCTIC,LANDCOAST,LANDFOREST,LANDGRASSLAND,LANDSWAMP,DEVOTION</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Galder's speedy courier</name>
+	<level>4</level>
+	<school>CONJURATION</school>
+	<components>
+		true,true,true
+		<gold>true</gold>
+		<material>25 gold pieces, or minerals of equivalent value, which the spell consumes</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,10 Minutes</duration>
+	<area>UNLIMITED</area>
+	<effect>
+You summon a Small air elemental to a spot within range. The air elemental is formless, nearly transparent, immune to all damage, and cannot interact with other creatures or objects. It carries an open, empty chest whose interior dimensions are 3 feet on each side. While the spell lasts, you can deposit as many items inside the chest as will fit. You can then name a living creature you have met and seen at least once before, or any creature for which you possess a body part, lock of hair, clipping from a nail, or similar portion of the creatures body.
+
+As soon as the lid of the chest is closed, the elemental and the chest disappear, then reappear adjacent to the target creature. If the target creature is on another plane, or if it is proofed against magical detection or location, the ontents of the chest reappear on the ground at your feet.
+
+The creature is made aware of the chest's contents before it chooses whether or not to open it, and it knows how much of the spell's duration remains in which it can retrieve them. No other creature can open the chest and retrieve its contents. When the spell expires or when all the contents of the chest have been removed, the elemental and the chest disappear. The elemental also disappears if the target creature orders it to return the items to you. When the elemental disappears, any items not taken from the chest reappear on the ground at your feet.
+
+At Higher Levels. When you cast this spell using an 8th level spell slot, you can send the chest to a creature on a different plane of existence from you.
+	</effect>
+	<classes>WARLOCK,WIZARD</classes>
+	<source>LOSTLABORATORYOFKWALISH</source>
 </spell>
 <spell>
 	<name>Giant insect</name>
