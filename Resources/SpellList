@@ -207,6 +207,24 @@ If you cast this spell multiple times, you can have up to three of its 1-minute 
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Thunderclap</name>
+	<level>0</level>
+	<school>EVOCATION</school>
+	<components>
+		false,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SPHERE,0,5,0</area>
+	<effect>
+You create a burst of thunderous sound, which can be heard 100 feet away. Each creature other than you within 5 feet of you must make a Constitution saving throw. On a failed save, the creature takes 1d6 thunder damage.
+
+The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).
+	</effect>
+	<classes>BARD,DRUID,SORCERER,WARLOCK,WIZARD</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</spell>
+<spell>
 	<name>Toll the dead</name>
 	<level>0</level>
 	<school>NECROMANCY</school>
@@ -243,6 +261,26 @@ The spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (
 	</effect>
 	<classes>CLERIC</classes>
 	<source>XANATHARSGUIDETOEVERYTHING</source>
+</spell>
+<spell>
+	<name>Absorb elements</name>
+	<level>1</level>
+	<school>ABJURATION</school>
+	<components>
+		false,true,false
+	</components>
+	<casttime>false,Reaction</casttime>
+	<duration>false,1 Round</duration>
+	<area>SELF</area>
+	<effect>
+Reaction to taking acid, cold, fire, lightning, or thunder damage.
+
+This spell captures some of the incoming energy, lessening its effect on you and storing it for your next melee attack. You have resistance to the triggering damage type until the start of your next turn. Also, the first time you hit with a melee attack on your next turn, the target takes an extra 1d6 damage of the triggering type, and the spell ends.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by 1d6 for each slot level above 1st.
+	</effect>
+	<classes>DRUID,RANGER,WIZARD</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </spell>
 <spell>
 	<name>Animal friendship</name>
@@ -306,6 +344,24 @@ At Higher Levels. When you cast this spell using a spell slot of 2nd level or hi
 	<classes>BARD,CLERIC</classes>
 	<subclasses>GRAVE,VENGEANCE</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Beast bond</name>
+	<level>1</level>
+	<school>DIVINATION</school>
+	<components>
+		true,true,true
+		<gold>false</gold>
+		<material>a bit of fur wrapped in a cloth</material>
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You establish a telepathic link with one beast you touch that is friendly to you or charmed by you. The spell fails if the beast's intelligence is 4 or higher. Until the spell ends, the link is active while you and the beast are within line of sight of each other. Through the link, the beast can understand your telepathic messages to it, and it can telepathically communicate simple emotions and concepts back to you. While the link is active, the beast gains advantage on attack rolls against any creature within 5 feet of you that you can see.
+	</effect>
+	<classes>DRUID,RANGER</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </spell>
 <spell>
 	<name>Bless</name>
@@ -599,6 +655,24 @@ Your prayer empowers you with divine radiance. Until the spell ends, your weapon
 	<classes>PALADIN</classes>
 	<subclasses>WAR</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Earth tremor</name>
+	<level>1</level>
+	<school>EVOCATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>SPHERE,0,10,0</area>
+	<effect>
+You cause a tremor in the ground in a 10 foot radius. Each creature other than you in that area must make a Dexterity saving throw. On a failed save, a creature takes 1d6 bludgeoning damage and is knoecked prone. If the ground in that area is loose earth or stone, it becomes difficult terrain until cleared.
+
+At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st.
+	</effect>
+	<classes>BARD,DRUID,SORCERER,WIZARD</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </spell>
 <spell>
 	<name>Ensnaring strike</name>
@@ -1760,6 +1834,26 @@ For the duration, the target has advantage on saving throws against being poison
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Pyrotechnics</name>
+	<level>2</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,Instantaneous</duration>
+	<area>CUBE,60,5,0</area>
+	<effect>
+Chose an area of flame that you can see and that can fit within a 5 foot cube within range. You can extinguish the fire in that area, and you can create either fireworks or smoke.
+
+Fireworks. The target explodes with a dazzling display of colours. Each creature within 10 feet of the target must succeed on a Constitution saving throw or become blinded until the end of your next turn.
+
+Smoke. Thicj black smoke spreads out from the target in a 20 foot radius, moving around corners. The area of the smoke is heavily obscured. The smoke persists for 1 minute or until a strong wind disperses it.
+	</effect>
+	<classes>BARD,SORCERER,WIZARD</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</spell>
+<spell>
 	<name>Ray of enfeeblement</name>
 	<level>2</level>
 	<school>NECROMANCY</school>
@@ -1863,6 +1957,22 @@ For the duration, no sound can be created within or pass through a 20-foot-radiu
 	<classes>BARD,CLERIC,RANGER</classes>
 	<subclasses>LANDDESERT,UNDYING</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Skywrite</name>
+	<level>2</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>true,Action</casttime>
+	<duration>true,1 Hour</duration>
+	<area>UNLIMITED</area>
+	<effect>
+You cause up to ten words to form in a part of the sky you can see. The words appear to be made of cloud and remain in place for the spell's duration. The words dissipate when the spell end. A strong wind can disperse the clouds and end the spell early.
+	</effect>
+	<classes>BARD,DRUID,WIZARD</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </spell>
 <spell>
 	<name>Spider climb</name>
@@ -1972,6 +2082,29 @@ The spell ends if you drop to 0 hit points or if you and the target become separ
 	<classes>CLERIC</classes>
 	<subclasses>CROWN</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Warding wind</name>
+	<level>2</level>
+	<school>EVOCATION</school>
+	<components>
+		true,false,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,10 Minutes</duration>
+	<area>SELF</area>
+	<effect>
+A strong wind (20 miles per hour) blows around you in a 10 foor radius and moves with you, remaining centered on you. The wind lasts for the spells duration.
+
+The wind has the following effects:
+ - It deafens you and other creatures in the area.
+ - It extinguishes unprotected flames in its area that are torched sized or smaller.
+ - The area is dfficult terrain for creatures other than you.
+ - The attack rolls of ranged weapon attacks have disadvantage if they pass in or out of the wind.
+ - It hedges out vapor, gas, and fog that can be dispersed by strong wind.
+	</effect>
+	<classes>BARD,DRUID,SORCERER</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </spell>
 <spell>
 	<name>Web</name>
@@ -2343,6 +2476,24 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 	<classes>SORCERER,WIZARD</classes>
 	<subclasses>LIGHT,FIEND</subclasses>
 	<source>PLAYERSHANDBOOK</source>
+</spell>
+<spell>
+	<name>Flame arrows</name>
+	<level>3</level>
+	<school>TRANSMUTATION</school>
+	<components>
+		true,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>true,1 Hour</duration>
+	<area>SINGLE,5</area>
+	<effect>
+You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver,the target takes an extra 1d6 fire damage. The spell's magic ends on the piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver.
+
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd.
+	</effect>
+	<classes>DRUID,RANGER,SORCERER,WIZARD</classes>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </spell>
 <spell>
 	<name>Galder's tower</name>
@@ -2863,8 +3014,8 @@ You conjure up a wall of water on the ground at a point you can see within range
 
 Any ranged weapon attack that enters the wall's space has disadvantage on the attack roll, and fire damage is halved if the fire effect passes through the wall to reach its target. Spells that deal cold damage that pass through the wall cause  the area of the wall they pass through to freeze solid (at least a 5 foot square section is frozen). Each 5 foot square frozen section has AC 5 and 15 hit points. Reducing a frozen section to 0 hit points destroys it. When a section is destroyed, the wall's water doesn't fill it.
 	</effect>
-	<classes></classes>
-	<source>VOLOSGUIDETOMONSTERS</source>
+	<classes>DRUID,SORCERER,WIZARD</classes>
+	<source>VOLOSGUIDETOMONSTERS,PRINCESOFTHEAPOCALYPSE</source>
 </spell>
 <spell>
 	<name>Water breathing</name>
