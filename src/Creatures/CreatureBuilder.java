@@ -34,6 +34,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Tooltip;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
@@ -60,6 +61,7 @@ public class CreatureBuilder {
   			private GridPane subtypePanel;
   			private Map<Type,List<RadioButton>> subtypePicker;
   	  	private List<RadioButton> alignPicker;
+  	  	
   		private ChoiceBox<Double> crPicker;
   	  	private TextField hpPicker, acPicker;
   	  	private Map<Speeds, TextField> speedPicker;
@@ -68,11 +70,12 @@ public class CreatureBuilder {
 	  		private Map<Stats, TextField> savesSetter;
   	  	private Map<Skills, RadioButton> skillPicker;
   	  		private Map<Skills, TextField> skillSetter;
+  	  		
   	  	private Map<DamageMultiplier,Map<DamageType,RadioButton>> resistancePicker;
   	  	private Map<StatusCondition, RadioButton> conditionPicker;
   	  	private Map<Senses, RadioButton> sensePicker;
 	  		private Map<Senses, TextField> senseSetter;
-	  	private Map<Languages, RadioButton> languagePicker;
+		private Map<Languages, RadioButton> languagePicker;
 	    	
 	  		//TODO more inputs
 	    		//Passives
@@ -82,11 +85,18 @@ public class CreatureBuilder {
   					//Other
 	    		//Actions
 	    			//Multiattacks
-	    		//Bonus actions
-	    		//Reactions
-	    		//Legendary actions (and number per round)
-	    		//Lair actions
-  		
+
+		private Map<TextField, TextArea> bonusActionInputs;
+			private int bonusCount = 0;
+		private Map<TextField, TextArea> reactionInputs;
+			private int reactionCount = 0;
+			
+		private ChoiceBox<Integer> legendActCount;
+			private List<TextField> legendActNames;
+			private List<ChoiceBox<Integer>> legendActCosts;
+			private List<TextArea> legendActDesc;
+			private int legendActEntryCount = 0;
+		private List<TextArea> lairActions;
   		private ChoiceBox<Source> sourceSelect;
   		
 
@@ -330,8 +340,6 @@ public class CreatureBuilder {
   		      	}
   		      	sp.setContent(creatureList);
   		      	grid.add(sp,0,1);
-
-  		      	
   		      	
   		      	
   		      	
@@ -802,24 +810,215 @@ public class CreatureBuilder {
 	  		    layer++;
   		    	
 	  		    
-  		    	layer = 1;											//TODO - Label for start of 2nd column
-  		    	
-  		    	
-  		  		//TODO more inputs
+	  		    label = new Label("\t");
+	  		    curCreature.add(label, 2, 0);//Column separator.
+	  		    
+	  		    
+  		    	GridPane abilities = new GridPane();				//TODO - Label for start of 2nd column
+  		    	abilities.setHgap(10);
+  		    	abilities.setVgap(10);
+  	      		sp = new ScrollPane();//allow scrolling down the action inputs
+  		      	sp.setContent(abilities);
+  		      	sp.setMaxHeight(750);
+  				curCreature.add(sp, 3, 1, 2, layer-3);
+  		      	
+  		    	int abilityLayer = 0;
+		    		label = new Label("Passives");
+		    		abilities.add(label, 0, abilityLayer);
+		    		abilityLayer++;
+		    		GridPane passiveSet = new GridPane();
+		    		
+		    		abilities.add(passiveSet, 1, abilityLayer);
+		    		abilityLayer++;
+		    		//TODO
   		    		//Passives
-  		    			//Innate spellcasting
-  		    			//Spellcasting
+  		    			//Innate spellcasting - ability, modifier, dc
+  		    			//Spellcasting - level, ability, modifier, dc
   		    			//Legendary resistances (int)
   	  					//Other
+		    		
+  		    		label = new Label("Actions");					//TODO - Label for the start of actions
+  		    		abilities.add(label, 0, abilityLayer);
+		    		abilityLayer++;
+		    		GridPane actionSet = new GridPane();
+		    		
+		    		abilities.add(actionSet, 1, abilityLayer);
+		    		abilityLayer++;
+		    		//TODO
   		    		//Actions
   		    			//Multiattacks
-  		    		//Bonus actions
-  		    		//Reactions
-  		    		//Legendary actions (and number per round)
-  		    		//Lair actions
+		    		
+  		    		label = new Label("Bonus actions");
+  		    		abilities.add(label, 0, abilityLayer);
+  		    		Button newBonus = new Button("New bonus action");
+  		    		abilities.add(newBonus, 1, abilityLayer);
+		    		abilityLayer++;
+		    		GridPane bonusSet = new GridPane();
+		    		bonusActionInputs = new HashMap<TextField,TextArea>();
+		    		newBonus.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {//Add a new bonus action field set
+							TextField bonusName = new TextField();
+							TextArea bonusDesc = new TextArea();
+							bonusDesc.setMaxHeight(10);
+							bonusDesc.setMaxWidth(250);
+							Button remove = new Button("x");
+							bonusSet.add(bonusName, 0, bonusCount);
+							bonusSet.add(bonusDesc, 1, bonusCount);
+							bonusSet.add(remove, 2, bonusCount);
+							bonusActionInputs.put(bonusName, bonusDesc);
+							bonusCount++;
+							remove.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {//Remove the entry row
+									bonusSet.getChildren().remove(bonusName);
+									bonusSet.getChildren().remove(bonusDesc);
+									bonusSet.getChildren().remove(remove);
+									bonusActionInputs.remove(bonusName);
+								}
+							});
+						}
+					});
+		    		abilities.add(bonusSet, 1, abilityLayer);
+		    		abilityLayer++;
+		    		
+  		    		label = new Label("Reactions");
+  		    		abilities.add(label, 0, abilityLayer);
+  		    		Button newReact = new Button("New reaction");
+  		    		abilities.add(newReact, 1, abilityLayer);
+		    		abilityLayer++;
+		    		GridPane reactionSet = new GridPane();
+		    		reactionInputs = new HashMap<TextField,TextArea>();
+		    		newReact.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {//Add a new reaction field set
+							TextField reactName = new TextField();
+							TextArea reactDesc = new TextArea();
+							reactDesc.setMaxHeight(10);
+							reactDesc.setMaxWidth(250);
+							Button remove = new Button("x");
+							reactionSet.add(reactName, 0, reactionCount);
+							reactionSet.add(reactDesc, 1, reactionCount);
+							reactionSet.add(remove, 2, reactionCount);
+							reactionInputs.put(reactName, reactDesc);
+							reactionCount++;
+							remove.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {//Remove the entry row
+									reactionSet.getChildren().remove(reactName);
+									reactionSet.getChildren().remove(reactDesc);
+									reactionSet.getChildren().remove(remove);
+									reactionInputs.remove(reactName);
+								}
+							});
+						}
+					});
+		    		abilities.add(reactionSet, 1, abilityLayer);
+		    		abilityLayer++;
+		    		
+  		    		label = new Label("Legendary actions");			//TODO - Label for start of legendary aspects
+  		    		abilities.add(label, 0, abilityLayer);
+  		    		GridPane legActHeader = new GridPane();
+  		    			legendActCount = new ChoiceBox<Integer>(FXCollections.observableArrayList(0,1,2,3,4,5));
+  		    			legendActCount.setValue(0);
+  		    			legActHeader.add(legendActCount, 0, 0);
+  		    			Button newLegAct = new Button("New legendary action");
+  		    			legActHeader.add(newLegAct, 1, 0);
+  		    		abilities.add(legActHeader, 1, abilityLayer);
+		    		abilityLayer++;
+		    		GridPane legActSet = new GridPane();
+		    		legendActNames = new ArrayList<TextField>();
+		    		legendActCosts = new ArrayList<ChoiceBox<Integer>>();
+		    		legendActDesc = new ArrayList<TextArea>();
+		    		newLegAct.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {
+//		    			for(int j=0; j<5; j++){
+		    				TextField name = new TextField();
+		    				legendActNames.add(name);
+		    				legActSet.add(name, 0, legendActEntryCount);
+//		    				legActSet.getChildren().remove(name);
+		    				ChoiceBox<Integer> cost = new ChoiceBox<Integer>(FXCollections.observableArrayList(1,2,3));
+		    				cost.setValue(1);
+		    				legendActCosts.add(cost);
+		    				legActSet.add(cost, 1, legendActEntryCount);
+//		    				legActSet.getChildren().remove(cost);
+		    				TextArea description = new TextArea();
+		    				description.setMaxHeight(10);
+		    				description.setMaxWidth(225);
+		    				legendActDesc.add(description);
+		    				legActSet.add(description, 2, legendActEntryCount);
+//		    				legActSet.getChildren().remove(description);
+							Button remove = new Button("x");
+		    				legActSet.add(remove, 3, legendActEntryCount);
+							remove.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {//Remove the entry row
+									legActSet.getChildren().remove(name);
+									legendActNames.remove(name);
+									legActSet.getChildren().remove(cost);
+									legendActCosts.remove(cost);
+									legActSet.getChildren().remove(description);
+									legendActDesc.remove(description);
+									legActSet.getChildren().remove(remove);
+								}
+							});
+		    				
+		    				legendActEntryCount++;
+						}
+					});
+//		    		legendActCount.setOnAction(new EventHandler<ActionEvent>() {//Toggle visibilities
+//						@Override public void handle(ActionEvent event) {
+//							if(legendActCount.getValue()>0){
+//								if(legActSet.getChildren().isEmpty()){
+//									for(TextField name: legendActNames){legActSet.getChildren().add(name);}
+//									for(ChoiceBox<Integer> cost: legendActCosts){legActSet.getChildren().add(cost);}
+//									for(TextArea desc: legendActDesc){legActSet.getChildren().add(desc);}
+//								}
+//							}else{
+//								for(TextField name: legendActNames){
+//									name.setText("");
+//									legActSet.getChildren().remove(name);}
+//								for(ChoiceBox<Integer> cost: legendActCosts){
+//									cost.setValue(1);
+//									legActSet.getChildren().remove(cost);}
+//								for(TextArea desc: legendActDesc){
+//									desc.setText("");
+//									legActSet.getChildren().remove(desc);}
+//							}
+//						}
+//					});
+		    		abilities.add(legActSet, 1, abilityLayer);
+		    		abilityLayer++;
+		    		
+  		    		label = new Label(" Lair actions");
+  		    		abilities.add(label, 0, abilityLayer);
+  		    		RadioButton lairToggle = new RadioButton();
+  		    		abilities.add(lairToggle, 1, abilityLayer);
+		    		abilityLayer++;
+		    		GridPane lairSet = new GridPane();
+		    		lairActions = new ArrayList<TextArea>();
+		    			for(int j=0; j<3; j++){
+		    				TextArea lairaction = new TextArea();
+		    				lairaction.setMaxHeight(50);
+		    				lairaction.setMaxWidth(400);
+		    				lairActions.add(lairaction);
+		    				lairSet.add(lairaction, 0, j);
+		    				lairSet.getChildren().remove(lairaction);
+		    			}
+		    		lairToggle.setOnAction(new EventHandler<ActionEvent>() {//Toggle field visibility
+						@Override public void handle(ActionEvent event) {
+							if(lairToggle.isSelected()){
+								for(TextArea la: lairActions){lairSet.getChildren().add(la);}
+							}else{
+								for(TextArea la: lairActions){
+									la.setText("");
+									lairSet.getChildren().remove(la);
+								}
+							}
+						}
+					});
+		    		abilities.add(lairSet, 1, abilityLayer);
+		    		abilityLayer++;
+  		    	
+  		    	layer = layer-2;
   		      	
   		      	label = new Label(" Source");
-  		      	curCreature.add(label, 2, layer);
+  		      	curCreature.add(label, 3, layer);
   				sourceSelect = new ChoiceBox<Source>(FXCollections.observableArrayList());
   				sourceSelect.getItems().add(null);
   				sourceSelect.getItems().addAll(Source.values());
@@ -831,7 +1030,7 @@ public class CreatureBuilder {
   							return source.toNiceString();}
   						return null;
   					}});
-  				curCreature.add(sourceSelect, 3, layer);
+  				curCreature.add(sourceSelect, 4, layer);
   				layer++;
   		      	
   				
@@ -890,7 +1089,7 @@ public class CreatureBuilder {
   						updateCreatureList();
   					}
   				});
-  				curCreature.add(add, 2, layer);
+  				curCreature.add(add, 3, layer);
   		      	
   		      	grid.add(curCreature, 1, 1);
 
