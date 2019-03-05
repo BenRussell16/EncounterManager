@@ -1,4 +1,4 @@
-package src.Creatures;
+package Creatures;
 
 import java.util.List;
 import java.util.Map;

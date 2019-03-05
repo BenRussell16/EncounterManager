@@ -1,10 +1,10 @@
-package src.Encounters;
+package Encounters;
 import java.util.ArrayList;
 import java.util.List;
 
-import src.Creatures.Action;
-import src.Creatures.Creature;
-import src.Creatures.Creature.DamageType;
+import Creatures.Action;
+import Creatures.Creature;
+import Creatures.Creature.DamageType;
 
 public class EncounterEntity {
 	//TODO limited use actions/spells

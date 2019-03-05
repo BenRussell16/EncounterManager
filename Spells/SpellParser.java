@@ -1,4 +1,4 @@
-package src.Spells;
+package Spells;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,9 +9,9 @@ import java.util.regex.Pattern;
 
 import Resources.Source;
 import Resources.Classes.Subclass;
+import Spells.Spell.School;
 import Resources.Area;
 import Resources.Classes;
-import src.Spells.Spell.School;
 
 public class SpellParser {
 	public List<Spell> Parse() {

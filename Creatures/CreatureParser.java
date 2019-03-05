@@ -1,4 +1,4 @@
-package src.Creatures;
+package Creatures;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -9,9 +9,9 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+import Creatures.Creature.DamageType;
 import Resources.Area;
 import Resources.Source;
-import src.Creatures.Creature.DamageType;
 
 
 public class CreatureParser {

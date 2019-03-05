@@ -1,4 +1,4 @@
-package src.Creatures;
+package Creatures;
 
 import Resources.Area;
 

@@ -1,4 +1,4 @@
-package src.Creatures;
+package Creatures;
 
 public abstract class Action {
 

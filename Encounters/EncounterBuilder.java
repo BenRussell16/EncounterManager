@@ -1,11 +1,11 @@
-package src.Encounters;
+package Encounters;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import src.Creatures.Creature;
+import Creatures.Creature;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.beans.value.ChangeListener;
@@ -152,7 +152,7 @@ public class EncounterBuilder {
 							}
 						}
 						secondaryStage.close();
-						mainWindow.showEncounter(encounter);
+						//mainWindow.showEncounter(encounter);
 					}
 				});
 				topBar.add(export, 0, 0);

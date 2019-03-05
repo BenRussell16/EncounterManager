@@ -1,4 +1,4 @@
-package src.Spells;
+package Spells;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,9 +12,9 @@ import java.util.regex.Pattern;
 
 import Resources.Source;
 import Resources.Classes.Subclass;
+import Spells.Spell.School;
 import Resources.Area;
 import Resources.Classes;
-import src.Spells.Spell.School;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -40,7 +40,6 @@ public class SpellBook {
 		this.spells = spells;
 	}
 	
-	private TextField owner;
 	private TextField nameFilter;
 	private List<Spell> query;
 	private GridPane spellList;
@@ -201,19 +200,6 @@ public class SpellBook {
 						}
 						return "Concentration";
 					}});
-				
-				//Area filter
-				ChoiceBox<Area> areaPicker = new ChoiceBox<Area>(FXCollections.observableArrayList());
-				areaPicker.getItems().add(null);
-				areaPicker.getItems().addAll(Area.values());
-				areaPicker.setValue(null);
-				areaPicker.setConverter(new StringConverter<Area>(){
-					@Override public Area fromString(String arg0) {return null;}
-					@Override public String toString(Area area) {
-						if(area != null){
-							return area.toNiceString();}
-						return "Area";
-					}});
 	
 				//Class filters
 				ChoiceBox<Classes> classPicker = new ChoiceBox<Classes>(FXCollections.observableArrayList());
@@ -360,16 +346,6 @@ public class SpellBook {
 								if(knownQuery.contains(s)){knownQuery.remove(s);}
 							}
 						}
-						if(areaPicker.getValue()!=null) {//area of effect filter
-							List<Spell> toRemove = new ArrayList<Spell>();
-							for(Spell s:query) {
-								if(!(s.getArea()==areaPicker.getValue())) {
-									toRemove.add(s);}
-							}for(Spell s:toRemove) {
-								query.remove(s);
-								if(knownQuery.contains(s)){knownQuery.remove(s);}
-							}
-						}
 						
 						if(classPicker.getValue()!=null) {//class filter
 							List<Spell> toRemove = new ArrayList<Spell>();
@@ -417,11 +393,10 @@ public class SpellBook {
 				timePicker.setOnAction(filterQuery);				secondBar.add(timePicker, 1, 0);
 				ritualPicker.setOnAction(filterQuery);				secondBar.add(ritualPicker, 2, 0);
 				concPicker.setOnAction(filterQuery);				secondBar.add(concPicker, 3, 0);
-				areaPicker.setOnAction(filterQuery);				secondBar.add(areaPicker, 4, 0);
-				label = new Label("\t");							secondBar.add(label, 5, 0);
-				/*classPicker.setOnAction(filterQuery);*/			secondBar.add(classPicker, 6, 0);
-				subclassPicker.setOnAction(filterQuery);			secondBar.add(subclassPicker, 7, 0);
-				sourcePicker.setOnAction(filterQuery);				secondBar.add(sourcePicker, 8, 0);
+				label = new Label("\t");							secondBar.add(label, 4, 0);
+				/*classPicker.setOnAction(filterQuery);*/			secondBar.add(classPicker, 5, 0);
+				subclassPicker.setOnAction(filterQuery);			secondBar.add(subclassPicker, 6, 0);
+				sourcePicker.setOnAction(filterQuery);				secondBar.add(sourcePicker, 7, 0);
 	
 				classPicker.setOnAction(new EventHandler<ActionEvent>() {
 					//Set subclasses options based on selected class
@@ -638,7 +613,7 @@ public class SpellBook {
 			levelPanes = new HashMap<Integer, GridPane>();
 			preppedNames = new ArrayList<Label>();
 			unprep = new ArrayList<Button>();
-			
+
 			preparedList = new GridPane();
 				GridPane slotPane = new GridPane();
 					//Header row.
@@ -697,6 +672,7 @@ public class SpellBook {
 							});
 						}
 						//Spell list							//TODO - Label for prepared spell lists
+						sp = new ScrollPane();//allow scrolling around the spell list
 						GridPane preppedSpellList = new GridPane();
 					      	for(int j=0; j<spells.size(); j++) {
 					      		if(spells.get(j).getLevel()==i){
@@ -726,7 +702,9 @@ public class SpellBook {
 					      		}
 					      	}
 						levelPanes.put(i, preppedSpellList);
-						slotPane.add(preppedSpellList, 3, i+1);
+//						slotPane.add(preppedSpellList, 3, i+1);
+				      	sp.setContent(preppedSpellList);
+				      	slotPane.add(sp,3,i+1);
 					}
 				slotPane.setHgap(10);
 				slotPane.setVgap(5);

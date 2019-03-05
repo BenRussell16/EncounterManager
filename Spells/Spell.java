@@ -1,4 +1,4 @@
-package src.Spells;
+package Spells;
 
 import java.util.List;
 

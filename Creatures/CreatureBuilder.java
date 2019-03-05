@@ -1,4 +1,4 @@
-package src.Creatures;
+package Creatures;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,18 +8,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import Creatures.Creature.Alignment;
+import Creatures.Creature.DamageMultiplier;
+import Creatures.Creature.DamageType;
+import Creatures.Creature.Languages;
+import Creatures.Creature.Senses;
+import Creatures.Creature.Size;
+import Creatures.Creature.Skills;
+import Creatures.Creature.Speeds;
+import Creatures.Creature.Stats;
+import Creatures.Creature.StatusCondition;
+import Creatures.Creature.Type;
 import Resources.Source;
-import src.Creatures.Creature.Alignment;
-import src.Creatures.Creature.DamageMultiplier;
-import src.Creatures.Creature.DamageType;
-import src.Creatures.Creature.Languages;
-import src.Creatures.Creature.Senses;
-import src.Creatures.Creature.Size;
-import src.Creatures.Creature.Skills;
-import src.Creatures.Creature.Speeds;
-import src.Creatures.Creature.Stats;
-import src.Creatures.Creature.StatusCondition;
-import src.Creatures.Creature.Type;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -1091,7 +1091,10 @@ public class CreatureBuilder {
   				});
   				curCreature.add(add, 3, layer);
   		      	
-  		      	grid.add(curCreature, 1, 1);
+//  		    grid.add(curCreature, 1, 1);
+  		      	sp = new ScrollPane();//allow scrolling the form for smaller screens
+  		      	sp.setContent(curCreature);
+  		      	grid.add(sp,1,1);
 
   		      	
   		      	

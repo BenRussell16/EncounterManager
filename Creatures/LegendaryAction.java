@@ -1,4 +1,4 @@
-package src.Creatures;
+package Creatures;
 
 public class LegendaryAction extends Action {
 	private final int cost;
