@@ -105,8 +105,8 @@ public interface Creature {
 		public String toNiceString(){return niceFormat;}
 	}
 	
-	public enum Speeds{//TODO complete
-		WALK,SWIM,FLY,CLIMB,BURROW;
+	public enum Speeds{
+		WALK,FLY,SWIM,CLIMB,BURROW;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
@@ -158,16 +158,24 @@ public interface Creature {
 	}
 	
 	
-	public enum Senses{//TODO complete
-		DARKVISION,BLINDSIGHT,TRUESIGHT;
+	public enum Senses{
+		DARKVISION,BLINDSIGHT,TREMORSENSE,TRUESIGHT;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
 	
 	public enum Languages{//TODO complete
-		COMMON,DRACONIC,DWARVISH,ELVEN,
-		GOBLIN,ORCISH,
-		AQUAN;
+		COMMON,DRACONIC,DWARVISH,ELVISH,//Common languages
+		GIANT,GOBLIN,ORCISH,UNDERCOMMON,//Uncommon languages
+		CELESTIAL,DEEPSPEECH,DRUIDIC,SYLVAN,PRIMORDIAL,//Rare languages
+		ABYSSAL,INFERNAL,//Fiendish languages
+		AURAN,AQUAN,IGNAN,TERRAN,//Elemental languages
+		ALL,TELEPATHY,//Universal languages
+		
+		BULLYWUG,GITH,GNOLL,GNOMISH,GRELL,//Other languages
+		HOOKHORROR,MODRON,OTYUGH,SAHUAGIN,
+		SLAAD,SPHINX,THRIKREEN,TROGLODYTE,
+		UMBERHULK,YETI;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}

@@ -704,6 +704,7 @@ public class SpellBook {
 						levelPanes.put(i, preppedSpellList);
 //						slotPane.add(preppedSpellList, 3, i+1);
 				      	sp.setContent(preppedSpellList);
+				      	sp.setMinHeight(40);
 				      	slotPane.add(sp,3,i+1);
 					}
 				slotPane.setHgap(10);

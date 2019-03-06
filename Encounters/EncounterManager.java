@@ -47,13 +47,12 @@ public class EncounterManager extends Application{
 		creaturebuilder = new CreatureBuilder(creatures);
 	}
 
-	private GridPane encounterPanel;
-	List<EncounterEntity> encounterEntities;
+//	private GridPane encounterPanel;
+//	List<EncounterEntity> encounterEntities;
 	@Override
 	public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Encounter manager");
         GridPane grid = new GridPane();
-        //grid.setAlignment(Pos.UPPER_LEFT);
         grid.setHgap(10);
       	grid.setVgap(10);
       	GridPane encounterBar = new GridPane();
@@ -93,6 +92,7 @@ public class EncounterManager extends Application{
         grid.add(encounterBar,1,0);
 
 
+        
       	label = new Label(" Creature management");
       	grid.add(label,0,1);
       	
@@ -106,6 +106,7 @@ public class EncounterManager extends Application{
         grid.add(creatureBar,1,1);
 
 
+        
       	label = new Label(" Spell management");
       	grid.add(label,0,2);
       	
@@ -125,9 +126,11 @@ public class EncounterManager extends Application{
 
         grid.add(spellBar,1,2);
         
-        encounterPanel = new GridPane();
-        encounterPanel.setVgap(10);
-        grid.add(encounterPanel, 0, 3);
+        
+        
+//        encounterPanel = new GridPane();
+//        encounterPanel.setVgap(10);
+//        grid.add(encounterPanel, 0, 3);
         
         primaryStage.setScene(new Scene(grid, 600, 500));
         primaryStage.show();

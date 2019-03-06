@@ -12,6 +12,7 @@ import Creatures.Creature.Alignment;
 import Creatures.Creature.DamageMultiplier;
 import Creatures.Creature.DamageType;
 import Creatures.Creature.Languages;
+import Creatures.Creature.Region;
 import Creatures.Creature.Senses;
 import Creatures.Creature.Size;
 import Creatures.Creature.Skills;
@@ -57,8 +58,8 @@ public class CreatureBuilder {
   		private TextField nameField;
   		private ToggleGroup sizePicker = new ToggleGroup();
   		private ToggleGroup typePicker = new ToggleGroup();
-  			private Label subtypeLabel;
   			private GridPane subtypePanel;
+  			private RadioButton shapechangerToggle;
   			private Map<Type,List<RadioButton>> subtypePicker;
   	  	private List<RadioButton> alignPicker;
   	  	
@@ -76,6 +77,7 @@ public class CreatureBuilder {
   	  	private Map<Senses, RadioButton> sensePicker;
 	  		private Map<Senses, TextField> senseSetter;
 		private Map<Languages, RadioButton> languagePicker;
+		private Map<Region, RadioButton> regionPicker;
 	    	
 	  		//TODO more inputs
 	    		//Passives
@@ -86,8 +88,8 @@ public class CreatureBuilder {
 	    		//Actions
 	    			//Multiattacks
 
-		private Map<TextField, TextArea> bonusActionInputs;
-			private int bonusCount = 0;
+//		private Map<TextField, TextArea> bonusActionInputs;
+//			private int bonusCount = 0;
 		private Map<TextField, TextArea> reactionInputs;
 			private int reactionCount = 0;
 			
@@ -399,12 +401,13 @@ public class CreatureBuilder {
   		      	curCreature.add(typePanel, 1, layer);
   		      	layer++;
 
-  		      	subtypeLabel = new Label(" Subtype");
-  		      	curCreature.add(subtypeLabel, 0, layer);
-  		      	subtypeLabel.setVisible(false);
+  		      	label = new Label(" Subtype");
+  		      	curCreature.add(label, 0, layer);
   		      	subtypePanel = new GridPane();
   		      	subtypePicker = new HashMap<Type,List<RadioButton>>();
-  		      	i=0;
+      			shapechangerToggle = new RadioButton("Shapechanger\t");
+      			subtypePanel.add(shapechangerToggle, 0, 0);
+  		      	i=1;
   		      	for(Type t: Type.values()){
   		      		if(t.hasSubtype()){
   		      			subtypePicker.put(t, new ArrayList<RadioButton>());
@@ -442,7 +445,6 @@ public class CreatureBuilder {
   		      			}
   		      		}
   		      	}
-  		      	subtypePanel.setVisible(false);
   		      	curCreature.add(subtypePanel, 1, layer);
   		      	layer++;
 
@@ -706,12 +708,12 @@ public class CreatureBuilder {
   		      														//TODO - Label for start of resistance/immunity... input
   		      	resistancePicker = new HashMap<DamageMultiplier,Map<DamageType,RadioButton>>();
   		      	for(DamageMultiplier mult: DamageMultiplier.values()){
-  		      		if(mult != DamageMultiplier.NONE){
+  		      		if(mult != DamageMultiplier.NONE && mult != DamageMultiplier.HEALING){
   		      			resistancePicker.put(mult, new HashMap<DamageType,RadioButton>());
   		      			if(mult == DamageMultiplier.RESISTANCE){label = new Label("Resistances");}
   		      			else if(mult == DamageMultiplier.IMMUNITY){label = new Label("Immunities");}
   		      			else if(mult == DamageMultiplier.VULNERABILITY){label = new Label("Vulnerabilities");}
-  		      			else if(mult == DamageMultiplier.HEALING){label = new Label("Healed by");}
+//  		      			else if(mult == DamageMultiplier.HEALING){label = new Label("Healed by");}
   		  		      	curCreature.add(label, 0, layer);
   		  		      	GridPane multsPane = new GridPane();
   		  		      	multsPane.setHgap(10);
@@ -808,6 +810,21 @@ public class CreatureBuilder {
 	  		    }
 	  		    curCreature.add(languagePane, 1, layer);
 	  		    layer++;
+
+  		      	label = new Label("Regions");
+	  		    curCreature.add(label, 0, layer);
+	  		    regionPicker = new HashMap<Region, RadioButton>();
+	  		    GridPane regionPane = new GridPane();
+	  		    regionPane.setHgap(10);
+	  		    i=0;
+	  		    for(Region r: Region.values()){
+	  		    	RadioButton rb = new RadioButton(r.toNiceString());
+	  		    	regionPane.add(rb, i, 0);
+	  		    	regionPicker.put(r, rb);
+	  		    	i++;
+	  		    }
+	  		    curCreature.add(regionPane, 1, layer);
+	  		    layer++;
   		    	
 	  		    
 	  		    label = new Label("\t");
@@ -827,7 +844,43 @@ public class CreatureBuilder {
 		    		abilities.add(label, 0, abilityLayer);
 		    		abilityLayer++;
 		    		GridPane passiveSet = new GridPane();
+		    		//Standard things
+		    			//Legendary resistance(count)
+		    			//Magic resistance
+		    			//Magic weapons
+		    			//Innate spellcasting
+		    			//Spellcasting
 		    		
+		    			//Amphibious
+		    			//Avoidance
+		    			//Antimagic susceptibility
+		    			//Devil's sight
+		    			//Earth glide
+		    			//Flyby
+		    			//Immutable form
+		    			//Incorporeal movement
+		    			//Keen hearing
+		    			//Keen sight
+		    			//Keen smell
+		    			//Pack tactics
+		    			//Shadow stealth
+		    			//Siege monster
+		    			//Spider climb
+		    			//Sunlight sensitivity
+	    				//Turn immunity
+	    				//Turn resistance
+		    			//Web sense
+		    			//Web walker
+		    		
+		    			//Constructed nature
+		    			//Elemental nature
+		    			//Fey ancestry
+		    			//Immortal nature
+		    			//Ooze nature
+		    			//Undead nature
+		    		
+		    			//Other Name, Effect pairs.
+		    			//Other text field (for notes like this spell is self only and things)
 		    		abilities.add(passiveSet, 1, abilityLayer);
 		    		abilityLayer++;
 		    		//TODO
@@ -841,44 +894,50 @@ public class CreatureBuilder {
   		    		abilities.add(label, 0, abilityLayer);
 		    		abilityLayer++;
 		    		GridPane actionSet = new GridPane();
-		    		
+		    		//Standard things
+		    			//Multiattack
+		    			//Melee and ranged attacks
+		    				//Name, melee or ranged, to hit, reach,targets, on hit, on miss
+		    			//Other
+		    				//Name, use limits, effect.
+		    		//Limits - X/day, Recharge x-y, Recharge after rest
 		    		abilities.add(actionSet, 1, abilityLayer);
 		    		abilityLayer++;
 		    		//TODO
   		    		//Actions
   		    			//Multiattacks
 		    		
-  		    		label = new Label("Bonus actions");
-  		    		abilities.add(label, 0, abilityLayer);
-  		    		Button newBonus = new Button("New bonus action");
-  		    		abilities.add(newBonus, 1, abilityLayer);
-		    		abilityLayer++;
-		    		GridPane bonusSet = new GridPane();
-		    		bonusActionInputs = new HashMap<TextField,TextArea>();
-		    		newBonus.setOnAction(new EventHandler<ActionEvent>() {
-						@Override public void handle(ActionEvent event) {//Add a new bonus action field set
-							TextField bonusName = new TextField();
-							TextArea bonusDesc = new TextArea();
-							bonusDesc.setMaxHeight(10);
-							bonusDesc.setMaxWidth(250);
-							Button remove = new Button("x");
-							bonusSet.add(bonusName, 0, bonusCount);
-							bonusSet.add(bonusDesc, 1, bonusCount);
-							bonusSet.add(remove, 2, bonusCount);
-							bonusActionInputs.put(bonusName, bonusDesc);
-							bonusCount++;
-							remove.setOnAction(new EventHandler<ActionEvent>() {
-								@Override public void handle(ActionEvent event) {//Remove the entry row
-									bonusSet.getChildren().remove(bonusName);
-									bonusSet.getChildren().remove(bonusDesc);
-									bonusSet.getChildren().remove(remove);
-									bonusActionInputs.remove(bonusName);
-								}
-							});
-						}
-					});
-		    		abilities.add(bonusSet, 1, abilityLayer);
-		    		abilityLayer++;
+//  		    		label = new Label("Bonus actions");
+//  		    		abilities.add(label, 0, abilityLayer);
+//  		    		Button newBonus = new Button("New bonus action");
+//  		    		abilities.add(newBonus, 1, abilityLayer);
+//		    		abilityLayer++;
+//		    		GridPane bonusSet = new GridPane();
+//		    		bonusActionInputs = new HashMap<TextField,TextArea>();
+//		    		newBonus.setOnAction(new EventHandler<ActionEvent>() {
+//						@Override public void handle(ActionEvent event) {//Add a new bonus action field set
+//							TextField bonusName = new TextField();
+//							TextArea bonusDesc = new TextArea();
+//							bonusDesc.setMaxHeight(10);
+//							bonusDesc.setMaxWidth(250);
+//							Button remove = new Button("x");
+//							bonusSet.add(bonusName, 0, bonusCount);
+//							bonusSet.add(bonusDesc, 1, bonusCount);
+//							bonusSet.add(remove, 2, bonusCount);
+//							bonusActionInputs.put(bonusName, bonusDesc);
+//							bonusCount++;
+//							remove.setOnAction(new EventHandler<ActionEvent>() {
+//								@Override public void handle(ActionEvent event) {//Remove the entry row
+//									bonusSet.getChildren().remove(bonusName);
+//									bonusSet.getChildren().remove(bonusDesc);
+//									bonusSet.getChildren().remove(remove);
+//									bonusActionInputs.remove(bonusName);
+//								}
+//							});
+//						}
+//					});
+//		    		abilities.add(bonusSet, 1, abilityLayer);
+//		    		abilityLayer++;
 		    		
   		    		label = new Label("Reactions");
   		    		abilities.add(label, 0, abilityLayer);
@@ -1127,9 +1186,6 @@ public class CreatureBuilder {
 	}
 	
 	private void updateSubtypeOptions(Type t) {//When a type is selected, display the appropriate subtypes.
-		subtypeLabel.setVisible(t.hasSubtype());
-		subtypePanel.setVisible(t.hasSubtype());
-		
 		for(Type type:subtypePicker.keySet()){
 			for(RadioButton rb:subtypePicker.get(type)) {
 				boolean visible = type == t;
