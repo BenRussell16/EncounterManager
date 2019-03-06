@@ -173,7 +173,7 @@ public interface Creature {
 		ALL,TELEPATHY,//Universal languages
 		
 		BULLYWUG,GITH,GNOLL,GNOMISH,GRELL,//Other languages
-		HOOKHORROR,MODRON,OTYUGH,SAHUAGIN,
+		HALFLING,HOOKHORROR,MODRON,OTYUGH,SAHUAGIN,
 		SLAAD,SPHINX,THRIKREEN,TROGLODYTE,
 		UMBERHULK,YETI;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
@@ -182,8 +182,8 @@ public interface Creature {
 	
 	public enum Region{
 		ARCTIC,COAST,DESERT,FOREST,
-		GRASSLAND,MOUNTAIN,SWAMP,UNDERDARK,
-		URBAN;
+		GRASSLAND,HILL,MOUNTAIN,SWAMP,UNDERDARK,
+		UNDERWATER,URBAN;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}

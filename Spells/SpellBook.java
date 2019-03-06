@@ -13,7 +13,6 @@ import java.util.regex.Pattern;
 import Resources.Source;
 import Resources.Classes.Subclass;
 import Spells.Spell.School;
-import Resources.Area;
 import Resources.Classes;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -720,7 +719,7 @@ public class SpellBook {
 	      	
 	    nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	    //make the window
-		secondaryStage.setScene(new Scene(grid, 1200, 500));
+		secondaryStage.setScene(new Scene(grid, 1200, 600));
 		secondaryStage.show();
 		return secondaryStage;
 	}
@@ -790,87 +789,17 @@ public class SpellBook {
 	}
 
 	public void loadBook(){							//TODO - Label for book loading
-		FileChooser fileChooser = new FileChooser();
-		fileChooser.setInitialDirectory(new File("Resources/Spellbooks/"));
-		File file = fileChooser.showOpenDialog(secondaryStage);
-		
-		if(file!=null){
-			Scanner scan;
-			System.out.println("Loading spellbook for "+file.getName());
-			try {
-				scan = new Scanner(file);
-				scan.useDelimiter("<|>|\n|\t| |,");
-				while(scan.hasNext()) {
-					if(scan.hasNext("spellbook")) {
-						//Setting fields to store spell values.
-						List<Spell> knownspells = new ArrayList<Spell>();
-						Map<Integer, Integer> numSlots = new HashMap<Integer,Integer>();
-							for(int i=1; i<=9; i++){numSlots.put(i, 0);}
-						Map<Integer, List<Spell>> preparedSpells = new HashMap<Integer,List<Spell>>();
-							for(int i=0; i<=9; i++){preparedSpells.put(i, new ArrayList<Spell>());};
-						
-						//Parse the spellbook.
-						while(!scan.hasNext("/spellbook")) {
-							if(scan.hasNext("name")){//Skip the name, it's there for human readers
-								while(!scan.hasNext("/name")){scan.next();}
-							}else if(scan.hasNext("slot")){
-								scan.next();
-								while(!scan.hasNext("/slot")){//Parse the slot based spells
-									if(scan.hasNext("known")){
-										scan.next();
-										Pattern oldDelimiter = scan.delimiter();
-										scan.useDelimiter(">|<|,");
-										List<String> knowns = new ArrayList<String>();
-										while(!scan.hasNext("/known")){//Read known spells
-											knowns.add(scan.next());
-										}
-										scan.useDelimiter(oldDelimiter);
-										for(Spell s:spells){//Translate names to spells
-											if(knowns.contains(s.getName())){
-												knownspells.add(s);
-											}
-										}
-										
-									}else if(scan.hasNextInt()){
-										int level = scan.nextInt();//Read level, and if not cantrip read number of slots
-										if(level!=0){numSlots.put(level, scan.nextInt());}
-										Pattern oldDelimiter = scan.delimiter();
-										scan.useDelimiter(">|<|,");
-										List<String> prepped = new ArrayList<String>();
-										while(!scan.hasNext("/"+level)){//Read prepared spells
-											prepped.add(scan.next());
-										}
-										scan.useDelimiter(oldDelimiter);
-										for(Spell s:spells){//Translate names to spells
-											if(prepped.contains(s.getName())){
-												preparedSpells.get(level).add(s);
-											}
-										}
-										scan.next();
-									}else {scan.next();}
-								}
-							}else{scan.next();}
-						}
-						
-						//Apply the data to the window
-						known = knownspells;
-						for(int i=0; i<=9; i++){
-							if(i!=0){
-								slotCounts.get(i).setValue(numSlots.get(i));
-							}
-							slots.put(i, preparedSpells.get(i));
-						}
-					}
-					scan.next();
-				}//where parsing ends
-				scan.close();
-				System.out.println("Spellbook loading complete");
-				nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
-			} catch (FileNotFoundException e) {
-				System.out.println("Spellbook loading failed");
-				e.printStackTrace();
+		SpellBookInstance loading = new SpellBookInstance(secondaryStage, spells);
+		//Apply the data to the window
+		known = loading.getKnown();
+		for(int i=0; i<=9; i++){
+			if(i!=0){
+				slotCounts.get(i).setValue(loading.getSlots(i));
 			}
-		}else{System.out.println("Spellbook loading failed");}
+			slots.put(i, loading.getPrepped(i));
+		}
+		//TODO - Daily uses
+		nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	}
 	
 	

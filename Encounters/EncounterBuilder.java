@@ -26,8 +26,6 @@ import javafx.collections.FXCollections;
 
 @SuppressWarnings("restriction")
 public class EncounterBuilder {
-	//TODO cr evaluator?
-		//for template creatures and customs
 	
 	private final List<Creature> creatures;
 	private Map<Creature,Integer> built;

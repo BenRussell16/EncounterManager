@@ -819,7 +819,7 @@ public class CreatureBuilder {
 	  		    i=0;
 	  		    for(Region r: Region.values()){
 	  		    	RadioButton rb = new RadioButton(r.toNiceString());
-	  		    	regionPane.add(rb, i, 0);
+	  		    	regionPane.add(rb, i%6, i/6);
 	  		    	regionPicker.put(r, rb);
 	  		    	i++;
 	  		    }

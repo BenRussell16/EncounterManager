@@ -20,12 +20,6 @@ import javafx.stage.Stage;
 
 @SuppressWarnings("restriction")
 public class EncounterManager extends Application{
-	//TODO initiative, toggle groups of like creatures sharing initiative
-	//TODO reactions spent
-	//TODO resistances
-	//TODO lair actions
-	
-	//TODO fancy grid stuff? lighting?
 
 	private List<Creature> creatures;
 	private List<Spell> spells;
