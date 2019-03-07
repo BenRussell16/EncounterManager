@@ -21,6 +21,8 @@ import Creatures.Creature.Stats;
 import Creatures.Creature.StatusCondition;
 import Creatures.Creature.Type;
 import Resources.Source;
+import Spells.Spell;
+import Spells.SpellBook;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -37,6 +39,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 
@@ -44,10 +47,12 @@ import javafx.util.StringConverter;
 public class CreatureBuilder {
 
 	private final List<Creature> creatures;
+	private final List<Spell> spells;
 	private Stage secondaryStage = null;
 	
-	public CreatureBuilder(List<Creature> creatures) {
+	public CreatureBuilder(List<Creature> creatures, List<Spell> spells) {
 		this.creatures = creatures;
+		this.spells = spells;
 	}
 	
 	private List<Creature> query;									//TODO - Label for global fields
@@ -79,12 +84,17 @@ public class CreatureBuilder {
 		private Map<Languages, RadioButton> languagePicker;
 		private Map<Region, RadioButton> regionPicker;
 	    	
+
+		private ChoiceBox<Integer> LegRes;
+		private File innateSpells, stdSpells;
+			private ChoiceBox<Stats> innateAbility, castAbility;
+			private TextField innateMod, innateDC, castMod, castDC;
+		private Map<RadioButton, String> standardPassives;
+		private Map<TextField, TextArea> passiveInputs;
+			private int passiveCount = 0;
+		private TextArea otherInfo;
+		
 	  		//TODO more inputs
-	    		//Passives
-	    			//Innate spellcasting
-	    			//Spellcasting
-	    			//Legendary resistances (int)
-  					//Other
 	    		//Actions
 	    			//Multiattacks
 
@@ -105,7 +115,7 @@ public class CreatureBuilder {
   		public Stage makeDisplay() {
   			if(secondaryStage != null) {secondaryStage.close();}
   			secondaryStage = new Stage();//make the window
-  			secondaryStage.setTitle("Spells");
+  			secondaryStage.setTitle("Creature List");
   			GridPane grid = new GridPane();
   	        grid.setHgap(10);
   	      	grid.setVgap(10);
@@ -534,7 +544,7 @@ public class CreatureBuilder {
   		      	curCreature.add(HPandAC, 1, layer);
   		      	layer++;
 
-  		      	label = new Label("Speed");							//TODO - Label for speed input
+  		      	label = new Label(" Speed");						//TODO - Label for speed input
   		      	curCreature.add(label, 0, layer);
   		      	speedPicker = new HashMap<Speeds,TextField>();
   		      	GridPane speedPane = new GridPane();
@@ -591,7 +601,7 @@ public class CreatureBuilder {
   		      	layer++;
 
 
-  		      	label = new Label("Stats");							//TODO - Label for start of stats input
+  		      	label = new Label(" Stats");						//TODO - Label for start of stats input
   		      	curCreature.add(label, 0, layer);
   		      	statPicker = new HashMap<Stats,TextField>();
   		      	GridPane statsPane = new GridPane();
@@ -621,7 +631,7 @@ public class CreatureBuilder {
   		      	layer++;
   		      	
   		      	
-  		      	label = new Label("Saves");
+  		      	label = new Label(" Saves");
   		      	curCreature.add(label, 0, layer);
   		      	savesPicker = new HashMap<Stats,RadioButton>();
   		      	savesSetter = new HashMap<Stats,TextField>();
@@ -663,7 +673,7 @@ public class CreatureBuilder {
   		      	curCreature.add(savesPane, 1, layer);
   		      	layer++;
   		      	
-  		      	label = new Label("Skills");
+  		      	label = new Label(" Skills");
   		      	curCreature.add(label, 0, layer);
   		      	skillPicker = new HashMap<Skills,RadioButton>();
   		      	skillSetter = new HashMap<Skills,TextField>();
@@ -710,9 +720,9 @@ public class CreatureBuilder {
   		      	for(DamageMultiplier mult: DamageMultiplier.values()){
   		      		if(mult != DamageMultiplier.NONE && mult != DamageMultiplier.HEALING){
   		      			resistancePicker.put(mult, new HashMap<DamageType,RadioButton>());
-  		      			if(mult == DamageMultiplier.RESISTANCE){label = new Label("Resistances");}
-  		      			else if(mult == DamageMultiplier.IMMUNITY){label = new Label("Immunities");}
-  		      			else if(mult == DamageMultiplier.VULNERABILITY){label = new Label("Vulnerabilities");}
+  		      			if(mult == DamageMultiplier.RESISTANCE){label = new Label(" Resistances");}
+  		      			else if(mult == DamageMultiplier.IMMUNITY){label = new Label(" Immunities");}
+  		      			else if(mult == DamageMultiplier.VULNERABILITY){label = new Label(" Vulnerabilities");}
 //  		      			else if(mult == DamageMultiplier.HEALING){label = new Label("Healed by");}
   		  		      	curCreature.add(label, 0, layer);
   		  		      	GridPane multsPane = new GridPane();
@@ -739,7 +749,7 @@ public class CreatureBuilder {
   		      		}
   		      	}
   		      	
-  		      	label = new Label("Condition immunities");
+  		      	label = new Label(" Condition immunities");
 	  		    curCreature.add(label, 0, layer);
 	  		    conditionPicker = new HashMap<StatusCondition, RadioButton>();
 	  		    GridPane conditionPane = new GridPane();
@@ -754,7 +764,7 @@ public class CreatureBuilder {
 	  		    curCreature.add(conditionPane, 1, layer);
 	  		    layer++;
 
-  		      	label = new Label("Senses");
+  		      	label = new Label(" Senses");
   		      	curCreature.add(label, 0, layer);
   		      	sensePicker = new HashMap<Senses,RadioButton>();
   		      	senseSetter = new HashMap<Senses,TextField>();
@@ -796,22 +806,28 @@ public class CreatureBuilder {
   		      	curCreature.add(sensePane, 1, layer);
   		      	layer++;
 
-  		      	label = new Label("Languages");
+  		      	label = new Label(" Languages");
 	  		    curCreature.add(label, 0, layer);
 	  		    languagePicker = new HashMap<Languages, RadioButton>();
 	  		    GridPane languagePane = new GridPane();
 	  		    languagePane.setHgap(10);
-	  		    i=0;
+	  		    i=0; int j=0;
 	  		    for(Languages l: Languages.values()){
 	  		    	RadioButton rb = new RadioButton(l.toNiceString());
-	  		    	languagePane.add(rb, i%8, i/8);
+	  		    	languagePane.add(rb, i%8, j+i/8);
 	  		    	languagePicker.put(l, rb);
 	  		    	i++;
+	  		    	//Apply rows for language groups.			//TODO - clean this up later.
+	  		    	if(j==0 && i>=8/*4*/){j++; i=0;}	//Common languages
+	  		    	//if(j==1 && i>=4){j++; i=0;}	//Uncommon languages
+	  		    	if(j==1/*2*/ && i>=5){j++; i=0;}	//Rare languages
+	  		    	if(j==2/*3*/ && i>=8/*6*/){j++; i=0;}	//Fiendish and elemental languages
+	  		    	//if(j==3/*4*/ && i>=2){j++; i=0;}	//Universal languages
 	  		    }
 	  		    curCreature.add(languagePane, 1, layer);
 	  		    layer++;
 
-  		      	label = new Label("Regions");
+  		      	label = new Label(" Regions");
 	  		    curCreature.add(label, 0, layer);
 	  		    regionPicker = new HashMap<Region, RadioButton>();
 	  		    GridPane regionPane = new GridPane();
@@ -840,60 +856,288 @@ public class CreatureBuilder {
   				curCreature.add(sp, 3, 1, 2, layer-3);
   		      	
   		    	int abilityLayer = 0;
-		    		label = new Label("Passives");
+		    		label = new Label(" Passives");
 		    		abilities.add(label, 0, abilityLayer);
 		    		abilityLayer++;
 		    		GridPane passiveSet = new GridPane();
-		    		//Standard things
-		    			//Legendary resistance(count)
-		    			//Magic resistance
-		    			//Magic weapons
-		    			//Innate spellcasting
-		    			//Spellcasting
-		    		
-		    			//Amphibious
-		    			//Avoidance
-		    			//Antimagic susceptibility
-		    			//Devil's sight
-		    			//Earth glide
-		    			//Flyby
-		    			//Immutable form
-		    			//Incorporeal movement
-		    			//Keen hearing
-		    			//Keen sight
-		    			//Keen smell
-		    			//Pack tactics
-		    			//Shadow stealth
-		    			//Siege monster
-		    			//Spider climb
-		    			//Sunlight sensitivity
-	    				//Turn immunity
-	    				//Turn resistance
-		    			//Web sense
-		    			//Web walker
-		    		
-		    			//Constructed nature
-		    			//Elemental nature
-		    			//Fey ancestry
-		    			//Immortal nature
-		    			//Ooze nature
-		    			//Undead nature
-		    		
-		    			//Other Name, Effect pairs.
-		    			//Other text field (for notes like this spell is self only and things)
+		    		passiveSet.setHgap(5);
+		    		passiveSet.setVgap(15);
+		    		int passiveLayer = 0;
+		    			label = new Label("Legendary resistances");
+		    			passiveSet.add(label, 0, passiveLayer);
+			    		LegRes = new ChoiceBox<Integer>(FXCollections.observableArrayList(0,1,2,3,4,5));
+			    		LegRes.setValue(0);
+		    			passiveSet.add(LegRes, 1, passiveLayer);
+		    			passiveLayer++;
+		    			
+		    			
+		    			
+		    	        Button spellBookButton = new Button("Spellbook generator");//Creates a button for spawning Spellbook windows
+		    	        spellBookButton.setOnAction(new EventHandler<ActionEvent>() {
+		    	        			@Override
+		    	        			public void handle(ActionEvent event) {new SpellBook(spells).makeDisplay();}
+		    	        		});
+		    	        passiveSet.add(spellBookButton,0,passiveLayer);
+		    	        passiveLayer++;
+		    	        
+		    			label = new Label("Innate spellcasting");	//TODO - Label for start of spellcasting input
+		    			passiveSet.add(label, 0, passiveLayer);
+		    			GridPane innatePane = new GridPane();
+			    			innateSpells = null;
+			    			//Second line
+			    			label = new Label("Ability: ");
+			    			innatePane.add(label, 0, 1);
+			    			innateAbility = new ChoiceBox<Stats>();
+			    				innateAbility.getItems().add(null);
+			    				innateAbility.getItems().addAll(Stats.values());
+			    				innateAbility.setValue(null);
+			    			innatePane.add(innateAbility, 1, 1);
+
+			    			label = new Label("\tMod: ");
+			    			innatePane.add(label, 2, 1);
+			    			innateMod = new TextField();
+			    			innateMod.setText("0");
+			    			innateMod.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+			    	      			if (!newValue.matches("\\d*")) {//remove non ints
+			    	      				innateMod.setText(newValue.replaceAll("[^\\d]", ""));
+			    	      			}
+			    	      			if(newValue.isEmpty()) {innateMod.setText("0");}//ensure not empty
+			    	      			innateMod.setText(""+Integer.parseInt(innateMod.getText()));//remove leading 0's
+			    				}
+			          	    });
+			    			innatePane.add(innateMod, 3, 1);
+
+			    			label = new Label("\tDC: ");
+			    			innatePane.add(label, 4, 1);
+			    			innateDC = new TextField();
+			    			innateDC.setText("0");
+			    			innateDC.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+			    	      			if (!newValue.matches("\\d*")) {//remove non ints
+			    	      				innateDC.setText(newValue.replaceAll("[^\\d]", ""));
+			    	      			}
+			    	      			if(newValue.isEmpty()) {innateDC.setText("0");}//ensure not empty
+			    	      			innateDC.setText(""+Integer.parseInt(innateDC.getText()));//remove leading 0's
+			    				}
+			          	    });
+			    			innatePane.add(innateDC, 5, 1);
+			    			//First line
+			    			Label curInnate = new Label("No file selected");
+			    			innatePane.add(curInnate, 3, 0, 3, 1);
+			    			Button loadInnate = new Button("Load spellbook");
+			    			loadInnate.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {
+									FileChooser fileChooser = new FileChooser();
+									fileChooser.setInitialDirectory(new File("Resources/Spellbooks/Creatures/"));
+									innateSpells = fileChooser.showOpenDialog(secondaryStage);
+									//Reset values
+									innateAbility.setValue(null);
+									innateMod.setText("0");
+									innateDC.setText("0");
+									//Set the curFile label
+									if(innateSpells == null){curInnate.setText("No file selected");}
+									else{curInnate.setText(innateSpells.getName());}
+								}
+							});
+			    			innatePane.add(loadInnate, 0, 0, 2, 1);
+			    		passiveSet.add(innatePane, 1, passiveLayer);
+		    			passiveLayer++;
+		    	        
+		    			
+		    			label = new Label("Spellcasting");
+		    			passiveSet.add(label, 0, passiveLayer);
+		    			GridPane castingPane = new GridPane();
+			    			stdSpells = null;
+			    			//Second line
+			    			label = new Label("Ability: ");
+			    			castingPane.add(label, 0, 1);
+			    			castAbility = new ChoiceBox<Stats>();
+				    			castAbility.getItems().add(null);
+				    			castAbility.getItems().addAll(Stats.values());
+				    			castAbility.setValue(null);
+			    				castingPane.add(castAbility, 1, 1);
+
+			    			label = new Label("\tMod: ");
+			    			castingPane.add(label, 2, 1);
+			    			castMod = new TextField();
+			    			castMod.setText("0");
+			    			castMod.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+			    	      			if (!newValue.matches("\\d*")) {//remove non ints
+			    	      				castMod.setText(newValue.replaceAll("[^\\d]", ""));
+			    	      			}
+			    	      			if(newValue.isEmpty()) {castMod.setText("0");}//ensure not empty
+			    	      			castMod.setText(""+Integer.parseInt(castMod.getText()));//remove leading 0's
+			    				}
+			          	    });
+			    			castingPane.add(castMod, 3, 1);
+
+			    			label = new Label("\tDC: ");
+			    			castingPane.add(label, 4, 1);
+			    			castDC = new TextField();
+			    			castDC.setText("0");
+			    			castDC.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+			    	      			if (!newValue.matches("\\d*")) {//remove non ints
+			    	      				castDC.setText(newValue.replaceAll("[^\\d]", ""));
+			    	      			}
+			    	      			if(newValue.isEmpty()) {castDC.setText("0");}//ensure not empty
+			    	      			castDC.setText(""+Integer.parseInt(castDC.getText()));//remove leading 0's
+			    				}
+			          	    });
+			    			castingPane.add(castDC, 5, 1);
+			    			//First line
+			    			Label curSpells = new Label("No file selected");
+			    			castingPane.add(curSpells, 3, 0, 3, 1);
+			    			Button loadCast = new Button("Load spellbook");
+			    			loadCast.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {
+									FileChooser fileChooser = new FileChooser();
+									fileChooser.setInitialDirectory(new File("Resources/Spellbooks/Creatures/"));
+									stdSpells = fileChooser.showOpenDialog(secondaryStage);
+									//Reset values
+									castAbility.setValue(null);
+									castMod.setText("0");
+									castDC.setText("0");
+									//Set the curFile label
+									if(stdSpells == null){curSpells.setText("No file selected");}
+									else{curSpells.setText(stdSpells.getName());}
+								}
+							});
+			    			castingPane.add(loadCast, 0, 0, 2, 1);
+			    		passiveSet.add(castingPane, 1, passiveLayer);
+		    			passiveLayer++;
+		    			
+		    														//TODO - Label for start of general passives.
+		    			label = new Label("Standards");
+		    			passiveSet.add(label, 0, passiveLayer);
+			    		standardPassives = new HashMap<RadioButton, String>();
+			    		GridPane standardPassivePane = new GridPane();
+			    		standardPassivePane.setHgap(5);
+		    				i=0; j=0;//Have a new line between groups
+		    				String[][] basics = {
+		    						{"Magic resistance","Has advantage on saving throws against spells and other magical effects."},
+		    						{"Magic weapons","It's weapon attacks are magical."}
+		    				};
+			    			for(String[] passive:basics){
+				    			RadioButton rb = new RadioButton(passive[0]);
+						      		Tooltip toolTip = new Tooltip(passive[1]);
+						      		toolTip.setWrapText(true);
+						      		toolTip.setMaxWidth(600);
+						      		rb.setTooltip(toolTip);
+				    			standardPassives.put(rb, passive[1]);
+				    			standardPassivePane.add(rb, i%4, j+i/4);
+				    			i++;
+			    			}
+			    			String[][] standards = {
+			    					{"Amphibious","This creature can breathe air and water."},
+			    					{"Avoidance","If this creature is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."},
+			    					{"Antimagic susceptibility","This creature is incapacitated while in the area of an antimagic field. If targeted by dispel magic, this creature must succeed on a Constitution saving throw against the caster's spell save DC or fall unconcious for 1 minute."},
+			    					{"Devil's sight","Magical darkness doesn't impede this creatures darkvision."},
+			    					{"Earth glide","This creature can burrow through nonmagical, unworked earth and stone. While doing so, it doesn't disturb the material it moves through."},
+			    					{"Flyby","This creature doesn't provoke an opportunity attack when it flies out of an enemies reach."},
+			    					{"Immutable form","This creature is immune to any spell or effect that would alter its form."},
+			    					{"Incorporeal movement","This creature can move through other creatures and objects as if they were difficult terrain. It takes 5(1d10) force damage if it ends its turn inside an object."},
+			    					{"Keen hearing","This creature has advantage on Wisdom (Perception) checks that rely on hearing."},
+			    					{"Keen sight","This creature has advantage on Wisdom (Perception) checks that rely on sight."},
+			    					{"Keen smell","This creature has advantage on Wisdom (Perception) checks that rely on smell."},
+			    					{"Pack tactics","This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated."},
+			    					{"Shadow stealth","While in dim light or darkness, this creature can take the hide action as a bonus action."},
+			    					{"Siege monster","This creature deals double damage to objects and structures."},
+			    					{"Spider climb","This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check."},
+			    					{"Sunlight sensitivity","While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight."},
+			    					{"Turn immunity","This creature is immune to effects that turn undead."},
+			    					{"Turn resistance","This creature has advantage on saving throws against any effect that turns undead."},
+			    					{"Web sense","While in contact with a web, this creature knows the exact location of any other creature in contact with the same web."},
+			    					{"Web walker","This creature ignores movement restrictions caused by webbing."}
+			    			};
+			    			j++; i=0;
+			    			label = new Label();//Spacer
+			    			standardPassivePane.add(label, 0, j);
+			    			j++;
+			    			for(String[] passive:standards){
+			    				RadioButton rb = new RadioButton(passive[0]);
+						      		Tooltip toolTip = new Tooltip(passive[1]);
+						      		toolTip.setWrapText(true);
+						      		toolTip.setMaxWidth(600);
+						      		rb.setTooltip(toolTip);
+				    			standardPassives.put(rb, passive[1]);
+				    			standardPassivePane.add(rb, i%4, j+i/4);
+				    			i++;
+			    			}
+			    			String[][] natures = {
+			    					{"Constructed nature","This creature doesn't require air, food, drink, or sleep."},
+			    					{"Elemental nature","An elemental doesn't require air, food, drink, or sleep."},
+			    					{"Fey ancestry","This creature has advantage on saving throws against being charmed, and magic can't put it to sleep."},
+			    					{"Immortal nature","This creature doesn't require food, drink or sleep."},
+			    					{"Ooze nature","An ooze doesn't equire sleep."},
+			    					{"Undead nature","An undead doesn't require air, food, drink, or sleep."}
+			    			};
+			    			j+=i/4; i=0;
+			    			label = new Label();//Spacer
+			    			standardPassivePane.add(label, 0, j);
+			    			j++;
+			    			for(String[] passive:natures){
+			    				RadioButton rb = new RadioButton(passive[0]);
+						      		Tooltip toolTip = new Tooltip(passive[1]);
+						      		toolTip.setWrapText(true);
+						      		toolTip.setMaxWidth(600);
+						      		rb.setTooltip(toolTip);
+				    			standardPassives.put(rb, passive[1]);
+				    			standardPassivePane.add(rb, i%4, j+i/4);
+				    			i++;
+			    			}
+			    		passiveSet.add(standardPassivePane, 1, passiveLayer);
+			    		passiveLayer++;
+
+	  		    		label = new Label(" Custom passives");		//TODO - Label for custom passives
+	  		    		passiveSet.add(label, 0, passiveLayer);
+	  		    		Button newPassive = new Button("New passive");
+	  		    		passiveSet.add(newPassive, 1, passiveLayer);
+	  		    		passiveLayer++;
+			    		GridPane customPassiveSet = new GridPane();
+			    		passiveInputs = new HashMap<TextField, TextArea>();
+			    		newPassive.setOnAction(new EventHandler<ActionEvent>() {
+							@Override public void handle(ActionEvent event) {//Add a new passive field set
+								TextField passiveName = new TextField();
+								TextArea passiveDesc = new TextArea();
+								passiveDesc.setMaxHeight(10);
+								passiveDesc.setMaxWidth(250);
+								Button remove = new Button("x");
+								customPassiveSet.add(passiveName, 0, passiveCount);
+								customPassiveSet.add(passiveDesc, 1, passiveCount);
+								customPassiveSet.add(remove, 2, passiveCount);
+								passiveInputs.put(passiveName, passiveDesc);
+								passiveCount++;
+								remove.setOnAction(new EventHandler<ActionEvent>() {
+									@Override public void handle(ActionEvent event) {//Remove the entry row
+										customPassiveSet.getChildren().remove(passiveName);
+										customPassiveSet.getChildren().remove(passiveDesc);
+										customPassiveSet.getChildren().remove(remove);
+										passiveInputs.remove(passiveName);
+									}
+								});
+							}
+						});
+			    		passiveSet.add(customPassiveSet, 1, passiveLayer);
+			    		passiveLayer++;
+
+		    			label = new Label("Other notes");//for notes like this spell is self only and things
+		    			passiveSet.add(label, 0, passiveLayer);
+			    		otherInfo = new TextArea();
+			    		otherInfo.setMaxHeight(50);
+			    		passiveSet.add(otherInfo, 1, passiveLayer);
+			    		passiveLayer++;
 		    		abilities.add(passiveSet, 1, abilityLayer);
 		    		abilityLayer++;
-		    		//TODO
-  		    		//Passives
-  		    			//Innate spellcasting - ability, modifier, dc
-  		    			//Spellcasting - level, ability, modifier, dc
-  		    			//Legendary resistances (int)
-  	  					//Other
 		    		
-  		    		label = new Label("Actions");					//TODO - Label for the start of actions
+		    		
+  		    		label = new Label(" Actions");					//TODO - Label for the start of actions
   		    		abilities.add(label, 0, abilityLayer);
 		    		abilityLayer++;
 		    		GridPane actionSet = new GridPane();
+		    		//TODO
 		    		//Standard things
 		    			//Multiattack
 		    			//Melee and ranged attacks
@@ -903,43 +1147,9 @@ public class CreatureBuilder {
 		    		//Limits - X/day, Recharge x-y, Recharge after rest
 		    		abilities.add(actionSet, 1, abilityLayer);
 		    		abilityLayer++;
-		    		//TODO
-  		    		//Actions
-  		    			//Multiattacks
 		    		
-//  		    		label = new Label("Bonus actions");
-//  		    		abilities.add(label, 0, abilityLayer);
-//  		    		Button newBonus = new Button("New bonus action");
-//  		    		abilities.add(newBonus, 1, abilityLayer);
-//		    		abilityLayer++;
-//		    		GridPane bonusSet = new GridPane();
-//		    		bonusActionInputs = new HashMap<TextField,TextArea>();
-//		    		newBonus.setOnAction(new EventHandler<ActionEvent>() {
-//						@Override public void handle(ActionEvent event) {//Add a new bonus action field set
-//							TextField bonusName = new TextField();
-//							TextArea bonusDesc = new TextArea();
-//							bonusDesc.setMaxHeight(10);
-//							bonusDesc.setMaxWidth(250);
-//							Button remove = new Button("x");
-//							bonusSet.add(bonusName, 0, bonusCount);
-//							bonusSet.add(bonusDesc, 1, bonusCount);
-//							bonusSet.add(remove, 2, bonusCount);
-//							bonusActionInputs.put(bonusName, bonusDesc);
-//							bonusCount++;
-//							remove.setOnAction(new EventHandler<ActionEvent>() {
-//								@Override public void handle(ActionEvent event) {//Remove the entry row
-//									bonusSet.getChildren().remove(bonusName);
-//									bonusSet.getChildren().remove(bonusDesc);
-//									bonusSet.getChildren().remove(remove);
-//									bonusActionInputs.remove(bonusName);
-//								}
-//							});
-//						}
-//					});
-//		    		abilities.add(bonusSet, 1, abilityLayer);
-//		    		abilityLayer++;
 		    		
-  		    		label = new Label("Reactions");
+  		    		label = new Label(" Reactions");
   		    		abilities.add(label, 0, abilityLayer);
   		    		Button newReact = new Button("New reaction");
   		    		abilities.add(newReact, 1, abilityLayer);
@@ -971,7 +1181,7 @@ public class CreatureBuilder {
 		    		abilities.add(reactionSet, 1, abilityLayer);
 		    		abilityLayer++;
 		    		
-  		    		label = new Label("Legendary actions");			//TODO - Label for start of legendary aspects
+  		    		label = new Label(" Legendary actions");		//TODO - Label for start of legendary aspects
   		    		abilities.add(label, 0, abilityLayer);
   		    		GridPane legActHeader = new GridPane();
   		    			legendActCount = new ChoiceBox<Integer>(FXCollections.observableArrayList(0,1,2,3,4,5));
@@ -1020,27 +1230,6 @@ public class CreatureBuilder {
 		    				legendActEntryCount++;
 						}
 					});
-//		    		legendActCount.setOnAction(new EventHandler<ActionEvent>() {//Toggle visibilities
-//						@Override public void handle(ActionEvent event) {
-//							if(legendActCount.getValue()>0){
-//								if(legActSet.getChildren().isEmpty()){
-//									for(TextField name: legendActNames){legActSet.getChildren().add(name);}
-//									for(ChoiceBox<Integer> cost: legendActCosts){legActSet.getChildren().add(cost);}
-//									for(TextArea desc: legendActDesc){legActSet.getChildren().add(desc);}
-//								}
-//							}else{
-//								for(TextField name: legendActNames){
-//									name.setText("");
-//									legActSet.getChildren().remove(name);}
-//								for(ChoiceBox<Integer> cost: legendActCosts){
-//									cost.setValue(1);
-//									legActSet.getChildren().remove(cost);}
-//								for(TextArea desc: legendActDesc){
-//									desc.setText("");
-//									legActSet.getChildren().remove(desc);}
-//							}
-//						}
-//					});
 		    		abilities.add(legActSet, 1, abilityLayer);
 		    		abilityLayer++;
 		    		
@@ -1051,7 +1240,7 @@ public class CreatureBuilder {
 		    		abilityLayer++;
 		    		GridPane lairSet = new GridPane();
 		    		lairActions = new ArrayList<TextArea>();
-		    			for(int j=0; j<3; j++){
+		    			for(j=0; j<3; j++){
 		    				TextArea lairaction = new TextArea();
 		    				lairaction.setMaxHeight(50);
 		    				lairaction.setMaxWidth(400);
@@ -1158,7 +1347,7 @@ public class CreatureBuilder {
   		      	
   		      	
   		    //make the window
-  		    secondaryStage.setScene(new Scene(grid, 1700, 1000));
+  		    secondaryStage.setScene(new Scene(grid, 1900, 1000));
   			secondaryStage.show();
   			return secondaryStage;
   		}

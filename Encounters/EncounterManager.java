@@ -38,7 +38,7 @@ public class EncounterManager extends Application{
 		builder = new EncounterBuilder(creatures, this);
 		spellbuilder = new SpellBuilder(spells);
 		spellbook = new SpellBook(spells);
-		creaturebuilder = new CreatureBuilder(creatures);
+		creaturebuilder = new CreatureBuilder(creatures, spells);
 	}
 
 //	private GridPane encounterPanel;
