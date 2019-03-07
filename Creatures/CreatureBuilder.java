@@ -94,15 +94,20 @@ public class CreatureBuilder {
 			private int passiveCount = 0;
 		private TextArea otherInfo;
 		
-	  		//TODO more inputs
-	    		//Actions
-	    			//Multiattacks
-
-//		private Map<TextField, TextArea> bonusActionInputs;
-//			private int bonusCount = 0;
+		private TextArea multiattack;
+		private int attackCount = 0;//May need a use limit field.
+			private List<TextField> attackNames;
+			private List<TextField> attackToHits;
+			private List<TextField> attackShortRange;
+			private List<TextField> attackLongRange;
+			private List<TextArea> attackDesc;//Includes targets, on hit, and on miss.
+		private int otherActionCount = 0;
+			private List<TextField> otherActNames;
+			private List<ChoiceBox<String>> otherActLimits;
+			private List<TextArea> otherActDesc;
+			
 		private Map<TextField, TextArea> reactionInputs;
 			private int reactionCount = 0;
-			
 		private ChoiceBox<Integer> legendActCount;
 			private List<TextField> legendActNames;
 			private List<ChoiceBox<Integer>> legendActCosts;
@@ -817,12 +822,11 @@ public class CreatureBuilder {
 	  		    	languagePane.add(rb, i%8, j+i/8);
 	  		    	languagePicker.put(l, rb);
 	  		    	i++;
-	  		    	//Apply rows for language groups.			//TODO - clean this up later.
-	  		    	if(j==0 && i>=8/*4*/){j++; i=0;}	//Common languages
-	  		    	//if(j==1 && i>=4){j++; i=0;}	//Uncommon languages
-	  		    	if(j==1/*2*/ && i>=5){j++; i=0;}	//Rare languages
-	  		    	if(j==2/*3*/ && i>=8/*6*/){j++; i=0;}	//Fiendish and elemental languages
-	  		    	//if(j==3/*4*/ && i>=2){j++; i=0;}	//Universal languages
+	  		    	//Apply rows for language groups.
+	  		    	if(j==0 && i>=8){j++; i=0;}	//Common and uncommon languages
+	  		    	if(j==1 && i>=5){j++; i=0;}	//Rare languages
+	  		    	if(j==2 && i>=8){j++; i=0;}	//Fiendish, elemental, and universal languages
+	  		    								//Other languages
 	  		    }
 	  		    curCreature.add(languagePane, 1, layer);
 	  		    layer++;
@@ -1042,6 +1046,7 @@ public class CreatureBuilder {
 			    					{"Keen hearing","This creature has advantage on Wisdom (Perception) checks that rely on hearing."},
 			    					{"Keen sight","This creature has advantage on Wisdom (Perception) checks that rely on sight."},
 			    					{"Keen smell","This creature has advantage on Wisdom (Perception) checks that rely on smell."},
+			    					{"Nimble escape","This creature can take the diesngage or hide action as a bonus action on each of its turns."},
 			    					{"Pack tactics","This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated."},
 			    					{"Shadow stealth","While in dim light or darkness, this creature can take the hide action as a bonus action."},
 			    					{"Siege monster","This creature deals double damage to objects and structures."},
@@ -1053,9 +1058,9 @@ public class CreatureBuilder {
 			    					{"Web walker","This creature ignores movement restrictions caused by webbing."}
 			    			};
 			    			j++; i=0;
-			    			label = new Label();//Spacer
-			    			standardPassivePane.add(label, 0, j);
-			    			j++;
+//			    			label = new Label();//Spacer
+//			    			standardPassivePane.add(label, 0, j);
+//			    			j++;
 			    			for(String[] passive:standards){
 			    				RadioButton rb = new RadioButton(passive[0]);
 						      		Tooltip toolTip = new Tooltip(passive[1]);
@@ -1135,16 +1140,141 @@ public class CreatureBuilder {
 		    		
   		    		label = new Label(" Actions");					//TODO - Label for the start of actions
   		    		abilities.add(label, 0, abilityLayer);
+  		    		GridPane actionButtons = new GridPane();
+	  		    		Button newAttack = new Button("New Attack");
+	  		    		actionButtons.add(newAttack, 0, abilityLayer);
+	  		    		Button newEffect = new Button("New Effect");
+	  		    		actionButtons.add(newEffect, 1, abilityLayer);
+  		    		abilities.add(actionButtons, 1, abilityLayer);
 		    		abilityLayer++;
 		    		GridPane actionSet = new GridPane();
-		    		//TODO
-		    		//Standard things
-		    			//Multiattack
-		    			//Melee and ranged attacks
-		    				//Name, melee or ranged, to hit, reach,targets, on hit, on miss
-		    			//Other
-		    				//Name, use limits, effect.
-		    		//Limits - X/day, Recharge x-y, Recharge after rest
+		    			GridPane multiattackPanel = new GridPane();
+				    		label = new Label("Multiattack: ");
+				    		multiattackPanel.add(label, 0, 0);
+				    		multiattack = new TextArea();
+				    		multiattack.setMaxHeight(10);
+				    		multiattack.setMaxWidth(450);
+				    		multiattackPanel.add(multiattack, 1, 0);
+		    			actionSet.add(multiattackPanel, 0, 0);
+		    			
+		    			GridPane attacksPanel = new GridPane();
+		    				attackNames = new ArrayList<TextField>();
+		    				attackToHits = new ArrayList<TextField>();
+		    				attackShortRange = new ArrayList<TextField>();
+		    				attackLongRange = new ArrayList<TextField>();
+		    				attackDesc = new ArrayList<TextArea>();
+		    				newAttack.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {
+				    				TextField name = new TextField("Name");
+				    				attackNames.add(name);
+				    				attacksPanel.add(name, 0, attackCount);
+				    				
+				    				TextField toHit = new TextField("To Hit");
+				    				toHit.setMaxWidth(60);
+				    				toHit.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+										@Override
+										public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+											if (!newValue.matches("-?\\d*")) {//remove non ints, allows negative
+												toHit.setText(newValue.replaceAll("[^\\d]", ""));
+						      	            }
+											if(newValue.isEmpty()) {toHit.setText("0");}//ensure not empty
+											toHit.setText(""+Integer.parseInt(toHit.getText()));//remove leading 0's
+										}
+						      	    });
+				    				attackToHits.add(toHit);
+				    				attacksPanel.add(toHit, 1, attackCount);
+				    				
+				    				TextField shortRange = new TextField("Short");
+				    				shortRange.setMaxWidth(60);
+				    				shortRange.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+										@Override
+										public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+											if (!newValue.matches("\\d*")) {//remove non ints
+												shortRange.setText(newValue.replaceAll("[^\\d]", ""));
+						      	            }
+											if(newValue.isEmpty()) {shortRange.setText("0");}//ensure not empty
+											shortRange.setText(""+Integer.parseInt(shortRange.getText()));//remove leading 0's
+										}
+						      	    });
+				    				attackShortRange.add(shortRange);
+				    				attacksPanel.add(shortRange, 2, attackCount);
+				    				
+				    				TextField longRange = new TextField("Long");
+				    				longRange.setMaxWidth(60);
+				    				longRange.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+										@Override
+										public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+											if (!newValue.matches("\\d*")) {//remove non ints
+												longRange.setText(newValue.replaceAll("[^\\d]", ""));
+						      	            }
+										}
+						      	    });
+				    				attackLongRange.add(longRange);
+				    				attacksPanel.add(longRange, 3, attackCount);
+				    				
+				    				TextArea desc = new TextArea();
+				    				desc.setMaxSize(250, 50);
+				    				attackDesc.add(desc);
+				    				attacksPanel.add(desc, 4, attackCount);
+				    				
+									Button remove = new Button("x");
+									attacksPanel.add(remove, 5, attackCount);
+									remove.setOnAction(new EventHandler<ActionEvent>() {
+										@Override public void handle(ActionEvent event) {//Remove the entry row
+											attacksPanel.getChildren().remove(name);
+											attackNames.remove(name);
+											attacksPanel.getChildren().remove(toHit);
+											attackToHits.remove(toHit);
+											attacksPanel.getChildren().remove(shortRange);
+											attackShortRange.remove(shortRange);
+											attacksPanel.getChildren().remove(longRange);
+											attackLongRange.remove(longRange);
+											attacksPanel.getChildren().remove(desc);
+											attackDesc.remove(desc);
+											attacksPanel.getChildren().remove(remove);
+										}
+									});
+				    				attackCount++;
+								}
+							});
+		    			actionSet.add(attacksPanel, 0, 1);
+
+		    			GridPane effectsPanel = new GridPane();
+	    					otherActNames = new ArrayList<TextField>();
+	    					otherActLimits = new ArrayList<ChoiceBox<String>>();
+	    					otherActDesc = new ArrayList<TextArea>();
+	    					newEffect.setOnAction(new EventHandler<ActionEvent>() {
+							@Override public void handle(ActionEvent event) {
+			    				TextField name = new TextField();
+			    				otherActNames.add(name);
+			    				effectsPanel.add(name, 0, otherActionCount);
+			    				ChoiceBox<String> limit = new ChoiceBox<String>(FXCollections.observableArrayList(null,
+			    						"1/Day","2/Day","3/Day","Recharge 4-6","Recharge 5-6","Recharge 6"));
+			    				limit.setValue(null);
+			    				otherActLimits.add(limit);
+			    				effectsPanel.add(limit, 1, otherActionCount);
+			    				TextArea description = new TextArea();
+			    				description.setMaxHeight(10);
+			    				description.setMaxWidth(225);
+			    				otherActDesc.add(description);
+			    				effectsPanel.add(description, 2, otherActionCount);
+								Button remove = new Button("x");
+								effectsPanel.add(remove, 3, otherActionCount);
+								remove.setOnAction(new EventHandler<ActionEvent>() {
+									@Override public void handle(ActionEvent event) {//Remove the entry row
+										effectsPanel.getChildren().remove(name);
+										otherActNames.remove(name);
+										effectsPanel.getChildren().remove(limit);
+										otherActLimits.remove(limit);
+										effectsPanel.getChildren().remove(description);
+										otherActDesc.remove(description);
+										effectsPanel.getChildren().remove(remove);
+									}
+								});
+								otherActionCount++;
+							}
+						});
+		    			actionSet.add(effectsPanel, 0, 2);
 		    		abilities.add(actionSet, 1, abilityLayer);
 		    		abilityLayer++;
 		    		
@@ -1197,22 +1327,18 @@ public class CreatureBuilder {
 		    		legendActDesc = new ArrayList<TextArea>();
 		    		newLegAct.setOnAction(new EventHandler<ActionEvent>() {
 						@Override public void handle(ActionEvent event) {
-//		    			for(int j=0; j<5; j++){
 		    				TextField name = new TextField();
 		    				legendActNames.add(name);
 		    				legActSet.add(name, 0, legendActEntryCount);
-//		    				legActSet.getChildren().remove(name);
 		    				ChoiceBox<Integer> cost = new ChoiceBox<Integer>(FXCollections.observableArrayList(1,2,3));
 		    				cost.setValue(1);
 		    				legendActCosts.add(cost);
 		    				legActSet.add(cost, 1, legendActEntryCount);
-//		    				legActSet.getChildren().remove(cost);
 		    				TextArea description = new TextArea();
 		    				description.setMaxHeight(10);
 		    				description.setMaxWidth(225);
 		    				legendActDesc.add(description);
 		    				legActSet.add(description, 2, legendActEntryCount);
-//		    				legActSet.getChildren().remove(description);
 							Button remove = new Button("x");
 		    				legActSet.add(remove, 3, legendActEntryCount);
 							remove.setOnAction(new EventHandler<ActionEvent>() {
