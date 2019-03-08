@@ -26,7 +26,6 @@ import Spells.SpellBook;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -143,6 +142,9 @@ public class CreatureBuilder {
   							Creature slot;
   							boolean sorted = false;
   							while(!sorted){
+  								//TODO - Decide a sorting method
+  								
+  								//TODO
   								sorted = true;
   								for(int i=creatures.size()-1; i>0; i--){
   									if(creatures.get(i).getCR()<creatures.get(i-1).getCR()
@@ -157,8 +159,7 @@ public class CreatureBuilder {
   							}
   							//Build the new XML string
   							String xml = "";
-  							//TODO - set up new XML
-  							//for(int i=0; i<creatures.size(); i++){xml+=creatures.get(i).toXML();}
+  							for(int i=0; i<creatures.size(); i++){xml+=creatures.get(i).toXML();}
   							//Save the new creatures.
   							try (PrintWriter out = new PrintWriter(new File("EncounterManager/Resources/CreatureList"))) {
   							    out.print(xml);
@@ -175,6 +176,8 @@ public class CreatureBuilder {
   					//Set up filter inputs
   					TextField nameFilter = new TextField();			//TODO - label for start of filter fields
 
+  					//TODO - more filters.
+
   					ChoiceBox<Double> crFilter = new ChoiceBox<Double>(FXCollections.observableArrayList(
   							null,0.0,0.125,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,
   							10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,
@@ -190,7 +193,6 @@ public class CreatureBuilder {
   							else{return ((Integer)object.intValue()).toString();}
   						}
   					});
-  					//TODO - allow selection of multiple
   					crFilter.setValue(null);
   					
   					ChoiceBox<Type> typeFilter = new ChoiceBox<Type>(FXCollections.observableArrayList());
@@ -830,6 +832,8 @@ public class CreatureBuilder {
 	  		    	if(j==2 && i>=8){j++; i=0;}	//Fiendish, elemental, and universal languages
 	  		    								//Other languages
 	  		    	//TODO - maybe drop down the misc, one off languages.
+	  		    	
+	  		    	//TODO
 	  		    }
 	  		    curCreature.add(languagePane, 1, layer);
 	  		    layer++;
@@ -1478,6 +1482,9 @@ public class CreatureBuilder {
 //  			      			levels.add(label);
 //  			      			spellList.add(label, 1, spells.size()+1);
 //  						spells.add(newSpell);
+  						//TODO - make new creature
+  						
+  						//TODO
   						updateCreatureList();
   					}
   				});

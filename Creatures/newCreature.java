@@ -4,10 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import Creatures.newCreature.Type.Subtype;
 import Resources.Source;
 
 public interface newCreature {
-	public void constructor(String name, Size size, Type type, Type.Subtype subtype, boolean isShapechanger,
+	public void constructor(String name, Size size, Type type, Subtype subtype, boolean isShapechanger,
 			List<Alignment> align, double cr, int hp, int ac,
 			Map<Speeds,Integer> speed, Map<Stats,Integer> stats, Map<Stats,Integer> saves, Map<Skills,Integer> skills,
 			Map<DamageMultiplier, List<DamageType>> damageMultipliers, List<StatusCondition> conditionImmunities,
@@ -21,11 +22,51 @@ public interface newCreature {
 	public Size getSize();
 	
 	public Type getType();
-	public Type.Subtype getSubtype();
+	public Subtype getSubtype();
 	public boolean isShapechanger();
 
 	public List<Alignment> getAlignment();
 		public default boolean isAlign(Alignment a){return getAlignment().contains(a);}
+		public default String alignDescription(){
+			if(getAlignment().contains(Alignment.UNALIGNED)){return "Unaligned";}
+			
+			boolean anyGood = getAlignment().contains(Alignment.LG) && getAlignment().contains(Alignment.NG) && getAlignment().contains(Alignment.CG);
+			boolean anyEvil = getAlignment().contains(Alignment.LE) && getAlignment().contains(Alignment.NE) && getAlignment().contains(Alignment.CE);
+			boolean anyLawful = getAlignment().contains(Alignment.LG) && getAlignment().contains(Alignment.LN) && getAlignment().contains(Alignment.LE);
+			boolean anyChaotic = getAlignment().contains(Alignment.CG) && getAlignment().contains(Alignment.CN) && getAlignment().contains(Alignment.CE);
+			boolean anyGEneutral = getAlignment().contains(Alignment.LN) && getAlignment().contains(Alignment.TN) && getAlignment().contains(Alignment.CN);
+			boolean anyLCneutral = getAlignment().contains(Alignment.NG) && getAlignment().contains(Alignment.TN) && getAlignment().contains(Alignment.NE);
+
+			boolean aGood = getAlignment().contains(Alignment.LG) || getAlignment().contains(Alignment.NG) || getAlignment().contains(Alignment.CG);
+			boolean aEvil = getAlignment().contains(Alignment.LE) || getAlignment().contains(Alignment.NE) || getAlignment().contains(Alignment.CE);
+			boolean aLawful = getAlignment().contains(Alignment.LG) || getAlignment().contains(Alignment.LN) || getAlignment().contains(Alignment.LE);
+			boolean aChaotic = getAlignment().contains(Alignment.CG) || getAlignment().contains(Alignment.CN) || getAlignment().contains(Alignment.CE);
+			boolean aGEneutral = getAlignment().contains(Alignment.LN) || getAlignment().contains(Alignment.TN) || getAlignment().contains(Alignment.CN);
+			boolean aLCneutral = getAlignment().contains(Alignment.NG) || getAlignment().contains(Alignment.TN) || getAlignment().contains(Alignment.NE);
+
+			if(anyGood && anyGEneutral && anyEvil){return "Any Alignment";}
+			
+			if(anyGood && anyGEneutral &&!aEvil){return "Any Non-Evil Alignment";}
+			if(anyGood && !aGEneutral &&!aEvil){return "Any Good Alignment";}
+			if(!aGood && anyGEneutral &&anyEvil){return "Any Non-Good Alignment";}
+			if(!aGood && !aGEneutral &&anyEvil){return "Any Evil Alignment";}
+
+			if(anyLawful && anyLCneutral &&!aChaotic){return "Any Non-Chaotic Alignment";}
+			if(anyLawful && !aLCneutral &&!aChaotic){return "Any Lawful Alignment";}
+			if(!aLawful && anyLCneutral &&anyChaotic){return "Any Non-Lawful Alignment";}
+			if(!aLawful && !aLCneutral &&anyChaotic){return "Any Chaotic Alignment";}
+			
+			String builtString = "";
+			boolean first = true;
+			for(Alignment a:Alignment.values()){
+				if(getAlignment().contains(a)){
+					if(!first){builtString+=" or ";}//TODO tidy if theres ever more than 2.
+					builtString+=a.toNiceString();
+					first = false;
+				}
+			}
+			return builtString;
+		}
 	public double getCR();
 		public default int getXP() {
 			if(getCR()==0.125) {return 25;}			else if(getCR()==0.25) {return 50;}		else if(getCR()==0.5) {return 100;}
@@ -329,7 +370,11 @@ public interface newCreature {
 	}
 	
 	public enum Stats{
-		STR,DEX,CON,INT,WIS,CHA;
+		STR("Strength"),DEX("Deterity"),CON("Constitution"),
+		INT("Intellegence"),WIS("Wisdom"),CHA("Charisma");
+		private String niceFormat;
+		private Stats(String niceFormat){this.niceFormat = niceFormat;}
+		public String toNiceString(){return niceFormat;}
 	}
 	
 	public enum Skills{
@@ -359,8 +404,7 @@ public interface newCreature {
 	public enum DamageType{
 		BLUDGEONING,PIERCING,SLASHING,NONMAGICALBASIC,
 		ACID,COLD,FIRE,LIGHTNING,POISON,PSYCHIC,THUNDER,
-		FORCE,NECROTIC,RADIANT,
-		HEALING;
+		FORCE,NECROTIC,RADIANT;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}

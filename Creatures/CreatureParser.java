@@ -616,6 +616,7 @@ public class CreatureParser {
 							for(Source s:sources) {builtString+=s.toString()+"\t";}
 							return builtString;
 						}
+						@Override public String toXML(){return "XML\n";}
 					};
 					current.constructor(name, size, type, align, ac, hp, speed, stats, saves, skills, damageMultipliers, conditionImmunities,
 							senses, languages, cr, legendaryResistances, regen, regenBlocks, passives, actions, legendaryActions, sources);

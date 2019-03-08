@@ -46,6 +46,8 @@ public interface Creature {
 	
 	public String toString();
 	
+	public String toXML();
+	
 	public static int scoreToMod(int score) {return (score-10)/2;}
 
 	
