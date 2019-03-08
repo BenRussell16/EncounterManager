@@ -26,6 +26,7 @@ import Spells.SpellBook;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -83,12 +84,13 @@ public class CreatureBuilder {
 	  		private Map<Senses, TextField> senseSetter;
 		private Map<Languages, RadioButton> languagePicker;
 		private Map<Region, RadioButton> regionPicker;
-	    	
+	    
 
 		private ChoiceBox<Integer> LegRes;
 		private File innateSpells, stdSpells;
 			private ChoiceBox<Stats> innateAbility, castAbility;
 			private TextField innateMod, innateDC, castMod, castDC;
+			private ChoiceBox<Integer> innateLevel, castLevel;
 		private Map<RadioButton, String> standardPassives;
 		private Map<TextField, TextArea> passiveInputs;
 			private int passiveCount = 0;
@@ -900,32 +902,40 @@ public class CreatureBuilder {
 			    			label = new Label("\tMod: ");
 			    			innatePane.add(label, 2, 1);
 			    			innateMod = new TextField();
-			    			innateMod.setText("0");
 			    			innateMod.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
-			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-			    	      			if (!newValue.matches("\\d*")) {//remove non ints
-			    	      				innateMod.setText(newValue.replaceAll("[^\\d]", ""));
-			    	      			}
-			    	      			if(newValue.isEmpty()) {innateMod.setText("0");}//ensure not empty
-			    	      			innateMod.setText(""+Integer.parseInt(innateMod.getText()));//remove leading 0's
-			    				}
-			          	    });
+								@Override
+								public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+									if (!newValue.matches("-?\\d*")) {//remove non ints, allow negation
+										innateMod.setText(newValue.replaceAll("[^-\\d]", ""));
+				      	            }
+								}
+				      	    });
 			    			innatePane.add(innateMod, 3, 1);
 
 			    			label = new Label("\tDC: ");
 			    			innatePane.add(label, 4, 1);
 			    			innateDC = new TextField();
-			    			innateDC.setText("0");
 			    			innateDC.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
-			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-			    	      			if (!newValue.matches("\\d*")) {//remove non ints
-			    	      				innateDC.setText(newValue.replaceAll("[^\\d]", ""));
-			    	      			}
-			    	      			if(newValue.isEmpty()) {innateDC.setText("0");}//ensure not empty
-			    	      			innateDC.setText(""+Integer.parseInt(innateDC.getText()));//remove leading 0's
-			    				}
-			          	    });
+								@Override
+								public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+									if (!newValue.matches("\\d*")) {//remove non ints
+										innateDC.setText(newValue.replaceAll("[^\\d]", ""));
+				      	            }
+								}
+				      	    });
 			    			innatePane.add(innateDC, 5, 1);
+			    			
+			    			label = new Label("\tLevel: ");
+			    			innatePane.add(label, 6, 1);
+			    			innateLevel = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20));
+			    			innateLevel.setConverter(new StringConverter<Integer>() {
+		  						@Override public Integer fromString(String string) {return null;}
+		  						@Override public String toString(Integer object) {
+		  							if(object==null){return "Level";}
+		  							else{return object.toString();}}});
+			    			innateLevel.setValue(null);
+			    			innatePane.add(innateLevel, 7, 1);
+			    			
 			    			//First line
 			    			Label curInnate = new Label("No file selected");
 			    			innatePane.add(curInnate, 3, 0, 3, 1);
@@ -965,32 +975,39 @@ public class CreatureBuilder {
 			    			label = new Label("\tMod: ");
 			    			castingPane.add(label, 2, 1);
 			    			castMod = new TextField();
-			    			castMod.setText("0");
 			    			castMod.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
-			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-			    	      			if (!newValue.matches("\\d*")) {//remove non ints
-			    	      				castMod.setText(newValue.replaceAll("[^\\d]", ""));
-			    	      			}
-			    	      			if(newValue.isEmpty()) {castMod.setText("0");}//ensure not empty
-			    	      			castMod.setText(""+Integer.parseInt(castMod.getText()));//remove leading 0's
-			    				}
-			          	    });
+								@Override
+								public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+									if (!newValue.matches("-?\\d*")) {//remove non ints, allow negation
+										castMod.setText(newValue.replaceAll("[^-\\d]", ""));
+				      	            }
+								}
+				      	    });
 			    			castingPane.add(castMod, 3, 1);
 
 			    			label = new Label("\tDC: ");
 			    			castingPane.add(label, 4, 1);
 			    			castDC = new TextField();
-			    			castDC.setText("0");
 			    			castDC.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
-			    	      		@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-			    	      			if (!newValue.matches("\\d*")) {//remove non ints
-			    	      				castDC.setText(newValue.replaceAll("[^\\d]", ""));
-			    	      			}
-			    	      			if(newValue.isEmpty()) {castDC.setText("0");}//ensure not empty
-			    	      			castDC.setText(""+Integer.parseInt(castDC.getText()));//remove leading 0's
-			    				}
-			          	    });
+								@Override
+								public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+									if (!newValue.matches("\\d*")) {//remove non ints
+										castDC.setText(newValue.replaceAll("[^\\d]", ""));
+				      	            }
+								}
+				      	    });
 			    			castingPane.add(castDC, 5, 1);
+			    			
+			    			label = new Label("\tLevel: ");
+			    			castingPane.add(label, 6, 1);
+			    			castLevel = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20));
+			    			castLevel.setConverter(new StringConverter<Integer>() {
+		  						@Override public Integer fromString(String string) {return null;}
+		  						@Override public String toString(Integer object) {
+		  							if(object==null){return "Level";}
+		  							else{return object.toString();}}});
+			    			castLevel.setValue(null);
+			    			castingPane.add(castLevel, 7, 1);
 			    			//First line
 			    			Label curSpells = new Label("No file selected");
 			    			castingPane.add(curSpells, 3, 0, 3, 1);
@@ -1175,7 +1192,7 @@ public class CreatureBuilder {
 										@Override
 										public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 											if (!newValue.matches("-?\\d*")) {//remove non ints, allows negative
-												toHit.setText(newValue.replaceAll("[^\\d]", ""));
+												toHit.setText(newValue.replaceAll("[^-\\d]", ""));
 						      	            }
 											if(newValue.isEmpty()) {toHit.setText("0");}//ensure not empty
 											toHit.setText(""+Integer.parseInt(toHit.getText()));//remove leading 0's

@@ -713,6 +713,7 @@ public class SpellBook {
 				
 			//TODO - Daily panel
 			//TODO - note level of daily uses
+				//TODO - Note at wills
 			
 	      	grid.add(preparedList, 2, 3);
 

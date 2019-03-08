@@ -21,26 +21,79 @@ public class SpellBookInstance {
 	private Map<Integer, List<Spell>> preparedSpells;
 	//TODO - Daily uses
 	
+	/**
+	 * A constructor that includes file selection.
+	 * @param stage	- A stage to spawn the file selection window from.
+	 * @param spells
+	 */
 	public SpellBookInstance(Stage stage, List<Spell> spells) {
 		this.stage = stage;
 		this.spells = spells;
 		loadBook();
+	}
+	/**
+	 * A constructor for when the file is already known.
+	 * @param book - The file of the selected spellbook.
+	 * @param spells
+	 */
+	public SpellBookInstance(File book, List<Spell> spells){
+		this.spells = spells;
+		loadBook(book);
 	}
 	
 	public List<Spell> getKnown(){return knownspells;}
 	public int getSlots(int level){return numSlots.get(level);}
 	public List<Spell> getPrepped(int level){return preparedSpells.get(level);}
 	
+	
+	public String toString(){
+		String builtString = "";
+		if(!getPrepped(0).isEmpty()){
+			builtString+="Cantrips (at will): ";
+			boolean first = true;
+			for(Spell s:getPrepped(0)){
+				if(!first){builtString+=", ";}
+				builtString+=s.getName();
+				first = false;
+			}
+		}
+		for(int i=1; i<=9; i++){
+			if(!getPrepped(i).isEmpty() || getSlots(i)>0){
+				if(builtString.length()!=0){builtString+="\n";}
+				if(i==1){builtString+="1st";}
+				else if(i==2){builtString+="2nd";}
+				else if(i==3){builtString+="3rd";}
+				else{builtString+=i+"th";}
+				builtString+=" level ("+getSlots(i)+"slot";
+				if(getSlots(i)>1){builtString+="s";}
+				builtString+="): ";
+				boolean first = true;
+				for(Spell s:getPrepped(i)){
+					if(!first){builtString+=", ";}
+					builtString+=s.getName();
+					first = false;
+				}
+			}
+		}
+		//TODO - dailies
+		return builtString;
+	}
+	
+	
+	
 	public void loadBook(){
 		FileChooser fileChooser = new FileChooser();
 		fileChooser.setInitialDirectory(new File("Resources/Spellbooks/"));
 		File file = fileChooser.showOpenDialog(stage);
-		
-		if(file!=null){
+		loadBook(file);
+	}
+	
+	public void loadBook(File book){
+		if(book!=null){
 			Scanner scan;
-			System.out.println("Loading spellbook for "+file.getName());
+			System.out.println("Loading spellbook for "+book.getName());
 			try {
-				scan = new Scanner(file);
+				scan = new Scanner(book);
 				scan.useDelimiter("<|>|\n|\t| |,");
 				while(scan.hasNext()) {
 					if(scan.hasNext("spellbook")) {
