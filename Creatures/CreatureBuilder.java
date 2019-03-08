@@ -829,6 +829,7 @@ public class CreatureBuilder {
 	  		    	if(j==1 && i>=5){j++; i=0;}	//Rare languages
 	  		    	if(j==2 && i>=8){j++; i=0;}	//Fiendish, elemental, and universal languages
 	  		    								//Other languages
+	  		    	//TODO - maybe drop down the misc, one off languages.
 	  		    }
 	  		    curCreature.add(languagePane, 1, layer);
 	  		    layer++;

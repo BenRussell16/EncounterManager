@@ -55,7 +55,7 @@ public interface newCreature {
 	public Map<Skills,Integer> getSkills();
 		public default int getSkillMod(Skills s){
 			if(getSkills().containsKey(s)){return getSkills().get(s);}
-			else{return scoreToMod(getStats().get(s));}
+			else{return scoreToMod(getStats().get(s.standardStat));}
 		}
 
 	public Map<DamageMultiplier, List<DamageType>> getMultipliers();
@@ -105,7 +105,158 @@ public interface newCreature {
 	
 
 	public String toString();
-	public String toXML();
+	public default String toXML() {
+		String builtString = "<creature>\n";
+		builtString += "\t<name>"+getName()+"</name>\n";
+		builtString += "\t<size>"+getSize().toString()+"</size>\n";
+		builtString += "\t<type>"+getType().toString();
+			if(getSubtype()!=null){builtString+=","+getSubtype().toString();}
+			builtString += ","+isShapechanger()+"</type>\n";
+		builtString += "\t<align>";
+			boolean first = true;
+			for(Alignment a:getAlignment()){
+				if(!first){builtString+=",";}
+				builtString+=a.toString();
+				first = false;
+			}
+			builtString+="</align>\n";
+		builtString += "\t<cr>"+getCR()+"</cr>\n";
+		builtString += "\t<ac>"+getAC()+"</ac>\n";
+		builtString += "\t<hp>"+getHP()+"</hp>\n";
+		builtString += "\t<speed>";
+			first = true;
+			for(Speeds s:getSpeeds().keySet()){
+				if(!first){builtString+=",";}
+				builtString+=s.toString()+" "+getSpeeds().get(s);
+				first = false;
+			}
+			builtString += "</speed>\n";
+		builtString += "\t<stats>";
+			first = true;
+			for(Stats s:getStats().keySet()){
+				if(!first){builtString+=",";}
+				builtString+=s.toString()+" "+getStats().get(s);
+				first = false;
+			}
+			builtString += "</stats>\n";
+		if(!getSaves().isEmpty()){builtString += "\t<saves>";
+			first = true;
+			for(Stats s:getSaves().keySet()){
+				if(!first){builtString+=",";}
+				builtString+=s.toString()+" "+getSaves().get(s);
+				first = false;
+			}
+			builtString += "</saves>\n";}
+		if(!getSkills().isEmpty()){builtString += "\t<skills>";
+			first = true;
+			for(Skills s:getSkills().keySet()){
+				if(!first){builtString+=",";}
+				builtString+=s.toString()+" "+getSkills().get(s);
+				first = false;
+			}
+			builtString += "</skills>\n";}
+		if(!getMultipliers().isEmpty()){builtString += "\t<multipliers>\n";
+			for(DamageMultiplier dm:getMultipliers().keySet()){
+				if(!getMultipliers().get(dm).isEmpty()){builtString += "\t\t<"+dm.toString()+">";
+				first = true;
+				for(DamageType d:getMultipliers().get(dm)){
+					if(!first){builtString+=",";}
+					builtString+=d.toString();
+					first = false;
+				}
+				builtString += "</"+dm.toString()+">\n";}
+			}
+			builtString += "\t</multipliers>\n";}
+		if(!getConditionImmunities().isEmpty()){builtString += "\t<conditions>";
+			first = true;
+			for(StatusCondition s:getConditionImmunities()){
+				if(!first){builtString+=",";}
+				builtString+=s.toString();
+				first = false;
+			}
+			builtString += "</conditions>\n";}
+		if(!getSenses().isEmpty()){builtString += "\t<senses>";
+			first = true;
+			for(Senses s:getSenses().keySet()){
+				if(!first){builtString+=",";}
+				builtString+=s.toString()+" "+getSenses().get(s);
+				first = false;
+			}
+			builtString += "</senses>\n";}
+		if(!getLanguages().isEmpty()){builtString += "\t<languages>";
+			first = true;
+			for(Languages l:getLanguages()){
+				if(!first){builtString+=",";}
+				builtString+=l.toString();
+				first = false;
+			}
+			builtString += "</languages>\n";}
+		builtString += "\t<regions>";
+			first = true;
+			for(Region r:getRegions()){
+				if(!first){builtString+=",";}
+				builtString+=r.toString();
+				first = false;
+			}
+			builtString += "</regions>\n";
+		if(getLegendaryResistances()>0 || getInnateCasting()!=null || getSpellcasting()!=null || !getPassives().isEmpty()){
+			builtString += "\t<passives>\n";
+				if(getLegendaryResistances()>0){builtString += "\t\t<legendaryresistance>"+getLegendaryResistances()+"</legendaryresistance>\n";}
+				if(getInnateCasting()!=null){builtString += "\t\t<innatecasting>";
+					builtString += getInnateCasting().getAbility().toString()+",";
+					builtString += getInnateCasting().getToHit().toString()+",";
+					builtString += getInnateCasting().getDC().toString()+",";
+					builtString += getInnateCasting().getLevel().toString()+",";
+					builtString += getInnateCasting().getFile().getAbsolutePath();
+					builtString += "</innatecasting>\n";}
+				if(getSpellcasting()!=null){builtString += "\t\t<spellcasting>";
+					builtString += getSpellcasting().getAbility().toString()+",";
+					builtString += getSpellcasting().getToHit().toString()+",";
+					builtString += getSpellcasting().getDC().toString()+",";
+					builtString += getSpellcasting().getLevel().toString()+",";
+					builtString += getSpellcasting().getFile().getAbsolutePath();
+					builtString += "</spellcasting>\n";}
+				for(String p:getPassives().keySet()){
+					builtString += "\t\t<passive>"+p+","+getPassives().get(p)+"</passive>\n";
+				}
+				builtString += "\t</passives>\n";}
+		if(otherNotes()!=null){builtString += "\t<other>"+otherNotes()+"</other>\n";}
+		builtString += "\t<actions>\n";
+			if(getMultiattack()!=null){builtString += "\t\t<multiattack>"+getMultiattack()+"</multiattack>\n";}
+			if(!getAttacks().isEmpty()){for(newAttack a:getAttacks()){
+				builtString += "\t\t<attack>"+a.getName()+","+a.getToHit()
+					+","+a.getShortRange()+","+a.getLongRange()+","+a.getDescription()+"</attack>\n";
+			}}
+			if(!getEffects().isEmpty()){for(newEffect e:getEffects()){
+				builtString += "\t\t<effect>"+e.getName()+","+e.getLimit()+","+e.getDescription()+"</effect>\n";
+			}}
+			builtString += "\t</actions>\n";
+		if(!getReactions().isEmpty()){builtString += "\t<reactions>\n";
+			for(String r:getReactions().keySet()){
+				builtString += "\t\t<reaction>"+r+","+getReactions().get(r)+"</reaction>\n";
+			}
+			builtString += "\t</reactions>\n";}
+		if(getLegendaryActionCount()>0){builtString += "\t<legendaryactions>"+getLegendaryActionCount()+"\n";
+			for(newLegendaryAction l:getLegendaryActions()){
+				builtString += "\t\t<legendaryaction>"+l.getName()+","+l.getCost()+","+l.getDescription()+"</legendaryaction>\n";
+			}
+			builtString += "\t</legendaryactions>\n";}
+		if(!getLairActions().isEmpty()){builtString += "\t<lair>\n";
+			for(String l:getLairActions()){
+				builtString += "\t\t<lairaction>"+l+"</lairaction>\n";
+			}
+			builtString += "\t</lair>\n";}
+		builtString += "\t<source>";
+			first = true;
+			for(Source s:getSource()){
+				if(!first){builtString+=",";}
+				builtString+=s.toString();
+				first = false;
+			}
+			builtString += "</source>\n";
+		builtString += "</creature>\n";
+		return builtString;
+	}
 	
 	
 	
