@@ -31,6 +31,7 @@ public class CreatureParser {
 		this.spells = spells;
 	}
 	public List<Creature> Parse() {
+		System.out.println("Parsing creatures");
 		Scanner scan;
 		List<Creature> creatures = new ArrayList<Creature>();
 		try {
@@ -56,6 +57,7 @@ public class CreatureParser {
 					Map<Skills,Integer> skills = new HashMap<Skills,Integer>();
 					
 					Map<DamageMultiplier,List<DamageType>> damageMultipliers = new HashMap<DamageMultiplier,List<DamageType>>();
+						for(DamageMultiplier dm:DamageMultiplier.values()) {damageMultipliers.put(dm, new ArrayList<DamageType>());}
 					List<StatusCondition> conditionImmunities = new ArrayList<StatusCondition>();
 
 					Map<Senses,Integer> senses = new HashMap<Senses,Integer>();
@@ -66,6 +68,7 @@ public class CreatureParser {
 					Spellcasting innate = null;
 					Spellcasting casting = null;
 					Map<String,String> passives = new HashMap<String,String>();
+					List<String> orderedPassives = new ArrayList<String>();
 					String otherNotes = null;
 					
 					String multiattack = null;
@@ -116,6 +119,7 @@ public class CreatureParser {
 												for(Subtype s:t.getSubtype(t)){
 													if(scan.hasNext(s.toString())){
 														subtype = s;
+														scan.next();
 													}
 												}
 											}
@@ -206,7 +210,6 @@ public class CreatureParser {
 							while(!scan.hasNext("/multipliers")) {
 								boolean found = false;
 								for(DamageMultiplier dm:DamageMultiplier.values()) {
-									damageMultipliers.put(dm, new ArrayList<DamageType>());
 									if(scan.hasNext(dm.toString())) {
 										found = true;
 										scan.next();
@@ -290,7 +293,7 @@ public class CreatureParser {
 									Pattern oldDelimiter = scan.delimiter();
 									scan.useDelimiter(",");
 									for(Stats s:Stats.values()){
-										if(scan.hasNext(s.toString())){
+										if(scan.hasNext(">"+s.toString())){
 											curAbility = s;
 											scan.next();
 										}
@@ -304,7 +307,7 @@ public class CreatureParser {
 									scan.useDelimiter(">|<");
 									curFile = scan.next().substring(1);//Skipping the comma
 									scan.useDelimiter(oldDelimiter);
-									File file = new File(curFile);
+									File file = new File("Resources/Spellbooks/Creatures/"+curFile);
 									Spellcasting curSpellBook = new Spellcasting(file, curAbility, curToHit, curDC, curLevel, spells);
 									if(scan.hasNext("/innatecasting")){innate = curSpellBook;
 									}else{casting = curSpellBook;}//Assumes one of the 2.
@@ -319,6 +322,7 @@ public class CreatureParser {
 									PDesc = scan.next().substring(1);//Skipping the comma
 									scan.useDelimiter(oldDelimiter);
 									passives.put(PName, PDesc);
+									orderedPassives.add(PName);
 								}
 								scan.next();
 							}
@@ -472,6 +476,7 @@ public class CreatureParser {
 						Spellcasting innate;
 						Spellcasting casting;
 						Map<String,String> passives;
+						List<String> orderedPassives;
 						String otherNotes;
 						String multiattack;
 						List<Attack> attacks;
@@ -488,7 +493,7 @@ public class CreatureParser {
 								Map<Skills, Integer> skills, Map<DamageMultiplier, List<DamageType>> damageMultipliers,
 								List<StatusCondition> conditionImmunities, Map<Senses, Integer> senses,
 								List<Languages> languages, List<Region> regions, int legendaryResistances,
-								Spellcasting innate, Spellcasting casting, Map<String, String> passives,
+								Spellcasting innate, Spellcasting casting, Map<String, String> passives, List<String> orderedPassives,
 								String otherNotes, String multiattack, List<Attack> attacks,
 								List<Effect> otherActions, Map<String, String> reactions, int legendaryActionCount,
 								List<LegendaryAction> legendaryActions, List<String> lairActions,
@@ -515,6 +520,7 @@ public class CreatureParser {
 							this.innate=innate;
 							this.casting=casting;
 							this.passives=passives;
+							this.orderedPassives=orderedPassives;
 							this.otherNotes=otherNotes;
 							this.multiattack=multiattack;
 							this.attacks=attacks;
@@ -548,6 +554,7 @@ public class CreatureParser {
 						@Override public Spellcasting getInnateCasting() {return innate;}
 						@Override public Spellcasting getSpellcasting() {return casting;}
 						@Override public Map<String, String> getPassives() {return passives;}
+						@Override public List<String> orderedPassives() {return orderedPassives;}
 						@Override public String otherNotes() {return otherNotes;}
 						@Override public String getMultiattack() {return multiattack;}
 						@Override public List<Attack> getAttacks() {return attacks;}
@@ -574,7 +581,7 @@ public class CreatureParser {
 							builtString += "Armour Class: "+getAC()+"\n";
 							builtString += "Hit Points: "+getHP()+"\n";
   							builtString += "Speed: "+getSpeeds().get(Speeds.WALK)+" ft";
-  							for(Speeds s:getSpeeds().keySet()){if(s!=Speeds.WALK && getSpeeds().get(s)>0){
+  							for(Speeds s:Speeds.values()){if(s!=Speeds.WALK && getSpeeds().containsKey(s) && getSpeeds().get(s)>0){
   								builtString += ", "+s.toNiceString()+" "+getSpeeds().get(s)+" ft";
   							}}
   							builtString += "\n";
@@ -591,24 +598,28 @@ public class CreatureParser {
   							if(!getSaves().isEmpty()){
   								builtString += "Saving Throws: ";
   								boolean first = true;
-  								for(Stats s:getSaves().keySet()){
-  									if(!first){builtString += ", ";}
-  									builtString += s.toString()+" ";
-  									if(getSaves().get(s)>=0){builtString += "+";}
-  									builtString += getSaves().get(s);
-  									first = false;
+  								for(Stats s:Stats.values()){
+  									if(getSaves().containsKey(s)){
+	  									if(!first){builtString += ", ";}
+	  									builtString += s.toString()+" ";
+	  									if(getSaves().get(s)>=0){builtString += "+";}
+	  									builtString += getSaves().get(s);
+	  									first = false;
+  									}
   								}
   								builtString += "\n";
   							}
   							if(!getSkills().isEmpty()){
   								builtString += "Skills: ";
   								boolean first = true;
-  								for(Skills s:getSkills().keySet()){
-  									if(!first){builtString += ", ";}
-  									builtString += s.toString()+" ";
-  									if(getSkills().get(s)>=0){builtString += "+";}
-  									builtString += getSkills().get(s);
-  									first = false;
+  								for(Skills s:Skills.values()){
+  									if(getSkills().containsKey(s)){
+	  									if(!first){builtString += ", ";}
+	  									builtString += s.toString()+" ";
+	  									if(getSkills().get(s)>=0){builtString += "+";}
+	  									builtString += getSkills().get(s);
+	  									first = false;
+  									}
   								}
   								builtString += "\n";
   							}
@@ -655,10 +666,12 @@ public class CreatureParser {
   							if(!getSenses().isEmpty()){
   								builtString += "Senses: ";
   								boolean first = true;
-  								for(Senses s:getSenses().keySet()){
-  									if(!first){builtString += ", ";}
-  									builtString += s.toNiceString()+" "+ getSenses().get(s)+" ft";
-  									first = false;
+  								for(Senses s:Senses.values()){
+  									if(getSenses().containsKey(s)){
+  										if(!first){builtString += ", ";}
+  										builtString += s.toNiceString()+" "+ getSenses().get(s)+" ft";
+  										first = false;
+  									}
   								}
   								if(!first){builtString += ", ";}
   								builtString += "Passive Perception "+(10+getSkillMod(Skills.PERCEPTION))+"\n";
@@ -686,7 +699,7 @@ public class CreatureParser {
   								builtString += "If this creature fails a saving throw, it can choose to succeed instead.\n";
   							}
   							if(getInnateCasting()!=null){
-  								builtString += "Innate Spellcasting.";
+  								builtString += "Innate Spellcasting. ";
   								builtString += "This creatures spellcasting ability is "+getInnateCasting().getAbility().toNiceString();
   								if(getInnateCasting().getDC()!=null || getInnateCasting().getToHit()!=null){
   									builtString += " (";
@@ -704,16 +717,16 @@ public class CreatureParser {
   								}
   								builtString += ". This creature can innately cast the following spells, ";
   								builtString += "requiring no material components:\n";
-  								builtString += getInnateCasting().getSpellList().toString()+"\n";
+  								builtString += getInnateCasting().getSpellList().toString()+"\n\n";
   							}
   							if(getSpellcasting()!=null){
-  								builtString += "Spellcasting.";
+  								builtString += "Spellcasting. ";
   								builtString += "This creature is a ";
   								if(getSpellcasting().getLevel()==1){builtString += "1st";}
   								else if(getSpellcasting().getLevel()==1){builtString += "2nd";}
   								else if(getSpellcasting().getLevel()==1){builtString += "3rd";}
   								else{builtString += getSpellcasting().getLevel()+"th";}
-  								builtString += "-level spellcaster.";
+  								builtString += "-level spellcaster. ";
   								builtString += "Its spellcasting ability is "+getSpellcasting().getAbility().toNiceString();
   								if(getSpellcasting().getDC()!=null || getSpellcasting().getToHit()!=null){
   									builtString += " (";
@@ -730,12 +743,18 @@ public class CreatureParser {
   									builtString += ")";
   								}
   								builtString += ". This creature has the following spells prepared:\n";
-  								builtString += getSpellcasting().getSpellList().toString()+"\n";
+  								builtString += getSpellcasting().getSpellList().toString()+"\n\n";
   							}
-  							for(String p:getPassives().keySet()){
+  							for(String p:orderedPassives()){
   								builtString += p+". "+getPassives().get(p)+"\n";
   							}
-  							if(getLegendaryResistances()>0 || getInnateCasting()!=null || getSpellcasting()!= null || !getPassives().isEmpty()){
+  							if(otherNotes().length()>0){
+  								if(getLegendaryResistances()>0 || getInnateCasting()!=null || getSpellcasting()!= null || !getPassives().isEmpty()){
+  									builtString += "\n";}
+  								builtString += otherNotes()+"\n";
+  							}
+  							if(getLegendaryResistances()>0 || getInnateCasting()!=null || getSpellcasting()!= null
+  									|| !getPassives().isEmpty() || otherNotes().length()>0){
   							builtString += "------------------------------------------------------------------------------------------\n";}
 
   							if(!getActions().isEmpty()){
@@ -764,6 +783,7 @@ public class CreatureParser {
   								builtString += "On initiative count 20 (losing initiative ties), ";
   								builtString += "this creature takes a lair action to cause one of the following effects; ";
   								builtString += "this creature can't use the same effect two rounds in a row:\n";
+  								for(String l:getLairActions()){builtString += l+"\n";}
   							builtString += "------------------------------------------------------------------------------------------\n";}
 
   							builtString += "Regions: ";
@@ -783,11 +803,12 @@ public class CreatureParser {
 							speed,stats,saves,skills,
 							damageMultipliers,conditionImmunities,
 							senses,languages,regions,
-							legendaryResistances,innate,casting,passives,otherNotes,
+							legendaryResistances,innate,casting,passives,orderedPassives,otherNotes,
 							multiattack,attacks,otherActions,reactions,
 							legendaryActionCount,legendaryActions,lairActions,
 							sources);
 					creatures.add(current);
+					//System.out.println(current.toString());
 				}
 				else {/*System.out.println(*/scan.next()/*)*/;}//Skip to next creature
 			}//where parsing ends

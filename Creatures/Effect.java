@@ -17,7 +17,7 @@ public class Effect {
 
 	public String toString(){
 		String builtString = name;
-		if(limit!=null){builtString += " ("+limit+")";}
+		if(limit!=null && !limit.equals("null")){builtString += " ("+limit+")";}
 		builtString+=". "+description;
 		return builtString;
 	}

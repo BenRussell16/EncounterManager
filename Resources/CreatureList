@@ -1,4 +1,55 @@
 <creature>
+	<name>Bandit Captain</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NG,CG,TN,CN,NE,CE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>65</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 16,CON 14,INT 14,WIS 11,CHA 14</stats>
+	<saves>STR 4,DEX 5,WIS 2</saves>
+	<skills>ATHLETICS 4,DECEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<other>Knows any two languages.</other>
+	<actions>
+		<multiattack>The captain makes three melee attacks: two with its scimitar and one with its dagger. Or the captain makes two ranged attacks with its daggers.</multiattack>
+		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
+		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Cult Fanatic</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LN,TN,CN,LE,NE,CE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>33</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 14,CON 12,INT 10,WIS 13,CHA 14</stats>
+	<skills>DECEPTION 4,PERSUASION 4,RELIGION 2</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,3,11,4,CultFanatic</spellcasting>
+		<passive>Dark Devotion,The fanatic has advantage on saving throws against being charmed or frightened.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The fanatic makes two melee attacks.</multiattack>
+		<attack>Dagger,4,20,60,One creature. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Iron Golem</name>
 	<size>LARGE</size>
 	<type>CONSTRUCT,false</type>
@@ -6,26 +57,27 @@
 	<cr>16.0</cr>
 	<ac>20</ac>
 	<hp>210</hp>
-	<speed>SWIM 0,BURROW 0,CLIMB 0,FLY 0,WALK 30</speed>
-	<stats>STR 24,DEX 9,INT 3,CHA 1,WIS 11,CON 20</stats>
+	<speed>WALK 30</speed>
+	<stats>STR 24,DEX 9,CON 20,INT 3,WIS 11,CHA 1</stats>
 	<multipliers>
+		<IMMUNITY>FIRE,POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
 	</multipliers>
 	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
 	<senses>DARKVISION 120</senses>
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Fire Absorption,Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.</passive>
-		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
-		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
 		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Fire Absorption,Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.</passive>
 	</passives>
 	<other>Adamantine weapons breach the damage immunity.
 Understands the languages of its creator but can't speak.</other>
 	<actions>
 		<multiattack>The golem makes two melee attacks.</multiattack>
-		<attack>Slam,13,5,null,null,One target. Hit: 20 (3d8+7) bludgeoning damage.</attack>
-		<attack>Sword,13,10,null,null,One target. Hit: 23 (3d10+7) slashing damage.</attack>
+		<attack>Slam,13,5,One target. Hit: 20 (3d8+7) bludgeoning damage.</attack>
+		<attack>Sword,13,10,One target. Hit: 23 (3d10+7) slashing damage.</attack>
 		<effect>Poison Breath,Recharge 6,The golem exhales poisonous gas in a 15ft cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
@@ -38,14 +90,14 @@ Understands the languages of its creator but can't speak.</other>
 	<cr>24.0</cr>
 	<ac>22</ac>
 	<hp>546</hp>
-	<speed>SWIM 0,BURROW 0,CLIMB 40,FLY 80,WALK 40</speed>
-	<stats>STR 30,DEX 10,INT 18,CHA 23,WIS 15,CON 29</stats>
-	<saves>DEX 7,CHA 13,WIS 9,CON 16</saves>
+	<speed>WALK 40,CLIMB 40,FLY 80</speed>
+	<stats>STR 30,DEX 10,CON 29,INT 18,WIS 15,CHA 23</stats>
+	<saves>DEX 7,CON 16,WIS 9,CHA 13</saves>
 	<skills>PERCEPTION 16,STEALTH 7</skills>
 	<multipliers>
 		<IMMUNITY>FIRE</IMMUNITY>
 	</multipliers>
-	<senses>DARKVISION 120,BLINDSIGHT 60</senses>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
 	<languages>COMMON,DRACONIC</languages>
 	<regions>MOUNTAIN</regions>
 	<passives>
@@ -54,9 +106,9 @@ Understands the languages of its creator but can't speak.</other>
 	<other></other>
 	<actions>
 		<multiattack>The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.</multiattack>
-		<attack>Bite,17,15,null,One target. Hit: 21 (2d10+10) piercing damage plus 14 (4d6) fire damage.</attack>
-		<attack>Claw,17,10,null,One target. Hit: 17 (2d6+10) slashing damage.</attack>
-		<attack>Tail,17,20,null,One target. Hit: 19 (2d8+10) bludgeoning damage.</attack>
+		<attack>Bite,17,15,One target. Hit: 21 (2d10+10) piercing damage plus 14 (4d6) fire damage.</attack>
+		<attack>Claw,17,10,One target. Hit: 17 (2d6+10) slashing damage.</attack>
+		<attack>Tail,17,20,One target. Hit: 19 (2d8+10) bludgeoning damage.</attack>
 		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120ft of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragons Frightful Presence for the next 24 hours.</effect>
 		<effect>Fire Breath,Recharge 5-6,The dragon exhales fire in a 90ft cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>

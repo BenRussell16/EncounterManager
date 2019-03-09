@@ -64,7 +64,7 @@ public class SpellBookInstance {
 				else if(i==2){builtString+="2nd";}
 				else if(i==3){builtString+="3rd";}
 				else{builtString+=i+"th";}
-				builtString+=" level ("+getSlots(i)+"slot";
+				builtString+=" level ("+getSlots(i)+" slot";
 				if(getSlots(i)>1){builtString+="s";}
 				builtString+="): ";
 				boolean first = true;

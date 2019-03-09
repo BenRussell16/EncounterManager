@@ -1,0 +1,9 @@
+<spellbook>
+	<name>CultFanatic</name>
+	<slot>
+		<known>Light,Sacred flame,Thaumaturgy,Command,Inflict wounds,Shield of faith,Hold person,Spiritual weapon</known>
+		<0>Light,Sacred flame,Thaumaturgy</0>
+		<1>4,Command,Inflict wounds,Shield of faith</1>
+		<2>3,Hold person,Spiritual weapon</2>
+	</slot>
+</spellbook>

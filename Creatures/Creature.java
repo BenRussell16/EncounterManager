@@ -13,7 +13,7 @@ public interface Creature {
 			Map<Speeds,Integer> speed, Map<Stats,Integer> stats, Map<Stats,Integer> saves, Map<Skills,Integer> skills,
 			Map<DamageMultiplier, List<DamageType>> damageMultipliers, List<StatusCondition> conditionImmunities,
 			Map<Senses,Integer> senses, List<Languages> languages, List<Region> regions,
-			int legendaryResistances, Spellcasting innate, Spellcasting casting, Map<String,String> passives, String otherNotes,
+			int legendaryResistances, Spellcasting innate, Spellcasting casting, Map<String,String> passives, List<String> passiveOrder, String otherNotes,
 			String multiattack, List<Attack> attacks, List<Effect> otherActions, Map<String,String> reactions,
 			int legendaryActionCount, List<LegendaryAction> legendaryActions, List<String> lairActions,
 			List<Source> sources);
@@ -124,6 +124,7 @@ public interface Creature {
 	public Spellcasting getInnateCasting();
 	public Spellcasting getSpellcasting();
 	public Map<String,String> getPassives();
+		public List<String> orderedPassives();
 	public String otherNotes();
 	
 	public String getMultiattack();
@@ -167,15 +168,17 @@ public interface Creature {
 		builtString += "\t<hp>"+getHP()+"</hp>\n";
 		builtString += "\t<speed>";
 			first = true;
-			for(Speeds s:getSpeeds().keySet()){
-				if(!first){builtString+=",";}
-				builtString+=s.toString()+" "+getSpeeds().get(s);
-				first = false;
+			for(Speeds s:Speeds.values()){
+				if(getSpeeds().containsKey(s) && getSpeeds().get(s)>0){
+					if(!first){builtString+=",";}
+					builtString+=s.toString()+" "+getSpeeds().get(s);
+					first = false;
+				}
 			}
 			builtString += "</speed>\n";
 		builtString += "\t<stats>";
 			first = true;
-			for(Stats s:getStats().keySet()){
+			for(Stats s:Stats.values()){
 				if(!first){builtString+=",";}
 				builtString+=s.toString()+" "+getStats().get(s);
 				first = false;
@@ -183,62 +186,76 @@ public interface Creature {
 			builtString += "</stats>\n";
 		if(!getSaves().isEmpty()){builtString += "\t<saves>";
 			first = true;
-			for(Stats s:getSaves().keySet()){
-				if(!first){builtString+=",";}
-				builtString+=s.toString()+" "+getSaves().get(s);
-				first = false;
+			for(Stats s:Stats.values()){
+				if(getSaves().containsKey(s)){
+					if(!first){builtString+=",";}
+					builtString+=s.toString()+" "+getSaves().get(s);
+					first = false;
+				}
 			}
 			builtString += "</saves>\n";}
 		if(!getSkills().isEmpty()){builtString += "\t<skills>";
 			first = true;
-			for(Skills s:getSkills().keySet()){
-				if(!first){builtString+=",";}
-				builtString+=s.toString()+" "+getSkills().get(s);
-				first = false;
+			for(Skills s:Skills.values()){
+				if(getSkills().containsKey(s)){
+					if(!first){builtString+=",";}
+					builtString+=s.toString()+" "+getSkills().get(s);
+					first = false;
+				}
 			}
 			builtString += "</skills>\n";}
 		if(!getMultipliers().isEmpty()){builtString += "\t<multipliers>\n";
-			for(DamageMultiplier dm:getMultipliers().keySet()){
+			for(DamageMultiplier dm:DamageMultiplier.values()){
 				if(!getMultipliers().get(dm).isEmpty()){builtString += "\t\t<"+dm.toString()+">";
 				first = true;
-				for(DamageType d:getMultipliers().get(dm)){
-					if(!first){builtString+=",";}
-					builtString+=d.toString();
-					first = false;
+				for(DamageType d:DamageType.values()){
+					if(getMultipliers().get(dm).contains(d)){
+						if(!first){builtString+=",";}
+						builtString+=d.toString();
+						first = false;
+					}
 				}
 				builtString += "</"+dm.toString()+">\n";}
 			}
 			builtString += "\t</multipliers>\n";}
 		if(!getConditionImmunities().isEmpty()){builtString += "\t<conditions>";
 			first = true;
-			for(StatusCondition s:getConditionImmunities()){
-				if(!first){builtString+=",";}
-				builtString+=s.toString();
-				first = false;
+			for(StatusCondition s:StatusCondition.values()){
+				if(getConditionImmunities().contains(s)){
+					if(!first){builtString+=",";}
+					builtString+=s.toString();
+					first = false;
+				}
 			}
 			builtString += "</conditions>\n";}
 		if(!getSenses().isEmpty()){builtString += "\t<senses>";
 			first = true;
-			for(Senses s:getSenses().keySet()){
-				if(!first){builtString+=",";}
-				builtString+=s.toString()+" "+getSenses().get(s);
-				first = false;
+			for(Senses s:Senses.values()){
+				if(getSenses().containsKey(s)){
+					if(!first){builtString+=",";}
+					builtString+=s.toString()+" "+getSenses().get(s);
+					first = false;
+				}
 			}
 			builtString += "</senses>\n";}
 		if(!getLanguages().isEmpty()){builtString += "\t<languages>";
 			first = true;
-			for(Languages l:getLanguages()){
-				if(!first){builtString+=",";}
-				builtString+=l.toString();
-				first = false;
+			for(Languages l:Languages.values()){
+				if(getLanguages().contains(l)){
+					if(!first){builtString+=",";}
+					builtString+=l.toString();
+					first = false;
+				}
 			}
 			builtString += "</languages>\n";}
 		builtString += "\t<regions>";
 			first = true;
-			for(Region r:getRegions()){
-				if(!first){builtString+=",";}
-				builtString+=r.toString();
-				first = false;
+			for(Region r:Region.values()){
+				if(getRegions().contains(r)){
+					if(!first){builtString+=",";}
+					builtString+=r.toString();
+					first = false;
+				}
 			}
 			builtString += "</regions>\n";
 		if(getLegendaryResistances()>0 || getInnateCasting()!=null || getSpellcasting()!=null || !getPassives().isEmpty()){
@@ -249,16 +266,16 @@ public interface Creature {
 					builtString += getInnateCasting().getToHit().toString()+",";
 					builtString += getInnateCasting().getDC().toString()+",";
 					builtString += getInnateCasting().getLevel().toString()+",";
-					builtString += getInnateCasting().getFile().getAbsolutePath();
+					builtString += getInnateCasting().getFile().getName();
 					builtString += "</innatecasting>\n";}
 				if(getSpellcasting()!=null){builtString += "\t\t<spellcasting>";
 					builtString += getSpellcasting().getAbility().toString()+",";
 					builtString += getSpellcasting().getToHit().toString()+",";
 					builtString += getSpellcasting().getDC().toString()+",";
 					builtString += getSpellcasting().getLevel().toString()+",";
-					builtString += getSpellcasting().getFile().getAbsolutePath();
+					builtString += getSpellcasting().getFile().getName();
 					builtString += "</spellcasting>\n";}
-				for(String p:getPassives().keySet()){
+				for(String p:orderedPassives()){
 					builtString += "\t\t<passive>"+p+","+getPassives().get(p)+"</passive>\n";
 				}
 				builtString += "\t</passives>\n";}
@@ -266,8 +283,9 @@ public interface Creature {
 		builtString += "\t<actions>\n";
 			if(getMultiattack()!=null){builtString += "\t\t<multiattack>"+getMultiattack()+"</multiattack>\n";}
 			if(!getAttacks().isEmpty()){for(Attack a:getAttacks()){
-				builtString += "\t\t<attack>"+a.getName()+","+a.getToHit()
-					+","+a.getShortRange()+","+a.getLongRange()+","+a.getDescription()+"</attack>\n";
+				builtString += "\t\t<attack>"+a.getName()+","+a.getToHit()+","+a.getShortRange();
+				if(a.getLongRange()!=null){builtString += ","+a.getLongRange();}
+				builtString += ","+a.getDescription()+"</attack>\n";
 			}}
 			if(!getEffects().isEmpty()){for(Effect e:getEffects()){
 				builtString += "\t\t<effect>"+e.getName()+","+e.getLimit()+","+e.getDescription()+"</effect>\n";
@@ -303,7 +321,10 @@ public interface Creature {
 	
 	
 	
-	public static int scoreToMod(int score) {return (score-10)/2;}
+	public static int scoreToMod(int score) {
+		if(score>=10){return (score-10)/2;}
+		else{return (score-11)/2;}
+	}
 	
 	
 	
@@ -348,7 +369,7 @@ public interface Creature {
 					+ name().toLowerCase().substring(1);}
 		}
 		private enum humanoidSubtype implements Subtype{
-			ANY,HUMAN,ELF,ORC;//TODO humanoid subtypes
+			ANYRACE,HUMAN,ELF,ORC;//TODO humanoid subtypes
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
@@ -365,7 +386,7 @@ public interface Creature {
 	}
 	
 	public enum Speeds{
-		WALK,FLY,SWIM,CLIMB,BURROW;
+		WALK,BURROW,CLIMB,FLY,SWIM;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
@@ -394,7 +415,7 @@ public interface Creature {
 	}
 	
 	public enum DamageMultiplier{
-		NONE(1),RESISTANCE(0.5),IMMUNITY(0),VULNERABILITY(2),HEALING(-1);
+		NONE(1),VULNERABILITY(2),RESISTANCE(0.5),IMMUNITY(0),HEALING(-1);
 		private double multiplier;
 		private DamageMultiplier(double multiplier) {this.multiplier = multiplier;}
 		public double getMult() {return multiplier;}
@@ -403,9 +424,8 @@ public interface Creature {
 	}
 
 	public enum DamageType{
-		BLUDGEONING,PIERCING,SLASHING,NONMAGICALBASIC,
-		ACID,COLD,FIRE,LIGHTNING,POISON,PSYCHIC,THUNDER,
-		FORCE,NECROTIC,RADIANT;
+		ACID,COLD,FIRE,LIGHTNING,POISON,PSYCHIC,THUNDER,FORCE,NECROTIC,RADIANT,
+		BLUDGEONING,PIERCING,SLASHING,NONMAGICALBASIC;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
@@ -424,7 +444,7 @@ public interface Creature {
 	
 	
 	public enum Senses{
-		DARKVISION,BLINDSIGHT,TREMORSENSE,TRUESIGHT;
+		BLINDSIGHT,DARKVISION,TREMORSENSE,TRUESIGHT;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
