@@ -60,6 +60,7 @@ public class CreatureBuilder {
 	private GridPane creatureList;
 		private List<Label> names;
 		private List<Label> crs;
+	
 	private GridPane curCreature;
   		private TextField nameField;
   		private ToggleGroup sizePicker = new ToggleGroup();
@@ -144,9 +145,6 @@ public class CreatureBuilder {
   							Creature slot;
   							boolean sorted = false;
   							while(!sorted){
-  								//TODO - Decide a sorting method
-  								
-  								//TODO
   								sorted = true;
   								for(int i=creatures.size()-1; i>0; i--){
   									if(creatures.get(i).getCR()<creatures.get(i-1).getCR()
@@ -176,9 +174,7 @@ public class CreatureBuilder {
   				
   					Label label = new Label("\t\t");topBar.add(label, 1, 0);
   					//Set up filter inputs
-  					TextField nameFilter = new TextField();			//TODO - label for start of filter fields
-
-  					//TODO - more filters.
+  					TextField nameFilter = new TextField();
 
   					ChoiceBox<Double> crFilter = new ChoiceBox<Double>(FXCollections.observableArrayList(
   							null,0.0,0.125,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,
@@ -188,7 +184,7 @@ public class CreatureBuilder {
   					crFilter.setConverter(new StringConverter<Double>() {
   						@Override public Double fromString(String string) {return null;}
   						@Override public String toString(Double object) {
-  							if(object==null){return null;}
+  							if(object==null){return "CR";}
   							else if(object == 0.125){return "1/8";}
   							else if(object == 0.25){return "1/4";}
   							else if(object == 0.5){return "1/2";}
@@ -196,7 +192,23 @@ public class CreatureBuilder {
   						}
   					});
   					crFilter.setValue(null);
-  					
+  					ChoiceBox<Double> upperCRFilter = new ChoiceBox<Double>(FXCollections.observableArrayList(
+  							null,0.0,0.125,0.25,0.5,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,
+  							10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,
+  							20.0,21.0,22.0,23.0,24.0,25.0,26.0,27.0,28.0,29.0,30.0
+  							));
+  					upperCRFilter.setConverter(new StringConverter<Double>() {
+  						@Override public Double fromString(String string) {return null;}
+  						@Override public String toString(Double object) {
+  							if(object==null){return "CR";}
+  							else if(object == 0.125){return "1/8";}
+  							else if(object == 0.25){return "1/4";}
+  							else if(object == 0.5){return "1/2";}
+  							else{return ((Integer)object.intValue()).toString();}
+  						}
+  					});
+  					upperCRFilter.setValue(null);
+
   					ChoiceBox<Type> typeFilter = new ChoiceBox<Type>(FXCollections.observableArrayList());
   					typeFilter.getItems().add(null);
   					typeFilter.getItems().addAll(Type.values());
@@ -206,7 +218,66 @@ public class CreatureBuilder {
   						@Override public String toString(Type type) {
   							if(type != null){
   								return type.toNiceString();}
-  							return null;
+  							return "Type";
+  						}});
+  					ChoiceBox<String> subtypeFilter = new ChoiceBox<String>(FXCollections.observableArrayList());
+  					subtypeFilter.getItems().add(null);
+  					subtypeFilter.getItems().add("Shapechanger");
+  					subtypeFilter.setValue(null);
+  					subtypeFilter.setConverter(new StringConverter<String>(){
+  						@Override public String fromString(String arg0) {return null;}
+  						@Override public String toString(String string) {
+  							if(string != null){
+  								return string;}
+  							return "Subtype";
+  						}});
+  					
+  					ChoiceBox<Boolean> legResfilter = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+  					legResfilter.getItems().addAll(null,true,false);
+  					legResfilter.setValue(null);
+  					legResfilter.setConverter(new StringConverter<Boolean>(){
+  						@Override public Boolean fromString(String arg0) {return null;}
+  						@Override public String toString(Boolean toggle) {
+  							if(toggle != null){
+  								if(toggle){return "Yes";}
+  								else{return "No";}}
+  							return "LegRes";
+  						}});
+  					
+  					ChoiceBox<Boolean> legActfilter = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+  					legActfilter.getItems().addAll(null,true,false);
+  					legActfilter.setValue(null);
+  					legActfilter.setConverter(new StringConverter<Boolean>(){
+  						@Override public Boolean fromString(String arg0) {return null;}
+  						@Override public String toString(Boolean toggle) {
+  							if(toggle != null){
+  								if(toggle){return "Yes";}
+  								else{return "No";}}
+  							return "LegAct";
+  						}});
+  					
+  					ChoiceBox<Boolean> lairfilter = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+  					lairfilter.getItems().addAll(null,true,false);
+  					lairfilter.setValue(null);
+  					lairfilter.setConverter(new StringConverter<Boolean>(){
+  						@Override public Boolean fromString(String arg0) {return null;}
+  						@Override public String toString(Boolean toggle) {
+  							if(toggle != null){
+  								if(toggle){return "Yes";}
+  								else{return "No";}}
+  							return "Lair";
+  						}});
+  					
+  					ChoiceBox<Boolean> castfilter = new ChoiceBox<Boolean>(FXCollections.observableArrayList());
+  					castfilter.getItems().addAll(null,true,false);
+  					castfilter.setValue(null);
+  					castfilter.setConverter(new StringConverter<Boolean>(){
+  						@Override public Boolean fromString(String arg0) {return null;}
+  						@Override public String toString(Boolean toggle) {
+  							if(toggle != null){
+  								if(toggle){return "Yes";}
+  								else{return "No";}}
+  							return "Spellcasting";
   						}});
   					
   					ChoiceBox<Size> sizefilter = new ChoiceBox<Size>(FXCollections.observableArrayList());
@@ -214,12 +285,35 @@ public class CreatureBuilder {
   					sizefilter.getItems().addAll(Size.values());
   					sizefilter.setValue(null);
   					sizefilter.setConverter(new StringConverter<Size>(){
-  						@Override public Size fromString(String arg0) {
-  							return null;}
+  						@Override public Size fromString(String arg0) {return null;}
   						@Override public String toString(Size size) {
   							if(size != null){
   								return size.toNiceString();}
-  							return null;
+  							return "Size";
+  						}});
+  					
+  					ChoiceBox<Speeds> speedFilter = new ChoiceBox<Speeds>(FXCollections.observableArrayList());
+  					speedFilter.getItems().add(null);
+  					speedFilter.getItems().addAll(Speeds.values());
+  					speedFilter.setValue(null);
+  					speedFilter.setConverter(new StringConverter<Speeds>(){
+  						@Override public Speeds fromString(String arg0) {return null;}
+  						@Override public String toString(Speeds speed) {
+  							if(speed != null){
+  								return speed.toNiceString();}
+  							return "Speed";
+  						}});
+  					
+  					ChoiceBox<DamageType> multiplierFilter = new ChoiceBox<DamageType>(FXCollections.observableArrayList());
+  					multiplierFilter.getItems().add(null);
+  					multiplierFilter.getItems().addAll(DamageType.values());
+  					multiplierFilter.setValue(null);
+  					multiplierFilter.setConverter(new StringConverter<DamageType>(){
+  						@Override public DamageType fromString(String arg0) {return null;}
+  						@Override public String toString(DamageType damage) {
+  							if(damage != null){
+  								return damage.toNiceString();}
+  							return "Resistance";
   						}});
   					
   					ChoiceBox<Alignment> alignFilter = new ChoiceBox<Alignment>(FXCollections.observableArrayList());
@@ -231,7 +325,31 @@ public class CreatureBuilder {
   						@Override public String toString(Alignment align) {
   							if(align != null){
   								return align.toNiceString();}
-  							return null;
+  							return "Alignment";
+  						}});
+  					
+  					ChoiceBox<Senses> senseFilter = new ChoiceBox<Senses>(FXCollections.observableArrayList());
+  					senseFilter.getItems().add(null);
+  					senseFilter.getItems().addAll(Senses.values());
+  					senseFilter.setValue(null);
+  					senseFilter.setConverter(new StringConverter<Senses>(){
+  						@Override public Senses fromString(String arg0) {return null;}
+  						@Override public String toString(Senses sense) {
+  							if(sense != null){
+  								return sense.toNiceString();}
+  							return "Sense";
+  						}});
+  					
+  					ChoiceBox<Region> regionFilter = new ChoiceBox<Region>(FXCollections.observableArrayList());
+  					regionFilter.getItems().add(null);
+  					regionFilter.getItems().addAll(Region.values());
+  					regionFilter.setValue(null);
+  					regionFilter.setConverter(new StringConverter<Region>(){
+  						@Override public Region fromString(String arg0) {return null;}
+  						@Override public String toString(Region region) {
+  							if(region != null){
+  								return region.toNiceString();}
+  							return "Region";
   						}});
   					
   					ChoiceBox<Source> sourceFilter = new ChoiceBox<Source>(FXCollections.observableArrayList());
@@ -243,7 +361,7 @@ public class CreatureBuilder {
   						@Override public String toString(Source source) {
   							if(source != null){
   								return source.toNiceString();}
-  							return null;
+  							return "Source";
   						}});
   					
   					//Define the filtering action					//TODO - label for applying the filter
@@ -258,12 +376,20 @@ public class CreatureBuilder {
   							}
   							if(query.isEmpty()) {query.addAll(creatures);}
 
-  							if(crFilter.getValue()!=null) {//cr filter
+  							if(crFilter.getValue()!=null || upperCRFilter.getValue()!=null) {//cr filter
+  								//upperCRFilter
   								List<Creature> toRemove = new ArrayList<Creature>();
   								for(Creature c:query) {
-  									if(!(c.getCR()==crFilter.getValue())) {
-  										toRemove.add(c);
-  									}
+  									if(crFilter.getValue()==null){//only upper
+	  									if(!(c.getCR()==upperCRFilter.getValue())) {
+	  										toRemove.add(c);}
+  									}else if(upperCRFilter.getValue()==null){//only lower
+	  									if(!(c.getCR()==crFilter.getValue())) {
+	  										toRemove.add(c);}
+	  								}else{//range
+	  									if(!(c.getCR()>=crFilter.getValue() && c.getCR()<=upperCRFilter.getValue())){
+	  										toRemove.add(c);}
+	  								}
   								}
   								for(Creature c:toRemove) {query.remove(c);}
   							}
@@ -271,6 +397,51 @@ public class CreatureBuilder {
   								List<Creature> toRemove = new ArrayList<Creature>();
   								for(Creature c:query) {
   									if(c.getType()!=typeFilter.getValue()) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(subtypeFilter.getValue()!=null) {//subtype filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(subtypeFilter.getValue()=="Shapechanger" && !c.isShapechanger()){toRemove.add(c);}
+  									if(c.getSubtype()==null || !c.getSubtype().toNiceString().equals(subtypeFilter.getValue())) {
+  										toRemove.add(c);}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(legResfilter.getValue()!=null) {//legres filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!((c.getLegendaryResistances()>0)==legResfilter.getValue())) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(legActfilter.getValue()!=null) {//legact filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!((c.getLegendaryActionCount()>0)==legActfilter.getValue())) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(lairfilter.getValue()!=null) {//lair filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!(c.hasLair()==lairfilter.getValue())) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(castfilter.getValue()!=null) {//casting filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!((c.getSpellcasting()!=null)==castfilter.getValue())) {
   										toRemove.add(c);
   									}
   								}
@@ -285,10 +456,46 @@ public class CreatureBuilder {
   								}
   								for(Creature c:toRemove) {query.remove(c);}
   							}
+  							if(speedFilter.getValue()!=null) {//speed filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!(c.hasSpeed(speedFilter.getValue()))) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(multiplierFilter.getValue()!=null) {//resistance filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!(c.getMultiplier(multiplierFilter.getValue())<1)) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
   							if(alignFilter.getValue()!=null) {//alignment filter
   								List<Creature> toRemove = new ArrayList<Creature>();
   								for(Creature c:query) {
   									if(!(c.isAlign(alignFilter.getValue()))) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(senseFilter.getValue()!=null) {//sense filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!c.hasSense(senseFilter.getValue())) {
+  										toRemove.add(c);
+  									}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
+  							if(regionFilter.getValue()!=null) {//region filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(!c.fromRegion(regionFilter.getValue())) {
   										toRemove.add(c);
   									}
   								}
@@ -307,20 +514,32 @@ public class CreatureBuilder {
   						}
   					};
   					//Add filter inputs to panel, and set them up to apply when used.
-  					nameFilter.setOnAction(filterQuery);
-  					topBar.add(nameFilter, 2, 0);
-  					crFilter.setOnAction(filterQuery);
-  					topBar.add(crFilter, 3, 0);
-  					typeFilter.setOnAction(filterQuery);
-  					topBar.add(typeFilter, 4, 0);
-  					sizefilter.setOnAction(filterQuery);
-  					topBar.add(sizefilter, 5, 0);
-  					alignFilter.setOnAction(filterQuery);
-  					topBar.add(alignFilter, 6, 0);  					
-  					sourceFilter.setOnAction(filterQuery);
-  					topBar.add(sourceFilter, 13, 0);
+  																	//TODO - Label for adding filters.
+  					nameFilter.setOnAction(filterQuery);			topBar.add(nameFilter, 2, 0);
+  					crFilter.setOnAction(filterQuery);				topBar.add(crFilter, 3, 0);
+  					upperCRFilter.setOnAction(filterQuery);			topBar.add(upperCRFilter, 4, 0);
+  					label = new Label("\t");						topBar.add(label, 5, 0);
+  					typeFilter.setOnAction(filterQuery);			topBar.add(typeFilter, 6, 0);
+  					subtypeFilter.setOnAction(filterQuery);			topBar.add(subtypeFilter, 7, 0);
+  					label = new Label("\t");						topBar.add(label, 8, 0);
+  					legResfilter.setOnAction(filterQuery);			topBar.add(legResfilter, 9, 0);
+  					legActfilter.setOnAction(filterQuery);			topBar.add(legActfilter, 10, 0);
+  					lairfilter.setOnAction(filterQuery);			topBar.add(lairfilter, 11, 0);
+  					castfilter.setOnAction(filterQuery);			topBar.add(castfilter, 12, 0);
+  					//Start the 2nd row
+  					GridPane secondBar = new GridPane();
+  					label = new Label("\t\t\t\t\t\t");				secondBar.add(label, 0, 0);
+  					sizefilter.setOnAction(filterQuery);			secondBar.add(sizefilter, 1, 0);
+  					speedFilter.setOnAction(filterQuery);			secondBar.add(speedFilter, 2, 0);
+  					multiplierFilter.setOnAction(filterQuery);		secondBar.add(multiplierFilter, 3, 0);
+  					alignFilter.setOnAction(filterQuery);			secondBar.add(alignFilter, 4, 0);
+  					senseFilter.setOnAction(filterQuery);			secondBar.add(senseFilter, 5, 0);
+  					regionFilter.setOnAction(filterQuery);			secondBar.add(regionFilter, 6, 0);
+  					label = new Label("\t");						secondBar.add(label, 7, 0);
+  					sourceFilter.setOnAction(filterQuery);			secondBar.add(sourceFilter, 8, 0);
   					
   				grid.add(topBar, 0, 0, 2, 1);
+  				grid.add(secondBar, 0, 1, 2, 1);
   				
 
   				
@@ -364,7 +583,7 @@ public class CreatureBuilder {
   		      		creatureList.add(label, 1, i+1);
   		      	}
   		      	sp.setContent(creatureList);
-  		      	grid.add(sp,0,1);
+  		      	grid.add(sp,0,2);
   		      	
   		      	
   		      	
@@ -836,8 +1055,6 @@ public class CreatureBuilder {
 	  		    	if(j==2 && i>=8){j++; i=0;}	//Fiendish, elemental, and universal languages
 	  		    								//Other languages
 	  		    	//TODO - maybe drop down the misc, one off languages.
-	  		    	
-	  		    	//TODO
 	  		    }
 	  		    curCreature.add(languagePane, 1, layer);
 	  		    layer++;
@@ -1442,7 +1659,7 @@ public class CreatureBuilder {
   				add.setOnAction(new EventHandler<ActionEvent>() {
   					@Override
   					public void handle(ActionEvent event) {
-						Creature newcreature = new Creature() {					//TODO - label for creature creation start.
+						Creature newcreature = new Creature() {
 							String name;
 							Size size;
 							Type type;
@@ -1928,7 +2145,7 @@ public class CreatureBuilder {
 //  		    grid.add(curCreature, 1, 1);
   		      	sp = new ScrollPane();//allow scrolling the form for smaller screens
   		      	sp.setContent(curCreature);
-  		      	grid.add(sp,1,1);
+  		      	grid.add(sp,1,2);
 
   		      	
   		      	
