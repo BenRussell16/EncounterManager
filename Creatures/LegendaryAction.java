@@ -1,21 +1,24 @@
 package Creatures;
 
-public class LegendaryAction extends Action {
+public class LegendaryAction {
+	private final String name;
 	private final int cost;
-	private final Action action;
+	private final String description;
 
-	public LegendaryAction(Action action, int cost) {
-		super(action.getName(), action.getRecharge(), action.getUses(), action.getTime());
-		this.action = action;
+	public LegendaryAction(String name, int cost, String description) {
+		this.name = name;
 		this.cost = cost;
+		this.description = description;
 	}
 
-	public int getCost() {return cost;}
-	public Action getAction() {return action;}
-	@Override public String toString() {
-		String s = "";
-		if(cost>1) {s+="Costs "+cost+" actions: ";}
-		s+=action.toString();
-		return s;
+	public String getName(){return name;}
+	public int getCost(){return cost;}
+	public String getDescription(){return description;}
+
+	public String toString(){
+		String builtString = name;
+		if(cost>1){builtString += " (Costs "+cost+" Actions)";}
+		builtString+=". "+description;
+		return builtString;
 	}
 }

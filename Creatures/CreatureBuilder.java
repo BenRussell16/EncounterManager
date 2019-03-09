@@ -20,6 +20,7 @@ import Creatures.Creature.Speeds;
 import Creatures.Creature.Stats;
 import Creatures.Creature.StatusCondition;
 import Creatures.Creature.Type;
+import Creatures.Creature.Type.Subtype;
 import Resources.Source;
 import Spells.Spell;
 import Spells.SpellBook;
@@ -91,6 +92,7 @@ public class CreatureBuilder {
 			private TextField innateMod, innateDC, castMod, castDC;
 			private ChoiceBox<Integer> innateLevel, castLevel;
 		private Map<RadioButton, String> standardPassives;
+			private List<RadioButton> orderedStandardPassives;
 		private Map<TextField, TextArea> passiveInputs;
 			private int passiveCount = 0;
 		private TextArea otherInfo;
@@ -161,7 +163,7 @@ public class CreatureBuilder {
   							String xml = "";
   							for(int i=0; i<creatures.size(); i++){xml+=creatures.get(i).toXML();}
   							//Save the new creatures.
-  							try (PrintWriter out = new PrintWriter(new File("EncounterManager/Resources/CreatureList"))) {
+  							try (PrintWriter out = new PrintWriter(new File("Resources/CreatureList"))) {
   							    out.print(xml);
   							    System.out.println("Creature saving complete");
   							} catch (FileNotFoundException e) {
@@ -268,7 +270,7 @@ public class CreatureBuilder {
   							if(typeFilter.getValue()!=null) {//type filter
   								List<Creature> toRemove = new ArrayList<Creature>();
   								for(Creature c:query) {
-  									if(!c.isType(typeFilter.getValue())) {
+  									if(c.getType()!=typeFilter.getValue()) {
   										toRemove.add(c);
   									}
   								}
@@ -286,7 +288,7 @@ public class CreatureBuilder {
   							if(alignFilter.getValue()!=null) {//alignment filter
   								List<Creature> toRemove = new ArrayList<Creature>();
   								for(Creature c:query) {
-  									if(!(c.getAlign()==alignFilter.getValue())) {
+  									if(!(c.isAlign(alignFilter.getValue()))) {
   										toRemove.add(c);
   									}
   								}
@@ -342,6 +344,8 @@ public class CreatureBuilder {
   		      	for(int i=0; i<creatures.size(); i++) {
   		      		label = new Label(" "+creatures.get(i).getName());
   		      		Tooltip toolTip = new Tooltip(creatures.get(i).toString());
+  		      		toolTip.setWrapText(true);
+  		      		toolTip.setMaxWidth(400);
   		      		label.setTooltip(toolTip);
   		      		names.add(label);
   		      		creatureList.add(label, 0, i+1);
@@ -443,7 +447,7 @@ public class CreatureBuilder {
 		      			subtypePanel.add(rb, i, 0);
 		      			rb.setVisible(false);
 		      			i++;
-  		      			for(Type.subType s:t.getSubtype(t)){
+  		      			for(Subtype s:t.getSubtype(t)){
   		      				rb = new RadioButton(s.toNiceString()+"\t");
   			      			rb.setOnAction(new EventHandler<ActionEvent>() {
   								@Override public void handle(ActionEvent event) {//Deselect other options. If deseleting then set none to on.
@@ -1039,6 +1043,7 @@ public class CreatureBuilder {
 		    			label = new Label("Standards");
 		    			passiveSet.add(label, 0, passiveLayer);
 			    		standardPassives = new HashMap<RadioButton, String>();
+			    		orderedStandardPassives = new ArrayList<RadioButton>();
 			    		GridPane standardPassivePane = new GridPane();
 			    		standardPassivePane.setHgap(5);
 		    				i=0; j=0;//Have a new line between groups
@@ -1053,6 +1058,7 @@ public class CreatureBuilder {
 						      		toolTip.setMaxWidth(600);
 						      		rb.setTooltip(toolTip);
 				    			standardPassives.put(rb, passive[1]);
+				    			orderedStandardPassives.add(rb);
 				    			standardPassivePane.add(rb, i%4, j+i/4);
 				    			i++;
 			    			}
@@ -1090,6 +1096,7 @@ public class CreatureBuilder {
 						      		toolTip.setMaxWidth(600);
 						      		rb.setTooltip(toolTip);
 				    			standardPassives.put(rb, passive[1]);
+				    			orderedStandardPassives.add(rb);
 				    			standardPassivePane.add(rb, i%4, j+i/4);
 				    			i++;
 			    			}
@@ -1112,6 +1119,7 @@ public class CreatureBuilder {
 						      		toolTip.setMaxWidth(600);
 						      		rb.setTooltip(toolTip);
 				    			standardPassives.put(rb, passive[1]);
+				    			orderedStandardPassives.add(rb);
 				    			standardPassivePane.add(rb, i%4, j+i/4);
 				    			i++;
 			    			}
@@ -1434,54 +1442,460 @@ public class CreatureBuilder {
   				add.setOnAction(new EventHandler<ActionEvent>() {
   					@Override
   					public void handle(ActionEvent event) {
-//  						Spell newSpell = new Spell() {
-//  							String name="";
-//  							int level=0;
-//  							School school = null;
-//  							List<Classes> classes = null;
-//  							List<Source> sources = null;
-//  							
-//  							public void constructor(String name, int level, School school, List<Classes> classes, List<Source> sources){
-//  								this.name = name;
-//  								this.level = level;
-//  								this.school = school;
-//  								this.classes = classes;
-//  								this.sources = sources;
-//  							}
-//
-//  							@Override public String getName() {return name;}
-//  							@Override public int getLevel() {return level;}
-//  							@Override public School getSchool() {return school;}
-//  							@Override public List<Classes> getClasses() {return classes;}
-//  							@Override public boolean fromClass(Classes curClass) {return classes.contains(curClass);}
-//  							@Override public boolean fromSource(Source source) {return sources.contains(source);}
-//  							@Override public String toString() {return name;}
-//  						};
-//  						
-//  						List<Classes> classList = new ArrayList<Classes>();
-//  							if(c1.isSelected()){classList.add(Classes.BARD);}
-//  							if(c2.isSelected()){classList.add(Classes.CLERIC);}
-//  							if(c3.isSelected()){classList.add(Classes.DRUID);}
-//  							if(c4.isSelected()){classList.add(Classes.PALADIN);}
-//  							if(c5.isSelected()){classList.add(Classes.RANGER);}
-//  							if(c6.isSelected()){classList.add(Classes.SORCERER);}
-//  							if(c7.isSelected()){classList.add(Classes.WARLOCK);}
-//  							if(c8.isSelected()){classList.add(Classes.WIZARD);}
-//  						List<Source> sourcesList = new ArrayList<Source>();
-//  							sourcesList.add(sourceSelect.getValue());
-//  						newSpell.constructor(nameField.getText(), levelPicker.getValue(), schoolSelect.getValue(),
-//  								classList, sourcesList);
-//  						
-//  						System.out.println("Adding creature "+newSpell.getName());
-//  			      			Label label = new Label(" "+newSpell.getName());
-//  			      			Tooltip toolTip = new Tooltip(newSpell.toString());
-//  			      			label.setTooltip(toolTip);
-//  			      			names.add(label);
-//  			      			spellList.add(label, 0, spells.size()+1);
-//  			      			label = new Label(" "+newSpell.getLevel());
-//  			      			levels.add(label);
-//  			      			spellList.add(label, 1, spells.size()+1);
-//  						spells.add(newSpell);
+  						Creature newcreature = new Creature() {
+  							String name;
+  							Size size;
+  							Type type;
+  							Subtype subtype;
+  							boolean isShapechanger;
+  							List<Alignment> align;
+  							double cr;
+  							int hp;
+  							int ac;
+  							Map<Speeds,Integer> speed;
+  							Map<Stats,Integer> stats;
+  							Map<Stats,Integer> saves;
+  							Map<Skills,Integer> skills;
+  							Map<DamageMultiplier,List<DamageType>> damageMultipliers;
+  							List<StatusCondition> conditionImmunities;
+  							Map<Senses,Integer> senses;
+  							List<Languages> languages;
+  							List<Region> regions;
+  							int legendaryResistances;
+  							Spellcasting innate;
+  							Spellcasting casting;
+  							Map<String,String> passives;
+  							String otherNotes;
+  							String multiattack;
+  							List<Attack> attacks;
+  							List<Effect> otherActions;
+  							Map<String,String> reactions;
+  							int legendaryActionCount;
+  							List<LegendaryAction> legendaryActions;
+  							List<String> lairActions;
+  							List<Source> sources;
+
+  							@Override public void constructor(String name, Size size, Type type, Subtype subtype,
+  									boolean isShapechanger, List<Alignment> align, double cr, int hp, int ac,
+  									Map<Speeds, Integer> speed, Map<Stats, Integer> stats, Map<Stats, Integer> saves,
+  									Map<Skills, Integer> skills, Map<DamageMultiplier, List<DamageType>> damageMultipliers,
+  									List<StatusCondition> conditionImmunities, Map<Senses, Integer> senses,
+  									List<Languages> languages, List<Region> regions, int legendaryResistances,
+  									Spellcasting innate, Spellcasting casting, Map<String, String> passives,
+  									String otherNotes, String multiattack, List<Attack> attacks,
+  									List<Effect> otherActions, Map<String, String> reactions, int legendaryActionCount,
+  									List<LegendaryAction> legendaryActions, List<String> lairActions,
+  									List<Source> sources) {
+  								this.name=name;
+  								this.size=size;
+  								this.type=type;
+  								this.subtype=subtype;
+  								this.isShapechanger=isShapechanger;
+  								this.align=align;
+  								this.cr=cr;
+  								this.hp=hp;
+  								this.ac=ac;
+  								this.speed=speed;
+  								this.stats=stats;
+  								this.saves=saves;
+  								this.skills=skills;
+  								this.damageMultipliers=damageMultipliers;
+  								this.conditionImmunities=conditionImmunities;
+  								this.senses=senses;
+  								this.languages=languages;
+  								this.regions=regions;
+  								this.legendaryResistances=legendaryResistances;
+  								this.innate=innate;
+  								this.casting=casting;
+  								this.passives=passives;
+  								this.otherNotes=otherNotes;
+  								this.multiattack=multiattack;
+  								this.attacks=attacks;
+  								this.otherActions=otherActions;
+  								this.reactions=reactions;
+  								this.legendaryActionCount=legendaryActionCount;
+  								this.legendaryActions=legendaryActions;
+  								this.lairActions=lairActions;
+  								this.sources=sources;
+  							}
+
+  							@Override public String getName() {return name;}
+  							@Override public Size getSize() {return size;}
+  							@Override public Type getType() {return type;}
+  							@Override public Subtype getSubtype() {return subtype;}
+  							@Override public boolean isShapechanger() {return isShapechanger;}
+  							@Override public List<Alignment> getAlignment() {return align;}
+  							@Override public double getCR() {return cr;}
+  							@Override public int getHP() {return hp;}
+  							@Override public int getAC() {return ac;}
+  							@Override public Map<Speeds, Integer> getSpeeds() {return speed;}
+  							@Override public Map<Stats, Integer> getStats() {return stats;}
+  							@Override public Map<Stats, Integer> getSaves() {return saves;}
+  							@Override public Map<Skills, Integer> getSkills() {return skills;}
+  							@Override public Map<DamageMultiplier, List<DamageType>> getMultipliers() {return damageMultipliers;}
+  							@Override public List<StatusCondition> getConditionImmunities() {return conditionImmunities;}
+  							@Override public Map<Senses, Integer> getSenses() {return senses;}
+  							@Override public List<Languages> getLanguages() {return languages;}
+  							@Override public List<Region> getRegions() {return regions;}
+  							@Override public int getLegendaryResistances() {return legendaryResistances;}
+  							@Override public Spellcasting getInnateCasting() {return innate;}
+  							@Override public Spellcasting getSpellcasting() {return casting;}
+  							@Override public Map<String, String> getPassives() {return passives;}
+  							@Override public String otherNotes() {return otherNotes;}
+  							@Override public String getMultiattack() {return multiattack;}
+  							@Override public List<Attack> getAttacks() {return attacks;}
+  							@Override public List<Effect> getEffects() {return otherActions;}
+  							@Override public Map<String, String> getReactions() {return reactions;}
+  							@Override public int getLegendaryActionCount() {return legendaryActionCount;}
+  							@Override public List<LegendaryAction> getLegendaryActions() {return legendaryActions;}
+  							@Override public List<String> getLairActions() {return lairActions;}
+  							@Override public List<Source> getSource() {return sources;}
+  							
+  							@Override public String toString(){
+  								String builtString = getName()+"\n";
+  								builtString += size.toNiceString()+" "+type.toNiceString();
+  								if(getSubtype()!=null || isShapechanger()){
+  									builtString += " (";
+  									if(getSubtype()!=null){builtString += getSubtype().toNiceString();}
+  									if(getSubtype()!=null && isShapechanger()){builtString += ", ";}
+  									if(isShapechanger()){builtString += "shapechanger";}
+  									builtString += ")";
+  								}
+  								builtString += ", "+alignDescription()+"\n";
+  								builtString += "------------------------------------------------------------------------------------------\n";
+
+  								builtString += "Armour Class: "+getAC()+"\n";
+  								builtString += "Hit Points: "+getHP()+"\n";
+  								builtString += "Speed: "+getSpeeds().get(Speeds.WALK)+" ft";
+  								for(Speeds s:getSpeeds().keySet()){if(s!=Speeds.WALK && getSpeeds().get(s)>0){
+  									builtString += ", "+s.toNiceString()+" "+getSpeeds().get(s)+" ft";
+  								}}
+  								builtString += "\n";
+  								builtString += "------------------------------------------------------------------------------------------\n";
+  								
+  								for(Stats s:Stats.values()){
+  									builtString += s.toString()+" "+getStats().get(s)+"(";
+  									if(Creature.scoreToMod(getStats().get(s))>=0){builtString+="+";}
+  									builtString += Creature.scoreToMod(getStats().get(s))+")\t";
+  								}
+  								builtString += "\n";
+  								builtString += "------------------------------------------------------------------------------------------\n";
+
+  								if(!getSaves().isEmpty()){
+  									builtString += "Saving Throws: ";
+  									boolean first = true;
+  									for(Stats s:getSaves().keySet()){
+  										if(!first){builtString += ", ";}
+  										builtString += s.toString()+" ";
+  										if(getSaves().get(s)>=0){builtString += "+";}
+  										builtString += getSaves().get(s);
+  										first = false;
+  									}
+  									builtString += "\n";
+  								}
+  								if(!getSkills().isEmpty()){
+  									builtString += "Skills: ";
+  									boolean first = true;
+  									for(Skills s:getSkills().keySet()){
+  										if(!first){builtString += ", ";}
+  										builtString += s.toString()+" ";
+  										if(getSkills().get(s)>=0){builtString += "+";}
+  										builtString += getSkills().get(s);
+  										first = false;
+  									}
+  									builtString += "\n";
+  								}
+  								if(!getVulnerabilities().isEmpty()){
+  									builtString += "Damage Vulnerabilities: ";
+  									boolean first = true;
+  									for(DamageType d:getVulnerabilities()){
+  										if(!first){builtString += ", ";}
+  										builtString += d.toNiceString();
+  										first = false;
+  									}
+  									builtString += "\n";
+  								}
+  								if(!getResistances().isEmpty()){
+  									builtString += "Damage Resistances: ";
+  									boolean first = true;
+  									for(DamageType d:getResistances()){
+  										if(!first){builtString += ", ";}
+  										builtString += d.toNiceString();
+  										first = false;
+  									}
+  									builtString += "\n";
+  								}
+  								if(!getImmunities().isEmpty()){
+  									builtString += "Damage Immunities: ";
+  									boolean first = true;
+  									for(DamageType d:getImmunities()){
+  										if(!first){builtString += ", ";}
+  										builtString += d.toNiceString();
+  										first = false;
+  									}
+  									builtString += "\n";
+  								}
+  								if(!getConditionImmunities().isEmpty()){
+  									builtString += "Condition Immunities: ";
+  									boolean first = true;
+  									for(StatusCondition s:getConditionImmunities()){
+  										if(!first){builtString += ", ";}
+  										builtString += s.toNiceString();
+  										first = false;
+  									}
+  									builtString += "\n";
+  								}
+  								if(!getSenses().isEmpty()){
+  									builtString += "Senses: ";
+  									boolean first = true;
+  									for(Senses s:getSenses().keySet()){
+  										if(!first){builtString += ", ";}
+  										builtString += s.toNiceString()+" "+ getSenses().get(s)+" ft";
+  										first = false;
+  									}
+  									if(!first){builtString += ", ";}
+  									builtString += "Passive Perception "+(10+getSkillMod(Skills.PERCEPTION))+"\n";
+  								}
+  								if(!getLanguages().isEmpty()){
+  									builtString += "Languages: ";
+  									boolean first = true;
+  									for(Languages l:getLanguages()){
+  										if(!first){builtString += ", ";}
+  										builtString += l.toNiceString();
+  										first = false;
+  									}
+  									builtString += "\n";
+  								}
+  								builtString += "Challenge: ";
+	  								if(getCR() == 0.125){builtString += "1/8";}
+	  								else if(getCR() == 0.25){builtString += "1/4";}
+	  								else if(getCR() == 0.5){builtString += "1/2";}
+	  								else{builtString += ((int)getCR());}
+  								builtString += " ("+getXP()+" XP)\n";
+  								builtString += "------------------------------------------------------------------------------------------\n";
+  								
+  								if(getLegendaryResistances()>0){
+  									builtString += "Legendary Resistance ("+getLegendaryResistances()+"/Day). ";
+  									builtString += "If this creature fails a saving throw, it can choose to succeed instead.\n";
+  								}
+  								if(getInnateCasting()!=null){
+  									builtString += "Innate Spellcasting.";
+  									builtString += "This creatures spellcasting ability is "+getInnateCasting().getAbility().toNiceString();
+  									if(getInnateCasting().getDC()!=null || getInnateCasting().getToHit()!=null){
+  										builtString += " (";
+  										if(getInnateCasting().getDC()!=null){
+  											builtString += "spell save DC "+getInnateCasting().getDC();
+  										}
+  										if(getInnateCasting().getDC()!=null && getInnateCasting().getToHit()!=null){
+  											builtString += ", ";
+  										}
+  										if(getInnateCasting().getToHit()!=null){
+  											if(getInnateCasting().getToHit()>=0){builtString += "+";}
+  											builtString += getInnateCasting().getToHit()+" to hit with spell attacks";
+  										}
+  										builtString += ")";
+  									}
+  									builtString += ". This creature can innately cast the following spells, ";
+  									builtString += "requiring no material components:\n";
+  									builtString += getInnateCasting().getSpellList().toString()+"\n";
+  								}
+  								if(getSpellcasting()!=null){
+  									builtString += "Spellcasting.";
+  									builtString += "This creature is a ";
+  									if(getSpellcasting().getLevel()==1){builtString += "1st";}
+  									else if(getSpellcasting().getLevel()==1){builtString += "2nd";}
+  									else if(getSpellcasting().getLevel()==1){builtString += "3rd";}
+  									else{builtString += getSpellcasting().getLevel()+"th";}
+  									builtString += "-level spellcaster.";
+  									builtString += "Its spellcasting ability is "+getSpellcasting().getAbility().toNiceString();
+  									if(getSpellcasting().getDC()!=null || getSpellcasting().getToHit()!=null){
+  										builtString += " (";
+  										if(getSpellcasting().getDC()!=null){
+  											builtString += "spell save DC "+getSpellcasting().getDC();
+  										}
+  										if(getSpellcasting().getDC()!=null && getSpellcasting().getToHit()!=null){
+  											builtString += ", ";
+  										}
+  										if(getSpellcasting().getToHit()!=null){
+  											if(getSpellcasting().getToHit()>=0){builtString += "+";}
+  											builtString += getSpellcasting().getToHit()+" to hit with spell attacks";
+  										}
+  										builtString += ")";
+  									}
+  									builtString += ". This creature has the following spells prepared:\n";
+  									builtString += getSpellcasting().getSpellList().toString()+"\n";
+  								}
+  								for(String p:getPassives().keySet()){
+  									builtString += p+". "+getPassives().get(p)+"\n";
+  								}
+  								if(getLegendaryResistances()>0 || getInnateCasting()!=null || getSpellcasting()!= null || !getPassives().isEmpty()){
+  								builtString += "------------------------------------------------------------------------------------------\n";}
+
+  								if(!getActions().isEmpty()){
+  									builtString += "Actions\n";
+	  								for(Object action:getActions()){
+	  									builtString += action.toString()+"\n";}
+  								builtString += "------------------------------------------------------------------------------------------\n";}
+  								
+  								if(!getReactions().isEmpty()){
+  									builtString += "Reactions\n";
+	  								for(String r:getReactions().keySet()){
+	  									builtString += r+". "+getReactions().get(r)+"\n";}
+  								builtString += "------------------------------------------------------------------------------------------\n";}
+  								
+  								if(!getLegendaryActions().isEmpty()){
+  									builtString += "Legendary Actions\n";
+  									builtString += "This creature can take "+getLegendaryActionCount()+" legendary actions, choosing from the options below. ";
+  									builtString += "Only one legendary action option can be used at a time and only at the end of another creatures turn.";
+  									builtString += "This creature regains spent legendary actions at the start of it's turn.\n";
+	  								for(LegendaryAction la:getLegendaryActions()){
+	  									builtString += la.toString()+"\n";}
+  								builtString += "------------------------------------------------------------------------------------------\n";}
+  								
+  								if(!getLairActions().isEmpty()){
+  									builtString += "Lair Actions\n";
+  									builtString += "On initiative count 20 (losing initiative ties), ";
+  									builtString += "this creature takes a lair action to cause one of the following effects; ";
+  									builtString += "this creature can't use the same effect two rounds in a row:\n";
+  								builtString += "------------------------------------------------------------------------------------------\n";}
+
+  								builtString += "Regions: ";
+  								boolean first = true;
+  								for(Region r:getRegions()){
+  									if(!first){builtString += ",";}
+  									builtString += r.toNiceString();
+  									first = false;
+  								}
+  								builtString += "\n";
+  								
+  								return builtString;
+  							}
+  						};											//TODO - Label for data coalition;
+  						
+
+  						Size size = null;//Handle the fields that need extra work.
+  						for(Size s:Size.values()){
+  							if(((RadioButton)sizePicker.getSelectedToggle()).getText().equals(s.toNiceString())){size = s;}}
+  						Type type = null;
+  						for(Type t:Type.values()){
+  							if(((RadioButton)typePicker.getSelectedToggle()).getText().equals(t.toNiceString())){type = t;}}
+  						Subtype subtype = null;
+  						if(type.hasSubtype()){
+  							for(Subtype s:type.getSubtype(type)){
+  								for(RadioButton rb:subtypePicker.get(type)){
+  									if(rb.isSelected() && rb.getText().equals(s.toNiceString())){subtype = s;}
+  								}}}
+  						
+  						List<Alignment> align = new ArrayList<Alignment>();
+  						for(Alignment a:Alignment.values()){
+  							for(RadioButton rb:alignPicker){
+  								if(rb.isSelected() && rb.getText().equals(a.toNiceString())){align.add(a);}}}
+
+  						Map<Speeds,Integer> speed = new HashMap<Speeds,Integer>();
+  						for(Speeds s:Speeds.values()){
+  							if(speedPicker.get(s).getText().length()>0){speed.put(s, Integer.parseInt(speedPicker.get(s).getText()));}}
+  						Map<Stats,Integer> stats = new HashMap<Stats,Integer>();
+  						for(Stats s:Stats.values()){
+  							if(statPicker.get(s).getText().length()>0){stats.put(s, Integer.parseInt(statPicker.get(s).getText()));}}
+  						Map<Stats,Integer> saves = new HashMap<Stats,Integer>();
+  						for(Stats s:Stats.values()){
+  							if(savesPicker.get(s).isSelected()){saves.put(s, Integer.parseInt(savesSetter.get(s).getText()));}}
+  						Map<Skills,Integer> skills = new HashMap<Skills,Integer>();
+  						for(Skills s:Skills.values()){
+  							if(skillPicker.get(s).isSelected()){skills.put(s, Integer.parseInt(skillSetter.get(s).getText()));}}
+  						
+  						Map<DamageMultiplier,List<DamageType>> damageMultipliers = new HashMap<DamageMultiplier,List<DamageType>>();
+  						for(DamageMultiplier dm:DamageMultiplier.values()){
+  	  						damageMultipliers.put(dm, new ArrayList<DamageType>());
+  	  						for(DamageType dt:DamageType.values()){
+  	  							if(resistancePicker.containsKey(dm) && resistancePicker.get(dm).get(dt).isSelected()){
+  	  								damageMultipliers.get(dm).add(dt);
+  	  							}
+  	  						}}
+  						List<StatusCondition> conditionImmunities = new ArrayList<StatusCondition>();
+  						for(StatusCondition s:StatusCondition.values()){
+  							if(conditionPicker.get(s).isSelected()){conditionImmunities.add(s);}}
+
+  						Map<Senses,Integer> senses = new HashMap<Senses,Integer>();
+  						for(Senses s:Senses.values()){
+  							if(sensePicker.get(s).isSelected()){
+  								senses.put(s, Integer.parseInt(senseSetter.get(s).getText()));}}
+  						List<Languages> languages = new ArrayList<Languages>();
+  						for(Languages l:Languages.values()){
+  							if(languagePicker.get(l).isSelected()){languages.add(l);}}
+  						List<Region> regions = new ArrayList<Region>();
+  						for(Region r:Region.values()){
+  							if(regionPicker.get(r).isSelected()){regions.add(r);}}
+  						
+  						Spellcasting innate = null;
+	  						if(innateSpells!=null){
+	  							Integer toHit = null, DC = null;
+	  							if(innateMod.getText().length()>0){toHit = Integer.parseInt(innateMod.getText());}
+	  							if(innateDC.getText().length()>0){DC = Integer.parseInt(innateDC.getText());}
+	  							innate = new Spellcasting(innateSpells, innateAbility.getValue(), toHit, DC, innateLevel.getValue(), spells);}
+  						Spellcasting casting = null;
+	  						if(stdSpells!=null){
+	  							Integer toHit = null, DC = null;
+	  							if(castMod.getText().length()>0){toHit = Integer.parseInt(castMod.getText());}
+	  							if(castDC.getText().length()>0){DC = Integer.parseInt(castDC.getText());}
+	  							casting = new Spellcasting(stdSpells, castAbility.getValue(), toHit, DC, castLevel.getValue(), spells);}
+  						Map<String,String> passives = new HashMap<String,String>();
+  							for(RadioButton rb:orderedStandardPassives){
+  								if(rb.isSelected()){passives.put(rb.getText(), standardPassives.get(rb));}}
+  							for(TextField p:passiveInputs.keySet()){passives.put(p.getText(), passiveInputs.get(p).getText());}
+  						
+  						List<Attack> attacks = new ArrayList<Attack>();
+  							for(int i=0; i<attackNames.size();i++){
+  								Integer longRange = null;
+  								if(attackLongRange.get(i).getText().length()>0){
+  									longRange = Integer.parseInt(attackLongRange.get(i).getText());}
+  								attacks.add(new Attack(
+  										attackNames.get(i).getText(),
+  										Integer.parseInt(attackToHits.get(i).getText()),
+  										Integer.parseInt(attackShortRange.get(i).getText()),
+  										longRange,
+  										attackDesc.get(i).getText()));}
+  						List<Effect> otherActions = new ArrayList<Effect>();
+  							for(int i=0; i<otherActNames.size();i++){
+  								otherActions.add(new Effect(
+  										otherActNames.get(i).getText(),
+  										otherActLimits.get(i).getValue(),
+  										otherActDesc.get(i).getText()));}
+  						Map<String,String> reactions = new HashMap<String,String>();
+  							for(TextField r:reactionInputs.keySet()){reactions.put(r.getText(), reactionInputs.get(r).getText());}
+  							
+  						List<LegendaryAction> legendaryActions = new ArrayList<LegendaryAction>();
+  							for(int i=0; i<legendActNames.size();i++){
+  								legendaryActions.add(new LegendaryAction(
+  										legendActNames.get(i).getText(),
+  										legendActCosts.get(i).getValue(),
+  										legendActDesc.get(i).getText()));}
+  						List<String> lairs = new ArrayList<String>();
+  							for(TextArea a:lairActions){if(a.getText().length()>0){lairs.add(a.getText());}}
+  						List<Source> sourcesList = new ArrayList<Source>();
+  							sourcesList.add(sourceSelect.getValue());
+  						
+  						newcreature.constructor(//Create the new creature.
+  								nameField.getText(), size, type, subtype, shapechangerToggle.isSelected(),
+  								align,crPicker.getValue(),Integer.parseInt(hpPicker.getText()),Integer.parseInt(acPicker.getText()),
+  								speed,stats,saves,skills,
+  								damageMultipliers,conditionImmunities,
+  								senses,languages,regions,
+  								LegRes.getValue(),innate,casting,passives,otherInfo.getText(),
+  								multiattack.getText(),attacks,otherActions,reactions,
+  								legendActCount.getValue(),legendaryActions,lairs,
+  								sourcesList);
+  						
+  						System.out.println("Adding creature "+newcreature.getName());//Add the new creature to the list.
+  			      			Label label = new Label(" "+newcreature.getName());
+  			      			Tooltip toolTip = new Tooltip(newcreature.toString());
+  			      			label.setTooltip(toolTip);
+  			      			names.add(label);
+  			      			creatureList.add(label, 0, creatures.size()+1);
+  			      			label = new Label(" "+newcreature.getCR());
+  			      			crs.add(label);
+  			      			creatureList.add(label, 1, creatures.size()+1);
+  						creatures.add(newcreature);
   						//TODO - make new creature
   						
   						//TODO

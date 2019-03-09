@@ -3,11 +3,11 @@ package Creatures;
 import java.io.File;
 import java.util.List;
 
-import Creatures.newCreature.Stats;
+import Creatures.Creature.Stats;
 import Spells.Spell;
 import Spells.SpellBookInstance;
 
-public class newSpellcasting {
+public class Spellcasting {
 	
 	private final Stats ability;
 	private final Integer toHit;
@@ -16,7 +16,7 @@ public class newSpellcasting {
 	private final File book;
 	private final SpellBookInstance spells;
 
-	public newSpellcasting(File book, Stats ability, Integer toHit, Integer DC, Integer level, List<Spell> spellList) {
+	public Spellcasting(File book, Stats ability, Integer toHit, Integer DC, Integer level, List<Spell> spellList) {
 		this.ability = ability;
 		this.toHit = toHit;
 		this.DC = DC;

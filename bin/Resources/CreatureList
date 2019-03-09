@@ -1,164 +1,74 @@
 <creature>
-	<name>Ancient Red Dragon</name>
-	<size>gargantuan</size>
-	<type>dragon</type>
-	<alignment>chaotic evil</alignment>
-	<ac>22</ac>
-	<hp>546</hp>
-	<speed>40,climb 40,fly 80</speed>
-	<stats>30,10,29,18,15,23</stats>
-	<saves>dex 7,con 16,wis 9,cha 13</saves>
-	<skills>perception 16,stealth 7</skills>
-	<immunities>fire</immunities>
-	<senses>blindsight 60,darkvision 120</senses>
-	<languages>common,draconic</languages>
-	<cr>24</cr>
-	<legendaryresistance>3</legendaryresistance>
-	<actions>
-		<multi>Frightful Presence,Bite,Claw,Claw</multi>
-		<attack>Bite,17,15,2d10+10 piercing 4d6 fire</attack>
-		<attack>Claw,17,10,2d6+10 slashing</attack>
-		<attack>Tail,17,20,2d8+10 bludgeoning</attack>
-		<effect>Frightful Presence,sphere 120, 21 wis, frightened for 1 minute but can repeat the save at the end of each turn gaining immunity on a success</effect>
-		<effect>Fire Breath,recharge 5,cone 90, 24 dex, 26d6 fire halved on success</effect>
-	</actions>
-	<legendaryactions>
-		3
-		1<buff>Detect, self, make a perception check</buff>
-		1<buff>Tail attack, single 20, make a Tail attack</buff>
-		2<effect>Wing Attack,sphere 15, 25 dex, 2d6+10 bludgeoning and knocked prone, the dragon can fly half its speed</effect>
-	</legendaryactions>
-	<lair>
-		<effect>Magma erupts,cylinder 20 5 120, 15 dex, 6d6 fire halved on success</effect>
-		<effect>A tremor shakes the lair,sphere 60, 15 dex, creatures on the ground are knocked prone</effect>
-		<effect>Volcanic gases form a cloud,sphere 20 120, 13 con, area is lightly obscured and lasts the round, on a failed save creatures are poisoned for that turn and are incapacitated while poisoned this way</effect>
-	</lair>
-	<source>monstermanual</source>
-</creature>
-<creature>
-	<name>Dragon Turtle</name>
-	<size>gargantuan</size>
-	<type>dragon</type>
-	<alignment>neutral</alignment>
-	<ac>20</ac>
-	<hp>341</hp>
-	<speed>20,swim 40</speed>
-	<stats>25,10,20,10,12,12</stats>
-	<saves>dex 5,con 10,wis 6</saves>
-	<resistances>fire</resistances>
-	<senses>darkvision 120</senses>
-	<languages>aquan,draconic</languages>
-	<cr>17</cr>
-	<passive>Amphibious: can breathe air and water</passive>
-	<actions>
-		<multi>Bite,Claw,Claw or Bite,Tail</multi>
-		<attack>Bite,12,15,3d12+7 piercing</attack>
-		<attack>Claw,12,10,2d8+7 slashing</attack>
-		<attack>Tail,12,15,3d12+7 piercing</attack>
-		<effect>Steam Breath,recharge 5,cone 60, 18 con, 15d6 fire halved on success</effect>
-	</actions>
-	<free>
-		<effect>On Tail hit,single 15, 20 str, push 10 and knocked prone</effect>
-	</free>
-	<source>monstermanual</source>
-</creature>
-<creature>
-	<name>Goblin</name>
-	<size>small</size>
-	<type>humanoid</type>
-	<alignment>neutral evil</alignment>
-	<ac>15</ac>
-	<hp>7</hp>
-	<speed>30</speed>
-	<stats>8,14,10,10,8,8</stats>
-	<skills>stealth 6</skills>
-	<senses>darkvision 60</senses>
-	<languages>common,goblin</languages>
-	<cr>0.25</cr>
-	<actions>
-		<attack>Scimitar,4,5,1d6+2 slashing</attack>
-		<attack>Shortbow,4,80,1d6+2 piercing</attack>
-	</actions>
-	<bonus>
-		<buff>disengage, self, this turns movement doesn't provoke opportunity attacks</buff>
-		<buff>hide, self, can make a stealth check</buff>
-	</bonus>
-	<source>monstermanual</source>
-</creature>
-<creature>
 	<name>Iron Golem</name>
-	<size>large</size>
-	<type>construct</type>
-	<alignment>unaligned</alignment>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>16.0</cr>
 	<ac>20</ac>
 	<hp>210</hp>
-	<speed>30</speed>
-	<stats>24,9,20,3,11,1</stats>
-	<immunities>poison,psychic,nonmagicalbasic</immunities>
-	<healed>fire</healed>
-	<conditions>charmed,exhaustion,frightened,paralyzed,petrified,poisoned</conditions>
-	<senses>darkvision 120</senses>
-	<cr>16</cr>
-	<passive>Immutable form: immune to spells and effects that would change its form</passive>
-	<passive>Magic resistance: advantage on saves against spells and other magical effects</passive>
-	<passive>Magic Weapons: weapon attacks deal magical damage</passive>
+	<speed>SWIM 0,BURROW 0,CLIMB 0,FLY 0,WALK 30</speed>
+	<stats>STR 24,DEX 9,INT 3,CHA 1,WIS 11,CON 20</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Fire Absorption,Whenever the golem is subjected to fire damage, it takes no damage and instead regains a number of hit points equal to the fire damage dealt.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+	</passives>
+	<other>Adamantine weapons breach the damage immunity.
+Understands the languages of its creator but can't speak.</other>
 	<actions>
-		<multi>2 melee attacks</multi>
-		<attack>Slam,13,5,3d8+7 bludgeoning</attack>
-		<attack>Sword,13,10,3d10+7 slashing</attack>
-		<effect>Poison Breath,recharge 6,cone 15, 19 con, 10d8 poison halved on success</effect>
+		<multiattack>The golem makes two melee attacks.</multiattack>
+		<attack>Slam,13,5,null,null,One target. Hit: 20 (3d8+7) bludgeoning damage.</attack>
+		<attack>Sword,13,10,null,null,One target. Hit: 23 (3d10+7) slashing damage.</attack>
+		<effect>Poison Breath,Recharge 6,The golem exhales poisonous gas in a 15ft cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<source>monstermanual</source>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
-	<name>Orc War Chief</name>
-	<size>medium</size>
-	<type>humanoid</type>
-	<alignment>chaotic evil</alignment>
-	<ac>16</ac>
-	<hp>93</hp>
-	<speed>30</speed>
-	<stats>18,12,18,11,11,16</stats>
-	<saves>str 6,con 6,wis 2</saves>
-	<skills>intimidation 5</skills>
-	<senses>darkvision 60</senses>
-	<languages>common,orcish</languages>
-	<cr>4</cr>
+	<name>Ancient Red Dragon</name>
+	<size>GARGANTUAN</size>
+	<type>DRAGON,false</type>
+	<align>CE</align>
+	<cr>24.0</cr>
+	<ac>22</ac>
+	<hp>546</hp>
+	<speed>SWIM 0,BURROW 0,CLIMB 40,FLY 80,WALK 40</speed>
+	<stats>STR 30,DEX 10,INT 18,CHA 23,WIS 15,CON 29</stats>
+	<saves>DEX 7,CHA 13,WIS 9,CON 16</saves>
+	<skills>PERCEPTION 16,STEALTH 7</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 120,BLINDSIGHT 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions>MOUNTAIN</regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+	</passives>
+	<other></other>
 	<actions>
-		<multi>2 Weapon attacks</multi>
-		<attack>Greataxe,6,5,1d12+1d8+4 slashing</attack>
-		<attack>Spear 1h,6,20,1d6+1d8+4 piercing</attack>
-		<attack>Spear 2h,6,20,2d8+4 piercing</attack>
-		<buff>Battle Cry, limit 1, sphere 30, creatures of my choice have advantage on attacks for the turn and I can make an attack as a bonus action</buff>
+		<multiattack>The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,17,15,null,One target. Hit: 21 (2d10+10) piercing damage plus 14 (4d6) fire damage.</attack>
+		<attack>Claw,17,10,null,One target. Hit: 17 (2d6+10) slashing damage.</attack>
+		<attack>Tail,17,20,null,One target. Hit: 19 (2d8+10) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120ft of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragons Frightful Presence for the next 24 hours.</effect>
+		<effect>Fire Breath,Recharge 5-6,The dragon exhales fire in a 90ft cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<bonus>
-		<buff>Aggressive, self, move up to my speed toward a hostile creature</buff>
-	</bonus>
-	<source>monstermanual</source>
-</creature>
-<creature>
-	<name>Revenant</name>
-	<size>medium</size>
-	<type>undead</type>
-	<alignment>neutral</alignment>
-	<ac>13</ac>
-	<hp>136</hp>
-	<speed>30</speed>
-	<stats>18,14,18,13,16,18</stats>
-	<saves>str 7,con 7,wis 6,cha 7</saves>
-	<resistances>necrotic,psychic</resistances>
-	<immunities>poison</immunities>
-	<conditions>charmed,exhaustion,frightened,paralyzed,poisoned,stunned</conditions>
-	<senses>darkvision 60</senses>
-	<cr>5</cr>
-	<regen>10,fire radiant</regen>
-	<passive>Rejuvenation: after the body is destroyed it will be completely restored after 24 hours unless wished away while bodiless</passive>
-	<passive>Turn Immunity: immune to effects that turn undead</passive>
-	<passive>Vengeful Tracker: it knows the distance and direction of its targets even across planes and knows when they die</passive>
-	<actions>
-		<multi>2 Fist attacks</multi>
-		<attack>Fist,7,5,2d6+4 bludgeoning with another 4d6 bludgeoning to its target. can replace damage with a DC14 grapple on a large or smaller creature</attack>
-		<effect>Vengeful Glare,single 30, 15 wis, the revenants target is paralyzed until hurt by the revenant or the end of the revenants next turn. once the paralysis is over they are frightened for 1 minute and can repeat the save at the end of each of its turns. this save is made with disadvantage if they can see the revenant</effect>
-	</actions>
-	<source>monstermanual</source>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 15ft of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6+10) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Magma erupts from a point on the ground the dragon can see within 120ft of it, creating a 20ft high, 5ft radius geyser. Each creature in the geyser's area must make a DC15 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.</lairaction>
+		<lairaction>A tremor shakes the lair in a 60ft radius around the dragon. Each creature other than the dragon on the ground in that area must succeed on a DC 15 Dexterity saving throw or be knocked prone.</lairaction>
+		<lairaction>Volcanic gasses form a cloud in a 20ft radius sphere centered on a point the dragon can see within 120ft of it. The sphere spreads around corners, and its area is lightly obscured. It lasts until initiative count 20 on the next round. Each creature that starts its turn in the cloud must succeed on a DC 13 Constitution saving throw or be poisoned until the end of its next turn. While poisoned in this way, a creature is incapacitated.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
 </creature>

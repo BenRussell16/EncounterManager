@@ -138,18 +138,18 @@ public class EncounterBuilder {
 				export.setOnAction(new EventHandler<ActionEvent>() {
 					@Override
 					public void handle(ActionEvent event) {
-						System.out.println("Exporting encounter");
-						List<EncounterEntity> encounter = new ArrayList<EncounterEntity>();
-						for(Creature c:creatures) {
-							if(built.get(c)==1) {
-								encounter.add(new EncounterEntity(c,c.getName()));
-							}else {
-								for(int i=0; i<built.get(c); i++) {
-									encounter.add(new EncounterEntity(c,c.getName()+" "+(i+1)));
-								}
-							}
-						}
-						secondaryStage.close();
+//						System.out.println("Exporting encounter");
+//						List<EncounterEntity> encounter = new ArrayList<EncounterEntity>();
+//						for(Creature c:creatures) {
+//							if(built.get(c)==1) {
+//								encounter.add(new EncounterEntity(c,c.getName()));
+//							}else {
+//								for(int i=0; i<built.get(c); i++) {
+//									encounter.add(new EncounterEntity(c,c.getName()+" "+(i+1)));
+//								}
+//							}
+//						}
+//						secondaryStage.close();
 						//mainWindow.showEncounter(encounter);
 					}
 				});
@@ -183,7 +183,7 @@ public class EncounterBuilder {
 						if(typePicker.getValue()!=null) {//type filter
 							List<Creature> toRemove = new ArrayList<Creature>();
 							for(Creature c:query) {
-								if(!c.isType((Creature.Type)typePicker.getValue())) {
+								if(c.getType()!=(Creature.Type)typePicker.getValue()) {
 									toRemove.add(c);
 								}
 							}
@@ -192,7 +192,7 @@ public class EncounterBuilder {
 						if(regionPicker.getValue()!=null) {//region filter
 							List<Creature> toRemove = new ArrayList<Creature>();
 							for(Creature c:query) {
-								if(!c.inRegion((Creature.Region)regionPicker.getValue())) {
+								if(!c.fromRegion((Creature.Region)regionPicker.getValue())) {
 									toRemove.add(c);
 								}
 							}
