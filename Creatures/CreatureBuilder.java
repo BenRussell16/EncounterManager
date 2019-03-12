@@ -646,11 +646,13 @@ public class CreatureBuilder {
   		      	label = new Label(" Subtype");
   		      	curCreature.add(label, 0, layer);
   		      	subtypePanel = new GridPane();
+  		      	subtypePanel.setHgap(5);
   		      	subtypePicker = new HashMap<Type,List<RadioButton>>();
       			shapechangerToggle = new RadioButton("Shapechanger\t");
       			subtypePanel.add(shapechangerToggle, 0, 0);
-  		      	i=1;
+  		      	int j=1;
   		      	for(Type t: Type.values()){
+  		      		i=0;
   		      		if(t.hasSubtype()){
   		      			subtypePicker.put(t, new ArrayList<RadioButton>());
 		      			RadioButton rb = new RadioButton("None\t");
@@ -663,7 +665,7 @@ public class CreatureBuilder {
 							}
 						});
 		      			subtypePicker.get(t).add(rb);
-		      			subtypePanel.add(rb, i, 0);
+		      			subtypePanel.add(rb, i, j);
 		      			rb.setVisible(false);
 		      			i++;
   		      			for(Subtype s:t.getSubtype(t)){
@@ -681,13 +683,15 @@ public class CreatureBuilder {
   								}
   							});
   		      				subtypePicker.get(t).add(rb);
-  		      				subtypePanel.add(rb, i, 0);
+  		      				subtypePanel.add(rb, i%7, j+i/7);
   		      				rb.setVisible(false);
   		      				i++;
   		      			}
   		      		}
+  		      		j+=i/7;
   		      	}
   		      	curCreature.add(subtypePanel, 1, layer);
+  		      	updateSubtypeOptions(null);
   		      	layer++;
 
   	  	  		label = new Label(" Alignment");
@@ -1043,7 +1047,7 @@ public class CreatureBuilder {
 	  		    languagePicker = new HashMap<Languages, RadioButton>();
 	  		    GridPane languagePane = new GridPane();
 	  		    languagePane.setHgap(10);
-	  		    i=0; int j=0;
+	  		    i=0; j=0;
 	  		    for(Languages l: Languages.values()){
 	  		    	RadioButton rb = new RadioButton(l.toNiceString());
 	  		    	languagePane.add(rb, i%8, j+i/8);
@@ -1051,7 +1055,7 @@ public class CreatureBuilder {
 	  		    	i++;
 	  		    	//Apply rows for language groups.
 	  		    	if(j==0 && i>=8){j++; i=0;}	//Common and uncommon languages
-	  		    	if(j==1 && i>=5){j++; i=0;}	//Rare languages
+	  		    	if(j==1 && i>=6){j++; i=0;}	//Rare languages
 	  		    	if(j==2 && i>=8){j++; i=0;}	//Fiendish, elemental, and universal languages
 	  		    								//Other languages
 	  		    	//TODO - maybe drop down the misc, one off languages.
@@ -2132,7 +2136,17 @@ public class CreatureBuilder {
 	  			      		label.setTooltip(toolTip);
 	  			      		names.add(label);
 	  			      		creatureList.add(label, 0, creatures.size()+1);
-	  			      		label = new Label(" "+newcreature.getCR());
+	  	  		      		String crText = "0";
+	  	  		      		if(newcreature.getCR()>=1 || newcreature.getCR()==0){
+	  	  		      			crText = ""+((int)newcreature.getCR());
+	  	  		      		}else if(newcreature.getCR() == 0.5){
+	  	  		      			crText = "1/2";
+	  	  		      		}else if(newcreature.getCR() == 0.25){
+	  	  		      			crText = "1/4";
+	  	  		      		}else if(newcreature.getCR() == 0.125){
+	  	  		      			crText = "1/8";
+	  	  		      		}
+	  	  		      		label = new Label(" "+crText);
 	  			      		crs.add(label);
 	  			      		creatureList.add(label, 1, creatures.size()+1);
 	  						creatures.add(newcreature);

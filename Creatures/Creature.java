@@ -132,7 +132,7 @@ public interface Creature {
 	public List<Effect> getEffects();
 		public default List<Object> getActions(){
 			List<Object> actions = new ArrayList<Object>();
-			actions.add(new Effect("Multiattack", null, getMultiattack()));
+			if(getMultiattack()!=null && getMultiattack().length()>0){actions.add(new Effect("Multiattack", null, getMultiattack()));}
 			actions.addAll(getAttacks());
 			actions.addAll(getEffects());
 			return actions;}
@@ -281,7 +281,7 @@ public interface Creature {
 				builtString += "\t</passives>\n";}
 		if(otherNotes()!=null){builtString += "\t<other>"+otherNotes()+"</other>\n";}
 		builtString += "\t<actions>\n";
-			if(getMultiattack()!=null){builtString += "\t\t<multiattack>"+getMultiattack()+"</multiattack>\n";}
+			if(getMultiattack()!=null && getMultiattack().length()>0){builtString += "\t\t<multiattack>"+getMultiattack()+"</multiattack>\n";}
 			if(!getAttacks().isEmpty()){for(Attack a:getAttacks()){
 				builtString += "\t\t<attack>"+a.getName()+","+a.getToHit()+","+a.getShortRange();
 				if(a.getLongRange()!=null){builtString += ","+a.getLongRange();}
@@ -344,9 +344,9 @@ public interface Creature {
 	}
 	
 	public enum Type{
-		ABBERATION(false),BEAST(false),CELESTIAL(false),CONSTRUCT(false),
+		ABBERATION(false),BEAST(true),CELESTIAL(true),CONSTRUCT(false),
 		DRAGON(false),ELEMENTAL(false),FEY(false),FIEND(true),
-		GIANT(false),HUMANOID(true),MONSTOSITY(false),OOZE(false),
+		GIANT(false),HUMANOID(true),MONSTOSITY(true),OOZE(false),
 		PLANT(false),UNDEAD(false);
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
@@ -355,21 +355,45 @@ public interface Creature {
 		private Type(boolean hasSub){this.hasSub = hasSub;}
 		public boolean hasSubtype(){return hasSub;}
 		public Subtype[] getSubtype(Type superType){
+			if(superType == Type.BEAST){return beastSubtype.values();}
+			if(superType == Type.CELESTIAL){return celestialSubtype.values();}
 			if(superType == Type.FIEND){return fiendSubtype.values();}
 			if(superType == Type.HUMANOID){return humanoidSubtype.values();}
+			if(superType == Type.MONSTOSITY){return monstrositySubtype.values();}
 			return null;
 		}		
 		
 		public interface Subtype{
 			public String toNiceString();
 		}
+		private enum beastSubtype implements Subtype{
+			SWARMOF;
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
+		private enum celestialSubtype implements Subtype{
+			TITAN;
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
 		private enum fiendSubtype implements Subtype{
-			DEMON,DEVIL;
+			DEMON,DEVIL,YUGOLOTH;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
 		private enum humanoidSubtype implements Subtype{
-			ANYRACE,HUMAN,ELF,ORC;//TODO humanoid subtypes
+			ANYRACE,
+			HUMAN,DWARF,ELF,//General races
+			GITH,GNOLL,GOBLINOID,KOBOLD,ORC,//Common NPC races
+			AARAKOCRA,BULLYWUG,GNOME,GRIMLOCK,KENKU,//Uncommon races
+			KUOTOA,LIZARDFOLK,MERFOLK,QUAGGOTH,SAHUAGIN,
+			THRIKREEN,TROGLODYTE,YUANTI
+			;//TODO humanoid subtypes
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
+		private enum monstrositySubtype implements Subtype{
+			TITAN,YUANTI;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
@@ -452,7 +476,7 @@ public interface Creature {
 	public enum Languages{//TODO complete
 		COMMON,DRACONIC,DWARVISH,ELVISH,//Common languages
 		GIANT,GOBLIN,ORCISH,UNDERCOMMON,//Uncommon languages
-		CELESTIAL,DEEPSPEECH,DRUIDIC,SYLVAN,PRIMORDIAL,//Rare languages
+		CELESTIAL,DEEPSPEECH,DRUIDIC,SYLVAN,THIEVESCANT,PRIMORDIAL,//Rare languages
 		ABYSSAL,INFERNAL,//Fiendish languages
 		AURAN,AQUAN,IGNAN,TERRAN,//Elemental languages
 		ALL,TELEPATHY,//Universal languages
@@ -460,7 +484,8 @@ public interface Creature {
 		BULLYWUG,GITH,GNOLL,GNOMISH,GRELL,//Other languages
 		HALFLING,HOOKHORROR,MODRON,OTYUGH,SAHUAGIN,
 		SLAAD,SPHINX,THRIKREEN,TROGLODYTE,
-		UMBERHULK,YETI;
+		UMBERHULK,YETI,
+		BLINKDOG,GIANTEAGLE,GIANTELK,WINTERWOLF,WORG;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
