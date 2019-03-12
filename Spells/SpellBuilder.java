@@ -478,7 +478,7 @@ public class SpellBuilder {
 	      	curSpell.add(schoolSelect, 1, layer);
 	      	layer++;
 	      	
-	      	//components
+	      	//Components
 	      	label = new Label(" Components");
 	      	curSpell.add(label, 0, layer);
 	      	GridPane componentsBar = new GridPane();
@@ -513,7 +513,7 @@ public class SpellBuilder {
 	      	curSpell.add(componentsBar, 1, layer);
 	      	layer++;
 	      	
-	      	//times
+	      	//Times
 	      	label = new Label(" Cast time");
 	      	curSpell.add(label, 0, layer);
 	      	GridPane timePanel = new GridPane();
@@ -528,11 +528,12 @@ public class SpellBuilder {
 	      	//Duration
 	      	label = new Label("\tDuration");
 	      	timePanel.add(label, 2, 0);
-	      	//arbitrary duration skipped
 	      	durationSelect = new ChoiceBox<String>(FXCollections.observableArrayList());
 	      	durationSelect.getItems().addAll(null,"Instantaneous","1 Round","6 Rounds","1 Minute","10 Minutes",
 	      			"1 Hour","2 Hours","8 Hours","24 Hours","1 Day","7 Days","10 Days","30 Days",
 	      			"Special","Until Dispelled","Until Dispelled or Triggered");
+	      	durationSelect.setOnAction(new EventHandler<ActionEvent>() {
+				@Override public void handle(ActionEvent event) {concSelect.setSelected(false);}});
 	      	durationSelect.setValue(null);
 	      	timePanel.add(durationSelect, 3, 0);
 	      	concSelect = new RadioButton("Concentration");
@@ -935,6 +936,7 @@ public class SpellBuilder {
 					System.out.println("Adding spell "+newSpell.getName());
 		      			Label label = new Label(" "+newSpell.getName());
 		      			Tooltip toolTip = new Tooltip(newSpell.toString());
+		      			toolTip.setWrapText(true);
 			      		toolTip.setMaxWidth(600);
 		      			label.setTooltip(toolTip);
 		      			names.add(label);
