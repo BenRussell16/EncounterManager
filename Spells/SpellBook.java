@@ -58,6 +58,13 @@ public class SpellBook {
 		private Map<Integer, GridPane> levelPanes;
 		private List<Label> preppedNames;
 		private List<Button> unprep;
+		
+	private GridPane dailyList;
+		private Map<Integer, Integer> innateListCounts;
+		private Map<Integer, List<ChoiceBox<Spell>>> innateListSpellPickers;
+		private Map<Integer, List<RadioButton>> innateListSelfOnly;
+		private Map<Integer, List<ChoiceBox<Integer>>> innateListSpellLevel;
+	
 	
 	public Stage makeDisplay() {
 		if(secondaryStage != null) {secondaryStage.close();}
@@ -371,6 +378,15 @@ public class SpellBook {
 
 						updateSpellList();
 						updateKnownList();
+						for(Integer i:innateListSpellPickers.keySet()){//TODO make this more efficient
+							for(ChoiceBox<Spell> cb:innateListSpellPickers.get(i)){
+								if(cb.getValue()==null){//Update query on innate spell selection.		TODO
+									cb.getItems().clear();
+									cb.getItems().add(null);
+									cb.getItems().addAll(query);
+								}
+							}
+						}
 					}
 				};
 				//Add filter inputs to panel, and set them up to apply when used.
@@ -503,7 +519,7 @@ public class SpellBook {
 	      	
 	      	sp.setContent(spellList);
 	      	sp.setMinSize(200, 0);
-	      	grid.add(sp,0,3);
+	      	grid.add(sp,0,3,1,3);
 
 	      	
 	      	
@@ -589,7 +605,7 @@ public class SpellBook {
 	  		
 	      	sp.setContent(knownList);
 	      	sp.setMinSize(250, 0);
-	      	grid.add(sp, 1, 3);
+	      	grid.add(sp, 1, 3, 1, 3);
 	      	
 	      	
 	      	
@@ -614,18 +630,18 @@ public class SpellBook {
 			preparedList = new GridPane();
 				GridPane slotPane = new GridPane();
 					//Header row.
-					label = new Label("Spell level");
+					label = new Label(" Spell level");
 					label.setMinWidth(60);
 					slotPane.add(label, 0, 0);
-					label = new Label("Slots");
+					label = new Label(" Slots");
 					slotPane.add(label, 1, 0, 2, 1);
-					label = new Label("Spell list");
+					label = new Label(" Spell list");
 					slotPane.add(label, 3, 0);
 					//Each spell level
 					for(int i=0; i<=9; i++){
 						//Level label
-						label = new Label("Level "+i);
-						if(i==0){label.setText("Cantrip");}
+						label = new Label(" Level "+i);
+						if(i==0){label.setText(" Cantrip");}
 						slotPane.add(label, 0, i+1);
 						//Slot management						//TODO - Label for slot management
 						if(i!=0){//Cantrips don't have slots
@@ -707,18 +723,95 @@ public class SpellBook {
 				slotPane.setHgap(10);
 				slotPane.setVgap(5);
 				preparedList.add(slotPane, 0, 0);
+			sp = new ScrollPane();
+			sp.setContent(preparedList);
+	      	grid.add(sp, 2, 3);
 
-				
-			//TODO - Daily panel
-			//TODO - note level of daily uses
-				//TODO - Note at wills
+
+			label = new Label(" Innate spells");	//TODO - Label for daily spells pane start.
+			grid.add(label, 2, 4);
+			innateListCounts = new HashMap<Integer, Integer>();
+			innateListSpellPickers = new HashMap<Integer, List<ChoiceBox<Spell>>>();
+			innateListSelfOnly = new HashMap<Integer, List<RadioButton>>();
+			innateListSpellLevel = new HashMap<Integer, List<ChoiceBox<Integer>>>();
+			dailyList = new GridPane();
+			dailyList.setHgap(5);
+			dailyList.setVgap(5);
+				for(int i=0; i<=3; i++){//Add row for each number of uses set.
+					innateListCounts.put(i, 0);
+					innateListSpellPickers.put(i, new ArrayList<ChoiceBox<Spell>>());
+					innateListSelfOnly.put(i, new ArrayList<RadioButton>());
+					innateListSpellLevel.put(i, new ArrayList<ChoiceBox<Integer>>());
+					
+					if(i!=0){label = new Label(" "+i+"/Day each:");}
+					else{label = new Label(" At Will:");}
+					dailyList.add(label, 0, i);
+					
+					Button newSpell = new Button("+");
+					dailyList.add(newSpell, 1, i);
+					
+					GridPane innateList = new GridPane();
+					innateList.setHgap(5);
+					sp = new ScrollPane();
+					sp.setContent(innateList);
+					dailyList.add(sp, 2, i);
+					
+					final int j = i;
+					newSpell.setOnAction(new EventHandler<ActionEvent>() {//Function for adding a spell
+						@Override public void handle(ActionEvent event) {
+							ChoiceBox<Spell> spell = new ChoiceBox<Spell>();//Set up spell selection
+							spell.setConverter(new StringConverter<Spell>() {
+								@Override public Spell fromString(String string) {return null;}
+								@Override public String toString(Spell object) {
+									if(object!=null){return object.getName();}
+									else{return "Spell";}
+								}});
+							spell.getItems().add(null);
+							spell.getItems().addAll(query);
+							spell.setValue(null);
+							innateList.add(spell, 0, innateListCounts.get(j));
+							innateListSpellPickers.get(j).add(spell);
+							
+							RadioButton selfOnly = new RadioButton("Self only");//Set up input for if self only
+							innateList.add(selfOnly, 1, innateListCounts.get(j));
+							innateListSelfOnly.get(j).add(selfOnly);
+							
+							ChoiceBox<Integer> levels = new ChoiceBox<Integer>(//Set up input for changing level
+									FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
+							levels.setConverter(new StringConverter<Integer>() {
+								@Override public Integer fromString(String string) {return null;}
+								@Override public String toString(Integer object) {
+									if(object==null){return "Cast Level";}else{return object.toString();}}});
+							levels.setValue(null);
+							innateList.add(levels, 2, innateListCounts.get(j));
+							innateListSpellLevel.get(j).add(levels);
+							
+							Button remove = new Button("x");//Remove the row.
+							innateList.add(remove, 3, innateListCounts.get(j));
+							remove.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {
+									innateListSpellPickers.get(j).remove(spell);
+									innateList.getChildren().remove(spell);
+									innateListSelfOnly.get(j).remove(selfOnly);
+									innateList.getChildren().remove(selfOnly);
+									innateListSpellLevel.get(j).remove(levels);
+									innateList.getChildren().remove(levels);
+									innateList.getChildren().remove(remove);
+								}
+							});
+							innateListCounts.put(j, innateListCounts.get(j)+1);
+						}
+					});
+				}
 			
-	      	grid.add(preparedList, 2, 3);
+			sp = new ScrollPane();
+			sp.setContent(dailyList);
+	      	grid.add(sp, 2, 5);
 
 	      	
 	    nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	    //make the window
-		secondaryStage.setScene(new Scene(grid, 1200, 600));
+		secondaryStage.setScene(new Scene(grid, 1200, 800));
 		secondaryStage.show();
 		return secondaryStage;
 	}
@@ -775,6 +868,7 @@ public class SpellBook {
 			//			<3(uses per day)>dancing lights, faerie fire (list of spells)</3>
 			//			<3>can have multiple of the some number of uses.</3>
 			//		</daily>
+			//TODO
 			
 			xml+="</spellbook>\n";
 			//Save the new spells.
@@ -798,6 +892,8 @@ public class SpellBook {
 			slots.put(i, loading.getPrepped(i));
 		}
 		//TODO - Daily uses
+		
+		//TODO
 		nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	}
 	

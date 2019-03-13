@@ -1500,7 +1500,8 @@ public class CreatureBuilder {
 			    				otherActNames.add(name);
 			    				effectsPanel.add(name, 0, otherActionCount);
 			    				ChoiceBox<String> limit = new ChoiceBox<String>(FXCollections.observableArrayList(null,
-			    						"1/Day","2/Day","3/Day","Recharge 4-6","Recharge 5-6","Recharge 6"));
+			    						"1/Day","2/Day","3/Day","Recharge 4-6","Recharge 5-6","Recharge 6",
+			    						"Recharges after a Short or Long Rest"));
 			    				limit.setValue(null);
 			    				otherActLimits.add(limit);
 			    				effectsPanel.add(limit, 1, otherActionCount);
