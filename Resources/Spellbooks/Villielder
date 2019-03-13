@@ -8,4 +8,10 @@
 		<4>2,Fabricate,Wall of fire</4>
 		<5>0,Animate objects,Creation</5>
 	</slot>
+	<daily>
+		<1>
+			<spell>Enlarge/Reduce,true</spell>
+			<spell>Invisibility,true</spell>
+		</1>
+	</daily>
 </spellbook>

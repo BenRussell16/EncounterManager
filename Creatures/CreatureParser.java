@@ -615,7 +615,7 @@ public class CreatureParser {
   								for(Skills s:Skills.values()){
   									if(getSkills().containsKey(s)){
 	  									if(!first){builtString += ", ";}
-	  									builtString += s.toString()+" ";
+	  									builtString += s.toNiceString()+" ";
 	  									if(getSkills().get(s)>=0){builtString += "+";}
 	  									builtString += getSkills().get(s);
 	  									first = false;
@@ -700,7 +700,7 @@ public class CreatureParser {
   							}
   							if(getInnateCasting()!=null){
   								builtString += "Innate Spellcasting. ";
-  								builtString += "This creatures spellcasting ability is "+getInnateCasting().getAbility().toNiceString();
+  								builtString += "This creatures innate spellcasting ability is "+getInnateCasting().getAbility().toNiceString();
   								if(getInnateCasting().getDC()!=null || getInnateCasting().getToHit()!=null){
   									builtString += " (";
   									if(getInnateCasting().getDC()!=null){
@@ -715,7 +715,7 @@ public class CreatureParser {
   									}
   									builtString += ")";
   								}
-  								builtString += ". This creature can innately cast the following spells, ";
+  								builtString += ". It can innately cast the following spells, ";
   								builtString += "requiring no material components:\n";
   								builtString += getInnateCasting().getSpellList().toString()+"\n\n";
   							}

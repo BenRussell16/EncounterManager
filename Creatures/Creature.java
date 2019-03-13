@@ -263,16 +263,28 @@ public interface Creature {
 				if(getLegendaryResistances()>0){builtString += "\t\t<legendaryresistance>"+getLegendaryResistances()+"</legendaryresistance>\n";}
 				if(getInnateCasting()!=null){builtString += "\t\t<innatecasting>";
 					builtString += getInnateCasting().getAbility().toString()+",";
-					builtString += getInnateCasting().getToHit().toString()+",";
-					builtString += getInnateCasting().getDC().toString()+",";
-					builtString += getInnateCasting().getLevel().toString()+",";
+					if(getInnateCasting().getToHit()!=null){
+						builtString += getInnateCasting().getToHit().toString();}
+						builtString += ",";
+					if(getInnateCasting().getDC()!=null){
+						builtString += getInnateCasting().getDC().toString();}
+						builtString += ",";
+					if(getInnateCasting().getLevel()!=null){
+						builtString += getInnateCasting().getLevel().toString();}
+						builtString += ",";
 					builtString += getInnateCasting().getFile().getName();
 					builtString += "</innatecasting>\n";}
 				if(getSpellcasting()!=null){builtString += "\t\t<spellcasting>";
 					builtString += getSpellcasting().getAbility().toString()+",";
-					builtString += getSpellcasting().getToHit().toString()+",";
-					builtString += getSpellcasting().getDC().toString()+",";
-					builtString += getSpellcasting().getLevel().toString()+",";
+					if(getSpellcasting().getToHit()!=null){
+						builtString += getSpellcasting().getToHit().toString();}
+						builtString += ",";
+					if(getSpellcasting().getDC()!=null){
+						builtString += getSpellcasting().getDC().toString();}
+						builtString += ",";
+					if(getSpellcasting().getLevel()!=null){
+						builtString += getSpellcasting().getLevel().toString();}
+						builtString += ",";
 					builtString += getSpellcasting().getFile().getName();
 					builtString += "</spellcasting>\n";}
 				for(String p:orderedPassives()){

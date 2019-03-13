@@ -1,0 +1,12 @@
+<spellbook>
+	<name>DrowMage</name>
+	<slot>
+		<known>Mage hand,Minor illusion,Poison spray,Ray of frost,Mage armour,Magic missile,Shield,Witch bolt,Alter self,Misty step,Web,Fly,Lightning bolt,Evard's black tentacles,Greater invisibility,Cloudkill</known>
+		<0>Mage hand,Minor illusion,Poison spray,Ray of frost</0>
+		<1>4,Mage armour,Magic missile,Shield,Witch bolt</1>
+		<2>3,Alter self,Misty step,Web</2>
+		<3>3,Fly,Lightning bolt</3>
+		<4>3,Evard's black tentacles,Greater invisibility</4>
+		<5>2,Cloudkill</5>
+	</slot>
+</spellbook>

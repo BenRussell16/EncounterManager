@@ -75,6 +75,35 @@
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Drow mage</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 10,INT 17,WIS 13,CHA 12</stats>
+	<skills>ARCANA 6,DECEPTION 5,PERCEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>ELVISH,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<innatecasting>CHA,,12,,DrowInnate</innatecasting>
+		<spellcasting>INT,6,14,10,DrowMage</spellcasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Staff,2,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands, plus 3 (1d6) poison damage.</attack>
+		<effect>Summon Demon,1/Day,The drow magically summons a quasit, or attempts to summon a shadow demon with a 50 percent chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. lt remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Iron Golem</name>
 	<size>LARGE</size>
 	<type>CONSTRUCT,false</type>

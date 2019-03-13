@@ -1177,8 +1177,8 @@ public class CreatureBuilder {
 									innateSpells = fileChooser.showOpenDialog(secondaryStage);
 									//Reset values
 									innateAbility.setValue(null);
-									innateMod.setText("0");
-									innateDC.setText("0");
+									innateMod.setText("");
+									innateDC.setText("");
 									//Set the curFile label
 									if(innateSpells == null){curInnate.setText("No file selected");}
 									else{curInnate.setText(innateSpells.getName());}
@@ -1249,8 +1249,8 @@ public class CreatureBuilder {
 									stdSpells = fileChooser.showOpenDialog(secondaryStage);
 									//Reset values
 									castAbility.setValue(null);
-									castMod.setText("0");
-									castDC.setText("0");
+									castMod.setText("");
+									castDC.setText("");
 									//Set the curFile label
 									if(stdSpells == null){curSpells.setText("No file selected");}
 									else{curSpells.setText(stdSpells.getName());}
@@ -1826,7 +1826,7 @@ public class CreatureBuilder {
 	  								for(Skills s:Skills.values()){
 	  									if(getSkills().containsKey(s)){
 		  									if(!first){builtString += ", ";}
-		  									builtString += s.toString()+" ";
+		  									builtString += s.toNiceString()+" ";
 		  									if(getSkills().get(s)>=0){builtString += "+";}
 		  									builtString += getSkills().get(s);
 		  									first = false;
@@ -1911,7 +1911,7 @@ public class CreatureBuilder {
 	  							}
 	  							if(getInnateCasting()!=null){
 	  								builtString += "Innate Spellcasting. ";
-	  								builtString += "This creatures spellcasting ability is "+getInnateCasting().getAbility().toNiceString();
+	  								builtString += "This creatures innate spellcasting ability is "+getInnateCasting().getAbility().toNiceString();
 	  								if(getInnateCasting().getDC()!=null || getInnateCasting().getToHit()!=null){
 	  									builtString += " (";
 	  									if(getInnateCasting().getDC()!=null){
@@ -1926,7 +1926,7 @@ public class CreatureBuilder {
 	  									}
 	  									builtString += ")";
 	  								}
-	  								builtString += ". This creature can innately cast the following spells, ";
+	  								builtString += ". It can innately cast the following spells, ";
 	  								builtString += "requiring no material components:\n";
 	  								builtString += getInnateCasting().getSpellList().toString()+"\n\n";
 	  							}
@@ -2068,14 +2068,14 @@ public class CreatureBuilder {
   						Spellcasting innate = null;
 	  						if(innateSpells!=null){
 	  							Integer toHit = null, DC = null;
-	  							if(innateMod.getText().length()>0){toHit = Integer.parseInt(innateMod.getText());}
-	  							if(innateDC.getText().length()>0){DC = Integer.parseInt(innateDC.getText());}
+	  							if(innateMod.getText()!=null && innateMod.getText().length()>0){toHit = Integer.parseInt(innateMod.getText());}
+	  							if(innateDC.getText()!=null && innateDC.getText().length()>0){DC = Integer.parseInt(innateDC.getText());}
 	  							innate = new Spellcasting(innateSpells, innateAbility.getValue(), toHit, DC, innateLevel.getValue(), spells);}
   						Spellcasting casting = null;
 	  						if(stdSpells!=null){
 	  							Integer toHit = null, DC = null;
-	  							if(castMod.getText().length()>0){toHit = Integer.parseInt(castMod.getText());}
-	  							if(castDC.getText().length()>0){DC = Integer.parseInt(castDC.getText());}
+	  							if(castMod.getText()!=null && castMod.getText().length()>0){toHit = Integer.parseInt(castMod.getText());}
+	  							if(castDC.getText()!=null && castDC.getText().length()>0){DC = Integer.parseInt(castDC.getText());}
 	  							casting = new Spellcasting(stdSpells, castAbility.getValue(), toHit, DC, castLevel.getValue(), spells);}
   						Map<String,String> passives = new HashMap<String,String>();
   							List<String> orderedPassives = new ArrayList<String>();
