@@ -1,4 +1,4 @@
-package src.Spells;
+package Spells;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,14 +7,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Scanner;
-import java.util.regex.Pattern;
 
 import Resources.Source;
 import Resources.Classes.Subclass;
-import Resources.Area;
+import Spells.Spell.School;
 import Resources.Classes;
-import src.Spells.Spell.School;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -40,7 +37,6 @@ public class SpellBook {
 		this.spells = spells;
 	}
 	
-	private TextField owner;
 	private TextField nameFilter;
 	private List<Spell> query;
 	private GridPane spellList;
@@ -62,6 +58,14 @@ public class SpellBook {
 		private Map<Integer, GridPane> levelPanes;
 		private List<Label> preppedNames;
 		private List<Button> unprep;
+		
+	private GridPane dailyList;
+		private Map<Integer, GridPane> innateLists;
+		private Map<Integer, Integer> innateListCounts;
+		private Map<Integer, List<ChoiceBox<Spell>>> innateListSpellPickers;
+		private Map<Integer, List<RadioButton>> innateListSelfOnly;
+		private Map<Integer, List<ChoiceBox<Integer>>> innateListSpellLevel;
+	
 	
 	public Stage makeDisplay() {
 		if(secondaryStage != null) {secondaryStage.close();}
@@ -200,19 +204,6 @@ public class SpellBook {
 							}else{return "No";}
 						}
 						return "Concentration";
-					}});
-				
-				//Area filter
-				ChoiceBox<Area> areaPicker = new ChoiceBox<Area>(FXCollections.observableArrayList());
-				areaPicker.getItems().add(null);
-				areaPicker.getItems().addAll(Area.values());
-				areaPicker.setValue(null);
-				areaPicker.setConverter(new StringConverter<Area>(){
-					@Override public Area fromString(String arg0) {return null;}
-					@Override public String toString(Area area) {
-						if(area != null){
-							return area.toNiceString();}
-						return "Area";
 					}});
 	
 				//Class filters
@@ -360,16 +351,6 @@ public class SpellBook {
 								if(knownQuery.contains(s)){knownQuery.remove(s);}
 							}
 						}
-						if(areaPicker.getValue()!=null) {//area of effect filter
-							List<Spell> toRemove = new ArrayList<Spell>();
-							for(Spell s:query) {
-								if(!(s.getArea()==areaPicker.getValue())) {
-									toRemove.add(s);}
-							}for(Spell s:toRemove) {
-								query.remove(s);
-								if(knownQuery.contains(s)){knownQuery.remove(s);}
-							}
-						}
 						
 						if(classPicker.getValue()!=null) {//class filter
 							List<Spell> toRemove = new ArrayList<Spell>();
@@ -398,6 +379,15 @@ public class SpellBook {
 
 						updateSpellList();
 						updateKnownList();
+						for(Integer i:innateListSpellPickers.keySet()){//TODO make this more efficient
+							for(ChoiceBox<Spell> cb:innateListSpellPickers.get(i)){
+								if(cb.getValue()==null){//Update query on innate spell selection.		TODO
+									cb.getItems().clear();
+									cb.getItems().add(null);
+									cb.getItems().addAll(query);
+								}
+							}
+						}
 					}
 				};
 				//Add filter inputs to panel, and set them up to apply when used.
@@ -417,11 +407,10 @@ public class SpellBook {
 				timePicker.setOnAction(filterQuery);				secondBar.add(timePicker, 1, 0);
 				ritualPicker.setOnAction(filterQuery);				secondBar.add(ritualPicker, 2, 0);
 				concPicker.setOnAction(filterQuery);				secondBar.add(concPicker, 3, 0);
-				areaPicker.setOnAction(filterQuery);				secondBar.add(areaPicker, 4, 0);
-				label = new Label("\t");							secondBar.add(label, 5, 0);
-				/*classPicker.setOnAction(filterQuery);*/			secondBar.add(classPicker, 6, 0);
-				subclassPicker.setOnAction(filterQuery);			secondBar.add(subclassPicker, 7, 0);
-				sourcePicker.setOnAction(filterQuery);				secondBar.add(sourcePicker, 8, 0);
+				label = new Label("\t");							secondBar.add(label, 4, 0);
+				/*classPicker.setOnAction(filterQuery);*/			secondBar.add(classPicker, 5, 0);
+				subclassPicker.setOnAction(filterQuery);			secondBar.add(subclassPicker, 6, 0);
+				sourcePicker.setOnAction(filterQuery);				secondBar.add(sourcePicker, 7, 0);
 	
 				classPicker.setOnAction(new EventHandler<ActionEvent>() {
 					//Set subclasses options based on selected class
@@ -531,7 +520,7 @@ public class SpellBook {
 	      	
 	      	sp.setContent(spellList);
 	      	sp.setMinSize(200, 0);
-	      	grid.add(sp,0,3);
+	      	grid.add(sp,0,3,1,3);
 
 	      	
 	      	
@@ -617,7 +606,7 @@ public class SpellBook {
 	  		
 	      	sp.setContent(knownList);
 	      	sp.setMinSize(250, 0);
-	      	grid.add(sp, 1, 3);
+	      	grid.add(sp, 1, 3, 1, 3);
 	      	
 	      	
 	      	
@@ -638,22 +627,22 @@ public class SpellBook {
 			levelPanes = new HashMap<Integer, GridPane>();
 			preppedNames = new ArrayList<Label>();
 			unprep = new ArrayList<Button>();
-			
+
 			preparedList = new GridPane();
 				GridPane slotPane = new GridPane();
 					//Header row.
-					label = new Label("Spell level");
+					label = new Label(" Spell level");
 					label.setMinWidth(60);
 					slotPane.add(label, 0, 0);
-					label = new Label("Slots");
+					label = new Label(" Slots");
 					slotPane.add(label, 1, 0, 2, 1);
-					label = new Label("Spell list");
+					label = new Label(" Spell list");
 					slotPane.add(label, 3, 0);
 					//Each spell level
 					for(int i=0; i<=9; i++){
 						//Level label
-						label = new Label("Level "+i);
-						if(i==0){label.setText("Cantrip");}
+						label = new Label(" Level "+i);
+						if(i==0){label.setText(" Cantrip");}
 						slotPane.add(label, 0, i+1);
 						//Slot management						//TODO - Label for slot management
 						if(i!=0){//Cantrips don't have slots
@@ -697,6 +686,7 @@ public class SpellBook {
 							});
 						}
 						//Spell list							//TODO - Label for prepared spell lists
+						sp = new ScrollPane();//allow scrolling around the spell list
 						GridPane preppedSpellList = new GridPane();
 					      	for(int j=0; j<spells.size(); j++) {
 					      		if(spells.get(j).getLevel()==i){
@@ -726,22 +716,105 @@ public class SpellBook {
 					      		}
 					      	}
 						levelPanes.put(i, preppedSpellList);
-						slotPane.add(preppedSpellList, 3, i+1);
+//						slotPane.add(preppedSpellList, 3, i+1);
+				      	sp.setContent(preppedSpellList);
+				      	sp.setMinHeight(40);
+				      	slotPane.add(sp,3,i+1);
 					}
 				slotPane.setHgap(10);
 				slotPane.setVgap(5);
 				preparedList.add(slotPane, 0, 0);
+			sp = new ScrollPane();
+			sp.setContent(preparedList);
+	      	grid.add(sp, 2, 3);
 
-				
-			//TODO - Daily panel
-			//TODO - note level of daily uses
+
+			label = new Label(" Innate spells");	//TODO - Label for daily spells pane start.
+			grid.add(label, 2, 4);
+			innateLists = new HashMap<Integer, GridPane>();
+			innateListCounts = new HashMap<Integer, Integer>();
+			innateListSpellPickers = new HashMap<Integer, List<ChoiceBox<Spell>>>();
+			innateListSelfOnly = new HashMap<Integer, List<RadioButton>>();
+			innateListSpellLevel = new HashMap<Integer, List<ChoiceBox<Integer>>>();
+			dailyList = new GridPane();
+			dailyList.setHgap(5);
+			dailyList.setVgap(5);
+				for(int i=0; i<=3; i++){//Add row for each number of uses set.
+					innateListCounts.put(i, 0);
+					innateListSpellPickers.put(i, new ArrayList<ChoiceBox<Spell>>());
+					innateListSelfOnly.put(i, new ArrayList<RadioButton>());
+					innateListSpellLevel.put(i, new ArrayList<ChoiceBox<Integer>>());
+					
+					if(i!=0){label = new Label(" "+i+"/Day each:");}
+					else{label = new Label(" At Will:");}
+					dailyList.add(label, 0, i);
+					
+					Button newSpell = new Button("+");
+					dailyList.add(newSpell, 1, i);
+					
+					GridPane innateList = new GridPane();
+					innateLists.put(i,innateList);
+					innateList.setHgap(5);
+					sp = new ScrollPane();
+					sp.setContent(innateList);
+					dailyList.add(sp, 2, i);
+					
+					final int j = i;
+					newSpell.setOnAction(new EventHandler<ActionEvent>() {//Function for adding a spell
+						@Override public void handle(ActionEvent event) {
+							ChoiceBox<Spell> spell = new ChoiceBox<Spell>();//Set up spell selection
+							spell.setConverter(new StringConverter<Spell>() {
+								@Override public Spell fromString(String string) {return null;}
+								@Override public String toString(Spell object) {
+									if(object!=null){return object.getName();}
+									else{return "Spell";}
+								}});
+							spell.getItems().add(null);
+							spell.getItems().addAll(query);
+							spell.setValue(null);
+							innateList.add(spell, 0, innateListCounts.get(j));
+							innateListSpellPickers.get(j).add(spell);
+							
+							RadioButton selfOnly = new RadioButton("Self only");//Set up input for if self only
+							innateList.add(selfOnly, 1, innateListCounts.get(j));
+							innateListSelfOnly.get(j).add(selfOnly);
+							
+							ChoiceBox<Integer> levels = new ChoiceBox<Integer>(//Set up input for changing level
+									FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
+							levels.setConverter(new StringConverter<Integer>() {
+								@Override public Integer fromString(String string) {return null;}
+								@Override public String toString(Integer object) {
+									if(object==null){return "Cast Level";}else{return object.toString();}}});
+							levels.setValue(null);
+							innateList.add(levels, 2, innateListCounts.get(j));
+							innateListSpellLevel.get(j).add(levels);
+							
+							Button remove = new Button("x");//Remove the row.
+							innateList.add(remove, 3, innateListCounts.get(j));
+							remove.setOnAction(new EventHandler<ActionEvent>() {
+								@Override public void handle(ActionEvent event) {
+									innateListSpellPickers.get(j).remove(spell);
+									innateList.getChildren().remove(spell);
+									innateListSelfOnly.get(j).remove(selfOnly);
+									innateList.getChildren().remove(selfOnly);
+									innateListSpellLevel.get(j).remove(levels);
+									innateList.getChildren().remove(levels);
+									innateList.getChildren().remove(remove);
+								}
+							});
+							innateListCounts.put(j, innateListCounts.get(j)+1);
+						}
+					});
+				}
 			
-	      	grid.add(preparedList, 2, 3);
+			sp = new ScrollPane();
+			sp.setContent(dailyList);
+	      	grid.add(sp, 2, 5);
 
 	      	
 	    nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	    //make the window
-		secondaryStage.setScene(new Scene(grid, 1200, 500));
+		secondaryStage.setScene(new Scene(grid, 1200, 800));
 		secondaryStage.show();
 		return secondaryStage;
 	}
@@ -768,36 +841,60 @@ public class SpellBook {
 			String xml = "<spellbook>\n";
 			xml+="\t<name>"+file.getName()+"</name>\n";
 			
-			xml+="\t<slot>\n";//Slot based spells
-			xml+="\t\t<known>";//Known spells
-			boolean first = true;
-			for(Spell s:known){
-				if(!first){xml+=",";}
-				else{first = false;}
-				xml+=s.getName();
-			}
-			xml+="</known>\n";
-			
-			for(int i=0; i<=9;i++){//Prepared spells
-				if(!slots.get(i).isEmpty() || (i!=0 && slotCounts.get(i).getValue()>0)){//only make an entry if that level has slots or spells
-					xml+="\t\t<"+i+">";
-					if(i!=0){xml+=slotCounts.get(i).getValue()+",";}//Cantrips dont have slots.
-					first = true;
-					for(Spell s:slots.get(i)){
-						if(!first){xml+=",";}
-						else{first = false;}
-						xml+=s.getName();
-					}
-					xml+="</"+i+">\n";
+			boolean usesSlots = false;//Check if the spellbook uses slots
+			usesSlots = usesSlots || !known.isEmpty();
+			for(Integer i:slots.keySet()){usesSlots = usesSlots || !slots.get(i).isEmpty();}
+			for(Integer i:slotCounts.keySet()){usesSlots = usesSlots || slotCounts.get(i).getValue()>0;}
+			if(usesSlots){
+				xml+="\t<slot>\n";//Slot based spells
+				xml+="\t\t<known>";//Known spells
+				boolean first = true;
+				for(Spell s:known){
+					if(!first){xml+=",";}
+					else{first = false;}
+					xml+=s.getName();
 				}
+				xml+="</known>\n";
+				
+				for(int i=0; i<=9;i++){//Prepared spells
+					if(!slots.get(i).isEmpty() || (i!=0 && slotCounts.get(i).getValue()>0)){//only make an entry if that level has slots or spells
+						xml+="\t\t<"+i+">";
+						if(i!=0){xml+=slotCounts.get(i).getValue()+",";}//Cantrips dont have slots.
+						first = true;
+						for(Spell s:slots.get(i)){
+							if(!first){xml+=",";}
+							else{first = false;}
+							xml+=s.getName();
+						}
+						xml+="</"+i+">\n";
+					}
+				}
+				xml+="\t</slot>\n";
 			}
-			xml+="\t</slot>\n";
 			
-			//TODO - Daily uses
-			//		<daily>
-			//			<3(uses per day)>dancing lights, faerie fire (list of spells)</3>
-			//			<3>can have multiple of the some number of uses.</3>
-			//		</daily>
+			boolean usesDaily = false;//Check if the book uses daily spells
+			for(Integer i:innateListSpellPickers.keySet()){usesDaily = usesDaily || !innateListSpellPickers.get(i).isEmpty();}
+			if(usesDaily){
+				xml+="\t<daily>\n";//Add daily spells
+				for(int i=0; i<innateListSpellPickers.keySet().size(); i++){
+					if(!innateListSpellPickers.get(i).isEmpty()){
+						xml+="\t\t<"+i+">\n";//Group by number of uses
+						for(int j=0; j<innateListSpellPickers.get(i).size(); j++){
+							if(innateListSpellPickers.get(i).get(j).getValue()!=null){//If a spell is selected, add it
+								xml+="\t\t\t<spell>";
+								xml+=innateListSpellPickers.get(i).get(j).getValue().getName()+",";//Add spell name
+								xml+=innateListSelfOnly.get(i).get(j).isSelected();//Add if self only
+								if(innateListSpellLevel.get(i).get(j).getValue()!=null){
+									xml+=","+innateListSpellLevel.get(i).get(j).getValue();//If a spell level is selected, add it
+								}
+								xml+="</spell>\n";
+							}
+						}
+						xml+="\t\t</"+i+">\n";
+					}
+				}
+				xml+="\t</daily>\n";
+			}
 			
 			xml+="</spellbook>\n";
 			//Save the new spells.
@@ -811,87 +908,75 @@ public class SpellBook {
 	}
 
 	public void loadBook(){							//TODO - Label for book loading
-		FileChooser fileChooser = new FileChooser();
-		fileChooser.setInitialDirectory(new File("Resources/Spellbooks/"));
-		File file = fileChooser.showOpenDialog(secondaryStage);
-		
-		if(file!=null){
-			Scanner scan;
-			System.out.println("Loading spellbook for "+file.getName());
-			try {
-				scan = new Scanner(file);
-				scan.useDelimiter("<|>|\n|\t| |,");
-				while(scan.hasNext()) {
-					if(scan.hasNext("spellbook")) {
-						//Setting fields to store spell values.
-						List<Spell> knownspells = new ArrayList<Spell>();
-						Map<Integer, Integer> numSlots = new HashMap<Integer,Integer>();
-							for(int i=1; i<=9; i++){numSlots.put(i, 0);}
-						Map<Integer, List<Spell>> preparedSpells = new HashMap<Integer,List<Spell>>();
-							for(int i=0; i<=9; i++){preparedSpells.put(i, new ArrayList<Spell>());};
-						
-						//Parse the spellbook.
-						while(!scan.hasNext("/spellbook")) {
-							if(scan.hasNext("name")){//Skip the name, it's there for human readers
-								while(!scan.hasNext("/name")){scan.next();}
-							}else if(scan.hasNext("slot")){
-								scan.next();
-								while(!scan.hasNext("/slot")){//Parse the slot based spells
-									if(scan.hasNext("known")){
-										scan.next();
-										Pattern oldDelimiter = scan.delimiter();
-										scan.useDelimiter(">|<|,");
-										List<String> knowns = new ArrayList<String>();
-										while(!scan.hasNext("/known")){//Read known spells
-											knowns.add(scan.next());
-										}
-										scan.useDelimiter(oldDelimiter);
-										for(Spell s:spells){//Translate names to spells
-											if(knowns.contains(s.getName())){
-												knownspells.add(s);
-											}
-										}
-										
-									}else if(scan.hasNextInt()){
-										int level = scan.nextInt();//Read level, and if not cantrip read number of slots
-										if(level!=0){numSlots.put(level, scan.nextInt());}
-										Pattern oldDelimiter = scan.delimiter();
-										scan.useDelimiter(">|<|,");
-										List<String> prepped = new ArrayList<String>();
-										while(!scan.hasNext("/"+level)){//Read prepared spells
-											prepped.add(scan.next());
-										}
-										scan.useDelimiter(oldDelimiter);
-										for(Spell s:spells){//Translate names to spells
-											if(prepped.contains(s.getName())){
-												preparedSpells.get(level).add(s);
-											}
-										}
-										scan.next();
-									}else {scan.next();}
-								}
-							}else{scan.next();}
-						}
-						
-						//Apply the data to the window
-						known = knownspells;
-						for(int i=0; i<=9; i++){
-							if(i!=0){
-								slotCounts.get(i).setValue(numSlots.get(i));
-							}
-							slots.put(i, preparedSpells.get(i));
-						}
-					}
-					scan.next();
-				}//where parsing ends
-				scan.close();
-				System.out.println("Spellbook loading complete");
-				nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
-			} catch (FileNotFoundException e) {
-				System.out.println("Spellbook loading failed");
-				e.printStackTrace();
+		SpellBookInstance loading = new SpellBookInstance(secondaryStage, spells);
+		//Apply the data to the window
+		known = loading.getKnown();
+		for(int i=0; i<=9; i++){
+			if(i!=0){
+				slotCounts.get(i).setValue(loading.getSlots(i));
 			}
-		}else{System.out.println("Spellbook loading failed");}
+			slots.put(i, loading.getPrepped(i));
+		}
+
+		innateListSpellPickers = new HashMap<Integer, List<ChoiceBox<Spell>>>();
+		innateListSelfOnly = new HashMap<Integer, List<RadioButton>>();
+		innateListSpellLevel = new HashMap<Integer, List<ChoiceBox<Integer>>>();
+		for(int i=0; i<=3; i++){
+			innateLists.get(i).getChildren().clear();
+			innateListSpellPickers.put(i, new ArrayList<ChoiceBox<Spell>>());
+			innateListSelfOnly.put(i, new ArrayList<RadioButton>());
+			innateListSpellLevel.put(i, new ArrayList<ChoiceBox<Integer>>());
+			List<Spell> innatespells = loading.getDaily(i);
+			if(!innatespells.isEmpty()){
+				for(Spell s:innatespells){
+					//TODO - setup the input rows
+					ChoiceBox<Spell> spell = new ChoiceBox<Spell>();//Set up spell selection
+					spell.setConverter(new StringConverter<Spell>() {
+						@Override public Spell fromString(String string) {return null;}
+						@Override public String toString(Spell object) {
+							if(object!=null){return object.getName();}
+							else{return "Spell";}
+						}});
+					spell.getItems().add(null);
+					spell.getItems().add(s);
+					spell.setValue(s);
+					innateLists.get(i).add(spell, 0, innateListCounts.get(i));
+					innateListSpellPickers.get(i).add(spell);
+					
+					RadioButton selfOnly = new RadioButton("Self only");//Set up input for if self only
+					selfOnly.setSelected(loading.isSelfOnly(i, s));
+					innateLists.get(i).add(selfOnly, 1, innateListCounts.get(i));
+					innateListSelfOnly.get(i).add(selfOnly);
+					
+					ChoiceBox<Integer> levels = new ChoiceBox<Integer>(//Set up input for changing level
+							FXCollections.observableArrayList(null,0,1,2,3,4,5,6,7,8,9));
+					levels.setConverter(new StringConverter<Integer>() {
+						@Override public Integer fromString(String string) {return null;}
+						@Override public String toString(Integer object) {
+							if(object==null){return "Cast Level";}else{return object.toString();}}});
+					levels.setValue(loading.levelCastAt(i, s));
+					innateLists.get(i).add(levels, 2, innateListCounts.get(i));
+					innateListSpellLevel.get(i).add(levels);
+
+					final int j = i;
+					Button remove = new Button("x");//Remove the row.
+					innateLists.get(i).add(remove, 3, innateListCounts.get(i));
+					remove.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {
+							innateListSpellPickers.get(j).remove(spell);
+							innateLists.get(j).getChildren().remove(spell);
+							innateListSelfOnly.get(j).remove(selfOnly);
+							innateLists.get(j).getChildren().remove(selfOnly);
+							innateListSpellLevel.get(j).remove(levels);
+							innateLists.get(j).getChildren().remove(levels);
+							innateLists.get(j).getChildren().remove(remove);
+						}
+					});
+					innateListCounts.put(i, innateListCounts.get(i)+1);
+				}
+			}
+		}
+		nameFilter.getOnAction().handle(null);//Update filtered list with the new spell
 	}
 	
 	

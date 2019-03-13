@@ -1,4 +1,4 @@
-package src.Spells;
+package Spells;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,7 +12,7 @@ import Resources.Source;
 import Resources.Area;
 import Resources.Classes;
 import Resources.Classes.Subclass;
-import src.Spells.Spell.School;
+import Spells.Spell.School;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -232,19 +232,6 @@ public class SpellBuilder {
 						}
 						return "Concentration";
 					}});
-				
-				//Area filter
-				ChoiceBox<Area> areaPicker = new ChoiceBox<Area>(FXCollections.observableArrayList());
-				areaPicker.getItems().add(null);
-				areaPicker.getItems().addAll(Area.values());
-				areaPicker.setValue(null);
-				areaPicker.setConverter(new StringConverter<Area>(){
-					@Override public Area fromString(String arg0) {return null;}
-					@Override public String toString(Area area) {
-						if(area != null){
-							return area.toNiceString();}
-						return "Area";
-					}});
 
 				//Class filters
 				ChoiceBox<Classes> classPicker = new ChoiceBox<Classes>(FXCollections.observableArrayList());
@@ -359,13 +346,6 @@ public class SpellBuilder {
 									toRemove.add(s);}
 							}for(Spell s:toRemove) {query.remove(s);}
 						}
-						if(areaPicker.getValue()!=null) {//area of effect filter
-							List<Spell> toRemove = new ArrayList<Spell>();
-							for(Spell s:query) {
-								if(!(s.getArea()==areaPicker.getValue())) {
-									toRemove.add(s);}
-							}for(Spell s:toRemove) {query.remove(s);}
-						}
 						
 						if(classPicker.getValue()!=null) {//class filter
 							List<Spell> toRemove = new ArrayList<Spell>();
@@ -406,11 +386,10 @@ public class SpellBuilder {
 				timePicker.setOnAction(filterQuery);		secondBar.add(timePicker, 1, 0);
 				ritualPicker.setOnAction(filterQuery);		secondBar.add(ritualPicker, 2, 0);
 				concPicker.setOnAction(filterQuery);		secondBar.add(concPicker, 3, 0);
-				areaPicker.setOnAction(filterQuery);		secondBar.add(areaPicker, 4, 0);
-				label = new Label("\t");					secondBar.add(label, 5, 0);
-				/*classPicker.setOnAction(filterQuery);*/	secondBar.add(classPicker, 6, 0);
-				subclassPicker.setOnAction(filterQuery);	secondBar.add(subclassPicker, 7, 0);
-				sourcePicker.setOnAction(filterQuery);		secondBar.add(sourcePicker, 8, 0);
+				label = new Label("\t");					secondBar.add(label, 4, 0);
+				/*classPicker.setOnAction(filterQuery);*/	secondBar.add(classPicker, 5, 0);
+				subclassPicker.setOnAction(filterQuery);	secondBar.add(subclassPicker, 6, 0);
+				sourcePicker.setOnAction(filterQuery);		secondBar.add(sourcePicker, 7, 0);
 
 				classPicker.setOnAction(new EventHandler<ActionEvent>() {
 					//Set subclasses options based on selected class
@@ -456,12 +435,12 @@ public class SpellBuilder {
 	      		spellList.add(label, 1, i+1);
 	      	}
 	      	sp.setContent(spellList);
-	      	sp.setMinSize(250, 0);
 	      	grid.add(sp,0,2);
 
 	      	
 	      	
 	      	//2nd pane for spell addition						//TODO - Label for pane 2
+	      	sp = new ScrollPane();//Allow scrolling for smaller screens
 	      	curSpell = new GridPane();
 	      	curSpell.setHgap(10);
 			curSpell.setVgap(5);
@@ -499,7 +478,7 @@ public class SpellBuilder {
 	      	curSpell.add(schoolSelect, 1, layer);
 	      	layer++;
 	      	
-	      	//components
+	      	//Components
 	      	label = new Label(" Components");
 	      	curSpell.add(label, 0, layer);
 	      	GridPane componentsBar = new GridPane();
@@ -534,7 +513,7 @@ public class SpellBuilder {
 	      	curSpell.add(componentsBar, 1, layer);
 	      	layer++;
 	      	
-	      	//times
+	      	//Times
 	      	label = new Label(" Cast time");
 	      	curSpell.add(label, 0, layer);
 	      	GridPane timePanel = new GridPane();
@@ -549,11 +528,12 @@ public class SpellBuilder {
 	      	//Duration
 	      	label = new Label("\tDuration");
 	      	timePanel.add(label, 2, 0);
-	      	//arbitrary duration skipped
 	      	durationSelect = new ChoiceBox<String>(FXCollections.observableArrayList());
 	      	durationSelect.getItems().addAll(null,"Instantaneous","1 Round","6 Rounds","1 Minute","10 Minutes",
 	      			"1 Hour","2 Hours","8 Hours","24 Hours","1 Day","7 Days","10 Days","30 Days",
 	      			"Special","Until Dispelled","Until Dispelled or Triggered");
+	      	durationSelect.setOnAction(new EventHandler<ActionEvent>() {
+				@Override public void handle(ActionEvent event) {concSelect.setSelected(false);}});
 	      	durationSelect.setValue(null);
 	      	timePanel.add(durationSelect, 3, 0);
 	      	concSelect = new RadioButton("Concentration");
@@ -956,6 +936,7 @@ public class SpellBuilder {
 					System.out.println("Adding spell "+newSpell.getName());
 		      			Label label = new Label(" "+newSpell.getName());
 		      			Tooltip toolTip = new Tooltip(newSpell.toString());
+		      			toolTip.setWrapText(true);
 			      		toolTip.setMaxWidth(600);
 		      			label.setTooltip(toolTip);
 		      			names.add(label);
@@ -971,7 +952,8 @@ public class SpellBuilder {
 	      	//The widest part of the first column, so this min width should apply to the column.
 			curSpell.add(add, 0, layer);
 	      	
-	      	grid.add(curSpell, 1, 2);
+	      	sp.setContent(curSpell);
+	      	grid.add(sp,1,2);
 
 	      	
 	      	
