@@ -1,5 +1,7 @@
 package Encounters;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.util.List;
 
 import Creatures.Creature;
@@ -15,7 +17,9 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.GridPane;
+import javafx.util.Duration;
 import javafx.stage.Stage;
 
 @SuppressWarnings("restriction")
@@ -128,6 +132,7 @@ public class EncounterManager extends Application{
         
         primaryStage.setScene(new Scene(grid, 600, 500));
         primaryStage.show();
+        setupCustomTooltipBehavior(0,100000000,0);
 	}
 
 //	public void showEncounter(List<EncounterEntity> encounter) {//TODO this
@@ -326,4 +331,52 @@ public class EncounterManager extends Application{
 //	private void saveEncounter(List<EncounterEntity> encounter){
 //		//TODO this
 //	}
+	
+	
+
+@SuppressWarnings({ "rawtypes", "unchecked" })
+private void setupCustomTooltipBehavior(int openDelayInMillis, int visibleDurationInMillis, int closeDelayInMillis) {
+        try {
+             
+            Class TTBehaviourClass = null;
+            Class<?>[] declaredClasses = Tooltip.class.getDeclaredClasses();
+            for (Class c:declaredClasses) {
+                if (c.getCanonicalName().equals("javafx.scene.control.Tooltip.TooltipBehavior")) {
+                    TTBehaviourClass = c;
+                    break;
+                }
+            }
+            if (TTBehaviourClass == null) {
+                // abort
+                return;
+            }
+            Constructor constructor = TTBehaviourClass.getDeclaredConstructor(
+                    Duration.class, Duration.class, Duration.class, boolean.class);
+            if (constructor == null) {
+                // abort
+                return;
+            }
+            constructor.setAccessible(true);
+            Object newTTBehaviour = constructor.newInstance(
+                    new Duration(openDelayInMillis), new Duration(visibleDurationInMillis), 
+                    new Duration(closeDelayInMillis), false);
+            if (newTTBehaviour == null) {
+                // abort
+                return;
+            }
+            Field ttbehaviourField = Tooltip.class.getDeclaredField("BEHAVIOR");
+            if (ttbehaviourField == null) {
+                // abort
+                return;
+            }
+            ttbehaviourField.setAccessible(true);
+             
+            // Cache the default behavior if needed.
+            Object defaultTTBehavior = ttbehaviourField.get(Tooltip.class);
+            ttbehaviourField.set(Tooltip.class, newTTBehaviour);
+             
+        } catch (Exception e) {
+            System.out.println("Aborted setup due to error:" + e.getMessage());
+        }
+    }
 }
