@@ -87,7 +87,7 @@ You choose nonmagical flame that you can see within range and that fits within a
  - You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.
  - You instantaneously extinguish the flames within the cube.
  - You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.
- - You cause simple shapes—such as the vague form of a creature, an inanimate object, or a location—to appear within the flames and animate as you like. The shapes last for 1 hour.
+ - You cause simple shapes such as the vague form of a creature, an inanimate object, or a location to appear within the flames and animate as you like. The shapes last for 1 hour.
 If you cast this spell multiple times, you can have up to three of its non-instantaneous effects active at a time, and you can dismiss such an effect as an action.
 	</effect>
 	<classes>DRUID,SORCERER,WIZARD</classes>
@@ -2418,7 +2418,7 @@ You touch a willing creature. Until the spell ends, the target's skin has a roug
 	<area>SINGLE,5</area>
 	<effect>
 You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses.
-While perceiving through the beast's senses, you gain the benefìts of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings.
+While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings.
 	</effect>
 	<classes>DRUID,RANGER</classes>
 	<source>PLAYERSHANDBOOK</source>
@@ -4499,7 +4499,7 @@ At Higher Levels. When you cast this spell using a spell slot of 4th level or hi
 The next time you make a ranged weapon attack during the spell's duration, the weapon's ammunition, or the weapon itself if it's a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes 4d8 lightning damage on a hit, or half as much damage on a miss, instead of the weapon's normal damage.
 Whether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes 2d8 lightning damage on a failed save, or half as much damage on a successful one.
 The piece of ammunition or weapon then returns to its normal form.
-At Hìgher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage for both effects ofthe spell increases by 1d8 for each slot level above 3rd.
+At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the damage for both effects ofthe spell increases by 1d8 for each slot level above 3rd.
 	</effect>
 	<classes>RANGER</classes>
 	<source>PLAYERSHANDBOOK</source>
@@ -4631,7 +4631,7 @@ Minor physical damage to the stone doesn't harm you, but its partial destruction
 	<duration>true,10 Minutes</duration>
 	<area>SELF</area>
 	<effect>
-You create six tiny meteors in your space. They float in the air and orbit you for the spell's duration. When you cast the spell—and as a bonus action on each of your turns thereafter—you can expend one or two of the meteors, sending them streaking toward a point or points you choose within 120 feet of you. Once a meteor reaches its destination or impacts against a solid surface, the meteor explodes. Each creature within 5 feet of the point where the meteor explodes must make a Dexterity saving throw. A creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one.
+You create six tiny meteors in your space. They float in the air and orbit you for the spell's duration. When you cast the spell and as a bonus action on each of your turns thereafter you can expend one or two of the meteors, sending them streaking toward a point or points you choose within 120 feet of you. Once a meteor reaches its destination or impacts against a solid surface, the meteor explodes. Each creature within 5 feet of the point where the meteor explodes must make a Dexterity saving throw. A creature takes 2d6 fire damage on a failed save, or half as much damage on a successful one.
 At Higher Levels. When you cast this spell using a spell slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd.
 	</effect>
 	<classes>SORCERER,WIZARD</classes>
@@ -6969,7 +6969,7 @@ At Higher Levels. When you cast this spell using a spell slot of 6th level or hi
 	<effect>
 Name or describe a person, place, or object. The spell brings to your mind a brief summary of the significant lore about the thing you named. The lore might consist of current tales, forgotten stories, or even secret lore that has never been widely known. If the thing you named isn't of legendary importance, you gain no information. The more information you already have about the thing, the more precise and detailed the information you receive is.
 
-The information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: “Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips."
+The information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips."
 	</effect>
 	<classes>BARD,CLERIC,WIZARD</classes>
 	<subclasses>KNOWLEDGE,UNDYING</subclasses>
@@ -9106,7 +9106,7 @@ Familiarity. "Permanent circle" means a permanent teleportation circle whose sig
 
 On Target. You and your group (or the target object) appear where you want to.
 
-Off Target. You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 × 1d10 percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The GM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble.
+Off Target. You and your group (or the target object) appear a random distance away from the destination in a random direction. Distance off target is 1d10 x 1d10 percent of the distance that was to be traveled. For example, if you tried to travel 120 miles, landed off target, and rolled a 5 and 3 on the two d10s, then you would be off target by 15 percent, or 18 miles. The GM determines the direction off target randomly by rolling a d8 and designating 1 as north, 2 as northeast, 3 as east, and so on around the points of the compass. If you were teleporting to a coastal city and wound up 18 miles out at sea, you could be in trouble.
 
 Similar Area. You and your group (or the target object) wind up in a different area that's visually or thematically similar to the target area. If you are heading for your home laboratory, for example, you might wind up in another wizard's laboratory or in an alchemical supply shop that has many of the same tools and implements as your laboratory. Generally, you appear in the closest similar place, but since the spell has no range limit, you could conceivably wind up anywhere on the plane.
 
@@ -9297,7 +9297,7 @@ At any time after the clone matures, if the original creature dies, its soul tra
 	<effect>
 You take control of the weather within 5 miles of you for the duration. You must be outdoors to cast this spell. Moving to a place where you don't have a clear path to the sky ends the spell early.
 
-When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 × 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.
+When you cast the spell, you change the current weather conditions, which are determined by the DM based on the climate and season. You can change precipitation, temperature, and wind. It takes 1d4 x 10 minutes for the new conditions to take effect. Once they do so, you can change the conditions again. When the spell ends, the weather gradually returns to normal.
 
 When you change the weather conditions, find a current condition on the following tables and change its stage by one, up or down. When changing the wind, you can change its direction.
 
@@ -9392,7 +9392,7 @@ When you cast this spell and at the end of each turn you spend concentrating on 
 
 This spell can have additional effects depending on the terrain in the area, as determined by the GM.
 
-Fissures. Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the GM. Each is 1d10 × 10 feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.
+Fissures. Fissures open throughout the spell's area at the start of your next turn after you cast the spell. A total of 1d6 such fissures open in locations chosen by the GM. Each is 1d10 x 10 feet deep, 10 feet wide, and extends from one edge of the spell's area to the opposite side. A creature standing on a spot where a fissure opens must succeed on a Dexterity saving throw or fall in. A creature that successfully saves moves with the fissure's edge as it opens.
 
 A fissure that opens beneath a structure causes it to automatically collapse (see below).
 
@@ -9981,7 +9981,7 @@ Round 3. You call six bolts of lightning from the cloud to strike six creatures 
 
 Round 4. Hailstones rain down from the cloud. Each creature under the cloud takes 2d6 bludgeoning damage.
 
-Round 5–10. Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes 1d6 cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical.
+Round 5-10. Gusts and freezing rain assail the area under the cloud. The area becomes difficult terrain and is heavily obscured. Each creature there takes 1d6 cold damage. Ranged weapon attacks in the area are impossible. The wind and rain count as a severe distraction for the purposes of maintaining concentration on spells. Finally, gusts of strong wind (ranging from 20 to 50 miles per hour) automatically disperse fog, mists, and similar phenomena in the area, whether mundane or magical.
 	</effect>
 	<classes>DRUID</classes>
 	<source>PLAYERSHANDBOOK</source>
