@@ -1,0 +1,7 @@
+<encounter>
+	<name>Test</name>
+	<creature>5,Cult Fanatic</creature>
+	<creature>5,Bandit Captain</creature>
+	<mult>Custom multiplier,1.0,2.0,3.0,4.0,5.0,6.0</mult>
+	<party>8,10,6</party>
+</encounter>

@@ -1,9 +1,13 @@
 package Encounters;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
 import Creatures.Creature;
 import Creatures.Creature.Alignment;
@@ -15,6 +19,7 @@ import Creatures.Creature.Speeds;
 import Creatures.Creature.Type;
 import Resources.Source;
 import javafx.scene.layout.GridPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import javafx.beans.value.ChangeListener;
@@ -26,6 +31,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Toggle;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.Button;
@@ -63,15 +69,11 @@ public class EncounterBuilder {
 		{2800,5700,8500,12700}//20
 	};
 	private Stage secondaryStage = null;
-	private EncounterManager mainWindow;
 	
-	public EncounterBuilder(List<Creature> creatures, EncounterManager main) {
+	public EncounterBuilder(List<Creature> creatures) {
 		this.creatures = creatures;
 		built = new HashMap<Creature,Integer>();
 		for(Creature c:creatures) {built.put(c, 0);}
-		
-		mainWindow = main;
-		
 		multipliers = new HashMap<String,double[]>();
 		double[] x1 = {1,1,1,1,1,1};
 		multipliers.put("x1", x1);
@@ -96,12 +98,12 @@ public class EncounterBuilder {
 	}
 	private int postMultValue() {
 		int value = encounterValue();
-		if(encounterSize()==1) {value*=multipliers.get(radios.getSelectedToggle().toString().split("\'")[1])[0];}
-		else if(encounterSize()==2) {value*=multipliers.get(radios.getSelectedToggle().toString().split("\'")[1])[1];}
-		else if(encounterSize()<=6) {value*=multipliers.get(radios.getSelectedToggle().toString().split("\'")[1])[2];}
-		else if(encounterSize()<=10) {value*=multipliers.get(radios.getSelectedToggle().toString().split("\'")[1])[3];}
-		else if(encounterSize()<=14) {value*=multipliers.get(radios.getSelectedToggle().toString().split("\'")[1])[4];}
-		else {value*=multipliers.get(radios.getSelectedToggle().toString().split("\'")[1])[5];}
+		if(encounterSize()==1) {value*=multipliers.get(multSelect.getSelectedToggle().toString().split("\'")[1])[0];}
+		else if(encounterSize()==2) {value*=multipliers.get(multSelect.getSelectedToggle().toString().split("\'")[1])[1];}
+		else if(encounterSize()<=6) {value*=multipliers.get(multSelect.getSelectedToggle().toString().split("\'")[1])[2];}
+		else if(encounterSize()<=10) {value*=multipliers.get(multSelect.getSelectedToggle().toString().split("\'")[1])[3];}
+		else if(encounterSize()<=14) {value*=multipliers.get(multSelect.getSelectedToggle().toString().split("\'")[1])[4];}
+		else {value*=multipliers.get(multSelect.getSelectedToggle().toString().split("\'")[1])[5];}
 		return value;
 	}
 	private int encounterSize() {
@@ -122,7 +124,7 @@ public class EncounterBuilder {
 	private List<Label> fieldTags;
 	private GridPane multiplierTable;
 	private TextField[] customMults = new TextField[6];
-	private ToggleGroup radios = new ToggleGroup();
+	private ToggleGroup multSelect = new ToggleGroup();
 	private List<Button> party;
 	private ChoiceBox<Integer> levelPicker;
 	
@@ -143,29 +145,19 @@ public class EncounterBuilder {
 			
 			//TODO build queries
 			GridPane topBar = new GridPane();
-				Button export = new Button("Export encounter");
+				Button export = new Button("Save encounter");
 				export.setOnAction(new EventHandler<ActionEvent>() {
-					@Override
-					public void handle(ActionEvent event) {
-//						System.out.println("Exporting encounter");
-//						List<EncounterEntity> encounter = new ArrayList<EncounterEntity>();
-//						for(Creature c:creatures) {
-//							if(built.get(c)==1) {
-//								encounter.add(new EncounterEntity(c,c.getName()));
-//							}else {
-//								for(int i=0; i<built.get(c); i++) {
-//									encounter.add(new EncounterEntity(c,c.getName()+" "+(i+1)));
-//								}
-//							}
-//						}
-//						secondaryStage.close();
-						//mainWindow.showEncounter(encounter);
-					}
-				});
+					@Override public void handle(ActionEvent event) {
+						saveEncounter();}});
 				topBar.add(export, 0, 0);
+				Button load = new Button("Load encounter");
+				load.setOnAction(new EventHandler<ActionEvent>() {
+					@Override public void handle(ActionEvent event) {
+						loadEncounter();}});
+				topBar.add(load, 1, 0);
 				
 			
-				Label label = new Label("\t\t");topBar.add(label, 1, 0);
+				Label label = new Label("\t\t");topBar.add(label, 2, 0);
 				TextField nameFilter = new TextField();
 
 					ChoiceBox<Double> crFilter = new ChoiceBox<Double>(FXCollections.observableArrayList(
@@ -507,20 +499,20 @@ public class EncounterBuilder {
 					};
 					//Add filter inputs to panel, and set them up to apply when used.
 																	//TODO - Label for adding filters.
-					nameFilter.setOnAction(filterQuery);			topBar.add(nameFilter, 2, 0);
-					crFilter.setOnAction(filterQuery);				topBar.add(crFilter, 3, 0);
-					upperCRFilter.setOnAction(filterQuery);			topBar.add(upperCRFilter, 4, 0);
-					label = new Label("\t");						topBar.add(label, 5, 0);
-					typeFilter.setOnAction(filterQuery);			topBar.add(typeFilter, 6, 0);
-					subtypeFilter.setOnAction(filterQuery);			topBar.add(subtypeFilter, 7, 0);
-					label = new Label("\t");						topBar.add(label, 8, 0);
-					legResfilter.setOnAction(filterQuery);			topBar.add(legResfilter, 9, 0);
-					legActfilter.setOnAction(filterQuery);			topBar.add(legActfilter, 10, 0);
-					lairfilter.setOnAction(filterQuery);			topBar.add(lairfilter, 11, 0);
-					castfilter.setOnAction(filterQuery);			topBar.add(castfilter, 12, 0);
+					nameFilter.setOnAction(filterQuery);			topBar.add(nameFilter, 3, 0);
+					crFilter.setOnAction(filterQuery);				topBar.add(crFilter, 4, 0);
+					upperCRFilter.setOnAction(filterQuery);			topBar.add(upperCRFilter, 5, 0);
+					label = new Label("\t");						topBar.add(label, 6, 0);
+					typeFilter.setOnAction(filterQuery);			topBar.add(typeFilter, 7, 0);
+					subtypeFilter.setOnAction(filterQuery);			topBar.add(subtypeFilter, 8, 0);
+					label = new Label("\t");						topBar.add(label, 9, 0);
+					legResfilter.setOnAction(filterQuery);			topBar.add(legResfilter, 10, 0);
+					legActfilter.setOnAction(filterQuery);			topBar.add(legActfilter, 11, 0);
+					lairfilter.setOnAction(filterQuery);			topBar.add(lairfilter, 12, 0);
+					castfilter.setOnAction(filterQuery);			topBar.add(castfilter, 13, 0);
 					//Start the 2nd row
 					GridPane secondBar = new GridPane();
-					label = new Label("\t\t\t\t\t\t");				secondBar.add(label, 0, 0);
+					label = new Label("\t\t\t\t\t\t\t\t\t\t");		secondBar.add(label, 0, 0);
 					sizefilter.setOnAction(filterQuery);			secondBar.add(sizefilter, 1, 0);
 					speedFilter.setOnAction(filterQuery);			secondBar.add(speedFilter, 2, 0);
 					multiplierFilter.setOnAction(filterQuery);		secondBar.add(multiplierFilter, 3, 0);
@@ -621,7 +613,7 @@ public class EncounterBuilder {
 			xpDisplay.add(label, 0, 0);
 			label = new Label("Raw XP value: "+encounterValue());
 			xpDisplay.add(label, 0, 1);
-			label = new Label();	xpDisplay.add(label, 0, 2);//TODO make this not suck
+			label = new Label();	xpDisplay.add(label, 0, 2);
 				multiplierTable = new GridPane();
 				multiplierTable.setHgap(10);
 				label = new Label("Multiplers");
@@ -640,7 +632,7 @@ public class EncounterBuilder {
 					rb.setOnAction(new EventHandler<ActionEvent>() {//update XPpanel when changed
 						public void handle(ActionEvent event) {updateXPPanel();}});
 					multiplierTable.add(rb, i+1, 1);
-					rb.setToggleGroup(radios);
+					rb.setToggleGroup(multSelect);
 					for(int j=0; j<multipliers.get(multHeads.get(i)).length;j++) {
 						label = new Label(""+multipliers.get(multHeads.get(i))[j]);
 						multiplierTable.add(label, i+1, j+2);
@@ -650,7 +642,7 @@ public class EncounterBuilder {
 				rb.setOnAction(new EventHandler<ActionEvent>() {//update XPpanel when changed
 					public void handle(ActionEvent event) {updateXPPanel();}});
 				multiplierTable.add(rb, multipliers.size()+1, 1);
-				rb.setToggleGroup(radios);
+				rb.setToggleGroup(multSelect);
 				for(int j=0; j<6;j++) {
 					TextField cusValue = new TextField();
 					customMults [j] = cusValue;
@@ -658,11 +650,11 @@ public class EncounterBuilder {
 					cusValue.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
 						@Override
 						public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-							if (!newValue.matches("\\d*")) {//remove non ints
-								cusValue.setText(newValue.replaceAll("[^\\d]", ""));
+							if (!newValue.matches("\\d*.\\d")) {//remove non ints
+								cusValue.setText(newValue.replaceAll("[^.\\d]", ""));
 		      	            }
 							if(newValue.isEmpty()) {cusValue.setText("0");}//ensure not empty
-							cusValue.setText(""+Integer.parseInt(cusValue.getText()));//remove leading 0's
+							cusValue.setText(""+Double.parseDouble(cusValue.getText()));//remove leading 0's
 						}
 		      	    });
 					cusValue.setOnAction(new EventHandler<ActionEvent>() {//when text is confirmed update the xp panel
@@ -687,7 +679,6 @@ public class EncounterBuilder {
 				
 				//TODO party stuff constructor
 				partyPanel = new GridPane();
-			    //grid.setAlignment(Pos.UPPER_LEFT);
 				partyPanel.setHgap(10);
 				partyPanel.setVgap(10);
 				party = new ArrayList<Button>();
@@ -843,11 +834,11 @@ public class EncounterBuilder {
 		}
 		if(!party.isEmpty()) {
 			GridPane tables = new GridPane();
-			label = new Label("Level\t");		tables.add(label, 0, 0);
-			label = new Label("Easy\t\t");		tables.add(label, 1, 0);
-			label = new Label("Medium\t");		tables.add(label, 2, 0);
-			label = new Label("Hard\t");			tables.add(label, 3, 0);
-			label = new Label("Deadly\t");		tables.add(label, 4, 0);
+			label = new Label("Level\t\t");			tables.add(label, 0, 0);
+			label = new Label("Easy\t\t");			tables.add(label, 1, 0);
+			label = new Label("Medium\t\t");		tables.add(label, 2, 0);
+			label = new Label("Hard\t\t");			tables.add(label, 3, 0);
+			label = new Label("Deadly\t\t");		tables.add(label, 4, 0);
 			for(int i=1; i<=20; i++) {
 				if(levels.containsKey(i)) {
 					label = new Label(i+"");							tables.add(label, 0, i);
@@ -883,4 +874,137 @@ public class EncounterBuilder {
 			partyPanel.add(tables, 0, 2, 3, 2);
 		}
 	}
+	
+	
+	
+	
+	
+	public void saveEncounter(){							//TODO - Label for encounter saving
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setInitialDirectory(new File("Resources/Encounters/"));
+		File file = fileChooser.showSaveDialog(secondaryStage);
+		
+		if(file!=null){
+			System.out.println("Saving encounter for "+file.getName());
+			//Build the new XML string
+			String xml = "<encounter>\n";
+			xml+="\t<name>"+file.getName()+"</name>\n";
+			for(Creature c:built.keySet()){
+				if(built.get(c)>0){
+					xml+="\t<creature>"+built.get(c)+","+c.getName()+"</creature>\n";
+				}
+			}
+			xml+="\t<mult>";
+			xml+=((RadioButton)multSelect.getSelectedToggle()).getText();
+			if(((RadioButton)multSelect.getSelectedToggle()).getText().equals("Custom multiplier")){
+				for(double d:multipliers.get("Custom multiplier")){xml+=","+d;}//If custom is used, store it.
+			}
+			xml+="</mult>\n";
+			if(!party.isEmpty()){
+				xml+="\t<party>";
+				boolean first = true;
+				for(Button b:party){
+					Integer level = Integer.parseInt(b.getText().substring(6));
+					if(!first){xml+=",";}
+					xml+=level;
+					first=false;
+				}
+				xml+="</party>\n";
+			}
+			xml+="</encounter>\n";
+			//Save the new encounter.
+			try (PrintWriter out = new PrintWriter(file)) {
+			    out.print(xml);
+			    System.out.println("Encounter saving complete");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		}else{System.out.println("Encounter saving failed");}
+	}
+
+	public void loadEncounter(){							//TODO - Label for encounter loading
+		FileChooser fileChooser = new FileChooser();
+		fileChooser.setInitialDirectory(new File("Resources/Encounters/"));
+		File file = fileChooser.showOpenDialog(secondaryStage);
+
+		if(file!=null){
+			Scanner scan;
+			System.out.println("Loading encounter for "+file.getName());
+			try {
+				scan = new Scanner(file);
+				scan.useDelimiter("<|>|,");
+				while(scan.hasNext()) {
+					if(scan.hasNext("encounter")) {
+						//Setting fields to store encounter values.
+						built = new HashMap<Creature,Integer>();
+						for(Creature c:creatures){built.put(c, 0);}
+						party = new ArrayList<Button>();
+						
+						//Parse the encounter.
+						while(!scan.hasNext("/encounter")) {
+							if(scan.hasNext("name")){//Skip the name, it's there for human readers
+								while(!scan.hasNext("/name")){scan.next();}
+							}else if(scan.hasNext("creature")){
+								scan.next();
+								while(!scan.hasNext("/creature")){//Parse each creature entry
+									int count = scan.nextInt();
+									String name = scan.next();
+									for(Creature c:creatures){
+										if(c.getName().equals(name)){
+											built.put(c, count);
+										}
+									}
+								}
+							}else if(scan.hasNext("mult")){
+								scan.next();
+								while(!scan.hasNext("/mult")){//Parse the multiplier
+									String mult = scan.next();
+									for(Toggle rb:multSelect.getToggles()){//Activate the mult.
+										if(((RadioButton)rb).getText().equals(mult)){
+											multSelect.selectToggle(rb);
+										}
+									}
+									if(((RadioButton)multSelect.getSelectedToggle()).getText().equals("Custom multiplier")){
+										double[] custom = new double[6];//Set values if custom mult is stored.
+										for(int i=0; i<6; i++){
+											custom[i]=scan.nextDouble();
+											customMults[i].setText(""+custom[i]);
+										}
+										multipliers.put("Custom multiplier", custom);
+									}
+								}
+							}else if(scan.hasNext("party")){
+								scan.next();
+								while(!scan.hasNext("/party")){//Parse the party
+									Button p = new Button("Level "+scan.next());
+									p.setOnAction(new EventHandler<ActionEvent>() {
+										@Override public void handle(ActionEvent event) {
+											party.remove(p);
+											updatePartyPanel();}});
+									party.add(p);
+								}
+							}else{scan.next();}
+						}
+					}
+					scan.next();
+				}//where parsing ends
+				scan.close();
+				System.out.println("Encounter loading complete");
+				//Apply to the window
+				for(int i=0; i<creatures.size(); i++) {
+					TextField curField = fields.get(i);
+					curField.setText(""+built.get(creatures.get(i)));
+					curField.getOnAction().handle(null);
+				}
+				updateCreatureList();
+				updateCurBuilt();
+				updatePartyPanel();
+				updateXPPanel();
+			} catch (FileNotFoundException e) {
+				System.out.println("Encounter loading failed");
+				e.printStackTrace();
+			}
+		}else{System.out.println("No file selected");}
+	}
+
 }

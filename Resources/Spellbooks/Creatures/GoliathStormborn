@@ -1,0 +1,11 @@
+<spellbook>
+	<name>GoliathStormborn</name>
+	<daily>
+		<1>
+			<spell>Call lightning,false</spell>
+		</1>
+		<3>
+			<spell>Lightning bolt,false</spell>
+		</3>
+	</daily>
+</spellbook>

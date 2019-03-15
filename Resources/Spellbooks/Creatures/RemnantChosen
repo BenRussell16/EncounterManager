@@ -1,0 +1,16 @@
+<spellbook>
+	<name>RemnantChosen</name>
+	<slot>
+		<known>Chill touch,Dancing lights,Mage hand,Message,Shocking grasp,Charm person,Expiditious retreat,Mage armour,Shield,Blindness/Deafness,Darkness,Detect thoughts,Counterspell,Fly,Hypnotic pattern,Confusion,Greater invisibility,Dominate person,Scrying,Seeming,Eyebite,Finger of death,Power word stun,Power word kill</known>
+		<0>Chill touch,Dancing lights,Mage hand,Message,Shocking grasp</0>
+		<1>4,Charm person,Expiditious retreat,Mage armour,Shield</1>
+		<2>3,Blindness/Deafness,Darkness,Detect thoughts</2>
+		<3>3,Counterspell,Fly,Hypnotic pattern</3>
+		<4>3,Confusion,Greater invisibility</4>
+		<5>3,Dominate person,Scrying,Seeming</5>
+		<6>1,Eyebite</6>
+		<7>1,Finger of death</7>
+		<8>1,Power word stun</8>
+		<9>1,Power word kill</9>
+	</slot>
+</spellbook>

@@ -39,7 +39,7 @@ public class EncounterManager extends Application{
 	public EncounterManager() {
 		spells = new SpellParser().Parse();
 		creatures = new CreatureParser(spells).Parse();
-		builder = new EncounterBuilder(creatures, this);
+		builder = new EncounterBuilder(creatures);
 		spellbuilder = new SpellBuilder(spells);
 		spellbook = new SpellBook(spells);
 		creaturebuilder = new CreatureBuilder(creatures, spells);

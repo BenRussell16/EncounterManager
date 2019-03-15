@@ -1,0 +1,8 @@
+<spellbook>
+	<name>KraghammerGoatknight</name>
+	<slot>
+		<known>Bless,Cure wounds,Protection from evil and good,Sanctuary,Shield of faith,Branding smite,Lesser restoration,Locate object,Zone of truth</known>
+		<1>4,Bless,Cure wounds,Protection from evil and good,Sanctuary,Shield of faith</1>
+		<2>2,Branding smite,Lesser restoration,Locate object,Zone of truth</2>
+	</slot>
+</spellbook>

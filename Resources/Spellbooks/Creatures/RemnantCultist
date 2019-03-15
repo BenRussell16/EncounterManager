@@ -1,0 +1,13 @@
+<spellbook>
+	<name>RemnantCultist</name>
+	<slot>
+		<known>Chill touch,Message,Minor illusion,Prestidigitation,Ray of frost,Detect magic,Mage armour,Shield,Tasha's hideous laughter,Detect thoughts,Suggestion,Counterspell,Fear,Vampiric touch,Greater invisibility,Phantasmal killer,Dream,Mislead,Circle of death</known>
+		<0>Chill touch,Message,Minor illusion,Prestidigitation,Ray of frost</0>
+		<1>4,Detect magic,Mage armour,Shield,Tasha's hideous laughter</1>
+		<2>3,Detect thoughts,Suggestion</2>
+		<3>3,Counterspell,Fear,Vampiric touch</3>
+		<4>3,Greater invisibility,Phantasmal killer</4>
+		<5>2,Dream,Mislead</5>
+		<6>1,Circle of death</6>
+	</slot>
+</spellbook>

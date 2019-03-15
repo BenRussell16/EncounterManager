@@ -1,0 +1,9 @@
+<spellbook>
+	<name>AshariStoneguard</name>
+	<slot>
+		<known>Druidcraft,Resistance,Goodberry,Speak with animals,Thunderwave,Hold person,Spike growth</known>
+		<0>Druidcraft,Resistance</0>
+		<1>4,Goodberry,Speak with animals,Thunderwave</1>
+		<2>2,Hold person,Spike growth</2>
+	</slot>
+</spellbook>

@@ -234,7 +234,7 @@ public class SpellBookInstance {
 					scan.next();
 				}//where parsing ends
 				scan.close();
-				System.out.println("Spellbook loading complete");
+				//System.out.println("Spellbook loading complete");
 			} catch (FileNotFoundException e) {
 				System.out.println("Spellbook loading failed");
 				e.printStackTrace();

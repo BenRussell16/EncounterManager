@@ -1,0 +1,9 @@
+<spellbook>
+	<name>AshariSkydancer</name>
+	<slot>
+		<known>Guidance,Shillelagh,Entangle,Fog cloud,Jump,Gust of wind,Skywrite</known>
+		<0>Guidance,Shillelagh</0>
+		<1>4,Entangle,Fog cloud,Jump</1>
+		<2>2,Gust of wind,Skywrite</2>
+	</slot>
+</spellbook>

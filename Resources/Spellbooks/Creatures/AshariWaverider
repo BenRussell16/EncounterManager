@@ -1,0 +1,11 @@
+<spellbook>
+	<name>AshariWaverider</name>
+	<slot>
+		<known>Druidcraft,Poison spray,Resistance,Create or destroy water,Cure wounds,Healing word,Animal messenger,Enhance ability,Lesser restoration,Conjure animals,Water breathing,Water walk,Control water</known>
+		<0>Druidcraft,Poison spray,Resistance</0>
+		<1>4,Create or destroy water,Cure wounds,Healing word</1>
+		<2>3,Animal messenger,Enhance ability,Lesser restoration</2>
+		<3>3,Water breathing,Water walk,Conjure animals</3>
+		<4>1,Control water</4>
+	</slot>
+</spellbook>

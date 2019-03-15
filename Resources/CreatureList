@@ -24,6 +24,31 @@
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Goat-knight steed</name>
+	<size>LARGE</size>
+	<type>CELESTIAL,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>11</ac>
+	<hp>19</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 17,DEX 11,CON 12,INT 6,WIS 12,CHA 6</stats>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Divine Provenance,When the goat-knight steed drops to 0 hit points it disappears, leaving behind no physical form. A goat knight can also dismiss his steed at any point as an action, causing it to disappear. In either case, the same steed is summoned when the goat-knight casts find steed.</passive>
+		<passive>Charge,If the goat-knight steed moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes a extra 5 (2d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.</passive>
+		<passive>Rider and Steed,Any spell with a range of Self cast by a goat-knight rider who is mounted on a goat-knight steed also targets the goat-knight steed.</passive>
+		<passive>Sure-Footed,The goat-knight steed has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</passive>
+	</passives>
+	<other>Understands Dwarvish but cannot speak.</other>
+	<actions>
+		<attack>Ram,5,5,One target. Hit: 8 (2d4+3) bludgeoning damage.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
 	<name>Bandit Captain</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -75,6 +100,333 @@
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Ravager stabby-stabber</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>36</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 16,CON 12,INT 10,WIS 8,CHA 7</stats>
+	<saves>WIS 1</saves>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Nimble escape,This creature can take the diesngage or hide action as a bonus action on each of its turns.</passive>
+		<passive>Stabby Frenzy,When the goblin hits with a melee attack, it may attack again. It can continue making additional attacks until it does not hit. The goblin cannot move between attacks made with this trait.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Clasp cutthroat</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NG,CG,TN,CN,NE,CE</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>44</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 16,CON 12,INT 8,WIS 14,CHA 9</stats>
+	<saves>DEX 5</saves>
+	<skills>DECEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,THIEVESCANT</languages>
+	<regions>URBAN</regions>
+	<passives>
+		<passive>Cunning Action,On each of its turns, the cutthroat can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
+		<passive>Sneak Attack (1/Turn),The cutthroat deals an extra 14 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the cutthroat that isn’t incapacitated and the cutthroat doesn’t have disadvantage on the attack roll.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The cutthroat makes two shortsword or dagger attacks.</multiattack>
+		<attack>Shortsword,6,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<attack>Dagger,6,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Uncanny Dodge,When an attacker that the cutthroat can see hits it with an attack, the cutthroat takes half damage instead.</reaction>
+	</reactions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Goliath brawler</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GOLIATH,false</type>
+	<align>CN</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>65</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 17,DEX 14,CON 15,INT 9,WIS 16,CHA 7</stats>
+	<skills>ACROBATICS 4,ATHLETICS 5,PERCEPTION 5</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Unarmoured Defense,While the brawler is wearing no armor and not wielding a shield, its AC equals 10 + its Dexterity modifier + its Wisdom modifier.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The brawler makes three unarmed strikes.</multiattack>
+		<attack>Unarmed strike,5,5,One target. Hit: 7 (1d8+3) bludgeoning damage. If the target is a creature, the brawler can choose one of the following additional effects:
+ - Bruise. The target must succeed on a DC 13 Constitution saving throw. On a failure, its speed is reduced by 5 feet until it receives at least 1 point of magical healing. A DC 15 Wisdom (Medicine) check performed as an action can also restore any lost speed.
+ - Disarm. The target must succeed on a DC 13 Strength saving throw or drop one item it is holding. The brawler may choose which item is dropped, and may choose to pick it up.
+ - Suplex. The target must succeed on a DC 13 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<reactions>
+		<reaction>Endurance,When the brawler takes damage, it may reduce the damage by 8 (1d12+2). It cannot use this trait again until it completes a short or long rest.</reaction>
+	</reactions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Kraghammer goat-knight</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>NG</align>
+	<cr>3.0</cr>
+	<ac>20</ac>
+	<hp>52</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 16,DEX 8,CON 14,INT 10,WIS 11,CHA 14</stats>
+	<saves>STR 5,DEX 1,CON 4,INT 2,WIS 2,CHA 4</saves>
+	<skills>NATURE 3,RELIGION 6</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<conditions>DISEASE</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,8,16,6,KraghammerGoatknight</spellcasting>
+		<passive>Aura of Protection,Whenever the goat-knight or a friendly creature within 10 feet of it makes a saving throw, the creature gains a +2 bonus (included above). The knight must be conscious to grant this bonus.</passive>
+		<passive>Dwarven Resilience,The goat-knight has advantage on saving throws against poison.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The goat-knight makes two warhammer attacks.</multiattack>
+		<attack>Warhammer,6,5,One target. Hit: 7 (1d8+3) bludgeoning damage, or 8 (1d10+3) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Ashari waverider</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NG</align>
+	<cr>4.0</cr>
+	<ac>14</ac>
+	<hp>77</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 14,CON 12,INT 10,WIS 16,CHA 13</stats>
+	<saves>CON 4,WIS 6</saves>
+	<skills>ATHLETICS 8,NATURE 3</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,DRUIDIC,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,7,AshariWaverider</spellcasting>
+		<passive>Healing Tides,Whenever the waverider casts a spell of 1st level or higher that affects a nonhostile creature, that creature regains 3 hit points (in addition to any healing the spell may provide).</passive>
+		<passive>Marine Empathy,The waverider can speak with and understand aquatic plants and animals.</passive>
+		<passive>Fishform,As a bonus action, the waverider can transform into a hunter shark or giant octopus. While in this form, the waverider cannot cast spells, but can expend a spell slot as a bonus action to regain 1d8 hit points per level of the spell slot expended. When the waverider is reduced to 0 hit points, falls unconscious, or dies in this form, it reverts to its humanoid form. It can remain in fishform for up to 3 hours, and can enter fishform twice, regaining expended uses after completing a short or long rest.</passive>
+	</passives>
+	<other>Conjure animals conjures only aquatic beasts.</other>
+	<actions>
+		<attack>Harpoon,5,20,60,One target. Hit: 5 (1d6+2) piercing damage. Attacks with this weapon while underwater are not made with disadvantage.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Goliath stormborn</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GOLIATH,false</type>
+	<align>CN</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>102</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 12,CON 18,INT 9,WIS 11,CHA 9</stats>
+	<saves>CON 6</saves>
+	<skills>ATHLETICS 6,INTIMIDATION 3</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,9,,GoliathStormborn</innatecasting>
+		<passive>Reckless,At the start of its turn, the stormborn can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The stormborn makes two greataxe attacks.</multiattack>
+		<attack>Greataxe,6,5,One target. Hit: 10 (1d12+4) slashing damage plus 7 (2d6) lightning damage. Miss: 3 (1d6) lightning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Endurance,When the stormborn takes damage, it may reduce the damage by 10 (1d12+4). It cannot use this trait again until it completes a short or long rest.</reaction>
+	</reactions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Ashari skydancer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>5.0</cr>
+	<ac>14</ac>
+	<hp>63</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 10,DEX 18,CON 10,INT 12,WIS 16,CHA 11</stats>
+	<saves>DEX 7</saves>
+	<skills>ACROBATICS 6,PERCEPTION 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRUIDIC,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,3,AshariSkydancer</spellcasting>
+		<passive>Flyby,This creature doesn't provoke an opportunity attack when it flies out of an enemies reach.</passive>
+		<passive>Skysail,The skydancer flies with a special ashari weapon called a skysail (see pg. 45). While the skysail’s wings are extended, the skydancer can cast levitate at will, and can spend an action to cast fly on itself (no concentration required) for up to 1 minute once per day. This use of fly instantly replenishes when in an area of powerful air elemental magic, such as the Rift of Air in Zephrah.</passive>
+		<passive>Evasion,If the skydancer is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the skydancer instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</passive>
+	</passives>
+	<other>Only has the fly speed with the skysail.</other>
+	<actions>
+		<multiattack>The skydancer makes two skysail staff attacks.</multiattack>
+		<attack>Skysail Staff,7,5,One target. Hit: 7 (1d6+4) bludgeoning damage. If the skydancer makes this attack while flying, the target must make a DC 14 Dexterity saving throw, taking 21 (6d6) lightning damage on a failure or half as much damage on a success.</attack>
+	</actions>
+	<reactions>
+		<reaction>Slow Fall,When the skydancer takes falling damage, it may reduce the damage by half.</reaction>
+	</reactions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Cinderslag elemental</name>
+	<size>LARGE</size>
+	<type>ELEMENTAL,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>102</hp>
+	<speed>WALK 20,BURROW 40</speed>
+	<stats>STR 15,DEX 12,CON 20,INT 1,WIS 10,CHA 3</stats>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Molten Form,The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature’s space and stop there. The first time it enters a creature’s space on a turn, that creature takes 5 (1d10) fire damage and must make a DC 14 Strength saving throw, becoming restrained on a failure. When the begins its turn while restrained in this way, it takes 5 (1d10) fire damage.</passive>
+		<passive>Water Susceptibility,For every 5 feet that elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The elemental makes two slam attacks.</multiattack>
+		<attack>Slam,5,5,One target. Hit: 13 (3d6+2) bludgeoning damage plus 5 (1d10) fire damage. If the target is a creature or a flammable object, it ignites. Until a creature takes an action to douse the fire, the target takes 5 (1d10) fire damage at the start of each of its turns.</attack>
+		<attack>Molten Gaze,8,30,One target. Hit: 21 (6d6) fire damage and the target must makze a DC 14 Constitution saving throw. On a failure, one nonmagical item the target is carrying instantly melts or burns to cinders.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Clasp enforcer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NG,CG,TN,CN,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>102</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 12,CON 18,INT 8,WIS 11,CHA 14</stats>
+	<skills>ATHLETICS 6,INTIMIDATION 8</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,THIEVESCANT</languages>
+	<regions>URBAN</regions>
+	<passives>
+		<passive>Second Wind (Recharges after a Short or Long Rest),As a bonus action, the enforcer can regain 12 hit points.</passive>
+		<passive>Intimidating Presence,Whenever the enforcer hits with a melee attack, the target must make a DC 15 Wisdom saving throw. On a failure, the target is frightened of the enforcer until the end of its next turn. The enforcer’s allies have advantage on attack rolls against creatures frightened in this way.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The enforcer makes three warhammer attacks.</multiattack>
+		<attack>Warhammer,6,5,One target. Hit: 8 (1d10+3) bludgeoning damage.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Ashari firetamer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NG</align>
+	<cr>7.0</cr>
+	<ac>17</ac>
+	<hp>92</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 15,CON 14,INT 12,WIS 18,CHA 11</stats>
+	<skills>ARCANA 5,NATURE 9</skills>
+	<multipliers>
+		<RESISTANCE>FIRE</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,DRUIDIC,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,8,16,9,AshariFiretamer</spellcasting>
+		<passive>Flameform,As a bonus action, the firetamer can transform into a fire elemental. While in this form, the firetamer cannot cast spells, but can expend a spell slot as a bonus action to regain 1d8 hit points per level of the spell slot expended. When the firetamer is reduced to 0 hit points, falls unconscious, or dies in this form, it reverts to its humanoid form. It can remain in flameform for up to 5 hours, and can enter flameform twice, regaining expended uses after completing a short or long rest.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Scimitar,6,5,One target. Hit: 5 (1d6+2) slashing damage plus 14 (4d6) fire damage.</attack>
+		<effect>Flamecharm,Recharges after a Short or Long Rest,The firetamer can cast dominate monster (save DC 16) on a fire elemental or other fire elemental creature. If the elemental has 150 or more hit points, it has advantage on the saving throw.</effect>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Ashari stoneguard</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LN</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>152</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 10,CON 20,INT 10,WIS 14,CHA 9</stats>
+	<saves>STR 8,CON 9,WIS 6</saves>
+	<skills>ATHLETICS 8,INTIMIDATION 3</skills>
+	<multipliers>
+	</multipliers>
+	<conditions>PETRIFIED</conditions>
+	<senses>TREMORSENSE 30</senses>
+	<languages>COMMON,DRUIDIC,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,3,AshariStoneguard</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The stoneguard makes three granite maul attacks.</multiattack>
+		<attack>Granite Maul,8,5,One target. Hit: 11 (2d6+4) bludgeoning damage. If the attack hits, the stoneguard may also immediately cast thunderwave as a bonus action. This casting uses a spell slot, but no material components.</attack>
+	</actions>
+	<reactions>
+		<reaction>Sentinel,When a creature within 5 feet of the stoneguard attacks a target other than the stoneguard, it can make a single attack roll against the attacker.</reaction>
+		<reaction>Skin to Stone,When the stoneguard is attacked, it may gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks until the end of the attacker’s turn.</reaction>
+	</reactions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
 	<name>Drow mage</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -102,6 +454,130 @@
 		<effect>Summon Demon,1/Day,The drow magically summons a quasit, or attempts to summon a shadow demon with a 50 percent chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. lt remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Remnant cultist</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NE</align>
+	<cr>7.0</cr>
+	<ac>16</ac>
+	<hp>60</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 16,CON 12,INT 18,WIS 8,CHA 8</stats>
+	<saves>WIS 3</saves>
+	<skills>DECEPTION 7,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC,NECROTIC</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,8,16,11,RemnantCultist</spellcasting>
+		<passive>Unkowable Secrets,Any attempt to form a mental link with the remnant cultist, scry the cultist, or cast speak with dead on a cultist instantly fails, and the creature that initiated the attempt takes 6d6 psychic damage.</passive>
+		<passive>One-Eyed,The cultist has disadvantage on any attack roll made against a target more than 30 feet away.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger of Wounding,7,20,60,One target. Hit: 5 (1d4+3) piercing damage. Hit points lost to this weapon’s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.
+Once per turn, the cultist may choose to wound its target. At the start of each of the wounded creature’s turns, it takes 1d4 necrotic damage for each time the cultist wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Ravager slaughter lord</name>
+	<size>LARGE</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>LE</align>
+	<cr>9.0</cr>
+	<ac>17</ac>
+	<hp>152</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 22,DEX 14,CON 20,INT 12,WIS 16,CHA 16</stats>
+	<saves>STR 10,CON 9,WIS 7</saves>
+	<skills>INTIMIDATION 11,RELIGION 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<innatecasting>WIS,,15,,RavagerSlaughterLord</innatecasting>
+		<passive>Unarmoured Defense,While the Slaughter Lord is wearing no armor and not wielding a shield, its AC equals 10 + its Dexterity modifier + its Constitution modifier.</passive>
+		<passive>Aggressive,As a bonus action, the Slaughter Lord can move up to its speed toward a hostile creature it can see.</passive>
+	</passives>
+	<other>Blessings of the Ruiner. The slaughter lord has been showered with a cocktail of divine blessings, and can all upon them at any time as its innate casting.</other>
+	<actions>
+		<multiattack>The Slaughter Lord makes four attacks with its greatswords or three attacks with its spear.</multiattack>
+		<attack>Dual Greatswords,10,5,One target. Hit: 13 (2d6+6) piercing damage plus 3 (1d6) fire damage.</attack>
+		<attack>Spear,10,20,60,One target. Hit: 13 (2d6+6) piercing damage plus 3 (1d6) fire damage, or 15 (2d8+6) piercing damage plus 3 (1d6) fire damage if used with both hands to make a melee attack.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Attack,1,The Slaughter Lord makes a spear or greatsword attack.</legendaryaction>
+		<legendaryaction>Move,1,The Slaughter Lord moves up to half its speed.</legendaryaction>
+		<legendaryaction>Cast a Spell,3,The Slaughter Lord casts an innate spell.</legendaryaction>
+	</legendaryactions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Cyclops stormcaller</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>NE</align>
+	<cr>10.0</cr>
+	<ac>18</ac>
+	<hp>119</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 16,DEX 10,CON 18,INT 15,WIS 8,CHA 20</stats>
+	<saves>STR 4,DEX 1,CON 5,INT 0,WIS 5,CHA 10</saves>
+	<skills>ARCANA 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,ELVISH,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,CyclopsStormcaller</innatecasting>
+		<passive>Poor Depth Peception,The cyclops has disadvantage on any attack roll against a target more than 30 feet away.</passive>
+		<passive>Storm Wings,While within 1 mile of a storm, the cyclops gains a fly speed of 60 feet.</passive>
+		<passive>Supernatural Focus,The cyclops has advantage on Constitution saving throws made to maintain concentration on a spell, and cannot lose concentration because of turbulent weather.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The cyclops makes two ice claws attacks.</multiattack>
+		<attack>Ice Claws,7,5,One target. Hit: 13 (3d6+3) slashing damage plus 3 (1d6) cold damage.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Remnant chosen</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NE</align>
+	<cr>12.0</cr>
+	<ac>15</ac>
+	<hp>117</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 14,INT 15,WIS 16,CHA 20</stats>
+	<saves>WIS 6,CHA 9</saves>
+	<skills>ARCANA 11,DECEPTION 9</skills>
+	<multipliers>
+		<IMMUNITY>NECROTIC</IMMUNITY>
+	</multipliers>
+	<senses>TRUESIGHT 60</senses>
+	<languages>COMMON,ABYSSAL,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,9,17,18,RemnantChosen</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>All-Seeing Eye,As a bonus action, the Chosen may select a creature or object affected by an illusion spell of 4th level or lower. One illusion of the Chosen’s choice affecting that creature is instantly dispelled.</passive>
+	</passives>
+	<other>Resistant to damage from spells.
+The Chosen typically casts Mage armour and Greater invisibility on itself before combat.</other>
+	<actions>
+		<attack>Withered Hand,6,5,One target. Hit: 37 (5d6+20) force damage. If this damage reduces the target to 0 hit points, it is disintegrated.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
 	<name>Iron Golem</name>
