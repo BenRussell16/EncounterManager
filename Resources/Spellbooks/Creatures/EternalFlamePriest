@@ -1,0 +1,10 @@
+<spellbook>
+	<name>EternalFlamePriest</name>
+	<slot>
+		<known>Control flames,Create bonfire,Fire bolt,Light,Minor illusion,Burning hands,Expiditious retreat,Mage armour,Blur,Scorching ray,Fireball</known>
+		<0>Control flames,Create bonfire,Fire bolt,Light,Minor illusion</0>
+		<1>4,Burning hands,Expiditious retreat,Mage armour</1>
+		<2>3,Blur,Scorching ray</2>
+		<3>2,Fireball</3>
+	</slot>
+</spellbook>

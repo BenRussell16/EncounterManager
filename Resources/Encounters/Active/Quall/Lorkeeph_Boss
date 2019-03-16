@@ -1,0 +1,7 @@
+<encounter>
+	<name>Lorkeeph_Boss</name>
+	<creature>5,Duergar</creature>
+	<creature>1,Duergar warlord</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>

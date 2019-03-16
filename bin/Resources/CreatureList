@@ -1,4 +1,50 @@
 <creature>
+	<name>Cranium rat</name>
+	<size>TINY</size>
+	<type>BEAST,false</type>
+	<align>LE</align>
+	<cr>0.0</cr>
+	<ac>12</ac>
+	<hp>2</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 2,DEX 14,CON 10,INT 4,WIS 11,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 30</senses>
+	<languages>TELEPATHY</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Telepathic Shroud,The cranium rat is immune to any effect that would sense its emotions or read its thoughts, as well as to all divination spells.</passive>
+		<passive>Illumination,As a bonus action, the cranium rat can shed dim light from its brain in a 5-foot radius or extinguish the light.</passive>
+	</passives>
+	<other>Telepathy is 30ft.</other>
+	<actions>
+		<attack>Bite,4,5,One target. Hit: 1 piercing damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Stirge</name>
+	<size>TINY</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.125</cr>
+	<ac>14</ac>
+	<hp>2</hp>
+	<speed>WALK 10,FLY 40</speed>
+	<stats>STR 4,DEX 16,CON 11,INT 2,WIS 8,CHA 6</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Blood Drain,5,5,One creature. Hit: 5 (1d4+3) piercing damage, and the stirge attaches to the target. While attached, the stirge doesn't attack. lnstead, at the start of each of the stirge's turns, the target loses 5 (1d4+3) hit points due to blood loss.
+The stirge can detach itself by spending 5 feet ofits movement. It does so after it drains 10 hit points of blood from the target or the target dies. A creature, including the target, can use its action to detach the stirge.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Aarakocra</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,AARAKOCRA,false</type>
@@ -20,6 +66,67 @@
 	<actions>
 		<attack>Talon,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
 		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Kuo-toa</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,KUOTOA,false</type>
+	<align>NE</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>18</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 13,DEX 10,CON 11,INT 11,WIS 10,CHA 8</stats>
+	<skills>PERCEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Slippery,The kuo-toa has advantage on ability checks and saving throws made to escape a grapple.</passive>
+		<passive>Otherworldly Perception,The kuo-toa can sense the presence of any creature within 30 feet of it that is invisible or on the Ethereal Plane. lt can pinpoint such a creature that is moving.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,3,5,One target. Hit: 3 (1d4+1) piercing damage.</attack>
+		<attack>Spear,3,20,60,One target. Hit: 4 (1d6+1) piercing damage, or 5 (1d8+1) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Net,3,5,15,One Large or smaller creature. Hit: The target is restrained. A creature can use its action to make a DC 10 Strength check to free itself or another creature in a net, ending the effect on a success. Dealing 5 slashing damage to the net (AC 10) frees the target without harming it and destroys the net.</attack>
+	</actions>
+	<reactions>
+		<reaction>Sticky Shield,When a creature misses the kuo-toa with a melee weapon attack, the kuo-toa uses ìts sticky shield to catch the weapon. The attacker must succeed on a DC 11 Strength saving throw, or the weapon becomes stuck to the kuo-toa's shield. lf the weapon's wielder can't or won't let go of the weapon, the wielder is grappled while the weapon ìs stuck. While stuck, the weapon can't be used. A creature can pull theweapon free by taking an action to make a DC 11 Strength check and succeeding.</reaction>
+	</reactions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Gas spore</name>
+	<size>LARGE</size>
+	<type>PLANT,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>5</ac>
+	<hp>1</hp>
+	<speed>FLY 10</speed>
+	<stats>STR 5,DEX 1,CON 3,INT 1,WIS 1,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,DEAFENED,FRIGHTENED,PARALYZED,POISONED,PRONE</conditions>
+	<senses>BLINDSIGHT 30</senses>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Eerie Resemblance,The gas spore resembles a beholder. A creature that can see the gas spore can discern its true nature with a successful DC 15 lntelligence (Nature) check.</passive>
+		<passive>Death Burst,The gas spore explodes when it drops to 0 hit points. Each creature within 20 feet of it must succeed on a DC 15 Constitution saving throw or take 10 (3d6) poison damage and become infected with a disease on a failed save. Creatures immune to the poisoned condition are immune to this disease.
+Spores invade an infected creature's system, killing the creature in a nurnber of hours equal to 1d12 + the creature's Constitution score, unless the disease is removed. ln half that time, the creature becomes poisoned for the rest of the duration. After the creature dies, it sprouts 2d4 tiny gas spores that grow to full size in 7 days.</passive>
+	</passives>
+	<other>Fly speed is hover.
+Blind beyond blindsight radius.</other>
+	<actions>
+		<attack>Touch,0,5,One creature. Hit: 1 poison damage, and the creature must succeed on a DC 10 Constitution saving throw or become infected with the disease described in the Death Burst trait.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -47,6 +154,117 @@
 		<attack>Ram,5,5,One target. Hit: 8 (2d4+3) bludgeoning damage.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Hobgoblin</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>LE</align>
+	<cr>0.5</cr>
+	<ac>18</ac>
+	<hp>11</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 12,CON 12,INT 10,WIS 10,CHA 9</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Martial Advantage,Once per turn, the hobgoblìn can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Longsword,3,5,One target. Hit: 5 (1d8+1) slashing damage, or 6 (1d10 +1)
+slashing darrrage if used with two hands.</attack>
+		<attack>Longbow,3,150,600,One target. Hit: 5 (1d8+1) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Duergar</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LE</align>
+	<cr>1.0</cr>
+	<ac>16</ac>
+	<hp>26</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 14,DEX 11,CON 14,INT 11,WIS 10,CHA 9</stats>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Duergar Resilience,The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>War Pick,4,5,One target. Hit: 6 (1d8+2) piercing damage, or 11 (2d8+2) piercing damage while enlarged.</attack>
+		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage, or 9 (2d6+2) piercing damage while enlarged.</attack>
+		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. lf the duergar lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
+		<effect>Invisibility,Recharges after a Short or Long Rest,The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Duergar soulblade</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LE</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>18</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 11,DEX 16,CON 10,INT 11,WIS 10,CHA 12</stats>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<innatecasting>WIS,4,12,,DuergarSoulblade</innatecasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Create Soulblade,As a bonus action, the duergar can create a shortsword-sized, visible blade of psionic energy. The weapon appears in the duergar's hand and vanishes if it leaves the duergar's grip, or if the duergar dies or is incapacitated.</passive>
+		<passive>Duergar Resilience,The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.</passive>
+	</passives>
+	<other>Innate spellcasting is psionics.</other>
+	<actions>
+		<attack>Soulblade,5,5,One target. Hit: 6 (1d6+3) force damage, or 10 (2d6+3) force damage while enlarged. If the soulblade has advantage on the attack roll, the attack deals an extra 3 (1d6) force damage.</attack>
+		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
+		<effect>Invisibility,Recharges after a Short or Long Rest,The duergar magically turns invisible for up to 1 hour or until it attacks, it casts a spell, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Spy</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>1.0</cr>
+	<ac>12</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 15,CON 10,INT 12,WIS 14,CHA 16</stats>
+	<skills>DECEPTION 5,INSIGHT 4,INVESTIGATION 5,PERCEPTION 6,PERSUASION 5,SLIGHTOFHAND 4,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Sneak Attack (1/Turn),The spy deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't incapacitated and the spy doesn't have disadvantage on the attack roll.</passive>
+		<passive>Cunning Action,On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
+	</passives>
+	<other>Knows any two languages.</other>
+	<actions>
+		<multiattack>The spy makes two melee attacks.</multiattack>
+		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+		<attack>Hand crossbow,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Bandit Captain</name>
@@ -100,6 +318,71 @@
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Duergar mind master</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LE</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>39</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 11,DEX 17,CON 14,INT 15,WIS 10,CHA 12</stats>
+	<saves>WIS 2</saves>
+	<skills>PERCEPTION 2,STEALTH 5</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120,TRUESIGHT 30</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Duergar Resilience,The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The duergar makes two melee attacks. It can replace one of those attacks with a use of Mind Mastery.</multiattack>
+		<attack>Mind-Poison Dagger,5,5,One target. Hit: 5 (1d4+3) piercing damage and 10 (3d6) psychic damage, or 1 piercing damage and 14 (4d6) psychic damage while reduced.</attack>
+		<effect>Mind Mastery,null,The duergar targets one creature it can see within 60 feet of it. The target must succeed on a DC 12 Intelligence saving throw, or the duergar causes it to use its reaction either to make one weapon attack against another creature the duergar can see or to move up to 10 feet in a direction of the duergar's choice. Creatures that can't be charmed are immune to this effect.</effect>
+		<effect>Invisibility,Recharge 4-6,The duergar magically turns invisible for up to 1 hour or until it attacks, it casts a spell, it uses its Reduce, or its concentration is broken (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
+		<effect>Reduce,Recharges after a Short or Long Rest,For 1 minute, the duergar magically decreases in size, along with anything it is wearing or carrying. While reduced, the duergar is Tiny, reduces its weapon damage to 1, and makes attacks, checks, and saving throws with disadvantage if they use Strength. It gains a +5 bonus to all Dexterity (Stealth) checks and a +5 bonus to its AC. It can also take a bonus action on each of its turns to take the Hide action.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Intellect devourer</name>
+	<size>TINY</size>
+	<type>ABBERATION,false</type>
+	<align>LE</align>
+	<cr>2.0</cr>
+	<ac>12</ac>
+	<hp>21</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 6,DEX 14,CON 13,INT 12,WIS 11,CHA 10</stats>
+	<skills>PERCEPTION 2,STEALTH 4</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>BLINDED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<languages>TELEPATHY</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Detect Sentience,The intellect devourer can sense the presence and location of any creature within 300 feet of it that has an lntelligence of 3 or higher, regardless of interposing barriers, unless the creature is protected by a mind blank spell.</passive>
+	</passives>
+	<other>Blind beyond blindsight radius.
+Understands Deep Speech but can't speak.
+Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The intelìect devourer makes one attack with its claws and uses Devour lntellect.</multiattack>
+		<attack>Claws,4,5,One target. Hit: 7 (2d4+2) slashing damage.</attack>
+		<effect>Devour Intellect,null,The intellect devourer targets one creature it can see within 10 feet of it that has a brain. The target must succeed on a DC 12 lntelligence saving throw against this magic or take 11 (2d10) psychic damage. Also on a failure, roll 3d6: lf the total equals or exceeds the target's lntelligence score, that score is reduced to 0. The target is stunned until it regains at least one point of lntelligence.</effect>
+		<effect>Body Thief,null,The intellect devourer initiates an lntelligence contest with an incapacitated humanoid within 5 feet of it. lf it wins the contest, the intellect devourer magically consumes the target's brain, teleports into the target's skull, and takes control of the target's body. While inside a creature, the intellect devourer has total cover against attacks and other effects originating outside its host. The intellect devourer retains its lntelligence, Wisdom, and Charisma scores, as well as its understanding of Deep Speech, its telepathy, and its traits. lt otherwise adopts the target's statistics. lt knows everything the creature knew, including spells and languages.
+lf the host body drops to 0 hit points, the intellect devourer must leave it. A protection from evil and good spell cast on the body drives the intellect devourer out. The intellect devourer is also forced out if the target regains its devoured brain by means of a wish. By spending 5 feet of its movement, the intellect devourer can voluntarily leave the body, teleporting to the nearest unoccupied space within 5 feet of it. The body then dies, unless its brain is restored within 1 round.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Ravager stabby-stabber</name>
 	<size>SMALL</size>
 	<type>HUMANOID,GOBLINOID,false</type>
@@ -126,6 +409,31 @@
 		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Archer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>3.0</cr>
+	<ac>16</ac>
+	<hp>75</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 18,CON 16,INT 11,WIS 13,CHA 10</stats>
+	<skills>ACROBATICS 6,PERCEPTION 5</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Archer's Eye (3/Day),As a bonus action, the archer can add 1d10 to its next attack or damage roll with a longbow or shortbow.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The archer makes two attacks with its longbow.</multiattack>
+		<attack>Shortsword,6,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<attack>Longbow,6,150,600,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
 	<name>Clasp cutthroat</name>
@@ -157,6 +465,61 @@
 		<reaction>Uncanny Dodge,When an attacker that the cutthroat can see hits it with an attack, the cutthroat takes half damage instead.</reaction>
 	</reactions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Eternal flame priest</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 15,CON 14,INT 10,WIS 11,CHA 16</stats>
+	<skills>DECEPTION 5,INTIMIDATION 5,RELIGION 2</skills>
+	<multipliers>
+		<RESISTANCE>FIRE</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,5,EternalFlamePriest</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
+	<name>Giff</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,false</type>
+	<align>LN</align>
+	<cr>3.0</cr>
+	<ac>16</ac>
+	<hp>60</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 14,CON 17,INT 11,WIS 12,CHA 12</stats>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Firearms Knowledge,The giff's mastery of its weapons enables it to ignore the loading property of muskets and pistols.</passive>
+		<passive>Headfirst Charge,The giff can try to knock a creature over; if the giff moves at least 20 feet in a straight line that ends within 5 feet of a Large or smaller creature, that creature must succeed on a DC 14 Strength saving throw or take 7 (2d6) bludgeoning damage and be knocked prone.</passive>
+	</passives>
+	<other>Gunpowder by the keg.
+Aside from their personal gunpowder weapons, giff ships and mercenary companies carry spare gunpowder in kegs. In an emergency, or any time a large explosion is needed, a whole keg can be detonated. A giff lights the fuse on the keg and can then throw the keg up to 15 feet as part of the same action. The keg explodes at the start of the giff's next turn. Each creature within 20 feet of the exploding keg must make a DC 12 Dexterity saving throw. On a failed save, a creature takes 24 (7d6) fire damage and is knocked prone. On a successful save, a creature takes half as much damage and isn't knocked prone.
+Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent chance of also exploding. Check each keg only once per turn, no matter how many other kegs explode around it.</other>
+	<actions>
+		<multiattack>The giff makes two pistol attacks.</multiattack>
+		<attack>Longsword,6,5,One target. Hit : 8 (1d8+4) slashing damage, or 9 (1d10+4) slashing damage if used with two hands.</attack>
+		<attack>Musket,4,40,120,One target. Hit: 7 (1d12+2) piercing damage.</attack>
+		<attack>Pistol,4,30,90,One target. Hit: 7 (1d10+2) piercing damage.</attack>
+		<effect>Fragmentation Grenade,1/Day,The giff throws a grenade up to 60 feet. Each creature within 20 feet of the grenade's detonation must make a DC 15 Dexterity saving throw, taking 17 (5d6) piercing damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Goliath brawler</name>
@@ -248,6 +611,38 @@
 		<attack>Harpoon,5,20,60,One target. Hit: 5 (1d6+2) piercing damage. Attacks with this weapon while underwater are not made with disadvantage.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Black pudding</name>
+	<size>LARGE</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>7</ac>
+	<hp>85</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 16,DEX 5,CON 16,INT 1,WIS 6,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>ACID,COLD,LIGHTNING,SLASHING</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Ooze nature,An ooze doesn't equire sleep.</passive>
+		<passive>Amorphous,The pudding can move through a space as narrow as 1 inch wide without squeezing.</passive>
+		<passive>Corrosive Form,A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing the damage, the weapon takes a perminent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage.
+The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</passive>
+	</passives>
+	<other>Blind beyond blindsight radius.</other>
+	<actions>
+		<attack>Pseudopod,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage plus 18 (4d8) acid damage. ln addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+	</actions>
+	<reactions>
+		<reaction>Split,When a pudding that is medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.</reaction>
+	</reactions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Goliath stormborn</name>
@@ -368,6 +763,135 @@
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Lesser marilith</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>97</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 16,DEX 14,CON 16,INT 16,WIS 15,CHA 17</stats>
+	<saves>WIS 5,CHA 6</saves>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<languages>ABYSSAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The lesser marilith makes three attacks with its longsword and one attack with its tail.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 7 (1d8+3) slashing damage.</attack>
+		<attack>Tail,6,10,One creature. Hit: 12 (2d8+3) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 14). Until this grapple ends, the target is restrained, the lesser marilith can automatically hit the target with its tail, and the lesser marilith cannot make tail attacks against other targets.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The lesser marilith can add 5 to its AC against one melee attack that would hit it. To do so, the lesser marilith must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Swarm of cranium rats</name>
+	<size>MEDIUM</size>
+	<type>BEAST,SWARMOF,false</type>
+	<align>LE</align>
+	<cr>5.0</cr>
+	<ac>12</ac>
+	<hp>36</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 10,INT 15,WIS 11,CHA 14</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>DARKVISION 30</senses>
+	<languages>TELEPATHY</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<innatecasting>INT,,13,,SwarmOfCraniumRats</innatecasting>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny rat. The swarm can't regain hit points or gain temporary hit points.</passive>
+		<passive>Telepathic Shroud,The swarm is immune to any effect that would sense its emotions or read its thoughts, as well as to all divination spells.</passive>
+		<passive>Illumination,As a bonus action, the swarm can shed dim light from its brains in a 5-foot radius, increase the illumination to bright light in a 5- to 20-foot radius (and dim light for an additional number offeet equal to the chosen radius), or extinguish the light.</passive>
+	</passives>
+	<other>Telepathy is 30ft.
+Innate spellcasting is psionics, and can only be used when the swarm has more than half its hit points remaining.</other>
+	<actions>
+		<attack>Bites,5,0,One target in the swarm's space. Hit: 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Duergar warlord</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LE</align>
+	<cr>6.0</cr>
+	<ac>20</ac>
+	<hp>75</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 18,DEX 11,CON 17,INT 12,WIS 12,CHA 14</stats>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Duergar Resilience,The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The duergar makes three hammer or javelin attacks and uses Call to Attack, or Enlarge if it is available.</multiattack>
+		<attack>Psychic-Attuned Hammer,7,5,One target. Hit: 9 (1d10+4) bludgeoning damage, or 15 (2d10+4) bludgeoning damage while enlarged, plus 5 (1d10) psychic damage.</attack>
+		<attack>Javelin,7,30,120,One target. Hit: 7 (1d6+4) piercing damage, or 11 (2d6+4) piercing damage while enlarged.</attack>
+		<effect>Call to Attack,null,Up to three allied duergar within 120 feet of this duergar that can hear it can each use their reaction to make one weapon attack.</effect>
+		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
+		<effect>Invisibility,Recharge 4-6,The duergar magically turns invisible for up to 1 hour or until it attacks, it casts a spell, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
+	</actions>
+	<reactions>
+		<reaction>Scouring Instruction,When an ally that the duergar can see makes a d20 roll, the duergar can roll a d6 and the ally can add the number rolled to the d20 roll by taking 3 (1d6) psychic damage. A creature immune to psychic damage can't be affected by Scouring Instruction.</reaction>
+	</reactions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Kuo-toa archpriest</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,KUOTOA,false</type>
+	<align>NE</align>
+	<cr>6.0</cr>
+	<ac>13</ac>
+	<hp>97</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 16,DEX 14,CON 16,INT 13,WIS 16,CHA 14</stats>
+	<skills>PERCEPTION 9,RELIGION 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<spellcasting>WIS,6,14,10,KuotoaArchpriest</spellcasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Slippery,The kuo-toa has advantage on ability checks and saving throws made to escape a grapple.</passive>
+		<passive>Otherworldly Perception,The kuo-toa can sense the presence of any creature within 30 feet of it that is invisible or on the Ethereal Plane. lt can pinpoint such a creature that is moving.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The kuo-toa makes two melee attacks.</multiattack>
+		<attack>Scepter,6,5,One target. Hit: 6 (1d6+3) bludgeoning damage plus 14 (4d6) lightning damage.</attack>
+		<attack>Unarmed Strike,6,5,One target. Hit: 4 (1d4+2) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Ashari firetamer</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -456,6 +980,36 @@
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Mind flayer</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,false</type>
+	<align>LE</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 12,CON 12,INT 19,WIS 17,CHA 17</stats>
+	<saves>INT 7,WIS 6,CHA 6</saves>
+	<skills>ARCANA 7,DECEPTION 6,INSIGHT 6,PERCEPTION 6,PERSUASION 6,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON,DEEPSPEECH,TELEPATHY</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<innatecasting>INT,,15,,MindFlayerInnate</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+Innate spellcasting is psionics.</other>
+	<actions>
+		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smalìer, it is grappìed (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
+		<attack>Extract Brain,7,5,One incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. lf this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.</attack>
+		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Remnant cultist</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -483,6 +1037,37 @@
 Once per turn, the cultist may choose to wound its target. At the start of each of the wounded creature’s turns, it takes 1d4 necrotic damage for each time the cultist wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Mind flayer arcanist</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,false</type>
+	<align>LE</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 12,CON 12,INT 19,WIS 17,CHA 17</stats>
+	<saves>INT 7,WIS 6,CHA 6</saves>
+	<skills>ARCANA 7,DECEPTION 6,INSIGHT 6,PERCEPTION 6,PERSUASION 6,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON,DEEPSPEECH,TELEPATHY</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<innatecasting>INT,,15,,MindFlayerInnate</innatecasting>
+		<spellcasting>INT,7,15,10,MindFlayerArcanist</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+Innate spellcasting is psionics.</other>
+	<actions>
+		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smalìer, it is grappìed (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
+		<attack>Extract Brain,7,5,One incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. lf this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.</attack>
+		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Ravager slaughter lord</name>
@@ -521,6 +1106,76 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>War priest</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>117</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 10,CON 14,INT 11,WIS 17,CHA 13</stats>
+	<saves>CON 6,WIS 7</saves>
+	<skills>INTIMIDATION 5,RELIGION 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,7,15,5,WarPriest</spellcasting>
+	</passives>
+	<other>Knows any two languages.</other>
+	<actions>
+		<multiattack>The priest makes two melee attacks.</multiattack>
+		<attack>Maul,7,5,One target. Hit: 10 (2d6+3) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Guided Strike (Recharges after a Short or Long Rest)),The priest grants a +10 bonus to an attack roll made by itself or another creature within 30 feet of it. The priest can make this choice after the roll is made but before it hits or misses.</reaction>
+	</reactions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Aboleth</name>
+	<size>LARGE</size>
+	<type>ABBERATION,false</type>
+	<align>LE</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>135</hp>
+	<speed>WALK 10,SWIM 40</speed>
+	<stats>STR 21,DEX 9,CON 15,INT 18,WIS 15,CHA 18</stats>
+	<saves>CON 6,INT 8,WIS 6</saves>
+	<skills>HISTORY 12,PERCEPTION 10</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DEEPSPEECH,TELEPATHY</languages>
+	<regions>UNDERDARK,UNDERWATER</regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Mucous Cloud,While underwater, the aboleth is surrounded by transformative mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 feet of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater.</passive>
+		<passive>Probing Telepathy,lf a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature.</passive>
+	</passives>
+	<other>Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The aboleth makes three tentacle attacks.</multiattack>
+		<attack>Tentacle,9,10,One target. Hit: 12 (2d6+5) bludgeoning damage. If the target is a creature, it must make a DC 14 Constitution saving throw or become diseased. The disease has no effect for 1 minute and can be removed by any magic that cures disease. After 1 minute, the diseased creature's skin becomes translucent and slimy, the creature can't regain hit points unless it is underwater, and the disease can be removed only by heal or another disease-curing spell of 6th level or higher. When the creature is outside a body of water, it takes 6 (1d12) acid damage every 10 minutes unless moisture is applied to the skin before 10 minutes have passed.</attack>
+		<attack>Tail,9,10,One target. Hit 15 (3d6+5) bludgeoning damage.</attack>
+		<effect>Enslave,3/Day,The aboleth targets one creature it can see within 30 feet of it. The target must succeed on a DC 14 Wisdom saving throw or be magically charmed by the aboleth until the aboleth dies or until it is on a different plane of existence from the target. The charmed target is under the aboleth's control and can't take reactions, and the aboleth and the target can communicate telepathically with each other over any distance.
+Whenever the charmed target takes damage, the target can repeat the saving throw. On a success, the effect ends. No more than once every 24 hours, the target can also repeat the saving throw when it is at least 1 mile away from the aboleth.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The aboleth makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Swipe,1,The aboleth makes one tail attack.</legendaryaction>
+		<legendaryaction>Psychic Drain,2,One creature charmed by the aboleth takes 10 (3d6) psychic damage, and the aboleth regains hit points equal to the damage the creature takes.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>The aboleth casts phantasmal force (no components required) on any number of creatures it can see within 60 feet of it. While maintaining concentration on this effect, the aboleth can't take other lair actions. If a target succeeds on the saving throw or if the effect ends for it, the target is immune to the aboleth's phantasmal force lair action for the next 24 hours, although such a creature can choose to be affected.</lairaction>
+		<lairaction>Pools of water within 90 feet of the aboleth surge outward in a grasping tide. Any creature on the ground within 20 feet of such a pool must succeed on a DC 14 Strength saving throw or be pulled up to 20 feet into the water and knocked prone. The aboleth can't use this lair action again until it has used a different one.</lairaction>
+		<lairaction>Water in the aboleth's lair magically becomes a conduit for the creature's rage. The aboleth can target any number of creatures it can see in such water within 90 feet of it. A target must succeed on a DC 14 Wisdom saving throw or take 7 (2d6) psychic damage. The aboleth can't use this lair action again until it has used a different one.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Cyclops stormcaller</name>
 	<size>LARGE</size>
 	<type>GIANT,false</type>
@@ -548,6 +1203,39 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 		<attack>Ice Claws,7,5,One target. Hit: 13 (3d6+3) slashing damage plus 3 (1d6) cold damage.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Lesser balor</name>
+	<size>LARGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>10.0</cr>
+	<ac>18</ac>
+	<hp>123</hp>
+	<speed>WALK 40,FLY 80</speed>
+	<stats>STR 20,DEX 14,CON 18,INT 16,WIS 15,CHA 18</stats>
+	<saves>STR 9,CON 8,WIS 6,CHA 8</saves>
+	<multipliers>
+		<RESISTANCE>COLD,LIGHTNING,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<languages>ABYSSAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Singeing Aura,At the start of each of the lesser balor’s turns, each creature within 5 feet of it takes 7 (2d6) fire damage. A creature that touches the lesser balor or hits it with a melee attack while within 5 feet of it takes 7 (2d6) fire damage.</passive>
+		<passive>Fiery End,When the lesser balor dies, it explodes. Each creature within 20 feet of it must make a DC 16 Dexterity saving throw. On a failed save, a creature takes 35 (10d6) fire damage, or half as much damage on a successful one. The explosion destroys the lesser balor’s weapons.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The lesser balor makes one attack with its longsword and one attack with its whip.</multiattack>
+		<attack>Longsword,9,10,One target. Hit: 14 (2d8+5) slashing damage plus 9 (2d8) lightning damage. If the lesser balor scores a critical hit, it rolls damage dice three times, instead of twice.</attack>
+		<attack>Whip,9,30,One target. Hit: 12 (2d6+5) slashing damage plus 7 (2d6) fire damage, and the target must succeed on a DC 16 Strength saving throw or be pulled up to 15 feet toward the lesser balor.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Remnant chosen</name>

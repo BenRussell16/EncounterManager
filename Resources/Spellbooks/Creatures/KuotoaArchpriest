@@ -1,0 +1,12 @@
+<spellbook>
+	<name>KuotoaArchpriest</name>
+	<slot>
+		<known>Guidance,Sacred flame,Thaumaturgy,Detect magic,Sanctuary,Shield of faith,Hold person,Spiritual weapon,Spirit guardians,Tongues,Control water,Divination,Mass cure wounds,Scrying</known>
+		<0>Guidance,Sacred flame,Thaumaturgy</0>
+		<1>4,Detect magic,Sanctuary,Shield of faith</1>
+		<2>3,Hold person,Spiritual weapon</2>
+		<3>3,Spirit guardians,Tongues</3>
+		<4>3,Control water,Divination</4>
+		<5>2,Mass cure wounds,Scrying</5>
+	</slot>
+</spellbook>

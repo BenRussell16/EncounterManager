@@ -1,0 +1,12 @@
+<spellbook>
+	<name>MindFlayerArcanist</name>
+	<slot>
+		<known>Blade ward,Dancing lights,Mage hand,Shocking grasp,Detect magic,Disguise self,Shield,Sleep,Blur,Invisibility,Ray of enfeeblement,Clairvoyance,Lightning bolt,Sending,Confusion,Hallucinatory terrain,Telekinesis,Wall of force</known>
+		<0>Blade ward,Dancing lights,Mage hand,Shocking grasp</0>
+		<1>4,Detect magic,Disguise self,Shield,Sleep</1>
+		<2>3,Blur,Invisibility,Ray of enfeeblement</2>
+		<3>3,Clairvoyance,Lightning bolt,Sending</3>
+		<4>3,Hallucinatory terrain,Confusion</4>
+		<5>2,Wall of force,Telekinesis</5>
+	</slot>
+</spellbook>

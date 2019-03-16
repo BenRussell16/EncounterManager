@@ -1,0 +1,6 @@
+<encounter>
+	<name>SecondFloor</name>
+	<creature>15,Hobgoblin</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>

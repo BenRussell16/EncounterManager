@@ -1,0 +1,14 @@
+<spellbook>
+	<name>SwarmOfCraniumRats</name>
+	<daily>
+		<0>
+			<spell>Command,false</spell>
+			<spell>Comprehend languages,false</spell>
+			<spell>Detect thoughts,false</spell>
+		</0>
+		<1>
+			<spell>Confusion,false</spell>
+			<spell>Dominate monster,false</spell>
+		</1>
+	</daily>
+</spellbook>

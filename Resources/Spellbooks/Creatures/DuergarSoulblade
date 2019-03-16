@@ -1,0 +1,13 @@
+<spellbook>
+	<name>DuergarSoulblade</name>
+	<daily>
+		<0>
+			<spell>Blade ward,false</spell>
+			<spell>True strike,false</spell>
+		</0>
+		<3>
+			<spell>Jump,false</spell>
+			<spell>Hunters mark,false</spell>
+		</3>
+	</daily>
+</spellbook>

@@ -1179,6 +1179,7 @@ public class CreatureBuilder {
 									innateAbility.setValue(null);
 									innateMod.setText("");
 									innateDC.setText("");
+									innateLevel.setValue(null);
 									//Set the curFile label
 									if(innateSpells == null){curInnate.setText("No file selected");}
 									else{curInnate.setText(innateSpells.getName());}
@@ -1251,6 +1252,7 @@ public class CreatureBuilder {
 									castAbility.setValue(null);
 									castMod.setText("");
 									castDC.setText("");
+									castLevel.setValue(null);
 									//Set the curFile label
 									if(stdSpells == null){curSpells.setText("No file selected");}
 									else{curSpells.setText(stdSpells.getName());}
@@ -1358,8 +1360,8 @@ public class CreatureBuilder {
 							@Override public void handle(ActionEvent event) {//Add a new passive field set
 								TextField passiveName = new TextField();
 								TextArea passiveDesc = new TextArea();
-								passiveDesc.setMaxHeight(10);
-								passiveDesc.setMaxWidth(250);
+								passiveDesc.setMaxSize(400,50);
+								passiveDesc.setWrapText(true);
 								Button remove = new Button("x");
 								customPassiveSet.add(passiveName, 0, passiveCount);
 								customPassiveSet.add(passiveDesc, 1, passiveCount);
@@ -1382,6 +1384,7 @@ public class CreatureBuilder {
 		    			label = new Label("Other notes");//for notes like this spell is self only and things
 		    			passiveSet.add(label, 0, passiveLayer);
 			    		otherInfo = new TextArea();
+			    		otherInfo.setWrapText(true);
 			    		otherInfo.setMaxHeight(50);
 			    		passiveSet.add(otherInfo, 1, passiveLayer);
 			    		passiveLayer++;
@@ -1464,7 +1467,8 @@ public class CreatureBuilder {
 				    				attacksPanel.add(longRange, 3, attackCount);
 				    				
 				    				TextArea desc = new TextArea();
-				    				desc.setMaxSize(250, 50);
+				    				desc.setWrapText(true);
+				    				desc.setMaxSize(350, 80);
 				    				attackDesc.add(desc);
 				    				attacksPanel.add(desc, 4, attackCount);
 				    				
@@ -1506,8 +1510,8 @@ public class CreatureBuilder {
 			    				otherActLimits.add(limit);
 			    				effectsPanel.add(limit, 1, otherActionCount);
 			    				TextArea description = new TextArea();
-			    				description.setMaxHeight(10);
-			    				description.setMaxWidth(225);
+			    				description.setMaxSize(300, 80);
+			    				description.setWrapText(true);
 			    				otherActDesc.add(description);
 			    				effectsPanel.add(description, 2, otherActionCount);
 								Button remove = new Button("x");
@@ -1542,8 +1546,8 @@ public class CreatureBuilder {
 						@Override public void handle(ActionEvent event) {//Add a new reaction field set
 							TextField reactName = new TextField();
 							TextArea reactDesc = new TextArea();
-							reactDesc.setMaxHeight(10);
-							reactDesc.setMaxWidth(250);
+							reactDesc.setMaxSize(350, 50);
+							reactDesc.setWrapText(true);
 							Button remove = new Button("x");
 							reactionSet.add(reactName, 0, reactionCount);
 							reactionSet.add(reactDesc, 1, reactionCount);
@@ -1587,8 +1591,8 @@ public class CreatureBuilder {
 		    				legendActCosts.add(cost);
 		    				legActSet.add(cost, 1, legendActEntryCount);
 		    				TextArea description = new TextArea();
-		    				description.setMaxHeight(10);
-		    				description.setMaxWidth(225);
+		    				description.setMaxSize(350, 50);
+		    				description.setWrapText(true);
 		    				legendActDesc.add(description);
 		    				legActSet.add(description, 2, legendActEntryCount);
 							Button remove = new Button("x");
@@ -1620,8 +1624,8 @@ public class CreatureBuilder {
 		    		lairActions = new ArrayList<TextArea>();
 		    			for(j=0; j<3; j++){
 		    				TextArea lairaction = new TextArea();
-		    				lairaction.setMaxHeight(50);
-		    				lairaction.setMaxWidth(400);
+		    				lairaction.setMaxSize(400,50);
+		    				lairaction.setWrapText(true);
 		    				lairActions.add(lairaction);
 		    				lairSet.add(lairaction, 0, j);
 		    				lairSet.getChildren().remove(lairaction);
