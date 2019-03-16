@@ -1,0 +1,6 @@
+<encounter>
+	<name>StabbyStabber</name>
+	<creature>3,Ravager stabby-stabber</creature>
+	<mult>x1</mult>
+	<party>8</party>
+</encounter>
