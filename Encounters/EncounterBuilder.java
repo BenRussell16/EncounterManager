@@ -567,8 +567,7 @@ public class EncounterBuilder {
 	      		inputs.put(textField,amounts.get(i));
 	      		textField.setText("0");
 	      	    textField.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
-					@Override
-					public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+					@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 						if (!newValue.matches("\\d*")) {//remove non ints
 	      	                textField.setText(newValue.replaceAll("[^\\d]", ""));
 	      	            }
@@ -577,19 +576,18 @@ public class EncounterBuilder {
 					}
 	      	    });
 	      		textField.setOnAction(new EventHandler<ActionEvent>() {//when text is confirmed update the current lists
-					@Override
-					public void handle(ActionEvent event) {
-							Label label = inputs.get(textField);
-							Creature creature = null;
-							for(int i=0; i<amounts.size();i++) {
-								if(amounts.get(i)==label) {creature = creatures.get(i);}
-							}
-							if(Integer.parseInt(textField.getText())>0) {
-								label.setText(textField.getText()+"x "+creature.getName());
-							}else {label.setText("");}
-							built.put(creature, Integer.parseInt(textField.getText()));
-							updateCurBuilt();
-							updateXPPanel();
+					@Override public void handle(ActionEvent event) {
+						Label label = inputs.get(textField);
+						Creature creature = null;
+						for(int i=0; i<amounts.size();i++) {
+							if(amounts.get(i)==label) {creature = creatures.get(i);}
+						}
+						if(Integer.parseInt(textField.getText())>0) {
+							label.setText(textField.getText()+"x "+creature.getName());
+						}else {label.setText("");}
+						built.put(creature, Integer.parseInt(textField.getText()));
+						updateCurBuilt();
+						updateXPPanel();
 					}
 	      		});
 	      		creatureList.add(textField, 1, i+1);

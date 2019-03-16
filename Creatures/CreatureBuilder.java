@@ -884,8 +884,8 @@ public class CreatureBuilder {
 	  			      	curSave.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
 	  						@Override
 	  						public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-	  							if (!newValue.matches("\\d*")) {//remove non ints
-	  								curSave.setText(newValue.replaceAll("[^\\d]", ""));
+	  							if (!newValue.matches("-?\\d*")) {//remove non ints
+	  								curSave.setText(newValue.replaceAll("[^-\\d]", ""));
 	  			   	            }
 	  							if(newValue.isEmpty()) {curSave.setText("0");}//ensure not empty
 	  							curSave.setText(""+Integer.parseInt(curSave.getText()));//remove leading 0's
@@ -926,8 +926,8 @@ public class CreatureBuilder {
 	  			      	curSkill.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
 	  						@Override
 	  						public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-	  							if (!newValue.matches("\\d*")) {//remove non ints
-	  								curSkill.setText(newValue.replaceAll("[^\\d]", ""));
+	  							if (!newValue.matches("-?\\d*")) {//remove non ints
+	  								curSkill.setText(newValue.replaceAll("[^-\\d]", ""));
 	  			   	            }
 	  							if(newValue.isEmpty()) {curSkill.setText("0");}//ensure not empty
 	  							curSkill.setText(""+Integer.parseInt(curSkill.getText()));//remove leading 0's

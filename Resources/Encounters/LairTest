@@ -1,0 +1,7 @@
+<encounter>
+	<name>LairTest</name>
+	<creature>1,Ancient Red Dragon</creature>
+	<creature>2,Ravager stabby-stabber</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>
