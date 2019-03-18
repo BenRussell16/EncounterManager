@@ -68,10 +68,10 @@ public class EncounterRunner {
 				@Override public void handle(ActionEvent event) {
 					loadEncounter();}});
 			topBar.add(loadEncounter, 0, 0);
-			Button loadParty = new Button("Load party");
+			Button loadParty = new Button("Load party?");
 			loadParty.setOnAction(new EventHandler<ActionEvent>() {
 				@Override public void handle(ActionEvent event) {
-					//TODO
+					//TODO load party info if we have it.
 				}
 			});
 			topBar.add(loadParty, 1, 0);
@@ -117,7 +117,19 @@ public class EncounterRunner {
 					if(curTurn<0 || curTurn>=initiativePanes.size()){
 						curTurn = initiativePanes.size()-1;}
 					initiativeBar.add(nextTurn, curTurn+1, 2);
-					//TODO - things with the new creature who's turn it is.
+					
+					//TODO things with the new creature who's turn it is.
+					for(GridPane hbar:healthtoinit.keySet()){
+						if(healthtoinit.get(hbar)==initiativePanes.get(curTurn)){
+							for(int i=0; i<hbar.getChildren().size(); i++){//iterate over creature display items
+								if(hbar.getChildren().get(i) instanceof RadioButton){
+									RadioButton rb = (RadioButton)hbar.getChildren().get(i);
+									//Reset reaction.
+									if(rb.getText().equals("Reaction spent")){rb.setSelected(false);}
+								}
+							}
+						}
+					}
 				}
 			});
 			initiativeBar.add(nextTurn, curTurn+1, 2);
@@ -126,11 +138,8 @@ public class EncounterRunner {
 		sp.setMinViewportHeight(70);
 		grid.add(sp, 0, 1);
 
-		healthBar = new GridPane();				//TODO - Label for the initiative bar.
+		healthBar = new GridPane();							//TODO - Label for the initiative bar.
 		grid.add(healthBar, 0, 2);
-		
-			//TODO Reactions spent, Recharge status, Legendaries (res and act) remaining
-			//Spell slots.
 		
 		statsBar = new GridPane();							//TODO - Label for the stat blocks bar.
 		sp = new ScrollPane();
@@ -316,7 +325,18 @@ public class EncounterRunner {
 		healthRow.add(healthLabel, 2, 0);
 		slider.valueProperty().addListener(new ChangeListener<Number>() {
             public void changed(ObservableValue<? extends Number> ov, Number old_val, Number new_val) {
-				healthLabel.setText("\t"+((int) slider.getValue())+" / "+c.getHP()+"\t");
+            	int current = (int) slider.getValue();
+            	int max = c.getHP();
+				healthLabel.setText("\t"+current+" / "+max+"\t");
+				if(current<max/2){
+					if(current<max/10){//Critical health use another colour
+						healthLabel.setTextFill(healthLabel.getTextFill().valueOf("#8B4513"));
+					}else{//Bloodied use red
+						healthLabel.setTextFill(healthLabel.getTextFill().valueOf("#FF0000"));
+					}
+				}else{//Not bloodied use black
+					healthLabel.setTextFill(healthLabel.getTextFill().valueOf("#000000"));
+				}
             }
         });
 		
@@ -348,11 +368,14 @@ public class EncounterRunner {
 				if(postChange<0){slider.setValue(0);}
 				else if(postChange>c.getHP()){slider.setValue(c.getHP());}
 				else{slider.setValue(postChange);}
-				healthLabel.setText("\t"+((int) slider.getValue())+" / "+c.getHP()+"\t");
 			}
 		});
 
 		healthRow.add(new Label("\t\t"), 5, 0);
+		RadioButton reaction = new RadioButton("Reaction spent");
+		healthRow.add(reaction, 6, 0);
+		
+		healthRow.add(new Label("\t\t"), 7, 0);
 		Button remove = new Button("Remove");
 		remove.setOnAction(new EventHandler<ActionEvent>() {
 			@Override public void handle(ActionEvent arg0) {
@@ -378,12 +401,15 @@ public class EncounterRunner {
 				encounterCounts.put(c, encounterCounts.get(c)-1);
 				updateStatDisplay();
 			}});
-		healthRow.add(remove, 6, 0);
+		healthRow.add(remove, 8, 0);
+		
 		
 		//TODO track stuff here.
 			//Track conditions
 			//Temp hp
-			//Bloodied colours?
+		
+			//TODO Recharge status, limited use actions, Legendaries (res and act) remaining
+			//TODO Spell slots & innate uses.
 	}
 	
 	private void updateStatDisplay(){						//TODO - Label for printing statblocks.
