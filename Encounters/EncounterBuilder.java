@@ -659,7 +659,7 @@ public class EncounterBuilder {
 						@Override
 						public void handle(ActionEvent event) {
 								double[] custom = multipliers.get("Custom multiplier");
-								for(int i=0; i<custom.length; i++) {custom[i] = Integer.parseInt(customMults[i].getText());}
+								for(int i=0; i<custom.length; i++) {custom[i] = Double.parseDouble(customMults[i].getText());}
 								updateXPPanel();
 							
 						}

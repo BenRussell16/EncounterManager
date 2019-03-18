@@ -11,6 +11,8 @@ import java.util.Scanner;
 import Creatures.Creature;
 import Creatures.Creature.DamageType;
 import Creatures.Creature.Stats;
+import Spells.Spell;
+import Spells.SpellBookInstance;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -23,6 +25,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
+import javafx.scene.control.Tooltip;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ChoiceBox;
@@ -122,10 +125,29 @@ public class EncounterRunner {
 					for(GridPane hbar:healthtoinit.keySet()){
 						if(healthtoinit.get(hbar)==initiativePanes.get(curTurn)){
 							for(int i=0; i<hbar.getChildren().size(); i++){//iterate over creature display items
-								if(hbar.getChildren().get(i) instanceof RadioButton){
+								if(hbar.getChildren().get(i) instanceof RadioButton){//Probably reaction
 									RadioButton rb = (RadioButton)hbar.getChildren().get(i);
 									//Reset reaction.
 									if(rb.getText().equals("Reaction spent")){rb.setSelected(false);}
+								}else if(hbar.getChildren().get(i) instanceof GridPane){
+									GridPane subPane = (GridPane)hbar.getChildren().get(i);//Probably the LegBar
+									for(int j=0; j<subPane.getChildren().size(); j++){
+										if(subPane.getChildren().get(j) instanceof GridPane){//LegRes or LegAct
+											GridPane subsubPane = (GridPane)subPane.getChildren().get(j);
+											for(int k=0; k<subsubPane.getChildren().size(); k++){
+												if(subsubPane.getChildren().get(k) instanceof Label){//Differentiator
+													if(((Label)subsubPane.getChildren().get(k)).getText().equals("Legendary Actions\t")){
+														for(int l=0; l<subsubPane.getChildren().size(); l++){
+															//Reset Legendary actions
+															if(subsubPane.getChildren().get(l) instanceof RadioButton){
+																((RadioButton)subsubPane.getChildren().get(l)).setSelected(false);
+															}
+														}
+													}
+												}
+											}
+										}
+									}
 								}
 							}
 						}
@@ -403,13 +425,161 @@ public class EncounterRunner {
 			}});
 		healthRow.add(remove, 8, 0);
 		
+		int layer = 1;
+		//Extra things to track for creatures
+		if(c.getLegendaryResistances()>0 || c.getLegendaryActionCount()>0){//Legendary aspects.
+			GridPane LegRow = new GridPane();
+			if(c.getLegendaryResistances()>0){
+				GridPane LegRes = new GridPane();
+				LegRes.add(new Label("Legendary Resistances\t"), 0, 0);
+				for(int i=1; i<=c.getLegendaryResistances(); i++){
+					LegRes.add(new RadioButton(), i, 0);
+				}
+				LegRow.add(LegRes, 0, 0);
+			}
+			if(c.getLegendaryResistances()>0 && c.getLegendaryActionCount()>0){
+				LegRow.add(new Label("\t\t"), 1, 0);
+			}
+			if(c.getLegendaryActionCount()>0){
+				GridPane LegAct = new GridPane();
+				LegAct.add(new Label("Legendary Actions\t"), 0, 0);
+				for(int i=1; i<=c.getLegendaryActionCount(); i++){
+					LegAct.add(new RadioButton(), i, 0);
+				}
+				LegRow.add(LegAct, 2, 0);
+			}
+			healthRow.add(LegRow, 1, layer, 4, 1);
+			layer++;
+		}
+		
+		if(c.getInnateCasting()!=null){//Innate Spellcasting
+			SpellBookInstance casting = c.getInnateCasting().getSpellList();
+			GridPane spellPane = new GridPane();
+			if(casting.hasDaily()){
+				GridPane dailyPane = new GridPane();
+				for(int i=0; i<=3; i++){
+					if(!casting.getDaily(i).isEmpty()){
+						if(i==0){dailyPane.add(new Label("At Will:"), 0, i);}
+						else{dailyPane.add(new Label(i+"/Day Each:"), 0, i);}
+						GridPane rowPane = new GridPane();
+						int j=1;
+						for(Spell s:casting.getDaily(i)){
+							Label spellLabel = new Label("\t"+s.getName()+" ");
+				      		Tooltip toolTip = new Tooltip(s.toString());
+				      		toolTip.setWrapText(true);
+				      		toolTip.setMaxWidth(600);
+				      		spellLabel.setTooltip(toolTip);
+				      		rowPane.add(spellLabel, j++, 0);
+							for(int k=0; k<i; k++){rowPane.add(new RadioButton(), j++, 0);}
+						}
+						dailyPane.add(rowPane, 1, i);
+					}
+				}
+				spellPane.add(dailyPane, 0, 0);
+			}
+			if(casting.hasDaily() && casting.hasPrepped()){spellPane.add(new Label("\t"), 0, 1);}
+			if(casting.hasPrepped()){
+				GridPane preppedPane = new GridPane();
+				for(int i=0; i<=9; i++){
+					if(!casting.getDaily(i).isEmpty()){
+						if(i==0){preppedPane.add(new Label("Cantrip"), 0, i);}
+						else{preppedPane.add(new Label("Level "+i+":"), 0, i);}
+						if(i>0){
+							GridPane slotPane = new GridPane();
+							for(int j=0; j<casting.getSlots(i); j++){
+								slotPane.add(new RadioButton(), j, 0);
+							}
+							preppedPane.add(slotPane, 1, i);
+						}
+						int j=1;
+						GridPane rowPane = new GridPane();
+						for(Spell s:casting.getDaily(i)){
+							Label spellLabel = new Label("\t"+s.getName());
+				      		Tooltip toolTip = new Tooltip(s.toString());
+				      		toolTip.setWrapText(true);
+				      		toolTip.setMaxWidth(600);
+				      		spellLabel.setTooltip(toolTip);
+				      		rowPane.add(spellLabel, j++, 0);
+						}
+						preppedPane.add(rowPane, 2, i);
+					}
+				}
+				spellPane.add(preppedPane, 0, 2);
+			}
+			TitledPane dd = new TitledPane("Innate Casting",spellPane);
+			dd.setExpanded(false);
+			//dd.setMaxWidth(600);
+			healthRow.add(dd, 1, layer, 4, 1);
+			layer++;
+		}
+		
+		if(c.getSpellcasting()!=null){//Spellcasting
+			SpellBookInstance casting = c.getSpellcasting().getSpellList();
+			GridPane spellPane = new GridPane();
+			if(casting.hasDaily()){
+				GridPane dailyPane = new GridPane();
+				for(int i=0; i<=3; i++){
+					if(!casting.getDaily(i).isEmpty()){
+						if(i==0){dailyPane.add(new Label("At Will:"), 0, i);}
+						else{dailyPane.add(new Label(i+"/Day Each:"), 0, i);}
+						GridPane rowPane = new GridPane();
+						int j=1;
+						for(Spell s:casting.getDaily(i)){
+							Label spellLabel = new Label("\t"+s.getName()+" ");
+				      		Tooltip toolTip = new Tooltip(s.toString());
+				      		toolTip.setWrapText(true);
+				      		toolTip.setMaxWidth(600);
+				      		spellLabel.setTooltip(toolTip);
+				      		rowPane.add(spellLabel, j++, 0);
+							for(int k=0; k<i; k++){rowPane.add(new RadioButton(), j++, 0);}
+						}
+						dailyPane.add(rowPane, 1, i);
+					}
+				}
+				spellPane.add(dailyPane, 0, 0);
+			}
+			if(casting.hasDaily() && casting.hasPrepped()){spellPane.add(new Label("\t"), 0, 1);}
+			if(casting.hasPrepped()){
+				GridPane preppedPane = new GridPane();
+				for(int i=0; i<=9; i++){
+					if(!casting.getPrepped(i).isEmpty()){
+						if(i==0){preppedPane.add(new Label("Cantrip\t"), 0, i);}
+						else{preppedPane.add(new Label("Level "+i+":\t"), 0, i);}
+						if(i>0){
+							GridPane slotPane = new GridPane();
+							for(int j=0; j<casting.getSlots(i); j++){
+								slotPane.add(new RadioButton(), j, 0);
+							}
+							preppedPane.add(slotPane, 1, i);
+						}
+						int j=1;
+						GridPane rowPane = new GridPane();
+						for(Spell s:casting.getPrepped(i)){
+							Label spellLabel = new Label("\t"+s.getName());
+				      		Tooltip toolTip = new Tooltip(s.toString());
+				      		toolTip.setWrapText(true);
+				      		toolTip.setMaxWidth(600);
+				      		spellLabel.setTooltip(toolTip);
+				      		rowPane.add(spellLabel, j++, 0);
+						}
+						preppedPane.add(rowPane, 2, i);
+					}
+				}
+				spellPane.add(preppedPane, 0, 2);
+			}
+			TitledPane dd = new TitledPane("Spellcasting",spellPane);
+			dd.setExpanded(false);
+			//dd.setMaxWidth(600);
+			healthRow.add(dd, 1, layer, 4, 1);
+			layer++;
+		}
+		if(layer>1){healthRow.add(new Label("\t"), 1, layer);}//Buffer under the extras.
 		
 		//TODO track stuff here.
 			//Track conditions
 			//Temp hp
 		
-			//TODO Recharge status, limited use actions, Legendaries (res and act) remaining
-			//TODO Spell slots & innate uses.
+			//TODO Recharge status, limited use actions
 	}
 	
 	private void updateStatDisplay(){						//TODO - Label for printing statblocks.

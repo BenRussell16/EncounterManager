@@ -2,7 +2,7 @@
 	<name>Test</name>
 	<creature>1,Drow mage</creature>
 	<creature>1,Ancient Red Dragon</creature>
-	<creature>5,Kuo-toa</creature>
-	<mult>Custom multiplier,0.0,0.0,0.0,0.0,0.0,0.0</mult>
+	<creature>2,Duergar soulblade</creature>
+	<mult>Custom multiplier,1.0,2.0,3.0,4.0,5.0,6.0</mult>
 	<party>7,8,9</party>
 </encounter>

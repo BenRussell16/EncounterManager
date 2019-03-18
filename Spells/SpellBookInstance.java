@@ -46,7 +46,24 @@ public class SpellBookInstance {
 	public List<Spell> getKnown(){return knownspells;}
 	public int getSlots(int level){return numSlots.get(level);}
 	public List<Spell> getPrepped(int level){return preparedSpells.get(level);}
+	public boolean hasPrepped(){
+		for(int i=0; i<=9; i++){
+			if(preparedSpells.containsKey(i) && !preparedSpells.get(i).isEmpty()){
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public List<Spell> getDaily(int uses){return innateSpells.get(uses);}//0 uses is at will.
+	public boolean hasDaily(){
+		for(int i=0; i<=3; i++){
+			if(innateSpells.containsKey(i) && !innateSpells.get(i).isEmpty()){
+				return true;
+			}
+		}
+		return false;
+	}
 	public boolean isSelfOnly(int uses, Spell spell){return innateSelfOnly.get(uses).get(innateSpells.get(uses).indexOf(spell));}
 	public Integer levelCastAt(int uses, Spell spell){return innateCastLevel.get(uses).get(innateSpells.get(uses).indexOf(spell));}
 	
