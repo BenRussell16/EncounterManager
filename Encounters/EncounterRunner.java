@@ -121,7 +121,7 @@ public class EncounterRunner {
 						curTurn = initiativePanes.size()-1;}
 					initiativeBar.add(nextTurn, curTurn+1, 2);
 					
-					//TODO things with the new creature who's turn it is.
+					//Do things with the new creature who's turn it is.
 					for(GridPane hbar:healthtoinit.keySet()){
 						if(healthtoinit.get(hbar)==initiativePanes.get(curTurn)){
 							for(int i=0; i<hbar.getChildren().size(); i++){//iterate over creature display items
@@ -130,7 +130,7 @@ public class EncounterRunner {
 									//Reset reaction.
 									if(rb.getText().equals("Reaction spent")){rb.setSelected(false);}
 								}else if(hbar.getChildren().get(i) instanceof GridPane){
-									GridPane subPane = (GridPane)hbar.getChildren().get(i);//Probably the LegBar
+									GridPane subPane = (GridPane)hbar.getChildren().get(i);//The LegBar or Limited abilities panel
 									for(int j=0; j<subPane.getChildren().size(); j++){
 										if(subPane.getChildren().get(j) instanceof GridPane){//LegRes or LegAct
 											GridPane subsubPane = (GridPane)subPane.getChildren().get(j);
@@ -146,6 +146,11 @@ public class EncounterRunner {
 													}
 												}
 											}
+										}else if(subPane.getChildren().get(j) instanceof RadioButton){
+											if(((RadioButton)subPane.getChildren().get(j)).getText().contains("1/Turn")){
+												//Reset 1/Turn abilities
+												((RadioButton)subPane.getChildren().get(j)).setSelected(false);
+											}
 										}
 									}
 								}
@@ -160,10 +165,10 @@ public class EncounterRunner {
 		sp.setMinViewportHeight(70);
 		grid.add(sp, 0, 1);
 
-		healthBar = new GridPane();							//TODO - Label for the initiative bar.
+		healthBar = new GridPane();							//TODO - Label for the health (and ability) tracking bar, and the statblocks bar.
 		grid.add(healthBar, 0, 2);
 		
-		statsBar = new GridPane();							//TODO - Label for the stat blocks bar.
+		statsBar = new GridPane();
 		sp = new ScrollPane();
 		sp.setContent(statsBar);
 		grid.add(sp, 0, 3);
@@ -452,6 +457,43 @@ public class EncounterRunner {
 			layer++;
 		}
 		
+		List<String> limitedUses = new ArrayList<String>();//Filter limited use features.
+		for(int i=0; i<c.orderedPassives().size(); i++){
+			if(c.orderedPassives().get(i).contains("(")){
+				limitedUses.add(c.orderedPassives().get(i));
+			}
+		}
+		for(int i=0; i<c.getEffects().size(); i++){
+			if(c.getEffects().get(i).getLimit()!=null && !c.getEffects().get(i).getLimit().equals("null")){
+				limitedUses.add(c.getEffects().get(i).getName()+" ("+c.getEffects().get(i).getLimit()+")");
+			}
+		}
+		for(String i:c.getReactions().keySet()){
+			if(i.contains("(")){limitedUses.add(i);}
+		}
+		if(limitedUses.size()>0){//Limited use features
+			GridPane limited = new GridPane();
+			int j=0;
+			for(int i=0; i<limitedUses.size(); i++){
+				//"1/Turn","1/Day","2/Day","3/Day","Recharge 4-6","Recharge 5-6","Recharge 6","Recharges after a Short or Long Rest"
+				if(limitedUses.get(i).contains("/Day")){
+					if(limitedUses.get(i).contains("3/Day")){
+						limited.add(new RadioButton(), i+j, 0);
+						j++;
+					}
+					if(limitedUses.get(i).contains("2/Day")||limitedUses.get(i).contains("3/Day")){
+						limited.add(new RadioButton(), i+j, 0);
+						j++;
+					}
+					limited.add(new RadioButton(limitedUses.get(i)+"\t"), i+j, 0);
+				}else{
+					limited.add(new RadioButton(limitedUses.get(i)+"\t"), i+j, 0);
+				}
+			}
+			healthRow.add(limited, 1, layer, 4, 1);
+			layer++;
+		}
+		
 		if(c.getInnateCasting()!=null){//Innate Spellcasting
 			SpellBookInstance casting = c.getInnateCasting().getSpellList();
 			GridPane spellPane = new GridPane();
@@ -574,12 +616,6 @@ public class EncounterRunner {
 			layer++;
 		}
 		if(layer>1){healthRow.add(new Label("\t"), 1, layer);}//Buffer under the extras.
-		
-		//TODO track stuff here.
-			//Track conditions
-			//Temp hp
-		
-			//TODO Recharge status, limited use actions
 	}
 	
 	private void updateStatDisplay(){						//TODO - Label for printing statblocks.
