@@ -1,7 +1,0 @@
-<encounter>
-	<name>Brains</name>
-	<creature>1,Swarm of cranium rats</creature>
-	<creature>1,Intellect devourer</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

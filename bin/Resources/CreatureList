@@ -110,7 +110,7 @@ The stirge can detach itself by spending 5 feet ofits movement. It does so after
 	<cr>0.5</cr>
 	<ac>5</ac>
 	<hp>1</hp>
-	<speed>FLY 10</speed>
+	<speed>WALK 0,FLY 10</speed>
 	<stats>STR 5,DEX 1,CON 3,INT 1,WIS 1,CHA 1</stats>
 	<multipliers>
 		<IMMUNITY>POISON</IMMUNITY>

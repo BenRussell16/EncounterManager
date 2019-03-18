@@ -52,6 +52,7 @@ public class CreatureParser {
 					int ac = 0;
 					
 					Map<Speeds,Integer> speed = new HashMap<Speeds,Integer>();
+						speed.put(Speeds.WALK, 0);
 					Map<Stats,Integer> stats = new HashMap<Stats,Integer>();
 					Map<Stats,Integer> saves = new HashMap<Stats,Integer>();
 					Map<Skills,Integer> skills = new HashMap<Skills,Integer>();

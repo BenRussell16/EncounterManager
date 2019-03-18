@@ -114,7 +114,8 @@ public class EncounterRunner {
 				@Override public void handle(ActionEvent event) {
 					initiativeBar.getChildren().remove(nextTurn);
 					curTurn-=1;
-					if(curTurn<0){curTurn = initiativePanes.size()-1;}
+					if(curTurn<0 || curTurn>=initiativePanes.size()){
+						curTurn = initiativePanes.size()-1;}
 					initiativeBar.add(nextTurn, curTurn+1, 2);
 					//TODO - things with the new creature who's turn it is.
 				}
@@ -122,14 +123,13 @@ public class EncounterRunner {
 			initiativeBar.add(nextTurn, curTurn+1, 2);
 		ScrollPane sp = new ScrollPane();
 		sp.setContent(initiativeBar);
+		sp.setMinViewportHeight(70);
 		grid.add(sp, 0, 1);
 
 		healthBar = new GridPane();				//TODO - Label for the initiative bar.
-		sp = new ScrollPane();
-		sp.setContent(healthBar);
-		grid.add(sp, 0, 2);
+		grid.add(healthBar, 0, 2);
 		
-			//Reactions spent, Recharge status, Legendaries (res and act) remaining
+			//TODO Reactions spent, Recharge status, Legendaries (res and act) remaining
 			//Spell slots.
 		
 		statsBar = new GridPane();							//TODO - Label for the stat blocks bar.
@@ -368,6 +368,7 @@ public class EncounterRunner {
 					initiativePanes.remove(healthtoinit.get(healthRow));
 					initVals.remove(healthtoinit.get(healthRow));
 					initCreatures.remove(healthtoinit.get(healthRow));
+					updateInitBar();
 				}
 				//Remove from health bar
 				healthBar.getChildren().remove(healthRow);

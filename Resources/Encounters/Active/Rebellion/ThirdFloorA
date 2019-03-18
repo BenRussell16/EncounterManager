@@ -1,8 +1,0 @@
-<encounter>
-	<name>ThirdFloorA</name>
-	<creature>2,Archer</creature>
-	<creature>1,Eternal flame priest</creature>
-	<creature>1,Giff</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

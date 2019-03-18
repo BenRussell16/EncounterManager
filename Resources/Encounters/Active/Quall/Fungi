@@ -1,7 +1,0 @@
-<encounter>
-	<name>Fungi</name>
-	<creature>2,Gas spore</creature>
-	<creature>12,Stirge</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

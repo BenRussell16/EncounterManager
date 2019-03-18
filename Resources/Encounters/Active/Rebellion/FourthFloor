@@ -1,7 +1,0 @@
-<encounter>
-	<name>FourthFloor</name>
-	<creature>1,Lesser marilith</creature>
-	<creature>1,War priest</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

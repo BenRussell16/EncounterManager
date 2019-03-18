@@ -1,7 +1,0 @@
-<encounter>
-	<name>Lorkeeph_HoardA</name>
-	<creature>4,Duergar</creature>
-	<creature>2,Duergar mind master</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

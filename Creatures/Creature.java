@@ -169,7 +169,7 @@ public interface Creature {
 		builtString += "\t<speed>";
 			first = true;
 			for(Speeds s:Speeds.values()){
-				if(getSpeeds().containsKey(s) && getSpeeds().get(s)>0){
+				if(getSpeeds().containsKey(s) && (getSpeeds().get(s)>0 || s==Speeds.WALK)){
 					if(!first){builtString+=",";}
 					builtString+=s.toString()+" "+getSpeeds().get(s);
 					first = false;
