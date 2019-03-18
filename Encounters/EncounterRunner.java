@@ -366,14 +366,26 @@ public class EncounterRunner {
 				}
             }
         });
+		TextField tempHP = new TextField("0");
+		tempHP.textProperty().addListener(new ChangeListener<String>() {//ensure only int values can be applied
+			@Override public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+				if (!newValue.matches("\\d*")) {//remove non ints
+					tempHP.setText(newValue.replaceAll("[^\\d]", ""));}
+				if(newValue.isEmpty()) {tempHP.setText("0");}//ensure not empty
+				tempHP.setText(""+Integer.parseInt(tempHP.getText()));//remove leading 0's
+			}
+	    });
+		tempHP.setMaxWidth(50);
+		healthRow.add(tempHP, 3, 0);
+		healthRow.add(new Label("\t"), 4, 0);
 		
 		TextField change = new TextField("0");
 		change.textProperty().addListener(makeIntFilter(change));
-		healthRow.add(change, 3, 0);
+		healthRow.add(change, 5, 0);
 		ChoiceBox<String> type = new ChoiceBox<String>();
 		type.getItems().addAll(null,"Healing");
 		for(DamageType d:DamageType.values()){type.getItems().add(d.toNiceString());}
-		healthRow.add(type, 4, 0);
+		healthRow.add(type, 6, 0);
 		change.setOnAction(new EventHandler<ActionEvent>() {
 			@Override public void handle(ActionEvent event) {
 				//Determine health change
@@ -388,9 +400,18 @@ public class EncounterRunner {
 						}
 					}
 				}
+				
 				//Apply health change
-				//TODO tempHP
-				int postChange = (int) slider.getValue()-damage;
+				int TempHP = Integer.parseInt(tempHP.getText());
+				int postChange;
+					if(damage<0){postChange = (int) slider.getValue()-damage;}//Healing ignores tempHP
+					else if(damage<=TempHP){
+						postChange = (int) slider.getValue();//Damage less than tempHP wont change HP
+						tempHP.setText(""+(TempHP-damage));
+					}else{
+						postChange = (int) slider.getValue()-(damage-TempHP);//Reduce TempHP from damage taken
+						tempHP.setText("0");
+					}
 				slider.setValueChanging(true);
 				if(postChange<0){slider.setValue(0);}
 				else if(postChange>c.getHP()){slider.setValue(c.getHP());}
@@ -398,11 +419,11 @@ public class EncounterRunner {
 			}
 		});
 
-		healthRow.add(new Label("\t\t"), 5, 0);
-		RadioButton reaction = new RadioButton("Reaction spent");
-		healthRow.add(reaction, 6, 0);
-		
 		healthRow.add(new Label("\t\t"), 7, 0);
+		RadioButton reaction = new RadioButton("Reaction spent");
+		healthRow.add(reaction, 8, 0);
+		
+		healthRow.add(new Label("\t\t"), 9, 0);
 		Button remove = new Button("Remove");
 		remove.setOnAction(new EventHandler<ActionEvent>() {
 			@Override public void handle(ActionEvent arg0) {
@@ -428,7 +449,7 @@ public class EncounterRunner {
 				encounterCounts.put(c, encounterCounts.get(c)-1);
 				updateStatDisplay();
 			}});
-		healthRow.add(remove, 8, 0);
+		healthRow.add(remove, 10, 0);
 		
 		int layer = 1;
 		//Extra things to track for creatures
@@ -453,7 +474,7 @@ public class EncounterRunner {
 				}
 				LegRow.add(LegAct, 2, 0);
 			}
-			healthRow.add(LegRow, 1, layer, 4, 1);
+			healthRow.add(LegRow, 1, layer, 6, 1);
 			layer++;
 		}
 		
@@ -490,7 +511,7 @@ public class EncounterRunner {
 					limited.add(new RadioButton(limitedUses.get(i)+"\t"), i+j, 0);
 				}
 			}
-			healthRow.add(limited, 1, layer, 4, 1);
+			healthRow.add(limited, 1, layer, 6, 1);
 			layer++;
 		}
 		
@@ -551,7 +572,7 @@ public class EncounterRunner {
 			TitledPane dd = new TitledPane("Innate Casting",spellPane);
 			dd.setExpanded(false);
 			//dd.setMaxWidth(600);
-			healthRow.add(dd, 1, layer, 4, 1);
+			healthRow.add(dd, 1, layer, 6, 1);
 			layer++;
 		}
 		
@@ -612,7 +633,7 @@ public class EncounterRunner {
 			TitledPane dd = new TitledPane("Spellcasting",spellPane);
 			dd.setExpanded(false);
 			//dd.setMaxWidth(600);
-			healthRow.add(dd, 1, layer, 4, 1);
+			healthRow.add(dd, 1, layer, 6, 1);
 			layer++;
 		}
 		if(layer>1){healthRow.add(new Label("\t"), 1, layer);}//Buffer under the extras.
