@@ -1,0 +1,21 @@
+<spellbook>
+	<name>SirPelliton</name>
+	<slot>
+		<known>Acid splash,Eldritch blast,Minor illusion,Branding smite,Hold person,Counterspell,Dimension door,Evard's black tentacles</known>
+		<0>Acid splash,Eldritch blast,Minor illusion</0>
+		<2>0,Branding smite,Hold person</2>
+		<3>0,Counterspell</3>
+		<4>0,Evard's black tentacles,Dimension door</4>
+		<5>5,</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Hellish rebuke,false</spell>
+		</0>
+		<1>
+			<spell>Cone of cold,false</spell>
+			<spell>Eyebite,false</spell>
+			<spell>Mass suggestion,false</spell>
+		</1>
+	</daily>
+</spellbook>

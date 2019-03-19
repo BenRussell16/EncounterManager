@@ -1,0 +1,8 @@
+<spellbook>
+	<name>TiamatInnate</name>
+	<daily>
+		<3>
+			<spell>Divine word,false</spell>
+		</3>
+	</daily>
+</spellbook>

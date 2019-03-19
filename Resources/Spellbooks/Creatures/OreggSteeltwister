@@ -1,0 +1,10 @@
+<spellbook>
+	<name>OreggSteeltwister</name>
+	<slot>
+		<known>Fire bolt,Message,Poison spray,True strike,Magic missile,Shield,Heat metal,Fireball,Fly</known>
+		<0>Fire bolt,Message,Poison spray,True strike</0>
+		<1>4,Magic missile,Shield</1>
+		<2>3,Heat metal</2>
+		<3>2,Fireball,Fly</3>
+	</slot>
+</spellbook>

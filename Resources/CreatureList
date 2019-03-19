@@ -182,6 +182,34 @@ slashing darrrage if used with two hands.</attack>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Dragonclaw</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>16</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 16,CON 13,INT 11,WIS 10,CHA 12</stats>
+	<saves>WIS 2</saves>
+	<skills>DECEPTION 3,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Dragon Fanatic,The dragonclaw has advantage on saving throws against being charmed or frightened. While the dragonclaw can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonclaw ignores the effects of being charmed or frightened.</passive>
+		<passive>Fanatic Advantage,Once per turn, if the dragonclaw makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 7 (2d6) damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragonclaw attacks twice with its scimitar.</multiattack>
+		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
+	</actions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
 	<name>Duergar</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,DWARF,false</type>
@@ -241,6 +269,59 @@ slashing darrrage if used with two hands.</attack>
 	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
+	<name>Ice toad</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>TN</align>
+	<cr>1.0</cr>
+	<ac>12</ac>
+	<hp>32</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 13,DEX 10,CON 14,INT 8,WIS 10,CHA 6</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<IMMUNITY>COLD</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ICETOAD</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Standing Leap,The toad’s long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.</passive>
+		<passive>Cold Aura,Any creature that starts its turn within 5 feet of the toad takes 3 (1d6) cold damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,3,5,One target. Hit: 5 (1d8+1) piercing damage plus 4 (1d8) cold damage. If the target is a Medium or smaller creature, it is grappled (escape DC 11). Until this grapple ends, the toad can't bite another target.</attack>
+	</actions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Pinna</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NG</align>
+	<cr>1.0</cr>
+	<ac>12</ac>
+	<hp>13</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 6,DEX 8,CON 11,INT 16,WIS 12,CHA 15</stats>
+	<saves>INT 6,WIS 2</saves>
+	<skills>ARCANA 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,5,13,3,Pinna</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,2,5,One target. Hit: 2 (1d4) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Spy</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -265,6 +346,34 @@ slashing darrrage if used with two hands.</attack>
 		<attack>Hand crossbow,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>White tusk orc</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>30</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 12,CON 16,INT 9,WIS 11,CHA 10</stats>
+	<saves>DEX 2</saves>
+	<skills>INTIMIDATION 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Battleaxe,5,5,One target. Hit: 12 (2d8+3) slashing damage, or 14 (2d10+3) slashing damage if used with two hands.</attack>
+		<attack>Javelin,5,30,120,One target. Hit: 10 (2d6+3) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Bandit Captain</name>
@@ -318,6 +427,35 @@ slashing darrrage if used with two hands.</attack>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Dragonwing</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>33</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 13,INT 11,WIS 11,CHA 13</stats>
+	<saves>WIS 2</saves>
+	<skills>DECEPTION 3,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Dragon Fanatic,The dragonwing has advantage on saving throws against being charmed or frightened. While the dragonwing can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonwing ignores the effects of being charmed or frightened.</passive>
+		<passive>Fanatic Advantage,Once per turn, if the dragonwing makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 7 (2d6) damage.</passive>
+		<passive>Limited Flight,The dragonwing can use a bonus action to gain a flying speed of 30 feet until the end of its turn.</passive>
+	</passives>
+	<other>Resists one of: acid, cold, fire, lightning, or poison.</other>
+	<actions>
+		<multiattack>The dragonwing attacks twice with its scimitar.</multiattack>
+		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage plus 3 (1d6) damage of the type to which the cultist has damage resistance.</attack>
+	</actions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
 	<name>Duergar mind master</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,DWARF,false</type>
@@ -348,6 +486,30 @@ slashing darrrage if used with two hands.</attack>
 		<effect>Reduce,Recharges after a Short or Long Rest,For 1 minute, the duergar magically decreases in size, along with anything it is wearing or carrying. While reduced, the duergar is Tiny, reduces its weapon damage to 1, and makes attacks, checks, and saving throws with disadvantage if they use Strength. It gains a +5 bonus to all Dexterity (Stealth) checks and a +5 bonus to its AC. It can also take a bonus action on each of its turns to take the Hide action.</effect>
 	</actions>
 	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Guard drake</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 4,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<multiattack>The drake makes two attacks: one with its bite and one with its tail.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>THERISEOFTIAMAT</source>
 </creature>
 <creature>
 	<name>Intellect devourer</name>
@@ -381,6 +543,30 @@ Telepathy is 60ft.</other>
 lf the host body drops to 0 hit points, the intellect devourer must leave it. A protection from evil and good spell cast on the body drives the intellect devourer out. The intellect devourer is also forced out if the target regains its devoured brain by means of a wish. By spending 5 feet of its movement, the intellect devourer can voluntarily leave the body, teleporting to the nearest unoccupied space within 5 feet of it. The body then dies, unless its brain is restored within 1 round.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Plainscow</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>42</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 18,DEX 8,CON 16,INT 2,WIS 10,CHA 6</stats>
+	<skills>INSIGHT 2</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Trampling Charge,If the plainscow moves at least 20 feet straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target isprone, the plainscow can make another attack with its hooves as a bonus action.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Hooves,6,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
+	</actions>
+	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
 	<name>Ravager stabby-stabber</name>
@@ -492,6 +678,36 @@ lf the host body drops to 0 hit points, the intellect devourer must leave it. A 
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
+	<name>Faldric the archer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>44</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 13,INT 11,WIS 14,CHA 13</stats>
+	<saves>DEX 4,WIS 2</saves>
+	<skills>ACROBATICS 5,PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Faldric makes two attacks.</multiattack>
+		<attack>Longbow,5,150,600,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Pelliton's Archer,When a creature Faldric can see enters a space adjacent to Sir Pelliton, Faldric may use his reaction to make a longbow attack against that creature. If this attack is successful, the target is also knocked prone.</reaction>
+	</reactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Giff</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,false</type>
@@ -582,6 +798,67 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 		<attack>Warhammer,6,5,One target. Hit: 7 (1d8+3) bludgeoning damage, or 8 (1d10+3) bludgeoning damage if used with two hands.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>White tusk shaman</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,true</type>
+	<align>CN</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 17,DEX 15,CON 14,INT 9,WIS 16,CHA 8</stats>
+	<saves>DEX 4,WIS 5</saves>
+	<skills>PERCEPTION 5,SURVIVAL 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ORCISH,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
+		<passive>Spirit-Bonded Body (Recharges after a Short or Long Rest),As a bonus action, the orc can transform into a dire wolf for up to 4 hours. The orc can choose whether its equipment falls to the ground, melds with its new form, or is worn by the new form. The orc reverts to its true form when its dire wolf form is reduced to 0 hit points. If this damage would cause its dire wolf form to drop below 0 hit points, the excess damage is done to its true form.
+The orc also reverts to its true form if it dies or falls unconscious. The orc can revert to its true form as a bonus action on its turn. When it reverts in this way, it returns to the number of hit points it had before it transformed.</passive>
+		<passive>Spirit-Bonded Mind,The orc can cast speak with animals at will, but can only communicate with wolves.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The White Tusk Shaman makes two blood-searing spear attacks.</multiattack>
+		<attack>Blood-Searing Spear,5,30,60,One target. Hit: 6 (1d6+3) piercing damage plus 7 (2d6) poison damage. This magical poison only functions when the spear is wielded by an orc shaman.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>White tusk warspeaker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>65</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 8,CON 15,INT 10,WIS 16,CHA 12</stats>
+	<saves>WIS 5</saves>
+	<skills>PERSUASION 3,RELIGION 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,5,13,5,WhiteTuskWarspeaker</spellcasting>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
+	</passives>
+	<other>Spiritual weapon is a greataxe.</other>
+	<actions>
+		<multiattack>The White Tusk warspeaker makes a goading lash attack and two spiked club attacks.</multiattack>
+		<attack>Goading Lash,5,5,One allied target. Hit: 5 (1d4+3) slashing damage. The next melee weapon attack the target makes before the end of its next turn has advantage and deals an extra 10 (3d6) damage.</attack>
+		<attack>Spiked Club,5,5,One target. Hit: 10 (2d6+3) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Ashari waverider</name>
@@ -676,6 +953,138 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Machine Lieutenant</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>TN</align>
+	<cr>4.0</cr>
+	<ac>20</ac>
+	<hp>60</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 18,DEX 13,CON 16,INT 10,WIS 10,CHA 10</stats>
+	<skills>PERCEPTION 4</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,FORCE,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,FRIGHTENED,PARALYZED,PETRIFIED,POISONED,STUNNED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Both Guard and Ward,While the lieutenant is within 5 feet of the attuned owner of the codex automata, any attack targeting the codex’s owner has a 50% chance to instead target the machine lieutenant.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage resistance.
+Blind beyond its blindsight radius.
+Understands the languages of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The lieutenant makes two longsword attacks.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 8 (1d8+4) slashing damage or 9 (1d10+4) slashing damage if used with two hands.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>White tusk bloodrager</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>4.0</cr>
+	<ac>16</ac>
+	<hp>60</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 11,WIS 12,CHA 9</stats>
+	<saves>DEX 4</saves>
+	<skills>ATHLETICS 5,PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Cold Fury (Recharges after a Short or Long Rest),As a bonus action, the orc can enter a cold fury for 1 minute. While in a fury, its melee weapon attacks deal an extra 3 (1d6) damage.
+Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was dealt with a critical hit, the orc makes a Constitution saving throw with a DC of 5 plus the damage taken. On a success, the orc instead drops to 1 hit point and its fury ends.</passive>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The White Tusk Bloodrager makes three falchion attacks.</multiattack>
+		<attack>Falchion,6,5,One target. Hit: 8 (2d4+3) slashing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>White tusk juggernaut</name>
+	<size>LARGE</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>4.0</cr>
+	<ac>20</ac>
+	<hp>95</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 19,DEX 8,CON 19,INT 7,WIS 12,CHA 8</stats>
+	<saves>STR 6,WIS 3</saves>
+	<skills>ATHLETICS 7,INTIMIDATION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The White Tusk juggernaut makes one tusk attack and one longsword attack.</multiattack>
+		<attack>Tusk,6,10,One target. Hit: 11 (2d6+4) piercing damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.</attack>
+		<attack>Longsword,6,10,One target. Hit: 13 (2d8+4) slashing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Horde Protector,When a creature within 5 feet of the orc is attacked by a creature the orc can see and the orc is wielding a shield, the orc can impose disadvantage on that attack roll.</reaction>
+	</reactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Alicorn</name>
+	<size>LARGE</size>
+	<type>CELESTIAL,false</type>
+	<align>LG</align>
+	<cr>5.0</cr>
+	<ac>13</ac>
+	<hp>76</hp>
+	<speed>WALK 60,FLY 90</speed>
+	<stats>STR 19,DEX 16,CON 16,INT 11,WIS 17,CHA 16</stats>
+	<saves>DEX 6,WIS 6,CHA 6</saves>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,PARALYZED,POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<languages>ELVISH,CELESTIAL,SYLVAN,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,14,,Alicorn</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Charge,If the alicorn moves at least 20 feet straight toward a target and then hits it with a horn attack on the same turn, the target takes an extra 9 (2d8), Unit piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The alicorn makes one attack with its hooves and one attack with its horn.</multiattack>
+		<attack>Hooves,7,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
+		<attack>Horn,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<effect>Healing Touch,3/Day,The alicorn touches another creature with its horn. The target magically restores 11 (2d8+2) hit points. In addition, the touch removes all diseases and neutralizes all poisons afflicting the target.</effect>
+		<effect>Teleport,1/Day,The alicorn magically teleports itself and up to three willing creatures it can see within 5 feet of it, along with any equipment they are wearing or carrying, to a location the alicorn is familiar with, up to 1 mile away.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Hooves,1,The alicorn makes one attack with its hooves.</legendaryaction>
+		<legendaryaction>Prismatic Barrier,2,The alicorn creates a prismatic, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the alicorn’s next turn.</legendaryaction>
+		<legendaryaction>Heal Self,3,The alicorn magically restores 11 (2d8+2) hit points.</legendaryaction>
+	</legendaryactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Ashari skydancer</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -763,6 +1172,36 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Dragonfang</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>78</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 14,INT 12,WIS 12,CHA 14</stats>
+	<saves>WIS 3</saves>
+	<skills>DECEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Dragon Fanatic,The dragonfang has advantage on saving throws against being charmed or frightened. While the dragonfang can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonfang ignores the effects of being charmed or frightened.</passive>
+		<passive>Fanatic Advantage,Once per turn, if the dragonfang makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 10 (3d6) damage.</passive>
+		<passive>Limited Flight,The dragonfang can use a bonus action to gain a flying speed of 30 feet until the end of its turn.</passive>
+	</passives>
+	<other>Resists one of: acid, cold, fire, lightning, or poison.</other>
+	<actions>
+		<multiattack>The dragonfang attacks twice with its shortsword.</multiattack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage plus 7 (2d6) damage of the type to which the dragonfang has damage resistance.</attack>
+		<attack>Orb of Dragon's Breath (2/Day),5,90,One target. Hit: 22 (5d8) damage of the type to which the dragonfang has damage resistance.</attack>
+	</actions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
 	<name>Lesser marilith</name>
 	<size>MEDIUM</size>
 	<type>FIEND,DEMON,false</type>
@@ -797,6 +1236,71 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Oregg Steeltwister</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>NE</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>82</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 12,CON 16,INT 9,WIS 11,CHA 18</stats>
+	<saves>STR 5,WIS 3</saves>
+	<skills>ARCANA 5,ATHLETICS 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,7,15,5,OreggSteeltwister</spellcasting>
+		<passive>Rune-Tattooed,Whenever Oregg casts a spell of 1st level or higher, he gains a number of temporary hit points equal to Xd10, where X is the level of the spell.</passive>
+		<passive>Aggressive,As a bonus action, Oregg can move up to its speed toward a hostile creature it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Oregg makes two longsword attacks and can cast a cantrip as a bonus action.</multiattack>
+		<attack>Longsword,5,5,One target. Hit: 7 (1d10+2) slashing damage.</attack>
+		<attack>Firebolt,7,120,One target. Hit: 11 (2d10) fire damage.</attack>
+		<effect>Poison Spray,null,One creature within 10 feet of Oregg must make a successful DC 15 Constitution saving throw or take 13 (2d12) poison damage.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Sir Pelliton</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>20</ac>
+	<hp>76</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 8,CON 17,INT 13,WIS 15,CHA 18</stats>
+	<saves>DEX 3,INT 5</saves>
+	<skills>ANIMALHANDLING 6,ARCANA 5,INTIMIDATION 8</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>BLINDED,DEAFENED</conditions>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,8,16,11,SirPelliton</innatecasting>
+		<passive>Mounted Combatant,While mounted, Sir Pelliton has advantage on melee attack rolls against unmounted creatures that are smaller than his mount.</passive>
+		<passive>The Star Knight,Sir Pelliton has resistance to cold, fire, lightning, and psychic damage as a sign of his pact, and cannot be blinded or deafened. His hellish rebuke does 20 damage (no roll) to enemies who fail their save.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Sir Pelliton makes three melee attacks or makes two melee attacks and casts eldritch blast.</multiattack>
+		<attack>Frost Brand Longsword,8,5,One target. Hit: 8 (1d8+4) slashing damage plus 3 (1d6) cold damage.</attack>
+		<attack>Lance,8,10,One target. Hit: 10 (1d12+4) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Villain Ability: Warlord,As a reaction, when a minion dies, issue a command to your other minions. Those who can hear you gain a reaction they can use to immediately take another movement.</reaction>
+	</reactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Swarm of cranium rats</name>
 	<size>MEDIUM</size>
 	<type>BEAST,SWARMOF,false</type>
@@ -825,6 +1329,43 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 		<attack>Bites,5,0,One target in the swarm's space. Hit: 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Bonebreaker Dorokor</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>NE</align>
+	<cr>6.0</cr>
+	<ac>19</ac>
+	<hp>102</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 15,CON 18,INT 12,WIS 17,CHA 17</stats>
+	<saves>STR 7,DEX 5,WIS 6</saves>
+	<skills>ATHLETICS 7,INTIMIDATION 6,PERSUASION 6</skills>
+	<multipliers>
+		<RESISTANCE>FIRE</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Wielder of Wound,Bonebreaker Dorokor wields the magical greataxe Wound (page 146).</passive>
+		<passive>Aggressive,As a bonus action, Bonebreaker Dorokor can move up to her speed toward a hostile creature she can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Bonebreaker Dorokor makes three weapon attacks, or she makes two attacks and issues a War Cry if it is available.</multiattack>
+		<attack>Wound,8,5,One target. Hit: 11(1d12+5) slashing damage plus 7 (2d6) necrotic damage. The target’s maximum hit points are decreased in equal amount to the necrotic damage dealt. The target’s hit point maximum does not return to normal until it finishes a long rest or its grievous wounds are soothed by a greater restoration spell.</attack>
+		<attack>Longbow,5,150,600,One target. Hit: 6 (1d8+2) piercing damage.</attack>
+		<effect>War Cry,Recharge 5-6,Dorokor screams an orcish war phrase, spurring her warriors on toward victory. Choose one of the following effects:
+ - Rally: All of Dorokor’s minions within 30 feet that can hear her gain 22 (4d10) temporary hit points.
+ - Focus: All of Dorokor’s minions within 30 feet that can hear her will have advantage on the next attack roll they make before the end of their next turn.
+ - Charge: All of Dorokor’s minions within 30 feet that can hear her move up to their speed as a reaction.</effect>
+	</actions>
+	<reactions>
+		<reaction>Villain Ability: Warlord,As a reaction, when a minion dies, issue a command to your other minions. Those who can hear you gain a reaction they can use to immediately take another movement.</reaction>
+	</reactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Duergar warlord</name>
@@ -892,6 +1433,35 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Rath Modar</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>6.0</cr>
+	<ac>16</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 14,INT 18,WIS 14,CHA 10</stats>
+	<saves>INT 7,WIS 5</saves>
+	<skills>ARCANA 7,DECEPTION 3,INSIGHT 5,STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,PRIMORDIAL,INFERNAL,THAYAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,7,15,11,RathModar</spellcasting>
+		<passive>Special Equipment,Rath has a staff of fire and three scrolls: dimension door, feather fall, and fireball.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Quaterstaff,4,5,One target. Hit: 3 (1d6) bludgeoning damage, or 4 (1d8) bludgeoning damage when used with two hands.</attack>
+	</actions>
+	<reactions>
+		<reaction>Illusory Self (Recharges after a Short or Long Rest),When a creature Rath can see makes an attack roll against him, he can interpose an illusory duplicate between the attacker and himself. The attack automatically misses Rath, then the illusion dissipates.</reaction>
+	</reactions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
 	<name>Ashari firetamer</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -951,6 +1521,36 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Dragonsoul</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>7.0</cr>
+	<ac>16</ac>
+	<hp>110</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 18,CON 14,INT 13,WIS 12,CHA 16</stats>
+	<saves>WIS 4</saves>
+	<skills>DECEPTION 6,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Dragon Fanatic,The dragonsoul has advantage on saving throws against being charmed or frightened. While the dragonsoul can see a dragon or higher-ranking Cult of the Dragon cultist friendly to it, the dragonsoul ignores the effects of being charmed or frightened.</passive>
+		<passive>Fanatic Advantage,Once per turn, if the dragonsoul makes a weapon attack with advantage on the attack roll and hits, the target takes an extra 10 (3d6) damage.</passive>
+		<passive>Limited Flight,The dragonsoul can use a bonus action to gain a flying speed of 30 feet until the end of its turn.</passive>
+	</passives>
+	<other>Resists one of: acid, cold, fire, lightning, or poison.</other>
+	<actions>
+		<multiattack>The dragonsoul attacks twice with its shortsword.</multiattack>
+		<attack>Shortsword,7,5,One target. Hit: 6 (1d6+3) piercing damage plus 10 (3d6) damage of the type to which the dragonsoul has damage resistance.</attack>
+		<attack>Orb of Dragon's Breath (3/Day),7,90,One target. Hit: 27 (6d8) damage of the type to which the dragonsoul has damage resistance.</attack>
+	</actions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
 	<name>Drow mage</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -978,6 +1578,41 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 		<effect>Summon Demon,1/Day,The drow magically summons a quasit, or attempts to summon a shadow demon with a 50 percent chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. lt remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Lesser erinyes</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>67</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 16,DEX 14,CON 16,INT 12,WIS 13,CHA 17</stats>
+	<saves>DEX 5,CON 6,WIS 4,CHA 6</saves>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<languages>INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Poisoned Weapons,The lesser erinyes’s weapon attacks are magical and deal an extra 4 (1d8) poison damage on a hit (included in its attacks).</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The lesser erinyes makes three attacks.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands, plus 4 (1d8) poison damage.</attack>
+		<attack>Longbow,5,150,600,One target. Hit: 6 (1d8+2) piercing damage plus 4 (1d8) poison damage, and the target must succeed on a DC 11 Constitution saving throw or be poisoned. The poison lasts until it is removed by the lesser restoration spell or similar magic.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The lesser erinyes can add 4 to its AC against one melee attack that would hit it. To do so, the lesser erinyes must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Mind flayer</name>
@@ -1238,6 +1873,109 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Naergoth bladelord</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>11.0</cr>
+	<ac>18</ac>
+	<hp>135</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 12,CON 16,INT 12,WIS 14,CHA 16</stats>
+	<saves>DEX 5,WIS 6</saves>
+	<skills>PERCEPTION 6,STEALTH 5</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other>Silvered weapons breach the damage resistance.</other>
+	<actions>
+		<multiattack>Naergoth makes three attacks, either with his longsword or longbow. He can use Life Drain in place of one longsword attack.</multiattack>
+		<attack>Life Drain,9,5,One creature. Hit: 20 (5d6+3) necrotic damage. The target must succeed on a DC 15 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+A humanoid slain by this attack rises 24 hours later as a zombie under Naergoth's control, unless the humanoid is restored to life or its body is destroyed. Naergoth can have no more than twelve zombies under his control at one time.</attack>
+		<attack>Longsword,9,5,One target. Hit: 9 (1d8+5) slashing damage, or 10 (1d10+5) slashing damage if used with two hands, plus 10 (3d6) necrotic damage.</attack>
+		<attack>Longbow,5,150,600,One target. Hit: 5 (1d8+1) piercing damage plus 10 (3d6) necrotic damage.</attack>
+	</actions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Severin</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>11.0</cr>
+	<ac>16</ac>
+	<hp>150</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 13,CON 16,INT 17,WIS 12,CHA 20</stats>
+	<saves>DEX 5,WIS 5</saves>
+	<skills>ARCANA 7,RELIGION 7</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,LIGHTNING,POISON,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>5</legendaryresistance>
+		<passive>Special Equipment,Severin has the Mask of the Dragon Queen.</passive>
+		<passive>Ignite Enemy,If Severin deals fire damage to a creature while wearing the Mask o f the Dragon Queen, the target catches fire. At the start of each of its turns, the burning target takes 5 (1d10) fire damage. A creature within reach of the fire can use an action to extinguish it.</passive>
+		<passive>Draconic Majesty,Severin adds his Charisma bonus to his AC (included).</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Burning Touch,5,5,One target. Hit: 18 (4d8) fire damage.</attack>
+		<attack>Flaming Orb,5,90,One target. Hit: 40 (9d8) fire damage.</attack>
+		<effect>Scorching Burst,null,Severin chooses a point he can see within 60 feet of him. Each creature within 5 feet of that point must make a DC 17 Dexterity saving throw, taking 18 (4d8) fire damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Attack,1,Severin makes one attack.</legendaryaction>
+		<legendaryaction>Fiery Teleport,2,Severin, along with any objects he is wearing or carrying, teleports up to 60 feet to an unoccupied space he can see. Each creature within 5 feet of Severin before he teleports takes 5 (1d10) fire damage.</legendaryaction>
+		<legendaryaction>Hellish Chains,3,Severin targets one creature he can see within 30 feet of him. The target is wrapped in magical chains of fire and restrained. The restrained target takes 21 (6d6) fire damage at the start of each of its turns. At the end of its turns, the target can make a DC 17 Strength saving throw, ending the effect on itself on a success.</legendaryaction>
+	</legendaryactions>
+	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Lady Czorgan</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>CE</align>
+	<cr>12.0</cr>
+	<ac>18</ac>
+	<hp>97</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 10,CON 16,INT 10,WIS 13,CHA 16</stats>
+	<saves>DEX 5,WIS 6,CHA 7</saves>
+	<multipliers>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,8,15,13,LadyCzorgan</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Unholy Aura,Unless Lady Czorgan is incapacitated, she and undead creatures of her choice within 30 feet have advantage on saving throws against features that turn undead.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Lady Czorgan makes two longsword attacks.</multiattack>
+		<attack>longsword,8,5,One target. Hit: 8 (1d8+4) slashing damage, or 10 (1d10+4) slashing damage if used with two hands, plus 13 (3d8) necrotic damage.</attack>
+		<effect>Decaying Ground,1/Day,Lady Czorgan points at a location she can see and corruption explodes from the ground within 60 feet of her. Each creature in a 20-foot-radius sphere centered on that point must make a DC 15 Constitution saving throw. The corrupted ground spreads around corners. A creature takes 52 (15d6) necrotic damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Remnant chosen</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -1301,6 +2039,44 @@ Understands the languages of its creator but can't speak.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>The phoenix</name>
+	<size>HUGE</size>
+	<type>CELESTIAL,false</type>
+	<align>NG</align>
+	<cr>21.0</cr>
+	<ac>21</ac>
+	<hp>243</hp>
+	<speed>WALK 30,FLY 3450</speed>
+	<stats>STR 25,DEX 22,CON 26,INT 25,WIS 25,CHA 29</stats>
+	<saves>INT 14,WIS 14,CHA 16</saves>
+	<skills>PERCEPTION 14</skills>
+	<multipliers>
+		<RESISTANCE>RADIANT,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>The Fire is Alive,At the start of each of its turns, the phoenix regains 3d12 hit points.</passive>
+		<passive>Dazzling Plumage,The phoenix’s feathers cycle through every color in the rainbow. Any evil creature that begins its turn within 60 feet of the Defender of All the Earth and does not avert its gaze must succeed on a DC 15 Wisdom saving throw or be charmed until the end of its next turn. Charmed targets are stunned. If a target’s saving throw is successful, it is immune to the phoenix’s Dazzling Plumage for the next 24 hours.</passive>
+		<passive>Born of Fire,The phoenix radiates sunlight in a 60-foot radius and dim light in a further 180-foot radius.</passive>
+	</passives>
+	<other>Fly speed is hover. Yes, it can break the sound barrier.
+Telepathy is 120ft.
+
+In battle, the phoenix is a unit with Attack +17 and Power +15 and can affect every unit in the battle.</other>
+	<actions>
+		<multiattack>The phoenix makes two talon attacks and one bite attack.</multiattack>
+		<attack>Talon,14,10,One target. Hit: 25 (4d8+7) slashing damage.</attack>
+		<attack>Bite,14,15,One target. Hit: 18 (2d10+7) piercing damage plus 9 (2d8) fire damage.</attack>
+		<effect>Light of All Colours,Recharge 4-6,The phoenix exhales a beam of brilliant, prismatic light in a line that is 10 feet wide and 1,000 feet long. Each creature in that line must make a DC 22 Dexterity saving throw, taking 45 (10d8) fire and 35 (10d6) radiant damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Ancient Red Dragon</name>
 	<size>GARGANTUAN</size>
 	<type>DRAGON,false</type>
@@ -1341,4 +2117,49 @@ Understands the languages of its creator but can't speak.</other>
 		<lairaction>Volcanic gasses form a cloud in a 20ft radius sphere centered on a point the dragon can see within 120ft of it. The sphere spreads around corners, and its area is lightly obscured. It lasts until initiative count 20 on the next round. Each creature that starts its turn in the cloud must succeed on a DC 13 Constitution saving throw or be poisoned until the end of its next turn. While poisoned in this way, a creature is incapacitated.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Tiamat</name>
+	<size>GARGANTUAN</size>
+	<type>FIEND,false</type>
+	<align>CE</align>
+	<cr>30.0</cr>
+	<ac>25</ac>
+	<hp>615</hp>
+	<speed>WALK 60,FLY 120</speed>
+	<stats>STR 30,DEX 10,CON 30,INT 26,WIS 26,CHA 28</stats>
+	<saves>STR 19,DEX 9,WIS 17</saves>
+	<skills>ARCANA 17,PERCEPTION 26,RELIGION 17</skills>
+	<multipliers>
+		<IMMUNITY>ACID,COLD,FIRE,LIGHTNING,POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,FRIGHTENED,POISONED,STUNNED</conditions>
+	<senses>DARKVISION 240,TRUESIGHT 120</senses>
+	<languages>COMMON,DRACONIC,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>5</legendaryresistance>
+		<innatecasting>CHA,,26,,TiamatInnate</innatecasting>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Limited Magic Immunity,Unless she wishes to be affected, Tiamat is immune to spells of 6th level or lower. She has advantage on saving throws against all other spells and magical effects.</passive>
+		<passive>Regeneration,Tiamat regains 30 hit points at the start of her turn.</passive>
+		<passive>Multiple Heads,Tiamat can take one reaction per turn, rather than only one per round. She also has advantage on saving throws against being knocked unconscious. If she fails a saving throw against an effect that would stun a creature, one of her unspent legendary actions is spent.</passive>
+		<passive>Discorporation,When Tiamat drops to 0 hit points or dies, her body is destroyed but her essence travels back to her domain in the Nine Hells, and she is unable to take physical form for a time.</passive>
+	</passives>
+	<other>Each head can only be used once as part of legendary actions each round.</other>
+	<actions>
+		<multiattack>Tiamat can use her Frightful Presence. She then makes three attacks: two with her claws and one with her tail.</multiattack>
+		<attack>Claw,19,15,One target. Hit: 24 (4d6+10) slashing damage.</attack>
+		<attack>Tail,19,25,One target. Hit: 28 (4d8+10) piercing damage.</attack>
+		<effect>Frightful Presence,null,Each creature of Tiamat’s choice that is within 240 feet of Tiamat and aware of her must succeed on a DC 26 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature’s saving throw is successful or the effect ends for it, the creature is immune to Tiamat's Frightful Presence for the next 24 hours.</effect>
+	</actions>
+	<legendaryactions>5
+		<legendaryaction>Bite,1,One target. Hit: 32 (4d10+10) slashing damage plus 14 (4d6) acid damage (black dragon head), lightning damage (blue dragon head), poison damage (green dragon head), fire damage (red dragon head), or cold damage (white dragon head).</legendaryaction>
+		<legendaryaction>Black Dragon Head: Acid Breath,2,Tiamat breathes acid in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 27 Dexterity saving throw, taking 67 (15d8) acid damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+		<legendaryaction>Blue Dragon Head: Lightning Breath,2,Tiamat breathes lightning in a 120-foot line that is 10 feet wide. Each creature in that line must make a DC 27 Dexterity saving throw, taking 88 (16dl0) lightning damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+		<legendaryaction>Green Dragon Head: Poison Breath,2,Tiamat breathes poisonous gas in a 90-foot cone. Each creature in that area must make a DC 27 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+		<legendaryaction>Red Dragon Head: Fire Breath,2,Tiamat breathes fire in a 90-foot cone. Each creature in that area must make a DC 27 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+		<legendaryaction>White Dragon Head: Cold Breath,2,Tiamat breathes an icy blast in a 90-foot cone. Each creature in that area must make a DC 27 Dexterity saving throw, taking 72 (16d8) cold damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+	</legendaryactions>
+	<source>THERISEOFTIAMAT</source>
 </creature>

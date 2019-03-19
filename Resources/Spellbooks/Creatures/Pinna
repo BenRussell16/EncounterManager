@@ -1,0 +1,9 @@
+<spellbook>
+	<name>Pinna</name>
+	<slot>
+		<known>Dancing lights,Fire bolt,Mage hand,Minor illusion,Colour spray,Identify,Magic missile,Silent image,Blur,Web</known>
+		<0>Minor illusion,Mage hand,Dancing lights,Fire bolt</0>
+		<1>4,Colour spray,Identify,Magic missile,Silent image</1>
+		<2>2,Blur,Web</2>
+	</slot>
+</spellbook>

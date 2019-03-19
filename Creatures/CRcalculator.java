@@ -1,10 +1,12 @@
 package Creatures;
 
+import java.util.List;
 import java.util.Map;
 
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
 @SuppressWarnings("restriction")
 public class CRcalculator {
@@ -49,17 +51,17 @@ public class CRcalculator {
 	};
 	private Stage secondaryStage = null;
 	
-	int ac, hp, attackmod, vulns, resists, immunes, saveprofs;
+	int ac, hp, vulns, resists, immunes, saveprofs;
 	boolean hasfly;
-	Map<String,String> passives,actions,reactions,legendaryactions,lairactions;
+	Map<String,String> passives,actions,reactions,legendaryactions;
+	List<String> lairactions;
 	
-	public CRcalculator(int ac, int hp, int attackmod, int vulns, int resists, int immunes, int saveprofs,
+	public CRcalculator(int ac, int hp, int vulns, int resists, int immunes, int saveprofs,
 			boolean hasfly,
 			Map<String,String> passives, Map<String,String> actions, Map<String,String> reactions,
-			Map<String,String> legendaryactions, Map<String,String> lairactions) {
+			Map<String,String> legendaryactions, List<String> lairactions) {
 		this.ac = ac;
 		this.hp = hp;
-		this.attackmod = attackmod;
 		this.vulns = vulns;
 		this.resists = resists;
 		this.immunes = immunes;
@@ -80,6 +82,45 @@ public class CRcalculator {
         grid.setHgap(10);
       	grid.setVgap(10);
       	
+      	grid.add(new Label("Defensive factors"), 0, 0);
+	  		grid.add(new Label("AC: "+ac+"\tHP: "+hp), 1, 1);
+	  		grid.add(new Label("Vulnerabilties: "+vulns+"\tResistances: "+resists+"\tImmunities: "+immunes), 1, 2);
+	  		grid.add(new Label("Save proficiencies: "+saveprofs), 1, 3);
+	  		if(hasfly){grid.add(new Label("Has a fly speed."), 1, 4);}
+      	
+	  	GridPane abilities = new GridPane();
+	  		int i=0;
+	  		abilities.add(new Label("Passives"), 0, i++);
+	  		for(String s:passives.keySet()){
+	  			abilities.add(new Label(s), 1, i);
+	  			abilities.add(new Label(passives.get(s)), 2, i);
+	  			i++;
+	  		}
+	  		abilities.add(new Label("Actions"), 0, i++);
+	  		for(String s:actions.keySet()){
+	  			abilities.add(new Label(s), 1, i);
+	  			abilities.add(new Label(actions.get(s)), 2, i);
+	  			i++;
+	  		}
+	  		abilities.add(new Label("Reactions"), 0, i++);
+	  		for(String s:reactions.keySet()){
+	  			abilities.add(new Label(s), 1, i);
+	  			abilities.add(new Label(reactions.get(s)), 2, i);
+	  			i++;
+	  		}
+	  		abilities.add(new Label("Legendary Actions"), 0, i++);
+	  		for(String s:legendaryactions.keySet()){
+	  			abilities.add(new Label(s), 1, i);
+	  			abilities.add(new Label(legendaryactions.get(s)), 2, i);
+	  			i++;
+	  		}
+	  		abilities.add(new Label("Lair Actions"), 0, i++);
+	  		for(String s:lairactions){
+	  			abilities.add(new Label(s), 1, i++);
+	  		}
+	  	grid.add(abilities, 0, 5, 2, 1);
+	  	
+	  	
       	//Needed values.
       	//	Expected CR & Prof (in window)
       	//	AC, HP, Attack mod.
@@ -87,7 +128,7 @@ public class CRcalculator {
       	//	Passives, Actions, Reactions, Legendary actions, Lair actions. (refined in window)
       	//	If has fly speed.
       	//	Number of save profs.
-      	//	Average damage & save DC (in window)
+      	//	Average damage, attack mod, and save DC (in window)
       	
       	//Get prof from expected CR
       	//Multipliers

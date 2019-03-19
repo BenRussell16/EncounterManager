@@ -1,0 +1,10 @@
+<spellbook>
+	<name>WhiteTuskWarspeaker</name>
+	<slot>
+		<known>Resistance,Sacred flame,Thaumaturgy,Cure wounds,Guiding bolt,Inflict wounds,Blindness/Deafness,Spiritual weapon,Bestow curse,Spirit guardians</known>
+		<0>Resistance,Sacred flame,Thaumaturgy</0>
+		<1>4,Cure wounds,Guiding bolt,Inflict wounds</1>
+		<2>3,Blindness/Deafness,Spiritual weapon</2>
+		<3>2,Bestow curse,Spirit guardians</3>
+	</slot>
+</spellbook>

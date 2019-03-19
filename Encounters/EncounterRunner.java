@@ -484,6 +484,11 @@ public class EncounterRunner {
 				limitedUses.add(c.orderedPassives().get(i));
 			}
 		}
+		for(int i=0; i<c.getAttacks().size(); i++){
+			if(c.getAttacks().get(i).getName().contains("(")){
+				limitedUses.add(c.getAttacks().get(i).getName());
+			}
+		}
 		for(int i=0; i<c.getEffects().size(); i++){
 			if(c.getEffects().get(i).getLimit()!=null && !c.getEffects().get(i).getLimit().equals("null")){
 				limitedUses.add(c.getEffects().get(i).getName()+" ("+c.getEffects().get(i).getLimit()+")");
@@ -544,7 +549,7 @@ public class EncounterRunner {
 			if(casting.hasPrepped()){
 				GridPane preppedPane = new GridPane();
 				for(int i=0; i<=9; i++){
-					if(!casting.getDaily(i).isEmpty()){
+					if(!casting.getPrepped(i).isEmpty() || casting.getSlots(i)>0){
 						if(i==0){preppedPane.add(new Label("Cantrip"), 0, i);}
 						else{preppedPane.add(new Label("Level "+i+":"), 0, i);}
 						if(i>0){
@@ -556,7 +561,7 @@ public class EncounterRunner {
 						}
 						int j=1;
 						GridPane rowPane = new GridPane();
-						for(Spell s:casting.getDaily(i)){
+						for(Spell s:casting.getPrepped(i)){
 							Label spellLabel = new Label("\t"+s.getName());
 				      		Tooltip toolTip = new Tooltip(s.toString());
 				      		toolTip.setWrapText(true);
@@ -605,7 +610,7 @@ public class EncounterRunner {
 			if(casting.hasPrepped()){
 				GridPane preppedPane = new GridPane();
 				for(int i=0; i<=9; i++){
-					if(!casting.getPrepped(i).isEmpty()){
+					if(!casting.getPrepped(i).isEmpty() || casting.getSlots(i)>0){
 						if(i==0){preppedPane.add(new Label("Cantrip\t"), 0, i);}
 						else{preppedPane.add(new Label("Level "+i+":\t"), 0, i);}
 						if(i>0){

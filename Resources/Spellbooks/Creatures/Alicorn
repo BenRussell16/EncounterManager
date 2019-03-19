@@ -1,0 +1,15 @@
+<spellbook>
+	<name>Alicorn</name>
+	<daily>
+		<0>
+			<spell>Detect evil and good,false</spell>
+			<spell>Druidcraft,false</spell>
+			<spell>Pass without trace,false</spell>
+		</0>
+		<1>
+			<spell>Calm emotions,false</spell>
+			<spell>Dispel evil and good,false</spell>
+			<spell>Entangle,false</spell>
+		</1>
+	</daily>
+</spellbook>

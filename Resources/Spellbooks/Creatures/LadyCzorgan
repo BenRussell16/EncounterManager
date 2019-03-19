@@ -1,0 +1,10 @@
+<spellbook>
+	<name>LadyCzorgan</name>
+	<slot>
+		<known>Command,Hunters mark,Inflict wounds,Hold person,Magic weapon,Dispel magic,Vampiric touch,Banishment,Blight</known>
+		<1>4,Command,Hunters mark,Inflict wounds</1>
+		<2>3,Magic weapon,Hold person</2>
+		<3>3,Vampiric touch,Dispel magic</3>
+		<4>1,Banishment,Blight</4>
+	</slot>
+</spellbook>
