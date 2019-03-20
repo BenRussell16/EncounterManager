@@ -45,7 +45,7 @@ public class EncounterRunner {
 	
 	private GridPane healthBar;
 		private List<GridPane> healthPanes;
-		private Map<GridPane,GridPane> healthtoinit;
+		private Map<GridPane,GridPane> healthtoinit = new HashMap<GridPane,GridPane>();;
 	
 	private GridPane statsBar;
 
@@ -71,13 +71,13 @@ public class EncounterRunner {
 				@Override public void handle(ActionEvent event) {
 					loadEncounter();}});
 			topBar.add(loadEncounter, 0, 0);
-			Button loadParty = new Button("Load party?");
-			loadParty.setOnAction(new EventHandler<ActionEvent>() {
-				@Override public void handle(ActionEvent event) {
-					//TODO load party info if we have it.
-				}
-			});
-			topBar.add(loadParty, 1, 0);
+//			Button loadParty = new Button("Load party?");
+//			loadParty.setOnAction(new EventHandler<ActionEvent>() {
+//				@Override public void handle(ActionEvent event) {
+//					//TODO load party info if we have it.
+//				}
+//			});
+//			topBar.add(loadParty, 1, 0);
 		grid.add(topBar, 0, 0);
 		
 		initiativeBar = new GridPane();						//TODO - Label for the initiative bar.

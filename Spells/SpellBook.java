@@ -381,7 +381,7 @@ public class SpellBook {
 						updateKnownList();
 						for(Integer i:innateListSpellPickers.keySet()){//TODO make this more efficient
 							for(ChoiceBox<Spell> cb:innateListSpellPickers.get(i)){
-								if(cb.getValue()==null){//Update query on innate spell selection.		TODO
+								if(cb.getValue()==null){//Update query on innate spell selection.
 									cb.getItems().clear();
 									cb.getItems().add(null);
 									cb.getItems().addAll(query);
@@ -789,6 +789,13 @@ public class SpellBook {
 							innateList.add(levels, 2, innateListCounts.get(j));
 							innateListSpellLevel.get(j).add(levels);
 							
+							RadioButton[] uses = new RadioButton[j];
+							for(int k=0; k<j;k++){
+								RadioButton rb = new RadioButton();
+								uses[k] = rb;
+								innateLists.get(j).add(rb, 4+k, innateListCounts.get(j));
+							}
+							
 							Button remove = new Button("x");//Remove the row.
 							innateList.add(remove, 3, innateListCounts.get(j));
 							remove.setOnAction(new EventHandler<ActionEvent>() {
@@ -800,6 +807,7 @@ public class SpellBook {
 									innateListSpellLevel.get(j).remove(levels);
 									innateList.getChildren().remove(levels);
 									innateList.getChildren().remove(remove);
+									for(RadioButton rb:uses){innateList.getChildren().remove(rb);}
 								}
 							});
 							innateListCounts.put(j, innateListCounts.get(j)+1);
@@ -929,7 +937,6 @@ public class SpellBook {
 			List<Spell> innatespells = loading.getDaily(i);
 			if(!innatespells.isEmpty()){
 				for(Spell s:innatespells){
-					//TODO - setup the input rows
 					ChoiceBox<Spell> spell = new ChoiceBox<Spell>();//Set up spell selection
 					spell.setConverter(new StringConverter<Spell>() {
 						@Override public Spell fromString(String string) {return null;}
@@ -957,6 +964,13 @@ public class SpellBook {
 					levels.setValue(loading.levelCastAt(i, s));
 					innateLists.get(i).add(levels, 2, innateListCounts.get(i));
 					innateListSpellLevel.get(i).add(levels);
+					
+					RadioButton[] uses = new RadioButton[i];
+					for(int j=0; j<i;j++){
+						RadioButton rb = new RadioButton();
+						uses[j] = rb;
+						innateLists.get(i).add(rb, 4+j, innateListCounts.get(i));
+					}
 
 					final int j = i;
 					Button remove = new Button("x");//Remove the row.
@@ -970,6 +984,8 @@ public class SpellBook {
 							innateListSpellLevel.get(j).remove(levels);
 							innateLists.get(j).getChildren().remove(levels);
 							innateLists.get(j).getChildren().remove(remove);
+							for(RadioButton rb: uses){
+								innateLists.get(j).getChildren().remove(rb);}
 						}
 					});
 					innateListCounts.put(i, innateListCounts.get(i)+1);

@@ -60,7 +60,7 @@ public interface Creature {
 			boolean first = true;
 			for(Alignment a:Alignment.values()){
 				if(getAlignment().contains(a)){
-					if(!first){builtString+=" or ";}//TODO tidy if theres ever more than 2.
+					if(!first){builtString+=" or ";}
 					builtString+=a.toNiceString();
 					first = false;
 				}

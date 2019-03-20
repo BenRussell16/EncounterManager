@@ -143,7 +143,6 @@ public class EncounterBuilder {
 			fieldTags = new ArrayList<Label>();
 			inputs = new HashMap<TextField,Label>();
 			
-			//TODO build queries
 			GridPane topBar = new GridPane();
 				Button export = new Button("Save encounter");
 				export.setOnAction(new EventHandler<ActionEvent>() {
@@ -559,7 +558,7 @@ public class EncounterBuilder {
 	      		Tooltip toolTip = new Tooltip(creatures.get(i).toString());
 		      	toolTip.setWrapText(true);
 		      	toolTip.setMaxWidth(450);
-	      		label.setTooltip(toolTip);//TODO make this stable
+	      		label.setTooltip(toolTip);
 	      		fieldTags.add(label);
 	      		creatureList.add(label, 0, i+1);
 	      		TextField textField = new TextField();
@@ -593,6 +592,7 @@ public class EncounterBuilder {
 	      		creatureList.add(textField, 1, i+1);
 	      	}
 	      	sp.setContent(creatureList);
+	      	updateCurBuilt();
 	      	grid.add(sp,0,2);
 	      	
 	      	
@@ -675,8 +675,7 @@ public class EncounterBuilder {
 				xpDisplay.add(label, 0, 5);
 				label = new Label();	xpDisplay.add(label, 0, 6);
 				
-				//TODO party stuff constructor
-				partyPanel = new GridPane();
+				partyPanel = new GridPane();									//TODO - Label for party stuff constructor
 				partyPanel.setHgap(10);
 				partyPanel.setVgap(10);
 				party = new ArrayList<Button>();
