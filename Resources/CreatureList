@@ -171,7 +171,7 @@ Blind beyond blindsight radius.</other>
 	<languages>COMMON,GOBLIN</languages>
 	<regions></regions>
 	<passives>
-		<passive>Martial Advantage,Once per turn, the hobgoblï¿½n can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated.</passive>
+		<passive>Martial Advantage,Once per turn, the hobgoblin can deal an extra 7 (2d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -287,7 +287,7 @@ slashing darrrage if used with two hands.</attack>
 	<regions></regions>
 	<passives>
 		<passive>Amphibious,This creature can breathe air and water.</passive>
-		<passive>Standing Leap,The toad’s long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.</passive>
+		<passive>Standing Leap,The toad's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.</passive>
 		<passive>Cold Aura,Any creature that starts its turn within 5 feet of the toad takes 3 (1d6) cold damage.</passive>
 	</passives>
 	<other></other>
@@ -365,7 +365,7 @@ slashing darrrage if used with two hands.</attack>
 	<languages>ORCISH</languages>
 	<regions></regions>
 	<passives>
-		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18-20.</passive>
 		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
 	</passives>
 	<other></other>
@@ -536,10 +536,10 @@ slashing darrrage if used with two hands.</attack>
 Understands Deep Speech but can't speak.
 Telepathy is 60ft.</other>
 	<actions>
-		<multiattack>The intelï¿½ect devourer makes one attack with its claws and uses Devour lntellect.</multiattack>
+		<multiattack>The intellect devourer makes one attack with its claws and uses Devour Intellect.</multiattack>
 		<attack>Claws,4,5,One target. Hit: 7 (2d4+2) slashing damage.</attack>
-		<effect>Devour Intellect,null,The intellect devourer targets one creature it can see within 10 feet of it that has a brain. The target must succeed on a DC 12 lntelligence saving throw against this magic or take 11 (2d10) psychic damage. Also on a failure, roll 3d6: lf the total equals or exceeds the target's lntelligence score, that score is reduced to 0. The target is stunned until it regains at least one point of lntelligence.</effect>
-		<effect>Body Thief,null,The intellect devourer initiates an lntelligence contest with an incapacitated humanoid within 5 feet of it. lf it wins the contest, the intellect devourer magically consumes the target's brain, teleports into the target's skull, and takes control of the target's body. While inside a creature, the intellect devourer has total cover against attacks and other effects originating outside its host. The intellect devourer retains its lntelligence, Wisdom, and Charisma scores, as well as its understanding of Deep Speech, its telepathy, and its traits. lt otherwise adopts the target's statistics. lt knows everything the creature knew, including spells and languages.
+		<effect>Devour Intellect,null,The intellect devourer targets one creature it can see within 10 feet of it that has a brain. The target must succeed on a DC 12 Intelligence saving throw against this magic or take 11 (2d10) psychic damage. Also on a failure, roll 3d6: lf the total equals or exceeds the target's Intelligence score, that score is reduced to 0. The target is stunned until it regains at least one point of Intelligence.</effect>
+		<effect>Body Thief,null,The intellect devourer initiates an Intelligence contest with an incapacitated humanoid within 5 feet of it. If it wins the contest, the intellect devourer magically consumes the target's brain, teleports into the target's skull, and takes control of the target's body. While inside a creature, the intellect devourer has total cover against attacks and other effects originating outside its host. The intellect devourer retains its Intelligence, Wisdom, and Charisma scores, as well as its understanding of Deep Speech, its telepathy, and its traits. lt otherwise adopts the target's statistics. lt knows everything the creature knew, including spells and languages.
 lf the host body drops to 0 hit points, the intellect devourer must leave it. A protection from evil and good spell cast on the body drives the intellect devourer out. The intellect devourer is also forced out if the target regains its devoured brain by means of a wish. By spending 5 feet of its movement, the intellect devourer can voluntarily leave the body, teleporting to the nearest unoccupied space within 5 feet of it. The body then dies, unless its brain is restored within 1 round.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
@@ -639,7 +639,7 @@ lf the host body drops to 0 hit points, the intellect devourer must leave it. A 
 	<regions>URBAN</regions>
 	<passives>
 		<passive>Cunning Action,On each of its turns, the cutthroat can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
-		<passive>Sneak Attack (1/Turn),The cutthroat deals an extra 14 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the cutthroat that isnï¿½t incapacitated and the cutthroat doesnï¿½t have disadvantage on the attack roll.</passive>
+		<passive>Sneak Attack (1/Turn),The cutthroat deals an extra 14 (4d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the cutthroat that isn't incapacitated and the cutthroat doesn't have disadvantage on the attack roll.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -817,7 +817,7 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<languages>ORCISH,PRIMORDIAL</languages>
 	<regions></regions>
 	<passives>
-		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18-20.</passive>
 		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
 		<passive>Spirit-Bonded Body (Recharges after a Short or Long Rest),As a bonus action, the orc can transform into a dire wolf for up to 4 hours. The orc can choose whether its equipment falls to the ground, melds with its new form, or is worn by the new form. The orc reverts to its true form when its dire wolf form is reduced to 0 hit points. If this damage would cause its dire wolf form to drop below 0 hit points, the excess damage is done to its true form.
 The orc also reverts to its true form if it dies or falls unconscious. The orc can revert to its true form as a bonus action on its turn. When it reverts in this way, it returns to the number of hit points it had before it transformed.</passive>
@@ -849,7 +849,7 @@ The orc also reverts to its true form if it dies or falls unconscious. The orc c
 	<regions></regions>
 	<passives>
 		<spellcasting>WIS,5,13,5,WhiteTuskWarspeaker</spellcasting>
-		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18-20.</passive>
 		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
 	</passives>
 	<other>Spiritual weapon is a greataxe.</other>
@@ -972,7 +972,7 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Both Guard and Ward,While the lieutenant is within 5 feet of the attuned owner of the codex automata, any attack targeting the codex’s owner has a 50% chance to instead target the machine lieutenant.</passive>
+		<passive>Both Guard and Ward,While the lieutenant is within 5 feet of the attuned owner of the codex automata, any attack targeting the codex's owner has a 50% chance to instead target the machine lieutenant.</passive>
 	</passives>
 	<other>Adamantine weapons breach damage resistance.
 Blind beyond its blindsight radius.
@@ -1001,7 +1001,7 @@ Understands the languages of its creator but can't speak.</other>
 	<languages>ORCISH</languages>
 	<regions></regions>
 	<passives>
-		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18-20.</passive>
 		<passive>Cold Fury (Recharges after a Short or Long Rest),As a bonus action, the orc can enter a cold fury for 1 minute. While in a fury, its melee weapon attacks deal an extra 3 (1d6) damage.
 Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was dealt with a critical hit, the orc makes a Constitution saving throw with a DC of 5 plus the damage taken. On a success, the orc instead drops to 1 hit point and its fury ends.</passive>
 		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
@@ -1031,7 +1031,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<languages>ORCISH</languages>
 	<regions></regions>
 	<passives>
-		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18–20.</passive>
+		<passive>Minion: Savage Horde,After moving at least 20 feet in a straight line toward a creature, the next attack the orc makes against that creature scores a critical hit on a roll of 18-20.</passive>
 		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature it can see.</passive>
 	</passives>
 	<other></other>
@@ -1079,7 +1079,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Hooves,1,The alicorn makes one attack with its hooves.</legendaryaction>
-		<legendaryaction>Prismatic Barrier,2,The alicorn creates a prismatic, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the alicorn’s next turn.</legendaryaction>
+		<legendaryaction>Prismatic Barrier,2,The alicorn creates a prismatic, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the alicornï¿½s next turn.</legendaryaction>
 		<legendaryaction>Heal Self,3,The alicorn magically restores 11 (2d8+2) hit points.</legendaryaction>
 	</legendaryactions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
@@ -1103,7 +1103,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<passives>
 		<spellcasting>WIS,6,14,3,AshariSkydancer</spellcasting>
 		<passive>Flyby,This creature doesn't provoke an opportunity attack when it flies out of an enemies reach.</passive>
-		<passive>Skysail,The skydancer flies with a special ashari weapon called a skysail (see pg. 45). While the skysailï¿½s wings are extended, the skydancer can cast levitate at will, and can spend an action to cast fly on itself (no concentration required) for up to 1 minute once per day. This use of fly instantly replenishes when in an area of powerful air elemental magic, such as the Rift of Air in Zephrah.</passive>
+		<passive>Skysail,The skydancer flies with a special ashari weapon called a skysail (see pg. 45). While the skysail's wings are extended, the skydancer can cast levitate at will, and can spend an action to cast fly on itself (no concentration required) for up to 1 minute once per day. This use of fly instantly replenishes when in an area of powerful air elemental magic, such as the Rift of Air in Zephrah.</passive>
 		<passive>Evasion,If the skydancer is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the skydancer instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</passive>
 	</passives>
 	<other>Only has the fly speed with the skysail.</other>
@@ -1134,7 +1134,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<senses>DARKVISION 60</senses>
 	<regions></regions>
 	<passives>
-		<passive>Molten Form,The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creatureï¿½s space and stop there. The first time it enters a creatureï¿½s space on a turn, that creature takes 5 (1d10) fire damage and must make a DC 14 Strength saving throw, becoming restrained on a failure. When the begins its turn while restrained in this way, it takes 5 (1d10) fire damage.</passive>
+		<passive>Molten Form,The elemental can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the elemental or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage. In addition, the elemental can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 (1d10) fire damage and must make a DC 14 Strength saving throw, becoming restrained on a failure. When the begins its turn while restrained in this way, it takes 5 (1d10) fire damage.</passive>
 		<passive>Water Susceptibility,For every 5 feet that elemental moves in water, or for every gallon of water splashed on it, it takes 1 cold damage.</passive>
 	</passives>
 	<other></other>
@@ -1162,7 +1162,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<regions>URBAN</regions>
 	<passives>
 		<passive>Second Wind (Recharges after a Short or Long Rest),As a bonus action, the enforcer can regain 12 hit points.</passive>
-		<passive>Intimidating Presence,Whenever the enforcer hits with a melee attack, the target must make a DC 15 Wisdom saving throw. On a failure, the target is frightened of the enforcer until the end of its next turn. The enforcerï¿½s allies have advantage on attack rolls against creatures frightened in this way.</passive>
+		<passive>Intimidating Presence,Whenever the enforcer hits with a melee attack, the target must make a DC 15 Wisdom saving throw. On a failure, the target is frightened of the enforcer until the end of its next turn. The enforcer's allies have advantage on attack rolls against creatures frightened in this way.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -1355,12 +1355,12 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 	<other></other>
 	<actions>
 		<multiattack>Bonebreaker Dorokor makes three weapon attacks, or she makes two attacks and issues a War Cry if it is available.</multiattack>
-		<attack>Wound,8,5,One target. Hit: 11(1d12+5) slashing damage plus 7 (2d6) necrotic damage. The target’s maximum hit points are decreased in equal amount to the necrotic damage dealt. The target’s hit point maximum does not return to normal until it finishes a long rest or its grievous wounds are soothed by a greater restoration spell.</attack>
+		<attack>Wound,8,5,One target. Hit: 11(1d12+5) slashing damage plus 7 (2d6) necrotic damage. The target's maximum hit points are decreased in equal amount to the necrotic damage dealt. The target's hit point maximum does not return to normal until it finishes a long rest or its grievous wounds are soothed by a greater restoration spell.</attack>
 		<attack>Longbow,5,150,600,One target. Hit: 6 (1d8+2) piercing damage.</attack>
 		<effect>War Cry,Recharge 5-6,Dorokor screams an orcish war phrase, spurring her warriors on toward victory. Choose one of the following effects:
- - Rally: All of Dorokor’s minions within 30 feet that can hear her gain 22 (4d10) temporary hit points.
- - Focus: All of Dorokor’s minions within 30 feet that can hear her will have advantage on the next attack roll they make before the end of their next turn.
- - Charge: All of Dorokor’s minions within 30 feet that can hear her move up to their speed as a reaction.</effect>
+ - Rally: All of Dorokor's minions within 30 feet that can hear her gain 22 (4d10) temporary hit points.
+ - Focus: All of Dorokor's minions within 30 feet that can hear her will have advantage on the next attack roll they make before the end of their next turn.
+ - Charge: All of Dorokor's minions within 30 feet that can hear her move up to their speed as a reaction.</effect>
 	</actions>
 	<reactions>
 		<reaction>Villain Ability: Warlord,As a reaction, when a minion dies, issue a command to your other minions. Those who can hear you gain a reaction they can use to immediately take another movement.</reaction>
@@ -1516,7 +1516,7 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 	</actions>
 	<reactions>
 		<reaction>Sentinel,When a creature within 5 feet of the stoneguard attacks a target other than the stoneguard, it can make a single attack roll against the attacker.</reaction>
-		<reaction>Skin to Stone,When the stoneguard is attacked, it may gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks until the end of the attackerï¿½s turn.</reaction>
+		<reaction>Skin to Stone,When the stoneguard is attacked, it may gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks until the end of the attacker's turn.</reaction>
 	</reactions>
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
@@ -1600,7 +1600,7 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Poisoned Weapons,The lesser erinyes’s weapon attacks are magical and deal an extra 4 (1d8) poison damage on a hit (included in its attacks).</passive>
+		<passive>Poisoned Weapons,The lesser erinyes' weapon attacks are magical and deal an extra 4 (1d8) poison damage on a hit (included in its attacks).</passive>
 	</passives>
 	<other>Silvered weapons breach damage resistance.
 Telepathy is 60ft.</other>
@@ -1638,7 +1638,7 @@ Telepathy is 60ft.</other>
 	<other>Telepathy is 120ft.
 Innate spellcasting is psionics.</other>
 	<actions>
-		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smalï¿½er, it is grappï¿½ed (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
+		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
 		<attack>Extract Brain,7,5,One incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. lf this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.</attack>
 		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
@@ -1668,8 +1668,8 @@ Innate spellcasting is psionics.</other>
 	</passives>
 	<other></other>
 	<actions>
-		<attack>Dagger of Wounding,7,20,60,One target. Hit: 5 (1d4+3) piercing damage. Hit points lost to this weaponï¿½s damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.
-Once per turn, the cultist may choose to wound its target. At the start of each of the wounded creatureï¿½s turns, it takes 1d4 necrotic damage for each time the cultist wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</attack>
+		<attack>Dagger of Wounding,7,20,60,One target. Hit: 5 (1d4+3) piercing damage. Hit points lost to this weapon's damage can be regained only through a short or long rest, rather than by regeneration, magic, or any other means.
+Once per turn, the cultist may choose to wound its target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time the cultist wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
@@ -1698,7 +1698,7 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 	<other>Telepathy is 120ft.
 Innate spellcasting is psionics.</other>
 	<actions>
-		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smalï¿½er, it is grappï¿½ed (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
+		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
 		<attack>Extract Brain,7,5,One incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. lf this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.</attack>
 		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
@@ -1861,8 +1861,8 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>Magic weapons,It's weapon attacks are magical.</passive>
-		<passive>Singeing Aura,At the start of each of the lesser balorï¿½s turns, each creature within 5 feet of it takes 7 (2d6) fire damage. A creature that touches the lesser balor or hits it with a melee attack while within 5 feet of it takes 7 (2d6) fire damage.</passive>
-		<passive>Fiery End,When the lesser balor dies, it explodes. Each creature within 20 feet of it must make a DC 16 Dexterity saving throw. On a failed save, a creature takes 35 (10d6) fire damage, or half as much damage on a successful one. The explosion destroys the lesser balorï¿½s weapons.</passive>
+		<passive>Singeing Aura,At the start of each of the lesser balor's turns, each creature within 5 feet of it takes 7 (2d6) fire damage. A creature that touches the lesser balor or hits it with a melee attack while within 5 feet of it takes 7 (2d6) fire damage.</passive>
+		<passive>Fiery End,When the lesser balor dies, it explodes. Each creature within 20 feet of it must make a DC 16 Dexterity saving throw. On a failed save, a creature takes 35 (10d6) fire damage, or half as much damage on a successful one. The explosion destroys the lesser balor's weapons.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
 	<actions>
@@ -1996,7 +1996,7 @@ A humanoid slain by this attack rises 24 hours later as a zombie under Naergoth'
 	<passives>
 		<spellcasting>CHA,9,17,18,RemnantChosen</spellcasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>All-Seeing Eye,As a bonus action, the Chosen may select a creature or object affected by an illusion spell of 4th level or lower. One illusion of the Chosenï¿½s choice affecting that creature is instantly dispelled.</passive>
+		<passive>All-Seeing Eye,As a bonus action, the Chosen may select a creature or object affected by an illusion spell of 4th level or lower. One illusion of the Chosen's choice affecting that creature is instantly dispelled.</passive>
 	</passives>
 	<other>Resistant to damage from spells.
 The Chosen typically casts Mage armour and Greater invisibility on itself before combat.</other>
@@ -2061,7 +2061,7 @@ Understands the languages of its creator but can't speak.</other>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>The Fire is Alive,At the start of each of its turns, the phoenix regains 3d12 hit points.</passive>
-		<passive>Dazzling Plumage,The phoenix’s feathers cycle through every color in the rainbow. Any evil creature that begins its turn within 60 feet of the Defender of All the Earth and does not avert its gaze must succeed on a DC 15 Wisdom saving throw or be charmed until the end of its next turn. Charmed targets are stunned. If a target’s saving throw is successful, it is immune to the phoenix’s Dazzling Plumage for the next 24 hours.</passive>
+		<passive>Dazzling Plumage,The phoenix's feathers cycle through every color in the rainbow. Any evil creature that begins its turn within 60 feet of the Defender of All the Earth and does not avert its gaze must succeed on a DC 15 Wisdom saving throw or be charmed until the end of its next turn. Charmed targets are stunned. If a target's saving throw is successful, it is immune to the phoenix's Dazzling Plumage for the next 24 hours.</passive>
 		<passive>Born of Fire,The phoenix radiates sunlight in a 60-foot radius and dim light in a further 180-foot radius.</passive>
 	</passives>
 	<other>Fly speed is hover. Yes, it can break the sound barrier.
@@ -2151,7 +2151,7 @@ In battle, the phoenix is a unit with Attack +17 and Power +15 and can affect ev
 		<multiattack>Tiamat can use her Frightful Presence. She then makes three attacks: two with her claws and one with her tail.</multiattack>
 		<attack>Claw,19,15,One target. Hit: 24 (4d6+10) slashing damage.</attack>
 		<attack>Tail,19,25,One target. Hit: 28 (4d8+10) piercing damage.</attack>
-		<effect>Frightful Presence,null,Each creature of Tiamat’s choice that is within 240 feet of Tiamat and aware of her must succeed on a DC 26 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature’s saving throw is successful or the effect ends for it, the creature is immune to Tiamat's Frightful Presence for the next 24 hours.</effect>
+		<effect>Frightful Presence,null,Each creature of Tiamat's choice that is within 240 feet of Tiamat and aware of her must succeed on a DC 26 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Tiamat's Frightful Presence for the next 24 hours.</effect>
 	</actions>
 	<legendaryactions>5
 		<legendaryaction>Bite,1,One target. Hit: 32 (4d10+10) slashing damage plus 14 (4d6) acid damage (black dragon head), lightning damage (blue dragon head), poison damage (green dragon head), fire damage (red dragon head), or cold damage (white dragon head).</legendaryaction>
