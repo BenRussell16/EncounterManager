@@ -1,0 +1,7 @@
+<encounter>
+	<name>B</name>
+	<creature>1,Giff</creature>
+	<creature>2,Eternal flame priest</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>

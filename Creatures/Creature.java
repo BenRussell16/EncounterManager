@@ -413,7 +413,7 @@ public interface Creature {
 	
 	public enum Alignment{
 		LG("Lawful Good"),NG("Neutral Good"),CG("Chaotic Good"),
-		LN("Lawful Neutral"),TN("True Neutral"),CN("Chaotic neutral"),
+		LN("Lawful Neutral"),TN("True Neutral"),CN("Chaotic Neutral"),
 		LE("Lawful Evil"),NE("Neutral Evil"),CE("Chaotic Evil"),
 		UNALIGNED("Unaligned");
 		private String niceFormat;

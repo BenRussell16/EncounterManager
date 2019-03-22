@@ -175,8 +175,10 @@ public class EncounterRunner {
 				
 				
 				
-
-	    secondaryStage.setScene(new Scene(grid, 1200, 800));
+		sp = new ScrollPane();
+		grid.setMaxWidth(1100);
+		sp.setContent(grid);
+	    secondaryStage.setScene(new Scene(sp, 1200, 800));
 		secondaryStage.show();
 		return secondaryStage;
 	}
@@ -481,12 +483,22 @@ public class EncounterRunner {
 		List<String> limitedUses = new ArrayList<String>();//Filter limited use features.
 		for(int i=0; i<c.orderedPassives().size(); i++){
 			if(c.orderedPassives().get(i).contains("(")){
-				limitedUses.add(c.orderedPassives().get(i));
+				if(c.orderedPassives().get(i).contains("/Day)")
+						||c.orderedPassives().get(i).contains("/Turn)")
+						||c.orderedPassives().get(i).contains("(Recharge")){
+					limitedUses.add(c.orderedPassives().get(i));
+				}
+				//else{System.out.println(c.getName()+"__"+c.orderedPassives().get(i));}
 			}
 		}
 		for(int i=0; i<c.getAttacks().size(); i++){
 			if(c.getAttacks().get(i).getName().contains("(")){
-				limitedUses.add(c.getAttacks().get(i).getName());
+				if(c.getAttacks().get(i).getName().contains("/Day)")
+						||c.getAttacks().get(i).getName().contains("/Turn)")
+						||c.getAttacks().get(i).getName().contains("(Recharge")){
+					limitedUses.add(c.getAttacks().get(i).getName());
+				}
+				//else{System.out.println(c.getName()+"__"+c.orderedPassives().get(i));}
 			}
 		}
 		for(int i=0; i<c.getEffects().size(); i++){

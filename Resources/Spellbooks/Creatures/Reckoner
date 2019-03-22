@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Reckoner</name>
+	<slot>
+		<known>Blade ward,Light,Message,Shocking grasp,Guiding bolt,Shield,Thunderwave,Witch bolt,Blur,Levitate,Lightning bolt</known>
+		<0>Blade ward,Light,Message,Shocking grasp</0>
+		<1>4,Shield,Thunderwave,Witch bolt,Guiding bolt</1>
+		<2>3,Blur,Levitate</2>
+		<3>2,Lightning bolt</3>
+	</slot>
+</spellbook>

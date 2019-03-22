@@ -1,0 +1,11 @@
+<spellbook>
+	<name>HobgoblinDevastator</name>
+	<slot>
+		<known>Acid splash,Fire bolt,Ray of frost,Shocking grasp,Fog cloud,Magic missile,Thunderwave,Gust of wind,Melf's acid arrow,Scorching ray,Fireball,Fly,Lightning bolt,Ice storm</known>
+		<0>Acid splash,Fire bolt,Ray of frost,Shocking grasp</0>
+		<1>4,Magic missile,Fog cloud,Thunderwave</1>
+		<2>3,Gust of wind,Melf's acid arrow,Scorching ray</2>
+		<3>3,Fireball,Fly,Lightning bolt</3>
+		<4>1,Ice storm</4>
+	</slot>
+</spellbook>

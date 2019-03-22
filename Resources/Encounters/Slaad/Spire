@@ -1,0 +1,10 @@
+<encounter>
+	<name>Spire</name>
+	<creature>1,Grey Slaad</creature>
+	<creature>1,Death Slaad</creature>
+	<creature>1,Blue Slaad</creature>
+	<creature>1,Green Slaad</creature>
+	<creature>1,Red Slaad</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>

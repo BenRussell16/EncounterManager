@@ -1,0 +1,22 @@
+<spellbook>
+	<name>SlaadDeath</name>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Detect thoughts,false</spell>
+			<spell>Invisibility,true</spell>
+			<spell>Mage hand,false</spell>
+			<spell>Major image,false</spell>
+		</0>
+		<1>
+			<spell>Cloudkill,false</spell>
+			<spell>Plane shift,false</spell>
+		</1>
+		<2>
+			<spell>Fear,false</spell>
+			<spell>Fly,false</spell>
+			<spell>Fireball,false</spell>
+			<spell>Tongues,false</spell>
+		</2>
+	</daily>
+</spellbook>

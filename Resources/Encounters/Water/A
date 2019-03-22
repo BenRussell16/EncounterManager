@@ -1,0 +1,6 @@
+<encounter>
+	<name>A</name>
+	<creature>1,Water elemental</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>

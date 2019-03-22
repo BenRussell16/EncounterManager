@@ -1,0 +1,7 @@
+<encounter>
+	<name>C</name>
+	<creature>2,Orc blade of Ilneval</creature>
+	<creature>1,Hobgoblin devastator</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>

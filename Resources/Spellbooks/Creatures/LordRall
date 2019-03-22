@@ -1,0 +1,12 @@
+<spellbook>
+	<name>LordRall</name>
+	<slot>
+		<known>Mage hand,Minor illusion,Ray of frost,Mage armour,Magic missile,Sleep,Mirror image,Ray of enfeeblement,Haste,Lightning bolt,Blight,Evard's black tentacles,Cloudkill</known>
+		<0>Mage hand,Minor illusion,Ray of frost</0>
+		<1>4,Mage armour,Magic missile,Sleep</1>
+		<2>3,Mirror image,Ray of enfeeblement</2>
+		<3>3,Lightning bolt,Haste</3>
+		<4>3,Blight,Evard's black tentacles</4>
+		<5>2,Cloudkill</5>
+	</slot>
+</spellbook>

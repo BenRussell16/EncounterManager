@@ -1,0 +1,7 @@
+<encounter>
+	<name>Boat</name>
+	<creature>1,Blue Slaad</creature>
+	<creature>1,Slaad tadpole</creature>
+	<mult>Standard</mult>
+	<party>8,8,8</party>
+</encounter>

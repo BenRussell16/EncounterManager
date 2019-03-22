@@ -1,0 +1,17 @@
+<spellbook>
+	<name>SlaadGreen</name>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Detect thoughts,false</spell>
+			<spell>Mage hand,false</spell>
+		</0>
+		<1>
+			<spell>Fireball,false</spell>
+		</1>
+		<2>
+			<spell>Fear,false</spell>
+			<spell>Invisibility,true</spell>
+		</2>
+	</daily>
+</spellbook>

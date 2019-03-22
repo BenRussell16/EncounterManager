@@ -1,0 +1,9 @@
+<spellbook>
+	<name>FrontlineMedic</name>
+	<slot>
+		<known>Mending,Resistance,Spare the dying,Cure wounds,Sanctuary,Aid,Lesser restoration</known>
+		<0>Spare the dying,Resistance,Mending</0>
+		<1>4,Cure wounds,Sanctuary</1>
+		<2>2,Aid,Lesser restoration</2>
+	</slot>
+</spellbook>

@@ -44,7 +44,10 @@ public class SpellBookInstance {
 	}
 	
 	public List<Spell> getKnown(){return knownspells;}
-	public int getSlots(int level){return numSlots.get(level);}
+	public int getSlots(int level){
+		if(!numSlots.containsKey(level)){return 0;}
+		return numSlots.get(level);
+	}
 	public List<Spell> getPrepped(int level){return preparedSpells.get(level);}
 	public boolean hasPrepped(){
 		for(int i=0; i<=9; i++){

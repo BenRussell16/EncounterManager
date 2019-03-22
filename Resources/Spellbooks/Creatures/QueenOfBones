@@ -1,0 +1,12 @@
+<spellbook>
+	<name>QueenOfBones</name>
+	<slot>
+		<known>Guidance,Mending,Sacred flame,Spare the dying,Bane,Healing word,Inflict wounds,Shield of faith,Hold person,Lesser restoration,Magic weapon,Silence,Spiritual weapon,Animate dead,Bestow curse,Dispel magic,Protection from energy,Revivify,Water walk,Banishment,Death ward,Freedom of movement,Stoneskin,Contagion,Flame strike,Insect plague</known>
+		<0>Guidance,Mending,Sacred flame,Spare the dying</0>
+		<1>4,Bane,Healing word,Inflict wounds,Shield of faith</1>
+		<2>3,Hold person,Lesser restoration,Silence,Spiritual weapon,Magic weapon</2>
+		<3>3,Water walk,Revivify,Protection from energy,Dispel magic,Bestow curse,Animate dead</3>
+		<4>3,Stoneskin,Freedom of movement,Death ward,Banishment</4>
+		<5>1,Contagion,Flame strike,Insect plague</5>
+	</slot>
+</spellbook>

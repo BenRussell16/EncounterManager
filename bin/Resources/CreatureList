@@ -24,6 +24,31 @@
 	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
+	<name>Slaad tadpole</name>
+	<size>TINY</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>0.125</cr>
+	<ac>12</ac>
+	<hp>10</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 7,DEX 15,CON 10,INT 3,WIS 5,CHA 3</stats>
+	<skills>STEALTH 4</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+	</passives>
+	<other>Understands Slaad but can't speak.</other>
+	<actions>
+		<attack>Bite,4,5,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Stirge</name>
 	<size>TINY</size>
 	<type>BEAST,false</type>
@@ -68,6 +93,30 @@ The stirge can detach itself by spending 5 feet ofits movement. It does so after
 		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Frontline medic</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG</align>
+	<cr>0.25</cr>
+	<ac>20</ac>
+	<hp>19</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 10,CON 14,INT 10,WIS 13,CHA 12</stats>
+	<skills>MEDICINE 5,PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,,11,3,FrontlineMedic</spellcasting>
+	</passives>
+	<other>Knows any one language (usually Common).
+Is a Boros spellcaster.</other>
+	<actions>
+		<attack>Spear,4,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Kuo-toa</name>
@@ -488,6 +537,33 @@ slashing darrrage if used with two hands.</attack>
 	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
+	<name>Gibbering mouther</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,false</type>
+	<align>TN</align>
+	<cr>2.0</cr>
+	<ac>9</ac>
+	<hp>67</hp>
+	<speed>WALK 10,SWIM 10</speed>
+	<stats>STR 10,DEX 8,CON 16,INT 3,WIS 10,CHA 6</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>PRONE</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Gibbering,The mouther babbles incoherently while it can see any creature and isn't incapacitated. Each creature that starts its turn within 20 feet of the mouther and can hear the gibbering must succeed on a DC 10 Wisdom saving throw. On a failure, the creature can't take reactions until the start of its next turn and rolls a d8 to determine what it does during its turn. On a 1 to 4, the creature does nothing. On a 5 to 6, the creature takes no action or bonus action and uses all its movement to move in a randomly determined direction. On a 7 or 8, the creature makes a melee attack against a randomly determined creature within its reach or does nothing if it can't make such an attack.</passive>
+		<passive>Aberrant Ground,The ground in a 10-foot radius around the mouther is doughlike difficult terrain. Each creature that starts its turn in that area must succeed on a DC 10 Strength saving throw or have its speed reduced to 0 until the start of its next turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The gibbering mouther makes one bite attack and, if it can, uses its Blinding Spittle.</multiattack>
+		<attack>Bites,2,5,One creature. Hit: 17 (5d6) piercing damage. If the target is Medium or smaller, it must succeed on a DC 10 Strength saving throw or be knocked prone. If the target is killed by this damage, it is absorbed into the mouther.</attack>
+		<effect>Blinding Spittle,Recharge 5-6,The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DC 13 Dexterity saving throw or be blinded until the end of the mouther's next turn.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Guard drake</name>
 	<size>MEDIUM</size>
 	<type>DRAGON,false</type>
@@ -620,6 +696,36 @@ lf the host body drops to 0 hit points, the intellect devourer must leave it. A 
 		<attack>Longbow,6,150,600,One target. Hit: 8 (1d8+4) piercing damage.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Blue dragon wyrmling</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>3.0</cr>
+	<ac>17</ac>
+	<hp>52</hp>
+	<speed>WALK 30,BURROW 15,FLY 60</speed>
+	<stats>STR 17,DEX 10,CON 15,INT 12,WIS 11,CHA 15</stats>
+	<saves>DEX 2,CON 4,WIS 2,CHA 4</saves>
+	<skills>PERCEPTION 4,STEALTH 2</skills>
+	<multipliers>
+		<IMMUNITY>LIGHTNING</IMMUNITY>
+	</multipliers>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<languages>DRACONIC</languages>
+	<regions>DESERT</regions>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 8 (1d10+3) piercing damage plus 3 (1d6) lightning damage.</attack>
+		<effect>Lightning Breath,Recharge 5-6,The dragon exhales lightning in an 30-foot line that is 5 feet wide. Each creature in that line must make a DC 12 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<lair>
+		<lairaction>Part of the ceiling collapses above one creature that the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) bludgeoning damage and be knocked prone and buried. The buried target is restrained and unable to breathe or stand up. A creature can take an action to make a DC 10 Strength check, ending the buried state on a success.</lairaction>
+		<lairaction>A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in the cloud must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</lairaction>
+		<lairaction>Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) lightning damage.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Clasp cutthroat</name>
@@ -767,6 +873,33 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 		<reaction>Endurance,When the brawler takes damage, it may reduce the damage by 8 (1d12+2). It cannot use this trait again until it completes a short or long rest.</reaction>
 	</reactions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Hobgoblin captain</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>LE</align>
+	<cr>3.0</cr>
+	<ac>17</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 14,CON 14,INT 12,WIS 10,CHA 13</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Martial Advantage,Once per turn, the hobgoblin can deal an extra 10 (3d6) damage to a creature it hits with a weapon attack if that creature is within 5 feet of an ally of the hobgoblin that isn't incapacitated.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The hobgoblin makes two greatsword attack.</multiattack>
+		<attack>Greatsword,4,5,One target. Hit: 9 (2d6+2) slashing damage.</attack>
+		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+		<effect>Leadership,Recharges after a Short or Long Rest,For 1 minute, the hobgoblin can utter a special command or warning whenever a nonhostile creature that it can see within 30 feet of it makes an attack roll or a saving throw. The creature can add a d4 to its roll provided it can hear and understand the hobgoblin. A creature can benefit from only one Leadership die at a time. This effect ends if the hobgoblin is incapacitated.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Kraghammer goat-knight</name>
@@ -922,6 +1055,37 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Drow gunslinger</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>4.0</cr>
+	<ac>18</ac>
+	<hp>84</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 18,CON 14,INT 11,WIS 13,CHA 14</stats>
+	<saves>DEX 6,CON 4,WIS 3</saves>
+	<skills>PERCEPTION 3,STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>ELVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,,,DrowInnate</innatecasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Gunslinger,Being within 5 feet of a hostile creature or attacking at long range doesn't impose disadvantage on the drow's ranged attack rolls with a pistol. In addition, the drow ignores half cover and three-quarters cover when making ranged attacks with a pistol.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The drow makes two shortsword attacks.</multiattack>
+		<attack>Shortsword,6,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<attack>Poisonous Pistol,6,30,90,One target. Hit: 9 (1d10+4) piercing damage plus 11 (2d10) poison damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Goliath stormborn</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,GOLIATH,false</type>
@@ -953,6 +1117,33 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Hobgoblin devastator</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>LE</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 12,CON 14,INT 16,WIS 13,CHA 11</stats>
+	<skills>ARCANA 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,5,13,7,HobgoblinDevastator</spellcasting>
+		<passive>Arcane Advantage,Once per turn, the hobgoblin can deal an extra 7 (2d6} damage to a creature it hits with a damaging spell attack if that target is within 5 feet of an ally of the hobgoblin and that ally isn't incapacitated.</passive>
+		<passive>Army Arcana,When the hobgoblin casts a spell that causes damage or that forces other creatures to make a saving throw, it can choose itself and any number of allies to be immune to the damage caused by the spell and to succeed on the required saving throw.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Quaterstaff,3,5,One target. Hit: 4 (1d6+1) bludgeoning damage, or 5 (1d8+1) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
 	<name>Machine Lieutenant</name>
 	<size>MEDIUM</size>
 	<type>CONSTRUCT,false</type>
@@ -982,6 +1173,65 @@ Understands the languages of its creator but can't speak.</other>
 		<attack>Longsword,6,5,One target. Hit: 8 (1d8+4) slashing damage or 9 (1d10+4) slashing damage if used with two hands.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Orc blade of Ilneval</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>4.0</cr>
+	<ac>18</ac>
+	<hp>60</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 17,DEX 11,CON 17,INT 10,WIS 12,CHA 14</stats>
+	<saves>WIS 3</saves>
+	<skills>INSIGHT 3,INTIMIDATION 4,PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>For Smiter of Ilneval,The orc deals an extra die of damage when it hits with a longsword attack (included in the attack).</passive>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The orc makes two melee attacks with its longsword or two ranged attacks with its javelins. If Ilneval's Command is available to use, the orc can use it after these attacks.</multiattack>
+		<attack>Longsword,5,5,One target. Hit: 12 (2d8+3) slashing damage, or 14 (2d10+3) slashing damage when used with two hands.</attack>
+		<attack>Javelin,5,30,120,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<effect>Ilneval's Command,Recharge 4-6,Up to three allied orcs within 120 feet of this orc that can hear it can use their reactions to each make one weapon attack.</effect>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Reckoner</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LN</align>
+	<cr>4.0</cr>
+	<ac>18</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 12,CON 15,INT 15,WIS 12,CHA 10</stats>
+	<skills>ARCANA 4,INTIMIDATION 2,PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,4,12,5,Reckoner</spellcasting>
+		<passive>First Strike,The reckoner has advantage on initiative rolls.</passive>
+	</passives>
+	<other>Knows any one other language.
+Is a Boros spellcaster.</other>
+	<actions>
+		<attack>Longsword,5,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands.</attack>
+	</actions>
+	<reactions>
+		<reaction>Lightning Backlash (Recharge 5-6),When a creature hits the reckoner with an attack, the attacker takes lightning damage equal to half the damage dealt by the attack.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>White tusk bloodrager</name>
@@ -1117,6 +1367,70 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Baron Malgas</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>5.0</cr>
+	<ac>20</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 13,CON 14,INT 10,WIS 14,CHA 10</stats>
+	<saves>STR 6,CON 5</saves>
+	<skills>ATHLETICS 6,DECEPTION 3,PERCEPTION 5</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,PETRIFIED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>DEEPSPEECH,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
+		<passive>Formless Shape,Baron Malgas is immune to any spell or effect that would alter his form.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Baron Malgas makes three attacks with his flail. He can use Melt Flesh in place of one flail attack.</multiattack>
+		<attack>Flail,6,5,One target. Hit: 7 (1d8+3) bludgeoning damage.</attack>
+		<attack>Javelin,6,30,120,One target. Hit: 12 (2d8+3) piercing damage.</attack>
+		<effect>Melt Flesh,null,Baron Malgas chooses a target he can see within 30 feet. The target must succeed on a DC 13 Wisdom saving throw or watch as their dominant hand melts into a runny, fleshy lump. It drops whatever weapon it was carrying, cannot hold a weapon in that hand, and cannot cast spells that require somatic components. At the end of each of its turns, the target repeats this saving throw, ending the effect on itself on a success. Casting mending on the affected hand also ends the effect. If the target succeeds on a saving throw, the creature becomes immune to Baron Malgas’s Melt Flesh for the next 24 hours.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Black viper</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CN</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>84</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 18,CON 14,INT 11,WIS 11,CHA 12</stats>
+	<saves>DEX 7,INT 3</saves>
+	<skills>ACROBATICS 7,ATHLETICS 3,PERCEPTION 3,SLIGHTOFHAND 7,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,THIEVESCANT</languages>
+	<regions>URBAN</regions>
+	<passives>
+		<passive>Evasion,If the Black Viper is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage If she fails. She can't use this trait if she's incapacitated.</passive>
+		<passive>Cunning Action,On each of her turns, the Black Viper can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
+		<passive>Sneak Attack (1/Turn),The Black Viper deals an extra 14 (4d6) damage when she hits a target with a weapon attack and has advantage on the attack roll, or when the target is with in 5 feet of an ally of the Black Viper that isn't incapacitated and the Black Viper doesn't have disadvantage on the attack roll.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Black Viper makes three attacks with her rapier.</multiattack>
+		<attack>Rapier,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<attack>Hand Crossbow,7,30,120,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Uncanny Dodge,The Black Viper halves the damage that she takes from an attack that hits her. She must be able to see the attacker.</reaction>
+	</reactions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Cinderslag elemental</name>
 	<size>LARGE</size>
 	<type>ELEMENTAL,false</type>
@@ -1202,6 +1516,61 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>THERISEOFTIAMAT</source>
 </creature>
 <creature>
+	<name>Giant shark</name>
+	<size>HUGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>5.0</cr>
+	<ac>13</ac>
+	<hp>126</hp>
+	<speed>WALK 0,SWIM 50</speed>
+	<stats>STR 23,DEX 11,CON 21,INT 1,WIS 10,CHA 5</stats>
+	<skills>PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 60</senses>
+	<regions>UNDERWATER</regions>
+	<passives>
+		<passive>Blood Frenzy,The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points.</passive>
+		<passive>Water Breathing,The shark can breathe only underwater.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,9,5,One target. Hit:22 (3d10+6) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Gladiator</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>112</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 10,WIS 12,CHA 15</stats>
+	<saves>STR 7,DEX 5,CON 6</saves>
+	<skills>ATHLETICS 10,INTIMIDATION 5</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Brute,A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack).</passive>
+		<passive>Brave,The gladiator has advantage on saving throws against being frightened.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The gladiator makes three melee attacks or two ranged attacks.</multiattack>
+		<attack>Spear,7,5,One target. Hit 11 (2d6+4) piercing damage, or 13 (2d8+4) pìercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shield Bash,7,5,One creature. Hit: 9 (2d4+4) bludgeoning damage. lf the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Lesser marilith</name>
 	<size>MEDIUM</size>
 	<type>FIEND,DEMON,false</type>
@@ -1267,6 +1636,37 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Red Slaad</name>
+	<size>LARGE</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>5.0</cr>
+	<ac>14</ac>
+	<hp>93</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 12,CON 16,INT 6,WIS 6,CHA 7</stats>
+	<skills>PERCEPTION 1</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>TELEPATHY,SLAAD</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The slaad makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,6,5,One target. Hit: 8 (2d4+3) piercing damage.</attack>
+		<attack>Claw,6,5,One target. Hit: 7 (1d8+3) piercing damage. lf the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be infected with a disease - a minuscule slaad egg.
+A humanoid host can carry only one slaad egg to term at a time. Over three months, the egg moves to the chest cavity, gestates, and forms a slaad tadpole. ln the 24-hour period before giving birth, the host starts to feel unwell, its speed is halved, and it has dìsadvantage on attack rolls, ability checks, and saving throws. At birth, the tadpole chews its way through vital organs and out ofthe host's chest in 1 round, killing the host in the process.
+lf the disease is cured before the tadpole's emergence, the unborn slaad is disintegrated.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Sir Pelliton</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -1329,6 +1729,37 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 		<attack>Bites,5,0,One target in the swarm's space. Hit: 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Water elemental</name>
+	<size>LARGE</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>5.0</cr>
+	<ac>14</ac>
+	<hp>114</hp>
+	<speed>WALK 30,SWIM 90</speed>
+	<stats>STR 18,DEX 14,CON 18,INT 5,WIS 10,CHA 8</stats>
+	<multipliers>
+		<RESISTANCE>ACID,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Freeze,lf the elemental takes cold damage, it partially freezes its speed is reduced by 20 feet until the end of its next turn.</passive>
+		<passive>Water Form,The elemental can enter a hostile creature's space and stop there. lt can move through a space as narrow as 1 inch wide without squeezing.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The elemental makes two slam attacks.</multiattack>
+		<attack>Slam,7,5,One target. Hit: 13 (2d8+4) bludgeoning damage.</attack>
+		<effect>Whelm,Recharge 4-6,Each creature in the elemental's space must make a DC 15 Strength saving throw. On a failure, a target takes 13 (2d8+4) bludgeoning damage. If it is Large or smaller, it is also grappled (escape DC 14). Until this grapple ends, the target is restrained and unable to breathe unless it can breathe water. If the saving throw is successful, the target is pushed out of the elemental's space.
+The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8+4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Bonebreaker Dorokor</name>
@@ -1400,6 +1831,38 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 		<reaction>Scouring Instruction,When an ally that the duergar can see makes a d20 roll, the duergar can roll a d6 and the ally can add the number rolled to the d20 roll by taking 3 (1d6) psychic damage. A creature immune to psychic damage can't be affected by Scouring Instruction.</reaction>
 	</reactions>
 	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Korsoth Vastikan</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>6.0</cr>
+	<ac>16</ac>
+	<hp>78</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 13,DEX 18,CON 14,INT 11,WIS 13,CHA 12</stats>
+	<saves>DEX 7,WIS 4</saves>
+	<skills>ACROBATICS 7,DECEPTION 4,INVESTIGATION 3,PERCEPTION 4,STEALTH 7,SURVIVAL 4</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,PETRIFIED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>DEEPSPEECH,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
+		<passive>Formless Shape,Vastikan is immune to any spell or effect that would alter his form.</passive>
+		<passive>Formkiller,If Vastikan hits a target with three arrows in one round, the target must make a DC 12 Constitution saving throw or lose its native form. Roll on the Reincarnation table to determine the target’s new form. The target reverts to its original form after 1 hour. A target that succeeds on its saving throw becomes immune to Formkiller for 24 hours.</passive>
+	</passives>
+	<other>Reverting to original form is optional on the DM's side.</other>
+	<actions>
+		<multiattack>Vastikan makes four longbow attacks.</multiattack>
+		<attack>Longbow,7,150,600,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<attack>Shortsword,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Kuo-toa archpriest</name>
@@ -1519,6 +1982,35 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 		<reaction>Skin to Stone,When the stoneguard is attacked, it may gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks until the end of the attacker's turn.</reaction>
 	</reactions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Blue Slaad</name>
+	<size>LARGE</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>123</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 15,CON 18,INT 7,WIS 7,CHA 9</stats>
+	<skills>PERCEPTION 1</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>TELEPATHY,SLAAD</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The slaad makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,8,5,One target. Hit: 12 (2d6+5) piercing damage.</attack>
+		<attack>Claw,8,5,One target. Hit: 12 (2d6+5) slashing damage. lf the target is a humanoid, it must succeed on a DC 15 Constitution saving throw or be infected with a disease called chaos phage. While infected, the target can't regain hit points, and its hit point maximum is reduced by 10 (3d6) every 24 hours. lf the disease reduces the target's hit point maximum to 0, the target instantly transforms into a red slaad or, if it has the ability to cast spells of 3rd level or higher, a green slaad. Only a wish spell can reverse the transformation.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Dragonsoul</name>
@@ -1674,6 +2166,106 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>The Queen of Bones</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 15,CON 13,INT 13,WIS 20,CHA 12</stats>
+	<saves>CON 4,WIS 8,CHA 4</saves>
+	<skills>INSIGHT 8,INTIMIDATION 4,PERCEPTION 8,RELIGION 4</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,PETRIFIED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DEEPSPEECH,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,8,16,9,QueenOfBones</spellcasting>
+		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
+		<passive>Formless Shape,The Queen is immune to any spell or effect that would alter his form.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Queen makes two attacks with her Bone Bow.</multiattack>
+		<attack>Bone Bow,5,150,600,One target. Hit: 11 (2d8+2) piercing damage.</attack>
+		<effect>Ossuary,null,The Queen targets one creature she can see within 30 feet of her and turns its own skeleton into a jail. The target must make a DC 16 Constitution saving throw against this magic. On a failed save, it takes 14 (4d6) necrotic damage and is paralyzed for 1 minute. At the end of each of its turns, the target can repeat this saving throw, ending the effect on itself on a success. If the target succeeds on the save, or if the effect ends on it, the target becomes immune to Ossuary for 24 hours.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Green Slaad</name>
+	<size>LARGE</size>
+	<type>ABBERATION,true</type>
+	<align>CN</align>
+	<cr>8.0</cr>
+	<ac>16</ac>
+	<hp>127</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 11,WIS 8,CHA 12</stats>
+	<skills>ARCANA 3,PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 30,DARKVISION 60</senses>
+	<languages>TELEPATHY,SLAAD</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,12,,SlaadGreen</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its sìze, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
+		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The slaad makes three attacks: one with its bite and two with its claws or staff. Alternatively, it uses its Hurl Flame twice.</multiattack>
+		<attack>Bite (Slaad Form Only),7,5,One target. Hit: 11 (2d6+4) piercing damage.</attack>
+		<attack>Claw (Slaad Form Only),7,5,One target. Hit: 7 (1d6+4) slashing damage.</attack>
+		<attack>Staff,7,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
+		<attack>Hurl Flame,4,60,One target. Hit: 10 (3d6) fire damage. The fire ignites flammable objects that aren't being worn or carried.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Lord Rall</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>91</hp>
+	<speed>WALK 30,FLY 10</speed>
+	<stats>STR 13,DEX 10,CON 14,INT 20,WIS 15,CHA 16</stats>
+	<saves>INT 8,WIS 5,CHA 6</saves>
+	<skills>ARCANA 8,DECEPTION 6,HISTORY 8,INSIGHT 5</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,PETRIFIED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DEEPSPEECH,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,8,16,10,LordRall</spellcasting>
+		<passive>Shapechanger,As an action, Lord Rall can polymorph into a Small or Medium creature or back into his true form. His statistics, other than his size, are the same in each form. Any worn or carried equipment isn't transformed. He reverts to his true form if he dies.</passive>
+		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
+		<passive>Formless Shape,Lord Rall is immune to any spell or effect that would alter his form.</passive>
+	</passives>
+	<other>Fly speed is hover.
+The Staff of Changing is not a magic item outside of Lord Rall's "hands".</other>
+	<actions>
+		<multiattack>Lord Rall makes two melee attacks with the Staff of Changing.</multiattack>
+		<attack>Greatstaff,4,5,One target. Hit: 8 (2d6+1) bludgeoning damage, or 10 (2d8+1) bludgeoning damage if wielded with two hands.</attack>
+		<effect>The Staff of Changing,Recharge 5-6,Lord Rall’s staff remakes a target into any shape he desires. He casts polymorph from it as an action. The range is 30 feet, and the Wisdom saving throw has a DC of 16. Lord Rall does not need to concentrate on this spell to maintain it.</effect>
+		<effect>Any Pile of Organs Will Do,Recharge 6,When he drops to 0 hit points, Lord Rall can reform himself from any corpse within 120 feet instead of falling unconscious. Lord Rall does not need to see the corpse in order to use it. The process happens in an instant, and the newly formed Lord Rall appears with only half of his maximum hit points.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Mind flayer arcanist</name>
 	<size>MEDIUM</size>
 	<type>ABBERATION,false</type>
@@ -1701,6 +2293,69 @@ Innate spellcasting is psionics.</other>
 		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
 		<attack>Extract Brain,7,5,One incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. lf this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.</attack>
 		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Flind</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GNOLL,false</type>
+	<align>CE</align>
+	<cr>9.0</cr>
+	<ac>16</ac>
+	<hp>127</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 10,CON 19,INT 11,WIS 13,CHA 12</stats>
+	<saves>CON 8,WIS 5</saves>
+	<skills>INTIMIDATION 5,PERCEPTION 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ABYSSAL,GNOLL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Aura of Blood Thirst,If the flind isn't incapacitated, any creature with the Rampage trait can make a bite attack as a bonus action while within 10 feet of the flind.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The flind makes three attacks: one with each of its different flail attacks or three with its longbow.</multiattack>
+		<attack>Flail of Madness,9,5,One target. Hit: 10 (1d10+5) bludgeoning damage, and the target must make a DC 16 Wisdom saving throw. On a failed save, the target must make a melee attack against a random target within its reach on its next turn. If it has no targets within its reach even after moving, it loses its action on that turn.</attack>
+		<attack>Flail of Pain,9,5,One target. Hit: 10 (1d10+5) bludgeoning damage plus 22 (4d10) psychic damage.</attack>
+		<attack>Flail of Paralysis,9,5,One target. Hit: 10 (1d10+5) bludgeoning damage, and the target must succeed on a DC 16 Constitution saving throw or be paralyzed until the end of its next turn.</attack>
+		<attack>Longbow,4,150,600,One target. Hit: 4 (1d8) piercing damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Grey Slaad</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,true</type>
+	<align>CN</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>127</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 17,DEX 17,CON 16,INT 13,WIS 8,CHA 14</stats>
+	<skills>ARCANA 5,PERCEPTION 6</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 60</senses>
+	<languages>TELEPATHY,SLAAD</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,14,,SlaadGrey</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its sìze, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
+		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The slaad makes three attacks: one with its bite and two with its claws or greatsword.</multiattack>
+		<attack>Bite (Slaad Form Only),7,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<attack>Claw (Slaad Form Only),7,5,One target. Hit: 8 (1d10+3) slashing damage.</attack>
+		<attack>Greatsword,7,5,One target. Hit: 10 (2d6+3) slashing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -1741,6 +2396,39 @@ Innate spellcasting is psionics.</other>
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Uursovk</name>
+	<size>LARGE</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>9.0</cr>
+	<ac>17</ac>
+	<hp>157</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 15,CON 21,INT 15,WIS 14,CHA 15</stats>
+	<saves>STR 9,CON 9,WIS 6,CHA 6</saves>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,PETRIFIED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>DEEPSPEECH,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
+		<passive>Madness Aura,Enemies within 60 feet who can see Uursovk make a successful DC 16 Intelligence saving throw in order to cast a spell. Once a creature succeeds on this saving throw, it becomes immune to Uursovk’s Madness Aura for 24 hours.</passive>
+		<passive>Insanity Field,Any creature that starts its turn within 10 feet of Uursovk must make a DC 16 Intelligence saving throw. On a failure, the creature is poisoned until the start of its next turn. On a success, the creature becomes immune to Insanity Field for 24 hours.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Uursovk makes three attacks with bite or three attacks with bone spine.</multiattack>
+		<attack>Bite,9,5,One creature. Hit: 10 (1d10+5) piercing damage.</attack>
+		<attack>Bone Spike,6,60,180,One creature. Hit: 11 (2d8+2) piercing damage.</attack>
+		<effect>Meld Flesh,null,Uursovk targets two adjacent creatures, who must each make a DC 16 Constitution saving throw. If both fail, they meld into one gestalt entity, shedding any armor they were wearing. The gestalt entity is Medium and has hit points equal to the sum of their hit points, has ability scores equal to the higher of each score, and inherits any conditions of the targets. The new entity is treated as an individual in combat, but can take any action that either original target could take. At the end of each round, the two targets can make DC 16 Constitution saving throws to revert to their original forms (still sans armor), but both targets must succeed in order to end the effect. Otherwise, the effect ends after 1 hour.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>War priest</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -1767,6 +2455,38 @@ Innate spellcasting is psionics.</other>
 		<reaction>Guided Strike (Recharges after a Short or Long Rest)),The priest grants a +10 bonus to an attack roll made by itself or another creature within 30 feet of it. The priest can make this choice after the roll is made but before it hits or misses.</reaction>
 	</reactions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Young blue dragon</name>
+	<size>LARGE</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>152</hp>
+	<speed>WALK 40,BURROW 20,FLY 80</speed>
+	<stats>STR 21,DEX 10,CON 19,INT 14,WIS 13,CHA 17</stats>
+	<saves>DEX 4,CON 8,WIS 5,CHA 7</saves>
+	<skills>PERCEPTION 9,STEALTH 4</skills>
+	<multipliers>
+		<IMMUNITY>LIGHTNING</IMMUNITY>
+	</multipliers>
+	<senses>BLINDSIGHT 30,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions>DESERT</regions>
+	<other></other>
+	<actions>
+		<multiattack>The dragon makes three attacks; one with its bite and two with its claws.</multiattack>
+		<attack>Bite,9,10,One target. Hit: 16 (2d10+5) piercing damage plus 5 (1d10) lightning damage.</attack>
+		<attack>Claw,9,5,One target. Hit: 12 (2d6+5) slashing damage.</attack>
+		<effect>Lightning Breath,Recharge 5-6,The dragon exhales lightning in an 60-foot line that is 5 feet wide. Each creature in that line must make a DC 16 Dexterity saving throw, taking 55 (10d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<lair>
+		<lairaction>Part of the ceiling collapses above one creature that the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) bludgeoning damage and be knocked prone and buried. The buried target is restrained and unable to breathe or stand up. A creature can take an action to make a DC 10 Strength check, ending the buried state on a success.</lairaction>
+		<lairaction>A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in the cloud must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</lairaction>
+		<lairaction>Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) lightning damage.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Aboleth</name>
@@ -1840,6 +2560,39 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Death Slaad</name>
+	<size>MEDIUM</size>
+	<type>ABBERATION,true</type>
+	<align>CE</align>
+	<cr>10.0</cr>
+	<ac>18</ac>
+	<hp>170</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 15,CON 19,INT 15,WIS 10,CHA 16</stats>
+	<skills>ARCANA 6,PERCEPTION 8</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 60</senses>
+	<languages>TELEPATHY,SLAAD</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,7,15,,SlaadDeath</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its sìze, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
+		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The slaad makes three attacks: one with its bite and two with its claws or greatsword.</multiattack>
+		<attack>Bite (Slaad Form Only),9,5,One target. Hit: 9 (1d8+5) piercing damage plus 7 (2d6) necrotic damage.</attack>
+		<attack>Claw (Slaad Form Only),9,5,One target. Hit: 10 (1d10+5) slashing damage plus 7 (2d6) necrotic damage.</attack>
+		<attack>Greatsword,9,5,One target. Hit: 12 (2d6+5) slashing damage plus 7 (2d6) necrotic damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Lesser balor</name>
 	<size>LARGE</size>
 	<type>FIEND,DEMON,false</type>
@@ -1869,6 +2622,46 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 		<multiattack>The lesser balor makes one attack with its longsword and one attack with its whip.</multiattack>
 		<attack>Longsword,9,10,One target. Hit: 14 (2d8+5) slashing damage plus 9 (2d8) lightning damage. If the lesser balor scores a critical hit, it rolls damage dice three times, instead of twice.</attack>
 		<attack>Whip,9,30,One target. Hit: 12 (2d6+5) slashing damage plus 7 (2d6) fire damage, and the target must succeed on a DC 16 Strength saving throw or be pulled up to 15 feet toward the lesser balor.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Maladar Dictum</name>
+	<size>HUGE</size>
+	<type>ABBERATION,false</type>
+	<align>CN</align>
+	<cr>10.0</cr>
+	<ac>20</ac>
+	<hp>210</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 15,CON 19,INT 15,WIS 10,CHA 16</stats>
+	<saves>STR 9,DEX 6,CON 8,WIS 4,CHA 7</saves>
+	<skills>ATHLETICS 9,DECEPTION 7,INSIGHT 4,INTIMIDATION 7</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,PETRIFIED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DEEPSPEECH,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Reform,Each time Maladar takes damage in combat, his arm grows another limb, increasing the damage of his smash attack by 1d8. There is no limit to the number of limbs, tentacles, and claws Maladar can grow this way.</passive>
+		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
+		<passive>Formless Shape,Maladar is immune to any spell or effect that would alter his form.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Maladar makes two attacks with Changer plus one smash attack.</multiattack>
+		<attack>Changer (Greatsword),9,5,One target. Hit: 12 (2d6+5) slashing damage plus 7 (2d6) necrotic damage.</attack>
+		<attack>Smash,9,10,One target. Hit: 14 (2d8+5) bludgeoning damage.</attack>
+		<effect>Lord of Chaos,null,Maladar has a 50% chance of summoning a member of his court in an adjacent unoccupied space. If successful, roll a d12 and consult the below chart. Each member of his court may only be summoned once per day in this manner. If the same member is summoned twice, nothing happens.
+
+D12	MEMBER SUMMONED
+1–4	Baron Malgas
+5–7	Korsoth Vastikan
+8–9	The Queen of Bones
+10–11	Lord Rall
+12	Uursovk</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -2006,6 +2799,48 @@ The Chosen typically casts Mage armour and Greater invisibility on itself before
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Adult blue dragon</name>
+	<size>HUGE</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>16.0</cr>
+	<ac>19</ac>
+	<hp>225</hp>
+	<speed>WALK 40,BURROW 30,FLY 80</speed>
+	<stats>STR 25,DEX 10,CON 23,INT 16,WIS 15,CHA 19</stats>
+	<saves>DEX 5,CON 11,WIS 7,CHA 9</saves>
+	<skills>PERCEPTION 12,STEALTH 5</skills>
+	<multipliers>
+		<IMMUNITY>LIGHTNING</IMMUNITY>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions>DESERT</regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragon can use its Frightful Presence. It then makes three attacks; one with its bite and two with its claws.</multiattack>
+		<attack>Bite,12,10,One target. Hit: 18 (2d10+7) piercing damage plus 5 (1d10) lightning damage.</attack>
+		<attack>Claw,12,5,One target. Hit: 14 (2d6+7) slashing damage.</attack>
+		<attack>Tail,12,15,One target. Hit: 16 (2d8+7) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 17 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
+		<effect>Lightning Breath,Recharge 5-6,The dragon exhales lightning in an 90-foot line that is 5 feet wide. Each creature in that line must make a DC 19 Dexterity saving throw, taking 66 (12d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 20 Dexterity saving throw or take 14 (2d6+7) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Part of the ceiling collapses above one creature that the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) bludgeoning damage and be knocked prone and buried. The buried target is restrained and unable to breathe or stand up. A creature can take an action to make a DC 10 Strength check, ending the buried state on a success.</lairaction>
+		<lairaction>A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in the cloud must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</lairaction>
+		<lairaction>Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) lightning damage.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Iron Golem</name>
 	<size>LARGE</size>
 	<type>CONSTRUCT,false</type>
@@ -2075,6 +2910,48 @@ In battle, the phoenix is a unit with Attack +17 and Power +15 and can affect ev
 		<effect>Light of All Colours,Recharge 4-6,The phoenix exhales a beam of brilliant, prismatic light in a line that is 10 feet wide and 1,000 feet long. Each creature in that line must make a DC 22 Dexterity saving throw, taking 45 (10d8) fire and 35 (10d6) radiant damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Ancient blue dragon</name>
+	<size>GARGANTUAN</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>23.0</cr>
+	<ac>22</ac>
+	<hp>481</hp>
+	<speed>WALK 40,BURROW 40,FLY 80</speed>
+	<stats>STR 29,DEX 10,CON 27,INT 18,WIS 17,CHA 21</stats>
+	<saves>DEX 7,CON 15,WIS 10,CHA 12</saves>
+	<skills>PERCEPTION 17,STEALTH 7</skills>
+	<multipliers>
+		<IMMUNITY>LIGHTNING</IMMUNITY>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions>DESERT</regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragon can use its Frightful Presence. It then makes three attacks; one with its bite and two with its claws.</multiattack>
+		<attack>Bite,16,15,One target. Hit: 20 (2d10+9) piercing damage plus 11 (2d10) lightning damage.</attack>
+		<attack>Claw,16,10,One target. Hit: 16 (2d6+9) slashing damage.</attack>
+		<attack>Tail,16,20,One target. Hit: 18 (2d8+9) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
+		<effect>Lightning Breath,Recharge 5-6,The dragon exhales lightning in an 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6+9) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Part of the ceiling collapses above one creature that the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) bludgeoning damage and be knocked prone and buried. The buried target is restrained and unable to breathe or stand up. A creature can take an action to make a DC 10 Strength check, ending the buried state on a success.</lairaction>
+		<lairaction>A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in the cloud must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</lairaction>
+		<lairaction>Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) lightning damage.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Ancient Red Dragon</name>
