@@ -1329,7 +1329,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Hooves,1,The alicorn makes one attack with its hooves.</legendaryaction>
-		<legendaryaction>Prismatic Barrier,2,The alicorn creates a prismatic, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the alicornï¿½s next turn.</legendaryaction>
+		<legendaryaction>Prismatic Barrier,2,The alicorn creates a prismatic, magical field around itself or another creature it can see within 60 feet of it. The target gains a +2 bonus to AC until the end of the alicorn's next turn.</legendaryaction>
 		<legendaryaction>Heal Self,3,The alicorn magically restores 11 (2d8+2) hit points.</legendaryaction>
 	</legendaryactions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
@@ -1394,7 +1394,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 		<multiattack>Baron Malgas makes three attacks with his flail. He can use Melt Flesh in place of one flail attack.</multiattack>
 		<attack>Flail,6,5,One target. Hit: 7 (1d8+3) bludgeoning damage.</attack>
 		<attack>Javelin,6,30,120,One target. Hit: 12 (2d8+3) piercing damage.</attack>
-		<effect>Melt Flesh,null,Baron Malgas chooses a target he can see within 30 feet. The target must succeed on a DC 13 Wisdom saving throw or watch as their dominant hand melts into a runny, fleshy lump. It drops whatever weapon it was carrying, cannot hold a weapon in that hand, and cannot cast spells that require somatic components. At the end of each of its turns, the target repeats this saving throw, ending the effect on itself on a success. Casting mending on the affected hand also ends the effect. If the target succeeds on a saving throw, the creature becomes immune to Baron Malgas’s Melt Flesh for the next 24 hours.</effect>
+		<effect>Melt Flesh,null,Baron Malgas chooses a target he can see within 30 feet. The target must succeed on a DC 13 Wisdom saving throw or watch as their dominant hand melts into a runny, fleshy lump. It drops whatever weapon it was carrying, cannot hold a weapon in that hand, and cannot cast spells that require somatic components. At the end of each of its turns, the target repeats this saving throw, ending the effect on itself on a success. Casting mending on the affected hand also ends the effect. If the target succeeds on a saving throw, the creature becomes immune to Baron Malgas' Melt Flesh for the next 24 hours.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -1562,7 +1562,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<other>Knows any one language (usually Common).</other>
 	<actions>
 		<multiattack>The gladiator makes three melee attacks or two ranged attacks.</multiattack>
-		<attack>Spear,7,5,One target. Hit 11 (2d6+4) piercing damage, or 13 (2d8+4) pìercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Spear,7,5,One target. Hit 11 (2d6+4) piercing damage, or 13 (2d8+4) piercing damage if used with two hands to make a melee attack.</attack>
 		<attack>Shield Bash,7,5,One creature. Hit: 9 (2d4+4) bludgeoning damage. lf the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.</attack>
 	</actions>
 	<reactions>
@@ -1661,7 +1661,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 		<multiattack>The slaad makes three attacks: one with its bite and two with its claws.</multiattack>
 		<attack>Bite,6,5,One target. Hit: 8 (2d4+3) piercing damage.</attack>
 		<attack>Claw,6,5,One target. Hit: 7 (1d8+3) piercing damage. lf the target is a humanoid, it must succeed on a DC 14 Constitution saving throw or be infected with a disease - a minuscule slaad egg.
-A humanoid host can carry only one slaad egg to term at a time. Over three months, the egg moves to the chest cavity, gestates, and forms a slaad tadpole. ln the 24-hour period before giving birth, the host starts to feel unwell, its speed is halved, and it has dìsadvantage on attack rolls, ability checks, and saving throws. At birth, the tadpole chews its way through vital organs and out ofthe host's chest in 1 round, killing the host in the process.
+A humanoid host can carry only one slaad egg to term at a time. Over three months, the egg moves to the chest cavity, gestates, and forms a slaad tadpole. ln the 24-hour period before giving birth, the host starts to feel unwell, its speed is halved, and it has disadvantage on attack rolls, ability checks, and saving throws. At birth, the tadpole chews its way through vital organs and out ofthe host's chest in 1 round, killing the host in the process.
 lf the disease is cured before the tadpole's emergence, the unborn slaad is disintegrated.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
@@ -1854,7 +1854,7 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	<passives>
 		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
 		<passive>Formless Shape,Vastikan is immune to any spell or effect that would alter his form.</passive>
-		<passive>Formkiller,If Vastikan hits a target with three arrows in one round, the target must make a DC 12 Constitution saving throw or lose its native form. Roll on the Reincarnation table to determine the target’s new form. The target reverts to its original form after 1 hour. A target that succeeds on its saving throw becomes immune to Formkiller for 24 hours.</passive>
+		<passive>Formkiller,If Vastikan hits a target with three arrows in one round, the target must make a DC 12 Constitution saving throw or lose its native form. Roll on the Reincarnation table to determine the target's new form. The target reverts to its original form after 1 hour. A target that succeeds on its saving throw becomes immune to Formkiller for 24 hours.</passive>
 	</passives>
 	<other>Reverting to original form is optional on the DM's side.</other>
 	<actions>
@@ -2217,7 +2217,7 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 	<passives>
 		<innatecasting>CHA,,12,,SlaadGreen</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its sìze, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
+		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
 		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
@@ -2260,7 +2260,7 @@ The Staff of Changing is not a magic item outside of Lord Rall's "hands".</other
 	<actions>
 		<multiattack>Lord Rall makes two melee attacks with the Staff of Changing.</multiattack>
 		<attack>Greatstaff,4,5,One target. Hit: 8 (2d6+1) bludgeoning damage, or 10 (2d8+1) bludgeoning damage if wielded with two hands.</attack>
-		<effect>The Staff of Changing,Recharge 5-6,Lord Rall’s staff remakes a target into any shape he desires. He casts polymorph from it as an action. The range is 30 feet, and the Wisdom saving throw has a DC of 16. Lord Rall does not need to concentrate on this spell to maintain it.</effect>
+		<effect>The Staff of Changing,Recharge 5-6,Lord Rall's staff remakes a target into any shape he desires. He casts polymorph from it as an action. The range is 30 feet, and the Wisdom saving throw has a DC of 16. Lord Rall does not need to concentrate on this spell to maintain it.</effect>
 		<effect>Any Pile of Organs Will Do,Recharge 6,When he drops to 0 hit points, Lord Rall can reform himself from any corpse within 120 feet instead of falling unconscious. Lord Rall does not need to see the corpse in order to use it. The process happens in an instant, and the newly formed Lord Rall appears with only half of his maximum hit points.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
@@ -2347,7 +2347,7 @@ Innate spellcasting is psionics.</other>
 		<innatecasting>CHA,,14,,SlaadGrey</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>Magic weapons,It's weapon attacks are magical.</passive>
-		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its sìze, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
+		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
 		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
@@ -2416,7 +2416,7 @@ Innate spellcasting is psionics.</other>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>Everchanging Changers,The Court of All Flesh are beings of pure chaos. Because their minds are pure disorder, they cannot be driven mad or charmed and any attempts to magically compel their behavior fails.</passive>
-		<passive>Madness Aura,Enemies within 60 feet who can see Uursovk make a successful DC 16 Intelligence saving throw in order to cast a spell. Once a creature succeeds on this saving throw, it becomes immune to Uursovk’s Madness Aura for 24 hours.</passive>
+		<passive>Madness Aura,Enemies within 60 feet who can see Uursovk make a successful DC 16 Intelligence saving throw in order to cast a spell. Once a creature succeeds on this saving throw, it becomes immune to Uursovk's Madness Aura for 24 hours.</passive>
 		<passive>Insanity Field,Any creature that starts its turn within 10 feet of Uursovk must make a DC 16 Intelligence saving throw. On a failure, the creature is poisoned until the start of its next turn. On a success, the creature becomes immune to Insanity Field for 24 hours.</passive>
 	</passives>
 	<other></other>
@@ -2580,7 +2580,7 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 		<innatecasting>CHA,7,15,,SlaadDeath</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>Magic weapons,It's weapon attacks are magical.</passive>
-		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its sìze, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
+		<passive>Shapechanger,The slaad can use its action to polymorph into a Small or Medium humanoid, or back into its true form. lts statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. lt reverts to its true form if it dies.</passive>
 		<passive>Regeneration,The slaad regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
@@ -2656,12 +2656,12 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 		<attack>Smash,9,10,One target. Hit: 14 (2d8+5) bludgeoning damage.</attack>
 		<effect>Lord of Chaos,null,Maladar has a 50% chance of summoning a member of his court in an adjacent unoccupied space. If successful, roll a d12 and consult the below chart. Each member of his court may only be summoned once per day in this manner. If the same member is summoned twice, nothing happens.
 
-D12	MEMBER SUMMONED
-1–4	Baron Malgas
-5–7	Korsoth Vastikan
-8–9	The Queen of Bones
-10–11	Lord Rall
-12	Uursovk</effect>
+D12		MEMBER SUMMONED
+1-4		Baron Malgas
+5-7		Korsoth Vastikan
+8-9		The Queen of Bones
+10-11	Lord Rall
+12		Uursovk</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>

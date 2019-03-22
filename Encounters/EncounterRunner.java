@@ -176,7 +176,7 @@ public class EncounterRunner {
 				
 				
 		sp = new ScrollPane();
-		grid.setMaxWidth(1100);
+		grid.setMaxWidth(1150);
 		sp.setContent(grid);
 	    secondaryStage.setScene(new Scene(sp, 1200, 800));
 		secondaryStage.show();
