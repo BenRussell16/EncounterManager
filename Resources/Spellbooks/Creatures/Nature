@@ -1,0 +1,9 @@
+<spellbook>
+	<name>Nature</name>
+	<daily>
+		<3>
+			<spell>Banishment,false</spell>
+			<spell>Counterspell,false</spell>
+		</3>
+	</daily>
+</spellbook>

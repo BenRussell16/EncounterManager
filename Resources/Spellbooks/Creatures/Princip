@@ -1,0 +1,16 @@
+<spellbook>
+	<name>Princip</name>
+	<daily>
+		<0>
+			<spell>Aid,false</spell>
+			<spell>Enhance ability,false</spell>
+			<spell>Lesser restoration,false</spell>
+			<spell>Shield of faith,false</spell>
+		</0>
+		<3>
+			<spell>Haste,false</spell>
+			<spell>Remove curse,false</spell>
+			<spell>Stoneskin,false</spell>
+		</3>
+	</daily>
+</spellbook>

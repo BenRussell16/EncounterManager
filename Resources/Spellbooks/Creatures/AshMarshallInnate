@@ -1,0 +1,12 @@
+<spellbook>
+	<name>AshMarshallInnate</name>
+	<daily>
+		<0>
+			<spell>Hunters mark,false</spell>
+			<spell>Branding smite,false</spell>
+		</0>
+		<1>
+			<spell>Raise dead,false</spell>
+		</1>
+	</daily>
+</spellbook>

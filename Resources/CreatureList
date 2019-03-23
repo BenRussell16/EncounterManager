@@ -1516,6 +1516,36 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>THERISEOFTIAMAT</source>
 </creature>
 <creature>
+	<name>Fire Mote</name>
+	<size>SMALL</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>5.0</cr>
+	<ac>13</ac>
+	<hp>49</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 17,DEX 16,CON 12,INT 13,WIS 11,CHA 12</stats>
+	<saves>DEX 6</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Fire Form,The mote can enter a hostile creature's space and stop there.</passive>
+		<passive>Annoying,An enemy in the same space as a mote must make a DC 14 Dexterity (Acrobatics) save when it moves. On a failed save, the mote moves with it. While in the same space as a mote, enemies have disadvantage on Constitution checks to maintain concentration.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The mote makes three touch attacks.</multiattack>
+		<attack>Touch,6,5,One target. Hit: 7 (1d8+3) fire damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Giant shark</name>
 	<size>HUGE</size>
 	<type>BEAST,false</type>
@@ -1605,6 +1635,36 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Mantis knight</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>CN</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 18,CON 14,INT 11,WIS 13,CHA 12</stats>
+	<saves>STR 6,WIS 4,CHA 4</saves>
+	<skills>ACROBATICS 7,DECEPTION 4,NATURE 3,PERCEPTION 6,PERSUASION 4,STEALTH 7,SURVIVAL 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,12,,MantisKnight</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Command Fey,As a member of the Court of Arcadia, the Knight can cast dominate monster (DC 12) at will on any fey creature or elf.</passive>
+		<passive>Sunbeetle Armor,The Knight’s armor is perpetually slick. Any attempts to grapple the Knight have disadvantage.</passive>
+		<passive>Fey Ancestry,Magic cannot put the Knight to sleep.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Knight makes four attacks with its rapiers, or makes two attacks and casts heroism or shield of faith on an ally.</multiattack>
+		<attack>Rapier,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Oregg Steeltwister</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ORC,false</type>
@@ -1632,6 +1692,39 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 		<attack>Longsword,5,5,One target. Hit: 7 (1d10+2) slashing damage.</attack>
 		<attack>Firebolt,7,120,One target. Hit: 11 (2d10) fire damage.</attack>
 		<effect>Poison Spray,null,One creature within 10 feet of Oregg must make a successful DC 15 Constitution saving throw or take 13 (2d12) poison damage.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Princip</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,false</type>
+	<align>NG</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>82</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 16,DEX 15,CON 16,INT 16,WIS 16,CHA 16</stats>
+	<saves>WIS 6,CHA 6</saves>
+	<multipliers>
+		<RESISTANCE>RADIANT,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,,14,,Princip</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Angelic Weapons,The Princip’s weapon attacks are magical. When the Princip hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Princip. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The Princip makes three attacks with the Scepter of Celestial Will.</multiattack>
+		<attack>Scepter of Celestial Will,6,5,One target. Hit: 12 (2d8+3) bludgeoning damage and 9 (2d8) radiant damage.</attack>
+		<effect>Crown of Glory,null,The Princip selects an ally. A golden crown appears over the ally’s head. While the crown remains, the ally cannot be compelled to act in a manner contrary to their will and may choose one ability score to raise to 24. Each time the ally takes damage while the crown is on them, they must make a Constitution saving throw or lose the crown. The DC equals 10 or half the damage taken, whichever number is higher.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -1701,6 +1794,33 @@ lf the disease is cured before the tadpole's emergence, the unborn slaad is disi
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Space</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>LN</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>112</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 16,DEX 14,CON 16,INT 13,WIS 16,CHA 14</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Inexorable,The Inexorables are immune to any effects that would slow them or deny them actions or movement.</passive>
+		<passive>Chaos Vulnerability,The Inexorables have disadvantage on all saving throws against spells.</passive>
+		<passive>The Law of Motion,No enemies within 60 feet can gain the benefit of magical movement.</passive>
+	</passives>
+	<other>Knows all the languages of its summoner.</other>
+	<actions>
+		<multiattack>Space makes three slam attacks.</multiattack>
+		<attack>Slam,6,5,One target. Hit: 12 (2d8+3) bludgeoning damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Swarm of cranium rats</name>
 	<size>MEDIUM</size>
 	<type>BEAST,SWARMOF,false</type>
@@ -1762,6 +1882,37 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Authority</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,false</type>
+	<align>NG</align>
+	<cr>6.0</cr>
+	<ac>19</ac>
+	<hp>97</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 18,DEX 14,CON 17,INT 14,WIS 16,CHA 16</stats>
+	<saves>DEX 5,CON 6</saves>
+	<multipliers>
+		<RESISTANCE>RADIANT,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Angelic Weapons,The Authority’s weapon attacks are magical. When the Authority hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Authority. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The Authority makes three attacks with the Brightsword.</multiattack>
+		<attack>Brightsword,7,10,One target. Hit: 14 (3d6+4) slashing damage and 9 (2d8) radiant damage. Evil creatures take an extra 9 (2d8) radiant damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Bonebreaker Dorokor</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ORC,false</type>
@@ -1796,6 +1947,35 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	<reactions>
 		<reaction>Villain Ability: Warlord,As a reaction, when a minion dies, issue a command to your other minions. Those who can hear you gain a reaction they can use to immediately take another movement.</reaction>
 	</reactions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Death</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>LN</align>
+	<cr>6.0</cr>
+	<ac>17</ac>
+	<hp>112</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 16,DEX 15,CON 16,INT 13,WIS 14,CHA 15</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,Death</innatecasting>
+		<passive>Inexorable,The Inexorables are immune to any effects that would slow them or deny them actions or movement.</passive>
+		<passive>Chaos Vulnerability,The Inexorables have disadvantage on all saving throws against spells.</passive>
+		<passive>The Law of Death,At the start of each of Death’s turns, undead within 10 feet of it take 10 force damage.</passive>
+	</passives>
+	<other>Knows all the languages of its summoner.</other>
+	<actions>
+		<multiattack>Death makes three slam attacks or makes one slam attack and one Death to Undeath attack.</multiattack>
+		<attack>Slam,6,5,One target. Hit: 12 (2d8+3) bludgeoning damage.</attack>
+		<effect>Death to Undeath,null,Death points at an undead creature within 60 feet. The target must make a DC 13 Wisdom saving throw or take 33 (6d10) force damage. On a successful save, the target takes half that damage.</effect>
+	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
@@ -1896,6 +2076,40 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Orchid count</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>CN</align>
+	<cr>6.0</cr>
+	<ac>16</ac>
+	<hp>97</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 18,CON 16,INT 14,WIS 11,CHA 15</stats>
+	<saves>DEX 7,CON 6</saves>
+	<skills>ACROBATICS 7,ATHLETICS 4,INTIMIDATION 5,PERCEPTION 6,SURVIVAL 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,OrchidCount</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Command Fey,As a member of the Court of Arcadia, the Count can cast dominate monster (DC 13) at will on any fey creature or elf.</passive>
+		<passive>Now You See Me...,If the Count teleports next to an enemy, he immediately makes two rapier attacks with advantage against that enemy.</passive>
+		<passive>Tactical Advantage,If the Count has advantage on an attack roll, he deals an extra 7 (2d6) damage.</passive>
+		<passive>Fey Step,The Count is unaffected by difficult terrain.</passive>
+		<passive>Fey Ancestry,Magic cannot put the Count to sleep.</passive>
+		<passive>Now You Don't... (Recharge 4-6),As a reaction, if an enemy the Count can see makes a successful melee or ranged attack roll against him, he casts misty step.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Count makes three attacks with his rapier or longbow in any combination.</multiattack>
+		<attack>Rapier,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<attack>Longbow,7,150,600,One target. Hit: 11 (2d6+4) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Rath Modar</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -1923,6 +2137,36 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 		<reaction>Illusory Self (Recharges after a Short or Long Rest),When a creature Rath can see makes an attack roll against him, he can interpose an illusory duplicate between the attacker and himself. The attack automatically misses Rath, then the illusion dissipates.</reaction>
 	</reactions>
 	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Source of earth</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>6.0</cr>
+	<ac>17</ac>
+	<hp>124</hp>
+	<speed>WALK 10,FLY 10</speed>
+	<stats>STR 11,DEX 9,CON 20,INT 10,WIS 19,CHA 10</stats>
+	<saves>STR 3,CON 8</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>EXHAUSTION,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,AURAN,AQUAN,IGNAN,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Foundation of All the World,Allies within 60 feet of the Source cannot be moved against their will or knocked prone.</passive>
+	</passives>
+	<other>Fly speed is hover.</other>
+	<actions>
+		<effect>Diamondskin,null,As a bonus action, the Source focuses its gaze on an ally within 30 feet. Diamond crystals emerge from the target’s skin, increasing their AC by 2 for 10 minutes, after which the diamonds turn to worthless dust, restoring the target’s skin to its previous state.</effect>
+		<effect>Back to Earth,null,The Source focuses its gaze on an enemy within 30 feet. If the target’s body is made of flesh, the target must make a DC 15 Constitution saving throw. On a failed save, the creature magically begins to turn to stone and is restrained. At the end of its next turn, it must repeat the saving throw. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.</effect>
+		<effect>Wall of Stone,1/Day,The Source causes a 30-foot-long wall of solid stone to thrust up through the floor. The wall has six 5-foot-long panels to it, which can be arranged however the summoner of the Source wishes, but each segment must form a line or a right angle with the previous segment. Each panel is 6 inches thick and 10 feet high. Each panel has AC 15 and 180 hit points. If reduced to 0 hit points, a panel crumbles, leaving loose scree that counts as difficult terrain. The wall lasts for 10 minutes, then turns to dust.
+If the wall is summoned in a creature’s space, the creature is pushed to one side of the wall, chosen by the summoner. If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its reaction to move up to its speed so that it is no longer enclosed by the wall.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Ashari firetamer</name>
@@ -2011,6 +2255,33 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 		<attack>Claw,8,5,One target. Hit: 12 (2d6+5) slashing damage. lf the target is a humanoid, it must succeed on a DC 15 Constitution saving throw or be infected with a disease called chaos phage. While infected, the target can't regain hit points, and its hit point maximum is reduced by 10 (3d6) every 24 hours. lf the disease reduces the target's hit point maximum to 0, the target instantly transforms into a red slaad or, if it has the ability to cast spells of 3rd level or higher, a green slaad. Only a wish spell can reverse the transformation.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Change</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>LN</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>120</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 15,DEX 17,CON 16,INT 13,WIS 12,CHA 10</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Inexorable,The Inexorables are immune to any effects that would slow them or deny them actions or movement.</passive>
+		<passive>Chaos Vulnerability,The Inexorables have disadvantage on all saving throws against spells.</passive>
+		<passive>The Law of Change,Enemies with 10 feet cannot benefit from magical healing.</passive>
+	</passives>
+	<other>Knows all the languages of its summoner.</other>
+	<actions>
+		<multiattack>Change makes three javelin attacks.</multiattack>
+		<attack>Javelin,5,30,120,One target. Hit: 12 (2d8+3) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Dragonsoul</name>
@@ -2137,6 +2408,67 @@ Innate spellcasting is psionics.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Monarchon</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>CN</align>
+	<cr>7.0</cr>
+	<ac>17</ac>
+	<hp>110</hp>
+	<speed>WALK 30,FLY 30</speed>
+	<stats>STR 11,DEX 15,CON 16,INT 12,WIS 19,CHA 14</stats>
+	<saves>WIS 7,CHA 5</saves>
+	<skills>HISTORY 4,INSIGHT 7,MEDICINE 7,NATURE 4,PERCEPTION 6,RELIGION 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,,15,,MonarchonInnate</innatecasting>
+		<spellcasting>WIS,7,15,7,MonarchonCasting</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Command Fey,As a member of the Court of Arcadia, the Monarchon can cast dominate monster (DC 15) at will on any fey creature or elf.</passive>
+		<passive>Fey Ancestry,Magic cannot put the Monarchon to sleep.</passive>
+	</passives>
+	<other>Fly speed is hover.</other>
+	<actions>
+		<attack>Withering Touch,7,5,One target. Hit: 15 (2d10+4) necrotic damage.</attack>
+		<effect>Hypnotic Display,null,The Monarchon spreads her wings and their false eyes pulsate with a rainbow of colors, targeting one creature she can see within 30 feet. If the target can see the Monarchon, the target must succeed on a DC 15 Wisdom saving throw against this magic or be charmed until the end of the Monarchon’s next turn. The charmed target is stunned. If the target’s saving throw is successful, the target is immune to the Monarchon’s gaze for 24 hours.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Pillar of water</name>
+	<size>LARGE</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>7.0</cr>
+	<ac>13</ac>
+	<hp>149</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 5,CON 22,INT 11,WIS 15,CHA 11</stats>
+	<saves>STR 7,CON 9</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Geyser,When summoned, the Pillar of Water appears in a 10-by-10-foot space. All creatures in that area must make Dexterity saving throws. On a failure, a creature is suspended in the column of water. On a success, a creature is pushed to an empty space adjacent to the Pillar.
+Up to four Medium creatures, or one Large creature, can be contained in the Pillar. Creatures suspended in the Pillar can’t breathe unless they can breathe water, are restrained, and take 21 (6d6) bludgeoning damage at the start of each of the Pillar’s turns.
+As an action, a restrained creature can make a DC 15 Strength (Athletics) check. On a success, it escapes from the column of water.</passive>
+		<passive>Constant Flood,Enemies beginning their turn within 15 feet of the Pillar must make a DC 15 Strength check or be pushed 10 feet away from the Pillar. The ground within 15 feet of the Pillar is difficult terrain for all enemies attempting to move toward the Pillar.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<effect>Reform,null,As a bonus action, the Pillar disappears, depositing any suspended creatures on the ground, prone. On its summoner’s next turn, it appears again anywhere within 60 feet of the summoner.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Remnant cultist</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -2198,6 +2530,100 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Virtue</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,false</type>
+	<align>NG</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>97</hp>
+	<speed>WALK 0,FLY 40</speed>
+	<stats>STR 14,DEX 13,CON 16,INT 16,WIS 17,CHA 20</stats>
+	<saves>INT 6,WIS 6,CHA 8</saves>
+	<multipliers>
+		<RESISTANCE>RADIANT,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Virtue. Allies in this area can't be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+	</passives>
+	<other>Fly speed is hover.
+Telepathy is 60ft.</other>
+	<actions>
+		<effect>Sing,null,At the start of each of its turns, the Virtue chooses a chorus below and sings it. Only creatures who can hear the Virtue are affected by its chorus. It can only sing one chorus at a time. Any damage it takes forces it to make a Constitution saving throw to maintain the chorus. The DC equals 10 or half the damage taken, whichever number is higher.
+Chorus of Succor. While the Virtue sings, each ally may choose one condition they’re suffering from at the start of their turn and end it.
+Chorus of Inspiration. While the Virtue sings, each ally may add a d6 to the result of any attack roll or saving throw, once per round. The ally can wait until after they roll the d20 before deciding to use the inspiration die, but must decide before the GM says whether the roll succeeds or fails.
+Chorus of Retribution. While the Virtue sings, any enemy who deals damage to one of the Virtue's allies immediately takes 5 thunder damage.
+Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have disadvantage on saving throws against spells that would send them to another plane.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Dominion</name>
+	<size>LARGE</size>
+	<type>CELESTIAL,false</type>
+	<align>NG</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>133</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 16,DEX 19,CON 18,INT 17,WIS 18,CHA 17</stats>
+	<saves>DEX 7,CHA 6</saves>
+	<multipliers>
+		<RESISTANCE>RADIANT,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Angelic Weapons,The Dominion’s Ray of Salvation is magical. When the Dominion hits with it, the ray deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Dominion. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The Dominion makes two attacks with the Ray of Salvation.</multiattack>
+		<attack>Ray of Salvation,7,60,One target. Hit: 10 (3d6) fire damage and 9 (2d8) radiant damage. If the ray does damage, any allies adjacent to the target gain 10 temporary hit points.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Fate</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>LN</align>
+	<cr>8.0</cr>
+	<ac>19</ac>
+	<hp>136</hp>
+	<speed>WALK 40,FLY 30</speed>
+	<stats>STR 16,DEX 12,CON 18,INT 15,WIS 14,CHA 10</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Inexorable,The Inexorables are immune to any effects that would slow them or deny them actions or movement.</passive>
+		<passive>Chaos Vulnerability,The Inexorables have disadvantage on all saving throws against spells.</passive>
+		<passive>The Law of Fate,Fate does not make attack rolls, always using a 12 as its result (before applying bonuses) and cannot be affected by advantage or disadvantage. Fate does not roll damage, instead always taking the average result, though damage dice are listed so the average can be calculated.</passive>
+	</passives>
+	<other>Fly speed is hover.
+Knows all the languages of its summoner.</other>
+	<actions>
+		<multiattack>Fate makes three slam attacks.</multiattack>
+		<attack>Slam,6,5,One target. Hit: 12 (2d8+3) bludgeoning damage.</attack>
+		<effect>The Destiny Light,Recharge 5-6,Fate fires a beam of Destiny Light at a target it can see within 60 feet. The target must make a DC 13 Constitution saving throw. On a failed save, it takes 36 (8d8) necrotic damage, and it only deals average damage and uses 10 for its attack rolls (before bonuses) for the next 10 minutes. On a successful save, it takes half as much damage, and its attack and damage rolls are not affected.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Green Slaad</name>
 	<size>LARGE</size>
 	<type>ABBERATION,true</type>
@@ -2229,6 +2655,35 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 		<attack>Hurl Flame,4,60,One target. Hit: 10 (3d6) fire damage. The fire ignites flammable objects that aren't being worn or carried.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Knight of Air</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>8.0</cr>
+	<ac>20</ac>
+	<hp>77</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 12,DEX 22,CON 13,INT 14,WIS 14,CHA 16</stats>
+	<saves>DEX 9,CHA 6</saves>
+	<skills>ACROBATICS 9,PERCEPTION 5,STEALTH 9</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>EXHAUSTION,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,5,13,,KnightOfAir</innatecasting>
+	</passives>
+	<other>Mage hand is invisible.</other>
+	<actions>
+		<multiattack>The Knight makes three attacks with the Sword of Clouds.</multiattack>
+		<attack>The Sword of Clouds,9,5,One target. Hit: 15 (2d8+6) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Lord Rall</name>
@@ -2293,6 +2748,95 @@ Innate spellcasting is psionics.</other>
 		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
 		<attack>Extract Brain,7,5,One incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. lf this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.</attack>
 		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Oleander Dragon</name>
+	<size>LARGE</size>
+	<type>DRAGON,false</type>
+	<align>CN</align>
+	<cr>8.0</cr>
+	<ac>16</ac>
+	<hp>119</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 12,DEX 16,CON 16,INT 16,WIS 20,CHA 16</stats>
+	<saves>DEX 6,INT 6,WIS 8,CHA 6</saves>
+	<skills>ARCANA 6,INSIGHT 8,NATURE 6,PERCEPTION 8,STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>DRACONIC,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>False Appearance,While the dragon remains motionless, it is indistinguishable from a shrub or small tree of blooming oleander.</passive>
+		<passive>Shapechanger,As an action, the dragon can polymorph into a Small or Medium humanoid or back into its true form. Its statistics, other than its size, are the same in each form. Any worn or carried equipment isn’t transformed. It reverts to its true form if it dies.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<effect>Implant Nightmare,null,The dragon reaches into the mind of a target it can see within 60 feet and manifests the target’s deepest fear. The target must make a DC 16 Wisdom saving throw. On a failed save, the target becomes frightened for 1 minute. At the start of each of the target’s turns, the target must repeat the saving throw or take 22 (4d10) psychic damage. On a successful save, the nightmare ends.</effect>
+		<effect>Pollen Breath,Recharge 5-6,The dragon exhales a swirling cloud of pollen and red and purple petals in a 60-foot cone. Each creature in the area must make a DC 16 Wisdom saving throw. On a failed save, the creature becomes charmed until the end of their next round. Creatures who successfully save cannot be affected by Pollen Breath for 24 hours.</effect>
+		<effect>Song of Cestilani,1/Day,The oleander dragon sings a magical song. Each enemy that can hear it must succeed on a DC 16 Intelligence saving throw or take 22 (4d8 + 4) psychic damage and be stunned for 1 minute. A creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Ash Marshall</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>CN</align>
+	<cr>9.0</cr>
+	<ac>20</ac>
+	<hp>157</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 12,CON 21,INT 14,WIS 18,CHA 16</stats>
+	<saves>STR 9,CON 9,WIS 7,CHA 7</saves>
+	<skills>ATHLETICS 9,INSIGHT 7,INTIMIDATION 7,NATURE 6,PERCEPTION 8,RELIGION 6</skills>
+	<multipliers>
+		<RESISTANCE>FIRE,LIGHTNING</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,15,,AshMarshallInnate</innatecasting>
+		<spellcasting>CHA,7,15,9,AshMarshallCasting</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Fey Ancestry,Magic cannot put the Marshall to sleep.</passive>
+		<passive>Command Fey,As a member of the Court of Arcadia, the Marshall can cast dominate monster (DC 15) at will on any fey creature or elf.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Marshall makes three Ashsword attacks. If two attacks hit the same target, that target has disadvantage on any melee attacks that don’t include the Marshall for the next round.</multiattack>
+		<attack>Ashsword,9,5,One target. Hit: 9 (1d8+5) piercing damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Cloud Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NG,NE</align>
+	<cr>9.0</cr>
+	<ac>14</ac>
+	<hp>200</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 27,DEX 10,CON 22,INT 12,WIS 16,CHA 16</stats>
+	<saves>CON 9,WIS 7,CHA 7</saves>
+	<skills>INSIGHT 7,PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,,,CloudGiant</innatecasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two morningstar attacks.</multiattack>
+		<attack>Morningstar,12,10,One target. Hit: 21 (3d8+8) piercing damage.</attack>
+		<attack>Rock,12,60,240,One target. Hit: 30 (4d10+8) bludgeoning damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -2394,6 +2938,95 @@ Innate spellcasting is psionics.</other>
 		<legendaryaction>Cast a Spell,3,The Slaughter Lord casts an innate spell.</legendaryaction>
 	</legendaryactions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Storm Magistrate</name>
+	<size>LARGE</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>9.0</cr>
+	<ac>16</ac>
+	<hp>157</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 12,CON 21,INT 14,WIS 20,CHA 16</stats>
+	<saves>INT 6,WIS 9,CHA 7</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,LIGHTNING</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,AURAN,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,9,17,13,StormMagistrate</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Magistrate makes two attacks with its morningstar.</multiattack>
+		<attack>Morningstar,7,10,One target. Hit: 12 (2d8+3) piercing damage.</attack>
+		<effect>Storm Strike,Recharge 6,Lightning arcs from the Magistrate toward up to three targets it can see within 120 feet. Three bolts then leap from those targets to as many as three other targets, each of which must be within 10 feet of the first target. A creature can be targeted by only one bolt. A target must make a DC 17 Dexterity saving throw. A creature takes 14 (4d6) lightning damage and 14 (4d6) radiant damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Throne</name>
+	<size>LARGE</size>
+	<type>CELESTIAL,false</type>
+	<align>NG</align>
+	<cr>9.0</cr>
+	<ac>15</ac>
+	<hp>127</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 16,CON 16,INT 14,WIS 18,CHA 18</stats>
+	<saves>STR 7,CON 7</saves>
+	<multipliers>
+		<RESISTANCE>RADIANT,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Throne. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<attack>The Burning Wheel,8,120,One target. Hit: 10 (3d6) fire damage plus 9 (2d8) radiant damage. If the target is Medium or smaller, it must succeed on a DC 16 Dexterity saving throw or be teleported into the Throne’s burning rings. The target is grappled (escape DC 17). Until the grapple ends, the target is restrained, and the Throne uses Radiant Burn as its first action on each of its subsequent turns. Only one creature can be imprisoned at a time.</attack>
+		<effect>Radiant Burn,null,The wheel spins around the creature grappled by it, dealing 13 (3d8) fire damage plus 9 (2d8) radiant damage.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Time</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>LN</align>
+	<cr>9.0</cr>
+	<ac>19</ac>
+	<hp>161</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 16,DEX 12,CON 18,INT 15,WIS 14,CHA 10</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Time Is Inexorable (Recharge 6),At the end of the round, after all creatures have acted, Time takes another turn.</passive>
+		<passive>Inexorable,The Inexorables are immune to any effects that would slow them or deny them actions or movement.</passive>
+		<passive>Chaos Vulnerability,The Inexorables have disadvantage on all saving throws against spells.</passive>
+		<passive>The Law of Time,Enemies within 15 feet cannot take bonus actions or reactions.</passive>
+	</passives>
+	<other>Knows all the languages of its summoner.</other>
+	<actions>
+		<multiattack>Time makes three slam attacks.</multiattack>
+		<attack>Slam,8,10,One target. Hit: 16 (2d10+3) bludgeoning damage.</attack>
+		<effect>Haste,Recharge 5-6,Until the end of its next turn, Time magically gains a +2 bonus to its AC, has advantage on Dexterity saving throws, and can use its slam attack as a bonus action.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
 	<name>Uursovk</name>
@@ -2593,6 +3226,38 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>High Templar of Dust</name>
+	<size>LARGE</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>189</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 22,CON 20,INT 17,WIS 16,CHA 13</stats>
+	<saves>STR 9,CON 9,WIS 7,CHA 5</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>COLD,FIRE,LIGHTNING,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,AURAN,AQUAN,IGNAN,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Sandstorm,At the start of each of the Templar's turns, each creature within 5 feet of it takes 5 (1d10) piercing damage.</passive>
+		<passive>Scour (Recharge 5-6),The Templar moves up to its speed without provoking opportunity attacks. It can move through creatures, and each creature it passes through must make a DC 15 Constitution saving throw or take 10 (3d6) force damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Templar makes four attacks with its halberd, Lightning, or Fire. Lightning and Fire can only be used twice each.</multiattack>
+		<attack>Halberd,9,10,One target. Hit: 10 (1d10+5) slashing damage.</attack>
+		<attack>Lightning,7,60,One target. Hit: 10 (3d6) lightning damage.</attack>
+		<effect>Fire,null,The Templar hurls a ball of fire that explodes at a point it can see within 60 feet. Each creature within a sphere of 10-foot radius centered on that point must make a DC 15 Dexterity saving throw. The sphere spreads around corners. On a failed save, a creature takes 10 (3d6) fire damage, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
 	<name>Lesser balor</name>
 	<size>LARGE</size>
 	<type>FIEND,DEMON,false</type>
@@ -2662,6 +3327,99 @@ D12		MEMBER SUMMONED
 8-9		The Queen of Bones
 10-11	Lord Rall
 12		Uursovk</effect>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Nature</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>LN</align>
+	<cr>10.0</cr>
+	<ac>20</ac>
+	<hp>190</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 20,DEX 11,CON 18,INT 15,WIS 18,CHA 20</stats>
+	<saves>STR 9,DEX 4,CON 8,WIS 8,CHA 9</saves>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,Nature</innatecasting>
+		<passive>Inexorable,The Inexorables are immune to any effects that would slow them or deny them actions or movement.</passive>
+		<passive>By Will Alone,As a reaction to missing an attack, Nature makes a DC 15 Wisdom saving throw. On a successful save, the original attack is successful.</passive>
+		<passive>The Law of Nature,Allies within 20 feet have advantage on all saving throws.</passive>
+	</passives>
+	<other>Knows all the languages of its summoner.</other>
+	<actions>
+		<multiattack>Nature makes two slam attacks or makes one slam attack and casts banishment.</multiattack>
+		<attack>Slam,9,10,One target. Hit: 12 (2d6+5) bludgeoning damage plus 18 (4d8) force damage.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Seraph</name>
+	<size>LARGE</size>
+	<type>CELESTIAL,false</type>
+	<align>NG</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>189</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 18,CON 20,INT 18,WIS 20,CHA 20</stats>
+	<saves>STR 8,CON 9,WIS 9,CHA 9</saves>
+	<multipliers>
+		<RESISTANCE>RADIANT,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Angelic Weapons,The Seraph’s weapon attacks are magical. When the Seraph hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Seraph. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+		<passive>Vigilant,The Seraph cannot be flanked or surprised.</passive>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The Seraph makes four attacks with any combination of Good, Law, Alpha, and Omega, but no more than two with the same weapon.</multiattack>
+		<attack>Good,8,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 9 (2d8) radiant damage. If the target is evil and has 25 hit points or fewer after taking this damage, it must succeed on a DC 17 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of the Seraph until the end of the Seraph’s next turn.</attack>
+		<attack>Law,8,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 9 (2d8) radiant damage. If the target is chaotic and has 25 hit points or fewer after taking this damage, it must succeed on a DC 17 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of the Seraph until the end of the Seraph’s turn.</attack>
+		<attack>Alpha,8,150,600,One target. Hit: 13 (2d8+4) piercing damage plus 9 (2d8) radiant damage. On a hit, all allies adjacent to the target restore 1d8+5 hit points.</attack>
+		<attack>Omega,8,150,600,One target. Hit: 13 (2d8+4) piercing damage plus 9 (2d8) radiant damage. If the target is chaotic or evil, it suffers the effects of a bane spell until the end of its next turn.</attack>
+	</actions>
+	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Sidereal Vizier</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>CN</align>
+	<cr>10.0</cr>
+	<ac>19</ac>
+	<hp>152</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 18,CON 16,INT 20,WIS 18,CHA 19</stats>
+	<saves>STR 7,CON 7,WIS 8,CHA 8</saves>
+	<skills>ARCANA 9,INSIGHT 8,NATURE 9,PERCEPTION 8,RELIGION 9</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,17,,SiderealVizierInnate</innatecasting>
+		<spellcasting>INT,9,17,15,SiderealVizierCasting</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Fey Ancestry,Magic cannot put the Vizier to sleep.</passive>
+		<passive>Command Fey,As a member of the Court of Arcadia, the Vizier can cast dominate monster (DC 17) at will on any fey creature or elf.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Longsword,7,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -2797,6 +3555,35 @@ The Chosen typically casts Mage armour and Greater invisibility on itself before
 		<attack>Withered Hand,6,5,One target. Hit: 37 (5d6+20) force damage. If this damage reduces the target to 0 hit points, it is disintegrated.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Zephyros</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NG</align>
+	<cr>13.0</cr>
+	<ac>14</ac>
+	<hp>200</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 27,DEX 10,CON 22,INT 18,WIS 16,CHA 16</stats>
+	<saves>CON 9,WIS 7,CHA 7</saves>
+	<skills>INSIGHT 7,PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,,,CloudGiant</innatecasting>
+		<spellcasting>INT,11,17,12,Zephyros</spellcasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two Staff of the Magi attacks.</multiattack>
+		<attack>Staff of the Magi,15,10,One target. Hit: 20 (3d6+10) bludgeoning damage, or 23 (3d8+10) bludgeoning damage if used with two hands.</attack>
+		<attack>Rock,12,60,240,One target. Hit: 30 (4d10+8) bludgeoning damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Adult blue dragon</name>

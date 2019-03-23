@@ -1,0 +1,9 @@
+<spellbook>
+	<name>MantisKnight</name>
+	<daily>
+		<0>
+			<spell>Heroism,false</spell>
+			<spell>Shield of faith,false</spell>
+		</0>
+	</daily>
+</spellbook>

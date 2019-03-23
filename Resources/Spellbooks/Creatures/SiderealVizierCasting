@@ -1,0 +1,15 @@
+<spellbook>
+	<name>SiderealVizierCasting</name>
+	<slot>
+		<known>Fire bolt,Mage hand,Minor illusion,Prestidigitation,Detect magic,Identify,Magic missile,Detect thoughts,Mirror image,Misty step,Scorching ray,Counterspell,Fireball,Fly,Banishment,Dimension door,Cone of cold,Hold monster,Chain lightning,Finger of death,Maze</known>
+		<0>Fire bolt,Mage hand,Minor illusion,Prestidigitation</0>
+		<1>4,Detect magic,Identify,Magic missile</1>
+		<2>3,Detect thoughts,Mirror image,Misty step,Scorching ray</2>
+		<3>3,Counterspell,Fireball,Fly</3>
+		<4>3,Banishment,Dimension door</4>
+		<5>2,Cone of cold,Hold monster</5>
+		<6>1,Chain lightning</6>
+		<7>1,Finger of death</7>
+		<8>1,Maze</8>
+	</slot>
+</spellbook>

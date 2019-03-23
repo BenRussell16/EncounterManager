@@ -1,0 +1,11 @@
+<spellbook>
+	<name>MonarchonCasting</name>
+	<slot>
+		<known>Guidance,Sacred flame,Bane,Bless,Command,Hold person,Zone of truth,Dispel magic,Revivify,Banishment,Death ward</known>
+		<0>Guidance,Sacred flame</0>
+		<1>4,Bane,Bless,Command</1>
+		<2>3,Hold person,Zone of truth</2>
+		<3>3,Dispel magic,Revivify</3>
+		<4>1,Banishment,Death ward</4>
+	</slot>
+</spellbook>

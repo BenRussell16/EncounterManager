@@ -1,0 +1,17 @@
+<spellbook>
+	<name>StormMagistrate</name>
+	<slot>
+		<known>Guidance,Light,Sacred flame,Spare the dying,Bane,Bless,Healing word,Shield of faith,Aid,Hold person,Lesser restoration,Magic weapon,Prayer of healing,Beacon of hope,Dispel magic,Magic circle,Mass healing word,Revivify,Spirit guardians,Banishment,Freedom of movement,Guardian of faith,Stoneskin,Flame strike,Hold monster,Mass cure wounds</known>
+		<0>Light,Guidance,Spare the dying,Sacred flame</0>
+		<1>4,Shield of faith,Healing word,Bless,Bane</1>
+		<2>3,Prayer of healing,Magic weapon,Lesser restoration,Hold person,Aid</2>
+		<3>3,Spirit guardians,Revivify,Mass healing word,Magic circle,Dispel magic,Beacon of hope</3>
+		<4>3,Banishment,Freedom of movement,Guardian of faith,Stoneskin</4>
+		<5>1,Flame strike,Hold monster,Mass cure wounds</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Enhance ability,false</spell>
+		</0>
+	</daily>
+</spellbook>

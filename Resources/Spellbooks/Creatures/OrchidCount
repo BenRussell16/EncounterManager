@@ -1,0 +1,13 @@
+<spellbook>
+	<name>OrchidCount</name>
+	<daily>
+		<0>
+			<spell>Misty step,false</spell>
+			<spell>Hunters mark,false</spell>
+		</0>
+		<3>
+			<spell>Blur,false</spell>
+			<spell>Mirror image,false</spell>
+		</3>
+	</daily>
+</spellbook>

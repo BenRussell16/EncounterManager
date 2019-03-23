@@ -1,0 +1,12 @@
+<spellbook>
+	<name>SiderealVizierInnate</name>
+	<daily>
+		<0>
+			<spell>Darkness,false</spell>
+			<spell>Dominate person,false</spell>
+		</0>
+		<1>
+			<spell>Power word stun,false</spell>
+		</1>
+	</daily>
+</spellbook>

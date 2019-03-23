@@ -1,0 +1,8 @@
+<spellbook>
+	<name>Death</name>
+	<daily>
+		<3>
+			<spell>Death ward,false</spell>
+		</3>
+	</daily>
+</spellbook>

@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Zephyros</name>
+	<slot>
+		<known>Mending,Message,Prestidigitation,Ray of frost,Shocking grasp,Charm person,Comprehend languages,Magic missile,Shield,Crown of madness,Gust of wind,Levitate,Nondetection,Protection from energy,Tongues,Conjure minor elementals,Greater invisibility,Otiluke's resilient sphere,Cone of cold,Contact other plane,Mass suggestion</known>
+		<0>Mending,Message,Prestidigitation,Ray of frost,Shocking grasp</0>
+		<1>4,Shield,Magic missile,Comprehend languages,Charm person</1>
+		<2>3,Levitate,Gust of wind,Crown of madness</2>
+		<3>3,Tongues,Protection from energy,Nondetection</3>
+		<4>3,Otiluke's resilient sphere,Greater invisibility,Conjure minor elementals</4>
+		<5>2,Contact other plane,Cone of cold</5>
+		<6>1,Mass suggestion</6>
+	</slot>
+</spellbook>

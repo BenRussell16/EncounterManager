@@ -1,0 +1,9 @@
+<spellbook>
+	<name>MonarchonInnate</name>
+	<daily>
+		<0>
+			<spell>Enthrall,false</spell>
+			<spell>Sleep,false</spell>
+		</0>
+	</daily>
+</spellbook>
