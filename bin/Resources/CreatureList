@@ -1654,7 +1654,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 		<innatecasting>CHA,,12,,MantisKnight</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>Command Fey,As a member of the Court of Arcadia, the Knight can cast dominate monster (DC 12) at will on any fey creature or elf.</passive>
-		<passive>Sunbeetle Armor,The Knight’s armor is perpetually slick. Any attempts to grapple the Knight have disadvantage.</passive>
+		<passive>Sunbeetle Armor,The Knight's armor is perpetually slick. Any attempts to grapple the Knight have disadvantage.</passive>
 		<passive>Fey Ancestry,Magic cannot put the Knight to sleep.</passive>
 	</passives>
 	<other></other>
@@ -1717,14 +1717,14 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<passives>
 		<innatecasting>WIS,,14,,Princip</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Angelic Weapons,The Princip’s weapon attacks are magical. When the Princip hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
-		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Princip. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+		<passive>Angelic Weapons,The Princip's weapon attacks are magical. When the Princip hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Princip. Allies in this area can't be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
 	<actions>
 		<multiattack>The Princip makes three attacks with the Scepter of Celestial Will.</multiattack>
 		<attack>Scepter of Celestial Will,6,5,One target. Hit: 12 (2d8+3) bludgeoning damage and 9 (2d8) radiant damage.</attack>
-		<effect>Crown of Glory,null,The Princip selects an ally. A golden crown appears over the ally’s head. While the crown remains, the ally cannot be compelled to act in a manner contrary to their will and may choose one ability score to raise to 24. Each time the ally takes damage while the crown is on them, they must make a Constitution saving throw or lose the crown. The DC equals 10 or half the damage taken, whichever number is higher.</effect>
+		<effect>Crown of Glory,null,The Princip selects an ally. A golden crown appears over the ally's head. While the crown remains, the ally cannot be compelled to act in a manner contrary to their will and may choose one ability score to raise to 24. Each time the ally takes damage while the crown is on them, they must make a Constitution saving throw or lose the crown. The DC equals 10 or half the damage taken, whichever number is higher.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -1902,8 +1902,8 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Angelic Weapons,The Authority’s weapon attacks are magical. When the Authority hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
-		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Authority. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+		<passive>Angelic Weapons,The Authority's weapon attacks are magical. When the Authority hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Authority. Allies in this area can't be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
 	<actions>
@@ -1968,7 +1968,7 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 		<innatecasting>CHA,,13,,Death</innatecasting>
 		<passive>Inexorable,The Inexorables are immune to any effects that would slow them or deny them actions or movement.</passive>
 		<passive>Chaos Vulnerability,The Inexorables have disadvantage on all saving throws against spells.</passive>
-		<passive>The Law of Death,At the start of each of Death’s turns, undead within 10 feet of it take 10 force damage.</passive>
+		<passive>The Law of Death,At the start of each of Death's turns, undead within 10 feet of it take 10 force damage.</passive>
 	</passives>
 	<other>Knows all the languages of its summoner.</other>
 	<actions>
@@ -2161,10 +2161,10 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	</passives>
 	<other>Fly speed is hover.</other>
 	<actions>
-		<effect>Diamondskin,null,As a bonus action, the Source focuses its gaze on an ally within 30 feet. Diamond crystals emerge from the target’s skin, increasing their AC by 2 for 10 minutes, after which the diamonds turn to worthless dust, restoring the target’s skin to its previous state.</effect>
-		<effect>Back to Earth,null,The Source focuses its gaze on an enemy within 30 feet. If the target’s body is made of flesh, the target must make a DC 15 Constitution saving throw. On a failed save, the creature magically begins to turn to stone and is restrained. At the end of its next turn, it must repeat the saving throw. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.</effect>
+		<effect>Diamondskin,null,As a bonus action, the Source focuses its gaze on an ally within 30 feet. Diamond crystals emerge from the target's skin, increasing their AC by 2 for 10 minutes, after which the diamonds turn to worthless dust, restoring the target's skin to its previous state.</effect>
+		<effect>Back to Earth,null,The Source focuses its gaze on an enemy within 30 feet. If the target's body is made of flesh, the target must make a DC 15 Constitution saving throw. On a failed save, the creature magically begins to turn to stone and is restrained. At the end of its next turn, it must repeat the saving throw. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.</effect>
 		<effect>Wall of Stone,1/Day,The Source causes a 30-foot-long wall of solid stone to thrust up through the floor. The wall has six 5-foot-long panels to it, which can be arranged however the summoner of the Source wishes, but each segment must form a line or a right angle with the previous segment. Each panel is 6 inches thick and 10 feet high. Each panel has AC 15 and 180 hit points. If reduced to 0 hit points, a panel crumbles, leaving loose scree that counts as difficult terrain. The wall lasts for 10 minutes, then turns to dust.
-If the wall is summoned in a creature’s space, the creature is pushed to one side of the wall, chosen by the summoner. If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its reaction to move up to its speed so that it is no longer enclosed by the wall.</effect>
+If the wall is summoned in a creature's space, the creature is pushed to one side of the wall, chosen by the summoner. If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its reaction to move up to its speed so that it is no longer enclosed by the wall.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -2433,7 +2433,7 @@ Innate spellcasting is psionics.</other>
 	<other>Fly speed is hover.</other>
 	<actions>
 		<attack>Withering Touch,7,5,One target. Hit: 15 (2d10+4) necrotic damage.</attack>
-		<effect>Hypnotic Display,null,The Monarchon spreads her wings and their false eyes pulsate with a rainbow of colors, targeting one creature she can see within 30 feet. If the target can see the Monarchon, the target must succeed on a DC 15 Wisdom saving throw against this magic or be charmed until the end of the Monarchon’s next turn. The charmed target is stunned. If the target’s saving throw is successful, the target is immune to the Monarchon’s gaze for 24 hours.</effect>
+		<effect>Hypnotic Display,null,The Monarchon spreads her wings and their false eyes pulsate with a rainbow of colors, targeting one creature she can see within 30 feet. If the target can see the Monarchon, the target must succeed on a DC 15 Wisdom saving throw against this magic or be charmed until the end of the Monarchon's next turn. The charmed target is stunned. If the target's saving throw is successful, the target is immune to the Monarchon's gaze for 24 hours.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -2458,13 +2458,13 @@ Innate spellcasting is psionics.</other>
 	<regions></regions>
 	<passives>
 		<passive>Geyser,When summoned, the Pillar of Water appears in a 10-by-10-foot space. All creatures in that area must make Dexterity saving throws. On a failure, a creature is suspended in the column of water. On a success, a creature is pushed to an empty space adjacent to the Pillar.
-Up to four Medium creatures, or one Large creature, can be contained in the Pillar. Creatures suspended in the Pillar can’t breathe unless they can breathe water, are restrained, and take 21 (6d6) bludgeoning damage at the start of each of the Pillar’s turns.
+Up to four Medium creatures, or one Large creature, can be contained in the Pillar. Creatures suspended in the Pillar can't breathe unless they can breathe water, are restrained, and take 21 (6d6) bludgeoning damage at the start of each of the Pillar's turns.
 As an action, a restrained creature can make a DC 15 Strength (Athletics) check. On a success, it escapes from the column of water.</passive>
 		<passive>Constant Flood,Enemies beginning their turn within 15 feet of the Pillar must make a DC 15 Strength check or be pushed 10 feet away from the Pillar. The ground within 15 feet of the Pillar is difficult terrain for all enemies attempting to move toward the Pillar.</passive>
 	</passives>
 	<other></other>
 	<actions>
-		<effect>Reform,null,As a bonus action, the Pillar disappears, depositing any suspended creatures on the ground, prone. On its summoner’s next turn, it appears again anywhere within 60 feet of the summoner.</effect>
+		<effect>Reform,null,As a bonus action, the Pillar disappears, depositing any suspended creatures on the ground, prone. On its summoner's next turn, it appears again anywhere within 60 feet of the summoner.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
@@ -2556,7 +2556,7 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 Telepathy is 60ft.</other>
 	<actions>
 		<effect>Sing,null,At the start of each of its turns, the Virtue chooses a chorus below and sings it. Only creatures who can hear the Virtue are affected by its chorus. It can only sing one chorus at a time. Any damage it takes forces it to make a Constitution saving throw to maintain the chorus. The DC equals 10 or half the damage taken, whichever number is higher.
-Chorus of Succor. While the Virtue sings, each ally may choose one condition they’re suffering from at the start of their turn and end it.
+Chorus of Succor. While the Virtue sings, each ally may choose one condition they're suffering from at the start of their turn and end it.
 Chorus of Inspiration. While the Virtue sings, each ally may add a d6 to the result of any attack roll or saving throw, once per round. The ally can wait until after they roll the d20 before deciding to use the inspiration die, but must decide before the GM says whether the roll succeeds or fails.
 Chorus of Retribution. While the Virtue sings, any enemy who deals damage to one of the Virtue's allies immediately takes 5 thunder damage.
 Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have disadvantage on saving throws against spells that would send them to another plane.</effect>
@@ -2584,8 +2584,8 @@ Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Angelic Weapons,The Dominion’s Ray of Salvation is magical. When the Dominion hits with it, the ray deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
-		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Dominion. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+		<passive>Angelic Weapons,The Dominion's Ray of Salvation is magical. When the Dominion hits with it, the ray deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Dominion. Allies in this area can't be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
 	<actions>
@@ -2771,11 +2771,11 @@ Innate spellcasting is psionics.</other>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>False Appearance,While the dragon remains motionless, it is indistinguishable from a shrub or small tree of blooming oleander.</passive>
-		<passive>Shapechanger,As an action, the dragon can polymorph into a Small or Medium humanoid or back into its true form. Its statistics, other than its size, are the same in each form. Any worn or carried equipment isn’t transformed. It reverts to its true form if it dies.</passive>
+		<passive>Shapechanger,As an action, the dragon can polymorph into a Small or Medium humanoid or back into its true form. Its statistics, other than its size, are the same in each form. Any worn or carried equipment isn't transformed. It reverts to its true form if it dies.</passive>
 	</passives>
 	<other></other>
 	<actions>
-		<effect>Implant Nightmare,null,The dragon reaches into the mind of a target it can see within 60 feet and manifests the target’s deepest fear. The target must make a DC 16 Wisdom saving throw. On a failed save, the target becomes frightened for 1 minute. At the start of each of the target’s turns, the target must repeat the saving throw or take 22 (4d10) psychic damage. On a successful save, the nightmare ends.</effect>
+		<effect>Implant Nightmare,null,The dragon reaches into the mind of a target it can see within 60 feet and manifests the target's deepest fear. The target must make a DC 16 Wisdom saving throw. On a failed save, the target becomes frightened for 1 minute. At the start of each of the target's turns, the target must repeat the saving throw or take 22 (4d10) psychic damage. On a successful save, the nightmare ends.</effect>
 		<effect>Pollen Breath,Recharge 5-6,The dragon exhales a swirling cloud of pollen and red and purple petals in a 60-foot cone. Each creature in the area must make a DC 16 Wisdom saving throw. On a failed save, the creature becomes charmed until the end of their next round. Creatures who successfully save cannot be affected by Pollen Breath for 24 hours.</effect>
 		<effect>Song of Cestilani,1/Day,The oleander dragon sings a magical song. Each enemy that can hear it must succeed on a DC 16 Intelligence saving throw or take 22 (4d8 + 4) psychic damage and be stunned for 1 minute. A creature can repeat this saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
@@ -2807,7 +2807,7 @@ Innate spellcasting is psionics.</other>
 	</passives>
 	<other></other>
 	<actions>
-		<multiattack>The Marshall makes three Ashsword attacks. If two attacks hit the same target, that target has disadvantage on any melee attacks that don’t include the Marshall for the next round.</multiattack>
+		<multiattack>The Marshall makes three Ashsword attacks. If two attacks hit the same target, that target has disadvantage on any melee attacks that don't include the Marshall for the next round.</multiattack>
 		<attack>Ashsword,9,5,One target. Hit: 9 (1d8+5) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
@@ -2990,11 +2990,11 @@ Innate spellcasting is psionics.</other>
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Throne. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Throne. Allies in this area can't be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
 	<actions>
-		<attack>The Burning Wheel,8,120,One target. Hit: 10 (3d6) fire damage plus 9 (2d8) radiant damage. If the target is Medium or smaller, it must succeed on a DC 16 Dexterity saving throw or be teleported into the Throne’s burning rings. The target is grappled (escape DC 17). Until the grapple ends, the target is restrained, and the Throne uses Radiant Burn as its first action on each of its subsequent turns. Only one creature can be imprisoned at a time.</attack>
+		<attack>The Burning Wheel,8,120,One target. Hit: 10 (3d6) fire damage plus 9 (2d8) radiant damage. If the target is Medium or smaller, it must succeed on a DC 16 Dexterity saving throw or be teleported into the Throne's burning rings. The target is grappled (escape DC 17). Until the grapple ends, the target is restrained, and the Throne uses Radiant Burn as its first action on each of its subsequent turns. Only one creature can be imprisoned at a time.</attack>
 		<effect>Radiant Burn,null,The wheel spins around the creature grappled by it, dealing 13 (3d8) fire damage plus 9 (2d8) radiant damage.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
@@ -3380,15 +3380,15 @@ D12		MEMBER SUMMONED
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Angelic Weapons,The Seraph’s weapon attacks are magical. When the Seraph hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
-		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Seraph. Allies in this area can’t be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
+		<passive>Angelic Weapons,The Seraph's weapon attacks are magical. When the Seraph hits with any weapon, the weapon deals an extra 9 (2d8) radiant damage (included in the attack).</passive>
+		<passive>Aura of Protection Against Evil,Evil creatures have disadvantage on attack rolls against all allies within 5 feet of the Seraph. Allies in this area can't be charmed, frightened, or possessed by evil creatures. If an ally is already charmed, frightened, or possessed by evil magic, the ally has advantage on any new saving throw against the relevant effect.</passive>
 		<passive>Vigilant,The Seraph cannot be flanked or surprised.</passive>
 	</passives>
 	<other>Telepathy is 60ft.</other>
 	<actions>
 		<multiattack>The Seraph makes four attacks with any combination of Good, Law, Alpha, and Omega, but no more than two with the same weapon.</multiattack>
-		<attack>Good,8,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 9 (2d8) radiant damage. If the target is evil and has 25 hit points or fewer after taking this damage, it must succeed on a DC 17 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of the Seraph until the end of the Seraph’s next turn.</attack>
-		<attack>Law,8,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 9 (2d8) radiant damage. If the target is chaotic and has 25 hit points or fewer after taking this damage, it must succeed on a DC 17 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of the Seraph until the end of the Seraph’s turn.</attack>
+		<attack>Good,8,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 9 (2d8) radiant damage. If the target is evil and has 25 hit points or fewer after taking this damage, it must succeed on a DC 17 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of the Seraph until the end of the Seraph's next turn.</attack>
+		<attack>Law,8,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 9 (2d8) radiant damage. If the target is chaotic and has 25 hit points or fewer after taking this damage, it must succeed on a DC 17 Wisdom saving throw or be destroyed. On a successful save, the creature becomes frightened of the Seraph until the end of the Seraph's turn.</attack>
 		<attack>Alpha,8,150,600,One target. Hit: 13 (2d8+4) piercing damage plus 9 (2d8) radiant damage. On a hit, all allies adjacent to the target restore 1d8+5 hit points.</attack>
 		<attack>Omega,8,150,600,One target. Hit: 13 (2d8+4) piercing damage plus 9 (2d8) radiant damage. If the target is chaotic or evil, it suffers the effects of a bane spell until the end of its next turn.</attack>
 	</actions>
