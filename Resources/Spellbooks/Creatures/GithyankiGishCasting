@@ -1,0 +1,11 @@
+<spellbook>
+	<name>GithyankiGishCasting</name>
+	<slot>
+		<known>Blade ward,Light,Message,True strike,Expiditious retreat,Magic missile,Sleep,Thunderwave,Blur,Invisibility,Levitate,Counterspell,Fireball,Haste,Dimension door</known>
+		<0>Blade ward,Light,Message,True strike</0>
+		<1>4,Expiditious retreat,Magic missile,Thunderwave,Sleep</1>
+		<2>3,Blur,Invisibility,Levitate</2>
+		<3>3,Counterspell,Fireball,Haste</3>
+		<4>2,Dimension door</4>
+	</slot>
+</spellbook>

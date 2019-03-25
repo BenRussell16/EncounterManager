@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Neothelid</name>
+	<daily>
+		<0>
+			<spell>Levitate,false</spell>
+		</0>
+		<1>
+			<spell>Confusion,false</spell>
+			<spell>Feeblemind,false</spell>
+			<spell>Telekinesis,false</spell>
+		</1>
+	</daily>
+</spellbook>

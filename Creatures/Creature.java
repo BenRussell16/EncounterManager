@@ -356,7 +356,7 @@ public interface Creature {
 	}
 	
 	public enum Type{
-		ABBERATION(false),BEAST(true),CELESTIAL(true),CONSTRUCT(false),
+		ABERATION(false),BEAST(true),CELESTIAL(true),CONSTRUCT(false),
 		DRAGON(false),ELEMENTAL(false),FEY(false),FIEND(true),
 		GIANT(false),HUMANOID(true),MONSTOSITY(true),OOZE(false),
 		PLANT(false),UNDEAD(false);
@@ -398,7 +398,7 @@ public interface Creature {
 			HUMAN,DWARF,ELF,//General races
 			GITH,GNOLL,GOBLINOID,KOBOLD,ORC,//Common NPC races
 			AARAKOCRA,BULLYWUG,GNOME,GOLIATH,GRIMLOCK,KENKU,//Uncommon races
-			KUOTOA,LIZARDFOLK,MERFOLK,QUAGGOTH,SAHUAGIN,
+			KUOTOA,LAVACHILD,LIZARDFOLK,MERFOLK,QUAGGOTH,SAHUAGIN,
 			THRIKREEN,TROGLODYTE,YUANTI
 			;//TODO humanoid subtypes
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)

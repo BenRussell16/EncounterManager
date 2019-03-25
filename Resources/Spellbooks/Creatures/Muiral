@@ -1,0 +1,14 @@
+<spellbook>
+	<name>Muiral</name>
+	<slot>
+		<known>Dancing lights,Mage hand,Prestidigitation,Ray of frost,Shocking grasp,Expiditious retreat,Fog cloud,Magic missile,Shield,Darkness,Knock,See invisibility,Spider climb,Animate dead,Counterspell,Lightning bolt,Greater invisibility,Polymorph,Animate objects,Wall of force,Create undead,Flesh to stone,Finger of death</known>
+		<0>Dancing lights,Mage hand,Prestidigitation,Ray of frost,Shocking grasp</0>
+		<1>4,Shield,Magic missile,Fog cloud,Expiditious retreat</1>
+		<2>3,Spider climb,See invisibility,Knock,Darkness</2>
+		<3>3,Lightning bolt,Counterspell,Animate dead</3>
+		<4>3,Polymorph,Greater invisibility</4>
+		<5>2,Wall of force,Animate objects</5>
+		<6>1,Flesh to stone,Create undead</6>
+		<7>1,Finger of death</7>
+	</slot>
+</spellbook>

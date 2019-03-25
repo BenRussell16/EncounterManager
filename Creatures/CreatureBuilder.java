@@ -405,8 +405,10 @@ public class CreatureBuilder {
   							if(subtypeFilter.getValue()!=null) {//subtype filter
   								List<Creature> toRemove = new ArrayList<Creature>();
   								for(Creature c:query) {
-  									if(subtypeFilter.getValue()=="Shapechanger" && !c.isShapechanger()){toRemove.add(c);}
-  									if(c.getSubtype()==null || !c.getSubtype().toNiceString().equals(subtypeFilter.getValue())) {
+  									if(subtypeFilter.getValue()=="Shapechanger"){
+  										if(!c.isShapechanger()){toRemove.add(c);}
+  									}
+  									else if(c.getSubtype()==null || !c.getSubtype().toNiceString().equals(subtypeFilter.getValue())) {
   										toRemove.add(c);}
   								}
   								for(Creature c:toRemove) {query.remove(c);}
@@ -519,7 +521,7 @@ public class CreatureBuilder {
   					crFilter.setOnAction(filterQuery);				topBar.add(crFilter, 3, 0);
   					upperCRFilter.setOnAction(filterQuery);			topBar.add(upperCRFilter, 4, 0);
   					label = new Label("\t");						topBar.add(label, 5, 0);
-  					typeFilter.setOnAction(filterQuery);			topBar.add(typeFilter, 6, 0);
+  					/*typeFilter.setOnAction(filterQuery);*/		topBar.add(typeFilter, 6, 0);
   					subtypeFilter.setOnAction(filterQuery);			topBar.add(subtypeFilter, 7, 0);
   					label = new Label("\t");						topBar.add(label, 8, 0);
   					legResfilter.setOnAction(filterQuery);			topBar.add(legResfilter, 9, 0);
@@ -537,6 +539,21 @@ public class CreatureBuilder {
   					regionFilter.setOnAction(filterQuery);			secondBar.add(regionFilter, 6, 0);
   					label = new Label("\t");						secondBar.add(label, 7, 0);
   					sourceFilter.setOnAction(filterQuery);			secondBar.add(sourceFilter, 8, 0);
+
+  					typeFilter.setOnAction(new EventHandler<ActionEvent>() {
+  						//Set subclasses options based on selected class
+  						@Override public void handle(ActionEvent event) {
+  							if(typeFilter.getValue() == null || !typeFilter.getValue().hasSubtype()){
+  								subtypeFilter.getItems().remove(2, subtypeFilter.getItems().size());
+  								subtypeFilter.setValue(null);
+  							}else{
+  								subtypeFilter.getItems().remove(2, subtypeFilter.getItems().size());
+  								for(Subtype s:typeFilter.getValue().getSubtype(typeFilter.getValue())){
+  									subtypeFilter.getItems().add(s.toNiceString());}
+  								subtypeFilter.setValue(null);
+  							}
+  							subtypeFilter.getOnAction().handle(event);//Execute the filter method.
+  						}});
   					
   				grid.add(topBar, 0, 0, 2, 1);
   				grid.add(secondBar, 0, 1, 2, 1);

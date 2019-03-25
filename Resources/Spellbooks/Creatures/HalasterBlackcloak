@@ -1,0 +1,26 @@
+<spellbook>
+	<name>HalasterBlackcloak</name>
+	<slot>
+		<known>Dancing lights,Fire bolt,Light,Mage hand,Prestidigitation,Mage armour,Magic missile,Shield,Silent image,Arcane lock,Cloud of daggers,Darkvision,Knock,Counterspell,Dispel magic,Fireball,Confusion,Hallucinatory terrain,Polymorph,Bigby's hand,Geas,Wall of force,Chain lightning,Globe of invulnerability,Programmed illusion,Finger of death,Symbol,Teleport,Maze,Mind blank,Meteor swarm,Wish</known>
+		<0>Dancing lights,Fire bolt,Light,Mage hand,Prestidigitation</0>
+		<1>4,Silent image,Shield,Magic missile,Mage armour</1>
+		<2>3,Knock,Darkvision,Cloud of daggers,Arcane lock</2>
+		<3>3,Fireball,Dispel magic,Counterspell</3>
+		<4>3,Polymorph,Hallucinatory terrain,Confusion</4>
+		<5>3,Wall of force,Geas,Bigby's hand</5>
+		<6>2,Programmed illusion,Globe of invulnerability,Chain lightning</6>
+		<7>2,Teleport,Symbol,Finger of death</7>
+		<8>1,Mind blank,Maze</8>
+		<9>1,Wish,Meteor swarm</9>
+	</slot>
+	<daily>
+		<0>
+			<spell>Disguise self,false</spell>
+			<spell>Invisibility,false</spell>
+		</0>
+		<1>
+			<spell>Fly,false</spell>
+			<spell>Lightning bolt,false</spell>
+		</1>
+	</daily>
+</spellbook>

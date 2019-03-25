@@ -1,0 +1,19 @@
+<spellbook>
+	<name>Ulitharid</name>
+	<daily>
+		<0>
+			<spell>Detect thoughts,false</spell>
+			<spell>Levitate,false</spell>
+		</0>
+		<1>
+			<spell>Dominate monster,false</spell>
+			<spell>Eyebite,false</spell>
+			<spell>Feeblemind,false</spell>
+			<spell>Mass suggestion,false</spell>
+			<spell>Plane shift,true</spell>
+			<spell>Project image,false</spell>
+			<spell>Scrying,false</spell>
+			<spell>Telekinesis,false</spell>
+		</1>
+	</daily>
+</spellbook>

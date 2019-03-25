@@ -1,0 +1,9 @@
+<spellbook>
+	<name>EvilMage</name>
+	<slot>
+		<known>Light,Mage hand,Shocking grasp,Charm person,Magic missile,Hold person,Misty step</known>
+		<0>Light,Mage hand,Shocking grasp</0>
+		<1>4,Charm person,Magic missile</1>
+		<2>3,Hold person,Misty step</2>
+	</slot>
+</spellbook>

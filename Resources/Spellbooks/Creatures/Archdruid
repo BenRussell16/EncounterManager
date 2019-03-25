@@ -1,0 +1,16 @@
+<spellbook>
+	<name>Archdruid</name>
+	<slot>
+		<known>Druidcraft,Mending,Poison spray,Produce flame,Cure wounds,Entangle,Faerie fire,Speak with animals,Animal messenger,Beast sense,Hold person,Conjure animals,Meld into stone,Water breathing,Dominate beast,Locate creature,Stoneskin,Wall of fire,Commune with nature,Mass cure wounds,Tree stride,Heal,Heroes feast,Sunbeam,Fire storm,Animal shapes,Foresight</known>
+		<0>Druidcraft,Mending,Poison spray,Produce flame</0>
+		<1>4,Speak with animals,Faerie fire,Entangle,Cure wounds</1>
+		<2>3,Hold person,Beast sense,Animal messenger</2>
+		<3>3,Water breathing,Meld into stone,Conjure animals</3>
+		<4>3,Stoneskin,Locate creature,Dominate beast,Wall of fire</4>
+		<5>3,Tree stride,Mass cure wounds,Commune with nature</5>
+		<6>1,Sunbeam,Heroes feast,Heal</6>
+		<7>1,Fire storm</7>
+		<8>1,Animal shapes</8>
+		<9>1,Foresight</9>
+	</slot>
+</spellbook>

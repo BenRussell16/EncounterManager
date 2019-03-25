@@ -17,6 +17,7 @@ import Creatures.Creature.Senses;
 import Creatures.Creature.Size;
 import Creatures.Creature.Speeds;
 import Creatures.Creature.Type;
+import Creatures.Creature.Type.Subtype;
 import Resources.Source;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
@@ -385,15 +386,17 @@ public class EncounterBuilder {
 								}
 								for(Creature c:toRemove) {query.remove(c);}
 							}
-							if(subtypeFilter.getValue()!=null) {//subtype filter
-								List<Creature> toRemove = new ArrayList<Creature>();
-								for(Creature c:query) {
-									if(subtypeFilter.getValue()=="Shapechanger" && !c.isShapechanger()){toRemove.add(c);}
-									if(c.getSubtype()==null || !c.getSubtype().toNiceString().equals(subtypeFilter.getValue())) {
-										toRemove.add(c);}
-								}
-								for(Creature c:toRemove) {query.remove(c);}
-							}
+  							if(subtypeFilter.getValue()!=null) {//subtype filter
+  								List<Creature> toRemove = new ArrayList<Creature>();
+  								for(Creature c:query) {
+  									if(subtypeFilter.getValue()=="Shapechanger"){
+  										if(!c.isShapechanger()){toRemove.add(c);}
+  									}
+  									else if(c.getSubtype()==null || !c.getSubtype().toNiceString().equals(subtypeFilter.getValue())) {
+  										toRemove.add(c);}
+  								}
+  								for(Creature c:toRemove) {query.remove(c);}
+  							}
 							if(legResfilter.getValue()!=null) {//legres filter
 								List<Creature> toRemove = new ArrayList<Creature>();
 								for(Creature c:query) {
@@ -502,7 +505,7 @@ public class EncounterBuilder {
 					crFilter.setOnAction(filterQuery);				topBar.add(crFilter, 4, 0);
 					upperCRFilter.setOnAction(filterQuery);			topBar.add(upperCRFilter, 5, 0);
 					label = new Label("\t");						topBar.add(label, 6, 0);
-					typeFilter.setOnAction(filterQuery);			topBar.add(typeFilter, 7, 0);
+  					/*typeFilter.setOnAction(filterQuery);*/		topBar.add(typeFilter, 7, 0);
 					subtypeFilter.setOnAction(filterQuery);			topBar.add(subtypeFilter, 8, 0);
 					label = new Label("\t");						topBar.add(label, 9, 0);
 					legResfilter.setOnAction(filterQuery);			topBar.add(legResfilter, 10, 0);
@@ -520,6 +523,21 @@ public class EncounterBuilder {
 					regionFilter.setOnAction(filterQuery);			secondBar.add(regionFilter, 6, 0);
 					label = new Label("\t");						secondBar.add(label, 7, 0);
 					sourceFilter.setOnAction(filterQuery);			secondBar.add(sourceFilter, 8, 0);
+
+  					typeFilter.setOnAction(new EventHandler<ActionEvent>() {
+  						//Set subclasses options based on selected class
+  						@Override public void handle(ActionEvent event) {
+  							if(typeFilter.getValue() == null || !typeFilter.getValue().hasSubtype()){
+  								subtypeFilter.getItems().remove(2, subtypeFilter.getItems().size());
+  								subtypeFilter.setValue(null);
+  							}else{
+  								subtypeFilter.getItems().remove(2, subtypeFilter.getItems().size());
+  								for(Subtype s:typeFilter.getValue().getSubtype(typeFilter.getValue())){
+  									subtypeFilter.getItems().add(s.toNiceString());}
+  								subtypeFilter.setValue(null);
+  							}
+  							subtypeFilter.getOnAction().handle(event);//Execute the filter method.
+  						}});
 					
 				grid.add(topBar, 0, 0, 3, 1);
 				grid.add(secondBar, 0, 1, 3, 1);
