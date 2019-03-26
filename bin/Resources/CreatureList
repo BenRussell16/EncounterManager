@@ -322,6 +322,32 @@ Is a Boros spellcaster.</other>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Goblin Gang Member</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>NE</align>
+	<cr>0.25</cr>
+	<ac>14</ac>
+	<hp>10</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 16,CON 10,INT 10,WIS 10,CHA 8</stats>
+	<skills>STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Nimble escape,This creature can take the diesngage or hide action as a bonus action on each of its turns.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+		<attack>Light Crossbow,5,80,320,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Kuo-toa</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,KUOTOA,false</type>
@@ -1033,6 +1059,63 @@ Violet		51 years or more.</other>
 		<attack>Bite,3,5,One target. Hit: 5 (1d8+1) piercing damage plus 4 (1d8) cold damage. If the target is a Medium or smaller creature, it is grappled (escape DC 11). Until this grapple ends, the toad can't bite another target.</attack>
 	</actions>
 	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Krenko</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>NE</align>
+	<cr>1.0</cr>
+	<ac>17</ac>
+	<hp>21</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 10,INT 10,WIS 8,CHA 14</stats>
+	<skills>DECEPTION 4,PERSUASION 4,STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Nimble escape,This creature can take the diesngage or hide action as a bonus action on each of its turns.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Krenko makes two attacks with his scimitar.</multiattack>
+		<attack>Scimitar,4,5,One target. Hit: 5 (1d6+2) slashing damage plus 2 (1d4) poison damage.</attack>
+		<attack>Light Crossbow,4,80,320,One target. Hit: 6 (1d8+2) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Redirect Attack,When a creature Krenko can see targets him with an attack, Krenko chooses another goblin within 5 feet of him. The two goblins swap places, and the chosen goblin becomes the target instead.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Loading Rig</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>18</ac>
+	<hp>39</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 18,DEX 11,CON 13,INT 1,WIS 3,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Antimagic susceptibility,This creature is incapacitated while in the area of an antimagic field. If targeted by dispel magic, this creature must succeed on a Constitution saving throw against the caster's spell save DC or fall unconcious for 1 minute.</passive>
+		<passive>Unstable,If the rig takes damage, it must succeed on a DC 10 Constitution saving throw or be incapacitated with a speed of 0 until a creature activates it with a successful DC 10 Intelligence (Arcana) check made as an action .</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<multiattack>The armor makes two melee attacks.</multiattack>
+		<attack>Slam,6,5,One target. Hit: 7 (1d6+4) bludgeoning damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Pinna</name>
@@ -5552,6 +5635,90 @@ Understands Abyssal but can't speak.</other>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Azorius Sphinx</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>LN</align>
+	<cr>11.0</cr>
+	<ac>17</ac>
+	<hp>136</hp>
+	<speed>WALK 40,FLY 60</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 18,WIS 18,CHA 18</stats>
+	<skills>ARCANA 14,HISTORY 14,PERCEPTION 9,RELIGION 9</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,SPHINX</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,9,17,9,AzoriusSphinx</spellcasting>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Inscrutable,The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (lnsight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The sphinx makes two claw attacks.</multiattack>
+		<attack>Claw,9,5,One target. Hit: 13 (2d8+4) slashing damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Claw Attack,1,The sphinx makes one claw attack.</legendaryaction>
+		<legendaryaction>Teleport,2,The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.</legendaryaction>
+		<legendaryaction>Cast a Spell,3,The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>The flow of time is altered such that every creature in the lair must reroll initiative. The sphinx can choose not to reroll.</lairaction>
+		<lairaction>The effects of time are altered such that every creature in the lair must succeed on a DC 15 Constitution saving throw or become 1d20 years older or younger (the sphinx's choice), but never any younger than 1 year old. A greater restoration spell can restore a creature's age to normal.</lairaction>
+		<lairaction>The flow of time within the lair is altered such that everything within moves up to 10 years forward or backward (sphinx's choice). Only the sphinx is immediately aware of the time change. A wish spell can return the caster and up to seven other creatures designated by the caster to their normal time.</lairaction>
+		<lairaction>The sphinx shifts itselfand up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair. the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it.</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Gynosphinx</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>LN</align>
+	<cr>11.0</cr>
+	<ac>17</ac>
+	<hp>136</hp>
+	<speed>WALK 40,FLY 60</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 18,WIS 18,CHA 18</stats>
+	<skills>ARCANA 14,HISTORY 14,PERCEPTION 9,RELIGION 9</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,SPHINX</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,9,17,9,Gynosphinx</spellcasting>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Inscrutable,The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (lnsight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The sphinx makes two claw attacks.</multiattack>
+		<attack>Claw,9,5,One target. Hit: 13 (2d8+4) slashing damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Claw Attack,1,The sphinx makes one claw attack.</legendaryaction>
+		<legendaryaction>Teleport,2,The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.</legendaryaction>
+		<legendaryaction>Cast a Spell,3,The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>The flow of time is altered such that every creature in the lair must reroll initiative. The sphinx can choose not to reroll.</lairaction>
+		<lairaction>The effects of time are altered such that every creature in the lair must succeed on a DC 15 Constitution saving throw or become 1d20 years older or younger (the sphinx's choice), but never any younger than 1 year old. A greater restoration spell can restore a creature's age to normal.</lairaction>
+		<lairaction>The flow of time within the lair is altered such that everything within moves up to 10 years forward or backward (sphinx's choice). Only the sphinx is immediately aware of the time change. A wish spell can return the caster and up to seven other creatures designated by the caster to their normal time.</lairaction>
+		<lairaction>The sphinx shifts itselfand up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair. the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Naergoth bladelord</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -5995,6 +6162,52 @@ Understands the languages of its creator but can't speak.</other>
 		<attack>Sword,13,10,One target. Hit: 23 (3d10+7) slashing damage.</attack>
 		<effect>Poison Breath,Recharge 6,The golem exhales poisonous gas in a 15ft cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Androsphinx</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>LN</align>
+	<cr>17.0</cr>
+	<ac>17</ac>
+	<hp>199</hp>
+	<speed>WALK 40,FLY 60</speed>
+	<stats>STR 22,DEX 10,CON 20,INT 15,WIS 18,CHA 23</stats>
+	<saves>DEX 6,CON 11,INT 9,WIS 10</saves>
+	<skills>ARCANA 9,PERCEPTION 10,RELIGION 15</skills>
+	<multipliers>
+		<IMMUNITY>PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,SPHINX</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,10,18,12,Androsphinx</spellcasting>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Inscrutable,The sphinx is immune to any effect that would sense its emotions or read its thoughts, as well as any divination spell that it refuses. Wisdom (lnsight) checks made to ascertain the sphinx's intentions or sincerity have disadvantage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The sphinx makes two claw attacks.</multiattack>
+		<attack>Claw,12,5,One target. Hit: 17 (2d10+6) slashing damage.</attack>
+		<effect>Roar,3/Day,The sphinx emits a magical roar. Each time it roars before finishing a long rest, the roar is louder and the effect is different, as detailed below. Each creature within 500 feet of the sphinx and able to hear the roar must make a saving throw.
+First Roar. Each creature that fails a DC 18 Wisdom saving throw is frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+Second Roar. Each creature that fails a DC 18 Wisdom saving throw is deafened and frightened for 1 minute. A frightened creature is paralyzed and can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+Third Roar. Each creature makes a DC 18 Constitution saving throw. On a failed save, a creature takes 44 (8d10) thunder damage and is knocked prone. On a successful save, the creature takes half as much damage and isn't knocked prone.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Claw Attack,1,The sphinx makes one claw attack.</legendaryaction>
+		<legendaryaction>Teleport,2,The sphinx magically teleports, along with any equipment it is wearing or carrying, up to 120 feet to an unoccupied space it can see.</legendaryaction>
+		<legendaryaction>Cast a Spell,3,The sphinx casts a spell from its list of prepared spells, using a spell slot as normal.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>The flow of time is altered such that every creature in the lair must reroll initiative. The sphinx can choose not to reroll.</lairaction>
+		<lairaction>The effects of time are altered such that every creature in the lair must succeed on a DC 15 Constitution saving throw or become 1d20 years older or younger (the sphinx's choice), but never any younger than 1 year old. A greater restoration spell can restore a creature's age to normal.</lairaction>
+		<lairaction>The flow of time within the lair is altered such that everything within moves up to 10 years forward or backward (sphinx's choice). Only the sphinx is immediately aware of the time change. A wish spell can return the caster and up to seven other creatures designated by the caster to their normal time.</lairaction>
+		<lairaction>The sphinx shifts itselfand up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair. the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it.</lairaction>
+	</lair>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>

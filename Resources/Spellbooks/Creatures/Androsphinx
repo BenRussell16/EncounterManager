@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Androsphinx</name>
+	<slot>
+		<known>Sacred flame,Spare the dying,Thaumaturgy,Command,Detect evil and good,Detect magic,Lesser restoration,Zone of truth,Dispel magic,Tongues,Banishment,Freedom of movement,Flame strike,Greater restoration,Heroes feast</known>
+		<0>Sacred flame,Spare the dying,Thaumaturgy</0>
+		<1>4,Detect magic,Detect evil and good,Command</1>
+		<2>3,Zone of truth,Lesser restoration</2>
+		<3>3,Tongues,Dispel magic</3>
+		<4>3,Freedom of movement,Banishment</4>
+		<5>2,Greater restoration,Flame strike</5>
+		<6>1,Heroes feast</6>
+	</slot>
+</spellbook>

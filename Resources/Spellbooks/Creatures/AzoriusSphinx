@@ -1,0 +1,12 @@
+<spellbook>
+	<name>AzoriusSphinx</name>
+	<slot>
+		<known>Friends,Mage hand,Message,Command,Ensnaring strike,Shield,Calm emotions,Hold person,Suggestion,Clairvoyance,Counterspell,Dispel magic,Banishment,Divination,Dominate person</known>
+		<0>Mage hand,Friends,Message</0>
+		<1>4,Shield,Command,Ensnaring strike</1>
+		<2>3,Suggestion,Calm emotions,Hold person</2>
+		<3>3,Dispel magic,Clairvoyance,Counterspell</3>
+		<4>3,Banishment,Divination</4>
+		<5>1,Dominate person</5>
+	</slot>
+</spellbook>

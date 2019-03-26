@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Gynosphinx</name>
+	<slot>
+		<known>Mage hand,Minor illusion,Prestidigitation,Detect magic,Identify,Shield,Darkness,Locate object,Suggestion,Dispel magic,Remove curse,Tongues,Banishment,Greater invisibility,Legend lore</known>
+		<0>Mage hand,Minor illusion,Prestidigitation</0>
+		<1>4,Shield,Detect magic,Identify</1>
+		<2>3,Suggestion,Locate object,Darkness</2>
+		<3>3,Tongues,Remove curse,Dispel magic</3>
+		<4>3,Greater invisibility,Banishment</4>
+		<5>1,Legend lore</5>
+	</slot>
+</spellbook>

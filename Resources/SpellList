@@ -169,6 +169,24 @@ The spell creates more than one beam when you reach higher levels: two beams at 
 	<source>PLAYERSHANDBOOK</source>
 </spell>
 <spell>
+	<name>Encode Thoughts</name>
+	<level>0</level>
+	<school>ENCHANTMENT</school>
+	<components>
+		false,true,false
+	</components>
+	<casttime>false,Action</casttime>
+	<duration>false,8 Hours</duration>
+	<area>SELF</area>
+	<effect>
+Putting a finger to your head, you pull a memory, an idea, or a message from your mind and transform it into a tangible string of glowing energy called a thought strand, which persists for the duration or until you cast this spell again. The thought strand appears in an unoccupied space within 5 feet of you as a Tiny, weightless, semisolid object that can be held and carried like a ribbon. It is otherwise stationary.
+If you cast this spell while concentrating on a spell or an ability that allows you to read or manipulate the thoughts of others (such as detect thoughts or modify memory), you can transform the thoughts or memories you read, rather than your own, into a thought strand.
+Casting this spell while holding a thought strand allows you to instantly receive whatever memory, idea, or message the thought strand contains. (Casting detect thoughts on the strand has the same effect.)
+	</effect>
+	<classes>WIZARD</classes>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</spell>
+<spell>
 	<name>Fire bolt</name>
 	<level>0</level>
 	<school>EVOCATION</school>
@@ -1087,7 +1105,7 @@ A creature can be targeted only once by each casting of this spell.
 At Higher Levels. When you cast this spell using a spell slot of 2nd level or higher, each target takes 1d6 extra damage of the type rolled for each slot level above 1st.
 	</effect>
 	<classes>SORCERER</classes>
-	<source>XANATHARSGUIDETOEVERYTHING</source>
+	<source>XANATHARSGUIDETOEVERYTHING,GUILDMASTERSGUIDETORAVNICA</source>
 </spell>
 <spell>
 	<name>Charm person</name>
