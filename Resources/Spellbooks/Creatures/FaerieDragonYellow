@@ -1,0 +1,12 @@
+<spellbook>
+	<name>FaerieDragonYellow</name>
+	<daily>
+		<1>
+			<spell>Dancing lights,false</spell>
+			<spell>Mage hand,false</spell>
+			<spell>Minor illusion,false</spell>
+			<spell>Colour spray,false</spell>
+			<spell>Mirror image,false</spell>
+		</1>
+	</daily>
+</spellbook>

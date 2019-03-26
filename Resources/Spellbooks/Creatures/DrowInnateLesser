@@ -1,0 +1,12 @@
+<spellbook>
+	<name>DrowInnateLesser</name>
+	<daily>
+		<0>
+			<spell>Dancing lights,false</spell>
+		</0>
+		<1>
+			<spell>Darkness,false</spell>
+			<spell>Faerie fire,false</spell>
+		</1>
+	</daily>
+</spellbook>

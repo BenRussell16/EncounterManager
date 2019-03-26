@@ -356,7 +356,7 @@ public interface Creature {
 	}
 	
 	public enum Type{
-		ABERATION(false),BEAST(true),CELESTIAL(true),CONSTRUCT(false),
+		ABERRATION(false),BEAST(true),CELESTIAL(true),CONSTRUCT(false),
 		DRAGON(false),ELEMENTAL(false),FEY(false),FIEND(true),
 		GIANT(false),HUMANOID(true),MONSTOSITY(true),OOZE(false),
 		PLANT(false),UNDEAD(false);

@@ -1,0 +1,9 @@
+<spellbook>
+	<name>NezznarTheBlackSpider</name>
+	<slot>
+		<known>Mage hand,Ray of frost,Shocking grasp,Mage armour,Magic missile,Shield,Invisibility,Suggestion</known>
+		<0>Mage hand,Ray of frost,Shocking grasp</0>
+		<1>4,Shield,Magic missile,Mage armour</1>
+		<2>3,Suggestion,Invisibility</2>
+	</slot>
+</spellbook>

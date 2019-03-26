@@ -796,6 +796,15 @@ public class CreatureParser {
   							}
   							builtString += "\n";
   							
+  							builtString += "Source: ";
+  							first = true;
+  							for(Source s:getSource()){
+  								if(!first){builtString += ",";}
+  								builtString += s.toNiceString();
+  								first = false;
+  							}
+  							builtString += "\n";
+  							
   							return builtString;
   						}
 					};

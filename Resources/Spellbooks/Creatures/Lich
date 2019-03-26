@@ -1,0 +1,16 @@
+<spellbook>
+	<name>Lich</name>
+	<slot>
+		<known>Mage hand,Prestidigitation,Ray of frost,Detect magic,Magic missile,Shield,Thunderwave,Detect thoughts,Invisibility,Melf's acid arrow,Mirror image,Animate dead,Counterspell,Dispel magic,Fireball,Blight,Dimension door,Cloudkill,Scrying,Disintegrate,Globe of invulnerability,Finger of death,Plane shift,Dominate monster,Power word stun,Power word kill</known>
+		<0>Mage hand,Prestidigitation,Ray of frost</0>
+		<1>4,Detect magic,Magic missile,Shield,Thunderwave</1>
+		<2>3,Detect thoughts,Invisibility,Melf's acid arrow,Mirror image</2>
+		<3>3,Animate dead,Counterspell,Dispel magic,Fireball</3>
+		<4>3,Blight,Dimension door</4>
+		<5>3,Cloudkill,Scrying</5>
+		<6>1,Disintegrate,Globe of invulnerability</6>
+		<7>1,Finger of death,Plane shift</7>
+		<8>1,Dominate monster,Power word stun</8>
+		<9>1,Power word kill</9>
+	</slot>
+</spellbook>

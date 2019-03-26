@@ -1,0 +1,21 @@
+<spellbook>
+	<name>Arcturia</name>
+	<slot>
+		<known>Mage hand,Prestidigitation,Ray of frost,Detect magic,Magic missile,Shield,Thunderwave,Detect thoughts,Enlarge/Reduce,Melf's acid arrow,Mirror image,Counterspell,Dispel magic,Fireball,Slow,Blight,Polymorph,Animate objects,Telekinesis,Disintegrate,Flesh to stone,Reverse gravity,Teleport,Feeblemind,Maze,True polymorph</known>
+		<0>Mage hand,Prestidigitation,Ray of frost</0>
+		<1>4,Thunderwave,Magic missile,Shield,Detect magic</1>
+		<2>3,Mirror image,Melf's acid arrow,Enlarge/Reduce,Detect thoughts</2>
+		<3>3,Slow,Fireball,Dispel magic,Counterspell</3>
+		<4>3,Polymorph,Blight</4>
+		<5>3,Telekinesis,Animate objects</5>
+		<6>1,Flesh to stone,Disintegrate</6>
+		<7>1,Teleport,Reverse gravity</7>
+		<8>1,Maze,Feeblemind</8>
+		<9>1,True polymorph</9>
+	</slot>
+	<daily>
+		<0>
+			<spell>Alter self,false</spell>
+		</0>
+	</daily>
+</spellbook>

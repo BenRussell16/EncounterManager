@@ -123,7 +123,7 @@ The process that creates a living spell changes the nature of its magic. A livin
 <creature>
 	<name>Slaad tadpole</name>
 	<size>TINY</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>0.125</cr>
 	<ac>12</ac>
@@ -162,9 +162,36 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<other></other>
 	<actions>
 		<attack>Blood Drain,5,5,One creature. Hit: 5 (1d4+3) piercing damage, and the stirge attaches to the target. While attached, the stirge doesn't attack. lnstead, at the start of each of the stirge's turns, the target loses 5 (1d4+3) hit points due to blood loss.
-The stirge can detach itself by spending 5 feet ofits movement. It does so after it drains 10 hit points of blood from the target or the target dies. A creature, including the target, can use its action to detach the stirge.</attack>
+The stirge can detach itself by spending 5 feet of its movement. It does so after it drains 10 hit points of blood from the target or the target dies. A creature, including the target, can use its action to detach the stirge.</attack>
 	</actions>
-	<source>MONSTERMANUAL</source>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Twig Blight</name>
+	<size>SMALL</size>
+	<type>PLANT,false</type>
+	<align>NE</align>
+	<cr>0.125</cr>
+	<ac>13</ac>
+	<hp>4</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 6,DEX 13,CON 12,INT 4,WIS 8,CHA 3</stats>
+	<skills>STEALTH 3</skills>
+	<multipliers>
+		<VULNERABILITY>FIRE</VULNERABILITY>
+	</multipliers>
+	<conditions>BLINDED,DEAFENED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>False Appearance,The blight resembles a dead shrub. While it remains motionless among vegetation it can hide without being out of sight.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.
+Understands Common but doesn't speak.</other>
+	<actions>
+		<attack>Claws,3,5,One target. Hit: 3 (1d4+1) piercing damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Aarakocra</name>
@@ -192,6 +219,33 @@ The stirge can detach itself by spending 5 feet ofits movement. It does so after
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Ash Zombie</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>0.25</cr>
+	<ac>8</ac>
+	<hp>22</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 13,DEX 6,CON 16,INT 3,WIS 6,CHA 5</stats>
+	<saves>WIS 0</saves>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Ash Puff,The first time the zombie takes damage, any living creature within 5 feet of the zombie must succeed on a DC 10 Constitution saving throw or gain disadvantage on attack rolls, saving throws, and ability checks for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on it early with a successful save.</passive>
+		<passive>Undead Fortitude,If damage reduces the zombie to 0 hit points, it can make a Constitution saving throw with a DC of 5+ the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.</passive>
+	</passives>
+	<other>Understands the languages it knew in life but can't speak.</other>
+	<actions>
+		<attack>Slam,3,5,One target. Hit: 4 (1d6+1) bludgeoning damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
 	<name>Frontline medic</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -214,6 +268,32 @@ Is a Boros spellcaster.</other>
 		<attack>Spear,4,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Goblin</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>NE</align>
+	<cr>0.25</cr>
+	<ac>15</ac>
+	<hp>7</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 14,CON 10,INT 10,WIS 8,CHA 8</stats>
+	<skills>STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Nimble escape,This creature can take the diesngage or hide action as a bonus action on each of its turns.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Scimitar,4,5,One target. Hit: 5 (1d6+2) slashing damage.</attack>
+		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Kuo-toa</name>
@@ -249,6 +329,81 @@ Is a Boros spellcaster.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Skeleton</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LE</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>13</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 15,INT 6,WIS 8,CHA 5</stats>
+	<multipliers>
+		<VULNERABILITY>BLUDGEONING</VULNERABILITY>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands the languages it knew in life but can't speak.</other>
+	<actions>
+		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Wolf</name>
+	<size>MEDIUM</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>11</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 12,DEX 15,CON 12,INT 3,WIS 12,CHA 6</stats>
+	<skills>PERCEPTION 3,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Keen hearing,This creature has advantage on Wisdom (Perception) checks that rely on hearing.</passive>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,4,5,one target. Hit: 7 (2d4+2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Zombie</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>0.25</cr>
+	<ac>8</ac>
+	<hp>22</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 13,DEX 6,CON 16,INT 3,WIS 6,CHA 5</stats>
+	<saves>WIS 0</saves>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Undead Fortitude,If damage reduces the zombie to 0 hit points, it can make a Constitution saving throw with a DC of 5+ the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.</passive>
+	</passives>
+	<other>Understands the languages it knew in life but can't speak.</other>
+	<actions>
+		<attack>Slam,3,5,One target. Hit: 4 (1d6+1) bludgeoning damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
 	<name>Gas spore</name>
 	<size>LARGE</size>
 	<type>PLANT,false</type>
@@ -273,6 +428,25 @@ Spores invade an infected creature's system, killing the creature in a nurnber o
 Blind beyond blindsight radius.</other>
 	<actions>
 		<attack>Touch,0,5,One creature. Hit: 1 poison damage, and the creature must succeed on a DC 10 Constitution saving throw or become infected with the disease described in the Death Burst trait.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Giant Wasp</name>
+	<size>MEDIUM</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>13</hp>
+	<speed>WALK 10,FLY 50</speed>
+	<stats>STR 10,DEX 14,CON 10,INT 1,WIS 10,CHA 3</stats>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Sting,4,5,One creature. Hit: 5 (1d6+2) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. lfthe poison damage reduces the target to 0 hit points, the target is stable but poisoned for t hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -302,6 +476,35 @@ Blind beyond blindsight radius.</other>
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Grey Ooze</name>
+	<size>MEDIUM</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>8</ac>
+	<hp>22</hp>
+	<speed>WALK 10,CLIMB 10</speed>
+	<stats>STR 12,DEX 6,CON 16,INT 1,WIS 6,CHA 2</stats>
+	<skills>STEALTH 2</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE</RESISTANCE>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>False Appearance,While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock.</passive>
+		<passive>Corrode Metal,Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. lf its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.
+The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
+		<passive>Amorphous,The ooze can move through a space as narrow as 1 inch wide without squeezing.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<attack>Pseudopod,3,5,One target. Hit: 4 (1d6+1) bludgeoning damage plus 7 (2d6) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Hobgoblin</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,GOBLINOID,false</type>
@@ -325,7 +528,107 @@ Blind beyond blindsight radius.</other>
 slashing darrrage if used with two hands.</attack>
 		<attack>Longbow,3,150,600,One target. Hit: 5 (1d8+1) piercing damage.</attack>
 	</actions>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Metal Wasp</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>16</ac>
+	<hp>24</hp>
+	<speed>WALK 10,FLY 50</speed>
+	<stats>STR 10,DEX 14,CON 10,INT 1,WIS 10,CHA 3</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Sting,4,5,One creature. Hit: 5 (1d6+2) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. lfthe poison damage reduces the target to 0 hit points, the target is stable but poisoned for t hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Orc</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>0.5</cr>
+	<ac>13</ac>
+	<hp>15</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 12,CON 16,INT 7,WIS 11,CHA 10</stats>
+	<skills>INTIMIDATION 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Greataxe,5,5,One target. Hit: 9 (1d12+3) slashing damage.</attack>
+		<attack>Javelin,5,30,120,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Psychic Grey Ooze</name>
+	<size>MEDIUM</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>8</ac>
+	<hp>22</hp>
+	<speed>WALK 10,CLIMB 10</speed>
+	<stats>STR 12,DEX 6,CON 16,INT 6,WIS 6,CHA 2</stats>
+	<skills>STEALTH 2</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE</RESISTANCE>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>False Appearance,While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock.</passive>
+		<passive>Corrode Metal,Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. lf its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.
+The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
+		<passive>Amorphous,The ooze can move through a space as narrow as 1 inch wide without squeezing.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<attack>Pseudopod,3,5,One target. Hit: 4 (1d6+1) bludgeoning damage plus 7 (2d6) acid damage, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+		<effect>Psychic Crush,Recharge 5-6,The ooze targets one creature that it can sense within 60 feet of it. The target must make a DC 10 Intelligence saving throw taking 10 (3d6) psychic damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Redbrand Ruffian</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>0.5</cr>
+	<ac>14</ac>
+	<hp>16</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 14,CON 12,INT 9,WIS 9,CHA 11</stats>
+	<skills>INTIMIDATION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The ruffian makes two melee attacks.</multiattack>
+		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Bugbear</name>
@@ -467,6 +770,111 @@ slashing darrrage if used with two hands.</attack>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Faerie Dragon (Orange)</name>
+	<size>TINY</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>14</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 3,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonOrange</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 1 piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Faerie Dragon (Red)</name>
+	<size>TINY</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>14</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 3,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonRed</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 1 piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Faerie Dragon (Yellow)</name>
+	<size>TINY</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>14</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 3,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonYellow</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 1 piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Ghoul</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -487,6 +895,33 @@ slashing darrrage if used with two hands.</attack>
 	<actions>
 		<attack>Bite,2,5,One target. Hit: 9 (2d6+2) piercing damage.</attack>
 		<attack>Claw,4,5,One target. Hit: 7 (2d4+2) slashing damage. If the target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect early on a success.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Giant Spider</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>26</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 14,DEX 16,CON 12,INT 2,WIS 11,CHA 4</stats>
+	<skills>STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One creature. Hit: 7 (1d8+3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, and paralyzed while poisoned in this way.</attack>
+		<attack>Web (Recharge 5-6),5,30,60,One creature. Hit: The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerable to fire damage; immune to bludgeoning, poison, and psychic damage).</attack>
 	</actions>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
@@ -542,6 +977,33 @@ slashing darrrage if used with two hands.</attack>
 		<attack>Dagger,2,5,One target. Hit: 2 (1d4) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Sildar Hallwinter</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NG</align>
+	<cr>1.0</cr>
+	<ac>16</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 10,CON 12,INT 10,WIS 11,CHA 10</stats>
+	<saves>STR 3,CON 3</saves>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>Sildar makes two melee attacks.</multiattack>
+		<attack>Longsword,3,5,One target. Hit: 5 (1d8+1) slashing damage.</attack>
+		<attack>Heavy Crossbow,2,100,400,One target. Hit: 5 (1d10) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,When an attacker hits Sildar with a melee attack and Sildar can see the attacker, he can roll1d6 and add the number rolled to his AC against the triggering attack, provided that he's wielding a melee weapon.</reaction>
+	</reactions>
+	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Spy</name>
@@ -622,6 +1084,28 @@ slashing darrrage if used with two hands.</attack>
 		<reaction>Parry,The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon.</reaction>
 	</reactions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Carrion Ogre</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>11</ac>
+	<hp>59</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 19,DEX 8,CON 16,INT 1,WIS 7,CHA 7</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The creature makes two attacks: one with its tentacles and one with its bite.</multiattack>
+		<attack>Tentacles,8,10,One creature. Hit: 4 (1d4+2) poison damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 minute. Until this poison ends, the target is paralyzed. The target can repeat the saving throw at the end of each of its turns, ending the poison on itself on a success.</attack>
+		<attack>Bite,4,5,One target. Hit: 7 (2d4+2) piercing damage.</attack>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Cult Fanatic</name>
@@ -710,9 +1194,149 @@ slashing darrrage if used with two hands.</attack>
 	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
+	<name>Faerie Dragon (Blue)</name>
+	<size>TINY</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>14</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 3,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonBlue</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 1 piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Faerie Dragon (Green)</name>
+	<size>TINY</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>14</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 3,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonGreen</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 1 piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Faerie Dragon (Indigo)</name>
+	<size>TINY</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>14</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 3,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonIndigo</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 1 piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Faerie Dragon (Violet)</name>
+	<size>TINY</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>14</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 3,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonViolet</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 1 piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Gibbering mouther</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>TN</align>
 	<cr>2.0</cr>
 	<ac>9</ac>
@@ -735,6 +1359,31 @@ slashing darrrage if used with two hands.</attack>
 		<effect>Blinding Spittle,Recharge 5-6,The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DC 13 Dexterity saving throw or be blinded until the end of the mouther's next turn.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Grick</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>TN</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>27</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 14,DEX 14,CON 11,INT 3,WIS 14,CHA 5</stats>
+	<multipliers>
+		<IMMUNITY>NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Stone Camouflage,The grick has advantage on its Dexterity (Stealth) check when it attempts to hide in rocky terrain.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Tentacles,4,5,One target. Hit: 9 (2d6+2) slashing damage.</attack>
+		<attack>Beak,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Guard drake</name>
@@ -763,7 +1412,7 @@ slashing darrrage if used with two hands.</attack>
 <creature>
 	<name>Intellect devourer</name>
 	<size>TINY</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>LE</align>
 	<cr>2.0</cr>
 	<ac>12</ac>
@@ -820,6 +1469,143 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Nezznar the Black Spider</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 13,CON 10,INT 16,WIS 14,CHA 13</stats>
+	<saves>INT 5,WIS 4</saves>
+	<skills>ARCANA 5,PERCEPTION 4,STEALTH 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>ELVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,12,,DrowInnateLesser</innatecasting>
+		<spellcasting>INT,5,13,4,NezznarTheBlackSpider</spellcasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Special Equipment,Nezznar has a spider staff.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spider Staff,1,5,One target. Hit: 2 (1d6-1) bludgeoning damage plus 3 (1d6) poison damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Nothic</name>
+	<size>MEDIUM</size>
+	<type>ABERRATION,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 16,CON 16,INT 13,WIS 10,CHA 8</stats>
+	<skills>ARCANA 3,INSIGHT 4,PERCEPTION 2,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>TRUESIGHT 120</senses>
+	<languages>UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The nothic makes two attacks with its claws.</multiattack>
+		<attack>Claws,4,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
+		<effect>Rotting Gaze,null,The nothic chooses one creature within 30 feet of it that it can see. The target must succeed on a DC 12 Constitution saving throw against this magic or take 10 (3d6) necrotic damage.</effect>
+		<effect>Weird Insight,null,The nothic chooses one creature within 30 feet of it that it can see. The target must contest its Charisma (Deception) check against the nothic's Wisdom (Insight) check. If the nothic wins, it magically learns one fact or secret about the creature.</effect>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Ochre Jelly</name>
+	<size>LARGE</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>8</ac>
+	<hp>45</hp>
+	<speed>WALK 10,CLIMB 10</speed>
+	<stats>STR 15,DEX 6,CON 14,INT 2,WIS 6,CHA 1</stats>
+	<multipliers>
+		<RESISTANCE>ACID</RESISTANCE>
+		<IMMUNITY>LIGHTNING,SLASHING</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Amorphous,The jelly can move through a space as narrow as 1 inch wide without squeezing.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<attack>Pseudopod,4,5,One target. Hit: 9 (2d6+2) bludgeoning damage plus 3 (1d6) acid damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Split,When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.</reaction>
+	</reactions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Ogre</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>11</ac>
+	<hp>59</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 19,DEX 8,CON 16,INT 5,WIS 7,CHA 7</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Greatclub,6,5,One target. Hit:13 (2d8+4) bludgeoning damage.</attack>
+		<attack>Javelin,6,30,120,One target. Hit:11 (2d6+4) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Orog</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>18</ac>
+	<hp>42</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 12,CON 18,INT 12,WIS 11,CHA 12</stats>
+	<skills>INTIMIDATION 5,SURVIVAL 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Aggressive,As a bonus action, the orog can move up to its speed toward a hostile creature that it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The orog makes two greataxe attacks.</multiattack>
+		<attack>Greataxe,6,5,One target. Hit: 10 (1d12+4) slashing damage.</attack>
+		<attack>Javelin,6,30,120,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Plainscow</name>
 	<size>LARGE</size>
 	<type>BEAST,false</type>
@@ -872,6 +1658,34 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Space Orog</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>18</ac>
+	<hp>42</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 12,CON 18,INT 12,WIS 11,CHA 12</stats>
+	<skills>INTIMIDATION 5,SURVIVAL 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Aggressive,As a bonus action, the orog can move up to its speed toward a hostile creature that it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The orog makes two greataxe attacks.</multiattack>
+		<attack>Greataxe,6,5,One target. Hit: 10 (1d12+4) slashing damage.</attack>
+		<attack>Javelin,6,30,120,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<effect>Tangler Grenades,null,A tangler grenade is an alchemical, nonmagical item with an ovoid resin shell that shatters on impact. An as action, a creature can throw a tangier grenade at a point up to 60 feet away. Each creature within 10 feet of a shattered tangier grenade must succeed on a DC 15 Dexterity saving throw or be restrained by sticky white webs. As an action, a creature can try to free itself or another creature within its reach from the webs, doing so with a successful DC 20 Strength (Athletics) check. A gallon of alcohol dissolves the webs produced by a single tangier grenade. Otherwise, the webs dissolve on their own after 1 hour, freeing any creatures restrained by them.</effect>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
 	<name>Werebat</name>
 	<size>SMALL</size>
 	<type>HUMANOID,GOBLINOID,true</type>
@@ -904,6 +1718,27 @@ Nimble Escape is in humanoid form only.</other>
 		<attack>Bite (Bat or Hybrid Form Only),5,5,One creature. Hit: 6 (1d6+3) piercing damage, and the werebat gains temporary hit points equal to the damage dealt. If the target is a humanoid, it must succeed on a DC 10 Constitution saving throw or be cursed with were bat lycanthropy.</attack>
 		<attack>Scimitar (Humanoid or Hybrid Form Only),5,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
 		<attack>Shortbow (Humanoid or Hybrid Form Only),5,80,320,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Animated Stove</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>3.0</cr>
+	<ac>17</ac>
+	<hp>50</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 10,CON 10,INT 3,WIS 3,CHA 1</stats>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 30</senses>
+	<regions></regions>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<attack>Slam,6,5,One target. Hit: 11 (2d8+2) bludgeoning damage.</attack>
+		<effect>Belch Fire,Recharge 4-6,The stove belches fire in a 15-foot cone. Each creature in the area must make a DC 10 Dexterity saving throw, taking 22 (4d10) fire damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
@@ -1226,6 +2061,129 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Mormesk the Wraith</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>13</ac>
+	<hp>45</hp>
+	<speed>WALK 0,FLY 60</speed>
+	<stats>STR 6,DEX 16,CON 16,INT 12,WIS 14,CHA 15</stats>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Incorporeal Movement,The wraith can move through an object or another creature, but can't stop there.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.</other>
+	<actions>
+		<attack>Life Drain,5,5,One creature. Hit: 16 (3d5+3) necrotic damage, and the target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. If this attack reduces the target's hit point maximum to 0, the target dies. This reduction to the target's hit point maximum lasts until the target finishes a long rest.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Otto the Faerie Dragon</name>
+	<size>LARGE</size>
+	<type>DRAGON,false</type>
+	<align>CG</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>104</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 18,DEX 20,CON 13,INT 14,WIS 12,CHA 16</stats>
+	<skills>ARCANA 4,PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,FaerieDragonViolet</innatecasting>
+	</passives>
+	<other>Dragon Color	Age Range
+Red			5 years or less.
+Orange		6-10 years.
+Yellow		11-20 years.
+Green		21-30 years.
+Blue			31-40 years.
+Indigo		41-50 years.
+Violet		51 years or more.</other>
+	<actions>
+		<attack>Bite,7,5,One creature. Hit: 11 (2d6+4) piercing damage.</attack>
+		<effect>Euphoria Breath,Recharge 5-6,The dragon exhales a puff of euphoria gas at one creature within 5 feet of it. The target must succeed on a DC 22 Wisdom saving throw, or for 1 minute, the target can't take reactions and must roll a d6 at the start of each of its turns to determine its behavior during the turn:
+1-4. The target takes no action or bonus action and uses all of its movement to move in a random direction.
+5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Owlbear</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>3.0</cr>
+	<ac>13</ac>
+	<hp>59</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 20,DEX 12,CON 17,INT 3,WIS 12,CHA 7</stats>
+	<skills>PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The owlbear makes two attacks, one with its beak and one with its claws.</multiattack>
+		<attack>Beak,7,5,One target. Hit: 10 (1d10+5) piercing damage.</attack>
+		<attack>Claws,7,5,One target. Hit: 14 (2d8+5) slashing damage.</attack>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Spectator</name>
+	<size>MEDIUM</size>
+	<type>ABERRATION,false</type>
+	<align>LN</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>39</hp>
+	<speed>WALK 0,FLY 30</speed>
+	<stats>STR 8,DEX 14,CON 14,INT 13,WIS 14,CHA 11</stats>
+	<skills>PERCEPTION 6</skills>
+	<multipliers>
+	</multipliers>
+	<conditions>PRONE</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON,DEEPSPEECH,TELEPATHY</languages>
+	<regions></regions>
+	<other>Fly speed is hover.
+Telepathy is 120ft.</other>
+	<actions>
+		<attack>Bite,1,5,One target. Hit: 2 (1d4-1) piercing damage.</attack>
+		<effect>Eye Rays,null,The spectator uses two of the following eye rays. It can use each ray only once per turn. Each ray targets a creature the spectator can see within 90 feet of it.
+1. Confusion Ray. The target must succeed on a DC 13 Wisdom saving throw, or it can't take reactions until the end of its next turn. On its turn, the target can't move, and it uses its action to make a melee or ranged attack against a randomly determined creature within range. If the target can't attack, it does nothing on its turn.
+2. Paralyzing Ray. The target must succeed on a DC 13 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect early on a success.
+3. Fear Ray. The target must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the spectator is visible to the target, ending the effect early on a success.
+4. Wounding Ray. The target must make a DC 13 Constitution saving throw, taking 16 (3d10) necrotic damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Create Food and Water,null,The spectator creates enough food and water to sustain itself for 24 hours.</effect>
+	</actions>
+	<reactions>
+		<reaction>Spell Reflection,If the spectator makes a successful saving throw against a spell, or a spell misses it, the spectator can choose another creature within 30 feet of it that it can see. The spell affects the chosen creature instead of the spectator.</reaction>
+	</reactions>
+	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
 	<name>White tusk shaman</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ORC,true</type>
@@ -1350,7 +2308,7 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 <creature>
 	<name>Chuul</name>
 	<size>LARGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CE</align>
 	<cr>4.0</cr>
 	<ac>16</ac>
@@ -1529,6 +2487,40 @@ In a new form, the couatl retains its game statistics and ability to speak, but 
 		<attack>Quaterstaff,3,5,One target. Hit: 4 (1d6+1) bludgeoning damage, or 5 (1d8+1) bludgeoning damage if used with two hands.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Intellegent Black Pudding</name>
+	<size>LARGE</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>7</ac>
+	<hp>85</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 16,DEX 5,CON 16,INT 14,WIS 6,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>ACID,COLD,LIGHTNING,SLASHING</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,4,12,,IntellegentBlackPudding</innatecasting>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Ooze nature,An ooze doesn't equire sleep.</passive>
+		<passive>Amorphous,The pudding can move through a space as narrow as 1 inch wide without squeezing.</passive>
+		<passive>Corrosive Form,A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing the damage, the weapon takes a perminent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage.
+The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</passive>
+	</passives>
+	<other>Blind beyond blindsight radius.
+Understands Elvish and Undercommon but can't speak.</other>
+	<actions>
+		<attack>Pseudopod,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage plus 18 (4d8) acid damage. ln addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+	</actions>
+	<reactions>
+		<reaction>Split,When a pudding that is medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.</reaction>
+	</reactions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Lightning skull</name>
@@ -1788,7 +2780,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 <creature>
 	<name>Baron Malgas</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>5.0</cr>
 	<ac>20</ac>
@@ -2175,7 +3167,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 <creature>
 	<name>Red Slaad</name>
 	<size>LARGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>5.0</cr>
 	<ac>14</ac>
@@ -2544,7 +3536,7 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 <creature>
 	<name>Korsoth Vastikan</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>6.0</cr>
 	<ac>16</ac>
@@ -2759,7 +3751,7 @@ If the wall is summoned in a creature's space, the creature is pushed to one sid
 <creature>
 	<name>Blue Slaad</name>
 	<size>LARGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>7.0</cr>
 	<ac>15</ac>
@@ -2909,7 +3901,7 @@ Telepathy is 60ft.</other>
 <creature>
 	<name>Mind flayer</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>LE</align>
 	<cr>7.0</cr>
 	<ac>15</ac>
@@ -3029,7 +4021,7 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 <creature>
 	<name>The Queen of Bones</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>7.0</cr>
 	<ac>15</ac>
@@ -3095,7 +4087,7 @@ Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have
 <creature>
 	<name>Cloaker</name>
 	<size>LARGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>8.0</cr>
 	<ac>14</ac>
@@ -3190,7 +4182,7 @@ Knows all the languages of its summoner.</other>
 <creature>
 	<name>Green Slaad</name>
 	<size>LARGE</size>
-	<type>ABERATION,true</type>
+	<type>ABERRATION,true</type>
 	<align>CN</align>
 	<cr>8.0</cr>
 	<ac>16</ac>
@@ -3219,6 +4211,38 @@ Knows all the languages of its summoner.</other>
 		<attack>Hurl Flame,4,60,One target. Hit: 10 (3d6) fire damage. The fire ignites flammable objects that aren't being worn or carried.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Huge Grey Ooze</name>
+	<size>HUGE</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>8.0</cr>
+	<ac>8</ac>
+	<hp>152</hp>
+	<speed>WALK 10,CLIMB 10</speed>
+	<stats>STR 18,DEX 6,CON 16,INT 1,WIS 6,CHA 2</stats>
+	<skills>STEALTH 2</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE</RESISTANCE>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>False Appearance,While the ooze remains motionless, it is indistinguishable from an oily pool or wet rock.</passive>
+		<passive>Corrode Metal,Any nonmagical weapon made of metal that hits the ooze corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. lf its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits the ooze is destroyed after dealing damage.
+The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
+		<passive>Amorphous,The ooze can move through a space as narrow as 1 inch wide without squeezing.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<multiattack>The ooze makes two attacks with its pseudopods.</multiattack>
+		<attack>Pseudopod,7,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 21 (6d6) acid damage, or 42 (12d6) acid damage while the ooze is enlarged, and if the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the ooze magically increases in size. While enlarged, the ooze is Gargantuan, doubles its damage dice with its pseudopod attack, and makes Strength checks and Strength saving throws with advantage.</effect>
+		<effect>Invisibility,Recharges after a Short or Long Rest,The ooze magically turns invisible for up to 1 hour until it attacks, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell).</effect>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Knight of Air</name>
@@ -3252,7 +4276,7 @@ Knows all the languages of its summoner.</other>
 <creature>
 	<name>Lord Rall</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>8.0</cr>
 	<ac>15</ac>
@@ -3287,7 +4311,7 @@ The Staff of Changing is not a magic item outside of Lord Rall's "hands".</other
 <creature>
 	<name>Mind flayer arcanist</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>LE</align>
 	<cr>8.0</cr>
 	<ac>15</ac>
@@ -3374,6 +4398,37 @@ Innate spellcasting is psionics.</other>
 		<attack>Sting,7,10,One target. Hit: 9 (1d10+4) piercing damage plus 11 (2d10) lightning damage.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Young Green Dragon</name>
+	<size>LARGE</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>8.0</cr>
+	<ac>18</ac>
+	<hp>136</hp>
+	<speed>WALK 40,FLY 60,SWIM 40</speed>
+	<stats>STR 19,DEX 12,CON 17,INT 16,WIS 13,CHA 15</stats>
+	<saves>DEX 4,CON 6,WIS 4,CHA 5</saves>
+	<skills>DECEPTION 5,PERCEPTION 7,STEALTH 4</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>BLINDSIGHT 30,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragon makes three attacks, one with its bite and two with its claws.</multiattack>
+		<attack>Bite,7,10,One target. Hit: 15 (2d10+4) piercing damage plus 7 (2d6) poison damage.</attack>
+		<attack>Claw,7,5,One target. Hit: 11 (2d6+4) slashing damage.</attack>
+		<effect>Poison Breath,Recharge 5-6,The dragon breathes poisonous gas in a 30·foot cone. Each creature in the cone must make a DC 16 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Ash Marshall</name>
@@ -3494,7 +4549,7 @@ Innate spellcasting is psionics.</other>
 <creature>
 	<name>Grey Slaad</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,true</type>
+	<type>ABERRATION,true</type>
 	<align>CN</align>
 	<cr>9.0</cr>
 	<ac>18</ac>
@@ -3686,7 +4741,7 @@ If a non-evil humanoid dies from th is attack, a shadow (see the Monster Manual)
 <creature>
 	<name>Ulitharid</name>
 	<size>LARGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>LE</align>
 	<cr>9.0</cr>
 	<ac>15</ac>
@@ -3718,7 +4773,7 @@ Innate spellcasting is psionics.</other>
 <creature>
 	<name>Uursovk</name>
 	<size>LARGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>9.0</cr>
 	<ac>17</ac>
@@ -3811,7 +4866,7 @@ Innate spellcasting is psionics.</other>
 <creature>
 	<name>Aboleth</name>
 	<size>LARGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>LE</align>
 	<cr>10.0</cr>
 	<ac>17</ac>
@@ -3851,6 +4906,40 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Crystal Golem</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>178</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 22,DEX 9,CON 20,INT 3,WIS 11,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Illumination,The golem magically sheds bright light in a 30-foot radius and dim light for an additional 30 feet. This light goes out when the golem is destroyed.</passive>
+		<passive>Light Intensity,Any creature that starts its turn within 10 feet of the illuminated golem and can see the golem must succeed on a DC 17 Wisdom saving throw or be blinded until the start of the creature's next turn.
+A creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the golem until the start of its next turn, when it can avert its eyes again. If the creature looks at the golem in the meantime, it must immediately make the save.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunity.
+Understands Gith but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes two slam attacks.</multiattack>
+		<attack>Slam,10,5,One target. Hit:19 (3d8+6) bludgeoning damage.</attack>
+		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
 	<name>Cyclops stormcaller</name>
 	<size>LARGE</size>
 	<type>GIANT,false</type>
@@ -3882,7 +4971,7 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 <creature>
 	<name>Death Slaad</name>
 	<size>MEDIUM</size>
-	<type>ABERATION,true</type>
+	<type>ABERRATION,true</type>
 	<align>CE</align>
 	<cr>10.0</cr>
 	<ac>18</ac>
@@ -4008,7 +5097,7 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 <creature>
 	<name>Maladar Dictum</name>
 	<size>HUGE</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CN</align>
 	<cr>10.0</cr>
 	<ac>20</ac>
@@ -4331,6 +5420,37 @@ The new form's attacks count as magical for the purpose of overcoming resistance
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Mad Golem</name>
+	<size>HUGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>12.0</cr>
+	<ac>17</ac>
+	<hp>264</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 22,DEX 9,CON 20,INT 9,WIS 11,CHA 9</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunity.
+Understands Abyssal, Celestial, Common, Draconic, Dwarvish, Elvish, Infernal, and Undercommon but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes two slam attacks,</multiattack>
+		<attack>Slam,10,5,One target. Hit: 24 (4d8+6) bludgeoning damage.</attack>
+		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end ofeach of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
 	<name>Remnant chosen</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -4397,7 +5517,7 @@ The Chosen typically casts Mage armour and Greater invisibility on itself before
 <creature>
 	<name>Neothelid</name>
 	<size>GARGANTUAN</size>
-	<type>ABERATION,false</type>
+	<type>ABERRATION,false</type>
 	<align>CE</align>
 	<cr>13.0</cr>
 	<ac>16</ac>
@@ -4450,6 +5570,38 @@ If the neothelid takes 30 damage or more on a single turn from a creature inside
 		<attack>Rock,12,60,240,One target. Hit: 30 (4d10+8) bludgeoning damage.</attack>
 	</actions>
 	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Shockstomper</name>
+	<size>GARGANTUAN</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>14.0</cr>
+	<ac>18</ac>
+	<hp>300</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 10,CON 20,INT 1,WIS 1,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Electrified Surface,A creature that ends its turn in contact with Shockerstomper's body {saucer or turrets) must make a DC 15 Constitution saving throw, taking 22 (4d10) ligh tning damage on a failed save, or half as much damage on a successful one.</passive>
+		<passive>Control Module Countermeasure,A creature atop or above Shockerstomper's platform can locate its control module with a successful DC 15 Intelligence (investigation) check or Wisdom (Perception) check. As an action, a character can try to open the control module's access panel, either by tearing it off with a successful DC 25 Strength (Athletics) check or by dislodging it with thieves' tools and a successful DC 25 Dexterity check. Behind the panel, embedded in the floor of the control module, is a 5-foot-diameter pulsating crystal hemisphere with AC 10, 25 hit points, and immunity to poison and psychic damage. Destroying the crystal hemisphere shuts down Shockerstomper.</passive>
+		<passive>Lightning Turret Countermeasure,A character can try to plug the nozzle of a lightning turret with a 10-pound rock or similar object, doing so with a successful DC 15 Strength (Athletics) check. A plugged turret can't shoot lightning until a creature uses an action to try to clear the obstruction, which requires another successful DC 15 Strength (Athletics) check. Shockerstomper has no ability to clear an obstruction itself.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.
+Its 7 legs each have AC 20 and 50 hit points. The shockstomper must use a reaction to detach a broken leg, which also reduces its walking speed by 10. It shuts down if 4 of its 7 legs are disabled.</other>
+	<actions>
+		<multiattack>Shockerstomper makes three Lightning Turret attacks and two Stomp attacks.</multiattack>
+		<attack>Stomp,8,10,One creature. Hit: 22 (3d10+6) bludgeoning damage.</attack>
+		<effect>Lightning Turret,null,The turret shoots a magical lightning bolt at one creature within 60 feet of Shockerstomper. The target must make a DC 15 Dexterity saving throw, taking 44 (8d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Purple worm</name>
@@ -4583,6 +5735,95 @@ Understands the languages of its creator but can't speak.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Arcturia</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LE,NE,CE</align>
+	<cr>21.0</cr>
+	<ac>17</ac>
+	<hp>135</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 11,DEX 16,CON 16,INT 20,WIS 14,CHA 16</stats>
+	<saves>CON 10,INT 12,WIS 9</saves>
+	<skills>ARCANA 18,HISTORY 12,INSIGHT 9,PERCEPTION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD,LIGHTNING,NECROTIC</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,12,20,18,Arcturia</spellcasting>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Rejuvination,lf it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.</passive>
+	</passives>
+	<other>Knows any five other languages.
+Fly speed is hover.</other>
+	<actions>
+		<attack>Paralyzing Touch,12,5,One creature. Hit: l0 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itselfon a success.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Cantrip,1,The lich casts a cantrip.</legendaryaction>
+		<legendaryaction>Paralyzing Touch,2,The lich uses its Paralyzing Touch.</legendaryaction>
+		<legendaryaction>Frightening Gaze,2,The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end ofeach of its turns, ending the effect on itself on a success. lf a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.</legendaryaction>
+		<legendaryaction>Disrupt Life,3,Each living creature within 20 feet of the lich must makc a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>The lich rolls a d8 and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.</lairaction>
+		<lairaction>The lich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the lich to the target. Whenever the lich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the lich takes half the damage (rounded down). and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the lich or the target is no longer in the lich's lair.</lairaction>
+		<lairaction>The lich calls forth the spirits ofcreatures that died in its lair. These apparitions materialize arrd attack one creature that the lich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 (15d6) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear.</lairaction>
+	</lair>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Lich</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LE,NE,CE</align>
+	<cr>21.0</cr>
+	<ac>17</ac>
+	<hp>135</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 16,INT 20,WIS 14,CHA 16</stats>
+	<saves>CON 10,INT 12,WIS 9</saves>
+	<skills>ARCANA 18,HISTORY 12,INSIGHT 9,PERCEPTION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD,LIGHTNING,NECROTIC</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,12,20,18,Lich</spellcasting>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Rejuvination,lf it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.</passive>
+	</passives>
+	<other>Knows any five other languages.</other>
+	<actions>
+		<attack>Paralyzing Touch,12,5,One creature. Hit: l0 (3d6) cold damage. The target must succeed on a DC 18 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itselfon a success.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Cantrip,1,The lich casts a cantrip.</legendaryaction>
+		<legendaryaction>Paralyzing Touch,2,The lich uses its Paralyzing Touch.</legendaryaction>
+		<legendaryaction>Frightening Gaze,2,The lich fixes its gaze on one creature it can see within 10 feet of it. The target must succeed on a DC 18 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end ofeach of its turns, ending the effect on itself on a success. lf a target's saving throw is successful or the effect ends for it, the target is immune to the lich's gaze for the next 24 hours.</legendaryaction>
+		<legendaryaction>Disrupt Life,3,Each living creature within 20 feet of the lich must makc a DC 18 Constitution saving throw against this magic, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>The lich rolls a d8 and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.</lairaction>
+		<lairaction>The lich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the lich to the target. Whenever the lich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the lich takes half the damage (rounded down). and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the lich or the target is no longer in the lich's lair.</lairaction>
+		<lairaction>The lich calls forth the spirits ofcreatures that died in its lair. These apparitions materialize arrd attack one creature that the lich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 (15d6) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>The phoenix</name>
 	<size>HUGE</size>
 	<type>CELESTIAL,false</type>
@@ -4619,6 +5860,87 @@ In battle, the phoenix is a unit with Attack +17 and Power +15 and can affect ev
 		<effect>Light of All Colours,Recharge 4-6,The phoenix exhales a beam of brilliant, prismatic light in a line that is 10 feet wide and 1,000 feet long. Each creature in that line must make a DC 22 Dexterity saving throw, taking 45 (10d8) fire and 35 (10d6) radiant damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Illithilich</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LE,NE,CE</align>
+	<cr>22.0</cr>
+	<ac>17</ac>
+	<hp>135</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 16,INT 20,WIS 14,CHA 16</stats>
+	<saves>CON 10,INT 12,WIS 9</saves>
+	<skills>ARCANA 18,HISTORY 12,INSIGHT 9,PERCEPTION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD,LIGHTNING,NECROTIC</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,UNDERCOMMON,DEEPSPEECH,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>INT,,20,,MindFlayerInnate</innatecasting>
+		<spellcasting>INT,12,20,18,Lich</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Rejuvination,lf it has a phylactery, a destroyed lich gains a new body in 1d10 days, regaining all its hit points and becoming active again. The new body appears within 5 feet of the phylactery.</passive>
+	</passives>
+	<other>Knows any five other languages.
+Telepathy is 120ft.</other>
+	<actions>
+		<attack>Tentacles,12,5,One creature. Hit: 21 (3d10+5) psychic damage. If the target is Large or smaller, it is grappled (escape DC 15) and must succeed on a DC 20 Intelligence saving throw or be stunned until this grapple ends.</attack>
+		<attack>Extract Brain,12,5,One incapacitated humanoid grappled by the lich. Hit: 55 (10d10) piercing.damage. If this damage reduces the target to 0 hit points, the lich kills the target by extracting and devouring its brain.</attack>
+		<effect>Mind Blast,Recharge 5-6,The lich magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 18 lntelligence saving throw or take 27 (5d8+5) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Tentacles,1,The lich makes one attack with its tentades.</legendaryaction>
+		<legendaryaction>Extract Brain,2,The lich uses Extract Brain.</legendaryaction>
+		<legendaryaction>Mind Blast,3,The lich recharges its Mind Blast and uses it.</legendaryaction>
+		<legendaryaction>Cast Spell,3,The lich uses a spell slot to cast a 1st-, 2nd-, or 3rd-level spell that it has prepared. Doing so costs 1 legendary action per level of the spell.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>The lich rolls a d8 and regains a spell slot of that level or lower. If it has no spent spell slots of that level or lower, nothing happens.</lairaction>
+		<lairaction>The lich targets one creature it can see within 30 feet of it. A crackling cord of negative energy tethers the lich to the target. Whenever the lich takes damage, the target must make a DC 18 Constitution saving throw. On a failed save, the lich takes half the damage (rounded down). and the target takes the remaining damage. This tether lasts until initiative count 20 on the next round or until the lich or the target is no longer in the lich's lair.</lairaction>
+		<lairaction>The lich calls forth the spirits ofcreatures that died in its lair. These apparitions materialize arrd attack one creature that the lich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 (15d6) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear.</lairaction>
+	</lair>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Trobriand</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>22.0</cr>
+	<ac>20</ac>
+	<hp>210</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 24,DEX 9,CON 20,INT 20,WIS 11,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>FIRE,POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,12,20,18,Trobriand</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunity.
+Understands the languages of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes two melee attacks.</multiattack>
+		<attack>Slam,13,5,One target. Hit: 20 (3d8+7) bludgeoning damage.</attack>
+		<attack>Sword,13,10,One target. Hit: 23 (3d10+7) slashing damage.</attack>
+		<effect>Poison Breath,Recharge 6,The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much darnage om a successful one.</effect>
+	</actions>
+	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Ancient blue dragon</name>

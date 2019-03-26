@@ -1,0 +1,17 @@
+<spellbook>
+	<name>IntellegentBlackPudding</name>
+	<daily>
+		<0>
+			<spell>Dancing lights,false</spell>
+			<spell>Mage hand,false</spell>
+		</0>
+		<1>
+			<spell>Melf's acid arrow,false</spell>
+		</1>
+		<3>
+			<spell>Darkness,false</spell>
+			<spell>Faerie fire,false</spell>
+			<spell>Shield,false</spell>
+		</3>
+	</daily>
+</spellbook>

@@ -1,0 +1,16 @@
+<spellbook>
+	<name>Trobriand</name>
+	<slot>
+		<known>Fire bolt,Mage hand,Prestidigitation,Detect magic,Magic missile,Shield,Blur,Detect thoughts,Misty step,Shatter,Counterspell,Dispel magic,Fireball,Haste,Blight,Greater invisibility,Animate objects,Bigby's hand,Scrying,Chain lightning,Globe of invulnerability,Finger of death,Forcecage,Incindiary cloud,Power word stun,Power word kill</known>
+		<0>Fire bolt,Mage hand,Prestidigitation</0>
+		<1>4,Shield,Magic missile,Detect magic</1>
+		<2>3,Shatter,Misty step,Detect thoughts,Blur</2>
+		<3>3,Haste,Fireball,Dispel magic,Counterspell</3>
+		<4>3,Greater invisibility,Blight</4>
+		<5>3,Scrying,Bigby's hand,Animate objects</5>
+		<6>1,Globe of invulnerability,Chain lightning</6>
+		<7>1,Finger of death,Forcecage</7>
+		<8>1,Power word stun,Incindiary cloud</8>
+		<9>1,Power word kill</9>
+	</slot>
+</spellbook>
