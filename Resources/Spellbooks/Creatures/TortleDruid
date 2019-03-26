@@ -1,0 +1,9 @@
+<spellbook>
+	<name>TortleDruid</name>
+	<slot>
+		<known>Druidcraft,Guidance,Produce flame,Animal friendship,Cure wounds,Speak with animals,Thunderwave,Darkvision,Hold person</known>
+		<0>Druidcraft,Guidance,Produce flame</0>
+		<1>4,Thunderwave,Speak with animals,Cure wounds,Animal friendship</1>
+		<2>3,Hold person,Darkvision</2>
+	</slot>
+</spellbook>

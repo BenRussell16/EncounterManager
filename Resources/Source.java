@@ -24,6 +24,8 @@ public enum Source{
 	WATERDEEPDRAGONHEIST("Waterdeep: Dragon Heist"),
 	WATERDEEPDUNGEONOFTHEMADMAGE("Waterdeep: Dungeon of the Mad Mage"),
 	
+	TORTLEPACKAGE("The Tortle Package"),
+	
 	HUNTERSMARK("Hunter's Mark"),
 	KARTHUNLANDSOFCONFLICT("Karthun: Lands of Conflict"),
 	STRONGHOLDSANDFOLLOWERS("Strongholds and Followers"),

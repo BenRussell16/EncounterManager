@@ -399,7 +399,7 @@ public interface Creature {
 			GITH,GNOLL,GOBLINOID,KOBOLD,ORC,//Common NPC races
 			AARAKOCRA,BULLYWUG,GNOME,GOLIATH,GRIMLOCK,KENKU,//Uncommon races
 			KUOTOA,LAVACHILD,LIZARDFOLK,MERFOLK,QUAGGOTH,SAHUAGIN,
-			THRIKREEN,TROGLODYTE,YUANTI
+			THRIKREEN,TORTLE,TROGLODYTE,YUANTI
 			;//TODO humanoid subtypes
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}

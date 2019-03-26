@@ -1,0 +1,10 @@
+<spellbook>
+	<name>GiantSlug</name>
+	<daily>
+		<1>
+			<spell>Guiding bolt,false</spell>
+			<spell>Sanctuary,false</spell>
+			<spell>Spiritual weapon,false</spell>
+		</1>
+	</daily>
+</spellbook>

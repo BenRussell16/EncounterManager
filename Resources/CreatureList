@@ -270,6 +270,32 @@ Is a Boros spellcaster.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Geonid</name>
+	<size>SMALL</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>0.25</cr>
+	<ac>17</ac>
+	<hp>26</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 10,CON 16,INT 9,WIS 14,CHA 11</stats>
+	<skills>PERCEPTION 4,STEALTH 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60,TREMORSENSE 30</senses>
+	<languages>TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Boulder Guise,While fully withdrawn inot its shell, the geonid can't see and is indistinguishable from a small boulder.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Club,3,5,One target. Hit: 3 (1d4+1) bludgeoning damage.</attack>
+		<effect>Stone Tell,null,The geonid touches a stone object or surface and knows what types of creatures have been within 10 feet of that stone in the past 24 hours. The geonid can also determine the number of creatures of each type, but not their identities.</effect>
+	</actions>
+	<source>TORTLEPACKAGE</source>
+</creature>
+<creature>
 	<name>Goblin</name>
 	<size>SMALL</size>
 	<type>HUMANOID,GOBLINOID,false</type>
@@ -351,6 +377,33 @@ Is a Boros spellcaster.</other>
 		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Tortle</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,TORTLE,false</type>
+	<align>LG</align>
+	<cr>0.25</cr>
+	<ac>17</ac>
+	<hp>22</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 10,CON 12,INT 11,WIS 13,CHA 12</stats>
+	<skills>ATHLETICS 4,SURVIVAL 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Hold Breath,The tortle can hold its breath for 1 hour.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Claws,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
+		<attack>Quarterstaff,4,5,One target. Hit: 5 (1d6+2) bludgeoning damage, or 6 (1d8+2) bludgeoning damage when used with two hands.</attack>
+		<attack>Light Crossbow,2,80,320,One target. Hit: 4 (1d8) piercing damage.</attack>
+		<effect>Shell Defense,null,The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell the tortle is prone, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge.</effect>
+	</actions>
+	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
 	<name>Wolf</name>
@@ -629,6 +682,34 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Topi</name>
+	<size>SMALL</size>
+	<type>UNDEAD,false</type>
+	<align>CE</align>
+	<cr>0.5</cr>
+	<ac>13</ac>
+	<hp>13</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 7,DEX 15,CON 12,INT 6,WIS 10,CHA 5</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Undead Fortitude,If damage reduces the topi to 0 hit points, it must make a Constitution sacing throw with a DC of 5+ the damage taken, unless the damage is radiant or from a critical hit. On a success, the topi drops to 1 hit point instead.</passive>
+	</passives>
+	<other>Understands the languages it knew in life but can't speak.</other>
+	<actions>
+		<attack>Venomous Claws,4,5,One target. Hit: 4 (1d4+2) slashing damage plus 2 (1d4) poison damage, and the target must succeed on a DC 11 Constitution saving throw or be poisoned until the end of the target's next turn.</attack>
+	</actions>
+	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
 	<name>Bugbear</name>
@@ -1083,6 +1164,33 @@ Violet		51 years or more.</other>
 	<reactions>
 		<reaction>Parry,The captain adds 2 to its AC against one melee attack that would hit it. To do so, the captain must see the attacker and be wielding a melee weapon.</reaction>
 	</reactions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Carrion Crawler</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>51</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 14,DEX 13,CON 16,INT 1,WIS 12,CHA 5</stats>
+	<skills>PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The carrion crawler makes two attacks: one with its tentacles and one with its bite.</multiattack>
+		<attack>Tentacles,8,10,One creature. Hit: 4 (1d4+2) poison damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 minute. Until this poison ends, the target is paralyzed. The target can repeat the saving throw at the end of each of its turns, ending the poison on itself on a success.</attack>
+		<attack>Bite,4,5,One target. Hit: 7 (2d4+2) piercing damage.</attack>
+	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
@@ -1630,6 +1738,29 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Plesiosaurus</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>68</hp>
+	<speed>WALK 20,SWIM 40</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 2,WIS 12,CHA 5</stats>
+	<skills>PERCEPTION 3,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Hold Breath,The plesiosaurus can hold its breath for 1 hour.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,6,10,One target. Hit: 14 (3d6+4) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Ravager stabby-stabber</name>
 	<size>SMALL</size>
 	<type>HUMANOID,GOBLINOID,false</type>
@@ -1684,6 +1815,33 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 		<effect>Tangler Grenades,null,A tangler grenade is an alchemical, nonmagical item with an ovoid resin shell that shatters on impact. An as action, a creature can throw a tangier grenade at a point up to 60 feet away. Each creature within 10 feet of a shattered tangier grenade must succeed on a DC 15 Dexterity saving throw or be restrained by sticky white webs. As an action, a creature can try to free itself or another creature within its reach from the webs, doing so with a successful DC 20 Strength (Athletics) check. A gallon of alcohol dissolves the webs produced by a single tangier grenade. Otherwise, the webs dissolve on their own after 1 hour, freeing any creatures restrained by them.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Tortle Druid</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,TORTLE,false</type>
+	<align>LN</align>
+	<cr>2.0</cr>
+	<ac>17</ac>
+	<hp>33</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 10,CON 12,INT 11,WIS 15,CHA 12</stats>
+	<skills>ANIMALHANDLING 4,NATURE 2,SURVIVAL 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,4,12,4,TortleDruid</spellcasting>
+		<passive>Hold Breath,The tortle can hold its breath for 1 hour.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Claws,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
+		<attack>Quarterstaff,4,5,One target. Hit: 5 (1d6+2) bludgeoning damage, or 6 (1d8+2) bludgeoning damage when used with two hands.</attack>
+		<effect>Shell Defense,null,The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell the tortle is prone, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge.</effect>
+	</actions>
+	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
 	<name>Werebat</name>
@@ -1912,6 +2070,37 @@ Nimble Escape is in humanoid form only.</other>
 		<reaction>Pelliton's Archer,When a creature Faldric can see enters a space adjacent to Sir Pelliton, Faldric may use his reaction to make a longbow attack against that creature. If this attack is successful, the target is also knocked prone.</reaction>
 	</reactions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Giant Slug</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>3.0</cr>
+	<ac>13</ac>
+	<hp>66</hp>
+	<speed>WALK 10,CLIMB 10</speed>
+	<stats>STR 14,DEX 13,CON 16,INT 1,WIS 12,CHA 5</stats>
+	<skills>PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,3,11,,GiantSlug</innatecasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+	</passives>
+	<other>Understands Abyssal, Aquan, and Common but can't speak.</other>
+	<actions>
+		<multiattack>The carrion crawler makes two attacks: one with its tentacles and one with its bite.</multiattack>
+		<attack>Tentacles,8,10,One creature. Hit: 4 (1d4+2) poison damage, and the target must succeed on a DC 13 Constitution saving throw or be poisoned for 1 minute. Until this poison ends, the target is paralyzed. The target can repeat the saving throw at the end of each of its turns, ending the poison on itself on a success.</attack>
+		<attack>Bite,4,5,One target. Hit: 7 (2d4+2) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Defensive Lair,When the slug takes damage in this cave, it can use its reaction to animate one of the tentacles of the kraken statue and cause it to make a melee weapon attack (+3 to hit) against one creature within 20 feet of the statue that the slug can see. The tentacle deals 8 (1d8+4) bludgeoning damage on a hit.</reaction>
+	</reactions>
+	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
 	<name>Giff</name>
@@ -2368,6 +2557,29 @@ In a new form, the couatl retains its game statistics and ability to speak, but 
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Decapus</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>14</ac>
+	<hp>75</hp>
+	<speed>WALK 15,CLIMB 30</speed>
+	<stats>STR 15,DEX 14,CON 14,INT 4,WIS 10,CHA 7</stats>
+	<skills>ATHLETICS 4,PERCEPTION 2,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The decapus makes two attacks: one with its bite and one with its tentacles.</multiattack>
+		<attack>Bite,4,5,One creature grappled by the decapus. Hit: 7 (2d4+2) piercing damage.</attack>
+		<attack>Tentacles,4,10,One target. Hit: 24 (9d4+2) bludgeoning damage, or 14 (5d4+2) bludgeoning damage if the decapus is grappling a creature other than the target or if the decapus is on the ground or floor. The target is also grappled (escape DC 14) unless the decapus is already grappling a creature. Until this grapple ends, the target is restrained.</attack>
+	</actions>
+	<source>TORTLEPACKAGE</source>
+</creature>
+<creature>
 	<name>Drow gunslinger</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -2586,6 +2798,32 @@ Understands the languages of its creator but can't speak.</other>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Marine Decapus</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>14</ac>
+	<hp>75</hp>
+	<speed>WALK 15,CLIMB 30,SWIM 30</speed>
+	<stats>STR 15,DEX 14,CON 14,INT 4,WIS 10,CHA 7</stats>
+	<skills>ATHLETICS 4,PERCEPTION 2,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Aquatic,Can breathe only water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The decapus makes two attacks: one with its bite and one with its tentacles.</multiattack>
+		<attack>Bite,4,5,One creature grappled by the decapus. Hit: 7 (2d4+2) piercing damage.</attack>
+		<attack>Tentacles,4,10,One target. Hit: 24 (9d4+2) bludgeoning damage, or 14 (5d4+2) bludgeoning damage if the decapus is grappling a creature other than the target or if the decapus is on the ground or floor. The target is also grappled (escape DC 14) unless the decapus is already grappling a creature. Until this grapple ends, the target is restrained.</attack>
+	</actions>
+	<source>TORTLEPACKAGE</source>
+</creature>
+<creature>
 	<name>Orc blade of Ilneval</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ORC,false</type>
@@ -2643,6 +2881,31 @@ Is a Boros spellcaster.</other>
 		<reaction>Lightning Backlash (Recharge 5-6),When a creature hits the reckoner with an attack, the attacker takes lightning damage equal to half the damage dealt by the attack.</reaction>
 	</reactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Two-headed Plesiosaurus</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>100</hp>
+	<speed>WALK 20,SWIM 40</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 2,WIS 12,CHA 5</stats>
+	<skills>PERCEPTION 3,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Two-Headed,It has advantage on Wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, or knocked unconscious.</passive>
+		<passive>Hold Breath,The plesiosaurus can hold its breath for 1 hour.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The plesiosaurus makes two bite attacks, one with each head.</multiattack>
+		<attack>Bite,6,10,One target. Hit: 14 (3d6+4) piercing damage.</attack>
+	</actions>
+	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
 	<name>White tusk bloodrager</name>
