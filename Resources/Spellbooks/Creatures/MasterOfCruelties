@@ -1,0 +1,12 @@
+<spellbook>
+	<name>MasterOfCruelties</name>
+	<daily>
+		<0>
+			<spell>Charm person,false,3</spell>
+			<spell>Crown of madness,false</spell>
+		</0>
+		<1>
+			<spell>Dominate person,false</spell>
+		</1>
+	</daily>
+</spellbook>

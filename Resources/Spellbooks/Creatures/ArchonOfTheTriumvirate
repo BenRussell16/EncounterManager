@@ -1,0 +1,10 @@
+<spellbook>
+	<name>ArchonOfTheTriumvirate</name>
+	<daily>
+		<0>
+			<spell>Calm emotions,false</spell>
+			<spell>Command,false</spell>
+			<spell>Compelled duel,false</spell>
+		</0>
+	</daily>
+</spellbook>

@@ -1,0 +1,15 @@
+<spellbook>
+	<name>SireOfInsanity</name>
+	<daily>
+		<0>
+			<spell>Clairvoyance,false</spell>
+			<spell>Crown of madness,false</spell>
+			<spell>Major image,false</spell>
+			<spell>Suggestion,false</spell>
+		</0>
+		<1>
+			<spell>Confusion,false</spell>
+			<spell>Mass suggestion,false</spell>
+		</1>
+	</daily>
+</spellbook>

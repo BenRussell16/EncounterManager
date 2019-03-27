@@ -1,0 +1,13 @@
+<spellbook>
+	<name>FiremaneAngel</name>
+	<daily>
+		<1>
+			<spell>Daylight,false</spell>
+			<spell>Fireball,false,6</spell>
+		</1>
+		<3>
+			<spell>Compelled duel,false</spell>
+			<spell>Guiding bolt,false,5</spell>
+		</3>
+	</daily>
+</spellbook>

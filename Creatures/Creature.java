@@ -384,7 +384,7 @@ public interface Creature {
 					+ name().toLowerCase().substring(1);}
 		}
 		private enum celestialSubtype implements Subtype{
-			TITAN;
+			ANGEL,TITAN;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
@@ -397,9 +397,9 @@ public interface Creature {
 			ANYRACE,
 			HUMAN,DWARF,ELF,//General races
 			GITH,GNOLL,GOBLINOID,KOBOLD,ORC,//Common NPC races
-			AARAKOCRA,BULLYWUG,GNOME,GOLIATH,GRIMLOCK,KENKU,//Uncommon races
+			AARAKOCRA,BULLYWUG,GNOME,GOLIATH,GRIMLOCK,KENKU,KRAUL,//Uncommon races
 			KUOTOA,LAVACHILD,LIZARDFOLK,MERFOLK,QUAGGOTH,SAHUAGIN,
-			THRIKREEN,TORTLE,TROGLODYTE,YUANTI
+			SIMICHYBRID,THRIKREEN,TORTLE,TROGLODYTE,YUANTI
 			;//TODO humanoid subtypes
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
@@ -495,7 +495,7 @@ public interface Creature {
 		ALL,TELEPATHY,//Universal languages
 		
 		BULLYWUG,GITH,GNOLL,GNOMISH,GRELL,//Other languages
-		HALFLING,HOOKHORROR,MODRON,OTYUGH,SAHUAGIN,
+		HALFLING,HOOKHORROR,KRAUL,MERFOLK,MODRON,OTYUGH,SAHUAGIN,
 		SLAAD,SPHINX,THAYAN,THRIKREEN,TROGLODYTE,
 		UMBERHULK,YETI,
 		BLINKDOG,GIANTEAGLE,GIANTELK,WINTERWOLF,WORG,

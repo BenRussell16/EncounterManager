@@ -1,0 +1,14 @@
+<spellbook>
+	<name>DevkarinLich</name>
+	<slot>
+		<known>Acid splash,Chill touch,Mage hand,Poison spray,Prestidigitation,Chromatic orb,Magic missile,Ray of sickness,Melf's acid arrow,Ray of enfeeblement,Spider climb,Web,Animate dead,Bestow curse,Fear,Vampiric touch,Blight,Evard's black tentacles,Cloudkill,Insect plague,Circle of death,Create undead,Finger of death</known>
+		<0>Acid splash,Chill touch,Mage hand,Poison spray,Prestidigitation</0>
+		<1>0,Ray of sickness,Magic missile,Chromatic orb</1>
+		<2>0,Web,Spider climb,Ray of enfeeblement,Melf's acid arrow</2>
+		<3>0,Vampiric touch,Fear,Bestow curse,Animate dead</3>
+		<4>0,Evard's black tentacles,Blight</4>
+		<5>0,Insect plague,Cloudkill</5>
+		<6>0,Create undead,Circle of death</6>
+		<7>0,Finger of death</7>
+	</slot>
+</spellbook>

@@ -483,6 +483,37 @@ Is a Boros spellcaster.</other>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Cackler</name>
+	<size>SMALL</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>0.5</cr>
+	<ac>15</ac>
+	<hp>10</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 16,CON 11,INT 11,WIS 7,CHA 12</stats>
+	<skills>DECEPTION 3,PERCEPTION 0,PERFORMANCE 3</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,3,11,,Cackler</innatecasting>
+		<passive>Mimicry,The cackler can mimic any sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful DC 11 Wisdom (Insight) check.</passive>
+		<passive>Last Laugh,When the cackler dies, it releases a dying laugh that scars the minds of other nearby creatures. Each creature within 10 fee t of the cackler must succeed on a DC 11 Wisdom saving throw or take 2 (1d4) psychic damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+		<attack>Spiked Chain,5,10,One target. Hit: 6 (1d6+3) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Gas spore</name>
 	<size>LARGE</size>
 	<type>PLANT,false</type>
@@ -3156,6 +3187,38 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Battleforce Angel</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,false</type>
+	<align>LG</align>
+	<cr>5.0</cr>
+	<ac>18</ac>
+	<hp>66</hp>
+	<speed>WALK 30,FLY 90</speed>
+	<stats>STR 16,DEX 12,CON 13,INT 11,WIS 17,CHA 18</stats>
+	<saves>WIS 6,CHA 7</saves>
+	<skills>INVESTIGATION 3,PERCEPTION 6</skills>
+	<multipliers>
+		<RESISTANCE>FIRE,RADIANT</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED</conditions>
+	<senses>DARKVISION 120,TRUESIGHT 120</senses>
+	<languages>ALL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Flyby,This creature doesn't provoke an opportunity attack when it flies out of an enemies reach.</passive>
+		<passive>Immortal nature,This creature doesn't require food, drink or sleep.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The angel makes two melee attacks. It also uses Battlefield Inspiration.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands, plus 18 (4d8) radiant damage. If the target is within 5 feet of any of the angel's allies, the target takes an extra 2 (1d4) radiant damage.</attack>
+		<effect>Battlefield Inspiration,null,The angel chooses up to three creatures it can see within 30 feet of it. Until the end of the angel's next turn, each target can add a d4 to its attack rolls and saving throws.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Black viper</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -3296,6 +3359,39 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 		<attack>Orb of Dragon's Breath (2/Day),5,90,One target. Hit: 22 (5d8) damage of the type to which the dragonfang has damage resistance.</attack>
 	</actions>
 	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Felidar</name>
+	<size>LARGE</size>
+	<type>CELESTIAL,false</type>
+	<align>LN</align>
+	<cr>5.0</cr>
+	<ac>17</ac>
+	<hp>93</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 19,DEX 16,CON 17,INT 10,WIS 17,CHA 14</stats>
+	<saves>DEX 6,WIS 6,CHA 5</saves>
+	<skills>INSIGHT 6,PERCEPTION 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>TRUESIGHT 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen hearing,This creature has advantage on Wisdom (Perception) checks that rely on hearing.</passive>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Pounce,If the felidar moves at least 20 feet straight toward a creature and hits it with a claw attack on the same turn, that target must succeed on a DC 15 Strength saving throw or be knocked prone. If the target is prone, the felidar can make one claw attack against it as a bonus action.</passive>
+		<passive>Bonding,The felidar can magically bond with one creature it can see, right after spending at least 1 hour observing that creature while within 30 feet of it. The bond lasts until the felidar bonds with a different creature or until the bonded creature dies . This bond has the following effects:
+ - The felidar and the bonded creature can communicate telepathically with each other at a distance of up to 100 feet.
+ - The felidar can sense the direction and distance to the bonded creature if they're on the same plane of existence.
+ - As an action, the felidar or the bonded creature can sense what the other sees and hears, during which time it loses its own sight and hearing. This effect lasts until the start of its next turn.</passive>
+	</passives>
+	<other>Understands Common and Celestial but can't speak.</other>
+	<actions>
+		<multiattack>The felidar makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,7,5,One target. Hit: 17 (3d8+4) piercing damage.</attack>
+		<attack>Claws,7,5,One target. Hit: 14 (3d6+4) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Fire Mote</name>
@@ -3747,6 +3843,39 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 The elemental can grapple one Large creature or up to two Medium or smaller creatures at one time. At the start of each of the elemental's turns, each target grappled by it takes 13 (2d8+4) bludgeoning damage. A creature within 5 feet of the elemental can pull a creature or object out of it by taking an action to make a DC 14 Strength check and succeeding.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Winged Felidar</name>
+	<size>LARGE</size>
+	<type>CELESTIAL,false</type>
+	<align>LN</align>
+	<cr>5.0</cr>
+	<ac>17</ac>
+	<hp>93</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 19,DEX 16,CON 17,INT 10,WIS 17,CHA 14</stats>
+	<saves>DEX 6,WIS 6,CHA 5</saves>
+	<skills>INSIGHT 6,PERCEPTION 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>TRUESIGHT 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen hearing,This creature has advantage on Wisdom (Perception) checks that rely on hearing.</passive>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Pounce,If the felidar moves at least 20 feet straight toward a creature and hits it with a claw attack on the same turn, that target must succeed on a DC 15 Strength saving throw or be knocked prone. If the target is prone, the felidar can make one claw attack against it as a bonus action.</passive>
+		<passive>Bonding,The felidar can magically bond with one creature it can see, right after spending at least 1 hour observing that creature while within 30 feet of it. The bond lasts until the felidar bonds with a different creature or until the bonded creature dies . This bond has the following effects:
+ - The felidar and the bonded creature can communicate telepathically with each other at a distance of up to 100 feet.
+ - The felidar can sense the direction and distance to the bonded creature if they're on the same plane of existence.
+ - As an action, the felidar or the bonded creature can sense what the other sees and hears, during which time it loses its own sight and hearing. This effect lasts until the start of its next turn.</passive>
+	</passives>
+	<other>Understands Common and Celestial but can't speak.</other>
+	<actions>
+		<multiattack>The felidar makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,7,5,One target. Hit: 17 (3d8+4) piercing damage.</attack>
+		<attack>Claws,7,5,One target. Hit: 14 (3d6+4) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Authority</name>
@@ -4863,6 +4992,38 @@ Innate spellcasting is psionics.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Conclave Dryad</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>LG</align>
+	<cr>9.0</cr>
+	<ac>16</ac>
+	<hp>143</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 19,CON 14,INT 19,WIS 20,CHA 21</stats>
+	<saves>INT 8,WIS 9,CHA 9</saves>
+	<skills>ARCANA 8,NATURE 8,PERCEPTION 9</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,ConclaveDryad</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Speak with Beasts and Plants,The dryad can communicate with beasts and plants as if they and the dryad shared a language.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dryad makes three attacks, using its vine staff, its longbow, or both.</multiattack>
+		<attack>Vine Staff,9,5,One target. Hit: 12 (2d6+5) bludgeoning damage. If the target is a creature, it must succeed on a DC 17 Dexterity saving th row or become restrained by twisting vines for 1 minute. A target restrained in this way can use an action to make a DC 17 Strength (Athletics) or Dexterity (Acrobatics) check, ending the effect on itself on a success.</attack>
+		<attack>Longbow,8,150,600,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<effect>Suppress Magic,Recharge 5-6,The dryad targets one magic item it can see within 120 feet of it. If the magic item isn't an artifact, its magical properties are suppressed for 10 minutes, until the dryad is incapacitated or dies, or until the dryad uses a bonus action to end the effect.</effect>
+		<effect>Summon Mount,1/Day,The dryad magically summons a mount, which appears in an unoccupied space within 60 feet of the dryad. The mount remains for 8 hours, until it or the dryad dies, or until the dryad dismisses it as an action. The mount uses the stat block of an elk (see the Monster Manual) with these changes: it is a plant instead of a beast, it has an Intelligence of 6, and it understands Sylvan but can't speak. While within 1 mile of the mount, the dryad can communicate with it telepathically.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Flind</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,GNOLL,false</type>
@@ -4924,6 +5085,40 @@ Innate spellcasting is psionics.</other>
 		<attack>Greatsword,7,5,One target. Hit: 10 (2d6+3) slashing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Master of Cruelties</name>
+	<size>LARGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>127</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 17,CON 16,INT 19,WIS 16,CHA 21</stats>
+	<saves>CON 7,INT 8,WIS 7,CHA 9</saves>
+	<skills>DECEPTION 9,INTIMIDATION 9,PERFORMANCE 9,PERSUASION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,ABYSSAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,MasterOfCruelties</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Aura of Blood Lust,When any other creature starts its turn within 30 feet of the master, that creature must succeed on a DC 17 Wisdom saving throw, or it must immediately take the Attack action, making one melee attack against a random creature within reach. If no creatures are within reach, it makes a ranged attack against a random creature within range, throwing its weapon if necessary.</passive>
+		<passive>Feed on the Crowd,Whenever a creature within 60 feet of the master dies, the master gains 15 temporary hit points and has advantage on all attack rolls, ability checks, and saving throws until the end of its next turn.</passive>
+	</passives>
+	<other>Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The master makes two melee attacks with its spear.</multiattack>
+		<attack>Spear,8,20,60,One target. Hit: 11 (2d6+4) piercing damage, or 13 (2d8+4) piercing damage if used with two hands to make a melee attack, plus 13 (3d8) psychic damage.</attack>
+		<effect>Captivating Presence,Recharge 6,Each creature within 120 feet of the master must succeed on a DC 17 Wisdom saving throw or be charmed by the master for 1 hour. While charmed in this way, a creature's speed is 0. If the charmed creature takes damage, it can repeat the saving throw, ending the effect on itself on a success. A target that succeeds on the saving throw is immune to the Captivating Presence of all masters of cruelties for the next 24 hours.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Ravager slaughter lord</name>
@@ -5819,6 +6014,72 @@ The new form's attacks count as magical for the purpose of overcoming resistance
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Arclight Phoenix</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>CN</align>
+	<cr>12.0</cr>
+	<ac>16</ac>
+	<hp>142</hp>
+	<speed>WALK 0,FLY 120</speed>
+	<stats>STR 15,DEX 22,CON 17,INT 5,WIS 12,CHA 7</stats>
+	<saves>DEX 10</saves>
+	<multipliers>
+		<RESISTANCE>THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>LIGHTNING,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,RESTRAINED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Flyby,This creature doesn't provoke an opportunity attack when it flies out of an enemies reach.</passive>
+		<passive>Elemental nature,An elemental doesn't require air, food, drink, or sleep.</passive>
+		<passive>Illumination,The arclight phoenix sheds bright light in a 15-foot radius and dim light for an additional 15 feet.</passive>
+		<passive>Crackling Death,When the arclight phoenix dies, it explodes. Each creature within 30 feet of it must make a DC 18 Dexterity saving throw, taking 36 (8d8) lightning damage on a failed save, or half as much damage on a successful one. The explosion destroys the phoenix but leaves behind a Tiny, warm egg with a mizzium shell.
+The egg contains the embryo of a new arclight phoenix. It hatches when it is in the area of a spell that deals lightning damage, or if a creature touches the egg and expends spell slots whose combined levels equal 13 or more. When it hatches, the egg releases a new arclight phoenix that appears in the egg's space.</passive>
+		<passive>Grounded Lightning,The first time on a turn that the arclight phoenix touches the ground, it takes 11 (2d10) force damage.</passive>
+		<passive>Lightning Form,The arclight phoenix can move through a space as narrow as 1 inch wide without squeezing. A creature that touches the phoenix or hits it with a melee attack while within 5 feet of it takes 9 (2d8) lightning damage. In addition, the arclight phoenix can enter a hostile creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 9 (2d8) lightning damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Arclight Touch,10,5,One target. Hit: 27 (6d8) lightning damage, and lightning jumps from the target to one creature of the phoenix's choice that it can see within 30 feet of the target. That second creature must succeed on a DC 18 Dexterity saving throw or take 27 (6d8) lightning damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Firemane Angel</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,false</type>
+	<align>CG</align>
+	<cr>12.0</cr>
+	<ac>18</ac>
+	<hp>135</hp>
+	<speed>WALK 40,FLY 120</speed>
+	<stats>STR 22,DEX 15,CON 17,INT 12,WIS 14,CHA 23</stats>
+	<saves>STR 10,WIS 6,CHA 10</saves>
+	<skills>INSIGHT 6,PERCEPTION 6</skills>
+	<multipliers>
+		<RESISTANCE>FIRE,RADIANT,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,10,18,,FiremaneAngel</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Flyby,This creature doesn't provoke an opportunity attack when it flies out of an enemies reach.</passive>
+		<passive>Immortal nature,This creature doesn't require food, drink or sleep.</passive>
+		<passive>Relentless (Recharges after a Short or Long Rest),If the angel takes 21 damage or less that would reduce it to 0 hit points, it is reduced to 1 hit point instead.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The angel makes two melee attacks.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 10 (1d8+6) slashing damage, or 11 (1d10+6) slashing damage if used with two hands, plus 22 (5d8) fire or radiant damage (angel's choice).</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Lady Czorgan</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -5911,6 +6172,41 @@ The Chosen typically casts Mage armour and Greater invisibility on itself before
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Sire of Insanity</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>12.0</cr>
+	<ac>1817</ac>
+	<hp>157</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 6,CON 19,INT 14,WIS 19,CHA 22</stats>
+	<saves>CON 8,INT 6,WIS 8,CHA 10</saves>
+	<skills>DECEPTION 10,INTIMIDATION 10</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,ABYSSAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,10,18,,SireOfInsanity</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Aura of Mind Erosion,Any creature that starts its turn within 30 feet of the sire must make a DC 18 Wisdom saving throw. On a successful save, the creature is immune to this aura for the next 24 hours. On a failed save, the creature has disadvantage for 1 minute on Wisdom and Charisma checks and on Wisdom and
+Charisma saves. 
+At the start of each of its turns, the sire can suppress this aura until the start of its next turn.</passive>
+	</passives>
+	<other>Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The sire makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,10,5,One creature. Hit: 25 (3d12+6) piercing damage plus 16 (3d10) psychic damage.</attack>
+		<attack>Claw,10,10,One target. Hit: 10 (1d8+6) slashing damage plus 9 (2d8) psychic damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Muiral</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -6000,6 +6296,118 @@ If the neothelid takes 30 damage or more on a single turn from a creature inside
 		<attack>Rock,12,60,240,One target. Hit: 30 (4d10+8) bludgeoning damage.</attack>
 	</actions>
 	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Archon of the Triumvirate</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,false</type>
+	<align>LN</align>
+	<cr>14.0</cr>
+	<ac>18</ac>
+	<hp>144</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 15,CON 19,INT 15,WIS 21,CHA 18</stats>
+	<saves>CON 9,WIS 10,CHA 9</saves>
+	<skills>INSIGHT 10,PERCEPTION 10</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>ALL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,10,18,,ArchonOfTheTriumvirate</innatecasting>
+		<passive>Immortal nature,This creature doesn't require food, drink or sleep.</passive>
+		<passive>Mount,If the archon isn't mounted, it can use a bonus action to magically teleport onto the creature serving as its mount (usually a winged felidar), provided the archon and its mount are on the same plane of existence. When it teleports, the archon appears astride the mount along with any equipment it is wearing or carrying.
+While mounted and not incapacitated, the archon can't be surprised, and both it and its mount gain advantage on Dexterity saving throws. If the archon is reduced to 0 hit points while riding its mount, the mount is reduced to 0 hit points as well.</passive>
+		<passive>Eye of the Law,As a bonus action, the archon can target a creature it can see within 120 feet of it and determine which laws that creature has broken in the last 24 hours.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The archon makes two Hammer of Justice attacks.</multiattack>
+		<attack>Hammer of Justice,10,5,One target. Hit: 12 (2d6+5) bludgeoning damage plus 18 (4d8) force damage. If the target is a creature, it must succeed on a DC 18 Strength saving throw or be knocked prone.</attack>
+		<effect>Pacifying Presence,null,Each creature of the archon's choice that the archon can see within 120 feet of it must succeed on a DC 18 Wisdom saving throw, or else the target drops any weapons it is holding, ends its concentration on any spells or other effects, and becomes charmed by the archon for 1 minute. The charmed creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the archon's Pacifying Presence for the next 24 hours.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Rejoin Mount,1,If the archon isn't mounted, it magically teleports to its steed and mounts it as long as the archon and its steed are on the same plane of existence.</legendaryaction>
+		<legendaryaction>Smite,2,The archon makes a Hammer of justice attack, and then its mount can use its reaction to make a melee weapon attack.</legendaryaction>
+		<legendaryaction>Detention,3,The archon targets a creature it can see within 60 feet of it. The target must succeed on a DC 18 Charisma saving throw or be magically teleported to a harmless demiplane until the end of the archon's next turn, whereupon the target reappears in the space it left or the nearest unoccupied space if that space is occupied.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Deathpact Angel</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,false</type>
+	<align>LE</align>
+	<cr>14.0</cr>
+	<ac>18</ac>
+	<hp>175</hp>
+	<speed>WALK 30,FLY 90</speed>
+	<stats>STR 16,DEX 18,CON 14,INT 19,WIS 20,CHA 23</stats>
+	<saves>INT 9,WIS 10,CHA 11</saves>
+	<skills>INSIGHT 10,INTIMIDATION 11,PERCEPTION 10,PERSUASION 11</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,RADIANT,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,11,19,,DeathpactAngel</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Flyby,This creature doesn't provoke an opportunity attack when it flies out of an enemies reach.</passive>
+		<passive>Immortal nature,This creature doesn't require food, drink or sleep.</passive>
+		<passive>Exploitation of the Debtors,As a bonus action, the angel targets a creature charmed by it that it can see within 30 feet of it. The angel deals 11 (2d10) necrotic damage to the target, and the angel gains temporary hit points equal to the damage dealt.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The angel makes two attacks with its scythe. It can substitute Chains of Obligation for one of these attacks.</multiattack>
+		<attack>Scythe,9,10,One target. Hit : 9 (2d4+4) slashing damage plus 27 (6d8) necrotic damage.</attack>
+		<effect>Chains of Obligation,null,The angel targets one creature charmed by it that it can see within 90 feet of it. The target must succeed on a DC 19 Charisma saving throw or become paralyzed for 1 minute or until it takes any damage.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Devkarin Lich</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>14.0</cr>
+	<ac>14</ac>
+	<hp>97</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 14,INT 19,WIS 16,CHA 15</stats>
+	<saves>CON 7,INT 9,WIS 8</saves>
+	<skills>ARCANA 14,INSIGHT 8,PERCEPTION 8</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,ELVISH,KRAUL</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,9,17,14,DevkarinLich</spellcasting>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Regeneration,The lich regains 10 hit points at the start of its turn. If the lich takes fire or radiant damage, this trait doesn't function at the start of the lich's next turn. The lich dies only if it starts its turn with 0 hit points and doesn't regenerate.</passive>
+		<passive>Undead Fortitude,If damage reduces the lich to 0 hit points, it must make a Constitution saving throw with a DC of 5+ the damage taken, unless the damage is radiant or from a critical hit. On a success, the lich drops to 1 hit point instead.</passive>
+	</passives>
+	<other>Is a Golgari spellcaster.</other>
+	<actions>
+		<attack>Noxious Touch,9,5,One creature. Hit: 14 (4d6) poison damage, and the target must succeed on a DC 17 Constitution saving throw or be poisoned for 1 minute. The poisoned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Cantrip,1,The lich casts one of its cantrips.</legendaryaction>
+		<legendaryaction>Noxious Touch,2,The lich uses Noxious Touch.</legendaryaction>
+		<legendaryaction>Disrupt Life,3,Each creature within 30 feet of the lich must make a DC 17 Constitution saving throw, taking 21 (6d6) necrotic damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Shockstomper</name>
