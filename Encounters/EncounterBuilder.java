@@ -644,7 +644,7 @@ public class EncounterBuilder {
 				}
 				for(int i=0;i<multHeads.size();i++) {
 					RadioButton rb = new RadioButton(multHeads.get(i));
-					if("x1".equals(rb.getText())){rb.setSelected(true);}
+					if("Standard".equals(rb.getText())){rb.setSelected(true);}
 					rb.setOnAction(new EventHandler<ActionEvent>() {//update XPpanel when changed
 						public void handle(ActionEvent event) {updateXPPanel();}});
 					multiplierTable.add(rb, i+1, 1);

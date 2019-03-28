@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Enchanter</name>
+	<slot>
+		<known>Friends,Mage hand,Mending,Message,Charm person,Mage armour,Magic missile,Hold person,Invisibility,Suggestion,Fireball,Haste,Tongues,Dominate beast,Stoneskin,Hold monster</known>
+		<0>Friends,Mage hand,Mending,Message</0>
+		<1>4,Charm person,Mage armour,Magic missile</1>
+		<2>3,Hold person,Invisibility,Suggestion</2>
+		<3>3,Fireball,Haste,Tongues</3>
+		<4>3,Dominate beast,Stoneskin</4>
+		<5>2,Hold monster</5>
+	</slot>
+</spellbook>

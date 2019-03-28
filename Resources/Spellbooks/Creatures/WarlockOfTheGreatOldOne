@@ -1,0 +1,25 @@
+<spellbook>
+	<name>WarlockOfTheGreatOldOne</name>
+	<slot>
+		<known>Chill touch,Eldritch blast,Guidance,Mage hand,Minor illusion,Prestidigitation,Shocking grasp,Armor of Agathys,Arms of Hadar,Dissonant whispers,Crown of madness,Detect thoughts,Clairvoyance,Vampiric touch,Dimension door,Dominate beast,Contact other plane,Telekinesis</known>
+		<0>Chill touch,Eldritch blast,Mage hand,Minor illusion,Prestidigitation,Shocking grasp,Guidance</0>
+		<1>0,Armor of Agathys,Arms of Hadar,Dissonant whispers</1>
+		<2>0,Crown of madness,Detect thoughts</2>
+		<3>0,Clairvoyance,Vampiric touch</3>
+		<4>0,Dimension door,Dominate beast</4>
+		<5>3,Contact other plane,Telekinesis</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Jump,false</spell>
+			<spell>Levitate,false</spell>
+			<spell>Mage armour,true</spell>
+			<spell>Speak with dead,false</spell>
+		</0>
+		<1>
+			<spell>Arcane gate,false</spell>
+			<spell>True seeing,false</spell>
+		</1>
+	</daily>
+</spellbook>

@@ -769,6 +769,64 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
+	<name>Bronze Scout</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>18</hp>
+	<speed>WALK 30,BURROW 30</speed>
+	<stats>STR 10,DEX 16,CON 11,INT 3,WIS 14,CHA 1</stats>
+	<skills>PERCEPTION 6,STEALTH 7</skills>
+	<multipliers>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Earth Armour,The bronze scout doesn't provoke opportunity attacks when it burrows.</passive>
+	</passives>
+	<other>Understands one language of it's creator but can't speak.
+Adamantine weapons breach damage immunity.
+
+CLOCKWORK ENHANCEMENTS
+d10			Enhancement
+1			Camouflaged. The clockwork gains proficiency in Stealth if it doesn't already have it. While motionless, it is indistinguishable from a stopped machine.
+2 			Sensors. The range of the clockwork's darkvision becomes 120 feet , unless it is higher, and it gains proficiency in Perception if it doesn't already have it.
+3			Improved Armor. The clockwork's AC increases by 2.
+4			Increased Speed. The clockwork's speed increases by 10 feet.
+5			Reinforced Construction. The clockwork has resistance to force, lightning, and thunder damage.
+6			Self-Repairing. If the clockwork starts its turn with at least 1 hit point, it regains 5 hit points. If it takes lightning damage, this ability doesn't function at the start of its next turn.
+7			Sturdy Frame. The clockwork's hit point maximum increases by an amount equal to its number of Hit Dice.
+8			Suction. The clockwork gains a climbing speed of 30 feet.
+9			Vocal Resonator. The clockwork gains the ability to speak rudimentary Common or Gnomish (creator's choice).
+10			Water Propulsion. The clockwork gains a swimming speed of 30 feet.
+
+CLOCKWORK MALFUNCTIONS
+d10			Malfunction
+1			Faulty Sensors. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is blinded until the end of its turn.
+2			Flawed Targeting. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork makes attack rolls with disadvantage until the end of its turn.
+3			Ground Fault. The clockwork has vulnerability to lightning damage.
+4			Imprinting Loop. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork mistakes one creature it can see within 30 feet for its creator. The clockwork won't willingly harm that creature for 1 minute or until that creature attacks it or deals damage to it.
+5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
+6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
+turn.
+7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+fighting.
+8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
+9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
+10			Weak Armor. The clockwork isn't immune to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't adamantine.</other>
+	<actions>
+		<attack>Bite,5,5,one target. Hit: 5 (1d4+3) piercing damage plus 3 (1d6) lightning damage.</attack>
+		<effect>Lightning Flare,Recharges after a Short or Long Rest,Each creature in contact with the ground within 15 feet of the bronze scout must make a DC 13 Dexterity saving throw, taking 14 (4d6) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Bugbear</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,GOBLINOID,false</type>
@@ -2757,6 +2815,30 @@ In a new form, the couatl retains its game statistics and ability to speak, but 
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Giant Subterranean Lizard</name>
+	<size>HUGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>14</ac>
+	<hp>66</hp>
+	<speed>WALK 30,SWIM 50</speed>
+	<stats>STR 21,DEX 9,CON 17,INT 2,WIS 10,CHA 7</stats>
+	<skills>STEALTH 3</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The lizard makes two attacks: one with its bite and one with its tail. One attack can be replaced by Swallow.</multiattack>
+		<attack>Bite,7,5,One target. Hit: 16 (2d10+5) piercing damage, and the target is grappled (escape DC 15). Until this grapple ends, the target is restrained, and the lizard can't bite another target.</attack>
+		<attack>Tail,7,10,One target not grappled by the lizard. Hit: 12 (2d6+5) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.</attack>
+		<attack>Swallow,7,5,One Medium or smaller creature the lizard is grappling. Hit: 16 (2d10+5) piercing damage, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the lizard, and it takes 10 (3d6) acid damage at the start of each of the lizard's turns. The lizard can have only one target swallowed at a time.
+If the lizard dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 10 feet of movement, exiting prone.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Goliath stormborn</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,GOLIATH,false</type>
@@ -2847,6 +2929,65 @@ Understands Elvish and Undercommon but can't speak.</other>
 		<reaction>Split,When a pudding that is medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.</reaction>
 	</reactions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Iron Cobra</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 16,CON 14,INT 3,WIS 10,CHA 1</stats>
+	<skills>STEALTH 7</skills>
+	<multipliers>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Understands one language of it's creator but can't speak.
+Adamantine weapons breach damage immunity.
+
+CLOCKWORK ENHANCEMENTS
+d10			Enhancement
+1			Camouflaged. The clockwork gains proficiency in Stealth if it doesn't already have it. While motionless, it is indistinguishable from a stopped machine.
+2 			Sensors. The range of the clockwork's darkvision becomes 120 feet , unless it is higher, and it gains proficiency in Perception if it doesn't already have it.
+3			Improved Armor. The clockwork's AC increases by 2.
+4			Increased Speed. The clockwork's speed increases by 10 feet.
+5			Reinforced Construction. The clockwork has resistance to force, lightning, and thunder damage.
+6			Self-Repairing. If the clockwork starts its turn with at least 1 hit point, it regains 5 hit points. If it takes lightning damage, this ability doesn't function at the start of its next turn.
+7			Sturdy Frame. The clockwork's hit point maximum increases by an amount equal to its number of Hit Dice.
+8			Suction. The clockwork gains a climbing speed of 30 feet.
+9			Vocal Resonator. The clockwork gains the ability to speak rudimentary Common or Gnomish (creator's choice).
+10			Water Propulsion. The clockwork gains a swimming speed of 30 feet.
+
+CLOCKWORK MALFUNCTIONS
+d10			Malfunction
+1			Faulty Sensors. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is blinded until the end of its turn.
+2			Flawed Targeting. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork makes attack rolls with disadvantage until the end of its turn.
+3			Ground Fault. The clockwork has vulnerability to lightning damage.
+4			Imprinting Loop. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork mistakes one creature it can see within 30 feet for its creator. The clockwork won't willingly harm that creature for 1 minute or until that creature attacks it or deals damage to it.
+5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
+6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
+turn.
+7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+fighting.
+8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
+9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
+10			Weak Armor. The clockwork isn't immune to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't adamantine.</other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 6 (1d6+3) piercing damage. If the target is a creature, it must succeed on a DC 13 Constitution saving throw or suffer one random poison effect:
+1. Poison Damage: The target takes 13 (3d8) poison damage.
+2. Confusion: On its next turn, the target must use its action to make one weapon attack against a random creature it can see within 30 feet of it, using whatever weapon it has in hand and moving beforehand if necessary to get in range. If it's holding no weapon, it makes an unarmed strike. If no creature is visible within 30 feet, it takes the Dash action, moving toward the nearest creature.
+3. Paralysis: The target is paralyzed until the end of its next turn.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Lightning skull</name>
@@ -2995,6 +3136,66 @@ Is a Boros spellcaster.</other>
 		<reaction>Lightning Backlash (Recharge 5-6),When a creature hits the reckoner with an attack, the attacker takes lightning damage equal to half the damage dealt by the attack.</reaction>
 	</reactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Stone Defender</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>16</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 10,CON 17,INT 3,WIS 10,CHA 1</stats>
+	<skills>STEALTH 7</skills>
+	<multipliers>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>False Appearance,While the stone defender remains motionless against an uneven earthen or stone surface, it is indistinguishable from that surface.</passive>
+	</passives>
+	<other>Understands one language of it's creator but can't speak.
+Adamantine weapons breach damage immunity.
+
+CLOCKWORK ENHANCEMENTS
+d10			Enhancement
+1			Camouflaged. The clockwork gains proficiency in Stealth if it doesn't already have it. While motionless, it is indistinguishable from a stopped machine.
+2 			Sensors. The range of the clockwork's darkvision becomes 120 feet , unless it is higher, and it gains proficiency in Perception if it doesn't already have it.
+3			Improved Armor. The clockwork's AC increases by 2.
+4			Increased Speed. The clockwork's speed increases by 10 feet.
+5			Reinforced Construction. The clockwork has resistance to force, lightning, and thunder damage.
+6			Self-Repairing. If the clockwork starts its turn with at least 1 hit point, it regains 5 hit points. If it takes lightning damage, this ability doesn't function at the start of its next turn.
+7			Sturdy Frame. The clockwork's hit point maximum increases by an amount equal to its number of Hit Dice.
+8			Suction. The clockwork gains a climbing speed of 30 feet.
+9			Vocal Resonator. The clockwork gains the ability to speak rudimentary Common or Gnomish (creator's choice).
+10			Water Propulsion. The clockwork gains a swimming speed of 30 feet.
+
+CLOCKWORK MALFUNCTIONS
+d10			Malfunction
+1			Faulty Sensors. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is blinded until the end of its turn.
+2			Flawed Targeting. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork makes attack rolls with disadvantage until the end of its turn.
+3			Ground Fault. The clockwork has vulnerability to lightning damage.
+4			Imprinting Loop. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork mistakes one creature it can see within 30 feet for its creator. The clockwork won't willingly harm that creature for 1 minute or until that creature attacks it or deals damage to it.
+5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
+6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
+turn.
+7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+fighting.
+8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
+9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
+10			Weak Armor. The clockwork isn't immune to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't adamantine.</other>
+	<actions>
+		<attack>Slam,6,5,One target. Hit: 11 (2d6+4) bludgeoning damage, and if the target is Large or smaller, it is knocked prone.</attack>
+	</actions>
+	<reactions>
+		<reaction>Intercept Attack,In response to another creature within 5 feet of it being hit by an attack roll, the stone defender gives that creature a +5 bonus to its AC against that attack, potentially causing a miss. To use this ability, the stone defender must be able to see the creature and the attacker.</reaction>
+	</reactions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Two-headed Plesiosaurus</name>
@@ -3361,6 +3562,35 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>THERISEOFTIAMAT</source>
 </creature>
 <creature>
+	<name>Enchanter</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>40</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 11,INT 17,WIS 12,CHA 11</stats>
+	<saves>INT 6,WIS 4</saves>
+	<skills>ARCANA 6,HISTORY 6</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,6,14,9,Enchanter</spellcasting>
+	</passives>
+	<other>Knows any 5 languages.
+May have a familiar.</other>
+	<actions>
+		<attack>Quarterstaff,2,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<reactions>
+		<reaction>lnstinctive Charm (Recharges after the Enchanter Casts an Enchantment Spell of 1st Level or Higher),The enchanter tries to magically divert an attack made against it, provided that the attacker is with in 30 feet of it and visible to it. The enchanter must decide to do so before the attack hits or misses.
+The attacker must make a DC 14 Wisdom saving throw. On a failed save, the attacker targets the creature closest to it, other than the enchanter or itself. If multiple creatures are closest, the attacker chooses which one to target.</reaction>
+	</reactions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
 	<name>Felidar</name>
 	<size>LARGE</size>
 	<type>CELESTIAL,false</type>
@@ -3541,6 +3771,65 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 		<attack>Rapier,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Oaken Bolter</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>58</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 18,CON 15,INT 3,WIS 10,CHA 1</stats>
+	<skills>STEALTH 7</skills>
+	<multipliers>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Understands one language of it's creator but can't speak.
+Adamantine weapons breach damage immunity.
+
+CLOCKWORK ENHANCEMENTS
+d10			Enhancement
+1			Camouflaged. The clockwork gains proficiency in Stealth if it doesn't already have it. While motionless, it is indistinguishable from a stopped machine.
+2 			Sensors. The range of the clockwork's darkvision becomes 120 feet , unless it is higher, and it gains proficiency in Perception if it doesn't already have it.
+3			Improved Armor. The clockwork's AC increases by 2.
+4			Increased Speed. The clockwork's speed increases by 10 feet.
+5			Reinforced Construction. The clockwork has resistance to force, lightning, and thunder damage.
+6			Self-Repairing. If the clockwork starts its turn with at least 1 hit point, it regains 5 hit points. If it takes lightning damage, this ability doesn't function at the start of its next turn.
+7			Sturdy Frame. The clockwork's hit point maximum increases by an amount equal to its number of Hit Dice.
+8			Suction. The clockwork gains a climbing speed of 30 feet.
+9			Vocal Resonator. The clockwork gains the ability to speak rudimentary Common or Gnomish (creator's choice).
+10			Water Propulsion. The clockwork gains a swimming speed of 30 feet.
+
+CLOCKWORK MALFUNCTIONS
+d10			Malfunction
+1			Faulty Sensors. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is blinded until the end of its turn.
+2			Flawed Targeting. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork makes attack rolls with disadvantage until the end of its turn.
+3			Ground Fault. The clockwork has vulnerability to lightning damage.
+4			Imprinting Loop. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork mistakes one creature it can see within 30 feet for its creator. The clockwork won't willingly harm that creature for 1 minute or until that creature attacks it or deals damage to it.
+5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
+6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
+turn.
+7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+fighting.
+8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
+9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
+10			Weak Armor. The clockwork isn't immune to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren't adamantine.</other>
+	<actions>
+		<multiattack>The oaken bolter makes two lancing bolt attacks or one lancing bolt attack and one harpoon attack.</multiattack>
+		<attack>Lancing Bolt,7,100,400,One target. Hit: 15 (2d10+4) piercing damage. Doesn't have disadvantage in melee.</attack>
+		<attack>Harpoon,7,50,200,One target. Hit: 9 (1d10+4) piercing damage, and the target is grappled (escape DC 12). While grappled in this way, a creature's speed isn't reduced, but it can move only in directions that bring it closer to the oaken bolter. A creature takes 5 (1d10) slashing damage if it escapes from the grapple or if it tries and fails. As a bonus action, the oaken bolter can pull a creature grappled by it 20 feet closer. The oaken bolter can grapple only one creature at a time.</attack>
+		<effect>Explosive Bolt,Recharge 5-6,The oaken bolter launches an explosive charge at a point within 120 feet. Each creature within 20 feet of that point must make a DC 15 Dexterity saving throw, taking 17 (5d6) fire damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Oregg Steeltwister</name>
@@ -3812,6 +4101,41 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 		<effect>Deadly Leap,null,lf the bulette jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6+4) bludgeoning damage plus 14 (3d6+4) slashing damage. On a successful save, the creature takes only half the damage, 鮀n't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creature's choice. lf no unoccupied space is within range, the creature instead falls prone in the bulette's space.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Vampire Spawn</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>82</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 16,DEX 16,CON 16,INT 11,WIS 10,CHA 12</stats>
+	<saves>DEX 6,WIS 3</saves>
+	<skills>PERCEPTION 3,STEALTH 6</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Regeneration,The vampire regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight or running water. If the vampire takes radiant damage or damage from holy water, this trait doesn't function at the start of the vampires next turn.</passive>
+		<passive>Vampire Weaknesses,The vampire has the following flaws:
+Forbiddance. The vampire can't enter a residence without an invitation from one of the occupants.
+Harmed by Running Water. The vampire takes 20 acid damage when it ends its turn in running water.
+Stake to the Heart. The vampire is destroyed if a piercing weapon made of wood is driven into its heart while it is incapacitated in its resting place.
+Sunlight Hypersensitivity. The vampire takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, it has disadvantage on attack rolls and ability checks.</passive>
+	</passives>
+	<other>Knows all the languages it knew in life.</other>
+	<actions>
+		<multiattack>The vampire makes two attacks, only one of which can be a bite attack.</multiattack>
+		<attack>Claws,6,5,one creature. Hit: 8 (2d4+3) slashing damage. lnstead of dealing damage, the vampire can grapple the target (escape DC 13).</attack>
+		<attack>Bite,6,5,One willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 6 (1d6+3) piercing damage plus 7 (2d6) necrotic damage. The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Water elemental</name>
@@ -4163,6 +4487,37 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 If the wall is summoned in a creature's space, the creature is pushed to one side of the wall, chosen by the summoner. If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its reaction to move up to its speed so that it is no longer enclosed by the wall.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Warlock of the Great Old One</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>6.0</cr>
+	<ac>15</ac>
+	<hp>91</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 15,INT 12,WIS 12,CHA 18</stats>
+	<saves>WIS 4,CHA 7</saves>
+	<skills>ARCANA 4,HISTORY 4</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,7,15,14,WarlockOfTheGreatOldOne</spellcasting>
+		<passive>Whispering Aura,At the start of each of the warlock's turns, each creature of its choice within 5 feet of it must succeed on a DC 15 Wisdom saving throw or take 10 (3d6) psychic damage, provided that the warlock isn't incapacitated.</passive>
+	</passives>
+	<other>Knows any 2 languages.
+Telepathy is 30ft.
+
+Spell slots come back after a short rest.</other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2} piercing damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
 	<name>Ashari firetamer</name>
@@ -4653,6 +5008,32 @@ Knows all the languages of its summoner.</other>
 		<effect>The Destiny Light,Recharge 5-6,Fate fires a beam of Destiny Light at a target it can see within 60 feet. The target must make a DC 13 Constitution saving throw. On a failed save, it takes 36 (8d8) necrotic damage, and it only deals average damage and uses 10 for its attack rolls (before bonuses) for the next 10 minutes. On a successful save, it takes half as much damage, and its attack and damage rolls are not affected.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Fomorian</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>8.0</cr>
+	<ac>14</ac>
+	<hp>149</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 23,DEX 10,CON 20,INT 9,WIS 14,CHA 6</stats>
+	<skills>PERCEPTION 8,STEALTH 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>GIANT,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<other></other>
+	<actions>
+		<multiattack>The fomorian attacks twice with its greatclub or makes one greatclub attack and uses Evil Eye once.</multiattack>
+		<attack>Greatclub,9,15,one target. Hit: 19 (3d8+6) bludgeoning damage.</attack>
+		<effect>Evil Eye,null,The fomorian magically forces a creature it can see within 60 feet of it to make a DC 14 Charisma saving throw. The creature takes 27 (6d8) psychic damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Curse of the Evil Eye,Recharges after a Short or Long Rest,With a stare, the fomorian uses Evil Eye, but on a failed save, the creature is also cursed with magical deformities. While deformed, the creature has its speed halved and has disadvantage on ability checks, saving throws, and attacks, based on Strength or Dexterity.
+The transformed creature can repeat the saving throw whenever it finishes a long rest, ending the effect on a success.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Green Slaad</name>
@@ -5571,6 +5952,34 @@ Understands Gith but can't speak.</other>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Githzerai Enlightened</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GITH,false</type>
+	<align>LN</align>
+	<cr>10.0</cr>
+	<ac>18</ac>
+	<hp>112</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 19,CON 16,INT 17,WIS 19,CHA 13</stats>
+	<saves>STR 6,DEX 8,INT 7,WIS 8</saves>
+	<skills>ARCANA 7,INSIGHT 8,PERCEPTION 8</skills>
+	<multipliers>
+	</multipliers>
+	<languages>GITH</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,8,16,,GithzeraiEnlightened</innatecasting>
+		<passive>Psychic Defense,While the githzerai is wearing no armor and wielding no shield, its AC includes its Wisdom modifier.</passive>
+	</passives>
+	<other>Innate spellcasting is psionics. The mage hand is invisible.</other>
+	<actions>
+		<multiattack>The githzerai makes three unarmed strikes.</multiattack>
+		<attack>Unarmed Strike,8,5,One target. Hit: 13 (2d8+4) bludgeoning damage plus 13 (3d8) psychic damage.</attack>
+		<attack>Temporal Strike (Recharge 6),8,5,One creature. Hit: 13 (2d8+4) bludgeoning damage plus 52 (8d12) psychic damage. The target must succeed on a DC 16 Wisdom saving throw or move 1 round forward in time. A target moved forward in time vanishes for the duration. When the effect ends, the target reappears in the space it left or in an unoccupied space nearest to that space if it's occupied.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>High Templar of Dust</name>
 	<size>LARGE</size>
 	<type>ELEMENTAL,false</type>
@@ -5767,6 +6176,36 @@ D12		MEMBER SUMMONED
 		<attack>Longsword,7,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Star Spawn Hulk</name>
+	<size>LARGE</size>
+	<type>ABERRATION,false</type>
+	<align>CE</align>
+	<cr>10.0</cr>
+	<ac>16</ac>
+	<hp>136</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 8,CON 21,INT 7,WIS 12,CHA 9</stats>
+	<saves>DEX 3,WIS 5</saves>
+	<skills>PERCEPTION 5</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>DEEPSPEECH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Psychic Mirror,If the hulk takes psychic damage, each creature within 10 feet of the hulk takes that damage instead; the hulk takes none of the damage. In addition, the hulk's thoughts and location can't be discerned by magic.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The hulk makes two slam attacks. If both attacks hit the same target, the target also takes 9 {2d8) psychic damage and must succeed on a DC 17 Constitution saving throw or be stunned until the end of the target's next turn.</multiattack>
+		<attack>Slam,9,10,One target. Hit: 14 (2d8+5) bludgeoning damage.</attack>
+		<effect>Reaping Arms,Recharge 5-6,The hulk makes a separate slam attack against each creature within 10 feet of it. Each creature that is hit must also succeed on a DC 17 Dexterity saving throw or be knocked prone.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Stone Golem</name>

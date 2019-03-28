@@ -1,0 +1,7 @@
+<encounter>
+	<name>SephMages</name>
+	<creature>1,Enchanter</creature>
+	<creature>1,Warlock of the Great Old One</creature>
+	<mult>x1</mult>
+	<party>7,8,8</party>
+</encounter>
