@@ -356,10 +356,10 @@ public interface Creature {
 	}
 	
 	public enum Type{
-		ABERRATION(false),BEAST(true),CELESTIAL(true),CONSTRUCT(false),
-		DRAGON(false),ELEMENTAL(false),FEY(false),FIEND(true),
+		ABERRATION(false),BEAST(true),CELESTIAL(true),CONSTRUCT(true),
+		DRAGON(false),ELEMENTAL(false),FEY(true),FIEND(true),
 		GIANT(false),HUMANOID(true),MONSTOSITY(true),OOZE(false),
-		PLANT(false),UNDEAD(false);
+		PLANT(false),UNDEAD(true);
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 
@@ -369,9 +369,12 @@ public interface Creature {
 		public Subtype[] getSubtype(Type superType){
 			if(superType == Type.BEAST){return beastSubtype.values();}
 			if(superType == Type.CELESTIAL){return celestialSubtype.values();}
+			if(superType == Type.CONSTRUCT){return constructSubtype.values();}
+			if(superType == Type.FEY){return feySubtype.values();}
 			if(superType == Type.FIEND){return fiendSubtype.values();}
 			if(superType == Type.HUMANOID){return humanoidSubtype.values();}
 			if(superType == Type.MONSTOSITY){return monstrositySubtype.values();}
+			if(superType == Type.UNDEAD){return undeadSubtype.values();}
 			return null;
 		}		
 		
@@ -388,24 +391,47 @@ public interface Creature {
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
+		private enum constructSubtype implements Subtype{
+			INEVITABLE;
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
+		//TODO Maybe 4 elemental types 
+		private enum feySubtype implements Subtype{
+			ELF;
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
 		private enum fiendSubtype implements Subtype{
 			DEMON,DEVIL,YUGOLOTH;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
+		//TODO Maybe 5 giant races
 		private enum humanoidSubtype implements Subtype{
 			ANYRACE,
 			HUMAN,DWARF,ELF,//General races
 			GITH,GNOLL,GOBLINOID,KOBOLD,ORC,//Common NPC races
-			AARAKOCRA,BULLYWUG,GNOME,GOLIATH,GRIMLOCK,KENKU,KRAUL,//Uncommon races
-			KUOTOA,LAVACHILD,LIZARDFOLK,MERFOLK,QUAGGOTH,SAHUAGIN,
-			SIMICHYBRID,THRIKREEN,TORTLE,TROGLODYTE,YUANTI
+			AARAKOCRA,BULLYWUG,DERRO,ELADRIN,FIRENEWT,GENASI,GNOME,//Uncommon races
+			GOLIATH,GRIMLOCK,GRUNG,
+			HALFDRAGON,HALFLING,KENKU,KRAUL,
+			KUOTOA,LAVACHILD,LIZARDFOLK,MEAZEL,MERFOLK,MONGRELFOLK,
+			NAGPA,QUAGGOTH,SAHUAGIN,SAURIAL,
+			SIMICHYBRID,TABAXI,THRIKREEN,TIEFLING,
+			TORTLE,TROGLODYTE,XVART,YUANTI
 			;//TODO humanoid subtypes
+			//I refuse to acknowledge half races.
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
 		private enum monstrositySubtype implements Subtype{
-			TITAN,YUANTI;
+			SWARMOF,TITAN,YUANTI,
+			DRONEBROOD,VENOMITE,TERRORGON,TIDEWAKE;//Hunters marks categories.
+			public String toNiceString(){return name().toUpperCase().substring(0, 1)
+					+ name().toLowerCase().substring(1);}
+		}
+		private enum undeadSubtype implements Subtype{
+			TITAN;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
@@ -494,11 +520,12 @@ public interface Creature {
 		AURAN,AQUAN,IGNAN,TERRAN,//Elemental languages
 		ALL,TELEPATHY,//Universal languages
 		
-		BULLYWUG,GITH,GNOLL,GNOMISH,GRELL,//Other languages
-		HALFLING,HOOKHORROR,KRAUL,MERFOLK,MODRON,OTYUGH,SAHUAGIN,
-		SLAAD,SPHINX,THAYAN,THRIKREEN,TROGLODYTE,
-		UMBERHULK,YETI,
-		BLINKDOG,GIANTEAGLE,GIANTELK,WINTERWOLF,WORG,
+		BULLYWUG,GITH,GNOLL,GNOMISH,GRELL,GRUNG,//Other languages
+		HALFLING,HOOKHORROR,IXITXACHITL,KRAUL,MERFOLK,MODRON,OTYUGH,SAHUAGIN,
+		SLAAD,SPHINX,THRIKREEN,TLINCALLI,TROGLODYTE,
+		UMBERHULK,VEGEPYGMY,YAKARIA,YETI,
+		BOTHII,NETHERESE,OLMAN,THAYAN,
+		BLINKDOG,GIANTEAGLE,GIANTELK,KRUTHIK,WINTERWOLF,WORG,
 		ICETOAD;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}

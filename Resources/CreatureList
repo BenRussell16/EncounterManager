@@ -4513,7 +4513,8 @@ If the wall is summoned in a creature's space, the creature is pushed to one sid
 	<other>Knows any 2 languages.
 Telepathy is 30ft.
 
-Spell slots come back after a short rest.</other>
+Spell slots come back after a short rest.
+May have a familiar.</other>
 	<actions>
 		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2} piercing damage.</attack>
 	</actions>
