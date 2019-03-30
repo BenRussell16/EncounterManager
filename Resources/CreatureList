@@ -64,7 +64,7 @@
 	<other>Understands the languages of its creator but can't speak.
 Shared Mind. A homunculus knows everything its creator knows, including all the languages the creator can speak and read. Likewise, everything the construct senses is known to its master, even over great distances, provided both are on the same plane. Functioning as a spy, a scout, an emissary, or a messenger, a homunculus is an invaluable servant for a spellcaster engaged in secret experimentation or adventuring.</other>
 	<actions>
-		<attack>Bite,4,5,One creature. Hit: 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. lf the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and unconscious while poisoned 髶 this way.</attack>
+		<attack>Bite,4,5,One creature. Hit: 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. If the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and unconscious while poisoned in this way.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -1058,7 +1058,7 @@ d10			Malfunction
 5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
 6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
 turn.
-7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+7			Overactive Sense of Self-Preservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
 fighting.
 8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
 9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
@@ -2249,7 +2249,7 @@ lf the host body drops to 0 hit points, the intellect devourer must leave it. A 
 	<other>Understands the languages of its creator but can't speak.
 Shared Mind. A homunculus knows everything its creator knows, including all the languages the creator can speak and read. Likewise, everything the construct senses is known to its master, even over great distances, provided both are on the same plane. Functioning as a spy, a scout, an emissary, or a messenger, a homunculus is an invaluable servant for a spellcaster engaged in secret experimentation or adventuring.</other>
 	<actions>
-		<attack>Bite,4,5,One creature. Hit: 9 (2d6+2) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. lf the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and unconscious while poisoned 髶 this way.</attack>
+		<attack>Bite,4,5,One creature. Hit: 9 (2d6+2) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. lf the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and unconscious while poisoned in this way.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
@@ -3619,7 +3619,7 @@ d10			Malfunction
 5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
 6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
 turn.
-7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+7			Overactive Sense of Self-Preservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
 fighting.
 8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
 9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
@@ -3893,7 +3893,7 @@ d10			Malfunction
 5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
 6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
 turn.
-7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+7			Overactive Sense of Self-Preservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
 fighting.
 8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
 9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
@@ -4181,7 +4181,7 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<other></other>
 	<actions>
 		<attack>Bite,7,5,One target. Hit: 30 (4d12+4) piercing damage.</attack>
-		<effect>Deadly Leap,null,lf the bulette jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6+4) bludgeoning damage plus 14 (3d6+4) slashing damage. On a successful save, the creature takes only half the damage, 鮀n't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creature's choice. lf no unoccupied space is within range, the creature instead falls prone in the bulette's space.</effect>
+		<effect>Deadly Leap,null,lf the bulette jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6+4) bludgeoning damage plus 14 (3d6+4) slashing damage. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creature's choice. lf no unoccupied space is within range, the creature instead falls prone in the bulette's space.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -4527,7 +4527,7 @@ d10			Malfunction
 5			Leaking Lubricant. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork gains 1 level of exhaustion that it isn't immune to.
 6			Limited Steering. The clockwork must move in a straight line. It can turn up to 90 degrees before moving and again at the midpoint of its movement. It can rotate freely if it doesn't use any of its speeds on its
 turn.
-7			Overactive Sense of Self感reservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
+7			Overactive Sense of Self-Preservation. If the clockwork has half its hit points or fewer at the start of its turn in combat, roll a d6. If you roll a 1, it retreats from combat. If retreat isn't possible, it continues
 fighting.
 8			Overheats. Roll a d6 at the start of the clockwork's turn. If you roll a 1, the clockwork is incapacitated until the end of its turn.
 9			Rusty Gears. The clockwork has disadvantage on initiative rolls, and its speed decreases by 10 feet.
@@ -4807,7 +4807,7 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 	<other></other>
 	<actions>
 		<attack>Bite,7,5,One target. Hit: 30 (4d12+4) piercing damage.</attack>
-		<effect>Deadly Leap,null,lf the bulette jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6+4) bludgeoning damage plus 14 (3d6+4) slashing damage. On a successful save, the creature takes only half the damage, 鮀n't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creature's choice. lf no unoccupied space is within range, the creature instead falls prone in the bulette's space.</effect>
+		<effect>Deadly Leap,null,lf the bulette jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6+4) bludgeoning damage plus 14 (3d6+4) slashing damage. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creature's choice. lf no unoccupied space is within range, the creature instead falls prone in the bulette's space.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
@@ -6331,7 +6331,7 @@ Innate spellcasting is psionics.</other>
 		<multiattack>The dragon makes three attacks, one with its bite and two with its claws.</multiattack>
 		<attack>Bite,7,10,One target. Hit: 15 (2d10+4) piercing damage plus 7 (2d6) poison damage.</attack>
 		<attack>Claw,7,5,One target. Hit: 11 (2d6+4) slashing damage.</attack>
-		<effect>Poison Breath,Recharge 5-6,The dragon breathes poisonous gas in a 30搭oot cone. Each creature in the cone must make a DC 16 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon breathes poisonous gas in a 30-foot cone. Each creature in the cone must make a DC 16 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
