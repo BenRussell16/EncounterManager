@@ -1,0 +1,18 @@
+<spellbook>
+	<name>KraulDeathPriest</name>
+	<daily>
+		<0>
+			<spell>Chill touch,false</spell>
+			<spell>Poison spray,false</spell>
+		</0>
+		<1>
+			<spell>Animate dead,false</spell>
+			<spell>Blight,false</spell>
+			<spell>Vampiric touch,false</spell>
+		</1>
+		<3>
+			<spell>Ray of enfeeblement,false</spell>
+			<spell>Ray of sickness,false</spell>
+		</3>
+	</daily>
+</spellbook>

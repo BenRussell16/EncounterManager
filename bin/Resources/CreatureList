@@ -121,6 +121,32 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Kobold</name>
+	<size>SMALL</size>
+	<type>HUMANOID,KOBOLD,false</type>
+	<align>LE</align>
+	<cr>0.125</cr>
+	<ac>12</ac>
+	<hp>5</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 7,DEX 15,CON 9,INT 8,WIS 7,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,5,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+		<attack>Sling,4,30,120,One target. Hit: 4 (1d4+2) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Slaad tadpole</name>
 	<size>TINY</size>
 	<type>ABERRATION,false</type>
@@ -348,6 +374,42 @@ Is a Boros spellcaster.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Kobold Inventor</name>
+	<size>SMALL</size>
+	<type>HUMANOID,KOBOLD,false</type>
+	<align>LE</align>
+	<cr>0.25</cr>
+	<ac>12</ac>
+	<hp>13</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 7,DEX 15,CON 12,INT 8,WIS 7,CHA 8</stats>
+	<skills>PERCEPTION 0</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+		<attack>Sling,4,30,120,One target. Hit: 4 (1d4+2) bludgeoning damage.</attack>
+		<effect>Weapon Invention,null,The kobold uses one of the following options (roll a d8 or choose one); the kobold can use each one no more than once per day:
+1. Acid. The kobold hurls a flask of acid. Ranged Weapon Attack: +4 to hit, range 5/20 ft., one target. Hit: 7 (2d6) acid damage.
+2. Alchemist's Fire. The kobold throws a flask of alchemist's fire. Ranged Weapon Attack: +4 to hit, range 5/20 ft., one target. Hit: 2 (1d4) fire damage at the start of each of the target's turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.
+3. Basket of Centipedes. The kobold throws a small basket into a 5-foot-square space within 20 feet of it. A swarm of insects (centipedes) with 11 hit points emerges from the basket and rolls initiative. At the end of each of the swarm's turns, there's a 50 percent chance that the swarm disperses.
+4. Green Slime Pot. The kobold throws a clay pot full of green slime at the target, and it breaks open on impact. Ranged Weapon Attack: +4 to hit, range 5/20 ft., one target. Hit: The target is covered in a patch of green slime (see chapter 5 of the Dungeon Master's Guide). Miss: A patch of green slime covers a randomly determined 5-foot-square section of wall or floor within 5 feet of the target.
+5. Rot Grub Pot. The kobold throws a clay pot into a 5-foot-square space within 20 feet of it, and it breaks open on impact. A swarm of rot grubs emerges from the shattered pot and remains a hazard in that square.
+6. Scorpion on a Stick. The kobold makes a melee attack with a scorpion tied to the end of a 5-foot-long pole. Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking 4 (1d8) poison damage on a failed save, or half as much damage on a successful one.
+7. Skunk in a Cage. The kobold releases a skunk into an unoccupied space within 5 feet of it. The skunk has a walking speed of 20 feet, AC 10, 1 hit point, and no effective attacks. It rolls initiative and, on its turn, uses its action to spray musk at a random creature within 5 feet of it. The target must make a DC 9 Constitution saving throw. On a failed save, the target retches and can't take actions for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that doesn't need to breathe or is immune to poison automatically succeeds on the saving throw. Once the skunk has sprayed its musk, it can't do so again until it finishes a short or long rest.
+8. Wasp Nest in a Bag. The kobold throws a small bag into a 5-foot-square space within 20 feet of it. A swarm of insects (wasps) with 11 hit points emerges from the bag and rolls initiative. At the end of each of the swarm's turns, there's a 50 percent chance that the swarm disperses.</effect>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
 	<name>Kuo-toa</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,KUOTOA,false</type>
@@ -379,6 +441,31 @@ Is a Boros spellcaster.</other>
 		<reaction>Sticky Shield,When a creature misses the kuo-toa with a melee weapon attack, the kuo-toa uses its sticky shield to catch the weapon. The attacker must succeed on a DC 11 Strength saving throw, or the weapon becomes stuck to the kuo-toa's shield. If the weapon's wielder can't or won't let go of the weapon, the wielder is grappled while the weapon is stuck. While stuck, the weapon can't be used. A creature can pull the weapon free by taking an action to make a DC 11 Strength check and succeeding.</reaction>
 	</reactions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Servitor Thrull</name>
+	<size>SMALL</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>11</ac>
+	<hp>22</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 13,CON 14,INT 6,WIS 6,CHA 3</stats>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands Common but can't speak.</other>
+	<actions>
+		<attack>Claws,3,5,One target. Hit: 5 (1d8+1) slashing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Self-Sacrifice,When a creature within 5 feet of the thrull is hit by an attack, the thrull swaps places with that creature and is hit instead.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Skeleton</name>
@@ -430,6 +517,32 @@ Is a Boros spellcaster.</other>
 		<effect>Shell Defense,null,The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell the tortle is prone, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge.</effect>
 	</actions>
 	<source>TORTLEPACKAGE</source>
+</creature>
+<creature>
+	<name>Winged Kobold</name>
+	<size>SMALL</size>
+	<type>HUMANOID,KOBOLD,false</type>
+	<align>LE</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>7</hp>
+	<speed>WALK 30,FLY 30</speed>
+	<stats>STR 7,DEX 16,CON 9,INT 8,WIS 7,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,5,5,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+		<attack>Dropped Rock,5,5,One target directly below the kobold. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Wolf</name>
@@ -641,6 +754,59 @@ slashing darrrage if used with two hands.</attack>
 	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Hybrid Spy</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,SIMICHYBRID,false</type>
+	<align>NG</align>
+	<cr>0.5</cr>
+	<ac>13</ac>
+	<hp>22</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 11,DEX 17,CON 12,INT 13,WIS 14,CHA 9</stats>
+	<skills>PERCEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Chameleon Skin,The hybrid has advantage on Dexterity (Stealth) checks made to hide.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<multiattack>The hybrid makes two shortsword attacks.</multiattack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Kraul Warrior</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,KRAUL,false</type>
+	<align>NE</align>
+	<cr>0.5</cr>
+	<ac>18</ac>
+	<hp>27</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 15,DEX 12,CON 13,INT 10,WIS 11,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>KRAUL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Hive Mind,The kraul is immune to the charmed and frightened conditions while within 30 feet of at least one other kraul.</passive>
+	</passives>
+	<other>Understands Common but can't speak it.</other>
+	<actions>
+		<attack>Spear,4,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Metal Wasp</name>
 	<size>MEDIUM</size>
 	<type>CONSTRUCT,false</type>
@@ -741,6 +907,30 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Soldier</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>0.5</cr>
+	<ac>18</ac>
+	<hp>16</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 12,CON 12,INT 10,WIS 11,CHA 11</stats>
+	<skills>ATHLETICS 3,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Formation Tactics,The soldier has advantage on saving throws against being charmed, frightened, grappled, or restrained while it is within 5 feet of at least one ally.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The soldier makes two melee attacks.</multiattack>
+		<attack>Longsword,3,5,One target. Hit: 6 (1d8+2) slashing damage, or 7 (1d10+2) slashing damage if used with two hands.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Topi</name>
 	<size>SMALL</size>
 	<type>UNDEAD,false</type>
@@ -767,6 +957,59 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 		<attack>Venomous Claws,4,5,One target. Hit: 4 (1d4+2) slashing damage plus 2 (1d4) poison damage, and the target must succeed on a DC 11 Constitution saving throw or be poisoned until the end of the target's next turn.</attack>
 	</actions>
 	<source>TORTLEPACKAGE</source>
+</creature>
+<creature>
+	<name>Winged Kraul Warrior</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,KRAUL,false</type>
+	<align>NE</align>
+	<cr>0.5</cr>
+	<ac>18</ac>
+	<hp>27</hp>
+	<speed>WALK 30,CLIMB 30,FLY 40</speed>
+	<stats>STR 15,DEX 12,CON 13,INT 10,WIS 11,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>KRAUL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Hive Mind,The kraul is immune to the charmed and frightened conditions while within 30 feet of at least one other kraul.</passive>
+	</passives>
+	<other>Understands Common but can't speak it.</other>
+	<actions>
+		<attack>Spear,4,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Winged Thrull</name>
+	<size>SMALL</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>31</hp>
+	<speed>WALK 30,FLY 30</speed>
+	<stats>STR 9,DEX 15,CON 12,INT 8,WIS 9,CHA 8</stats>
+	<saves>DEX 4</saves>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands Common but can't speak.</other>
+	<actions>
+		<attack>Claws,4,5,One target. Hit: 7 (2d4+2) slashing damage.</attack>
+		<attack>Rock,4,20,60,One target. Hit: 5 (1d6+2) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Self-Sacrifice,When a creature within 5 feet of the thrull is hit by an attack, the thrull swaps places with that creature and is hit instead.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Bronze Scout</name>
@@ -852,6 +1095,53 @@ fighting.
 		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage, or 9 (2d6+2) piercing damage in melee.</attack>
 	</actions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Category 1 Krasis</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>19</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 15,CON 14,INT 2,WIS 13,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other>MAJOR ADAPTATIONS
+d8	Major Adaptation
+1	Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within 5 feet of it takes 2 (1d4) acid damage (category 1), 4 (1d8) acid damage (category 2), or 6 (1d12) acid damage (category 3).
+2	Armored Hide. The krasis has better natural armor afforded by a shell or thick scales, increasing its Armor
+Class by 4.
+3	Bioluminescent Markings. The krasis has glowing patterns on its skin that take the shape of defensive runes, granting it advantage on saving throws against spells and other magical effects.
+4	Flight. The krasis has wings and gains a flying speed equal to its walking speed.
+5	Crabber. When the krasis hits a creature with its claws, the target is grappled (escape DC 13 for category 1, DC 15 for category 2, and DC 19 for category 3) by a specialized grasping appendage on the krasis. It can have only one creature grappled in this way at a time.
+6	Hypnotic Display (Recharge 5- 6) . As an action, the krasis creates mesmerizing colors and shapes around
+itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be stunned for 1 minute. The stunned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours.
+7	Venomous Sting. When the krasis hits a creature with its claws , the creature must succeed on a Constitution saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be poisoned for 1 minute. If the krasis is a category 2 or 3, the creature is paralyzed while poisoned in this way. The poisoned
+creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+8	Regeneration. The krasis regains hit points (2 for a category 1, 5 for a category 2, and 10 for a category 3) at the start of each of its turns if it has at least 1 hit point.
+
+MINOR ADAPTATIONS
+d8	Minor Adaptation
+1	Amorphous Structure. The krasis can move through a space as narrow as 1 inch wide without squeezing.
+2	Aquatic. The krasis gains a swimming speed equal to its walking speed.
+3	Climbing Speed. The krasis gains a climbing speed equal to its walking speed.
+4	Cryptic Skin. The krasis can change color to match its surroundings. It has advantage on Dexterity (Stealth) checks made to hide.
+5	Heightened Awareness. The krasis can't be surprised, as a result of having sensitive barbels like a catfish, stereoscopic vision like a chameleon, a tongue like a snake, eye stalks like a lobster, or an array of several eyes.
+6	Ink Cloud (Recharges after a Short or Long Rest). While underwater, the krasis can use a bonus action to expel a cloud of ink and then move up to its speed. The ink cloud is stationary and fills a 20-foot-radius sphere centered on a point in the krasis's space before it moves. The sphere is heavily obscured until the ink disperses after 1 minute. A strong current also disperses the ink cloud.
+7	Leaping Legs. With or without a running start, the krasis's long jump is 20 feet (category 1), 30 feet (category 2), or 40 feet (category 3). Its high jump is 10 feet (category 1), 20 feet (category 2), or 30 feet (category 3).
+8	Stabilizing Legs. The krasis has several crablike legs. As a result, it has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</other>
+	<actions>
+		<multiattack>The krasis makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,5,5,One creature. Hit: 8 (1d10+3) piercing damage.</attack>
+		<attack>Claws,5,5,One target. Hit: 7 (1d8+3) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Dragonclaw</name>
@@ -1071,6 +1361,33 @@ Violet		51 years or more.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Galvanice Weird</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>CN</align>
+	<cr>1.0</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 10,CON 17,INT 3,WIS 10,CHA 5</stats>
+	<multipliers>
+		<RESISTANCE>COLD,LIGHTNING,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Elemental nature,An elemental doesn't require air, food, drink, or sleep.</passive>
+		<passive>Death Burst,When the galvanice weird dies, it explodes in a burst of ice and lightning. Each creature within 10 feet of the exploding weird must make a DC 13 Dexterity saving throw, taking 7 (2d6) lightning damage on a failed save, or half as much damage on a successful one.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Slam,4,5,One target. Hit: 5 (1d6+2) bludgeoning damage plus 5 (2d4) lightning damage. If the target is a creature, it must succeed on a DC 13 Constitution saving throw or lose the ability to use reactions until the start of the weird's next turn.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Ghoul</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -1122,6 +1439,62 @@ Violet		51 years or more.</other>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Hybrid Poisoner</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,SIMICHYBRID,false</type>
+	<align>NG</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>26</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 12,DEX 19,CON 14,INT 12,WIS 13,CHA 12</stats>
+	<saves>DEX 6,CON 4</saves>
+	<skills>ATHLETICS 3,PERCEPTION 3,STEALTH 6</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 30</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Poisonous Skin,Any creature that touches the hybrid or hits it with a melee attack while within 5 feet of it takes 3 (1d6) poison damage.</passive>
+		<passive>Assassinate,During its first turn, the hybrid poisoner has advantage on attack rolls against any creature that hasn't taken a turn. Any hit the hybrid scores against a surprised creature is a critical hit.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<attack>Toxic Touch,6,5,One target. Hit: 7 (2d6) bludgeoning damage, and the target must succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. At the end of each of the poisoned target's turns, it must repeat the save, taking 3 (1d6) poison damage on a failed save, or ending the effect on itself on a successful one.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Hybrid Shocker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,SIMICHYBRID,false</type>
+	<align>NG</align>
+	<cr>1.0</cr>
+	<ac>12</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 14,CON 14,INT 10,WIS 12,CHA 9</stats>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Electrified Body,Any creature that touches the hybrid or hits it with a melee attack while within 5 feet of it takes 5 (1d10) lightning damage.</passive>
+		<passive>Illumination,The hybrid sheds bright light in a 10-foot radius and dim light for an additional 10 feet.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<multiattack>The hybrid makes two attacks: one with its shocking touch and one with its tentacles.</multiattack>
+		<attack>Shocking Touch,4,5,One target. Hit: 9 (2d8) lightning damage.</attack>
+		<attack>Tentacles,4,15,One creature. Hit: The target is grappled (escape DC 11), and the hybrid pulls the target up to 15 feet straight toward it. Until this grapple ends, the target takes 5 (1d10) lightning damage at the start of each of its turns, and the hybrid shocker can't use its tentacles on another creature.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Ice toad</name>
 	<size>MEDIUM</size>
 	<type>MONSTOSITY,false</type>
@@ -1148,6 +1521,91 @@ Violet		51 years or more.</other>
 		<attack>Bite,3,5,One target. Hit: 5 (1d8+1) piercing damage plus 4 (1d8) cold damage. If the target is a Medium or smaller creature, it is grappled (escape DC 11). Until this grapple ends, the toad can't bite another target.</attack>
 	</actions>
 	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Indentured Spirit</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>1.0</cr>
+	<ac>11</ac>
+	<hp>13</hp>
+	<speed>WALK 0,FLY 40</speed>
+	<stats>STR 7,DEX 13,CON 10,INT 10,WIS 12,CHA 11</stats>
+	<multipliers>
+		<RESISTANCE>ACID,FIRE,LIGHTNING,THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>COLD,POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<regions></regions>
+	<passives>
+		<passive>Incorporeal movement,This creature can move through other creatures and objects as if they were difficult terrain. It takes 5(1d10) force damage if it ends its turn inside an object.</passive>
+	</passives>
+	<other>Fly speed is hover.
+Knows the languages it knew in life.</other>
+	<actions>
+		<attack>Withering Touch,3,5,One target. Hit: 10 (3d6) necrotic damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Kobold Dragonshield</name>
+	<size>SMALL</size>
+	<type>HUMANOID,KOBOLD,false</type>
+	<align>LE</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>44</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 12,DEX 15,CON 14,INT 8,WIS 9,CHA 10</stats>
+	<skills>PERCEPTION 1</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Dragon's Resistance,The kobold has resistance to a type of damage based on the color of dragon that invested it with power (choose or roll a d10): 1-2, acid (black); 3-4, cold (white); 5-6, fire (red); 7-8, lightning (blue); 9-10, poison (green).</passive>
+		<passive>Heart of the Dragon,If the kobold is frightened or paralyzed by an effect that allows a saving throw, it can repeat the save at the start of its turn to end the effect on itself and all kobolds within 30 feet of it. Any kobold that benefits from this trait (including the dragonshield) has advantage on its next attack roll.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The kobold makes two melee attacks.</multiattack>
+		<attack>Spear,3,20,60,One target. Hit: 4 (1d6+1) piercing damage, or 5 (1d8+1) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Kobold Scale Sorcerer</name>
+	<size>SMALL</size>
+	<type>HUMANOID,KOBOLD,false</type>
+	<align>LE</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 7,DEX 15,CON 14,INT 10,WIS 9,CHA 14</stats>
+	<skills>ARCANA 2,MEDICINE 1</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,4,12,3,KoboldScaleSorcerer</spellcasting>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Sorcery Points,The kobold has 3 sorcery points. It can spend 1 or more sorcery points as a bonus action to gain one of the following benefits:
+Heightened Spell: When it casts a spell that forces a creature to make a saving throw to resist the spell's effects, the kobold can spend 3 sorcery points to give one target of the spell disadvantage on its first saving throw against the spell.
+Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cast the spell without any somatic or verbal components.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
 	<name>Krenko</name>
@@ -1690,6 +2148,53 @@ Violet		51 years or more.</other>
 	<source>THERISEOFTIAMAT</source>
 </creature>
 <creature>
+	<name>Hybrid Brute</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,SIMICHYBRID,false</type>
+	<align>NG</align>
+	<cr>2.0</cr>
+	<ac>18</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 11,CON 15,INT 8,WIS 11,CHA 9</stats>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<multiattack>The hybrid makes two claw attacks.</multiattack>
+		<attack>Claw,6,5,One target. Hit: 7 (1d6+4) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Hybrid Flier</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,SIMICHYBRID,false</type>
+	<align>NG</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>39</hp>
+	<speed>WALK 30,FLY 40</speed>
+	<stats>STR 12,DEX 16,CON 14,INT 11,WIS 10,CHA 11</stats>
+	<multipliers>
+		<RESISTANCE>ACID</RESISTANCE>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<other>Knows any one other language.</other>
+	<actions>
+		<multiattack>The hybrid makes two javelin attacks. It can replace one javelin attack with Spit Acid.</multiattack>
+		<attack>Javelin,5,30,120,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<attack>Spit Acid,5,20,60,One target. Hit: 10 (4d4) acid damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Intellect devourer</name>
 	<size>TINY</size>
 	<type>ABERRATION,false</type>
@@ -1959,6 +2464,32 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Skyjek Roc</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>37</hp>
+	<speed>WALK 20,FLY 90</speed>
+	<stats>STR 20,DEX 13,CON 14,INT 3,WIS 10,CHA 8</stats>
+	<saves>DEX 3,WIS 2</saves>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The roc makes two attacks: one with its beak and one with its talons.</multiattack>
+		<attack>Beak,7,5,One target. Hit: 9 (1d8+5) piercing damage.</attack>
+		<attack>Talons,7,5,One target. Hit: 10 (2d4+5) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Space Orog</name>
@@ -2244,6 +2775,56 @@ Nimble Escape is in humanoid form only.</other>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Flying Horror</name>
+	<size>MEDIUM</size>
+	<type>ABERRATION,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>16</ac>
+	<hp>49</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 9,DEX 20,CON 12,INT 2,WIS 15,CHA 16</stats>
+	<skills>PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+		<VULNERABILITY>RADIANT</VULNERABILITY>
+	</multipliers>
+	<conditions>FRIGHTENED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Fear Frenzy,The horror has advantage on attack rolls against frightened creatures.</passive>
+	</passives>
+	<other>At the end of an encounter with horrors, if they failed any Wisdom saves from them, they must succeed on a DC 13 Wisdom save or be affected by a degree of madness depending on how many times they failed those saves.
+MADNESS SEVERITY
+Failed Saves	Madness
+1			Short-term
+2-3			Long-term
+4+			Indefinite
+
+PRIMARY FEATURES
+d4	Feature
+1	Avoidance. If the horror is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.
+2	Damage Resistances. The horror has resistance to necrotic and psychic damage.
+3	Innate Spellcasting. The horror's innate spellcasting ability is Charisma (spell save DC 13 for flying horror, DC 16 for shadow horror, and DC 17 for skittering horror). It can innately cast the following spells, requiring no material components:
+	3/day: darkness
+	1/day each:fear (shadow horror and skittering horror only), phantasmal killer (skittering horror only).
+4	Psychic Rebuke. When the horror takes damage from a melee attack, it can use its reaction to emit psychic energy within a 5-foot radius. Each creature in that area takes 3 (1d6) psychic damage (flying horror), 7 (2d6) psychic damage (shadow horror), or 10 (3d6) psychic damage (skittering horror).
+
+SECONDARY FEATURES
+d4	Feature
+1	Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror.
+	As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be grappled by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target.
+2	Indomitable Mind. The horror is immune to the charmed condition.
+3	Keen Senses. The horror has advantage on Wisdom (Perception) checks that rely on sight, sound, or smell.
+4	Mind Sight. Magical darkness doesn't impede the horror's darkvision.</other>
+	<actions>
+		<attack>Claws,7,5,One target. Hit: 8 (1d6+5) slashing damage plus 14 (4d6) psychic damage.</attack>
+		<effect>Frightening Screech,Recharge 5-6,The horror screeches. Each creature within 30 feet of it that can hear it must succeed on a DC 13 Wisdom saving throw or be frightened of it for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the horror's Frightening Screech for the next 24 hours.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Giant Slug</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -2512,6 +3093,36 @@ Violet		51 years or more.</other>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Precognitive Mage</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LN</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>63</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 13,CON 10,INT 18,WIS 13,CHA 11</stats>
+	<saves>INT 6,WIS 3</saves>
+	<skills>PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,14,,PrecognitiveMage</innatecasting>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<attack>Quarterstaff,1,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
+		<effect>Glimpse the Temporal Flood,Recharge 5-6,The mage targets one creature within 120 feet of it that it can see. The target takes 18 (4d8) psychic damage, and it must succeed on a DC 14 Intell igence saving throw or be stunned until the end of its next turn.</effect>
+	</actions>
+	<reactions>
+		<reaction>Precognitive Insight (3/Day),When the mage or a creature it can see makes an attack roll, a saving th row, or an ability check, the mage can cause the roll to be made with advantage or disadvantage.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Spectator</name>
 	<size>MEDIUM</size>
 	<type>ABERRATION,false</type>
@@ -2665,6 +3276,38 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 		<reaction>Split,When a pudding that is medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.</reaction>
 	</reactions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Blistercoil Weird</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>CN</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>45</hp>
+	<speed>WALK 40,SWIM 60</speed>
+	<stats>STR 16,DEX 16,CON 15,INT 5,WIS 10,CHA 7</stats>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Elemental nature,An elemental doesn't require air, food, drink, or sleep.</passive>
+		<passive>Form of Fire and Water,The weird can move through a space as narrow as 1 inch wide without squeezing. In addition, the weird can enter a hostile creature's space and stop there. The first time the weird enters another creature's space on a turn, that creature takes 5 (1d10) fire damage and catches fire; until someone takes an action to douse the fire, the burning creature takes 5 (1d10) fire damage at the start of each of its turns.</passive>
+		<passive>Heated Body,A creature that touches the weird or hits it with a melee attack while within 5 feet of it takes 5 (1d10) fire damage.</passive>
+		<passive>Illumination,The weird sheds bright light in a 30-foot radius and dim light for an additional 30 feet.</passive>
+		<passive>Feed on Fire,If the weird takes fire damage from a spell or other magical effect, its size increases by one category. If there isn't enough room for the weird to increase in size, it attains the maximum size possible in the space available. While the weird is Large or bigger, it makes Strength checks and saving throws with advantage.
+If the weird starts its turn at Gargantuan size, the weird releases energy in an explosion. Each creature within 30 feet of the weird must make a DC 12 Dexterity saving throw, taking 28 (8d6) fire damage on a failed save, or half as much damage on a successful one. The explosion ignites flammable objects in the area that aren't being worn or carried. The weird's size then becomes Medium.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Slam,5,5,One target. Hit: 7 (1d8+3) bludgeoning damage plus 7 (2d6) fire damage, or 11 (2d8+3) bludgeoning damage plus 14 (4d6) fire damage if the weird is Large or bigger.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Chuul</name>
@@ -2990,6 +3633,38 @@ fighting.
 	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
+	<name>Kraul Death Priest</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,KRAUL,false</type>
+	<align>NE</align>
+	<cr>4.0</cr>
+	<ac>18</ac>
+	<hp>65</hp>
+	<speed>WALK 30,CLIMB 30,FLY 40</speed>
+	<stats>STR 16,DEX 12,CON 14,INT 12,WIS 15,CHA 10</stats>
+	<saves>CON 4,WIS 4</saves>
+	<skills>INSIGHT 4,NATURE 3,RELIGION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,KRAUL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,KraulDeathPriest</innatecasting>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Feed on Death,When a creature within 30 feet of the kraul drops to 0 hit points, the kraul or another creature of its choice within 30 feet of it gains 5 (1d10) temporary hit points, provided the kraul isn't incapacitated.</passive>
+		<passive>Hive Mind,The kraul is immune to the charmed and frightened conditions while within 30 feet of at least one other kraul.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The kraul makes one attack with its quarterstaff and casts one of its spells with a casting time of 1 action.</multiattack>
+		<attack>Quarterstaff,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage, or 7 (1d8+3)
+bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Lightning skull</name>
 	<size>TINY</size>
 	<type>UNDEAD,false</type>
@@ -3077,6 +3752,40 @@ Understands the languages of its creator but can't speak.</other>
 		<attack>Tentacles,4,10,One target. Hit: 24 (9d4+2) bludgeoning damage, or 14 (5d4+2) bludgeoning damage if the decapus is grappling a creature other than the target or if the decapus is on the ground or floor. The target is also grappled (escape DC 14) unless the decapus is already grappling a creature. Until this grapple ends, the target is restrained.</attack>
 	</actions>
 	<source>TORTLEPACKAGE</source>
+</creature>
+<creature>
+	<name>Mind Drinker Vampire</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>4.0</cr>
+	<ac>14</ac>
+	<hp>55</hp>
+	<speed>WALK 30,FLY 30</speed>
+	<stats>STR 16,DEX 18,CON 12,INT 19,WIS 13,CHA 14</stats>
+	<saves>DEX 6,INT 6,WIS 3</saves>
+	<skills>DECEPTION 4,INSIGHT 3,PERCEPTION 3,STEALTH 6</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,14,,MindDrinkerVampire</innatecasting>
+		<passive>Shadow stealth,While in dim light or darkness, this creature can take the hide action as a bonus action.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other>Fly speed is hover.
+Knows the languages it knew in life.
+Innate spellcasting is psionics.</other>
+	<actions>
+		<multiattack>The vampire makes two attacks, only one of which can be a bite attack.</multiattack>
+		<attack>Bite,6,5,One willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 7 (1d6+4) piercing damage plus 7 (2d6) necrotic damage.
+The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0.</attack>
+		<attack>Unarmed Strike,6,5,One target. Hit: 8 (1d8+4) bludgeoning damage. The vampire can also grapple the target (escape DC 13) if it is a creature and the vampire has a hand free.</attack>
+		<effect>Mind Siphon,Recharge 5-6,The vampire targets a creature it can see within 30 feet of it. The target must make a DC 14 Intelligence saving throw, with disadvantage if the vampire has previously consumed the target's blood. On a failed save, the target takes 28 (8d6) psychic damage, and the vampire discerns the target's surface emotions and thoughts. On a successful save, the target takes half as much damage, and the vampire discerns the target's general emotional state but not its thoughts.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Orc blade of Ilneval</name>
@@ -4233,6 +4942,32 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Bloodfray Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>6.0</cr>
+	<ac>14</ac>
+	<hp>103</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 9,CON 20,INT 7,WIS 8,CHA 9</stats>
+	<saves>STR 9,CON 8,WIS 2</saves>
+	<skills>ATHLETICS 9,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Chain,9,20,One target. Hit: 16 (3d6+6) bludgeoning damage. If the target is a creature, it is grappled (escape DC 17). Until the grapple ends, the target is restrained, and the giant can't use this attack on anyone else.</attack>
+		<attack>Rock,9,60,240,One target. Hit: 16 (3d6+6) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Furious Defense,After a creature the giant can see is dealt damage by a foe within 20 feet of the giant, the giant makes a chain attack against that foe.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Bonebreaker Dorokor</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ORC,false</type>
@@ -4268,6 +5003,53 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 		<reaction>Villain Ability: Warlord,As a reaction, when a minion dies, issue a command to your other minions. Those who can hear you gain a reaction they can use to immediately take another movement.</reaction>
 	</reactions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Category 2 Krasis</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>6.0</cr>
+	<ac>15</ac>
+	<hp>136</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 18,DEX 14,CON 16,INT 2,WIS 13,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other>MAJOR ADAPTATIONS
+d8	Major Adaptation
+1	Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within 5 feet of it takes 2 (1d4) acid damage (category 1), 4 (1d8) acid damage (category 2), or 6 (1d12) acid damage (category 3).
+2	Armored Hide. The krasis has better natural armor afforded by a shell or thick scales, increasing its Armor
+Class by 4.
+3	Bioluminescent Markings. The krasis has glowing patterns on its skin that take the shape of defensive runes, granting it advantage on saving throws against spells and other magical effects.
+4	Flight. The krasis has wings and gains a flying speed equal to its walking speed.
+5	Crabber. When the krasis hits a creature with its claws, the target is grappled (escape DC 13 for category 1, DC 15 for category 2, and DC 19 for category 3) by a specialized grasping appendage on the krasis. It can have only one creature grappled in this way at a time.
+6	Hypnotic Display (Recharge 5- 6) . As an action, the krasis creates mesmerizing colors and shapes around
+itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be stunned for 1 minute. The stunned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours.
+7	Venomous Sting. When the krasis hits a creature with its claws , the creature must succeed on a Constitution saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be poisoned for 1 minute. If the krasis is a category 2 or 3, the creature is paralyzed while poisoned in this way. The poisoned
+creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+8	Regeneration. The krasis regains hit points (2 for a category 1, 5 for a category 2, and 10 for a category 3) at the start of each of its turns if it has at least 1 hit point.
+
+MINOR ADAPTATIONS
+d8	Minor Adaptation
+1	Amorphous Structure. The krasis can move through a space as narrow as 1 inch wide without squeezing.
+2	Aquatic. The krasis gains a swimming speed equal to its walking speed.
+3	Climbing Speed. The krasis gains a climbing speed equal to its walking speed.
+4	Cryptic Skin. The krasis can change color to match its surroundings. It has advantage on Dexterity (Stealth) checks made to hide.
+5	Heightened Awareness. The krasis can't be surprised, as a result of having sensitive barbels like a catfish, stereoscopic vision like a chameleon, a tongue like a snake, eye stalks like a lobster, or an array of several eyes.
+6	Ink Cloud (Recharges after a Short or Long Rest). While underwater, the krasis can use a bonus action to expel a cloud of ink and then move up to its speed. The ink cloud is stationary and fills a 20-foot-radius sphere centered on a point in the krasis's space before it moves. The sphere is heavily obscured until the ink disperses after 1 minute. A strong current also disperses the ink cloud.
+7	Leaping Legs. With or without a running start, the krasis's long jump is 20 feet (category 1), 30 feet (category 2), or 40 feet (category 3). Its high jump is 10 feet (category 1), 20 feet (category 2), or 30 feet (category 3).
+8	Stabilizing Legs. The krasis has several crablike legs. As a result, it has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</other>
+	<actions>
+		<multiattack>The krasis makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,7,5,One creature. Hit: 17 (2d12+4) piercing damage.</attack>
+		<attack>Claws,7,5,One target. Hit: 17 (1d12+4) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Death</name>
@@ -4396,6 +5178,32 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Lawmage</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LN</align>
+	<cr>6.0</cr>
+	<ac>15</ac>
+	<hp>84</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 12,CON 14,INT 17,WIS 14,CHA 13</stats>
+	<saves>INT 6,WIS 5</saves>
+	<skills>ARCANA 6,PERCEPTION 5,PERSUASION 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,6,14,8,Lawmage</spellcasting>
+	</passives>
+	<other>Knows any one other language.
+Is an Azorius spellcaster.</other>
+	<actions>
+		<attack>Quarterstaff,4,5,One target. Hit: 4 (1d6+1) bludgeoning damage, or 5 (1d8+1) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Orchid count</name>
 	<size>MEDIUM</size>
 	<type>FEY,false</type>
@@ -4428,6 +5236,34 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 		<attack>Longbow,7,150,600,One target. Hit: 11 (2d6+4) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Orzhov Giant</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>LE</align>
+	<cr>6.0</cr>
+	<ac>18</ac>
+	<hp>84</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 13,CON 21,INT 12,WIS 13,CHA 8</stats>
+	<saves>DEX 4,CON 8,WIS 4</saves>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Focus,As a bonus action, the giant can target a creature it can see within 30 feet of it and make that creature its focus. The target remains the giant's focus for 1 minute, or until either the target or the giant drops to 0 hit points.
+When the giant makes an attack roll against its focus, it adds a d4 to its attack roll. If the giant attacks a different target while it has a focus, it subtracts a d4 from its attack roll.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greataxe attacks.</multiattack>
+		<attack>Greataxe,9,10,One target. Hit: 25 (3d12+6) slashing damage. If the Orzhov giant scores a critical hit, it rolls the damage dice three times, instead of twice.</attack>
+		<attack>Rock,9,60,240,One target. Hit: 28 (4d10+6) bludgeoning damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Rath Modar</name>
@@ -4487,6 +5323,35 @@ The elemental can grapple one Large creature or up to two Medium or smaller crea
 If the wall is summoned in a creature's space, the creature is pushed to one side of the wall, chosen by the summoner. If a creature would be surrounded on all sides by the wall (or the wall and another solid surface), that creature can make a Dexterity saving throw. On a success, it can use its reaction to move up to its speed so that it is no longer enclosed by the wall.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Undercity Medusa</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>NE</align>
+	<cr>6.0</cr>
+	<ac>16</ac>
+	<hp>120</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 18,CON 16,INT 17,WIS 12,CHA 15</stats>
+	<skills>DECEPTION 5,INSIGHT 4,PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,14,,UndercityMedusa</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Surprise Attack,During the first round of combat, the medusa has advantage on attack rolls against any creature that is surprised, and it deals an extra 10 (3d6) damage each time it hits such a creature with an attack.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The medusa makes two claw attacks. It can also use Petrifying Gaze before or after making these attacks.</multiattack>
+		<attack>Claw,7,5,One target. Hit: 13 (2d8+4) slashing damage.</attack>
+		<effect>Petrifying Gaze,null,The medusa fixes its gaze on one creature within 60 feet of it that it can see and that can see its eyes. The target must make a DC 14 Constitution saving throw. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by a greater restoration spell or similar magic.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Warlock of the Great Old One</name>
@@ -4693,6 +5558,65 @@ May have a familiar.</other>
 		<effect>Summon Demon,1/Day,The drow magically summons a quasit, or attempts to summon a shadow demon with a 50 percent chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. lt remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Firefist</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>117</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 10,CON 14,INT 11,WIS 17,CHA 13</stats>
+	<saves>CON 5,WIS 6</saves>
+	<skills>INTIMIDATION 4,RELIGION 3</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,9,Firefist</spellcasting>
+	</passives>
+	<other>Knows any one language (usually Common).
+Is a Boros spellcaster.</other>
+	<actions>
+		<multiattack>The firefist makes two greatsword attacks.</multiattack>
+		<attack>Greatsword,6,5,One target. Hit: 10 (2d6+3) slashing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Guided Attack (Recharges after a Short or Long Rest),When the firefist or one creature it can see within 30 feet of it makes an attack roll, the firefist grants a +10 bonus to that roll.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Fluxcharger</name>
+	<size>LARGE</size>
+	<type>ELEMENTAL,false</type>
+	<align>CN</align>
+	<cr>7.0</cr>
+	<ac>16</ac>
+	<hp>60</hp>
+	<speed>WALK 0,FLY 60</speed>
+	<stats>STR 15,DEX 18,CON 15,INT 6,WIS 10,CHA 7</stats>
+	<multipliers>
+		<RESISTANCE>THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>LIGHTNING,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Elemental nature,An elemental doesn't require air, food, drink, or sleep.</passive>
+		<passive>Amplify Lightning,Whenever a spell that deals lightning damage includes one or more fluxchargers in its area, the spell deals an extra 9 (2d8} lightning damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The fluxcharger makes two slam attacks or uses Arc Lightning twice.</multiattack>
+		<attack>Slam,7,10,One target. Hit: 13 (2d8+4) bludgeoning damage plus 10 (3d6) fire damage.</attack>
+		<attack>Arc Lightning,7,30,One target. Hit: 16 (3d10) lightning damage, and lightning jumps from the target to one creature of the fluxcharger's choice that it can see within 30 feet of the target. That second creature must succeed on a DC 15 Dexterity saving throw or take 13 (3d8) lightning damage. Hit or Miss: The fluxcharger takes 5 (1d10) force damage after resolving the attack.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Lesser erinyes</name>
@@ -4916,6 +5840,37 @@ Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Blood Drinker Vampire</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LE</align>
+	<cr>8.0</cr>
+	<ac>16</ac>
+	<hp>90</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 16,DEX 18,CON 17,INT 16,WIS 13,CHA 19</stats>
+	<saves>DEX 7,CON 6,WIS 4</saves>
+	<skills>INTIMIDATION 7,PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Fly speed is hover.
+Knows the languages it knew in life.</other>
+	<actions>
+		<multiattack>The vampire makes three melee attacks, only one of which can be a bite attack.</multiattack>
+		<attack>Bite,7,5,One willing creature, or a creature that is grappled by the vampire, incapacitated, or restrained. Hit: 7 (1d6+4) piercing damage plus 7 (2d6) necrotic damage. If the target is humanoid, it must succeed on a DC 15 Charisma saving throw or be charmed by the vampire for 1 minute. While charmed in this way, the target is infatuated with the vampire.
+The target's hit point maximum is reduced by an amount equal to the necrotic damage taken, and the vampire regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0.</attack>
+		<attack>Rapier,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<attack>Unarmed Strike,6,5,One target. Hit: 7 (1d8+3) bludgeoning damage. The vampire can also grapple the target (escape DC 14) if it is a creature and the vampire has a hand free.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The vampire adds 3 to its AC against one melee attack that would hit it. To do so, the vampire must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Cloaker</name>
 	<size>LARGE</size>
 	<type>ABERRATION,false</type>
@@ -5037,6 +5992,39 @@ The transformed creature can repeat the saving throw whenever it finishes a long
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Gloamwing</name>
+	<size>LARGE</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>8.0</cr>
+	<ac>16</ac>
+	<hp>136</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 20,DEX 16,CON 17,INT 2,WIS 11,CHA 6</stats>
+	<saves>STR 8,DEX 6</saves>
+	<skills>PERCEPTION 3,STEALTH 6</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Flyby,This creature doesn't provoke an opportunity attack when it flies out of an enemies reach.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Death Link,If its specter rider is reduced to 0 hit points, the gloamwing is destroyed.</passive>
+	</passives>
+	<other>Understands Common but can't speak.</other>
+	<actions>
+		<multiattack>The gloamwing makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,8,5,One target. Hit: 18 (3d8+5) piercing damage.</attack>
+		<attack>Claws,8,5,One target. Hit: 15 (3d6+5) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Green Slaad</name>
 	<size>LARGE</size>
 	<type>ABERRATION,true</type>
@@ -5068,6 +6056,35 @@ The transformed creature can repeat the saving throw whenever it finishes a long
 		<attack>Hurl Flame,4,60,One target. Hit: 10 (3d6) fire damage. The fire ignites flammable objects that aren't being worn or carried.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Guardian Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>LN</align>
+	<cr>8.0</cr>
+	<ac>19</ac>
+	<hp>137</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 24,DEX 17,CON 22,INT 10,WIS 18,CHA 12</stats>
+	<saves>DEX 6,WIS 7</saves>
+	<skills>INSIGHT 6,PERCEPTION 10</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Vigilant,The giant can't be surprised.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes three spear attacks.</multiattack>
+		<attack>Spear,10,60,240,One target. Hit: 17 (3d6+7) piercing damage, or 20 (3d8+7) piercing damage if used with two hands to make a melee attack. Melee reach is 10ft.</attack>
+	</actions>
+	<reactions>
+		<reaction>Protection,When an attacker the giant can see makes an attack roll against a creature within 10 feet of the giant, the giant can impose disadvantage on the attack roll.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Huge Grey Ooze</name>
@@ -5195,6 +6212,37 @@ Innate spellcasting is psionics.</other>
 		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Nivix Cyclops</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>UNALIGNED</align>
+	<cr>8.0</cr>
+	<ac>14</ac>
+	<hp>115</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 24,DEX 9,CON 22,INT 7,WIS 10,CHA 9</stats>
+	<saves>CON 9,WIS 3</saves>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The cyclops makes two slam attacks.</multiattack>
+		<attack>Slam,10,10,One target. Hit: 23 (3d10+7) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Spell Vitalization,Immediately after a creature casts a spell of 1st level or higher within 120 feet of the cyclops, the cyclops can move up to twice its speed without provoking opportunity attacks. It can then make one slam attack against a target of its choice.</reaction>
+	</reactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Oleander Dragon</name>
@@ -5571,6 +6619,60 @@ Innate spellcasting is psionics.</other>
 If a non-evil humanoid dies from th is attack, a shadow (see the Monster Manual) rises from the corpse 1d4 hours later.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Shadow Horror</name>
+	<size>LARGE</size>
+	<type>ABERRATION,false</type>
+	<align>NE</align>
+	<cr>9.0</cr>
+	<ac>13</ac>
+	<hp>120</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 12,DEX 16,CON 14,INT 2,WIS 17,CHA 18</stats>
+	<skills>PERCEPTION 7,STEALTH 11</skills>
+	<multipliers>
+		<VULNERABILITY>RADIANT</VULNERABILITY>
+	</multipliers>
+	<conditions>FRIGHTENED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Incorporeal movement,This creature can move through other creatures and objects as if they were difficult terrain. It takes 5(1d10) force damage if it ends its turn inside an object.</passive>
+		<passive>Shadow stealth,While in dim light or darkness, this creature can take the hide action as a bonus action.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Shadow Stride,As a bonus action, the horror can step into a shadow within 5 feet of it and magically appear in an unoccupied space within 5 feet of a second shadow that is up to 60 feet away. Both shadows must be cast by a Small or larger creature or object.</passive>
+	</passives>
+	<other>At the end of an encounter with horrors, if they failed any Wisdom saves from them, they must succeed on a DC 13 Wisdom save or be affected by a degree of madness depending on how many times they failed those saves.
+MADNESS SEVERITY
+Failed Saves	Madness
+1			Short-term
+2-3			Long-term
+4+			Indefinite
+
+PRIMARY FEATURES
+d4	Feature
+1	Avoidance. If the horror is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.
+2	Damage Resistances. The horror has resistance to necrotic and psychic damage.
+3	Innate Spellcasting. The horror's innate spellcasting ability is Charisma (spell save DC 13 for flying horror, DC 16 for shadow horror, and DC 17 for skittering horror). It can innately cast the following spells, requiring no material components:
+	3/day: darkness
+	1/day each:fear (shadow horror and skittering horror only), phantasmal killer (skittering horror only).
+4	Psychic Rebuke. When the horror takes damage from a melee attack, it can use its reaction to emit psychic energy within a 5-foot radius. Each creature in that area takes 3 (1d6) psychic damage (flying horror), 7 (2d6) psychic damage (shadow horror), or 10 (3d6) psychic damage (skittering horror).
+
+SECONDARY FEATURES
+d4	Feature
+1	Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror.
+	As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be grappled by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target.
+2	Indomitable Mind. The horror is immune to the charmed condition.
+3	Keen Senses. The horror has advantage on Wisdom (Perception) checks that rely on sight, sound, or smell.
+4	Mind Sight. Magical darkness doesn't impede the horror's darkvision.</other>
+	<actions>
+		<multiattack>The horror makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,7,5,One target. Hit: 21 (4d8+3) piercing damage.</attack>
+		<attack>Claw,7,5,One target. Hit: 13 (3d6+3) slashing damage, and the target must succeed on a DC 16 Wisdom saving throw or be frightened of the horror until the end of the target's next turn.</attack>
+		<effect>Lashing Shadows,Recharge 5-6,Each creature within 60 feet of the horror, except other horrors, must succeed on a DC 16 Dexterity saving throw or take 27 (6d8) necrotic damage</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Storm Magistrate</name>
@@ -6115,6 +7217,39 @@ D12		MEMBER SUMMONED
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Nightveil Specter</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>105</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 19,CON 16,INT 6,WIS 17,CHA 11</stats>
+	<saves>DEX 8,WIS 7</saves>
+	<skills>INSIGHT 7,PERCEPTION 7,STEALTH 8</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Mount,If the specter isn't mounted, it can use a bonus action to magically teleport onto its gloamwing mount, provided the specter and the gloamwing are on the same plane of existence. When it teleports, the specter appears astride the gloamwing along with any equipment it is wearing or carrying.
+While mounted and not incapacitated, the specter can't be surprised, and both it and its mount gain advantage on Dexterity saving throws.</passive>
+	</passives>
+	<other>Understands Common but can't speak.</other>
+	<actions>
+		<multiattack>The specter makes two scythe attacks.</multiattack>
+		<attack>Scythe,8,10,One target. Hit: 11 (2d6+4) slashing damage plus 13 (3d8) psychic damage.</attack>
+		<effect>Mind Twist,Recharge 5-6,The specter magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 Wisdom saving throw or take 22 (5d8) psychic damage and be stunned for 1 minute. The stunned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+		<effect>Reap Memory,3/Day,The specter touches one incapacitated creature and chooses 1 hour from among the past 24. Unless the creature succeeds on a DC 15 Intelligence saving throw, the creature loses all memory of that hour. The creature regains the memory only if the specter dies within the next 24 hours.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Seraph</name>
 	<size>LARGE</size>
 	<type>CELESTIAL,false</type>
@@ -6237,6 +7372,36 @@ Understands the languages of its creator but can't speak.</other>
 		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Sunder Shaman</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CN</align>
+	<cr>10.0</cr>
+	<ac>20</ac>
+	<hp>138</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 15,CON 21,INT 10,WIS 12,CHA 9</stats>
+	<saves>DEX 6,CON 9,WIS 5</saves>
+	<skills>ATHLETICS 10,PERCEPTION 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Stone Camouflage,The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.</passive>
+		<passive>Reckless,At the start of its turn, the giant can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two slam attacks. The first of those attacks that hits deals an extra 18 (4d8) damage if the giant has taken damage since its last turn.</multiattack>
+		<attack>Slam,10,15,One target. Hit : 24 (4d8+6) bludgeoning damage.</attack>
+		<attack>Rock,10,60,240,One target . Hit: 28 (4d10+6) bludgeoning damage. If the target is a creature, it must succeed on a DC 18 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Animated Statue of Lolth</name>
@@ -6709,6 +7874,34 @@ If the neothelid takes 30 damage or more on a single turn from a creature inside
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Skyswimmer</name>
+	<size>GARGANTUAN</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>13.0</cr>
+	<ac>18</ac>
+	<hp>216</hp>
+	<speed>WALK 10,FLY 60</speed>
+	<stats>STR 23,DEX 15,CON 16,INT 7,WIS 12,CHA 6</stats>
+	<saves>CON 8</saves>
+	<skills>PERCEPTION 6</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The skyswimmer makes three attacks: one with its bite and two with its slam.</multiattack>
+		<attack>Bite,11,10,One target. Hit: 22 (3d10+6) piercing damage. If the target is a Large or smaller creature, it must succeed on a DC 19 Dexterity saving throw or be swallowed by the skyswimmer.
+A swallowed creature is blinded and restrained, it has total cover against attacks and other effects outside the skyswimmer, and it takes 21 (6d6) acid damage at the start of each of the skyswimmer's turns.
+If the skyswimmer takes 30 damage or more on a single turn from the swallowed creature, the skyswimmer must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate the creature, which falls prone in a space within 10 feet of the skyswimmer. If the skyswimmer dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 15 feet of movement, exiting prone.</attack>
+		<attack>Slam,11,30,One target. Hit: 19 (2d12+6) bludgeoning damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Zephyros</name>
 	<size>HUGE</size>
 	<type>GIANT,false</type>
@@ -6882,6 +8075,33 @@ Its 7 legs each have AC 20 and 50 hit points. The shockstomper must use a reacti
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Wurm</name>
+	<size>HUGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>14.0</cr>
+	<ac>18</ac>
+	<hp>200</hp>
+	<speed>WALK 50,BURROW 30</speed>
+	<stats>STR 24,DEX 10,CON 22,INT 3,WIS 12,CHA 4</stats>
+	<saves>CON 11,WIS 6</saves>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 60,TREMORSENSE 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Earth Tremors,The wurm creates earth tremors as it moves overland or underground. Any creature that comes within 30 feet of the moving wurm for the first time on a turn must succeed on a DC 20 Dexterity saving throw or take 10 (3d6) bludgeoning damage and fall prone. Any structure or object anchored to the ground that comes within 30 feet of the moving wurm for the first time on a turn takes 10 (3d6) force damage.</passive>
+		<passive>Tunneler,The wurm can burrow through solid rock at half its burrow speed and leaves a 10-foot-diameter tunnel in its wake.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,12,10,One target. Hit: 24 (5d6+7) piercing damage. If the target is a Medium or smaller creature, it must succeed on a DC 20 Dexterity saving throw or be swallowed by the wurm. A swallowed creature is blinded and restrained, has total cover against attacks and other effects outside the wurm, and takes 17 (5d6) acid damage at the start of each of the wurm's turns.
+If the wurm takes 30 damage or more on a single turn from a creature inside it, the wurm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the wurm. If the wurm dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 20 feet of movement, exiting prone.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Purple worm</name>
 	<size>GARGANTUAN</size>
 	<type>MONSTOSITY,false</type>
@@ -6907,6 +8127,58 @@ lf the worm takes 30 damage or more on a single turn from a creature inside it, 
 		<attack>Tail Stinger,9,10,One creature. Hit: 19 (3d6+9) piercing damage, and the target must make a DC 19 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Skittering Horror</name>
+	<size>HUGE</size>
+	<type>ABERRATION,false</type>
+	<align>NE</align>
+	<cr>15.0</cr>
+	<ac>17</ac>
+	<hp>228</hp>
+	<speed>WALK 40,CLIMB 40</speed>
+	<stats>STR 22,DEX 16,CON 17,INT 2,WIS 14,CHA 18</stats>
+	<skills>PERCEPTION 7,STEALTH 8</skills>
+	<multipliers>
+		<VULNERABILITY>RADIANT</VULNERABILITY>
+	</multipliers>
+	<conditions>FRIGHTENED</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other>At the end of an encounter with horrors, if they failed any Wisdom saves from them, they must succeed on a DC 13 Wisdom save or be affected by a degree of madness depending on how many times they failed those saves.
+MADNESS SEVERITY
+Failed Saves	Madness
+1			Short-term
+2-3			Long-term
+4+			Indefinite
+
+PRIMARY FEATURES
+d4	Feature
+1	Avoidance. If the horror is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.
+2	Damage Resistances. The horror has resistance to necrotic and psychic damage.
+3	Innate Spellcasting. The horror's innate spellcasting ability is Charisma (spell save DC 13 for flying horror, DC 16 for shadow horror, and DC 17 for skittering horror). It can innately cast the following spells, requiring no material components:
+	3/day: darkness
+	1/day each:fear (shadow horror and skittering horror only), phantasmal killer (skittering horror only).
+4	Psychic Rebuke. When the horror takes damage from a melee attack, it can use its reaction to emit psychic energy within a 5-foot radius. Each creature in that area takes 3 (1d6) psychic damage (flying horror), 7 (2d6) psychic damage (shadow horror), or 10 (3d6) psychic damage (skittering horror).
+
+SECONDARY FEATURES
+d4	Feature
+1	Grasping Tendrils. The horror has four tendrils. Each tendril can be attacked (AC 12, 10 hit points). Destroying one deals no damage to the horror.
+	As a bonus action, the horror can target one creature it can see within 10 feet of it. The target must succeed on a Dexterity saving throw or be grappled by the horror. The DC of the saving throw and the DC to escape the grapple are the same: 9 for the flying horror, 13 for the shadow horror, and 19 for the skittering horror. Until the grapple ends, the horror can't use the same tendril to grapple another target.
+2	Indomitable Mind. The horror is immune to the charmed condition.
+3	Keen Senses. The horror has advantage on Wisdom (Perception) checks that rely on sight, sound, or smell.
+4	Mind Sight. Magical darkness doesn't impede the horror's darkvision.</other>
+	<actions>
+		<multiattack>The horror can use its Maddening Presence and make three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,11,10,One target. Hit: 28 (4d10+6) piercing damage.</attack>
+		<attack>Claw,11,10,One target. Hit: 24 (4d8+6) slashing damage.</attack>
+		<effect>Maddening Presence,null,The horror targets one creature it can see within 30 feet of it. If the target can see or hear the horror, the target must make a DC 17 Wisdom saving throw. On a failed saving throw, the target becomes paralyzed until the end of its next turn. If a creature's saving throw is successful, the creature is immune to the horror's Maddening Presence for the next 24 hours.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Adult blue dragon</name>
@@ -6978,6 +8250,54 @@ lf the worm takes 30 damage or more on a single turn from a creature inside it, 
 		<attack>Tail Stinger,9,10,One creature. Hit: 19 (3d6+9) piercing damage, and the target must make a DC 19 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Category 3 Krasis</name>
+	<size>HUGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>16.0</cr>
+	<ac>16</ac>
+	<hp>287</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 12,CON 21,INT 2,WIS 13,CHA 8</stats>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other>MAJOR ADAPTATIONS
+d8	Major Adaptation
+1	Acidic Skin. Any creature that touches the krasis or hits it with a melee attack while within 5 feet of it takes 2 (1d4) acid damage (category 1), 4 (1d8) acid damage (category 2), or 6 (1d12) acid damage (category 3).
+2	Armored Hide. The krasis has better natural armor afforded by a shell or thick scales, increasing its Armor
+Class by 4.
+3	Bioluminescent Markings. The krasis has glowing patterns on its skin that take the shape of defensive runes, granting it advantage on saving throws against spells and other magical effects.
+4	Flight. The krasis has wings and gains a flying speed equal to its walking speed.
+5	Crabber. When the krasis hits a creature with its claws, the target is grappled (escape DC 13 for category 1, DC 15 for category 2, and DC 19 for category 3) by a specialized grasping appendage on the krasis. It can have only one creature grappled in this way at a time.
+6	Hypnotic Display (Recharge 5- 6) . As an action, the krasis creates mesmerizing colors and shapes around
+itself. Each creature within 15 feet of it that can see it must succeed on a Wisdom saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be stunned for 1 minute. The stunned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that succeeds on a saving throw against this effect becomes immune to the Hypnotic Display of all krasis for 24 hours.
+7	Venomous Sting. When the krasis hits a creature with its claws , the creature must succeed on a Constitution saving throw (DC 12 for category 1, DC 14 for category 2, and DC 18 for category 3) or be poisoned for 1 minute. If the krasis is a category 2 or 3, the creature is paralyzed while poisoned in this way. The poisoned
+creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+8	Regeneration. The krasis regains hit points (2 for a category 1, 5 for a category 2, and 10 for a category 3) at the start of each of its turns if it has at least 1 hit point.
+
+MINOR ADAPTATIONS
+d8	Minor Adaptation
+1	Amorphous Structure. The krasis can move through a space as narrow as 1 inch wide without squeezing.
+2	Aquatic. The krasis gains a swimming speed equal to its walking speed.
+3	Climbing Speed. The krasis gains a climbing speed equal to its walking speed.
+4	Cryptic Skin. The krasis can change color to match its surroundings. It has advantage on Dexterity (Stealth) checks made to hide.
+5	Heightened Awareness. The krasis can't be surprised, as a result of having sensitive barbels like a catfish, stereoscopic vision like a chameleon, a tongue like a snake, eye stalks like a lobster, or an array of several eyes.
+6	Ink Cloud (Recharges after a Short or Long Rest). While underwater, the krasis can use a bonus action to expel a cloud of ink and then move up to its speed. The ink cloud is stationary and fills a 20-foot-radius sphere centered on a point in the krasis's space before it moves. The sphere is heavily obscured until the ink disperses after 1 minute. A strong current also disperses the ink cloud.
+7	Leaping Legs. With or without a running start, the krasis's long jump is 20 feet (category 1), 30 feet (category 2), or 40 feet (category 3). Its high jump is 10 feet (category 1), 20 feet (category 2), or 30 feet (category 3).
+8	Stabilizing Legs. The krasis has several crablike legs. As a result, it has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</other>
+	<actions>
+		<multiattack>The krasis makes three attacks: one with its bite, one with its claws , and one with its tail.</multiattack>
+		<attack>Bite,11,10,One creature. Hit: 27 (6d6+6) piercing damage.</attack>
+		<attack>Claws,11,10,One target. Hit: 22 (3d10+6) slashing damage.</attack>
+		<attack>Tail,11,15,One target. Hit: 33 (6d8+6) bludgeoning damage. If the target is a creature, it must succeed on a DC 19 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Iron Golem</name>
@@ -7102,6 +8422,44 @@ Fly speed is hover.</other>
 		<lairaction>The lich calls forth the spirits ofcreatures that died in its lair. These apparitions materialize arrd attack one creature that the lich can see within 60 feet of it. The target must succeed on a DC 18 Constitution saving throw, taking 52 (15d6) necrotic damage on a failed save, or half as much damage on a success. The apparitions then disappear.</lairaction>
 	</lair>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Isperia</name>
+	<size>GARGANTUAN</size>
+	<type>MONSTOSITY,false</type>
+	<align>LN</align>
+	<cr>21.0</cr>
+	<ac>17</ac>
+	<hp>261</hp>
+	<speed>WALK 40,FLY 60</speed>
+	<stats>STR 20,DEX 14,CON 18,INT 23,WIS 26,CHA 20</stats>
+	<saves>DEX 9,CON 11,INT 13,WIS 15</saves>
+	<skills>ARCANA 13,HISTORY 13,INSIGHT 15,PERCEPTION 15</skills>
+	<multipliers>
+		<IMMUNITY>PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,SPHINX</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>WIS,14,23,15,Isperia</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Inscrutable,lsperia is immune to any effect that would sense her emotions or read her thoughts, as well as any divination spell that she refuses. Wisdom (Insight) checks made to ascertain her intentions or sincerity have disadvantage.</passive>
+	</passives>
+	<other>Is an Azorius spellcaster.</other>
+	<actions>
+		<multiattack>lsperia makes two claw attacks. She can cast a spell with a casting time of 1 action in place of one claw attack.</multiattack>
+		<attack>Claw,12,5,One target. Hit: 21 (3d10+5) slashing damage. If the target is a creature, it must succeed on a DC 23 Wisdom saving throw or take 14 (4d6) psychic damage after each attack it makes against lsperia before the start of her next turn.</attack>
+		<effect>Supreme Legal Authority,null,lsperia chooses up to three creatures she can see within 90 feet of her. Each target must succeed on a DC 23 Intelligence saving throw or lsperia chooses an action for that target: Attack, Cast a Spell, Dash, Disengage, Dodge, Help, Hide, Ready, Search, or Use an Object. The affected target can't take that action for 1 minute. At the end of each of the target's turns, it can end the effect on itself with a successful DC 23 Intelligence saving throw. A target that succeeds on the saving throw becomes immune to lsperia's Supreme Legal Authority for 24 hours.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Claw Attack,1,lsperia makes one claw attack.</legendaryaction>
+		<legendaryaction>Cast a Spell,2,lsperia casts a spell of 3rd level or lower from her list of prepared spells, using a spell slot as normal.</legendaryaction>
+		<legendaryaction>Supreme Legal Authority,3,lsperia uses Supreme Legal Authority.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Lich</name>
@@ -7307,6 +8665,49 @@ Understands the languages of its creator but can't speak.</other>
 		<lairaction>Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) lightning damage.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Aurelia</name>
+	<size>MEDIUM</size>
+	<type>CELESTIAL,ANGEL,false</type>
+	<align>LG</align>
+	<cr>23.0</cr>
+	<ac>22</ac>
+	<hp>287</hp>
+	<speed>WALK 50,FLY 150</speed>
+	<stats>STR 26,DEX 24,CON 25,INT 17,WIS 25,CHA 30</stats>
+	<saves>DEX 14,CON 14,CHA 17</saves>
+	<skills>INSIGHT 14,PERCEPTION 14</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Immortal nature,This creature doesn't require food, drink or sleep.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Aurelia makes three longsword attacks and uses Leadership.</multiattack>
+		<attack>Longsword,15,5,One target. Hit: 12 (1d8+8) slashing damage, or 13 (1d10+8) slashing damage when used with two hands, plus 27 (6d8) radiant damage.</attack>
+		<attack>Warleader's Helix (Recharge 5-6),17,60,One creature. Hit: 54 (12d8) radiant damage, and Aurelia can choose another creature she can see within 10 feet of the target. The second creature regains 27 (6d8) hit points.</attack>
+		<effect>Leadership,null,Aurelia utters a few inspiring words to one creature she can see with in 30 feet of her. If the creature can hear her, it can add a d10 to one attack roll or saving throw it makes before the start of Aurelia's next turn.</effect>
+	</actions>
+	<reactions>
+		<reaction>Parry,Aurelia adds 7 to her AC against one melee attack that would hit her. To do so, Aurelia must see the attacker and be wielding a melee weapon.</reaction>
+		<reaction>Unyielding,When Aurelia is subjected to an effect that would move her, knock her prone, or both, she can use her reaction to be neither moved nor knocked prone.</reaction>
+	</reactions>
+	<legendaryactions>3
+		<legendaryaction>Command Allies,1,Aurelia chooses up to three creatures she can see within 30 feet of her. If a chosen creature can see or hear Aurelia, it can immediately use its reaction to make one weapon attack, with advantage on the attack roll.</legendaryaction>
+		<legendaryaction>Longsword Attack,2,Aurelia makes one longsword attack.</legendaryaction>
+		<legendaryaction>Frighten Foes,3,Aurelia targets up to five creatures she can see within 30 feet of her. Each target must succeed on a DC 25 Wisdom saving throw or be frightened of her until the end of her next turn. Any target within 5 feet of Aurelia has disadvantage on the saving throw.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Halaster Blackcloak</name>

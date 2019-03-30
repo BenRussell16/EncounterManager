@@ -1,0 +1,9 @@
+<spellbook>
+	<name>KoboldScaleSorcerer</name>
+	<slot>
+		<known>Fire bolt,Mage hand,Mending,Poison spray,Charm person,Chromatic orb,Expiditious retreat,Scorching ray</known>
+		<0>Fire bolt,Mage hand,Mending,Poison spray</0>
+		<1>4,Expiditious retreat,Chromatic orb,Charm person</1>
+		<2>2,Scorching ray</2>
+	</slot>
+</spellbook>

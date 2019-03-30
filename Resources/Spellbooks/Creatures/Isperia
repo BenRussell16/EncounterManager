@@ -1,0 +1,20 @@
+<spellbook>
+	<name>Isperia</name>
+	<slot>
+		<known>Guidance,Light,Resistance,Sacred flame,Thaumaturgy,Command,Detect evil and good,Ensnaring strike,Sanctuary,Shield of faith,Arcane lock,Augury,Calm emotions,Hold person,Silence,Zone of truth,Bestow curse,Clairvoyance,Counterspell,Dispel magic,Tongues,Divination,Locate creature,Dispel evil and good,Scrying,Word of recall,Divine word,Antimagic field</known>
+		<0>Guidance,Light,Resistance,Sacred flame,Thaumaturgy</0>
+		<1>4,Shield of faith,Sanctuary,Ensnaring strike,Detect evil and good,Command</1>
+		<2>3,Zone of truth,Silence,Hold person,Calm emotions,Augury,Arcane lock</2>
+		<3>3,Tongues,Dispel magic,Clairvoyance,Bestow curse,Counterspell</3>
+		<4>3,Locate creature,Divination</4>
+		<5>2,Scrying,Dispel evil and good</5>
+		<6>1,Word of recall</6>
+		<7>1,Divine word</7>
+		<8>1,Antimagic field</8>
+	</slot>
+	<daily>
+		<2>
+			<spell>Imprisonment,false</spell>
+		</2>
+	</daily>
+</spellbook>

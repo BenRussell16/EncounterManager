@@ -1,0 +1,10 @@
+<spellbook>
+	<name>UndercityMedusa</name>
+	<daily>
+		<1>
+			<spell>Expiditious retreat,false</spell>
+			<spell>Fog cloud,false</spell>
+			<spell>Misty step,false</spell>
+		</1>
+	</daily>
+</spellbook>

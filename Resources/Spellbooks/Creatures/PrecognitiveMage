@@ -1,0 +1,13 @@
+<spellbook>
+	<name>PrecognitiveMage</name>
+	<daily>
+		<1>
+			<spell>Clairvoyance,false</spell>
+			<spell>Locate object,false</spell>
+		</1>
+		<3>
+			<spell>Detect thoughts,false</spell>
+			<spell>Mage armour,false</spell>
+		</3>
+	</daily>
+</spellbook>

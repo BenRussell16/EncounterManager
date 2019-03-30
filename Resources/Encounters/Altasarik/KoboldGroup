@@ -1,0 +1,9 @@
+<encounter>
+	<name>KoboldGroup</name>
+	<creature>1,Kobold Scale Sorcerer</creature>
+	<creature>5,Kobold</creature>
+	<creature>2,Kobold Inventor</creature>
+	<creature>2,Kobold Dragonshield</creature>
+	<mult>Standard</mult>
+	<party>7,8,8</party>
+</encounter>

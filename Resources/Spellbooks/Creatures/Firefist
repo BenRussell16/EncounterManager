@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Firefist</name>
+	<slot>
+		<known>Fire bolt,Light,Sacred flame,Spare the dying,Guiding bolt,Healing word,Heroism,Shield of faith,Lesser restoration,Scorching ray,Blinding smite,Crusaders mantle,Revivify,Banishment,Wall of fire,Flame strike</known>
+		<0>Light,Sacred flame,Spare the dying,Fire bolt</0>
+		<1>4,Shield of faith,Healing word,Guiding bolt,Heroism</1>
+		<2>3,Scorching ray,Lesser restoration</2>
+		<3>3,Revivify,Crusaders mantle,Blinding smite</3>
+		<4>3,Wall of fire,Banishment</4>
+		<5>1,Flame strike</5>
+	</slot>
+</spellbook>

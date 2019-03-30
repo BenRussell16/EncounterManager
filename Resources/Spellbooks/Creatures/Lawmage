@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Lawmage</name>
+	<slot>
+		<known>Fire bolt,Friends,Light,Message,Alarm,Expiditious retreat,Shield,Arcane lock,Detect thoughts,Hold person,Clairvoyance,Dispel magic,Slow,Locate creature,Stoneskin</known>
+		<0>Fire bolt,Friends,Light,Message</0>
+		<1>4,Shield,Expiditious retreat,Alarm</1>
+		<2>3,Hold person,Detect thoughts,Arcane lock</2>
+		<3>3,Slow,Dispel magic,Clairvoyance</3>
+		<4>2,Stoneskin,Locate creature</4>
+	</slot>
+</spellbook>
