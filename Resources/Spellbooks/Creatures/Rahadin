@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Rahadin</name>
+	<daily>
+		<1>
+			<spell>Magic weapon,false</spell>
+			<spell>Nondetection,false</spell>
+		</1>
+		<3>
+			<spell>Misty step,false</spell>
+			<spell>Phantom steed,false</spell>
+		</3>
+	</daily>
+</spellbook>

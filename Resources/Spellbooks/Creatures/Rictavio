@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Rictavio</name>
+	<slot>
+		<known>Guidance,Light,Mending,Thaumaturgy,Cure wounds,Detect evil and good,Protection from evil and good,Sanctuary,Augury,Lesser restoration,Protection from poison,Magic circle,Remove curse,Speak with dead,Death ward,Freedom of movement,Dispel evil and good</known>
+		<0>Guidance,Light,Mending,Thaumaturgy</0>
+		<1>4,Sanctuary,Protection from evil and good,Detect evil and good,Cure wounds</1>
+		<2>3,Protection from poison,Lesser restoration,Augury</2>
+		<3>3,Magic circle,Remove curse,Speak with dead</3>
+		<4>3,Freedom of movement,Death ward</4>
+		<5>1,Dispel evil and good</5>
+	</slot>
+</spellbook>

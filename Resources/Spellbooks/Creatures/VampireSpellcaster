@@ -1,0 +1,12 @@
+<spellbook>
+	<name>VampireSpellcaster</name>
+	<slot>
+		<known>Mage hand,Prestidigitation,Ray of frost,Comprehend languages,Fog cloud,Sleep,Detect thoughts,Gust of wind,Mirror image,Animate dead,Bestow curse,Nondetection,Blight,Greater invisibility,Dominate person</known>
+		<0>Mage hand,Prestidigitation,Ray of frost</0>
+		<1>4,Sleep,Fog cloud,Comprehend languages</1>
+		<2>3,Mirror image,Gust of wind,Detect thoughts</2>
+		<3>3,Nondetection,Bestow curse,Animate dead</3>
+		<4>3,Greater invisibility,Blight</4>
+		<5>1,Dominate person</5>
+	</slot>
+</spellbook>

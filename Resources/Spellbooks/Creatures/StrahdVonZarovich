@@ -1,0 +1,12 @@
+<spellbook>
+	<name>StrahdVonZarovich</name>
+	<slot>
+		<known>Mage hand,Prestidigitation,Ray of frost,Comprehend languages,Fog cloud,Sleep,Detect thoughts,Gust of wind,Mirror image,Animate dead,Fireball,Nondetection,Blight,Greater invisibility,Polymorph,Animate objects,Scrying</known>
+		<0>Ray of frost,Prestidigitation,Mage hand</0>
+		<1>4,Sleep,Fog cloud,Comprehend languages</1>
+		<2>3,Mirror image,Gust of wind,Detect thoughts</2>
+		<3>3,Nondetection,Fireball,Animate dead</3>
+		<4>3,Polymorph,Greater invisibility,Blight</4>
+		<5>1,Scrying,Animate objects</5>
+	</slot>
+</spellbook>
