@@ -1,0 +1,15 @@
+<spellbook>
+	<name>BabaLysaga</name>
+	<slot>
+		<known>Acid splash,Fire bolt,Light,Mage hand,Prestidigitation,Detect magic,Magic missile,Sleep,Witch bolt,Crown of madness,Enlarge/Reduce,Misty step,Dispel magic,Fireball,Lightning bolt,Blight,Evard's black tentacles,Polymorph,Cloudkill,Geas,Scrying,Programmed illusion,True seeing,Finger of death,Mirage arcane,Power word stun</known>
+		<0>Acid splash,Fire bolt,Light,Mage hand,Prestidigitation</0>
+		<1>4,Detect magic,Magic missile,Sleep,Witch bolt</1>
+		<2>3,Misty step,Enlarge/Reduce,Crown of madness</2>
+		<3>3,Lightning bolt,Fireball,Dispel magic</3>
+		<4>3,Polymorph,Evard's black tentacles,Blight</4>
+		<5>2,Scrying,Geas,Cloudkill</5>
+		<6>1,True seeing,Programmed illusion</6>
+		<7>1,Mirage arcane,Finger of death</7>
+		<8>1,Power word stun</8>
+	</slot>
+</spellbook>

@@ -1,0 +1,9 @@
+<spellbook>
+	<name>BarovianWitch</name>
+	<slot>
+		<known>Mage hand,Prestidigitation,Ray of frost,Ray of sickness,Sleep,Tasha's hideous laughter,Alter self,Invisibility</known>
+		<0>Mage hand,Prestidigitation,Ray of frost</0>
+		<1>4,Tasha's hideous laughter,Sleep,Ray of sickness</1>
+		<2>2,Invisibility,Alter self</2>
+	</slot>
+</spellbook>

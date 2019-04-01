@@ -1,0 +1,15 @@
+<spellbook>
+	<name>MadamEva</name>
+	<slot>
+		<known>Light,Mending,Sacred flame,Thaumaturgy,Bane,Command,Detect evil and good,Protection from evil and good,Lesser restoration,Protection from poison,Spiritual weapon,Create food and water,Speak with dead,Spirit guardians,Divination,Freedom of movement,Guardian of faith,Greater restoration,Raise dead,Find the path,Harm,True seeing,Fire storm,Regenerate,Earthquake</known>
+		<0>Light,Mending,Sacred flame,Thaumaturgy</0>
+		<1>4,Protection from evil and good,Detect evil and good,Command,Bane</1>
+		<2>3,Spiritual weapon,Protection from poison,Lesser restoration</2>
+		<3>3,Spirit guardians,Speak with dead,Create food and water</3>
+		<4>3,Guardian of faith,Freedom of movement,Divination</4>
+		<5>2,Raise dead,Greater restoration</5>
+		<6>1,True seeing,Harm,Find the path</6>
+		<7>1,Regenerate,Fire storm</7>
+		<8>1,Earthquake</8>
+	</slot>
+</spellbook>

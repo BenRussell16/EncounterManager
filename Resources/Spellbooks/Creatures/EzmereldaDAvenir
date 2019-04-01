@@ -1,0 +1,11 @@
+<spellbook>
+	<name>EzmereldaDAvenir</name>
+	<slot>
+		<known>Fire bolt,Light,Mage hand,Prestidigitation,Magic missile,Protection from evil and good,Shield,Darkvision,Knock,Mirror image,Clairvoyance,Lightning bolt,Magic circle,Greater invisibility</known>
+		<0>Fire bolt,Light,Mage hand,Prestidigitation</0>
+		<1>4,Shield,Protection from evil and good,Magic missile</1>
+		<2>3,Mirror image,Darkvision,Knock</2>
+		<3>3,Magic circle,Lightning bolt,Clairvoyance</3>
+		<4>1,Greater invisibility</4>
+	</slot>
+</spellbook>
