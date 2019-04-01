@@ -124,7 +124,7 @@ public class SpellBookInstance {
 				first = false;
 			}
 		}
-		for(int i=1; i<=3; i++){
+		for(int i=3; i>=1; i--){
 			if(!getDaily(i).isEmpty()){
 				if(builtString.length()!=0){builtString+="\n";}
 				builtString+=i+"/Day each: ";

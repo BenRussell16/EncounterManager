@@ -1,0 +1,13 @@
+<spellbook>
+	<name>DruidOfTheOldWays</name>
+	<slot>
+		<known>Druidcraft,Produce flame,Resistance,Thorn whip,Cure wounds,Faerie fire,Thunderwave,Beast sense,Flame blade,Pass without trace,Conjure animals,Dispel magic,Plant growth,Dominate beast,Freedom of movement,Wall of fire,Commune with nature,Conjure elemental,Scrying,Transport via plants,Wall of thorns</known>
+		<0>Druidcraft,Produce flame,Resistance,Thorn whip</0>
+		<1>4,Thunderwave,Faerie fire,Cure wounds</1>
+		<2>3,Pass without trace,Flame blade,Beast sense</2>
+		<3>3,Plant growth,Dispel magic,Conjure animals</3>
+		<4>3,Wall of fire,Freedom of movement,Dominate beast</4>
+		<5>2,Scrying,Conjure elemental,Commune with nature</5>
+		<6>1,Wall of thorns,Transport via plants</6>
+	</slot>
+</spellbook>

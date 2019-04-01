@@ -1,0 +1,11 @@
+<spellbook>
+	<name>GolgariShaman</name>
+	<slot>
+		<known>Poison spray,Shillelagh,Thorn whip,Cure wounds,Entangle,Ray of sickness,Pass without trace,Ray of enfeeblement,Spike growth,Animate dead,Dispel magic,Plant growth,Blight,Giant insect</known>
+		<0>Poison spray,Shillelagh,Thorn whip</0>
+		<1>4,Ray of sickness,Entangle,Cure wounds</1>
+		<2>3,Spike growth,Ray of enfeeblement,Pass without trace</2>
+		<3>3,Plant growth,Dispel magic,Animate dead</3>
+		<4>2,Blight,Giant insect</4>
+	</slot>
+</spellbook>

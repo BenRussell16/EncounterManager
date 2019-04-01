@@ -245,6 +245,30 @@ Understands Common but doesn't speak.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Anarch</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>11</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 13,CON 12,INT 9,WIS 11,CHA 10</stats>
+	<skills>PERCEPTION 2,SURVIVAL 2</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Aggressive,As a bonus action, the anarch can move up to its speed toward a hostile creature it can see.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<attack>Spiked Club,4,5,One target. Hit: 6 (1d8+2) piercing damage, or 7 (1d10+2) piercing damage if used with two hands.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Ash Zombie</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -907,6 +931,56 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Rubblebelt Stalker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>0.5</cr>
+	<ac>14</ac>
+	<hp>11</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 10,DEX 15,CON 12,INT 10,WIS 14,CHA 8</stats>
+	<skills>ATHLETICS 2,PERCEPTION 4,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Nimble escape,This creature can take the diesngage or hide action as a bonus action on each of its turns.</passive>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Ambusher,In the first round of a combat, the stalker has advantage on attack rolls against any creature that hasn't taken a turn yet.</passive>
+		<passive>Ruin Dweller,The stalker has advantage on Dexterity (Stealth) checks made to hide in ruins, and its speed is not reduced in difficult terrain composed of rubble.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The stalker makes three attacks with its shortsword.</multiattack>
+		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Scorchbringer Guard</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>0.5</cr>
+	<ac>16</ac>
+	<hp>11</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 14,CON 12,INT 10,WIS 9,CHA 10</stats>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Explosive Tank,When the guard dies, or if it rolls a 1 when checking whether its Scorchbringer action recharges, the tank on its back explodes in a 10-foot radius sphere . Each creature in that area must make a DC 12 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or ha lf as much damage on a successful one. The explosion ignites Aammable objects that aren't being worn or carried, and it destroys the scorchbringer.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<attack>Light Hammer,4,20,60,One target. Hit: 4 (1d4+2) bludgeoning damage.</attack>
+		<effect>Scorchbringer,Recharge 4-6,The guard's scorchbringer spouts a stream of flame in a line that is 30 feet long and 5 feet wide. Each creature in the line must make a DC 12 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Soldier</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -1439,6 +1513,33 @@ Violet		51 years or more.</other>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Horncaller</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 12,CON 14,INT 10,WIS 14,CHA 13</stats>
+	<skills>ANIMALHANDLING 4,NATURE 2,PERCEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,,14,,Horncaller</innatecasting>
+		<passive>Speak with Beasts,The horncaller can communicate with beasts as if they shared a language.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<multiattack>The horncaller makes two melee attacks with its staff and uses One with the Worldsoul.</multiattack>
+		<attack>Staff,3,5,One target. Hit: 4 (1d6+1) piercing damage, or 5 (1d8+1) bludgeoning damage if used with two hands.</attack>
+		<effect>One with the Worldsoul,null,The horncaller chooses one beast it can see within 30 feet of it. If the beast can hear the horn caller, the beast uses its reaction to make one melee attack against a target that the horncaller can see.</effect>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Hybrid Poisoner</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,SIMICHYBRID,false</type>
@@ -1690,6 +1791,100 @@ Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cas
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Rakdos Performer (Blade Juggler)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CE</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>22</hp>
+	<speed>WALK 40,CLIMB 30</speed>
+	<stats>STR 13,DEX 17,CON 12,INT 10,WIS 8,CHA 15</stats>
+	<saves>DEX 5,CHA 4</saves>
+	<skills>ACROBATICS 7,PERFORMANCE 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Nimble,The performer can take the Disengage action as a bonus action on each of its turns.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).
+Only has lair actions when with a group of Rakdos.</other>
+	<actions>
+		<multiattack>The juggler makes three dagger attacks.</multiattack>
+		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<lair>
+		<lairaction>Fire erupts from the ground at up to four points of the DM's choice in the carnival. The fire lasts for 1 minute or until this action is used again. Each jet of flame is a 20-foot-tall cylinder with a 5-foot radius. Each creature in the cylinder when it first appears must make a DC 15 Dexterity saving throw, taking 10 (3d6) fire damage on a failed save, or half as much damage on a successful one. Any creature that starts its turn in the flames must also make the saving throw.</lairaction>
+		<lairaction>Whirling blades, spiked chains. or other implements of agony appear for a moment to menace 1d6 random creatures in a 20-foot cube. Each target must succeed on a DC 15 Dexterity saving throw or take 9 (2d8) force damage.</lairaction>
+		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Rakdos Performer (Fire Eater)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CE</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>22</hp>
+	<speed>WALK 40,CLIMB 30</speed>
+	<stats>STR 13,DEX 17,CON 12,INT 10,WIS 8,CHA 15</stats>
+	<saves>DEX 5,CHA 4</saves>
+	<skills>ACROBATICS 7,PERFORMANCE 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Nimble,The performer can take the Disengage action as a bonus action on each of its turns.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).
+Only has lair actions when with a group of Rakdos.</other>
+	<actions>
+		<multiattack>The fire eater makes two attacks with its bladed chain.</multiattack>
+		<attack>Bladed Chain,5,10,One target. Hit: 6 (1d6+3) slashing damage.</attack>
+		<effect>Spew Flame,Recharge 4-6,The fire eater exhales flames. Each creature in a 15-foot cone must make a DC 13 Dexterity saving throw, taking 9 (2d8) fire damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<lair>
+		<lairaction>Fire erupts from the ground at up to four points of the DM's choice in the carnival. The fire lasts for 1 minute or until this action is used again. Each jet of flame is a 20-foot-tall cylinder with a 5-foot radius. Each creature in the cylinder when it first appears must make a DC 15 Dexterity saving throw, taking 10 (3d6) fire damage on a failed save, or half as much damage on a successful one. Any creature that starts its turn in the flames must also make the saving throw.</lairaction>
+		<lairaction>Whirling blades, spiked chains. or other implements of agony appear for a moment to menace 1d6 random creatures in a 20-foot cube. Each target must succeed on a DC 15 Dexterity saving throw or take 9 (2d8) force damage.</lairaction>
+		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Rakdos Performer (High-Wire Acrobat)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CE</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>22</hp>
+	<speed>WALK 40,CLIMB 30</speed>
+	<stats>STR 13,DEX 17,CON 12,INT 10,WIS 8,CHA 15</stats>
+	<saves>DEX 5,CHA 4</saves>
+	<skills>ACROBATICS 7,PERFORMANCE 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Nimble,The performer can take the Disengage action as a bonus action on each of its turns.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).
+Only has lair actions when with a group of Rakdos.</other>
+	<actions>
+		<multiattack>The acrobat makes two attacks with its barbed pole.</multiattack>
+		<attack>Barbed Pole,5,5,One target. Hit: 7 (1d8+3) piercing damage, and the acrobat can jump up to 20 feet. This movement doesn't provoke opportunity attacks.</attack>
+	</actions>
+	<lair>
+		<lairaction>Fire erupts from the ground at up to four points of the DM's choice in the carnival. The fire lasts for 1 minute or until this action is used again. Each jet of flame is a 20-foot-tall cylinder with a 5-foot radius. Each creature in the cylinder when it first appears must make a DC 15 Dexterity saving throw, taking 10 (3d6) fire damage on a failed save, or half as much damage on a successful one. Any creature that starts its turn in the flames must also make the saving throw.</lairaction>
+		<lairaction>Whirling blades, spiked chains. or other implements of agony appear for a moment to menace 1d6 random creatures in a 20-foot cube. Each target must succeed on a DC 15 Dexterity saving throw or take 9 (2d8) force damage.</lairaction>
+		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Sildar Hallwinter</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -1741,6 +1936,35 @@ Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cas
 		<attack>Hand crossbow,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Thought Spy</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NE</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 14,CON 10,INT 16,WIS 13,CHA 14</stats>
+	<skills>DECEPTION 6,INSIGHT 3,INVESTIGATION 5,PERCEPTION 3,SLIGHTOFHAND 4,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 30</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,13,,ThoughtSpy</innatecasting>
+		<passive>Cunning Action,On each of its turns, the thought spy can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
+	</passives>
+	<other>Knows any one other language.
+Innate spellcasting is psionics.</other>
+	<actions>
+		<multiattack>The thought spy makes two melee attacks, or it makes three ranged attacks with its daggers.</multiattack>
+		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+		<attack>Rapier,4,5,One target. Hit: 6 (1d8+2) piercing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>White tusk orc</name>
@@ -1844,6 +2068,34 @@ Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cas
 		<attack>Bite,4,5,One target. Hit: 7 (2d4+2) piercing damage.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Counterflux Blastseeker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>2.0</cr>
+	<ac>16</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 16,CON 15,INT 18,WIS 11,CHA 14</stats>
+	<saves>CON 4,WIS 2</saves>
+	<skills>ARCANA 6,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,6,14,,CounterfluxBlastseeker</innatecasting>
+		<passive>Counterflux Overcast (Recharge 5-6),The blastseeker can create an additional effect immediately after casting a spell . Roll a d6 to determine the effect:
+1-3. The blastseeker creates a 15-foot-radius invisible sphere centered on itself that lasts until the end of its next turn. Creatures in the sphere have disadvantage on saving throws against spells and other magical effects.
+4-6. The blastseeker creates a 15-foot-radius invisible sphere centered on itself that lasts until the end of its next turn. Creatures in the sphere have advantage on saving throws against spells and other magical effects.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<attack>Rapier,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Cult Fanatic</name>
@@ -2436,6 +2688,37 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 		<attack>Bite,6,10,One target. Hit: 14 (3d6+4) piercing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Rakdos Lampooner</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>12</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 12,CON 13,INT 12,WIS 9,CHA 18</stats>
+	<skills>DECEPTION 6,PERFORMANCE 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,6,14,4,RakdosLampooner</spellcasting>
+	</passives>
+	<other>Knows any one other language.
+Is a Rakdos spellcaster.
+Only has lair actions when with a group of Rakdos.</other>
+	<actions>
+		<attack>Club,2,5,One target. Hit: 2 (1d4) bludgeoning damage.</attack>
+	</actions>
+	<lair>
+		<lairaction>Fire erupts from the ground at up to four points of the DM's choice in the carnival. The fire lasts for 1 minute or until this action is used again. Each jet of flame is a 20-foot-tall cylinder with a 5-foot radius. Each creature in the cylinder when it first appears must make a DC 15 Dexterity saving throw, taking 10 (3d6) fire damage on a failed save, or half as much damage on a successful one. Any creature that starts its turn in the flames must also make the saving throw.</lairaction>
+		<lairaction>Whirling blades, spiked chains. or other implements of agony appear for a moment to menace 1d6 random creatures in a 20-foot cube. Each target must succeed on a DC 15 Dexterity saving throw or take 9 (2d8) force damage.</lairaction>
+		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Ravager stabby-stabber</name>
@@ -3337,6 +3620,32 @@ If the weird starts its turn at Gargantuan size, the weird releases energy in an
 		<effect>Tentacles,null,One creature grappled by the chuul must succeed on a DC 13 Constitution saving throw or be poisoned for 1 minute. Until this poison ends, the target is paralyzed. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Cosmotronic Blastseeker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>4.0</cr>
+	<ac>15</ac>
+	<hp>37</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 15,CON 16,INT 18,WIS 9,CHA 12</stats>
+	<saves>DEX 4,CON 5</saves>
+	<skills>ARCANA 6,INTIMIDATION 3,PERCEPTION 1</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,6,14,,CosmotronicBlastseeker</innatecasting>
+		<passive>Empowered Spell (3/Day),When the blastseeker rolls damage for a spell, it can reroll up to four dice of damage. It must use the new dice.</passive>
+		<passive>Tides of Chaos (1/Day),The blastseeker makes one attack roll, ability check, or saving throw with advantage.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<attack>Warhammer,4,5,One target. Hit: 6 (1d8+2) bludgeoning damage, or 7 (1d10+2) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Couatl</name>
@@ -4363,6 +4672,63 @@ The attacker must make a DC 14 Wisdom saving throw. On a failed save, the attack
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Flux Blastseeker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>55</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 15,CON 12,INT 20,WIS 9,CHA 14</stats>
+	<saves>DEX 5,INT 8</saves>
+	<skills>ARCANA 8,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,8,16,,FluxBlastseeker</innatecasting>
+		<passive>Fluxbending Overcast (Recharge 5-6),The blastseeker can create an additional effect immediately after casting a spell. Roll a d6 to determine the effect:
+1-3. The blastseeker teleports, swapping places with a creature it can see within 30 feet of it.
+4-6. The blastseeker and each creature within 10 feet of it must succeed on a DC 16 Constitution saving throw or take 11 (2d10) thunder damage.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<attack>Quarterstaff,3,5,One target. Hit: 3 (1d6) bludgeoning damage, or 4 (1d8) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Galvanic Blastseeker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>5.0</cr>
+	<ac>13</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 17,CON 14,INT 19,WIS 10,CHA 13</stats>
+	<saves>DEX 6</saves>
+	<skills>ACROBATICS 6,ARCANA 7,PERCEPTION 3</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING,THUNDER</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,7,15,,GalvanicBlastseeker</innatecasting>
+		<passive>Galvanic Overcast (Recharge 5-6),When the blastseeker casts lightning bolt or thunderwave, it can roll a die. On an odd number, the blastseeker takes 9 (2d8) force damage. On an even number, the spell also deals 9 (2d8) lightning damage to each target that fails its saving throw.</passive>
+		<passive>Heart of the Storm,When the blastseeker casts lightning bolt or thunderwave, all other creatures within 10 feet of the blastseeker each take 3 lightning damage.</passive>
+		<passive>Gust-Propelled Leap,The blastseeker can use a bonus action to fly up to 10 feet without provoking opportunity attacks.</passive>
+	</passives>
+	<other>Knows any one other language.</other>
+	<actions>
+		<attack>Spear,3,20,60,One target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Giant shark</name>
 	<size>HUGE</size>
 	<type>BEAST,false</type>
@@ -4416,6 +4782,43 @@ The attacker must make a DC 14 Wisdom saving throw. On a failed save, the attack
 		<reaction>Parry,The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.</reaction>
 	</reactions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Golgari Shaman</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>5.0</cr>
+	<ac>14</ac>
+	<hp>88</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 15,CON 12,INT 12,WIS 17,CHA 16</stats>
+	<saves>CON 4,WIS 6</saves>
+	<skills>ARCANA 4,INSIGHT 6,NATURE 4,RELIGION 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,8,GolgariShaman</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+	</passives>
+	<other>Is a Golgari caster.
+Only has lair actions when with a group of Golgari.</other>
+	<actions>
+		<attack>Quaterstaff,4,5,One target. Hit: 5 (1d6+2) bludgeoning damage, or 6 (1d8+2) bludgeoning damage if used with two hands.</attack>
+		<attack>Fungal Rot,6,5,One target. Hit: 9 (2d8) necrotic damage , and the target must make a DC 14 Constitution saving throw, taking 18 (4d8) poison damage on a failed save, or half as much damage on a successful one.</attack>
+	</actions>
+	<reactions>
+		<reaction>Feed on Death,When a creature within 30 feet of the shaman drops to 0 hit points, the shaman gains 5 (1d10) temporary hit points.</reaction>
+	</reactions>
+	<lair>
+		<lairaction>If the Golgari can see any sewer openings, they can cause sewage to overflow. Any creature within 20 feet of such an opening must succeed on a DC 15 Dexterity saving throw or be knocked prone and pushed up to 20 feet in a straight line away from the opening.</lairaction>
+		<lairaction>Spore-laden fungi release a cloud that fills a 20-foot-radius sphere centered on a point the Golgari choose within 120 feet of any member of the group. The cloud spreads around corners and remains until one of the Golgari dismisses it as an action, the Golgari group uses this lair action again, or all the members of the Golgari group die. The area within the cloud is lightly obscured. Any creature in the cloud when it appears must make a DC 15 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. Any creature that ends its turn in the cloud takes 10 (3d6) poison damage.</lairaction>
+		<lairaction>Tendrils of creeping fungi reach out to ensnare the enemies of the Golgari. The Golgari choose a 15-foot-radius sphere centered on a point within 60 feet of any member of the group. Each creature in the area that isn't allied with the Golgari group must succeed on a DC 15 Dexterity saving throw or become restrained until the Golgari group uses this lair action again, all the members of the group are slain, or no member of the group is within 60 feet of the effect. A creature restrained in this way can use an action to make a DC 15 Strength check, ending the restrained effect on itself with a success.</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Lesser marilith</name>
@@ -4480,6 +4883,33 @@ The attacker must make a DC 14 Wisdom saving throw. On a failed save, the attack
 		<attack>Rapier,7,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Mind Mage</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>49</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 10,INT 20,WIS 15,CHA 16</stats>
+	<saves>INT 8,WIS 5</saves>
+	<skills>ARCANA 8,DECEPTION 6,INSIGHT 5,PERSUASION 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,16,,MindMage</innatecasting>
+		<passive>Special Equipment,The mage wears a spies' murmur (see Ravnica chapter 5).</passive>
+	</passives>
+	<other>Knows any four other languages.
+Innate spellcasting is psionics.</other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Oaken Bolter</name>
@@ -5445,6 +5875,43 @@ May have a familiar.</other>
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Blood Witch</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CE</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>78</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 14,CON 15,INT 13,WIS 9,CHA 19</stats>
+	<saves>WIS 2,CHA 7</saves>
+	<skills>ARCANA 4,INTIMIDATION 7,PERCEPTION 2,STEALTH 5</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,7,15,,BloodWitch</innatecasting>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+		<passive>Blood Witch Dance,The witch can use a bonus action to control the movement of one creature cursed by its hex spell that it can see within 30 feet of it. The creature must succeed on a DC 15 Charisma saving th row or use its reaction to move up to 30 feet in a direction of the witch's choice.</passive>
+	</passives>
+	<other>Knows any one other language (usually Common).
+Only has lair actions when with a group of Rakdos.</other>
+	<actions>
+		<multiattack>The witch makes two attacks: one with its longsword and one with its shortsword.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 7 (1d8+3) slashing damage.</attack>
+		<attack>Shortsword,6,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+	</actions>
+	<lair>
+		<lairaction>Fire erupts from the ground at up to four points of the DM's choice in the carnival. The fire lasts for 1 minute or until this action is used again. Each jet of flame is a 20-foot-tall cylinder with a 5-foot radius. Each creature in the cylinder when it first appears must make a DC 15 Dexterity saving throw, taking 10 (3d6) fire damage on a failed save, or half as much damage on a successful one. Any creature that starts its turn in the flames must also make the saving throw.</lairaction>
+		<lairaction>Whirling blades, spiked chains. or other implements of agony appear for a moment to menace 1d6 random creatures in a 20-foot cube. Each target must succeed on a DC 15 Dexterity saving throw or take 9 (2d8) force damage.</lairaction>
+		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Blue Slaad</name>
 	<size>LARGE</size>
 	<type>ABERRATION,false</type>
@@ -5558,6 +6025,33 @@ May have a familiar.</other>
 		<effect>Summon Demon,1/Day,The drow magically summons a quasit, or attempts to summon a shadow demon with a 50 percent chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. lt remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Druid of the Old Ways</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>CN</align>
+	<cr>7.0</cr>
+	<ac>14</ac>
+	<hp>90</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 15,CON 16,INT 10,WIS 20,CHA 14</stats>
+	<saves>DEX 5,CON 6,WIS 8</saves>
+	<skills>NATURE 3,PERCEPTION 8,SURVIVAL 8</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRUIDIC</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,8,16,12,DruidOfTheOldWays</spellcasting>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Speak with Beasts and Plants,The druid can communicate with beasts and plants as if they shared a language.</passive>
+	</passives>
+	<other>Is a Gruul spellcaster.</other>
+	<actions>
+		<attack>Quarterstaff,3,5,One target. Hit: 3 (1d6) bludgeoning damage, or 4 (1d8) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Firefist</name>
@@ -6245,6 +6739,54 @@ Innate spellcasting is psionics.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Obzedat Ghost</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LE</align>
+	<cr>8.0</cr>
+	<ac>14</ac>
+	<hp>110</hp>
+	<speed>WALK 0,FLY 30</speed>
+	<stats>STR 10,DEX 10,CON 13,INT 18,WIS 20,CHA 17</stats>
+	<saves>INT 7,WIS 8</saves>
+	<skills>INSIGHT 8,PERCEPTION 8</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,GRAPPLED,PARALYZED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>1</legendaryresistance>
+		<innatecasting>WIS,8,16,,ObzedatGhost</innatecasting>
+		<passive>Incorporeal movement,This creature can move through other creatures and objects as if they were difficult terrain. It takes 5(1d10) force damage if it ends its turn inside an object.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Ethereal Sight,The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.</passive>
+		<passive>Council of Five,The ghost has a trait based on who it is, as shown below:
+Enezesku: Enfeebling Ray. Enezesku's Innate Spellcasting trait includes ray of enfeeblement, which he can cast at will.
+Fautomni: Undead Fortitude. If damage reduces Fautomni to 0 hit points, he must make a Constitution saving throw with a DC of 5+ the damage taken, unless the damage is radiant or from a critical hit. On a success, Fautomni drops to 1 hit point instead.
+Karlov: Unnatural Vigor. When Karlov regains hit points, he has advantage on attack rolls he makes on his next turn.
+Vuliev: Teleportation. Vuliev's Innate Spellcasting trait includes misty step, which he can cast at will.
+Xii Xaxosz: Lingering Spite. When Xii Xaxosz is reduced to 0 hit points, his incorporeal form explodes in a burst of necrotic energy. Each creature within 5 feet of him must make a DC 16 Constitution saving throw, taking 14 (4d6) necrotic damage on a failed save, or half as much damage on a successful one.</passive>
+	</passives>
+	<other>Gains +1 AC for each other Obzedat ghost within 30 feet of it.
+Fly speed is hover.
+The ghost regains hit points equal to half the damage dealt by their Chill Touch cantrip.
+
+Only has legendary actions when all 5 Obzedat ghosts are there, and they share the uses.</other>
+	<actions>
+		<attack>Life Drain,8,5,One creature. Hit: 18 (4d8) necrotic damage, and the ghost regains hit points equal to half the amount of damage the target takes. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. The target dies if its hit point maximum is reduced to 0. This reduction to the target's hit point maximum lasts until the target finishes a long rest.</attack>
+		<effect>Convene the Ghost Council,null,The ghost summons the other four members of the Obzedat. At the start of the ghost's next turn, the other members appear in unoccupied spaces within 30 feet of the summoner. The ghosts each roll initiative when they appear.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Forced Obedience,1,A target that all of the Obzedat ghosts can see must succeed on a DC 16 Wisdom saving throw or bow until the end of its next turn. Until this bow ends, the target can't take actions or reactions, and its speed is 0 and can't be increased.</legendaryaction>
+		<legendaryaction>Indentured Spirits,3,The Obzedat ghosts conjure 1d6 indentured spirits (described in Ravnica) within 60 feet of one of them.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Oleander Dragon</name>
 	<size>LARGE</size>
 	<type>DRAGON,false</type>
@@ -6929,6 +7471,34 @@ Whenever the charmed target takes damage, the target can repeat the saving throw
 		<lairaction>Water in the aboleth's lair magically becomes a conduit for the creature's rage. The aboleth can target any number of creatures it can see in such water within 90 feet of it. A target must succeed on a DC 14 Wisdom saving throw or take 7 (2d6) psychic damage. The aboleth can't use this lair action again until it has used a different one.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Biomancer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NG</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>110</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 15,CON 14,INT 20,WIS 14,CHA 15</stats>
+	<saves>INT 9,WIS 6</saves>
+	<skills>ARCANA 9,NATURE 9</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,9,17,16,Biomancer</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Bolstering Presence,The biomancer magically emanates life-giving energy within 30 feet of itself. Any ally of the biomancer that starts its turn there regains 5 (1d10) hit points.</passive>
+	</passives>
+	<other>Knows any one other language.
+Is a Simic spellcaster.</other>
+	<actions>
+		<attack>Scimitar,6,5,One target. Hit: 5 (1d6+2) slashing damage.</attack>
+	</actions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Crystal Golem</name>
@@ -8333,6 +8903,43 @@ Understands the languages of its creator but can't speak.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Zegana</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,MERFOLK,false</type>
+	<align>LN</align>
+	<cr>16.0</cr>
+	<ac>16</ac>
+	<hp>130</hp>
+	<speed>WALK 30,SWIM 40</speed>
+	<stats>STR 11,DEX 14,CON 14,INT 20,WIS 18,CHA 16</stats>
+	<saves>INT 10,WIS 9</saves>
+	<skills>INSIGHT 9,NATURE 10,PERCEPTION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD,POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH,MERFOLK</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,10,18,15,Zegana</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other>Is a Simic spellcaster.</other>
+	<actions>
+		<attack>Prime Speaker's Trident,10,20,60,One target. Hit: 12 (2d6+5) piercing damage, and the trident emits a thunderous boom. Each creature in a 15-foot cube originating from the prongs of the trident must make a DC 18 Constitution saving throw. On a failed save, the creature takes 9 (2d8) thunder damage and is pushed 10 feet away from Zegana. If the creature is underwater, the damage is increased to 13 (3d8). On a successful save, the creature takes half as much damage and isn't pushed.</attack>
+		<effect>Deluge,Recharge 4-6,Zegana conjures a wave of water that crashes down on an area within 120 feet of her. The area can be up to 30 feet long, up to 10 feet wide, and up to 10 feet tall. Each creature in that area must make a DC 18 Dexterity saving throw. On a failed save, a creature takes 18 (4d8) bludgeoning damage and is knocked prone. On a successful save, a creature takes half as much damage and isn't knocked prone. The water spreads out across the ground, extinguishing unprotected flames it comes in contact with, and then vanishes.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Adaptive Skin,1,Zegana gains resistance to one damage type of her choice - acid, fire, lightning, or thunder - until the start of her next turn.</legendaryaction>
+		<legendaryaction>Trident,1,Zegana makes one melee attack with the Prime Speaker's Trident.</legendaryaction>
+		<legendaryaction>Enlarge,2,Zegana casts enlarge/reduce on herself, using the enlarge option, without expending a spell slot.</legendaryaction>
+		<legendaryaction>Deluge,3,Zegana uses Deluge, if available.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Androsphinx</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -8377,6 +8984,126 @@ Third Roar. Each creature makes a DC 18 Constitution saving throw. On a failed s
 		<lairaction>The sphinx shifts itselfand up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair. the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Lazav</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,true</type>
+	<align>NE</align>
+	<cr>17.0</cr>
+	<ac>18</ac>
+	<hp>204</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 16,DEX 24,CON 18,INT 22,WIS 20,CHA 22</stats>
+	<saves>DEX 13,INT 12,WIS 11,CHA 12</saves>
+	<skills>DECEPTION 18,INSIGHT 11,PERCEPTION 11,STEALTH 19</skills>
+	<multipliers>
+		<RESISTANCE>PSYCHIC,NECROTIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,THIEVESCANT</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>INT,,20,,Lazav</innatecasting>
+		<passive>Psychic Defenses,Unless Lazav is incapacitated, he is immune to magic that allows other creatures to read his thoughts, determine whether he is lying, know his alignment, or know his creature type. Creatures can telepathically communicate with Lazav only ifhe allows it.</passive>
+		<passive>Elusive,No attack roll has advantage against Lazav unless he is incapacitated.</passive>
+		<passive>Shapechanger Savant,Lazav can use a bonus action to polymorph into a Small or Medium humanoid he has seen. His statistics, other than his size, are the same in each form. Any equipment he is wearing or carrying isn't transformed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Lazav makes three shortsword attacks.</multiattack>
+		<attack>Shortsword,13,5,One target. Hit: 10 (1d6+7) piercing damage plus 10 (3d6) psychic damage, and the target has disadvantage on the next attack roll it makes before Lazav's next turn.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Attack,1,Lazav makes a weapon attack.</legendaryaction>
+		<legendaryaction>Cast a Spell,2,Lazav casts one of his innate spells.</legendaryaction>
+		<legendaryaction>Shifting Nightmare,3,Lazav rapidly takes the form of several nightmarish creatures, lashing out at all nearby. Each creature within 10 feet of Lazav must succeed on a DC 21 Dexterity saving throw or take 18 (4d8) damage of a type chosen by Lazav: acid, cold, fire, lightning, or necrotic.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Borborygmos</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CN</align>
+	<cr>18.0</cr>
+	<ac>14</ac>
+	<hp>270</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 24,DEX 11,CON 24,INT 8,WIS 17,CHA 16</stats>
+	<saves>STR 13,CON 13,WIS 9</saves>
+	<skills>ATHLETICS 13,INSIGHT 9,SURVIVAL 9</skills>
+	<multipliers>
+		<RESISTANCE>POISON,PSYCHIC</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED</conditions>
+	<senses>TREMORSENSE 60</senses>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Poor Depth Perception,Borborygmos has disadvantage on any attack roll against a target more than 30 feet away.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Borborygmos can use his Frightful Presence. He also makes two attacks: one with his maul and one with his stomp.</multiattack>
+		<attack>Maul,13,10,One target. Hit: 28 (6d6+7) bludgeoning damage. If the target is a  creature, it must succeed on a DC 21 Strength saving throw or be knocked prone.</attack>
+		<attack>Stomp,13,5,One target. Hit: 18 (2d10+7) bludgeoning damage.</attack>
+		<attack>Rock,13,30,120,One target. Hit: 29 (4d10+7) bludgeoning damage.</attack>
+		<effect>Frightening Presence,null,Each creature of Borborygmos's choice that is within 60 feet of him and can see or hear him must succeed on a DC 17 Wisdom saving throw or become frightened of him for 1 minute. The frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Borborygmos's Frightful Presence for the next 24 hours.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Attack,1,Borborygmos makes a weapon attack.</legendaryaction>
+		<legendaryaction>Bellow,2,Borborygmos yells menacingly at one creature he can see within 60 feet of him. That creature must succeed on a DC 17 Wisdom saving throw or become frightened of him for 1 minute. If the creature is already frightened, it becomes stunned instead. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to Borborygmos's Bellow for the next 24 hours.</legendaryaction>
+		<legendaryaction>Wide Berth,3,Borborygmos moves up to half his speed and can move through the space of any creature smaller than Huge. The first time Borborygmos enters a creature's space during this move, the creature must make a DC 21 Dexterity saving throw. If the saving throw succeeds, the creature is p ushed 5 feet away from Borborygmos. If the saving throw fails, that creature is knocked prone, and Borborygmos can make a stomp attack against it.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Trostani</name>
+	<size>LARGE</size>
+	<type>FEY,false</type>
+	<align>NG</align>
+	<cr>18.0</cr>
+	<ac>17</ac>
+	<hp>252</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 14,CON 20,INT 16,WIS 30,CHA 25</stats>
+	<saves>CON 11,WIS 16,CHA 13</saves>
+	<skills>ARCANA 9,INSIGHT 16,NATURE 9,PERCEPTION 16,PERSUASION 13</skills>
+	<multipliers>
+	</multipliers>
+	<conditions>CHARMED,GRAPPLED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,ELVISH,DRUIDIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>WIS,,24,,Trostani</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Speak with Beasts and Plants,Trostani can communicate with beasts and plants as if they shared a language.</passive>
+		<passive>Tree Stride,Once on her turn, Trostani can use 10 feet of her movement to step magically into one living tree within her reach and emerge from a second living tree within 60 feet of the first tree, appearing in an unoccupied space within 5 feet of the second tree. Both trees must be Large or bigger.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Trostani takes three actions: she uses Constrict and Touch of Order, and she casts a spell with a casting time of 1 action.</multiattack>
+		<attack>Constrict,11,5,One creature. Hit: 15 (3d6+5) bludgeoning damage, and the target is grappled (escape DC 19). Until this grapple ends, the target is restrained. Trostani can grapple no more than three targets at a time.</attack>
+		<attack>Touch of Order,16,5,One creature. Hit: 23 (3d8+10) radiant damage, and Trostani can choose one magic item she can see in the target's possession. Unless it's an artifact, the item's magic is suppressed until the start of Trostani's next turn.</attack>
+		<effect>Wrath of Mat'Selesnya,Recharge 5-6,Trostani conjures a momentary whirl of branches and vines at a point she can see within 60 feet of her. Each creature in a 30-foot cube on that point must make a DC 24 Dexterity saving throw, taking 21 (6d6) bludgeoning damage and 21 (6d6) slashing damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Voice of Harmony,1,Trostani makes one melee attack, with advantage on the attack roll.</legendaryaction>
+		<legendaryaction>Voice of Life,1,Trostani bestows 20 temporary hit points on another creature she can see within 120 feet of her.</legendaryaction>
+		<legendaryaction>Voice of Order,1,Trostani casts dispel magic.</legendaryaction>
+		<legendaryaction>Chorus of the Conclave,2,Trostani casts suggestion. This counts as one of her daily uses of the spell.</legendaryaction>
+		<legendaryaction>Awaken Grove Guardians,3,Trostani animates one or two trees she can see within 120 feet of her, causing them to uproot themselves and become awakened trees (see the Monster Manual for their stat blocks) for 1 minute or until Trostani uses a bonus action to end the effect. These trees understand Druidic and obey Trostani's spoken commands, but can't speak. If she issues no commands to them, the trees do nothing but follow her and take the Dodge action.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Arcturia</name>
@@ -8593,6 +9320,54 @@ Telepathy is 120ft.</other>
 	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
+	<name>Jarad Vod Savo</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>22.0</cr>
+	<ac>17</ac>
+	<hp>180</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 16,CON 16,INT 20,WIS 16,CHA 15</stats>
+	<saves>CON 10,INT 12,WIS 10</saves>
+	<skills>ARCANA 12,INSIGHT 10,PERCEPTION 10</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,ELVISH,KRAUL</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,12,20,14,JaradVodSavo</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Undead Fortitude,If damage reduces Jarad to 0 hit points, he must make a Constitution saving throw with a DC of 5+ the damage taken, un less the damage is radiant or from a critical hit. On a success, he drops to 1 hit point instead.</passive>
+		<passive>Spore Infusion,Jarad is surrounded by a cloud of spores. As a bonus action, he can cause the spores to deal 11 (2d10) poison damage to a creature he can see within 10 feet of him.</passive>
+		<passive>Regeneration,Jarad regains 25 hit points at the start of his turn. If he takes fire or radiant damage, this trait doesn't function at the start of his next turn. He dies only if he starts its turn with 0 hit points and doesn't regenerate.</passive>
+	</passives>
+	<other>Is a Golgari caster.</other>
+	<actions>
+		<multiattack>Jarad makes two attacks: one with his Noxious Touch and one with his Staff of Svogthir. He can cast a spell with a casting time of 1 action in place of one of these attacks.</multiattack>
+		<attack>Noxious Touch,12,5,One creature. Hit: 28 (8d6) poison damage, and the target must succeed on a DC 20 Constitution saving throw or be poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
+		<attack>Staff of Svogthir,12,5,One target. Hit: 12 (2d6+5) bludgeoning damage plus 13 (3d8) poison damage and 13 (3d8) necrotic damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Cantrip,1,Jarad casts one of his cantrips.</legendaryaction>
+		<legendaryaction>Noxious Touch,2,Jarad uses Noxious Touch.</legendaryaction>
+		<legendaryaction>Disrupt Life,3,Each creature within 30 feet of Jarad must make a DC 20 Constitution saving throw, taking 35 (10d6) necrotic damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>If the Golgari can see any sewer openings, they can cause sewage to overflow. Any creature within 20 feet of such an opening must succeed on a DC 15 Dexterity saving throw or be knocked prone and pushed up to 20 feet in a straight line away from the opening.</lairaction>
+		<lairaction>Spore-laden fungi release a cloud that fills a 20-foot-radius sphere centered on a point the Golgari choose within 120 feet of any member of the group. The cloud spreads around corners and remains until one of the Golgari dismisses it as an action, the Golgari group uses this lair action again, or all the members of the Golgari group die. The area within the cloud is lightly obscured. Any creature in the cloud when it appears must make a DC 15 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one. Any creature that ends its turn in the cloud takes 10 (3d6) poison damage.</lairaction>
+		<lairaction>Tendrils of creeping fungi reach out to ensnare the enemies of the Golgari. The Golgari choose a 15-foot-radius sphere centered on a point within 60 feet of any member of the group. Each creature in the area that isn't allied with the Golgari group must succeed on a DC 15 Dexterity saving throw or become restrained until the Golgari group uses this lair action again, all the members of the group are slain, or no member of the group is within 60 feet of the effect. A creature restrained in this way can use an action to make a DC 15 Strength check, ending the restrained effect on itself with a success.</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
 	<name>Trobriand</name>
 	<size>LARGE</size>
 	<type>CONSTRUCT,false</type>
@@ -8792,6 +9567,95 @@ Halaster also wears a horned ring (a very rare magic item that requires attuneme
 		<lairaction>Volcanic gasses form a cloud in a 20ft radius sphere centered on a point the dragon can see within 120ft of it. The sphere spreads around corners, and its area is lightly obscured. It lasts until initiative count 20 on the next round. Each creature that starts its turn in the cloud must succeed on a DC 13 Constitution saving throw or be poisoned until the end of its next turn. While poisoned in this way, a creature is incapacitated.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Rakdos</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>24.0</cr>
+	<ac>20</ac>
+	<hp>300</hp>
+	<speed>WALK 40,FLY 80</speed>
+	<stats>STR 26,DEX 15,CON 22,INT 14,WIS 18,CHA 30</stats>
+	<saves>STR 15,CON 13,WIS 11,CHA 17</saves>
+	<skills>INTIMIDATION 17,PERFORMANCE 17,PERSUASION 17</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,25,,Rakdos</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Cruel Entertainment,When a creature Rakdos can see within 60 feet of him is reduced to 0 hit points, Rakdos gains 25 temporary hit points.</passive>
+		<passive>Captivating Presence,Any creature that starts its turn within 30 feet of Rakdos must make a DC 25 Wisdom saving throw. On a failed save, the creature becomes charmed by Rakdos for 1 minute or until the creature is farther than 30 feet away from him. On a successful save, the creature becomes immune to Rakdos's Captivating Presence for 24 hours.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Rakdos makes two attacks with his Curtain-Call Scythe or his claws.</multiattack>
+		<attack>Curtain-Call Scythe,15,10,One target. Hit: 24 (3d10+8) slashing damage plus 13 (3d8) fire damage.</attack>
+		<attack>Claws,15,10,One target. Hit: 17 (2d8+8) slashing damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Sadistic Revelry,1,Each creature within 60 feet of Rakdos that is his ally or is charmed by him must use its reac tion to move up to half its speed toward the creature closest to it that it can see, provided it isn't already within S feet of that creature. It then must make one melee attack against that creature if it is able to do so.</legendaryaction>
+		<legendaryaction>Scythe,2,Rakdos uses Curtain-Call Scythe.</legendaryaction>
+		<legendaryaction>Touch of Pain,3,Rakdos makes a claw attack against one creature within 10 feet of h im. The target must succeed on a DC 25 Constitution saving throw or be poisoned for 1 minute. While poisoned in this way, the creature can't maintain concentration on a spell or any other effect that requires concentration. The poisoned creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Fire erupts from the ground at up to four points of the DM's choice in the carnival. The fire lasts for 1 minute or until this action is used again. Each jet of flame is a 20-foot-tall cylinder with a 5-foot radius. Each creature in the cylinder when it first appears must make a DC 15 Dexterity saving throw, taking 10 (3d6) fire damage on a failed save, or half as much damage on a successful one. Any creature that starts its turn in the flames must also make the saving throw.</lairaction>
+		<lairaction>Whirling blades, spiked chains. or other implements of agony appear for a moment to menace 1d6 random creatures in a 20-foot cube. Each target must succeed on a DC 15 Dexterity saving throw or take 9 (2d8) force damage.</lairaction>
+		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
+	</lair>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Niv-Mizzet</name>
+	<size>GARGANTUAN</size>
+	<type>DRAGON,false</type>
+	<align>CN</align>
+	<cr>26.0</cr>
+	<ac>22</ac>
+	<hp>370</hp>
+	<speed>WALK 40,CLIMB 30,FLY 80</speed>
+	<stats>STR 29,DEX 14,CON 29,INT 30,WIS 17,CHA 25</stats>
+	<saves>CON 17,INT 18,WIS 11</saves>
+	<skills>ARCANA 18,INSIGHT 11,PERCEPTION 11</skills>
+	<multipliers>
+		<RESISTANCE>COLD,PSYCHIC,THUNDER</RESISTANCE>
+		<IMMUNITY>FIRE,LIGHTNING</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED</conditions>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,18,26,20,NivMizzet</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Master Chemister,When Niv-Mizzet casts a spell that deals damage, he can change the spell's damage to cold, fire, force, lightning, or thunder.</passive>
+		<passive>Locus of the Firemind,Niv-Mizzet can maintain concentration on two different spells at the same time. In addition, he has advantage on saving throws to maintain concentration on spells.</passive>
+	</passives>
+	<other>Is an Izzet spellcaster.</other>
+	<actions>
+		<multiattack>Niv-Mizzet makes three attacks: one with his bite and two with his claws.</multiattack>
+		<attack>Bite,17,15,One target. Hit: 18 (2d8+9) piercing damage plus 14 (4d6) fire damage.</attack>
+		<attack>Claw,17,10,One target. Hit: 14 (2d4+9) slashing damage.</attack>
+		<attack>Tail,17,20,One target. Hit: 16 (2d6+9) bludgeoning damage.</attack>
+		<effect>Fire Breath,Recharge 5-6,Niv-Mizzet exhales fire in a 90-foot cone. Each creature in that area must make a DC 25 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Cantrip,1,Niv-Mizzet casts one of his cantrips.</legendaryaction>
+		<legendaryaction>Tail Attack,1,Niv-Mizzet makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,Niv-Mizzet beats his wings. Each creature within 15 feet of him must succeed on a DC 25 Dexterity saving throw or take 14 (2d4+9) bludgeoning damage and be knocked prone. Niv-Mizzet can then fly up to half his flying speed.</legendaryaction>
+		<legendaryaction>Dracogenius,3,Niv-Mizzet regains a spell slot of 3rd level or lower.</legendaryaction>
+	</legendaryactions>
+	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
 	<name>Tiamat</name>

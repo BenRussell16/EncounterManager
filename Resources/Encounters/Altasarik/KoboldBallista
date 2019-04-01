@@ -1,7 +1,0 @@
-<encounter>
-	<name>KoboldBallista</name>
-	<creature>2,Bronze Scout</creature>
-	<creature>1,Oaken Bolter</creature>
-	<mult>x1</mult>
-	<party>7,8,8</party>
-</encounter>

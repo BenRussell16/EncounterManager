@@ -1,0 +1,15 @@
+<spellbook>
+	<name>ThoughtSpy</name>
+	<daily>
+		<0>
+			<spell>Charm person,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Encode Thoughts,false</spell>
+		</0>
+		<1>
+			<spell>Blur,false</spell>
+			<spell>Detect thoughts,false</spell>
+			<spell>Gaseous form,false</spell>
+		</1>
+	</daily>
+</spellbook>

@@ -1,0 +1,15 @@
+<spellbook>
+	<name>Zegana</name>
+	<slot>
+		<known>Acid splash,Druidcraft,Ray of frost,Shape water,Colour spray,Expiditious retreat,Fog cloud,Shield,Enlarge/Reduce,Gust of wind,Counterspell,Fly,Slow,Control water,Ice storm,Polymorph,Conjure elemental,Creation,Move earth,Wall of ice,Prismatic spray,Teleport,Control weather,Dominate monster</known>
+		<0>Acid splash,Ray of frost,Shape water,Druidcraft</0>
+		<1>4,Shield,Fog cloud,Expiditious retreat,Colour spray</1>
+		<2>3,Gust of wind,Enlarge/Reduce</2>
+		<3>3,Slow,Fly,Counterspell</3>
+		<4>3,Polymorph,Ice storm,Control water</4>
+		<5>2,Creation,Conjure elemental</5>
+		<6>1,Wall of ice,Move earth</6>
+		<7>1,Teleport,Prismatic spray</7>
+		<8>1,Dominate monster,Control weather</8>
+	</slot>
+</spellbook>

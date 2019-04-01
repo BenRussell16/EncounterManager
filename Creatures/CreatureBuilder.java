@@ -2207,9 +2207,15 @@ public class CreatureBuilder {
 
 	private void updateCreatureList() {								//TODO - Label for query update
 		for(int i=0; i<creatures.size(); i++) {
-			boolean visible = query.contains(creatures.get(i));
+			boolean visible = false;//query.contains(creatures.get(i));
 			Label curName = names.get(i);
 			Label curCR = crs.get(i);
+			for(Creature c:creatures){
+				if(query.contains(c) && curName.getText().equals(" "+c.getName())){
+					visible = true;
+					break;
+				}
+			}
 			curName.setVisible(visible);//hide the entry in the list for excluded creatures
 			curCR.setVisible(visible);
 			if(!visible) {

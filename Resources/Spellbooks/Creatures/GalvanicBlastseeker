@@ -1,0 +1,13 @@
+<spellbook>
+	<name>GalvanicBlastseeker</name>
+	<daily>
+		<1>
+			<spell>Stoneskin,false</spell>
+		</1>
+		<3>
+			<spell>Levitate,false</spell>
+			<spell>Lightning bolt,false</spell>
+			<spell>Thunderwave,false</spell>
+		</3>
+	</daily>
+</spellbook>

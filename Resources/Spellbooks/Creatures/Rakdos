@@ -1,0 +1,8 @@
+<spellbook>
+	<name>Rakdos</name>
+	<daily>
+		<0>
+			<spell>Hellish rebuke,false,5</spell>
+		</0>
+	</daily>
+</spellbook>

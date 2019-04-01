@@ -1,0 +1,9 @@
+<spellbook>
+	<name>RakdosLampooner</name>
+	<slot>
+		<known>Dancing lights,Minor illusion,Vicious mockery,Bane,Dissonant whispers,Silent image,Tasha's hideous laughter,Thunderwave,Crown of madness,Enthrall,Suggestion</known>
+		<0>Dancing lights,Minor illusion,Vicious mockery</0>
+		<1>4,Bane,Dissonant whispers,Silent image,Tasha's hideous laughter,Thunderwave</1>
+		<2>3,Suggestion,Enthrall,Crown of madness</2>
+	</slot>
+</spellbook>

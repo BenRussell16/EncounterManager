@@ -1,0 +1,15 @@
+<spellbook>
+	<name>CounterfluxBlastseeker</name>
+	<daily>
+		<1>
+			<spell>Counterspell,false</spell>
+			<spell>Dispel magic,false</spell>
+			<spell>Protection from energy,false</spell>
+		</1>
+		<3>
+			<spell>Enlarge/Reduce,false</spell>
+			<spell>Mage armour,true</spell>
+			<spell>Scorching ray,false</spell>
+		</3>
+	</daily>
+</spellbook>

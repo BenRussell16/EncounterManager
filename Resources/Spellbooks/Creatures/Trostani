@@ -1,0 +1,22 @@
+<spellbook>
+	<name>Trostani</name>
+	<daily>
+		<0>
+			<spell>Dispel magic,false</spell>
+			<spell>Druidcraft,false</spell>
+		</0>
+		<1>
+			<spell>Conjure fey,false</spell>
+			<spell>Mass cure wounds,false</spell>
+		</1>
+		<3>
+			<spell>Bless,false</spell>
+			<spell>Conjure animals,false</spell>
+			<spell>Giant insect,false</spell>
+			<spell>Moonbeam,false</spell>
+			<spell>Plant growth,false</spell>
+			<spell>Spike growth,false</spell>
+			<spell>Suggestion,false</spell>
+		</3>
+	</daily>
+</spellbook>

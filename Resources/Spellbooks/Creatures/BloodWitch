@@ -1,0 +1,23 @@
+<spellbook>
+	<name>BloodWitch</name>
+	<daily>
+		<0>
+			<spell>Alter self,false</spell>
+			<spell>Detect magic,false</spell>
+			<spell>Eldritch blast,false,3</spell>
+			<spell>False life,false</spell>
+			<spell>Levitate,true</spell>
+			<spell>Mage armour,true</spell>
+		</0>
+		<1>
+			<spell>Circle of death,false</spell>
+			<spell>Enthrall,false</spell>
+			<spell>Suggestion,false</spell>
+		</1>
+		<3>
+			<spell>Hellish rebuke,false</spell>
+			<spell>Hex,false</spell>
+			<spell>Scorching ray,false,3</spell>
+		</3>
+	</daily>
+</spellbook>

@@ -1,0 +1,12 @@
+<spellbook>
+	<name>ObzedatGhost</name>
+	<daily>
+		<0>
+			<spell>Chill touch,false,2</spell>
+		</0>
+		<1>
+			<spell>Sanctuary,false</spell>
+			<spell>Spirit guardians,false,4</spell>
+		</1>
+	</daily>
+</spellbook>

@@ -1,0 +1,14 @@
+<spellbook>
+	<name>JaradVodSavo</name>
+	<slot>
+		<known>Acid splash,Chill touch,Mage hand,Poison spray,Prestidigitation,Entangle,Ray of sickness,Sleep,Melf's acid arrow,Ray of enfeeblement,Spider climb,Web,Animate dead,Plant growth,Vampiric touch,Blight,Giant insect,Grasping vine,Cloudkill,Insect plague,Circle of death,Create undead,Finger of death,Forcecage</known>
+		<0>Acid splash,Chill touch,Mage hand,Poison spray,Prestidigitation</0>
+		<1>4,Sleep,Ray of sickness,Entangle</1>
+		<2>3,Melf's acid arrow,Ray of enfeeblement,Spider climb,Web</2>
+		<3>3,Vampiric touch,Animate dead,Plant growth</3>
+		<4>3,Blight,Giant insect,Grasping vine</4>
+		<5>2,Insect plague,Cloudkill</5>
+		<6>1,Create undead,Circle of death</6>
+		<7>1,Forcecage,Finger of death</7>
+	</slot>
+</spellbook>

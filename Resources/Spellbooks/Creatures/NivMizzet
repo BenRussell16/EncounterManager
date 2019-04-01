@@ -1,0 +1,16 @@
+<spellbook>
+	<name>NivMizzet</name>
+	<slot>
+		<known>Fire bolt,Light,Prestidigitation,Ray of frost,Shocking grasp,Detect magic,Magic missile,Shield,Thunderwave,Unseen servant,Blur,Enlarge/Reduce,Flaming sphere,Hold person,Scorching ray,Counterspell,Fireball,Lightning bolt,Slow,Confusion,Dimension door,Fabricate,Polymorph,Wall of fire,Conjure elemental,Wall of force,Chain lightning,Disintegrate,True seeing,Project image,Reverse gravity,Teleport,Control weather,Maze,Power word stun,Prismatic wall</known>
+		<0>Fire bolt,Light,Prestidigitation,Ray of frost,Shocking grasp</0>
+		<1>4,Unseen servant,Thunderwave,Shield,Magic missile,Detect magic</1>
+		<2>3,Scorching ray,Hold person,Flaming sphere,Enlarge/Reduce,Blur</2>
+		<3>3,Counterspell,Fireball,Lightning bolt,Slow</3>
+		<4>3,Wall of fire,Polymorph,Fabricate,Dimension door,Confusion</4>
+		<5>2,Conjure elemental,Wall of force</5>
+		<6>1,True seeing,Disintegrate,Chain lightning</6>
+		<7>1,Teleport,Reverse gravity,Project image</7>
+		<8>1,Power word stun,Maze,Control weather</8>
+		<9>1,Prismatic wall</9>
+	</slot>
+</spellbook>

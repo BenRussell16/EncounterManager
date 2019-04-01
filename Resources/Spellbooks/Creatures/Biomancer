@@ -1,0 +1,15 @@
+<spellbook>
+	<name>Biomancer</name>
+	<slot>
+		<known>Acid splash,Light,Mending,Poison spray,Shocking grasp,Detect magic,Grease,Shield,Alter self,Darkvision,Enlarge/Reduce,Hold person,Counterspell,Dispel magic,Haste,Protection from energy,Confusion,Conjure minor elementals,Polymorph,Cone of cold,Creation,Hold monster,Move earth,Wall of ice,Prismatic spray,Control weather</known>
+		<0>Acid splash,Light,Mending,Poison spray,Shocking grasp</0>
+		<1>4,Shield,Grease,Detect magic</1>
+		<2>3,Hold person,Enlarge/Reduce,Darkvision,Alter self</2>
+		<3>3,Protection from energy,Haste,Dispel magic,Counterspell</3>
+		<4>3,Polymorph,Conjure minor elementals,Confusion</4>
+		<5>2,Hold monster,Creation,Cone of cold</5>
+		<6>1,Wall of ice,Move earth</6>
+		<7>1,Prismatic spray</7>
+		<8>1,Control weather</8>
+	</slot>
+</spellbook>

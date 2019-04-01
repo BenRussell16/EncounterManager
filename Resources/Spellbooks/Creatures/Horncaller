@@ -1,0 +1,9 @@
+<spellbook>
+	<name>Horncaller</name>
+	<daily>
+		<1>
+			<spell>Bless,false</spell>
+			<spell>Conjure animals,false</spell>
+		</1>
+	</daily>
+</spellbook>

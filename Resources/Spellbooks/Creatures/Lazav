@@ -1,0 +1,20 @@
+<spellbook>
+	<name>Lazav</name>
+	<daily>
+		<0>
+			<spell>Detect thoughts,false</spell>
+			<spell>Encode Thoughts,false</spell>
+			<spell>Freedom of movement,false</spell>
+			<spell>Vicious mockery,false,4</spell>
+		</0>
+		<1>
+			<spell>Modify memory,false</spell>
+			<spell>Rary's telepathic bond,false</spell>
+		</1>
+		<3>
+			<spell>Blur,false</spell>
+			<spell>Confusion,false</spell>
+			<spell>Mirror image,false</spell>
+		</3>
+	</daily>
+</spellbook>

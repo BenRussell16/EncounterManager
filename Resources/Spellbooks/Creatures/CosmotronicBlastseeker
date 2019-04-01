@@ -1,0 +1,13 @@
+<spellbook>
+	<name>CosmotronicBlastseeker</name>
+	<daily>
+		<2>
+			<spell>Fireball,false</spell>
+		</2>
+		<3>
+			<spell>Scorching ray,false</spell>
+			<spell>Shield,false</spell>
+			<spell>Thunderwave,false</spell>
+		</3>
+	</daily>
+</spellbook>
