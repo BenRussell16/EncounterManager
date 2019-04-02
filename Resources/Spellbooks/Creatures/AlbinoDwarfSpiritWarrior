@@ -1,0 +1,12 @@
+<spellbook>
+	<name>AlbinoDwarfSpiritWarrior</name>
+	<daily>
+		<1>
+			<spell>Hunters mark,false</spell>
+			<spell>Jump,false</spell>
+			<spell>Pass without trace,false</spell>
+			<spell>Speak with animals,false</spell>
+			<spell>Speak with plants,false</spell>
+		</1>
+	</daily>
+</spellbook>

@@ -1,0 +1,16 @@
+<spellbook>
+	<name>Acererak</name>
+	<slot>
+		<known>Mage hand,Ray of frost,Shocking grasp,Ray of sickness,Shield,Arcane lock,Knock,Animate dead,Counterspell,Blight,Ice storm,Phantasmal killer,Cloudkill,Hold monster,Wall of force,Chain lightning,Circle of death,Disintegrate,Finger of death,Plane shift,Teleport,Maze,Mind blank,Power word kill,Time stop</known>
+		<0>Shocking grasp,Ray of frost,Mage hand</0>
+		<1>0,Ray of sickness,Shield</1>
+		<2>0,Knock,Arcane lock</2>
+		<3>0,Counterspell,Animate dead</3>
+		<4>3,Phantasmal killer,Ice storm,Blight</4>
+		<5>3,Wall of force,Hold monster,Cloudkill</5>
+		<6>3,Disintegrate,Circle of death,Chain lightning</6>
+		<7>3,Teleport,Plane shift,Finger of death</7>
+		<8>2,Mind blank,Maze</8>
+		<9>2,Time stop,Power word kill</9>
+	</slot>
+</spellbook>

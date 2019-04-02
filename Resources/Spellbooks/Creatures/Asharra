@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Asharra</name>
+	<slot>
+		<known>Druidcraft,Mending,Produce flame,Detect magic,Faerie fire,Thunderwave,Gust of wind,Hold person,Lesser restoration,Call lightning,Wind wall</known>
+		<0>Produce flame,Druidcraft,Mending</0>
+		<1>4,Thunderwave,Faerie fire,Detect magic</1>
+		<2>3,Lesser restoration,Hold person,Gust of wind</2>
+		<3>2,Wind wall,Call lightning</3>
+	</slot>
+</spellbook>

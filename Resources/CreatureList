@@ -1,4 +1,29 @@
 <creature>
+	<name>Almiraj</name>
+	<size>SMALL</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.0</cr>
+	<ac>13</ac>
+	<hp>3</hp>
+	<speed>WALK 50</speed>
+	<stats>STR 2,DEX 16,CON 10,INT 2,WIS 14,CHA 10</stats>
+	<skills>PERCEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 30</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen hearing,This creature has advantage on Wisdom (Perception) checks that rely on hearing.</passive>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Horn,5,5,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
 	<name>Commoner</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -243,6 +268,32 @@ Understands Common but doesn't speak.</other>
 		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Albino Dwarf Warrior</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>30</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 13,DEX 13,CON 17,INT 12,WIS 14,CHA 11</stats>
+	<skills>PERCEPTION 4,STEALTH 3,SURVIVAL 4</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Dwarven Resilience,The dwarf has advantage on saving throws against poison.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Handaxe,3,20,60,One target. Hit: 4 (1d6+1) slashing damage.</attack>
+	</actions>
+	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Anarch</name>
@@ -1202,6 +1253,59 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 		<reaction>Self-Sacrifice,When a creature within 5 feet of the thrull is hit by an attack, the thrull swaps places with that creature and is hit instead.</reaction>
 	</reactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Albino Dwarf Spirit Warrior</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>30</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 13,DEX 13,CON 17,INT 12,WIS 14,CHA 11</stats>
+	<skills>PERCEPTION 4,STEALTH 3,SURVIVAL 4</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,,,,AlbinoDwarfSpiritWarrior</innatecasting>
+		<passive>Dwarven Resilience,The dwarf has advantage on saving throws against poison.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Handaxe,3,20,60,One target. Hit: 4 (1d6+1) slashing damage.</attack>
+	</actions>
+	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
+	<name>Aldani (Lobsterfolk)</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>LN</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>49</hp>
+	<speed>WALK 20,SWIM 30</speed>
+	<stats>STR 13,DEX 8,CON 12,INT 10,WIS 14,CHA 10</stats>
+	<skills>PERCEPTION 4,SURVIVAL 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The aldani makes two attacks with its claws.</multiattack>
+		<attack>Claw,3,5,One target. Hit: 5 (1d8+1) slashing damage, and the target is grappled (escape DC 11). The aldani has two claws, each of which can grapple only one target.</attack>
+	</actions>
+	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Bronze Scout</name>
@@ -2175,6 +2279,32 @@ Innate spellcasting is psionics.</other>
 		<attack>Javelin,5,30,120,One target. Hit: 10 (2d6+3) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Asharra</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,AARAKOCRA,false</type>
+	<align>LN</align>
+	<cr>2.0</cr>
+	<ac>12</ac>
+	<hp>31</hp>
+	<speed>WALK 20,FLY 50</speed>
+	<stats>STR 10,DEX 14,CON 10,INT 14,WIS 17,CHA 11</stats>
+	<skills>HISTORY 4,INSIGHT 5,PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,5,13,5,Asharra</spellcasting>
+		<passive>Dive Attack,If the aarakocra is flying and dives at least 30ft straight towards a target and then hits with a melee weapon attack, the attack deals an extra 3 (1d6) damage to the target.</passive>
+	</passives>
+	<other>Summoning air elementals. Five aarakocra within 30ft of each other can magically summon an air elemental. Each of the five must use its action and movement on three consecutive turns to perform an aerial dance and must maintain concentration (as if concentrating on a spell). When all five have done finished their third turn of the dance, the air elemental appears in an unoccupied space within 60ft of them. It is friendly toward them and obeys their spoken commands. It remains for 1 hour, until it or all its summoners die, or until any of its summoners dismisses it as a bonus action. A summoner can't perform the dance again until it finishes a short  rest. When the elemental returns to the Elemental Plane of Air, any aarakocra within 5ft of it can return with it.</other>
+	<actions>
+		<attack>Talon,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
+		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Bandit Captain</name>
@@ -4795,6 +4925,41 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Clay Gladiator</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>5.0</cr>
+	<ac>17</ac>
+	<hp>112</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 18,DEX 15,CON 16,INT 10,WIS 12,CHA 15</stats>
+	<saves>STR 7,DEX 5,CON 6</saves>
+	<skills>ATHLETICS 10,INTIMIDATION 5</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,POISONED</conditions>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Brute,A melee weapon deals one extra die of its damage when the gladiator hits with it (included in the attack).</passive>
+		<passive>Brave,The gladiator has advantage on saving throws against being frightened.</passive>
+	</passives>
+	<other>Knows any one language (usually Common) but doesn't speak.
+The gladiator cannot be disarmed.</other>
+	<actions>
+		<multiattack>The gladiator makes three melee attacks.</multiattack>
+		<attack>Spear,7,5,One target. Hit 11 (2d6+4) piercing damage, or 13 (2d8+4) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shield Bash,7,5,One creature. Hit: 9 (2d4+4) bludgeoning damage. lf the target is a Medium or smaller creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The gladiator adds 3 to its AC against one melee attack that would hit it. To do so, the gladiator must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
 	<name>Dragonfang</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -4915,6 +5080,40 @@ The attacker must make a DC 14 Wisdom saving throw. On a failed save, the attack
 		<attack>Touch,6,5,One target. Hit: 7 (1d8+3) fire damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Flesh Golem</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>TN</align>
+	<cr>5.0</cr>
+	<ac>9</ac>
+	<hp>93</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 9,CON 18,INT 6,WIS 10,CHA 5</stats>
+	<multipliers>
+		<IMMUNITY>LIGHTNING,POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Lightning Absorption,Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt.</passive>
+		<passive>Averion of Fire,If the golem takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn.</passive>
+		<passive>Berserk,Whenever the golem starts its turn with 40 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. lf no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.
+The golem's creator, if within 60 feet of the berserk golem, can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a DC 15 Charisma (Persuasion) check. lf the check succeeds, the golem ceases being berserk. lf it takes damage while still at 40 hit points or fewer, the golem might go berserk again.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunity.
+Understands the languages of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes two slam attacks.</multiattack>
+		<attack>Slam,7,5,One target. Hit: 13 (2d8+4) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Flux Blastseeker</name>
@@ -6085,6 +6284,40 @@ If the wall is summoned in a creature's space, the creature is pushed to one sid
 	<source>CURSEOFSTRAHD</source>
 </creature>
 <creature>
+	<name>Tomb Guardian</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>TN</align>
+	<cr>6.0</cr>
+	<ac>17</ac>
+	<hp>93</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 9,CON 18,INT 6,WIS 10,CHA 5</stats>
+	<multipliers>
+		<IMMUNITY>LIGHTNING,POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Lightning Absorption,Whenever the golem is subjected to lightning damage, it takes no damage and instead regains a number of hit points equal to the lightning damage dealt.</passive>
+		<passive>Averion of Fire,If the golem takes fire damage, it has disadvantage on attack rolls and ability checks until the end of its next turn.</passive>
+		<passive>Berserk,Whenever the golem starts its turn with 40 hit points or fewer, roll a d6. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. lf no creature is near enough to move to and attack, the golem attacks an object, with preference for an object smaller than itself. Once the golem goes berserk, it continues to do so until it is destroyed or regains all its hit points.
+The golem's creator, if within 60 feet of the berserk golem, can try to calm it by speaking firmly and persuasively. The golem must be able to hear its creator, who must take an action to make a DC 15 Charisma (Persuasion) check. lf the check succeeds, the golem ceases being berserk. lf it takes damage while still at 40 hit points or fewer, the golem might go berserk again.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunity.
+Understands the languages of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes two Spiked Gauntlet attacks.</multiattack>
+		<attack>Spiked Gauntlets,7,5,One target. Hit: 13 (2d8+4) bludgeoning damage plus 7 (2d6) piercing damage.</attack>
+	</actions>
+	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
 	<name>Undercity Medusa</name>
 	<size>MEDIUM</size>
 	<type>MONSTOSITY,false</type>
@@ -7234,6 +7467,55 @@ Only has legendary actions when all 5 Obzedat ghosts are there, and they share t
 		<attack>Sting,7,10,One target. Hit: 9 (1d10+4) piercing damage plus 11 (2d10) lightning damage.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>The King of Feathers</name>
+	<size>HUGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>8.0</cr>
+	<ac>13</ac>
+	<hp>200</hp>
+	<speed>WALK 50</speed>
+	<stats>STR 25,DEX 10,CON 19,INT 2,WIS 12,CHA 9</stats>
+	<skills>PERCEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>WIS,,,,KingOfFeathers</innatecasting>
+	</passives>
+	<other>Can see invisible creatures and objects.</other>
+	<actions>
+		<multiattack>The king of feathers makes two attacks: one with its bite and one with its tail. lt can't make both attacks against the same target.</multiattack>
+		<attack>Bite,10,10,One target. Hit: 33 (4d12+7) piercing damage. lf the target is a Medium or smaller creature, it is grappled (escape DC 17). Until this grapple ends, the target is restrained, and the king of feathers can't bite another target.</attack>
+		<attack>Tail,10,10,One target. Hit: 20 (3d8+7) bludgeoning damage.</attack>
+		<effect>Summon Swarm,Recharge 5-6,The King of Feathers exhales a swarm of insects (wasps) that forms in a space within 20 feet of it. The swarm acts as an ally of the King of Feathers and takes its turn immediately after it. The swarm disperses after 1 minute.</effect>
+	</actions>
+	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
+	<name>Tyrannosaurus Rex</name>
+	<size>HUGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>8.0</cr>
+	<ac>13</ac>
+	<hp>136</hp>
+	<speed>WALK 50</speed>
+	<stats>STR 25,DEX 10,CON 19,INT 2,WIS 12,CHA 9</stats>
+	<skills>PERCEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The tyrannosaurus makes two attacks: one with its bite and one with its tail. lt can't make both attacks against the same target.</multiattack>
+		<attack>Bite,10,10,One target. Hit: 33 (4d12+7) piercing damage. lf the target is a Medium or smaller creature, it is grappled (escape DC 17). Until this grapple ends, the target is restrained, and the tyrannosaurus can't bite another target.</attack>
+		<attack>Tail,10,10,One target. Hit: 20 (3d8+7) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Young Green Dragon</name>
@@ -10110,6 +10392,48 @@ Understands the languages of its creator but can't speak.</other>
 		<effect>Poison Breath,Recharge 6,The golem exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 19 Constitution saving throw, taking 45 (10d8) poison damage on a failed save, or half as much darnage om a successful one.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Acererak</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>23.0</cr>
+	<ac>21</ac>
+	<hp>285</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 16,CON 20,INT 27,WIS 21,CHA 20</stats>
+	<saves>CON 12,INT 15,WIS 12</saves>
+	<skills>ARCANA 22,HISTORY 22,INSIGHT 12,PERCEPTION 12,RELIGION 15</skills>
+	<multipliers>
+		<RESISTANCE>COLD,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED,STUNNED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>COMMON,DRACONIC,DWARVISH,ELVISH,GIANT,UNDERCOMMON,PRIMORDIAL,ABYSSAL,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,15,23,20,Acererak</spellcasting>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Special Equipment,Acererak carries the Staff of the Forgotten One (see Tomb of Annihilation). He wears a talisman of the sphere and has a sphere of annihilation under his control.</passive>
+		<passive>Rejuvination,Acererak's body turns to dust when he drops to 0 hit points, and his equipment is left behind. Acererak gains a new body after 1d10 days, regaining all his hit points and becoming active again. The new body appears within 5 feet of Acererak's phylactery, the location of which is hidden.</passive>
+	</passives>
+	<other>Level 1-3 spells are at will.</other>
+	<actions>
+		<attack>Paralyzing Touch,8,5,One creature. Hit: 10 (3d6) cold damage, and the target must succeed on a DC 20 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
+		<attack>Staff (+3 Quarterstaff),11,5,One target. Hit: 7 (1d6+4) bludgeoning damage plus 10 (3d6) necrotic damage, or 8 (1d8+4) bludgeoning damage plus 10 (3d6) necrotic damage when used with two hands.</attack>
+		<effect>Invoke Curse,null,While holding the Staff of the Forgotten One, Acererak expends 1 charge from it and targets one creature he can see within 60 feet of him. The target must succeed on a DC 23 Constitution saving throw or be cursed. Until the curse is ended, the target can't regain hit points and has vulnerability to necrotic damage. Greater restoration, remove curse, or similar magic ends the curse on the target.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>At-Will Spell,1,Acererak casts one of his at-will spells.</legendaryaction>
+		<legendaryaction>Melee Attack,1,Acererak uses Paralyzing Touch or makes one melee attack with his staff.</legendaryaction>
+		<legendaryaction>Frightening Gaze,2,Acererak fixes his gaze on one creature he can see with in 10 feet of him. The target must succeed on a DC 20 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to Acererak's gaze for the next 24 hours.</legendaryaction>
+		<legendaryaction>Talisman of the Sphere,2,Acererak uses his talisman of the sphere to move the sphere of annihilation under his control up to 90 feet.</legendaryaction>
+		<legendaryaction>Disrupt Life,3,Each creature within 20 feet of Acererak must make a DC 20 Constitution saving throw against this magic, taking 42 (12d6) necrotic damage on a failed save, or half as much damage on a successful one.</legendaryaction>
+	</legendaryactions>
+	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Ancient blue dragon</name>
