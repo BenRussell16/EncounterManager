@@ -1,0 +1,14 @@
+<spellbook>
+	<name>FirenewtWarlockOfImix</name>
+	<slot>
+		<known>Fire bolt,Guidance,Light,Mage hand,Prestidigitation,Burning hands,Hellish rebuke,Flaming sphere,Scorching ray</known>
+		<0>Fire bolt,Guidance,Light,Mage hand,Prestidigitation</0>
+		<1>0,Hellish rebuke,Burning hands</1>
+		<2>2,Scorching ray,Flaming sphere</2>
+	</slot>
+	<daily>
+		<0>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

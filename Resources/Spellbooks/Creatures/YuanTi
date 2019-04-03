@@ -1,0 +1,11 @@
+<spellbook>
+	<name>YuanTi</name>
+	<daily>
+		<0>
+			<spell>Animal friendship,false</spell>
+		</0>
+		<3>
+			<spell>Suggestion,false</spell>
+		</3>
+	</daily>
+</spellbook>

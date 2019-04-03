@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Chwinga</name>
+	<daily>
+		<0>
+			<spell>Druidcraft,false</spell>
+			<spell>Guidance,false</spell>
+			<spell>Pass without trace,false</spell>
+			<spell>Resistance,false</spell>
+		</0>
+	</daily>
+</spellbook>

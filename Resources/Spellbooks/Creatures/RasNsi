@@ -1,0 +1,13 @@
+<spellbook>
+	<name>RasNsi</name>
+	<slot>
+		<known>Chill touch,Fire bolt,Mage hand,Mending,Poison spray,Expiditious retreat,False life,Magic missile,Shield,Blindness/Deafness,Hold person,Misty step,Animate dead,Counterspell,Fireball,Blight,Polymorph,Contact other plane,Geas,Create undead</known>
+		<0>Chill touch,Fire bolt,Mage hand,Mending,Poison spray</0>
+		<1>4,Shield,Magic missile,False life,Expiditious retreat</1>
+		<2>3,Misty step,Hold person,Blindness/Deafness</2>
+		<3>3,Fireball,Counterspell,Animate dead</3>
+		<4>3,Polymorph,Blight</4>
+		<5>2,Geas,Contact other plane</5>
+		<6>1,Create undead</6>
+	</slot>
+</spellbook>

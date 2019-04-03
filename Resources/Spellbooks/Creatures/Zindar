@@ -1,0 +1,14 @@
+<spellbook>
+	<name>Zindar</name>
+	<slot>
+		<known>Fire bolt,Friends,Light,Mage hand,Mending,Message,Magic missile,Shield,Sleep,Detect thoughts,Knock,Clairvoyance,Tongues,Dominate beast,Stoneskin,Hold monster,Telekinesis,True seeing,Fire storm</known>
+		<0>Fire bolt,Friends,Light,Mage hand,Mending,Message</0>
+		<1>6,Sleep,Shield,Magic missile</1>
+		<2>4,Knock,Detect thoughts</2>
+		<3>3,Tongues,Clairvoyance</3>
+		<4>3,Stoneskin,Dominate beast</4>
+		<5>3,Telekinesis,Hold monster</5>
+		<6>1,True seeing</6>
+		<7>1,Fire storm</7>
+	</slot>
+</spellbook>

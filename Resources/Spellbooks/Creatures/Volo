@@ -1,0 +1,8 @@
+<spellbook>
+	<name>Volo</name>
+	<slot>
+		<known>Friends,Mending,Prestidigitation,Comprehend languages,Detect magic,Disguise self</known>
+		<0>Friends,Mending,Prestidigitation</0>
+		<1>2,Disguise self,Detect magic,Comprehend languages</1>
+	</slot>
+</spellbook>

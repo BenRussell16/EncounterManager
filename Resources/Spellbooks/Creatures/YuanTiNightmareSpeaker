@@ -1,0 +1,10 @@
+<spellbook>
+	<name>YuanTiNightmareSpeaker</name>
+	<slot>
+		<known>Chill touch,Eldritch blast,Mage hand,Message,Poison spray,Prestidigitation,Arms of Hadar,Hex,Witch bolt,Darkness,Hold person,Fear,Hunger of Hadar</known>
+		<0>Chill touch,Eldritch blast,Mage hand,Poison spray,Prestidigitation,Message</0>
+		<1>0,Arms of Hadar,Witch bolt,Hex</1>
+		<2>0,Hold person,Darkness</2>
+		<3>2,Hunger of Hadar,Fear</3>
+	</slot>
+</spellbook>

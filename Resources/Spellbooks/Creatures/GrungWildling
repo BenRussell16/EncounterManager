@@ -1,0 +1,9 @@
+<spellbook>
+	<name>GrungWildling</name>
+	<slot>
+		<known>Cure wounds,Jump,Barkskin,Spike growth,Plant growth</known>
+		<1>4,Jump,Cure wounds</1>
+		<2>3,Spike growth,Barkskin</2>
+		<3>2,Plant growth</3>
+	</slot>
+</spellbook>

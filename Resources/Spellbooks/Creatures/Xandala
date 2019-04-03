@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Xandala</name>
+	<slot>
+		<known>Acid splash,Fire bolt,Light,Mage hand,Ray of frost,Chromatic orb,Feather fall,Shield,Invisibility,Misty step,Fireball,Fly,Ice storm,Polymorph,Dominate person</known>
+		<0>Acid splash,Fire bolt,Light,Mage hand,Ray of frost</0>
+		<1>4,Chromatic orb,Feather fall,Shield</1>
+		<2>4,Misty step,Invisibility</2>
+		<3>3,Fly,Fireball</3>
+		<4>3,Polymorph,Ice storm</4>
+		<5>1,Dominate person</5>
+	</slot>
+</spellbook>

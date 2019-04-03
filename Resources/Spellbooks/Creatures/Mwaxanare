@@ -1,0 +1,8 @@
+<spellbook>
+	<name>Mwaxanare</name>
+	<slot>
+		<known>Eldritch blast,Mage hand,Charm person,Protection from evil and good,Unseen servant</known>
+		<0>Eldritch blast,Mage hand</0>
+		<1>2,Unseen servant,Protection from evil and good,Charm person</1>
+	</slot>
+</spellbook>

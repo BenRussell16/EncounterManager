@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Eblis</name>
+	<daily>
+		<1>
+			<spell>Blur,false</spell>
+			<spell>Hypnotic pattern,false</spell>
+			<spell>Minor illusion,false</spell>
+		</1>
+	</daily>
+</spellbook>
