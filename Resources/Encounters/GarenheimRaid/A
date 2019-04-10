@@ -1,7 +1,0 @@
-<encounter>
-	<name>A</name>
-	<creature>5,Hobgoblin</creature>
-	<creature>1,Hobgoblin captain</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

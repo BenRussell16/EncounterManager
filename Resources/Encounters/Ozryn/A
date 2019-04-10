@@ -1,8 +1,0 @@
-<encounter>
-	<name>A</name>
-	<creature>4,Hobgoblin</creature>
-	<creature>1,Giff</creature>
-	<creature>1,Eternal flame priest</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

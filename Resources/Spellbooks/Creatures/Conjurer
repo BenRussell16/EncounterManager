@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Conjurer</name>
+	<slot>
+		<known>Acid splash,Mage hand,Poison spray,Prestidigitation,Mage armour,Magic missile,Unseen servant,Cloud of daggers,Misty step,Web,Fireball,Stinking cloud,Evard's black tentacles,Stoneskin,Cloudkill,Conjure elemental</known>
+		<0>Acid splash,Mage hand,Poison spray,Prestidigitation</0>
+		<1>4,Unseen servant,Magic missile,Mage armour</1>
+		<2>3,Web,Misty step,Cloud of daggers</2>
+		<3>3,Stinking cloud,Fireball</3>
+		<4>3,Stoneskin,Evard's black tentacles</4>
+		<5>2,Conjure elemental,Cloudkill</5>
+	</slot>
+</spellbook>

@@ -1,0 +1,15 @@
+<spellbook>
+	<name>Barghest</name>
+	<daily>
+		<0>
+			<spell>Levitate,false</spell>
+			<spell>Minor illusion,false</spell>
+			<spell>Pass without trace,false</spell>
+		</0>
+		<1>
+			<spell>Charm person,false</spell>
+			<spell>Dimension door,false</spell>
+			<spell>Suggestion,false</spell>
+		</1>
+	</daily>
+</spellbook>

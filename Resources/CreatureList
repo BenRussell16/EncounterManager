@@ -886,6 +886,35 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
+	<name>Troglodyte</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,TROGLODYTE,false</type>
+	<align>CE</align>
+	<cr>0.25</cr>
+	<ac>11</ac>
+	<hp>13</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 10,CON 14,INT 6,WIS 10,CHA 6</stats>
+	<skills>STEALTH 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>TROGLODYTE</languages>
+	<regions></regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Chameleon Skin,The troglodyte has advantage on Dexterity (Stealth) checks made to hide.</passive>
+		<passive>Stench,Any creature other than a troglodyte that starts its turn within 5 feet of the troglodyte must succeed on a DC 12 Constitution saving throw or be poisoned until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all troglodytes for 1 hour.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The troglodyte makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,4,5,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+		<attack>Claw,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Vegepygmy</name>
 	<size>SMALL</size>
 	<type>PLANT,false</type>
@@ -1841,6 +1870,33 @@ d8	Minor Adaptation
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Choker</name>
+	<size>SMALL</size>
+	<type>ABERRATION,false</type>
+	<align>CE</align>
+	<cr>1.0</cr>
+	<ac>16</ac>
+	<hp>13</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 16,DEX 14,CON 13,INT 4,WIS 12,CHA 7</stats>
+	<skills>STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DEEPSPEECH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Aberrant Quickness (Recharge after a Short or Long Rest),The choker can take an extra action on its turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The choker makes two tentacle attacks.</multiattack>
+		<attack>Tentacle,5,10,One target. Hit: 5 (1d4+3) bludgeoning damage plus 3 (1d6) piercing damage. If the target is a Large or smaller creature, it is grappled (escape DC 15). Until this grapple ends, the target is restrained, and the choker can't use this tentacle on another target (the choker has two tentacles). If this attack is a critical hit, the target also can't breathe or speak until the grapple ends.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Deinonychus</name>
 	<size>MEDIUM</size>
 	<type>BEAST,false</type>
@@ -1892,6 +1948,37 @@ d8	Minor Adaptation
 		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
 	</actions>
 	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Dread Warrior</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>1.0</cr>
+	<ac>18</ac>
+	<hp>37</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 11,CON 16,INT 10,WIS 12,CHA 10</stats>
+	<saves>WIS 3</saves>
+	<skills>ATHLETICS 4,PERCEPTION 3</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Undead Fortitude,If damage reduces the dread warrior to 0 hit points, it must make a Constitution saving throw with a DC of 5+ the damage taken, unless the damage is radiant or from a critical hit. On a success, the dread warrior drops to 1 hit point instead.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dread warrior makes two melee attacks.</multiattack>
+		<attack>Battleaxe,4,5,One target. Hit: 6 (1d8+2) slashing damage, or 7 (1d10+2) slashing damage if wielded with two hands.</attack>
+		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Duergar</name>
@@ -2948,6 +3035,34 @@ Innate spellcasting is psionics.</other>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Animated Table</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>39</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 18,DEX 8,CON 13,INT 1,WIS 3,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Antimagic susceptibility,This creature is incapacitated while in the area of an antimagic field. If targeted by dispel magic, this creature must succeed on a Constitution saving throw against the caster's spell save DC or fall unconcious for 1 minute.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>False Appearance,While the table remains motionless, it is indistinguishable from a normal table.</passive>
+		<passive>Charge,If the table moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 9 (2d8) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<attack>Ram,6,5,One target. Hit: 13 (2d8+4) bludgeoning damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Asharra</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,AARAKOCRA,false</type>
@@ -3491,6 +3606,36 @@ Telepathy is 60ft.</other>
 lf the host body drops to 0 hit points, the intellect devourer must leave it. A protection from evil and good spell cast on the body drives the intellect devourer out. The intellect devourer is also forced out if the target regains its devoured brain by means of a wish. By spending 5 feet of its movement, the intellect devourer can voluntarily leave the body, teleporting to the nearest unoccupied space within 5 feet of it. The body then dies, unless its brain is restored within 1 round.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Kaarghaz</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,TROGLODYTE,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 10,CON 14,INT 6,WIS 10,CHA 15</stats>
+	<skills>STEALTH 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>DRACONIC,TROGLODYTE</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,4,12,4,Kaarghaz</spellcasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Chameleon Skin,The troglodyte has advantage on Dexterity (Stealth) checks made to hide.</passive>
+		<passive>Stench,Any creature other than a troglodyte that starts its turn within 5 feet of the troglodyte must succeed on a DC 12 Constitution saving throw or be poisoned until the start of the creature's next turn. On a successful saving throw, the creature is immune to the stench of all troglodytes for 1 hour.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The troglodyte makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,4,5,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+		<attack>Claw,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Maddgoth's Homonculus</name>
@@ -4179,6 +4324,39 @@ Can't speak in raven form.</other>
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Deathlock Wight</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>37</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 14,CON 16,INT 12,WIS 14,CHA 16</stats>
+	<saves>WIS 4</saves>
+	<skills>ARCANA 3,PERCEPTION 4</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,DeathlockWight</innatecasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Knows the languages it knew in life.</other>
+	<actions>
+		<multiattack>The wight attacks twice with Grave Bolt.</multiattack>
+		<attack>Grave Bolt,5,120,One target. Hit: 7 (1d8+3) necrotic damage.</attack>
+		<attack>Life Drain,4,5,One creature. Hit: 9 (2d6+2) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
+A humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Doppelganger</name>
 	<size>MEDIUM</size>
 	<type>MONSTOSITY,true</type>
@@ -4851,6 +5029,39 @@ The orc also reverts to its true form if it dies or falls unconscious. The orc c
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Barghest</name>
+	<size>LARGE</size>
+	<type>FIEND,true</type>
+	<align>NE</align>
+	<cr>4.0</cr>
+	<ac>17</ac>
+	<hp>90</hp>
+	<speed>WALK 60</speed>
+	<stats>STR 19,DEX 15,CON 14,INT 13,WIS 12,CHA 14</stats>
+	<skills>DECEPTION 4,INTIMIDATION 4,PERCEPTION 5,STEALTH 4</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>ACID,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>BLINDSIGHT 60,DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN,ABYSSAL,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,12,,Barghest</innatecasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Shapechanger,The barghest can use its action to polymorph into a Small goblin or back into its true form. Other than its size and speed, its statistics are the same in each form. Any equipment it is wearing or carrying isn't transformed. The barghest reverts to its true form if it dies.</passive>
+		<passive>Fire Banishment,When the barghest starts its turn engulfed in flames that are at least 10 feet high or wide, it must succeed on a DC 15 Charisma saving throw or be instantly banished to Gehenna. Instantaneous bursts of flame (such as a red dragon's breath or a fireball spell) don't have this effect on the barghest.</passive>
+	</passives>
+	<other>Speed is 30ft in goblin form.
+Telepathy is 60ft.</other>
+	<actions>
+		<attack>Bite (true form only),6,5,One target. Hit: 13 (2d8+4) piercing damage.</attack>
+		<attack>Claws,6,5,One target. Hit: 8 (1d8+4) slashing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Black pudding</name>
 	<size>LARGE</size>
 	<type>OOZE,false</type>
@@ -5055,6 +5266,38 @@ In a new form, the couatl retains its game statistics and ability to speak, but 
 		<attack>Poisonous Pistol,6,30,90,One target. Hit: 9 (1d10+4) piercing damage plus 11 (2d10) poison damage.</attack>
 	</actions>
 	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
+	<name>Elder Black Pudding</name>
+	<size>HUGE</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>7</ac>
+	<hp>130</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 16,DEX 5,CON 16,INT 1,WIS 6,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>ACID,COLD,LIGHTNING,SLASHING</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Ooze nature,An ooze doesn't equire sleep.</passive>
+		<passive>Amorphous,The pudding can move through a space as narrow as 1 inch wide without squeezing.</passive>
+		<passive>Corrosive Form,A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing the damage, the weapon takes a perminent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage.
+The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</passive>
+	</passives>
+	<other>Blind beyond blindsight radius.</other>
+	<actions>
+		<attack>Pseudopod,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage plus 18 (4d8) acid damage. ln addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+	</actions>
+	<reactions>
+		<reaction>Split,When a pudding that is medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.</reaction>
+	</reactions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Flameskull</name>
@@ -6151,7 +6394,7 @@ May have a familiar.</other>
 		<reaction>lnstinctive Charm (Recharges after the Enchanter Casts an Enchantment Spell of 1st Level or Higher),The enchanter tries to magically divert an attack made against it, provided that the attacker is with in 30 feet of it and visible to it. The enchanter must decide to do so before the attack hits or misses.
 The attacker must make a DC 14 Wisdom saving throw. On a failed save, the attacker targets the creature closest to it, other than the enchanter or itself. If multiple creatures are closest, the attacker chooses which one to target.</reaction>
 	</reactions>
-	<source>VOLOSGUIDETOMONSTERS</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Felidar</name>
@@ -7145,6 +7388,64 @@ d8	Minor Adaptation
 		<attack>Claws,7,5,One target. Hit: 17 (1d12+4) slashing damage.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Centaur Mummy</name>
+	<size>LARGE</size>
+	<type>UNDEAD,false</type>
+	<align>LE</align>
+	<cr>6.0</cr>
+	<ac>13</ac>
+	<hp>85</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 12,CON 16,INT 5,WIS 14,CHA 12</stats>
+	<saves>WIS 5</saves>
+	<multipliers>
+		<VULNERABILITY>FIRE</VULNERABILITY>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Charge,If the centaur mummy moves at least 20 feet straight toward a target and then hits it with a pike attack on the same turn, the target takes an extra 10 (3d6) piercing damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The centaur mummy makes two melee attacks, one with its pike and one with its hooves, or it attacks with its pike and uses Dreadful Glare.</multiattack>
+		<attack>Pike,8,10,One target. Hit: 10 (1d10+5) piercing damage.</attack>
+		<attack>Hooves,8,5,One target. Hit: 12 (2d6+5) bludgeoning damage plus 10 (3d6) necrotic damage. If the target is a creature, it must succeed on a DC 14 Constitution saving throw or be cursed with mummy rot. The cursed target can't regain hit points, and its hit point maximum decreases by 10 (3d6) for every 24 hours that elapse. If the curse reduces the target's hit point maximum to 0, the target dies, and its body turns to dust. The curse lasts until removed by the remove curse spell or similar magic.</attack>
+		<effect>Dreadful Glare,null,The centaur mummy targets one creature it can see within 60 feet of it. lf the target can see the mummy, the target must succeed on a DC 12 wisdom saving throw against this magic or become frightened until the end of the mummy's next turn. If the target fails the saving throw by 5 or more, it is also paralyzed for the same duration. A target that succeeds on the saving throw is immune to the Dreadful Glare of all mummies (but not mummy lords) for tne next 24 hours.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Conjurer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>6.0</cr>
+	<ac>15</ac>
+	<hp>40</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 11,INT 17,WIS 12,CHA 11</stats>
+	<saves>INT 6,WIS 4</saves>
+	<skills>ARCANA 6,HISTORY 6</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,6,14,9,Conjurer</spellcasting>
+		<passive>Benign Transportation (Recharges after the Conjurer Casts a Conjuration Spell of 1st Level or Higher),As a bonus action, the conjurer teleports up to 30 feet to an unoccupied space that it can see. If it instead chooses a space within range that is occupied by a willing Small or Medium creature, they both teleport, swapping places.</passive>
+	</passives>
+	<other>Knows any four languages.</other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Death</name>
@@ -8928,7 +9229,7 @@ Weakening Breath. Zindar exhales gas in a 15-foot cone. Each creature in that ar
 		<attack>Greatsword,9,5,One target. Hit: 12 (2d6+5) slashing damage, plus 7 (2d6) slashing damage if the champion has more than half of its total hit points remaining.</attack>
 		<attack>Shortbow,6,80,320,One target. Hit: 5 (1d6+2) piercing damage, plus 7 (2d6) piercing damage if the champion has more than half of its total hit points remaining.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION,WATERDEEPDUNGEONOFTHEMADMAGE</source>
+	<source>TALESFROMTHEYAWNINGPORTAL,TOMBOFANNIHILATION,WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Cloud Giant</name>
@@ -8989,6 +9290,31 @@ Weakening Breath. Zindar exhales gas in a 15-foot cone. Each creature in that ar
 		<effect>Summon Mount,1/Day,The dryad magically summons a mount, which appears in an unoccupied space within 60 feet of the dryad. The mount remains for 8 hours, until it or the dryad dies, or until the dryad dismisses it as an action. The mount uses the stat block of an elk (see the Monster Manual) with these changes: it is a plant instead of a beast, it has an Intelligence of 6, and it understands Sylvan but can't speak. While within 1 mile of the mount, the dryad can communicate with it telepathically.</effect>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Fire Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>LE</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>162</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 25,DEX 9,CON 23,INT 10,WIS 14,CHA 13</stats>
+	<saves>DEX 3,CON 10,CHA 5</saves>
+	<skills>ATHLETICS 11,PERCEPTION 6</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatsword attacks.</multiattack>
+		<attack>Greatsword,11,10,One target. Hit: 28 (6d6+7) slashing damage.</attack>
+		<attack>Rock,11,60,240,One target. Hit: 29 (4d10+7) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Flind</name>
@@ -10261,6 +10587,32 @@ Understands Abyssal but can't speak.</other>
 		<lairaction>The sphinx shifts itselfand up to seven other creatures it can see within in its lair to another plane of existence. Once outside its lair. the sphinx can't use lair actions, but it can return to its lair as a bonus action on its turn, taking up to seven creatures with it.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>King Snurre</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>LE</align>
+	<cr>11.0</cr>
+	<ac>18</ac>
+	<hp>187</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 25,DEX 9,CON 23,INT 10,WIS 14,CHA 13</stats>
+	<saves>DEX 3,CON 10,CHA 5</saves>
+	<skills>ATHLETICS 11,PERCEPTION 6</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatsword attacks.</multiattack>
+		<attack>Greatsword,11,10,One target. Hit: 28 (6d6+7) slashing damage plus 7 (2d6) fire damage.</attack>
+		<attack>Rock,11,60,240,One target. Hit: 29 (4d10+7) bludgeoning damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Naergoth bladelord</name>

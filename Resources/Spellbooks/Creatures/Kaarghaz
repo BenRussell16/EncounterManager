@@ -1,0 +1,9 @@
+<spellbook>
+	<name>Kaarghaz</name>
+	<slot>
+		<known>Fire bolt,Mage hand,Poison spray,Prestidigitation,Ray of frost,Burning hands,Shield,Sleep,Invisibility,Scorching ray</known>
+		<0>Fire bolt,Mage hand,Poison spray,Prestidigitation,Ray of frost</0>
+		<1>6,Sleep,Shield,Burning hands</1>
+		<2>3,Invisibility,Scorching ray</2>
+	</slot>
+</spellbook>

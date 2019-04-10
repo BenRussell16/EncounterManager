@@ -1,7 +1,0 @@
-<encounter>
-	<name>C</name>
-	<creature>1,Duergar warlord</creature>
-	<creature>5,Hobgoblin</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

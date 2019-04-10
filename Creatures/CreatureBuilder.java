@@ -2021,7 +2021,7 @@ public class CreatureBuilder {
 	  							builtString += "Regions: ";
 	  							boolean first = true;
 	  							for(Region r:getRegions()){
-	  								if(!first){builtString += ",";}
+	  								if(!first){builtString += ", ";}
 	  								builtString += r.toNiceString();
 	  								first = false;
 	  							}
@@ -2030,7 +2030,7 @@ public class CreatureBuilder {
 	  							builtString += "Source: ";
 	  							first = true;
 	  							for(Source s:getSource()){
-	  								if(!first){builtString += ",";}
+	  								if(!first){builtString += ", ";}
 	  								builtString += s.toNiceString();
 	  								first = false;
 	  							}
