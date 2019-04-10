@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Illusionist</name>
+	<slot>
+		<known>Dancing lights,Mage hand,Minor illusion,Poison spray,Colour spray,Disguise self,Mage armour,Magic missile,Invisibility,Mirror image,Phantasmal force,Major image,Phantom steed,Phantasmal killer</known>
+		<0>Dancing lights,Mage hand,Minor illusion,Poison spray</0>
+		<1>4,Colour spray,Disguise self,Mage armour,Magic missile</1>
+		<2>3,Phantasmal force,Mirror image,Invisibility</2>
+		<3>3,Phantom steed,Major image</3>
+		<4>1,Phantasmal killer</4>
+	</slot>
+</spellbook>

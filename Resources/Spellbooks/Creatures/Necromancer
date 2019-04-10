@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Necromancer</name>
+	<slot>
+		<known>Chill touch,Dancing lights,Mage hand,Mending,False life,Mage armour,Ray of sickness,Blindness/Deafness,Ray of enfeeblement,Web,Animate dead,Bestow curse,Vampiric touch,Blight,Dimension door,Stoneskin,Bigby's hand,Cloudkill,Circle of death</known>
+		<0>Chill touch,Dancing lights,Mage hand,Mending</0>
+		<1>4,Ray of sickness,Mage armour,False life</1>
+		<2>3,Web,Ray of enfeeblement,Blindness/Deafness</2>
+		<3>3,Vampiric touch,Bestow curse,Animate dead</3>
+		<4>3,Stoneskin,Dimension door,Blight</4>
+		<5>2,Cloudkill,Bigby's hand</5>
+		<6>1,Circle of death</6>
+	</slot>
+</spellbook>

@@ -1,0 +1,12 @@
+<spellbook>
+	<name>OozeMaster</name>
+	<slot>
+		<known>Acid splash,Friends,Mage hand,Poison spray,Charm person,Detect magic,Magic missile,Ray of sickness,Detect thoughts,Melf's acid arrow,Suggestion,Fear,Slow,Stinking cloud,Confusion,Evard's black tentacles,Cloudkill</known>
+		<0>Acid splash,Friends,Mage hand,Poison spray</0>
+		<1>4,Ray of sickness,Magic missile,Detect magic,Charm person</1>
+		<2>3,Suggestion,Melf's acid arrow,Detect thoughts</2>
+		<3>3,Stinking cloud,Slow,Fear</3>
+		<4>3,Evard's black tentacles,Confusion</4>
+		<5>1,Cloudkill</5>
+	</slot>
+</spellbook>

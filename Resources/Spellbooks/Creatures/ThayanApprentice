@@ -1,0 +1,9 @@
+<spellbook>
+	<name>ThayanApprentice</name>
+	<slot>
+		<known>Fire bolt,Mage hand,Prestidigitation,Shocking grasp,Burning hands,Detect magic,Mage armour,Shield,Blur,Scorching ray</known>
+		<0>Fire bolt,Mage hand,Prestidigitation,Shocking grasp</0>
+		<1>4,Shield,Mage armour,Detect magic,Burning hands</1>
+		<2>3,Scorching ray,Blur</2>
+	</slot>
+</spellbook>

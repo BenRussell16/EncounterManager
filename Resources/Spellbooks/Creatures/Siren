@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Siren</name>
+	<daily>
+		<1>
+			<spell>Charm person,false</spell>
+			<spell>Fog cloud,false</spell>
+			<spell>Greater invisibility,false</spell>
+			<spell>Polymorph,true</spell>
+		</1>
+	</daily>
+</spellbook>

@@ -1,0 +1,8 @@
+<spellbook>
+	<name>SharwynHucrele</name>
+	<slot>
+		<known>Light,Prestidigitation,Ray of frost,Colour spray,Magic missile,Shield,Sleep</known>
+		<0>Light,Prestidigitation,Ray of frost</0>
+		<1>2,Sleep,Shield,Magic missile,Colour spray</1>
+	</slot>
+</spellbook>

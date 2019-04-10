@@ -1532,6 +1532,62 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Sharwyn Hucrele</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>0.5</cr>
+	<ac>16</ac>
+	<hp>13</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 13,CON 14,INT 16,WIS 14,CHA 9</stats>
+	<skills>ARCANA 5,INSIGHT 4,PERSUASION 1</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,5,13,1,SharwynHucrele</spellcasting>
+		<passive>Barkskin,Sharwyn's AC can't be lower than 16.</passive>
+		<passive>Special Equipment,Sharwyn has a spell book that contains the spells listed in her Spellcasting trait, plus detect magic and silent image.</passive>
+		<passive>Tree Thrall,If the Gulthias Tree dies, Sharwyn dies 24 hours later.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,5,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Sir Braford</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>0.5</cr>
+	<ac>18</ac>
+	<hp>19</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 9,CON 14,INT 10,WIS 13,CHA 14</stats>
+	<skills>ATHLETICS 5,PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Barkskin,Sir Braford's AC can't be lower than 16.</passive>
+		<passive>Special Equipment,Sir Braford wields Shatterspike, a magic longsword that grants a +1 bonus to attack and damage rolls made with it (included in his attack). See Tales from the Yawning Portal for the item's other properties.</passive>
+		<passive>Tree Thrall,If the Gulthias Tree dies, Sir Braford dies 24 hours later.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Longsword,6,5,One target. Hit: 8 (1d8+4) slashing damage, or 9 (1d10+4) slashing damage if used with two hands.</attack>
+	</actions>
+	<reactions>
+		<reaction>Protection,When a creature Sir Braford can see attacks a target other than him that is within 5 feet of him, he can use a reaction to use his shield to impose disadvantage on the attack roll.</reaction>
+	</reactions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Soldier</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -1554,6 +1610,33 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 		<attack>Longsword,3,5,One target. Hit: 6 (1d8+2) slashing damage, or 7 (1d10+2) slashing damage if used with two hands.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Thorn Slinger</name>
+	<size>LARGE</size>
+	<type>PLANT,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>11</ac>
+	<hp>32</hp>
+	<speed>WALK 10</speed>
+	<stats>STR 13,DEX 12,CON 12,INT 1,WIS 10,CHA 1</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>BLINDED,DEAFENED,FRIGHTENED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Adhesive Blossoms,The thorn slinger adheres to anything that touches it. A Medium or smaller creature adhered to the thorn slinger is also grappled by it (escape DC 11). Ability checks made to escape this grapple have disadvantage.
+At the end of each of the thorn slinger's turns, anything grappled by it takes 3 (1d6) acid damage.</passive>
+		<passive>False Appearance,While the thorn slinger remains motionless, it is indistinguishable from an inanimate bush.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<attack>Thorns,3,30,One target. Hit: 8 (2d6+1) piercing damage.
+Doesn't have disadvantage in melee.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Topi</name>
@@ -3035,6 +3118,33 @@ Innate spellcasting is psionics.</other>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Yusdrayl</name>
+	<size>SMALL</size>
+	<type>HUMANOID,KOBOLD,false</type>
+	<align>LE</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>16</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 15,CON 14,INT 10,WIS 10,CHA 16</stats>
+	<skills>ARCANA 2,INSIGHT 2,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,2,Yusdrayl</spellcasting>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,5,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Animated Table</name>
 	<size>LARGE</size>
 	<type>CONSTRUCT,false</type>
@@ -3278,6 +3388,39 @@ Innate spellcasting is psionics.</other>
 	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
+	<name>Duergar Spy</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>33</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 10,DEX 16,CON 12,INT 12,WIS 10,CHA 13</stats>
+	<skills>DECEPTION 5,INSIGHT 2,INVESTIGATION 5,PERCEPTION 4,PERSUASION 3,SLIGHTOFHAND 5,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Sneak Attack,Once per turn, the spy can deal an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn 't incapacitated and the spy doesn't have disadvantage on the attack roll.</passive>
+		<passive>Cunning Action,On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
+		<passive>Duergar Resilience,The spy has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The spy makes two shortsword attacks.</multiattack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage, or 10 (2d6+3) piercing damage while enlarged.</attack>
+		<attack>Hand Crossbow,5,30,120,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the spy magically increases in size, along with anything it is wearing or carrying. While enlarged , the spy is Large, doubles her damage dice on Strength-based weapon attacks (included in the attacks) , and makes Strength checks and Strength saving throws with advantage. If the spy lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
+		<effect>Invisibility,Recharges after a Short or Long Rest,The spy magically turns invisible until it attacks, deals damage, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the spy wears or carries is invisible with it.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Faerie Dragon (Blue)</name>
 	<size>TINY</size>
 	<type>DRAGON,false</type>
@@ -3416,6 +3559,31 @@ Violet		51 years or more.</other>
 5-6. The target doesn't move, and the only thing it can do on its turn is make a DC 11 Wisdom saving throw, ending the effect on itself on a success.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Giant Crayfish</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>45</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 15,DEX 13,CON 13,INT 1,WIS 9,CHA 3</stats>
+	<skills>STEALTH 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 30</senses>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant crayfish makes two claw attacks.</multiattack>
+		<attack>Claw,4,5,One target. Hit: 7 (1d10+2) bludgeoning damage, and the target is grappled (escape DC 12). The crayfish has two claws, each of which can grapple only one target.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Gibbering mouther</name>
@@ -3662,6 +3830,38 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 		<attack>Bite,4,5,One creature. Hit: 9 (2d6+2) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. lf the saving throw fails by 5 or more, the target is instead poisoned for 5 (1d10) minutes and unconscious while poisoned in this way.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Nereid</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>CG,CN,CE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>44</hp>
+	<speed>WALK 30,SWIM 60</speed>
+	<stats>STR 10,DEX 17,CON 12,INT 13,WIS 14,CHA 16</stats>
+	<skills>ACROBATICS 5,NATURE 3,STEALTH 5,SURVIVAL 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH,SYLVAN,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Speak with Animals,The nereid can comprehend and verbally communicate with beasts.</passive>
+		<passive>Aquatic Invisibility,If immersed in water, the nereid can make itself invisible as a bonus action. It remains invisible until it leaves the water, ends the invisibility as a bonus action, or dies.</passive>
+		<passive>Mantle Dependent,The nereid wears a mantle of silky cloth the color of sea foam, which holds the creature's spirit. The mantle has an AC and hit points equal to that of the nereid, but the garment can't be directly harmed while the nereid wears it. If the mantle is destroyed, the nereid becomes poisoned and dies within 1 hour. A nereid is willing to do anything in its power to recover the mantle if it is stolen, including serving the thief.</passive>
+		<passive>Shape Water,The nereid can cast control water at will, requiring no components. Its spellcasting ability for it is Charisma. This use of the spell has a range of 30 feet and can affect a cube of water no larger than 30 feet on a side.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Blinding Acid,5,30,One target. Hit: 16 (2d12+3) acid damage, and the target is blinded until the start of the nereid's next turn.
+Doesn't have disadvantage in melee.</attack>
+		<effect>Water Lash,null,The nereid causes a 5-foot cube of water within 60 feet of it to take a shape of its choice and strike one target it can see within 5 feet of that water. The target must make a DC 13 Strength saving throw. On a failed save, it takes 17 (4d6+3) bludgeoning damage, and if it is a Large or smaller creature, it is pushed up to 15 feet in a straight line or is knocked prone (nereid's choice). On a successful save, the target takes half as much damage and isn't pushed or knocked prone.</effect>
+		<effect>Drowning Kiss,Recharge 5-6,The nereid touches one creature it can see within 5 feet of it. The target must succeed on a DC 13 Constitution saving throw or take 22 (3d12+3) acid damage. On a failure, it also runs out of breath and can't speak for 1 minute. At the end of each of its turns, it can repeat the save, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Nezznar the Black Spider</name>
@@ -3983,6 +4183,58 @@ Only has lair actions when with a group of Rakdos.</other>
 		<effect>Tangler Grenades,null,A tangler grenade is an alchemical, nonmagical item with an ovoid resin shell that shatters on impact. An as action, a creature can throw a tangier grenade at a point up to 60 feet away. Each creature within 10 feet of a shattered tangier grenade must succeed on a DC 15 Dexterity saving throw or be restrained by sticky white webs. As an action, a creature can try to free itself or another creature within its reach from the webs, doing so with a successful DC 20 Strength (Athletics) check. A gallon of alcohol dissolves the webs produced by a single tangier grenade. Otherwise, the webs dissolve on their own after 1 hour, freeing any creatures restrained by them.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Thayan Apprentice</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LN,TN,CN,LE,NE,CE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 15,WIS 13,CHA 11</stats>
+	<skills>ARCANA 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,THAYAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,4,12,4,ThayanApprentice</spellcasting>
+		<passive>Doomvault Devotion,Within the Doomvault, the apprentice has advantage on saving throws against being charmed or frightened.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Thayan Warrior</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LN,TN,CN,LE,NE,CE</align>
+	<cr>2.0</cr>
+	<ac>16</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 13,CON 14,INT 10,WIS 11,CHA 11</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,THAYAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Doomvault Devotion,Within the Doomvault, the apprentice has advantage on saving throws against being charmed or frightened.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The warrior makes two melee attacks.</multiattack>
+		<attack>Longsword,5,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands.</attack>
+		<attack>Javelin,5,30,120,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Tortle Druid</name>
@@ -4524,6 +4776,61 @@ d4	Feature
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Giant Ice Toad</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>TN</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 13,CON 14,INT 8,WIS 10,CHA 6</stats>
+	<multipliers>
+		<IMMUNITY>COLD</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ICETOAD</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Cold Aura,Any creature that starts its turn within 10 feet of the toad takes 5 (1d10) cold damage.</passive>
+		<passive>Standing Leap,The toad's long jump is up to 20 feet and its high jump is up to 10 feet, with or without a running start.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 10 (2d6+3) piercing damage, and the target is grappled (escape DC 13). Until this grapple ends, the target is restrained, and the toad can't bite another target.</attack>
+		<attack>Swallow,5,5,One Medium or smaller creature the toad is grappling. Hit: 10 (2d6+3) piercing damage, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the toad, and it takes 10 (3d6) acid damage and 11 (2d10) cold damage at the start of each of the toad's turns. The toad can have only one target swallowed at a time.
+If the toad dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting prone.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Giant Lightning Eel</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>3.0</cr>
+	<ac>13</ac>
+	<hp>42</hp>
+	<speed>WALK 5,SWIM 30</speed>
+	<stats>STR 11,DEX 17,CON 16,INT 2,WIS 12,CHA 3</stats>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Water Breathing,The eel can breathe only underwater.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The eel makes two bite attacks.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 10 (2d6+3) piercing damage plus 4 (1d8) lightning damage.</attack>
+		<effect>Lightning Jolt,Recharge 5-6,One creature the eel touches within 5 feet of it outside water, or each creature within 15 feet of it in a body of water, must make a DC 12 Constitution saving throw. On failed save, a target takes 13 (3d8) lightning damage. If the target takes any of this damage, the target is stunned until the end of the eel's next turn. On a successful save, a target takes half as much damage and isn't stunned.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Giant Slug</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -4695,6 +5002,59 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Illusionist</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 13,INT 16,WIS 11,CHA 12</stats>
+	<saves>INT 5,WIS 2</saves>
+	<skills>ARCANA 5,HISTORY 5</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,5,13,7,Illusionist</spellcasting>
+		<passive>Displacement (Recharges after the Illusionist Casts an Illusion Spell of 1st Level or Higher),As a bonus action, the illusionist projects an illusion that makes the illusionist appear to be standing in a place a few inches from its actual location, causing any creature to have disadvantage on attack rolls against the illusionist. The effect ends if the illusionist takes damage, it is incapacitated, or its speed becomes 0.</passive>
+	</passives>
+	<other>Knows any four languages.</other>
+	<actions>
+		<attack>Quaterstaff,1,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Kalka-Kylla</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>TN</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>85</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 17,DEX 12,CON 16,INT 15,WIS 16,CHA 12</stats>
+	<skills>DECEPTION 3,INSIGHT 5,STEALTH 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 30</senses>
+	<languages>OLMAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Shell,Kalka-Kylla can use a bonus action to retract into or emerge from its shell. While retracted, Kalka-Kylla gains a +4 bonus to AC, and it has a speed of 0 and can't benefit from bonuses to speed.</passive>
+		<passive>False Appearance,While Kalka-Kylla remains motionless and hidden in its shell, it is indistinguishable from a polished boulder.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Kalka-Kylla makes two claw attacks.</multiattack>
+		<attack>Claw,5,5,One target. Hit: 10 (2d6+3) bludgeoning damage, and if the target is a Medium or smaller creature, it is grappled (escape DC 13). Until this grapple ends, the target is restrained. Kalka-Kylla has two claws, each of which can grapple only one target.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Kraghammer goat-knight</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,DWARF,false</type>
@@ -4752,6 +5112,67 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 		<attack>Claws,7,5,One target. Hit: 7 (1d6+4) slashing damage.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Leucrotta</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>67</hp>
+	<speed>WALK 50</speed>
+	<stats>STR 18,DEX 14,CON 15,INT 9,WIS 12,CHA 6</stats>
+	<skills>DECEPTION 2,PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ABYSSAL,GNOLL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Kicking Retreat,If the leucrotta attacks with its hooves, it can take the Disengage action as a bonus action.</passive>
+		<passive>Rampage,When the leucrotta reduces a creature to 0 hit points with a melee attack on its turn, it can take a bonus action to move up to half its speed and make an attack with its hooves.</passive>
+		<passive>Mimicry,The leucrotta can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations with a successful DC 14 Wisdom (Insight) check.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The leucrotta makes two attacks: one with its bite and one with its hooves.</multiattack>
+		<attack>Bite,6,5,One target. Hit: 8 (1d8+4) piercing damage. lf the leucrotta scores a critical hit, it rolls the damage dice three times, instead of twice.</attack>
+		<attack>Hooves,6,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Martial Arts Adept</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>3.0</cr>
+	<ac>16</ac>
+	<hp>60</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 11,DEX 17,CON 13,INT 11,WIS 16,CHA 10</stats>
+	<skills>ACROBATICS 5,INSIGHT 5,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Unarmoured Defense,While the adept is wearing no armor and wielding no shield, its AC includes its Wisdom modifier.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The adept makes three unarmed strikes or three dart attacks.</multiattack>
+		<attack>Unarmed Strike,5,5,One target. Hit: 7 (1d8+3) bludgeoning damage. If the target is a creature, the adept can choose one of the following additional effects:
+ - The target must succeed on a DC 13 Strength saving throw or drop one item it is holding (adept 's choice).
+ - The target must succeed on a DC 13 Dexterity saving throw or be knocked prone.
+ - The target must succeed on a DC 13 Constitution saving throw or be stunned until the end of the adept's next turn.</attack>
+		<attack>Dart,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Deflect Missile,In response to being hit by a ranged weapon attack, the adept deflects the missile. The damage it takes from the attack is reduced by 1d10+3. If the damage is reduced to 0, the adept catches the missile if it's small enough to hold in one hand and the adept has a hand free.</reaction>
+	</reactions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Mormesk the Wraith</name>
@@ -4906,6 +5327,34 @@ Violet		51 years or more.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Siren</name>
+	<size>MEDIUM</size>
+	<type>FEY,false</type>
+	<align>CG</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>38</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 10,DEX 18,CON 12,INT 13,WIS 14,CHA 16</stats>
+	<skills>MEDICINE 4,NATURE 3,STEALTH 6,SURVIVAL 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,Siren</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Shortsword,6,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<effect>Stupefying Touch,null,Siren touches one creature she can see within 5 feet of her. The creature must succeed on a DC 13 Intelligence saving throw or take 13 (3d6+3) psychic damage and be stunned until the start of Siren's next turn.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Spectator</name>
 	<size>MEDIUM</size>
 	<type>ABERRATION,false</type>
@@ -4937,6 +5386,38 @@ Telepathy is 120ft.</other>
 		<reaction>Spell Reflection,If the spectator makes a successful saving throw against a spell, or a spell misses it, the spectator can choose another creature within 30 feet of it that it can see. The spell affects the chosen creature instead of the spectator.</reaction>
 	</reactions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Vampiric Mist</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>13</ac>
+	<hp>45</hp>
+	<speed>WALK 0,FLY 30</speed>
+	<stats>STR 6,DEX 16,CON 16,INT 6,WIS 12,CHA 7</stats>
+	<saves>WIS 3</saves>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,LIGHTNING,THUNDER,NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Blood Sense,The vampiric mist can sense living creatures that have blood or similar vital fluids in a radius of 60 feet.</passive>
+		<passive>Sunlight Hypersensitivity,The vampiric mist takes 20 radiant damage when it starts its turn in sunlight. While in sunlight, the mist has disadvantage on attack rolls and ability checks.</passive>
+		<passive>Forbiddance,The vampiric mist can't enter a residence without an invitation from one of the occupants.</passive>
+		<passive>Misty Form,The vampiric mist can occupy another creature's space and vice versa. In addition, if air can pass through a space, the mist can pass through it without squeezing. Each foot of movement in water costs it 2 extra feet , rather than 1 extra foot. The mist can 't manipulate objects in any way that requires hands; it can apply simple force only.</passive>
+	</passives>
+	<other>Fly speed is hover.</other>
+	<actions>
+		<effect>Blood Drain,null,One creature in the vampiric mist's space must make a DC 13 Constitution saving throw (undead and constructs automatically succeed). On a failed save, the target takes 10 (2d6+3) necrotic damage, its hit point maximum is reduced by an amount equal to the necrotic damage taken, and the mist regains hit points equal to that amount.
+This reduction to the target's hit point maximum lasts until the target finishes a long rest. It dies if this effect reduces its hit point maximum to 0.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>White tusk shaman</name>
@@ -5562,6 +6043,41 @@ fighting.
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Kelpie</name>
+	<size>MEDIUM</size>
+	<type>PLANT,false</type>
+	<align>NE</align>
+	<cr>4.0</cr>
+	<ac>14</ac>
+	<hp>67</hp>
+	<speed>WALK 10,SWIM 30</speed>
+	<stats>STR 14,DEX 14,CON 16,INT 7,WIS 12,CHA 10</stats>
+	<skills>PERCEPTION 3,STEALTH 4</skills>
+	<multipliers>
+		<RESISTANCE>FIRE,BLUDGEONING,PIERCING</RESISTANCE>
+	</multipliers>
+	<conditions>BLINDED,DEAFENED,EXHAUSTION</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<languages>COMMON,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Seaweed Shape,The kelpie can use its action to reshape its body into the form of a humanoid or beast that is Small, Medium, or Large. Its statistics are otherwise unchanged . The disguise is convincing, unless the kelpie is in bright light or the viewer is within 30 feet of it, in which case the seams between the seaweed strands are visible. The kelpie returns to its true form if takes a bonus action to do so or if it dies.</passive>
+		<passive>False Appearance,While the kelpie remains motionless in its true form, it is indistinguishable from normal seaweed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The kelpie makes two slam attacks.</multiattack>
+		<attack>Slam,4,10,One target. Hit: 11 (2d8+2) piercing damage. If the target is a Medium or smaller creature, it is grappled (escape DC 12).</attack>
+		<effect>Drowning Hypnosis,null,The kelpie chooses one humanoid it can see within 150 feet of it. If the target can see the kelpie, the target must succeed on a DC 11 Wisdom saving throw or be magically charmed while the kelpie maintains concentration, up to 10 minutes (as if concentrating on a spell).
+The charmed target is incapacitated, and instead of holding its breath underwater, it tries to breathe normally and immediately runs out of breath, unless it can breathe water.
+If the charmed target is more than 5 feet away from the kelpie, the target must move on its turn toward the kelpie by the most direct route, trying to get within 5 feet. It doesn't avoid opportunity attacks.
+Before moving into damaging terrain, such as lava or a pit, and whenever it takes damage from a source other than the kelpie or drowning, the target can repeat the saving throw. A charmed target can also repeat the saving throw at the end of each of its turns. If the saving throw is successful, the effect ends on it.
+A target that successfully saves is immune to this kelpie's hypnosis for the next 24 hours.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Kraul Death Priest</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,KRAUL,false</type>
@@ -5881,6 +6397,38 @@ fighting.
 		<reaction>Intercept Attack,In response to another creature within 5 feet of it being hit by an attack roll, the stone defender gives that creature a +5 bonus to its AC against that attack, potentially causing a miss. To use this ability, the stone defender must be able to see the creature and the attacker.</reaction>
 	</reactions>
 	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Tecuziztecatl</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>TN</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>102</hp>
+	<speed>WALK 30,CLIMB 30,SWIM 30</speed>
+	<stats>STR 17,DEX 10,CON 16,INT 15,WIS 16,CHA 13</stats>
+	<skills>DECEPTION 3,STEALTH 2</skills>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING</RESISTANCE>
+		<IMMUNITY>ACID</IMMUNITY>
+	</multipliers>
+	<senses>BLINDSIGHT 30</senses>
+	<languages>PRIMORDIAL,OLMAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Flexible,Tecuziztecatl can enter a space large enough for a Medium creature without squeezing.</passive>
+		<passive>Glowing,Tecuziztecatl sheds dim light within 20 feet of itself.</passive>
+	</passives>
+	<other>Magical weapons breach damage resistance.</other>
+	<actions>
+		<multiattack>Tecuziztecatl makes two pseudopod attacks.</multiattack>
+		<attack>Pseudopod,5,10,One target. Hit: 12 (2d8+3) bludgeoning damage.</attack>
+		<effect>Spit Acid,Recharge 4-6,Tecuziztecatl exhales acid in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 13 Dexterity saving throw, taking 18 (4d8) acid damage on a failed save, or half as much damage on a  successful one.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Two-headed Plesiosaurus</name>
@@ -6643,6 +7191,36 @@ Only has lair actions when with a group of Golgari.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Greater Zombie</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>97</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 10,CON 17,INT 4,WIS 6,CHA 6</stats>
+	<saves>WIS 1</saves>
+	<multipliers>
+		<RESISTANCE>COLD,NECROTIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Undead Fortitude,If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5+ the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.</passive>
+	</passives>
+	<other>Understands the languages it knew in life but can't speak.</other>
+	<actions>
+		<multiattack>The zombie makes two melee attacks.</multiattack>
+		<attack>Empowered Slam,7,5,One target. Hit: 7 (1d6+4) bludgeoning damage and 7 (2d6) necrotic damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Izek Strazni</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -6942,6 +7520,34 @@ lf the disease is cured before the tadpole's emergence, the unborn slaad is disi
 	<source>CURSEOFSTRAHD</source>
 </creature>
 <creature>
+	<name>Sea Lion</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>90</hp>
+	<speed>WALK 10,SWIM 40</speed>
+	<stats>STR 17,DEX 15,CON 15,INT 3,WIS 12,CHA 8</stats>
+	<skills>PERCEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Swimming Leap,With a 10-foot swimming start, the sea lion can long jump out of or across the water up to 25 feet.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The sea lion makes three attacks: one bite attack and two claw attacks.</multiattack>
+		<attack>Bite,6,5,One target. Hit: 12 (2d8+3) piercing damage.</attack>
+		<attack>Claw,6,5,One target. Hit: 12 (2d8+3) piercing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Shambling bone mound</name>
 	<size>LARGE</size>
 	<type>UNDEAD,false</type>
@@ -7087,6 +7693,36 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 		<attack>Bites,5,0,One target in the swarm's space. Hit: 14 (4d6) piercing damage, or 7 (2d6) piercing damage if the swarm has half of its hit points or fewer.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Transmuter</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>40</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 11,INT 17,WIS 12,CHA 11</stats>
+	<saves>INT 6,WIS 4</saves>
+	<skills>ARCANA 6,INTIMIDATION 6</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,6,14,9,Transmuter</spellcasting>
+		<passive>Transmuter's Stone,The transmuter carries a magic stone it crafted that grants its bearer one of the following effects:
+ - Darkvision out to a range of 60 feet.
+ - An extra 10 feet of speed while the bearer is unencumbered.
+ - Proficiency with Constitution saving throws.
+ - Resistance to acid, cold, fire, lightning, or thunder damage (transmuter's choice whenever the transmuter chooses this benefit)
+If the transmuter has the stone and casts a transmutation spell of 1st level or higher, it can change the effect of the stone.</passive>
+	</passives>
+	<other>Knows any four languages.</other>
+	<actions>
+		<attack>Quarterstaff,2,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Undead Bulette</name>
@@ -8179,6 +8815,36 @@ Is a Boros spellcaster.</other>
 		<attack>Arc Lightning,7,30,One target. Hit: 16 (3d10) lightning damage, and lightning jumps from the target to one creature of the fluxcharger's choice that it can see within 30 feet of the target. That second creature must succeed on a DC 15 Dexterity saving throw or take 13 (3d8) lightning damage. Hit or Miss: The fluxcharger takes 5 (1d10) force damage after resolving the attack.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Giant Skeleton</name>
+	<size>HUGE</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>7.0</cr>
+	<ac>17</ac>
+	<hp>115</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 21,DEX 10,CON 20,INT 4,WIS 6,CHA 6</stats>
+	<multipliers>
+		<VULNERABILITY>BLUDGEONING</VULNERABILITY>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Turn immunity,This creature is immune to effects that turn undead.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Evasion,If the skeleton is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the saving throw, and only half damage if it fails.</passive>
+	</passives>
+	<other>Understands Giant but can't speak.</other>
+	<actions>
+		<multiattack>The skeleton makes three scimitar attacks.</multiattack>
+		<attack>Scimitar,8,10,One target. Hit: 15 (3d6+5) slashing damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Lesser erinyes</name>
@@ -9292,6 +9958,31 @@ Weakening Breath. Zindar exhales gas in a 15-foot cone. Each creature in that ar
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Evoker</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>9.0</cr>
+	<ac>15</ac>
+	<hp>66</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 12,INT 17,WIS 12,CHA 11</stats>
+	<saves>INT 7,WIS 5</saves>
+	<skills>ARCANA 7,HISTORY 7</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,7,15,12,Evoker</spellcasting>
+		<passive>Sculpt Spells,When the evoker casts an evocation spell that forces other creatures it can see, it can choose a number of them equal to 1+ the spell's level. These creatures automatically succeed on their saving throws against the spell. If a successful save means a chosen creature would take half damage from the spell, it instead takes no damage from it.</passive>
+	</passives>
+	<other>Knows any four languages.</other>
+	<actions>
+		<attack>Quarterstaff,3,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Fire Giant</name>
 	<size>HUGE</size>
 	<type>GIANT,false</type>
@@ -9412,6 +10103,32 @@ Weakening Breath. Zindar exhales gas in a 15-foot cone. Each creature in that ar
 		<effect>Captivating Presence,Recharge 6,Each creature within 120 feet of the master must succeed on a DC 17 Wisdom saving throw or be charmed by the master for 1 hour. While charmed in this way, a creature's speed is 0. If the charmed creature takes damage, it can repeat the saving throw, ending the effect on itself on a success. A target that succeeds on the saving throw is immune to the Captivating Presence of all masters of cruelties for the next 24 hours.</effect>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Necromancer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>9.0</cr>
+	<ac>15</ac>
+	<hp>66</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 12,INT 17,WIS 12,CHA 11</stats>
+	<saves>INT 7,WIS 5</saves>
+	<skills>ARCANA 7,HISTORY 7</skills>
+	<multipliers>
+		<RESISTANCE>NECROTIC</RESISTANCE>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,7,15,12,Necromancer</spellcasting>
+		<passive>Grim Harvest (1/Turn),When necromancer kills a creature that is neither a construct nor undead with a spell of 1st level or higher, the necromancer regains hit points equal to twice the spell's level, or three times if it is a necromancy spell.</passive>
+	</passives>
+	<other>Knows any four languages.</other>
+	<actions>
+		<attack>Withering Touch,7,5,One creature. Hit: 5 (2d4) necrotic damage.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Ravager slaughter lord</name>
@@ -10168,6 +10885,40 @@ D12		MEMBER SUMMONED
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Malformed Kraken</name>
+	<size>HUGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>CE</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>172</hp>
+	<speed>WALK 20,SWIM 40</speed>
+	<stats>STR 25,DEX 11,CON 20,INT 11,WIS 15,CHA 15</stats>
+	<saves>STR 11,CON 9,INT 4,WIS 6,CHA 6</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>LIGHTNING</IMMUNITY>
+	</multipliers>
+	<conditions>FRIGHTENED,PARALYZED</conditions>
+	<senses>TRUESIGHT 60</senses>
+	<languages>TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+	</passives>
+	<other>Understands Common but can't speak.
+Telepathy is 60ft.</other>
+	<actions>
+		<multiattack>The kraken makes three tentacle attacks. One of them can be replaced with a bite attack, and any of them can be replaced with Fling.</multiattack>
+		<attack>Bite,11,5,One target. Hit: 16 (2d8+7) piercing damage.</attack>
+		<attack>Tentacle,11,20,One target. Hit: 14 (2d6+7) bludgeoning damage, and the target is grappled (escape DC 16). Until this grapple ends, the target is restrained. The kraken has ten tentacles, each of which can grapple one target.</attack>
+		<effect>Fling,null,One Medium or smaller object held or creature grappled by the kraken's tentacles is thrown up to 60 feet in a random direction and knocked prone. If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. If the target is thrown at another creature, that creature must succeed on a DC 16 Dexterity saving throw or take the same damage and be knocked prone.</effect>
+		<effect>Lightning Storm,null,The kraken creates three bolts of lightning, each of which can strike a target the kraken can see within 150 feet of it. A target must make a DC 16 Dexterity saving throw, taking 16 (3d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
 	<name>Nature</name>
 	<size>LARGE</size>
 	<type>CONSTRUCT,false</type>
@@ -10228,6 +10979,43 @@ While mounted and not incapacitated, the specter can't be surprised, and both it
 		<effect>Reap Memory,3/Day,The specter touches one incapacitated creature and chooses 1 hour from among the past 24. Unless the creature succeeds on a DC 15 Intelligence saving throw, the creature loses all memory of that hour. The creature regains the memory only if the specter dies within the next 24 hours.</effect>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Ooze Master</name>
+	<size>HUGE</size>
+	<type>UNDEAD,false</type>
+	<align>LE</align>
+	<cr>10.0</cr>
+	<ac>9</ac>
+	<hp>138</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 16,DEX 1,CON 20,INT 17,WIS 10,CHA 16</stats>
+	<saves>INT 7,WIS 4</saves>
+	<skills>ARCANA 7,INSIGHT 4</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING,NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>ACID,COLD,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED,PRONE</conditions>
+	<senses>BLINDSIGHT 120</senses>
+	<languages>COMMON,PRIMORDIAL,THAYAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,7,15,9,OozeMaster</spellcasting>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Instinctive Attack,When the Ooze Master casts a spell with a casting time of 1 action, it can make one pseudopod attack as a bonus action.</passive>
+		<passive>Corrosive Form,A creature that touches the Ooze Master or hits it with a melee attack while within 5 feet of it takes 9 (2d8) acid damage. Any nonmagical weapon that hits the Ooze Master corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition that hits the Ooze Master is destroyed after dealing damage.
+The Ooze Master can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Pseudopod,7,10,One target. Hit: 13 (3d6+3) bludgeoning damage plus 10 (3d6) acid damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Instinctive Charm,If a creature the Ooze Master can see makes an attack roll against it while within 30 feet of it, the Ooze Master can use a reaction to divert the attack if another creature is within the attack's range. The attacker must make a DC 15 Wisdom saving throw. On a failed save, the attacker targets the creature that is closest to it, not including itself or the Ooze Master. If multiple creatures are closest, the attacker chooses which one to target. On a successful save, the attacker is immune to this Instinctive Charm for 24 hours. Creatures that can't be charmed are immune to this effect.</reaction>
+	</reactions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Rahadin</name>
@@ -10413,6 +11201,39 @@ Understands the languages of its creator but can't speak.</other>
 		<attack>Rock,10,60,240,One target . Hit: 28 (4d10+6) bludgeoning damage. If the target is a creature, it must succeed on a DC 18 Strength saving throw or be knocked prone.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>White Maw</name>
+	<size>GARGANTUAN</size>
+	<type>OOZE,false</type>
+	<align>CN</align>
+	<cr>10.0</cr>
+	<ac>5</ac>
+	<hp>217</hp>
+	<speed>WALK 10</speed>
+	<stats>STR 18,DEX 1,CON 20,INT 12,WIS 10,CHA 3</stats>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,FIRE</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,POISONED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<languages>TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Ooze nature,An ooze doesn't equire sleep.</passive>
+		<passive>False Appearance,While White Maw remains motionless, it is indistinguishable from white stone.</passive>
+		<passive>Killer Response,Any creature that starts its turn in White Maw's space is targeted by a pseudopod attack if White Maw isn't incapacitated.</passive>
+		<passive>Corrode Metal,Any nonmagical weapon made of metal that hits White Maw corrodes. After dealing damage, the weapon takes a permanent and cumulative -1 penalty to damage rolls. if its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal that hits White Maw is destroyed after dealing damage.
+White Maw can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
+		<passive>Amorphous Form,White Maw can occupy another creature's space and vice versa.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.
+Telepathy is 50ft.</other>
+	<actions>
+		<attack>Pseudopod,8,10,One target. Hit: 22 (4d8+4) bludgeoning damage plus 9 (2d8) acid damage. If the target is wearing nonmagical metal armor, its armor is partly corroded and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+	</actions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Animated Statue of Lolth</name>
@@ -11065,6 +11886,46 @@ If the skyswimmer takes 30 damage or more on a single turn from the swallowed cr
 		<attack>Slam,11,30,One target. Hit: 19 (2d12+6) bludgeoning damage.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Tarul Var</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>NE</align>
+	<cr>13.0</cr>
+	<ac>16</ac>
+	<hp>105</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 16,INT 19,WIS 14,CHA 16</stats>
+	<saves>CON 8,INT 9,WIS 7</saves>
+	<skills>ARCANA 9,HISTORY 9,INSIGHT 7,PERCEPTION 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD,LIGHTNING,NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,PRIMORDIAL,ABYSSAL,INFERNAL,THAYAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,9,17,12,TarulVar</spellcasting>
+		<passive>Turn resistance,This creature has advantage on saving throws against any effect that turns undead.</passive>
+		<passive>Focused Conjuration,While Var is concentrating on a conjuration spell, his concentration can't be broken as a result of taking damage.</passive>
+		<passive>Rejuvination,If Var is destroyed but his phylactery remains intact, Var gains a new body in 1d10 days, regaining all his hit points and becoming active again. The new body appears within 5 feet of the phylactery.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Paralyzing Touch,9,5,One creature. Hit: 10 (3d6) cold damage. The target must succeed on a DC 17 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
+		<effect>Benign Transposition,null,Var teleports up to 30 feet to an unoccupied space he can see. Alternatively, he can choose a space within range that is occupied by a Small or Medium creature. If that creature is willing, both creatures teleport, swapping places. Var can use this feature again only after he finishes a long rest or casts a conjuration spell of 1st level or higher.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Cantrip,1,Var casts a cantrip.</legendaryaction>
+		<legendaryaction>Paralyzing Touch,2,Var uses Paralyzing Touch.</legendaryaction>
+		<legendaryaction>Frightening Gaze,2,Var fixes his gaze on one creature he can see within 10 feet of him. The target must succeed on a DC 17 Wisdom saving throw against this magic or become frightened for 1 minute. The frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a target's saving throw is successful or the effect ends for it, the target is immune to Var's gaze for the next 24 hours.</legendaryaction>
+	</legendaryactions>
+	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Vampire</name>

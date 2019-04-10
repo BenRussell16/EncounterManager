@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Transmuter</name>
+	<slot>
+		<known>Light,Mending,Prestidigitation,Ray of frost,Chromatic orb,Expiditious retreat,Mage armour,Alter self,Hold person,Knock,Blink,Fireball,Slow,Polymorph,Stoneskin,Telekinesis</known>
+		<0>Light,Mending,Prestidigitation,Ray of frost</0>
+		<1>4,Mage armour,Expiditious retreat,Chromatic orb</1>
+		<2>3,Knock,Hold person,Alter self</2>
+		<3>3,Slow,Fireball,Blink</3>
+		<4>3,Stoneskin,Polymorph</4>
+		<5>1,Telekinesis</5>
+	</slot>
+</spellbook>

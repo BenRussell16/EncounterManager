@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Evoker</name>
+	<slot>
+		<known>Fire bolt,Light,Prestidigitation,Ray of frost,Burning hands,Mage armour,Magic missile,Mirror image,Misty step,Shatter,Counterspell,Fireball,Lightning bolt,Ice storm,Stoneskin,Bigby's hand,Cone of cold,Chain lightning,Wall of ice</known>
+		<0>Ray of frost,Prestidigitation,Light,Fire bolt</0>
+		<1>4,Magic missile,Mage armour,Burning hands</1>
+		<2>3,Shatter,Misty step,Mirror image</2>
+		<3>3,Lightning bolt,Fireball,Counterspell</3>
+		<4>3,Stoneskin,Ice storm</4>
+		<5>2,Cone of cold,Bigby's hand</5>
+		<6>1,Wall of ice,Chain lightning</6>
+	</slot>
+</spellbook>

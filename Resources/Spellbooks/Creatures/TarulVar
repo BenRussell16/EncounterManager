@@ -1,0 +1,13 @@
+<spellbook>
+	<name>TarulVar</name>
+	<slot>
+		<known>Fire bolt,Mage hand,Minor illusion,Prestidigitation,Ray of frost,Detect magic,Magic missile,Shield,Unseen servant,Detect thoughts,Flaming sphere,Mirror image,Scorching ray,Counterspell,Dispel magic,Fireball,Dimension door,Evard's black tentacles,Cloudkill,Scrying,Circle of death</known>
+		<0>Fire bolt,Mage hand,Minor illusion,Prestidigitation,Ray of frost</0>
+		<1>4,Unseen servant,Shield,Magic missile,Detect magic</1>
+		<2>3,Scorching ray,Mirror image,Flaming sphere,Detect thoughts</2>
+		<3>3,Dispel magic,Counterspell,Fireball</3>
+		<4>3,Evard's black tentacles,Dimension door</4>
+		<5>3,Scrying,Cloudkill</5>
+		<6>1,Circle of death</6>
+	</slot>
+</spellbook>

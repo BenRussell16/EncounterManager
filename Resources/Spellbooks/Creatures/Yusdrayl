@@ -1,0 +1,8 @@
+<spellbook>
+	<name>Yusdrayl</name>
+	<slot>
+		<known>Mage hand,Prestidigitation,Ray of frost,Shocking grasp,Burning hands,Chromatic orb,Mage armour</known>
+		<0>Shocking grasp,Ray of frost,Prestidigitation,Mage hand</0>
+		<1>4,Mage armour,Chromatic orb,Burning hands</1>
+	</slot>
+</spellbook>
