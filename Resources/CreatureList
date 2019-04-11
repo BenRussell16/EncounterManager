@@ -195,6 +195,31 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<source>LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
+	<name>Howling Hatred Initiate</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>0.125</cr>
+	<ac>13</ac>
+	<hp>9</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 15,CON 10,INT 10,WIS 9,CHA 11</stats>
+	<skills>DECEPTION 2,RELIGION 2,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Hold Breath,The initiate can hold its breath for 30 minutes.</passive>
+		<passive>Guiding Wind (Recharges after a Short or Long Rest),As a bonus action, the initiate gains advantage on the next ranged attack roll it makes before the end of its next turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Kobold</name>
 	<size>SMALL</size>
 	<type>HUMANOID,KOBOLD,false</type>
@@ -1305,6 +1330,28 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Crushing Wave Reaver</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>0.5</cr>
+	<ac>14</ac>
+	<hp>22</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 14,CON 13,INT 10,WIS 11,CHA 8</stats>
+	<skills>ATHLETICS 4,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Sharktoothed Longsword,4,5,One target. Hit: 6 (1d8+2) slashing damage, or 7 (1d10+2) slashing damage if used with two hands. Against a target is wearing no armor, the reaver deals an extra die of damage with this sword.</attack>
+		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Firenewt Warrior</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,FIRENEWT,false</type>
@@ -1689,6 +1736,36 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Sacred Stone Monk</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>0.5</cr>
+	<ac>14</ac>
+	<hp>22</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 13,DEX 15,CON 12,INT 10,WIS 14,CHA 9</stats>
+	<skills>ACROBATICS 4,ATHLETICS 3,PERCEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>TREMORSENSE 10</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Unarmoured Defense,While the monk is wearing no armor and wielding no shield, its AC includes its Wisdom modifier.</passive>
+		<passive>Unarmoured Movement,While the monk is wearing no armor and wielding no shield, its walking speed increases by 10 feet (included in its speed).</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The monk makes two melee attacks.</multiattack>
+		<attack>Unarmed Strike,4,5,One target. Hit: 5 (1d6+2) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The monk adds 2 to its AC against one melee or ranged weapon attack that would hit it. To do so, the monk must see the attacker.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Scorchbringer Guard</name>
@@ -3513,6 +3590,31 @@ Innate spellcasting is psionics.</other>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
+	<name>Black Earth Guard</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>18</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 17,DEX 11,CON 14,INT 10,WIS 10,CHA 9</stats>
+	<skills>INTIMIDATION 1,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The guard makes two melee attacks.</multiattack>
+		<attack>Morningstar,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Unyielding,When the guard is subjected to an effect that would move it, knock it prone, or both, it can use its reaction to be neither moved nor knocked prone.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Carrion Crawler</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -3707,6 +3809,33 @@ Innate spellcasting is psionics.</other>
 		<effect>Invisibility,Recharges after a Short or Long Rest,The spy magically turns invisible until it attacks, deals damage, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the spy wears or carries is invisible with it.</effect>
 	</actions>
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Eternal Flame Guardian</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>17</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 13,CON 14,INT 8,WIS 11,CHA 13</stats>
+	<skills>INTIMIDATION 3,PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>FIRE</RESISTANCE>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Flaming Weapon (Recharges after a Short or Long Rest),As a bonus action, the guard can wreath one melee weapon it is wielding in flame. The guard is unharmed by this fire, which lasts until the end of the guard’s next turn. While wreathed in flame, the weapon deals an extra 3 (1d6) fire damage on a hit.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The guard makes two melee attacks.</multiattack>
+		<attack>Longsword,4,5,One target. Hit: 6 (1d8+2) slashing damage.</attack>
+		<attack>Heavy Crossbow,3,100,400,One target. Hit: 6 (1d10+1) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Faerie Dragon (Blue)</name>
@@ -4982,6 +5111,36 @@ Can't speak in raven form.</other>
 	<source>TALDOREICAMPAIGNSETTING</source>
 </creature>
 <creature>
+	<name>Dark Tide Knight</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE,NE</align>
+	<cr>3.0</cr>
+	<ac>13</ac>
+	<hp>58</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 17,DEX 16,CON 14,INT 10,WIS 11,CHA 11</stats>
+	<skills>ATHLETICS 7,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Bonded Mount,The knight is magically bound to a beast with an innate swimming speed trained to serve as its mount. While mounted on this beast, the knight gains the beast’s senses and ability to breathe underwater. The bonded mount obeys the knight’s commands. If its mount dies, the knight can train a new beast to serve as its bonded mount, a process requiring a month.</passive>
+		<passive>Sneak Attack,The knight deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the knight that isn’t incapacitated and the knight doesn’t have disadvantage on the attack roll.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The knight makes two shortsword attacks.</multiattack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<attack>Lance,5,10,One target. Hit: 9 (1d12+3) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Uncanny Dodge,When an attacker the knight can see hits it with an attack, the knight can halve the damage against it.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Deathlock Wight</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -5620,6 +5779,34 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
+	<name>Minotaur</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>14</ac>
+	<hp>76</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 18,DEX 11,CON 16,INT 6,WIS 16,CHA 9</stats>
+	<skills>PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Charge,lf the minotaur moves at least 10 feet straìght toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. lfthe target is a creature, it must succeed on a DC l4 Strength saving throw or be pushed up to ì0 feet away and knocked prone.</passive>
+		<passive>Labyrinthine Recall,fhe minotaur can perfectly recall any path it has traveled.</passive>
+		<passive>Reckless,At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Greataxe,6,5,One target. Hit: 17 (2d12+4) slashing damage.</attack>
+		<attack>Gore,6,5,One target. Hit:13 (2d8+4) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Mormesk the Wraith</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -5926,6 +6113,36 @@ The orc also reverts to its true form if it dies or falls unconscious. The orc c
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Zegdar</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>16</ac>
+	<hp>117</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 18,DEX 11,CON 16,INT 11,WIS 16,CHA 9</stats>
+	<skills>PERCEPTION 7</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>UNDERCOMMON,ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Charge,lf the minotaur moves at least 10 feet straìght toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. lfthe target is a creature, it must succeed on a DC l4 Strength saving throw or be pushed up to ì0 feet away and knocked prone.</passive>
+		<passive>Labyrinthine Recall,fhe minotaur can perfectly recall any path it has traveled.</passive>
+		<passive>Reckless,At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Greataxe,6,5,One target. Hit: 17 (2d12+4) slashing damage.</attack>
+		<attack>Gore,6,5,One target. Hit:13 (2d8+4) piercing damage.</attack>
+		<effect>Burning Breath,Recharge 5-6,The minotaur exhales a cloud of burning embers in a 15-foot cone. Each creature in that area must succeed on a DC 14 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Ashari waverider</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -6050,6 +6267,34 @@ If the weird starts its turn at Gargantuan size, the weird releases energy in an
 		<attack>Slam,5,5,One target. Hit: 7 (1d8+3) bludgeoning damage plus 7 (2d6) fire damage, or 11 (2d8+3) bludgeoning damage plus 14 (4d6) fire damage if the weird is Large or bigger.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Burrowshark</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>4.0</cr>
+	<ac>18</ac>
+	<hp>82</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 12,CON 16,INT 10,WIS 11,CHA 13</stats>
+	<skills>ANIMALHANDLING 2,ATHLETICS 6,INTIMIDATION 3,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Bond of the Black Earth,The burrowshark is magically bound to a bulette trained to serve as its mount. While mounted on its bulette, the burrowshark shares the bulette’s senses and can ride the bulette while it burrows. The bonded bulette obeys the burrowshark’s commands. If its mount dies, the burrowshark can train a new bulette to serve as its bonded mount, a process requiring a month.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The burrowshark makes three melee attacks.</multiattack>
+		<attack>Spear,6,20,60,One target. Hit: 7 (1d6+4) piercing damage, or 8 (1d8+4) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<reactions>
+		<reaction>Unyielding,When the burrowshark is subjected to an effect that would move it, knock it prone, or both, it can use its reaction to be neither moved nor knocked prone.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Chuul</name>
@@ -7666,6 +7911,40 @@ Only has lair actions when with a group of Golgari.</other>
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
+	<name>Hellenrae</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>5.0</cr>
+	<ac>16</ac>
+	<hp>78</hp>
+	<speed>WALK 50</speed>
+	<stats>STR 13,DEX 18,CON 14,INT 10,WIS 15,CHA 13</stats>
+	<skills>ACROBATICS 7,ATHLETICS 4,INSIGHT 5,PERCEPTION 5</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,POISONED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<languages>COMMON,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Unarmored Movement,While Hellenrae is wearing no armor and wielding no shield, her speed increases by 20 feet (included in her speed).</passive>
+		<passive>Stunning Strike (Recharge 5-6),When Hellenrae hits a target with a melee weapon attack, the target must succeed on a DC 13 Constitution saving throw or be stunned until the end of Hellenrae’s next turn.</passive>
+		<passive>Unarmored Defense,While Hellenrae is wearing no armor and wielding no shield, her AC includes her Wisdom modifier.</passive>
+		<passive>Evasion,If Hellenrae is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails.</passive>
+	</passives>
+	<other>Blind beyond her blindsight radius.</other>
+	<actions>
+		<multiattack>Hellenrae makes three melee attacks.</multiattack>
+		<attack>Unarmed Strike,7,5,One target. Hit: 9 (1d10+4) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry and Counter,Hellenrae adds 3 to her AC against one melee or ranged weapon attack that would hit her. To do so, she must be able to sense the attacker with her blindsight. If the attack misses, Hellenrae can make one melee attack against the attacker if it is within her reach.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Izek Strazni</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -7904,6 +8183,33 @@ fighting.
 		<effect>Crown of Glory,null,The Princip selects an ally. A golden crown appears over the ally's head. While the crown remains, the ally cannot be compelled to act in a manner contrary to their will and may choose one ability score to raise to 24. Each time the ally takes damage while the crown is on them, they must make a Constitution saving throw or lose the crown. The DC equals 10 or half the damage taken, whichever number is higher.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Razerblast</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>17</ac>
+	<hp>112</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 9,WIS 10,CHA 13</stats>
+	<skills>INTIMIDATION 4,PERCEPTION 3</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<languages>COMMON,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Shrapnel Explosion,When the razerblast drops to 0 hit points, a flaming orb in its chest explodes, destroying the razerblast’s body and scattering its armor as shrapnel. Creatures within 10 feet of the razerblast when it explodes must succeed on a DC 12 Dexterity saving throw, taking 21 (6d6) piercing damage on a failed save, or half as much damage on a successful one.</passive>
+		<passive>Searing Armour,The razerblast’s armor is hot. Any creature grappling the razerblast or grappled by it takes 5 (1d10) fire damage at the end of that creature’s turn.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The razerblast makes three melee attacks.</multiattack>
+		<attack>Spear,6,20,60,One target. Hit: 6 (1d6+3) piercing damage, or 7 (1d8+3) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Red Slaad</name>
@@ -9137,6 +9443,35 @@ May have a familiar.</other>
 	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
+	<name>Air Elemental Myrmidon</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>117</hp>
+	<speed>WALK 30,FLY 30</speed>
+	<stats>STR 18,DEX 14,CON 14,INT 9,WIS 10,CHA 10</stats>
+	<multipliers>
+		<RESISTANCE>LIGHTNING,THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>PARALYZED,PETRIFIED,POISONED,PRONE</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>AURAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+	</passives>
+	<other>Knows any one other language its creator knows.</other>
+	<actions>
+		<multiattack>The myrmidon makes three flail attacks.</multiattack>
+		<attack>Flail,7,5,One target. Hit: 8 (1d8+4) bludgeoning damage.</attack>
+		<effect>Lightning Strike,Recharge 6,The myrmidon makes one flail attack. If the attack hits, it deals an extra 18 (4d8) lightning damage, and the target must succeed on a DC 14 Constitution saving throw or be stunned until the end of the myrmidon’s next turn.</effect>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Artus Cimber</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -9356,6 +9691,38 @@ Only has lair actions when with a group of Rakdos.</other>
 	<source>THERISEOFTIAMAT</source>
 </creature>
 <creature>
+	<name>Drannin Splithelm</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>NE</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>93</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 19,DEX 10,CON 18,INT 11,WIS 8,CHA 12</stats>
+	<skills>ATHLETICS 7,INTIMIDATION 4</skills>
+	<multipliers>
+		<RESISTANCE>COLD,POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Indomitable (Recharges after a Short or Long Rest),Drannin can reroll a saving throw that he fails. He must use the new roll.</passive>
+		<passive>Action Surge (Recharges after a Short or Long Rest),Drannin takes an additional action on his turn.</passive>
+		<passive>Second Wind (Recharges after a Short or Long Rest),Drannin can use a bonus action to regain 16 (1d10+11) hit points.</passive>
+		<passive>Dwarven Resilience,Drannin has advantage on saving throws against poison.</passive>
+		<passive>Brute,A melee weapon deals one extra die of its damage when Drannin hits with it (included in the attack).</passive>
+		<passive>Special Equipment,Drannin wears a control amulet for his shield guardian (see the Monster Manual) and a ring of cold resistance. He also carries a potion of frost giant strength.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Drannin makes three attacks with his greataxe.</multiattack>
+		<attack>Greataxe,7,5,One target. Hit: 17 (2d12+4) slashing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Drow mage</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -9410,6 +9777,66 @@ Only has lair actions when with a group of Rakdos.</other>
 		<attack>Quarterstaff,3,5,One target. Hit: 3 (1d6) bludgeoning damage, or 4 (1d8) bludgeoning damage if used with two hands.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Earth Elemental Myrmidon</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>127</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 10,CON 17,INT 8,WIS 10,CHA 10</stats>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>PARALYZED,PETRIFIED,POISONED,PRONE</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+	</passives>
+	<other>Knows any one other language its creator knows.</other>
+	<actions>
+		<multiattack>The myrmidon makes two maul attacks.</multiattack>
+		<attack>Maul,7,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
+		<effect>Thunderous Strike,Recharge 6,The myrmidon makes one maul attack. If the attack hits, it deals an extra 16 (3d10) thunder damage, and the target must succeed on a DC 14 Strength saving throw or be knocked prone.</effect>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
+	<name>Fire Elemental Myrmidon</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>117</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 13,DEX 18,CON 15,INT 9,WIS 10,CHA 10</stats>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>PARALYZED,PETRIFIED,POISONED,PRONE</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Water Susceptibility,For every 5 feet the myrmidon moves in water, it takes 2 (1d4) cold damage.</passive>
+		<passive>Illumination,The myrmidon sheds bright light in a 20-foot radius and dim light in a 40-foot radius.</passive>
+	</passives>
+	<other>Knows any one other language its creator knows.</other>
+	<actions>
+		<multiattack>The myrmidon makes three scimitar attacks.</multiattack>
+		<attack>Scimitar,7,5,One target. Hit: 7 (1d6+4) slashing damage.</attack>
+		<effect>Fiery Strikes,Recharge 6,The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) fire damage.</effect>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Firefist</name>
@@ -9469,6 +9896,38 @@ Is a Boros spellcaster.</other>
 		<attack>Arc Lightning,7,30,One target. Hit: 16 (3d10) lightning damage, and lightning jumps from the target to one creature of the fluxcharger's choice that it can see within 30 feet of the target. That second creature must succeed on a DC 15 Dexterity saving throw or take 13 (3d8) lightning damage. Hit or Miss: The fluxcharger takes 5 (1d10) force damage after resolving the attack.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Ghald</name>
+	<size>LARGE</size>
+	<type>HUMANOID,SAHUAGIN,false</type>
+	<align>LE</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>102</hp>
+	<speed>WALK 30,SWIM 50</speed>
+	<stats>STR 19,DEX 17,CON 16,INT 14,WIS 13,CHA 17</stats>
+	<saves>DEX 6,CON 6,INT 5,WIS 4</saves>
+	<skills>INSIGHT 4,PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,SAHUAGIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Sneak Attack,Ghald deals an extra 14 (4d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Ghald’s that isn’t incapacitated and Ghald doesn’t have disadvantage on the attack roll.</passive>
+		<passive>Assassinate,During its first turn, Ghald has advantage on attack rolls against any creature that hasn’t taken a turn. Any hit Ghald scores against a surprised creature is a critical hit.</passive>
+		<passive>Shark Telepathy,Ghald can magically command any shark within 120 feet of him, using a limited telepathy.</passive>
+		<passive>Limited Amphibiousness,Ghald can breathe air and water, but he needs to be submerged at least once every 4 hours to avoid suffocating.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Ghald makes three attacks, one with his bite and two with his shortswords.</multiattack>
+		<attack>Bite,7,5,One creature. Hit: 9 (2d4+4) piercing damage.</attack>
+		<attack>Shortsword,7,5,One creature. Hit: 11 (2d6+4) piercing damage.</attack>
+		<attack>Garrote,7,5,One Medium or Small creature against which Ghald has advantage on the attack roll. Hit: 9 (2d4+4) bludgeoning damage, and the target is grappled (escape DC 15). Until the grapple ends, the target can’t breathe, and Ghald has advantage on attack rolls against it.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Giant Skeleton</name>
@@ -9784,6 +10243,35 @@ Chorus of Retribution. While the Virtue sings, any enemy who deals damage to one
 Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have disadvantage on saving throws against spells that would send them to another plane.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Water Elemental Myrmidon</name>
+	<size>MEDIUM</size>
+	<type>ELEMENTAL,false</type>
+	<align>TN</align>
+	<cr>7.0</cr>
+	<ac>18</ac>
+	<hp>127</hp>
+	<speed>WALK 40,SWIM 40</speed>
+	<stats>STR 18,DEX 14,CON 15,INT 8,WIS 10,CHA 10</stats>
+	<multipliers>
+		<RESISTANCE>ACID,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>PARALYZED,PETRIFIED,POISONED,PRONE</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+	</passives>
+	<other>Knows any one other language its creator knows.</other>
+	<actions>
+		<multiattack>The myrmidon makes three trident attacks.</multiattack>
+		<attack>Trident,7,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<effect>Freezing Strikes,Recharge 6,The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) cold damage, and the target’s speed is reduced by 10 feet until the end of the myrmidon’s next turn.</effect>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Xandala</name>
@@ -10183,6 +10671,39 @@ The Staff of Changing is not a magic item outside of Lord Rall's "hands".</other
 		<effect>Any Pile of Organs Will Do,Recharge 6,When he drops to 0 hit points, Lord Rall can reform himself from any corpse within 120 feet instead of falling unconscious. Lord Rall does not need to see the corpse in order to use it. The process happens in an instant, and the newly formed Lord Rall appears with only half of his maximum hit points.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Marlos Urnrayle</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>NE</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>136</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 17,DEX 11,CON 18,INT 12,WIS 13,CHA 17</stats>
+	<skills>ARCANA 4,DECEPTION 6,PERCEPTION 4</skills>
+	<multipliers>
+		<RESISTANCE>ACID</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60,TREMORSENSE 60</senses>
+	<languages>COMMON,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<passive>Petrifying Gaze,When a creature that can see Marlos’s eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn’t incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
+Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can’t see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.
+If Marlos sees himself reflected on a polished surface within 30 feet of him and in an area of bright light, Marlos is, due to his curse, affected by his own gaze.</passive>
+		<passive>Earth Passage,Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied.</passive>
+		<passive>Earthen Defeat,When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Marlos makes three melee attacks, one with his snake hair and two with Ironfang.</multiattack>
+		<attack>Snake Hair,6,5,One target. Hit: 7 (1d8+3) piercing damage plus 14 (4d6) poison damage.</attack>
+		<attack>Ironfang,9,5,One target. Hit: 7 (1d8+3) piercing damage plus 4 (1d8) thunder damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Mind flayer arcanist</name>
@@ -12519,6 +13040,43 @@ Understands Abyssal, Celestial, Common, Draconic, Dwarvish, Elvish, Infernal, an
 		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end ofeach of its turns, ending the effect on itself on a success.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Marlos Urnrayle (In Lair)</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>NE</align>
+	<cr>12.0</cr>
+	<ac>15</ac>
+	<hp>136</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 17,DEX 11,CON 18,INT 12,WIS 13,CHA 17</stats>
+	<skills>ARCANA 4,DECEPTION 6,PERCEPTION 4</skills>
+	<multipliers>
+		<RESISTANCE>ACID</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60,TREMORSENSE 60</senses>
+	<languages>COMMON,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<passive>Petrifying Gaze,When a creature that can see Marlos’s eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn’t incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
+Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can’t see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.
+If Marlos sees himself reflected on a polished surface within 30 feet of him and in an area of bright light, Marlos is, due to his curse, affected by his own gaze.</passive>
+		<passive>Earth Passage,Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied.</passive>
+		<passive>Earthen Defeat,When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Marlos makes three melee attacks, one with his snake hair and two with Ironfang.</multiattack>
+		<attack>Snake Hair,6,5,One target. Hit: 7 (1d8+3) piercing damage plus 14 (4d6) poison damage.</attack>
+		<attack>Ironfang,9,5,One target. Hit: 7 (1d8+3) piercing damage plus 4 (1d8) thunder damage.</attack>
+	</actions>
+	<lair>
+		<lairaction>Marlos casts earthquake without using components. As long as he maintains concentration on earthquake, initiative count 20 is the start of Marlos’s turn for the purpose of the spell. He can take no other lair actions while concentrating on earthquake.</lairaction>
+		<lairaction>Marlos draws power from the earth node to heal. When he does so, he regains 30 (6d8+3) hit points.</lairaction>
+	</lair>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Remnant chosen</name>
