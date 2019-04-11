@@ -1,0 +1,8 @@
+<spellbook>
+	<name>SteamMephit</name>
+	<daily>
+		<1>
+			<spell>Blur,false</spell>
+		</1>
+	</daily>
+</spellbook>

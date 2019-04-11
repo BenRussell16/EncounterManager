@@ -1,0 +1,8 @@
+<spellbook>
+	<name>GarretLevistusson</name>
+	<slot>
+		<known>Blade ward,Vicious mockery,Charm person,Detect magic,Disguise self,Identify,Tasha's hideous laughter</known>
+		<0>Blade ward,Vicious mockery</0>
+		<1>3,Tasha's hideous laughter,Identify,Disguise self,Detect magic,Charm person</1>
+	</slot>
+</spellbook>

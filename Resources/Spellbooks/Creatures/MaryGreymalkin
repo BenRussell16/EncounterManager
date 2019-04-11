@@ -1,0 +1,10 @@
+<spellbook>
+	<name>MaryGreymalkin</name>
+	<slot>
+		<known>Chill touch,Eldritch blast,Mage hand,Hex,Unseen servant,Darkness,Misty step,Phantasmal force,Hypnotic pattern</known>
+		<0>Chill touch,Eldritch blast,Mage hand</0>
+		<1>0,Hex,Unseen servant</1>
+		<2>0,Darkness,Misty step,Phantasmal force</2>
+		<3>2,Hypnotic pattern</3>
+	</slot>
+</spellbook>
