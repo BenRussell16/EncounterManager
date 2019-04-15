@@ -285,7 +285,7 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<regions></regions>
 	<passives>
 		<passive>Disintegration,If the monodrone dies, its body disintegrates into dust, leaving behind its weapons and anything else it was carrying.</passive>
-		<passive>Axiomatic Mind,The monodrone can’t be compelled to act in a manner contrary to its nature or its instructions.</passive>
+		<passive>Axiomatic Mind,The monodrone can't be compelled to act in a manner contrary to its nature or its instructions.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -948,7 +948,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<actions>
 		<attack>Longsword,2,5,One target. Hit: 1 slashing damage.</attack>
 		<attack>Shortbow,6,40,160,One target. Hit: 1 piercing damage, and the target must succeed on a DC 10 Constitution saving throw or become poisoned for 1 minute. If its saving throw result is 5 or lower, the poisoned target falls unconscious for the same duration, or until it takes damage or another creature takes an action to shake it awake.</attack>
-		<effect>Heart Sight,null,The sprite touches a creature and magically knows the creature’s current emotional state. If the target fails a DC 10 Charisma saving throw, the sprite also knows the creature’s alignment. Celestials, fiends, and undead automatically fail the saving throw.</effect>
+		<effect>Heart Sight,null,The sprite touches a creature and magically knows the creature's current emotional state. If the target fails a DC 10 Charisma saving throw, the sprite also knows the creature's alignment. Celestials, fiends, and undead automatically fail the saving throw.</effect>
 		<effect>Invisibility,null,The sprite magically turns invisible until it attacks or casts a spell, or until its concentration ends (as if concentrating on a spell). Any equipment the sprite wears or carries is invisible with it.</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
@@ -1001,12 +1001,12 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<regions></regions>
 	<passives>
 		<passive>Keen hearing,This creature has advantage on Wisdom (Perception) checks that rely on hearing.</passive>
-		<passive>Swarm,The swarm can occupy another creature’s space and vice versa, and the swarm can move through any opening large enough for a Tiny bat. The swarm can’t regain hit points or gain temporary hit points.</passive>
-		<passive>Echolocation,The swarm can’t use its blindsight while deafened.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny bat. The swarm can't regain hit points or gain temporary hit points.</passive>
+		<passive>Echolocation,The swarm can't use its blindsight while deafened.</passive>
 	</passives>
 	<other></other>
 	<actions>
-		<attack>Bites,4,0,One creature in the swarm’s space. Hit: 5 (2d4) piercing damage, or 2 (1d4) piercing damage if the swarm has half of its hit points or fewer.</attack>
+		<attack>Bites,4,0,One creature in the swarm's space. Hit: 5 (2d4) piercing damage, or 2 (1d4) piercing damage if the swarm has half of its hit points or fewer.</attack>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
@@ -1621,8 +1621,8 @@ slashing darrrage if used with two hands.</attack>
 	<senses>BLINDSIGHT 60</senses>
 	<regions></regions>
 	<passives>
-		<passive>Transparent,Even when an ooze-folk is in plain sight, it takes a DC 12 Wisdom (Perception) check to spot an oozefolk that has neither moved nor attacked. A creature that tries to enter the ooze-folk’s space while unaware of the ooze-folk is surprised by the ooze-folk.</passive>
-		<passive>Fragile Bones,For each 5 damage it takes, the ooze-folk’s walking speed is reduced by 5 feet.</passive>
+		<passive>Transparent,Even when an ooze-folk is in plain sight, it takes a DC 12 Wisdom (Perception) check to spot an oozefolk that has neither moved nor attacked. A creature that tries to enter the ooze-folk's space while unaware of the ooze-folk is surprised by the ooze-folk.</passive>
+		<passive>Fragile Bones,For each 5 damage it takes, the ooze-folk's walking speed is reduced by 5 feet.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -3103,14 +3103,14 @@ Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cas
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Shapechanger,The quasit can use its action to polymorph into a beast form that resembles a bat (speed 10 ft. fly 40 ft.), a centipede (40 ft., climb 40 ft.), or a toad (40 ft., swim 40 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn’t transformed. It reverts to its true form if it dies.</passive>
+		<passive>Shapechanger,The quasit can use its action to polymorph into a beast form that resembles a bat (speed 10 ft. fly 40 ft.), a centipede (40 ft., climb 40 ft.), or a toad (40 ft., swim 40 ft.), or back into its true form. Its statistics are the same in each form, except for the speed changes noted. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies.</passive>
 		<passive>Familiar,The quasit can serve another creature as a familiar, forming a telepathic bond with its willing master. While the two are bonded, the master can sense what the quasit senses as long as they arewithin 1 mile of each other. While the quasit is within 10 feet of its master, the master shares the quasit's Magic Resistance trait. At any time and for any reason, the quasit can end its service as a familiar, ending the telepathic bond.</passive>
 	</passives>
 	<other></other>
 	<actions>
 		<attack>Claws (Bite in Beast Form),4,5,One target. Hit: 5 (1d4+3) piercing damage, and the target must succeed on a DC 10 Constitution saving throw or take 5 (2d4) poison damage and become poisoned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
 		<effect>Invisibility,null,The quasit magically turns invisible until it attacks or uses Scare, or until its concentration ends (as if concentrating on a spell). Any equipment the quasit wears or carries is invisible with it.</effect>
-		<effect>Scare,1/Day,One creature of the quasit’s choice within 20 feet of it must succeed on a DC 10 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the quasit is within line of sight, ending the effect on itself on a success.</effect>
+		<effect>Scare,1/Day,One creature of the quasit's choice within 20 feet of it must succeed on a DC 10 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, with disadvantage if the quasit is within line of sight, ending the effect on itself on a success.</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
@@ -3827,7 +3827,7 @@ Innate spellcasting is psionics.</other>
 	<languages>COMMON</languages>
 	<regions></regions>
 	<passives>
-		<passive>Flaming Weapon (Recharges after a Short or Long Rest),As a bonus action, the guard can wreath one melee weapon it is wielding in flame. The guard is unharmed by this fire, which lasts until the end of the guard’s next turn. While wreathed in flame, the weapon deals an extra 3 (1d6) fire damage on a hit.</passive>
+		<passive>Flaming Weapon (Recharges after a Short or Long Rest),As a bonus action, the guard can wreath one melee weapon it is wielding in flame. The guard is unharmed by this fire, which lasts until the end of the guard's next turn. While wreathed in flame, the weapon deals an extra 3 (1d6) fire damage on a hit.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -3999,8 +3999,8 @@ Violet		51 years or more.</other>
 		<spellcasting>CHA,5,13,2,GarretLevistusson</spellcasting>
 		<passive>Cunning Action,On each of his turns, Garret can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
 		<passive>Bardic Inspiration (3/day),As a bonus action, Garret can give one chosen creature (other than him) a d6 inspiration die. The chosen creature must be within 60 feet of Garret and able to hear him. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can use the inspiration die after the roll is made but before the DM says whether it succeeds or fails. Once the inspiration die is rolled, it is lost. A creature can have only one inspiration die at a time.</passive>
-		<passive>Sneak Attack (1/Turn),Garret deals an extra 7 (2d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Garret that isn’t incapacitated and Garret doesn’t have disadvantage on the attack roll.</passive>
-		<passive>Special Equipment,Garret wears a ring of warmth (included in his statistics) and wields a gambler’s blade longsword (see Lost Laboratory of Kwalish).</passive>
+		<passive>Sneak Attack (1/Turn),Garret deals an extra 7 (2d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Garret that isn't incapacitated and Garret doesn't have disadvantage on the attack roll.</passive>
+		<passive>Special Equipment,Garret wears a ring of warmth (included in his statistics) and wields a gambler's blade longsword (see Lost Laboratory of Kwalish).</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -4024,8 +4024,8 @@ Violet		51 years or more.</other>
 	<senses>BLINDSIGHT 60</senses>
 	<regions></regions>
 	<passives>
-		<passive>Transparent,Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube’s space while unaware of the cube is surprised by the cube.</passive>
-		<passive>Ooze Cube,The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube’s Engulf and has disadvantage on the saving throw.
+		<passive>Transparent,Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.</passive>
+		<passive>Ooze Cube,The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.
 Creatures inside the cube can be seen but have total cover.
 A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 (3d6) acid damage.
 The cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.</passive>
@@ -4033,9 +4033,9 @@ The cube can hold only one Large creature or up to four Medium or smaller creatu
 	<other>Blind beyond its blindsight radius.</other>
 	<actions>
 		<attack>Pseudopod,4,5,One creature. Hit: 10 (3d6) acid damage.</attack>
-		<effect>Engulf,null,The cube moves up to its speed. While doing so, it can enter Large or smaller creatures’ spaces. Whenever the cube enters a creature’s space, the creature must make a DC 12 Dexterity saving throw.
+		<effect>Engulf,null,The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.
 On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.
-On a failed save, the cube enters the creature’s space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can’t breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube’s turns. When the cube moves, the engulfed creature moves with it.
+On a failed save, the cube enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.
 An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube.</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
@@ -4331,7 +4331,7 @@ Shared Mind. A homunculus knows everything its creator knows, including all the 
 	<passives>
 		<spellcasting>CHA,4,12,5,MaryGreymalkin</spellcasting>
 		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
-		<passive>Fey Presence (Recharges after a Short Rest),Mary can cause each creature within 10 feet of her to succeed on a DC 12 Wisdom saving throw or become charmed or frightened by her (Mary’s choice) until the end of her next turn.</passive>
+		<passive>Fey Presence (Recharges after a Short Rest),Mary can cause each creature within 10 feet of her to succeed on a DC 12 Wisdom saving throw or become charmed or frightened by her (Mary's choice) until the end of her next turn.</passive>
 		<passive>Special Equipment,Mary wears bracers of defense and a ring of protection, and carries a deck of several things (see Lost Laboratory of Kwalish).</passive>
 	</passives>
 	<other>Spell slots come back after a short rest.</other>
@@ -5126,8 +5126,8 @@ Can't speak in raven form.</other>
 	<languages>COMMON</languages>
 	<regions></regions>
 	<passives>
-		<passive>Bonded Mount,The knight is magically bound to a beast with an innate swimming speed trained to serve as its mount. While mounted on this beast, the knight gains the beast’s senses and ability to breathe underwater. The bonded mount obeys the knight’s commands. If its mount dies, the knight can train a new beast to serve as its bonded mount, a process requiring a month.</passive>
-		<passive>Sneak Attack,The knight deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the knight that isn’t incapacitated and the knight doesn’t have disadvantage on the attack roll.</passive>
+		<passive>Bonded Mount,The knight is magically bound to a beast with an innate swimming speed trained to serve as its mount. While mounted on this beast, the knight gains the beast's senses and ability to breathe underwater. The bonded mount obeys the knight's commands. If its mount dies, the knight can train a new beast to serve as its bonded mount, a process requiring a month.</passive>
+		<passive>Sneak Attack,The knight deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the knight that isn't incapacitated and the knight doesn't have disadvantage on the attack roll.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -5795,7 +5795,7 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<languages>ABYSSAL</languages>
 	<regions></regions>
 	<passives>
-		<passive>Charge,lf the minotaur moves at least 10 feet straìght toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. lfthe target is a creature, it must succeed on a DC l4 Strength saving throw or be pushed up to ì0 feet away and knocked prone.</passive>
+		<passive>Charge,lf the minotaur moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC l4 Strength saving throw or be pushed up to 10 feet away and knocked prone.</passive>
 		<passive>Labyrinthine Recall,fhe minotaur can perfectly recall any path it has traveled.</passive>
 		<passive>Reckless,At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</passive>
 	</passives>
@@ -6130,7 +6130,7 @@ The orc also reverts to its true form if it dies or falls unconscious. The orc c
 	<languages>UNDERCOMMON,ABYSSAL</languages>
 	<regions></regions>
 	<passives>
-		<passive>Charge,lf the minotaur moves at least 10 feet straìght toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. lfthe target is a creature, it must succeed on a DC l4 Strength saving throw or be pushed up to ì0 feet away and knocked prone.</passive>
+		<passive>Charge,lf the minotaur moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC l4 Strength saving throw or be pushed up to 10 feet away and knocked prone.</passive>
 		<passive>Labyrinthine Recall,fhe minotaur can perfectly recall any path it has traveled.</passive>
 		<passive>Reckless,At the start of its turn, the minotaur can gain advantage on all melee weapon attack rolls it makes during that turn, but attack rolls against it have advantage until the start of its next turn.</passive>
 	</passives>
@@ -6284,7 +6284,7 @@ If the weird starts its turn at Gargantuan size, the weird releases energy in an
 	<languages>COMMON</languages>
 	<regions></regions>
 	<passives>
-		<passive>Bond of the Black Earth,The burrowshark is magically bound to a bulette trained to serve as its mount. While mounted on its bulette, the burrowshark shares the bulette’s senses and can ride the bulette while it burrows. The bonded bulette obeys the burrowshark’s commands. If its mount dies, the burrowshark can train a new bulette to serve as its bonded mount, a process requiring a month.</passive>
+		<passive>Bond of the Black Earth,The burrowshark is magically bound to a bulette trained to serve as its mount. While mounted on its bulette, the burrowshark shares the bulette's senses and can ride the bulette while it burrows. The bonded bulette obeys the burrowshark's commands. If its mount dies, the burrowshark can train a new bulette to serve as its bonded mount, a process requiring a month.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -7930,7 +7930,7 @@ Only has lair actions when with a group of Golgari.</other>
 	<regions></regions>
 	<passives>
 		<passive>Unarmored Movement,While Hellenrae is wearing no armor and wielding no shield, her speed increases by 20 feet (included in her speed).</passive>
-		<passive>Stunning Strike (Recharge 5-6),When Hellenrae hits a target with a melee weapon attack, the target must succeed on a DC 13 Constitution saving throw or be stunned until the end of Hellenrae’s next turn.</passive>
+		<passive>Stunning Strike (Recharge 5-6),When Hellenrae hits a target with a melee weapon attack, the target must succeed on a DC 13 Constitution saving throw or be stunned until the end of Hellenrae's next turn.</passive>
 		<passive>Unarmored Defense,While Hellenrae is wearing no armor and wielding no shield, her AC includes her Wisdom modifier.</passive>
 		<passive>Evasion,If Hellenrae is subjected to an effect that allows her to make a Dexterity saving throw to take only half damage, she instead takes no damage if she succeeds on the saving throw, and only half damage if she fails.</passive>
 	</passives>
@@ -8201,8 +8201,8 @@ fighting.
 	<languages>COMMON,IGNAN</languages>
 	<regions></regions>
 	<passives>
-		<passive>Shrapnel Explosion,When the razerblast drops to 0 hit points, a flaming orb in its chest explodes, destroying the razerblast’s body and scattering its armor as shrapnel. Creatures within 10 feet of the razerblast when it explodes must succeed on a DC 12 Dexterity saving throw, taking 21 (6d6) piercing damage on a failed save, or half as much damage on a successful one.</passive>
-		<passive>Searing Armour,The razerblast’s armor is hot. Any creature grappling the razerblast or grappled by it takes 5 (1d10) fire damage at the end of that creature’s turn.</passive>
+		<passive>Shrapnel Explosion,When the razerblast drops to 0 hit points, a flaming orb in its chest explodes, destroying the razerblast's body and scattering its armor as shrapnel. Creatures within 10 feet of the razerblast when it explodes must succeed on a DC 12 Dexterity saving throw, taking 21 (6d6) piercing damage on a failed save, or half as much damage on a successful one.</passive>
+		<passive>Searing Armour,The razerblast's armor is hot. Any creature grappling the razerblast or grappled by it takes 5 (1d10) fire damage at the end of that creature's turn.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -8492,9 +8492,9 @@ If the transmuter has the stone and casts a transmutation spell of 1st level or 
 	<regions></regions>
 	<passives>
 		<passive>Tunneler,The umber hulk can burrow through solid rock at half its burrowing speed and leaves a 5 foot-wide, 8-foot high tunnel in its wake.</passive>
-		<passive>Confusing Gaze,When a creature starts its turn within 30 feet of the umber hulk and is able to see the umber hulk’s eyes, the umber hulk can magically force it to make a DC 15 Charisma saving throw, unless the umber hulk is incapacitated.
-On a failed saving throw, the creature can’t take reactions until the start of its next turn and rolls a d8 to determine what it does during that turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action but uses all its movement to move in a random direction. On a 7 or 8, the creature makes one melee attack against a random creature, or it does nothing if no creature is within reach.
-Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can’t see the umber hulk until the start of its next turn, when it can avert its eyes again. If the creature looks at the umber hulk in the meantime, it must immediately make the save.</passive>
+		<passive>Confusing Gaze,When a creature starts its turn within 30 feet of the umber hulk and is able to see the umber hulk's eyes, the umber hulk can magically force it to make a DC 15 Charisma saving throw, unless the umber hulk is incapacitated.
+On a failed saving throw, the creature can't take reactions until the start of its next turn and rolls a d8 to determine what it does during that turn. On a 1 to 4, the creature does nothing. On a 5 or 6, the creature takes no action but uses all its movement to move in a random direction. On a 7 or 8, the creature makes one melee attack against a random creature, or it does nothing if no creature is within reach.
+Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see the umber hulk until the start of its next turn, when it can avert its eyes again. If the creature looks at the umber hulk in the meantime, it must immediately make the save.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -8658,7 +8658,7 @@ Silvered weapons breach damage resistance.
 Knows the languages it knew in life.</other>
 	<actions>
 		<attack>Life Drain,6,5,One creature. Hit: 21 (4d8+3) necrotic damage. The target must succeed on a DC 14 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.</attack>
-		<effect>Create Specter,null,The wraith targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target’s spirit rises as a specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith’s control. The wraith can have no more than seven specters under its control at one time.</effect>
+		<effect>Create Specter,null,The wraith targets a humanoid within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a specter in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at one time.</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
@@ -9040,7 +9040,7 @@ d8	Minor Adaptation
 	<other>Walk speed is 30 ft when rolling, 60 ft when rolling downhill.</other>
 	<actions>
 		<attack>Slam,8,5,One target. Hit: 12 (2d6+5) bludgeoning damage.</attack>
-		<effect>Animate Boulders,1/Day,The galeb duhr magically animates up to two boulders it can see within 60 feet of it. A boulder has statistics like those of a galeb duhr, except it has Intelligence 1 and Charisma 1, it can’t be charmed or frightened, and it lacks this action option. A boulder remains animated as long as the galeb duhr maintains concentration, up to 1 minute (as if concentrating on a spell).</effect>
+		<effect>Animate Boulders,1/Day,The galeb duhr magically animates up to two boulders it can see within 60 feet of it. A boulder has statistics like those of a galeb duhr, except it has Intelligence 1 and Charisma 1, it can't be charmed or frightened, and it lacks this action option. A boulder remains animated as long as the galeb duhr maintains concentration, up to 1 minute (as if concentrating on a spell).</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
@@ -9467,7 +9467,7 @@ May have a familiar.</other>
 	<actions>
 		<multiattack>The myrmidon makes three flail attacks.</multiattack>
 		<attack>Flail,7,5,One target. Hit: 8 (1d8+4) bludgeoning damage.</attack>
-		<effect>Lightning Strike,Recharge 6,The myrmidon makes one flail attack. If the attack hits, it deals an extra 18 (4d8) lightning damage, and the target must succeed on a DC 14 Constitution saving throw or be stunned until the end of the myrmidon’s next turn.</effect>
+		<effect>Lightning Strike,Recharge 6,The myrmidon makes one flail attack. If the attack hits, it deals an extra 18 (4d8) lightning damage, and the target must succeed on a DC 14 Constitution saving throw or be stunned until the end of the myrmidon's next turn.</effect>
 	</actions>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
@@ -9915,8 +9915,8 @@ Is a Boros spellcaster.</other>
 	<languages>COMMON,SAHUAGIN</languages>
 	<regions></regions>
 	<passives>
-		<passive>Sneak Attack,Ghald deals an extra 14 (4d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Ghald’s that isn’t incapacitated and Ghald doesn’t have disadvantage on the attack roll.</passive>
-		<passive>Assassinate,During its first turn, Ghald has advantage on attack rolls against any creature that hasn’t taken a turn. Any hit Ghald scores against a surprised creature is a critical hit.</passive>
+		<passive>Sneak Attack,Ghald deals an extra 14 (4d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Ghald's that isn't incapacitated and Ghald doesn't have disadvantage on the attack roll.</passive>
+		<passive>Assassinate,During its first turn, Ghald has advantage on attack rolls against any creature that hasn't taken a turn. Any hit Ghald scores against a surprised creature is a critical hit.</passive>
 		<passive>Shark Telepathy,Ghald can magically command any shark within 120 feet of him, using a limited telepathy.</passive>
 		<passive>Limited Amphibiousness,Ghald can breathe air and water, but he needs to be submerged at least once every 4 hours to avoid suffocating.</passive>
 	</passives>
@@ -9925,7 +9925,7 @@ Is a Boros spellcaster.</other>
 		<multiattack>Ghald makes three attacks, one with his bite and two with his shortswords.</multiattack>
 		<attack>Bite,7,5,One creature. Hit: 9 (2d4+4) piercing damage.</attack>
 		<attack>Shortsword,7,5,One creature. Hit: 11 (2d6+4) piercing damage.</attack>
-		<attack>Garrote,7,5,One Medium or Small creature against which Ghald has advantage on the attack roll. Hit: 9 (2d4+4) bludgeoning damage, and the target is grappled (escape DC 15). Until the grapple ends, the target can’t breathe, and Ghald has advantage on attack rolls against it.</attack>
+		<attack>Garrote,7,5,One Medium or Small creature against which Ghald has advantage on the attack roll. Hit: 9 (2d4+4) bludgeoning damage, and the target is grappled (escape DC 15). Until the grapple ends, the target can't breathe, and Ghald has advantage on attack rolls against it.</attack>
 	</actions>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
@@ -10269,7 +10269,7 @@ Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have
 	<actions>
 		<multiattack>The myrmidon makes three trident attacks.</multiattack>
 		<attack>Trident,7,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
-		<effect>Freezing Strikes,Recharge 6,The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) cold damage, and the target’s speed is reduced by 10 feet until the end of the myrmidon’s next turn.</effect>
+		<effect>Freezing Strikes,Recharge 6,The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) cold damage, and the target's speed is reduced by 10 feet until the end of the myrmidon's next turn.</effect>
 	</actions>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
@@ -10691,8 +10691,8 @@ The Staff of Changing is not a magic item outside of Lord Rall's "hands".</other
 	<regions></regions>
 	<passives>
 		<legendaryresistance>2</legendaryresistance>
-		<passive>Petrifying Gaze,When a creature that can see Marlos’s eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn’t incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
-Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can’t see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.
+		<passive>Petrifying Gaze,When a creature that can see Marlos's eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
+Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.
 If Marlos sees himself reflected on a polished surface within 30 feet of him and in an area of bright light, Marlos is, due to his curse, affected by his own gaze.</passive>
 		<passive>Earth Passage,Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied.</passive>
 		<passive>Earthen Defeat,When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind.</passive>
@@ -11074,7 +11074,7 @@ Telepathy is 120ft.</other>
 	<actions>
 		<multiattack>The devil makes three attacks: two with its claws and one with its sting.</multiattack>
 		<attack>Claw,8,10,One target. Hil: 8 (1d8+4) slashing damage.</attack>
-		<attack>Sting,8,10,One target. Hit: 13 (2d8+4) piercing damage plus ì7 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end ofeach ofits turns, ending the effect on itself on a success.</attack>
+		<attack>Sting,8,10,One target. Hit: 13 (2d8+4) piercing damage plus 17 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end ofeach ofits turns, ending the effect on itself on a success.</attack>
 	</actions>
 	<source>MONSTERMANUAL,LOSTLABORATORYOFKWALISH</source>
 </creature>
@@ -11107,7 +11107,7 @@ Telepathy is 120ft.</other>
 	<actions>
 		<multiattack>The devil makes two attacks: one with its hooked polearm and one with its sting.</multiattack>
 		<attack>Claw,8,10,One target. Hil: 8 (1d8+4) slashing damage.</attack>
-		<attack>Sting,8,10,One target. Hit: 13 (2d8+4) piercing damage plus ì7 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end ofeach ofits turns, ending the effect on itself on a success.</attack>
+		<attack>Sting,8,10,One target. Hit: 13 (2d8+4) piercing damage plus 17 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end ofeach ofits turns, ending the effect on itself on a success.</attack>
 		<attack>Hooked Polearm,8,10,One target. Hit: 17 (2d12+4) piercing damage. lf the target is a Huge or smaller creature, it is grappled (escape DC 14). Until this grapple ends, the devil can't use its polearm on another target.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
@@ -11369,15 +11369,15 @@ Telepathy is 120ft.</other>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
-		<passive>Special Equipment,Local teleportation-field bracelets encircle the devil’s arms and tail. These devices allow the Grand Master to make its claw and sting attacks remotely, though still on the devil’s turn and using its actions.</passive>
+		<passive>Special Equipment,Local teleportation-field bracelets encircle the devil's arms and tail. These devices allow the Grand Master to make its claw and sting attacks remotely, though still on the devil's turn and using its actions.</passive>
 	</passives>
 	<other>Silvered weapons breach damage resistance.
 Telepathy is 120ft.</other>
 	<actions>
 		<multiattack>The devil makes three attacks: two with its claws and one with its sting.</multiattack>
 		<attack>Vorpal Claw,8,10,One target. Hil: 8 (1d8+4) slashing damage.
-When the devil rolls a 20 on an attack roll with a claw, the target is decapitated. (At your option, the attack can instead deal an extra 6d8 slashing damage.) A target is immune to this effect if it is immune to slashing damage, has legendary actions, doesn’t have or need a head, or if you decide that the target is too large for its head to be cut off by the devil’s claws. If removed, the shards lose their magical powers.</attack>
-		<attack>Sting,8,10,One target. Hit: 13 (2d8+4) piercing damage plus ì7 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end ofeach ofits turns, ending the effect on itself on a success.</attack>
+When the devil rolls a 20 on an attack roll with a claw, the target is decapitated. (At your option, the attack can instead deal an extra 6d8 slashing damage.) A target is immune to this effect if it is immune to slashing damage, has legendary actions, doesn't have or need a head, or if you decide that the target is too large for its head to be cut off by the devil's claws. If removed, the shards lose their magical powers.</attack>
+		<attack>Sting,8,10,One target. Hit: 13 (2d8+4) piercing damage plus 17 (5d6) poison damage, and the target must succeed on a DC 14 Constitution saving throw or become poisoned for 1 minute. The target can repeat the saving throw at the end ofeach ofits turns, ending the effect on itself on a success.</attack>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
@@ -11645,7 +11645,7 @@ d4	Feature
 		<multiattack>The treant makes two slam attacks.</multiattack>
 		<attack>Slam,10,5,One target. Hit: 16 (3d6+6) bludgeoning damage.</attack>
 		<attack>Rock,10,60,180,One target. Hit: 28 (4d10+6) bludgeoning damage.</attack>
-		<effect>Animate Trees,1/Day,The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can’t speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.</effect>
+		<effect>Animate Trees,1/Day,The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
@@ -11863,7 +11863,7 @@ Is a Simic spellcaster.</other>
 	<regions></regions>
 	<passives>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Independent Tentacles,The clockwork kraken has eight tentacles, each of which is treated as a Medium creature, moves independently on the construct’s turn, and has a flying speed of 40 feet. The clockwork kraken’s senses operate through its tentacles as well as its main body. Each tentacle can be attacked independently, with damage dealt to tentacles applied to the clockwork kraken’s hit point total. A tentacle is destroyed if it takes more than 20 damage.
+		<passive>Independent Tentacles,The clockwork kraken has eight tentacles, each of which is treated as a Medium creature, moves independently on the construct's turn, and has a flying speed of 40 feet. The clockwork kraken's senses operate through its tentacles as well as its main body. Each tentacle can be attacked independently, with damage dealt to tentacles applied to the clockwork kraken's hit point total. A tentacle is destroyed if it takes more than 20 damage.
 Reducing the construct to three or fewer tentacles reduces its attacks accordingly. A clockwork kraken can regrow any destroyed tentacles at the end of a long rest.</passive>
 	</passives>
 	<other>Understands the languages of its creator but can't speak.</other>
@@ -13060,8 +13060,8 @@ Understands Abyssal, Celestial, Common, Draconic, Dwarvish, Elvish, Infernal, an
 	<regions></regions>
 	<passives>
 		<legendaryresistance>2</legendaryresistance>
-		<passive>Petrifying Gaze,When a creature that can see Marlos’s eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn’t incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
-Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can’t see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.
+		<passive>Petrifying Gaze,When a creature that can see Marlos's eyes starts its turn within 30 feet of him, Marlos can force it to make a DC 14 Constitution saving throw if Marlos isn't incapacitated and can see the creature. If the saving throw fails by 5 or more, the creature is instantly petrified. Otherwise, a creature that fails the save begins to turn to stone and is restrained. The restrained creature must repeat the saving throw at the end of its next turn, becoming petrified on a failure or ending the effect on a success. The petrification lasts until the creature is freed by the greater restoration spell or other magic.
+Unless surprised, a creature can avert its eyes to avoid the saving throw at the start of its turn. If the creature does so, it can't see Marlos until the start of its next turn, when it can decide to avert its eyes again. If the creature looks at Marlos in the meantime, it must immediately make the save.
 If Marlos sees himself reflected on a polished surface within 30 feet of him and in an area of bright light, Marlos is, due to his curse, affected by his own gaze.</passive>
 		<passive>Earth Passage,Marlos can move in difficult terrain composed of anything made from earth or stone as if it were normal terrain. He can move through solid earth and rock as if it were difficult terrain. If he ends his turn there, he is shunted into the nearest space he last occupied.</passive>
 		<passive>Earthen Defeat,When Marlos drops to 0 hit points, his body transforms into mud and collapses into a pool. Anything he is wearing or carrying is left behind.</passive>
@@ -13073,7 +13073,7 @@ If Marlos sees himself reflected on a polished surface within 30 feet of him and
 		<attack>Ironfang,9,5,One target. Hit: 7 (1d8+3) piercing damage plus 4 (1d8) thunder damage.</attack>
 	</actions>
 	<lair>
-		<lairaction>Marlos casts earthquake without using components. As long as he maintains concentration on earthquake, initiative count 20 is the start of Marlos’s turn for the purpose of the spell. He can take no other lair actions while concentrating on earthquake.</lairaction>
+		<lairaction>Marlos casts earthquake without using components. As long as he maintains concentration on earthquake, initiative count 20 is the start of Marlos's turn for the purpose of the spell. He can take no other lair actions while concentrating on earthquake.</lairaction>
 		<lairaction>Marlos draws power from the earth node to heal. When he does so, he regains 30 (6d8+3) hit points.</lairaction>
 	</lair>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
