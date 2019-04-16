@@ -1,0 +1,9 @@
+<spellbook>
+	<name>WigganNettlebee</name>
+	<slot>
+		<known>Guidance,Light,Mending,Shillelagh,Thaumaturgy,Animal friendship,Cure wounds,Healing word,Inflict wounds,Speak with animals,Barkskin,Spike growth,Spiritual weapon</known>
+		<0>Guidance,Light,Mending,Thaumaturgy,Shillelagh</0>
+		<1>4,Speak with animals,Inflict wounds,Healing word,Cure wounds,Animal friendship</1>
+		<2>3,Spiritual weapon,Spike growth,Barkskin</2>
+	</slot>
+</spellbook>

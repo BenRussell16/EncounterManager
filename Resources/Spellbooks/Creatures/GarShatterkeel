@@ -1,0 +1,12 @@
+<spellbook>
+	<name>GarShatterkeel</name>
+	<slot>
+		<known>Mending,Resistance,Shape water,Create or destroy water,Cure wounds,Fog cloud,Thunderwave,Darkvision,Hold person,Protection from poison,Call lightning,Sleet storm,Tidal wave,Control water,Ice storm,Scrying</known>
+		<0>Mending,Resistance,Shape water</0>
+		<1>4,Create or destroy water,Cure wounds,Fog cloud,Thunderwave</1>
+		<2>3,Protection from poison,Hold person,Darkvision</2>
+		<3>3,Tidal wave,Sleet storm,Call lightning</3>
+		<4>3,Ice storm,Control water</4>
+		<5>1,Scrying</5>
+	</slot>
+</spellbook>

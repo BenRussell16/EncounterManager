@@ -1,0 +1,10 @@
+<spellbook>
+	<name>BlackEarthPriest</name>
+	<slot>
+		<known>Acid splash,Blade ward,Light,Mending,Mold earth,Earth tremor,Expiditious retreat,Shield,Shatter,Spider climb,Slow</known>
+		<0>Mold earth,Mending,Light,Acid splash,Blade ward</0>
+		<1>4,Shield,Expiditious retreat,Earth tremor</1>
+		<2>3,Spider climb,Shatter</2>
+		<3>2,Slow</3>
+	</slot>
+</spellbook>

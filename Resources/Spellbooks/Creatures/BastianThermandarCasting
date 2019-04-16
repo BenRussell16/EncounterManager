@@ -1,0 +1,12 @@
+<spellbook>
+	<name>BastianThermandarCasting</name>
+	<slot>
+		<known>Fire bolt,Mage hand,Message,Prestidigitation,Shocking grasp,Mage armour,Magic missile,Shield,Misty step,Scorching ray,Counterspell,Fireball,Dimension door,Wall of fire,Hold monster</known>
+		<0>Fire bolt,Mage hand,Message,Prestidigitation,Shocking grasp</0>
+		<1>4,Mage armour,Magic missile,Shield</1>
+		<2>3,Misty step,Scorching ray</2>
+		<3>3,Fireball,Counterspell</3>
+		<4>3,Wall of fire,Dimension door</4>
+		<5>1,Hold monster</5>
+	</slot>
+</spellbook>

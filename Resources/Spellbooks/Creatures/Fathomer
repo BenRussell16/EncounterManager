@@ -1,0 +1,15 @@
+<spellbook>
+	<name>Fathomer</name>
+	<slot>
+		<known>Chill touch,Eldritch blast,Mage hand,Armor of Agathys,Expiditious retreat,Hex,Invisibility,Vampiric touch</known>
+		<0>Chill touch,Eldritch blast,Mage hand</0>
+		<1>0,Hex,Expiditious retreat,Armor of Agathys</1>
+		<2>0,Invisibility</2>
+		<3>2,Vampiric touch</3>
+	</slot>
+	<daily>
+		<0>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

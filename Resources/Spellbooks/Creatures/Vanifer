@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Vanifer</name>
+	<slot>
+		<known>Chill touch,Fire bolt,Friends,Mage hand,Message,Produce flame,Thaumaturgy,Burning hands,Chromatic orb,Hellish rebuke,Shield,Darkness,Detect thoughts,Misty step,Scorching ray,Counterspell,Fireball,Hypnotic pattern,Wall of fire,Dominate person</known>
+		<0>Chill touch,Fire bolt,Friends,Mage hand,Message,Thaumaturgy,Produce flame</0>
+		<1>4,Shield,Chromatic orb,Burning hands,Hellish rebuke</1>
+		<2>3,Scorching ray,Misty step,Detect thoughts,Darkness</2>
+		<3>3,Hypnotic pattern,Fireball,Counterspell</3>
+		<4>3,Wall of fire</4>
+		<5>2,Dominate person</5>
+	</slot>
+</spellbook>

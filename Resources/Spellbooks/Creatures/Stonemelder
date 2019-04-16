@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Stonemelder</name>
+	<slot>
+		<known>Acid splash,Blade ward,Light,Mending,Mold earth,Expiditious retreat,False life,Shield,Maximilian's earthen grasp,Shatter,Erupting earth,Meld into stone,Stoneskin</known>
+		<0>Acid splash,Blade ward,Light,Mending,Mold earth</0>
+		<1>4,Expiditious retreat,False life,Shield</1>
+		<2>3,Shatter,Maximilian's earthen grasp</2>
+		<3>3,Erupting earth,Meld into stone</3>
+		<4>1,Stoneskin</4>
+	</slot>
+</spellbook>

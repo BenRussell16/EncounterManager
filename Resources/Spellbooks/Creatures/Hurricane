@@ -1,0 +1,9 @@
+<spellbook>
+	<name>Hurricane</name>
+	<slot>
+		<known>Blade ward,Gust,Light,Prestidigitation,Feather fall,Jump,Thunderwave,Gust of wind</known>
+		<0>Blade ward,Gust,Light,Prestidigitation</0>
+		<1>4,Thunderwave,Jump,Feather fall</1>
+		<2>2,Gust of wind</2>
+	</slot>
+</spellbook>

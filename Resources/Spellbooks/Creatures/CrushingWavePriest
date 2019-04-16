@@ -1,0 +1,10 @@
+<spellbook>
+	<name>CrushingWavePriest</name>
+	<slot>
+		<known>Chill touch,Mage hand,Minor illusion,Prestidigitation,Ray of frost,Expiditious retreat,Ice knife,Magic missile,Shield,Blur,Hold person,Sleet storm</known>
+		<0>Chill touch,Mage hand,Minor illusion,Prestidigitation,Ray of frost</0>
+		<1>4,Expiditious retreat,Ice knife,Magic missile,Shield</1>
+		<2>3,Hold person,Blur</2>
+		<3>2,Sleet storm</3>
+	</slot>
+</spellbook>

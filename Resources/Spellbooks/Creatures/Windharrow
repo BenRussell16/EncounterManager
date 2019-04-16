@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Windharrow</name>
+	<slot>
+		<known>Friends,Prestidigitation,Vicious mockery,Disguise self,Dissonant whispers,Thunderwave,Invisibility,Shatter,Silence,Nondetection,Sending,Tongues,Confusion,Dimension door</known>
+		<0>Friends,Prestidigitation,Vicious mockery</0>
+		<1>4,Thunderwave,Dissonant whispers,Disguise self</1>
+		<2>3,Invisibility,Shatter,Silence</2>
+		<3>3,Tongues,Sending,Nondetection</3>
+		<4>2,Confusion,Dimension door</4>
+	</slot>
+</spellbook>

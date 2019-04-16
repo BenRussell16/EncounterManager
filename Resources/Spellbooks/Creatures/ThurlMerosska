@@ -1,0 +1,10 @@
+<spellbook>
+	<name>ThurlMerosska</name>
+	<slot>
+		<known>Friends,Gust,Light,Message,Ray of frost,Expiditious retreat,Feather fall,Jump,Levitate,Misty step,Haste</known>
+		<0>Friends,Gust,Light,Message,Ray of frost</0>
+		<1>4,Jump,Feather fall,Expiditious retreat</1>
+		<2>3,Levitate,Misty step</2>
+		<3>2,Haste</3>
+	</slot>
+</spellbook>

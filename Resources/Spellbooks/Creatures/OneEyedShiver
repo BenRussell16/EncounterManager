@@ -1,0 +1,10 @@
+<spellbook>
+	<name>OneEyedShiver</name>
+	<slot>
+		<known>Chill touch,Mage hand,Fog cloud,Mage armour,Thunderwave,Mirror image,Misty step,Fear</known>
+		<0>Chill touch,Mage hand</0>
+		<1>4,Thunderwave,Mage armour,Fog cloud</1>
+		<2>3,Mirror image,Misty step</2>
+		<3>2,Fear</3>
+	</slot>
+</spellbook>

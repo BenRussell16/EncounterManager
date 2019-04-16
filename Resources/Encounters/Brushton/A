@@ -1,7 +1,0 @@
-<encounter>
-	<name>A</name>
-	<creature>10,Hobgoblin</creature>
-	<creature>4,Frontline medic</creature>
-	<mult>Standard</mult>
-	<party>8,8,8</party>
-</encounter>

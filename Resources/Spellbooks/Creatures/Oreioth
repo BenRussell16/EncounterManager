@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Oreioth</name>
+	<slot>
+		<known>Chill touch,Minor illusion,Prestidigitation,Shocking grasp,False life,Mage armour,Magic missile,Ray of sickness,Crown of madness,Misty step,Animate dead,Vampiric touch</known>
+		<0>Chill touch,Minor illusion,Prestidigitation,Shocking grasp</0>
+		<1>4,False life,Mage armour,Magic missile,Ray of sickness</1>
+		<2>3,Crown of madness,Misty step</2>
+		<3>3,Vampiric touch,Animate dead</3>
+	</slot>
+</spellbook>

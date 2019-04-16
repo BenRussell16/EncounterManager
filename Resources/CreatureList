@@ -2562,6 +2562,32 @@ Violet		51 years or more.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Feathergale Knight</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>1.0</cr>
+	<ac>16</ac>
+	<hp>33</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 14,CON 12,INT 11,WIS 10,CHA 14</stats>
+	<skills>ANIMALHANDLING 2,HISTORY 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,4,12,1,FeathergaleKnight</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The knight makes two melee attacks.</multiattack>
+		<attack>Longsword,4,5,One target. Hit: 6 (1d8+2) slashing damage, or 7 (1d10+2) slashing damage if used with two hands.</attack>
+		<attack>Spear,4,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Firenewt Warlock of Imix</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,FIRENEWT,false</type>
@@ -3692,6 +3718,30 @@ Innate spellcasting is psionics.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Crushing Wave Priest</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 11,CON 14,INT 10,WIS 11,CHA 16</stats>
+	<skills>DECEPTION 5,RELIGION 2,STEALTH 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,5,CrushingWavePriest</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Quarterstaff,4,5,One target. Hit: 6 (1d8+2) bludgeoning damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Cult Fanatic</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -3978,6 +4028,33 @@ Violet		51 years or more.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Fathomer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 11,CON 14,INT 11,WIS 11,CHA 15</stats>
+	<skills>ARCANA 2,PERCEPTION 4,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,4,12,5,Fathomer</spellcasting>
+		<passive>Shapechanger (2/Day),The fathomer can use its action to polymorph into a Medium serpent composed of water, or back into its true form. Anything the fathomer is wearing or carrying is subsumed into the serpent form during the change, inaccessible until the fathomer returns to its true form. The fathomer reverts to its true form after 4 hours, unless it can expend another use of this trait. If the fathomer is knocked unconscious or dies, it also reverts to its true form.
+While in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical weapons. It also has immunity to the following conditions: exhaustion, grappled, paralyzed, poisoned, restrained, prone, unconscious. The serpent form can enter a hostile creature’s space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing.</passive>
+	</passives>
+	<other>Spell slots come back after a short rest.</other>
+	<actions>
+		<attack>Constrict (Serpent Form Only),4,5,One target. Hit: 9 (2d6+2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can’t constrict another target.</attack>
+		<attack>Dagger (Human Form Only),4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Garret Levistusson</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,TIEFLING,false</type>
@@ -4174,6 +4251,63 @@ Gold. The poisoned creature is charmed and can speak Grung.</other>
 		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
 	</actions>
 	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Howling Hatred Priest</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 16,CON 10,INT 14,WIS 10,CHA 14</stats>
+	<skills>ACROBATICS 5,INTIMIDATION 4,RELIGION 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,4,12,5,HowlingHatredPriest</spellcasting>
+		<passive>Hold Breath,The priest can hold its breath for 30 minutes.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The priest makes two melee attacks or two ranged attacks.</multiattack>
+		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
+		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
+	<name>Hurricane</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>33</hp>
+	<speed>WALK 45</speed>
+	<stats>STR 12,DEX 16,CON 13,INT 10,WIS 12,CHA 10</stats>
+	<skills>ACROBATICS 5</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,3,11,3,Hurricane</spellcasting>
+		<passive>Unarmoured Movement,While the hurricane is wearing no armor and wielding no shield, its walking speed increases by 15 feet (included in its speed).</passive>
+		<passive>Unarmoured Defense,While the hurricane is wearing no armor and wielding no shield, its AC includes its Wisdom modifier.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The hurricane makes two melee attacks.</multiattack>
+		<attack>Unarmed Strike,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Deflect Missiles,When the hurricane is hit by a ranged weapon attack, it reduces the damage from the attack by 1d10+9. If the damage is reduced to 0, the hurricane can catch the missile if it is small enough to hold in one hand and the hurricane has at least one hand free.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Hybrid Brute</name>
@@ -4507,6 +4641,33 @@ Doesn't have disadvantage in melee.</attack>
 		<attack>Javelin,6,30,120,One target. Hit:11 (2d6+4) piercing damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Oreioth</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 13,CON 14,INT 16,WIS 9,CHA 11</stats>
+	<saves>WIS 1</saves>
+	<skills>ARCANA 5,INVESTIGATION 5,MEDICINE 1</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,5,13,6,Oreioth</spellcasting>
+		<passive>Grim Harvest,Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell’s level.</passive>
+		<passive>Swift Animation (Recharges after a Long Rest),When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast animate dead on that humanoid’s corpse, instead of using the spell’s normal casting time.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,3,5,One target. Hit: 3 (1d4+1) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Orog</name>
@@ -4896,6 +5057,32 @@ Can't speak in raven form.</other>
 	<source>CURSEOFSTRAHD</source>
 </creature>
 <creature>
+	<name>Wiggan Nettlebee</name>
+	<size>SMALL</size>
+	<type>HUMANOID,HALFLING,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>16</ac>
+	<hp>36</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 12,CON 12,INT 14,WIS 15,CHA 13</stats>
+	<skills>DECEPTION 3,INSIGHT 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,HALFLING</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,4,12,4,WigganNettlebee</spellcasting>
+		<passive>Brave Devotion,Wiggan has advantage on saving throws against being charmed or frightened.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Wiggan makes two attacks with his wooden cane.</multiattack>
+		<attack>Wooden Cane (Shillelagh),4,5,One target. Hit: 6 (1d8+2) bludgeoning damage with shillelagh.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Yellow Musk Creeper</name>
 	<size>MEDIUM</size>
 	<type>PLANT,false</type>
@@ -5048,6 +5235,34 @@ Can't speak in raven form.</other>
 		<effect>Entangling Vines,null,The assassin vine can animate normal vines and roots on the ground in a 15-foot square within 30 feet of it. These plants turn the ground in that area in to difficult terrain. A creature in that area when the effect begins must succeed on a DC 13 Strength saving throw or be restrained by entangling vines and roots. A creature restrained by the plants can use its action to make a DC 13 Strength (Athletics) check, freeing itself on a successful check. The effect ends after 1 minute or when the assassin vine dies or uses Entangling Vines again.</effect>
 	</actions>
 	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
+	<name>Black Earth Priest</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>17</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 11,CON 14,INT 12,WIS 10,CHA 16</stats>
+	<skills>INTIMIDATION 5,PERSUASION 5,RELIGION 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,5,BlackEarthPriest</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The priest makes two melee attacks.</multiattack>
+		<attack>Glaive,4,10,One target. Hit: 7 (1d10+2) slashing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Unyielding,When the priest is subjected to an effect that would move it, knock it prone, or both, it can use its reaction to be neither moved nor knocked prone.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Blue dragon wyrmling</name>
@@ -5835,6 +6050,33 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>One-Eyed Shiver</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>49</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 13,WIS 13,CHA 17</stats>
+	<skills>ARCANA 3,INTIMIDATION 5,PERCEPTION 3</skills>
+	<multipliers>
+		<IMMUNITY>COLD</IMMUNITY>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,5,OneEyedShiver</spellcasting>
+		<passive>Chilling Mist,While it is alive, the one-eyed shiver projects an aura of cold mist within 10 feet of itself. If the one-eyed shiver deals damage to a creature in this area, the creature also takes 5 (1d10) cold damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+		<effect>Eye of Frost,null,The one-eyed shiver casts ray of frost from its missing eye. If it hits, the target is also restrained. A target restrained in this way can end the condition by using an action, succeeding on a DC 13 Strength check.</effect>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Otto the Faerie Dragon</name>
 	<size>LARGE</size>
 	<type>DRAGON,false</type>
@@ -5987,6 +6229,30 @@ Violet		51 years or more.</other>
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
+	<name>Skyweaver</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>44</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 14,CON 12,INT 11,WIS 10,CHA 16</stats>
+	<skills>DECEPTION 5,PERSUASION 5</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,6,Skyweaver</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,4,20,60,One target. Hit: 3 (1d4+1) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Spectator</name>
 	<size>MEDIUM</size>
 	<type>ABERRATION,false</type>
@@ -6018,6 +6284,35 @@ Telepathy is 120ft.</other>
 		<reaction>Spell Reflection,If the spectator makes a successful saving throw against a spell, or a spell misses it, the spectator can choose another creature within 30 feet of it that it can see. The spell affects the chosen creature instead of the spectator.</reaction>
 	</reactions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Thurl Merosska</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>3.0</cr>
+	<ac>16</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 14,CON 14,INT 11,WIS 10,CHA 15</stats>
+	<skills>ANIMALHANDLING 2,ATHLETICS 5,DECEPTION 4,PERSUASION 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,4,12,5,ThurlMerosska</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Thurl makes two melee attacks.</multiattack>
+		<attack>Greatsword,5,5,One target. Hit: 10 (2d6+3) slashing damage.</attack>
+		<attack>Lance,5,10,One target. Hit: 9 (1d12+3) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,Thurl adds 2 to his AC against one melee attack that would hit him. To do so, Thurl must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Vampiric Mist</name>
@@ -6111,6 +6406,33 @@ The orc also reverts to its true form if it dies or falls unconscious. The orc c
 		<attack>Spiked Club,5,5,One target. Hit: 10 (2d6+3) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Windharrow</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>55</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 16,CON 12,INT 14,WIS 10,CHA 17</stats>
+	<skills>ACROBATICS 5,DECEPTION 7,PERFORMANCE 7,PERSUASION 5,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,8,Windharrow</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+	</passives>
+	<other>Is written as a half-elf.</other>
+	<actions>
+		<multiattack>Windharrow makes two melee attacks.</multiattack>
+		<attack>Rapier,5,5,One creature. Hit: 7 (1d8+3) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Zegdar</name>
@@ -7010,6 +7332,33 @@ Is a Boros spellcaster.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Shoalar Quanderil</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GENASI,false</type>
+	<align>LE</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>60</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 11,DEX 12,CON 16,INT 14,WIS 10,CHA 17</stats>
+	<skills>ARCANA 4,DECEPTION 5,INSIGHT 2,PERSUASION 5</skills>
+	<multipliers>
+		<RESISTANCE>ACID</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CON,5,13,,ShoalarQuanderilInnate</innatecasting>
+		<spellcasting>CHA,5,13,5,ShoalarQuanderilCasting</spellcasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 3 (1d4+1) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Stegosaurus</name>
 	<size>HUGE</size>
 	<type>BEAST,false</type>
@@ -7087,6 +7436,32 @@ fighting.
 		<reaction>Intercept Attack,In response to another creature within 5 feet of it being hit by an attack roll, the stone defender gives that creature a +5 bonus to its AC against that attack, potentially causing a miss. To use this ability, the stone defender must be able to see the creature and the attacker.</reaction>
 	</reactions>
 	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Stonemelder</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>4.0</cr>
+	<ac>17</ac>
+	<hp>75</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 10,CON 16,INT 12,WIS 11,CHA 17</stats>
+	<skills>INTIMIDATION 5,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>TREMORSENSE 30</senses>
+	<languages>COMMON,TERRAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,7,Stonemelder</spellcasting>
+		<passive>Death Burst,When the Stonemelder dies, it turns to stone and explodes in a burst of rock shards, becoming a smoking pile of rubble. Each creature within 10 feet of the exploding Stonemelder must make a DC 14 Dexterity saving throw, taking 11 (2d10) bludgeoning damage on a failed save, or half as much damage on a successful one.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Black Earth Rod,5,5,One target. Hit: 5 (1d6+2) bludgeoning damage. The Stonemelder can also expend a spell slot to deal extra damage, dealing 2d8 bludgeoning damage for a 1st level slot, plus an additional 1d8 for each level of the slot above 1st.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Tecuziztecatl</name>
@@ -7604,6 +7979,31 @@ The gladiator cannot be disarmed.</other>
 		<attack>Orb of Dragon's Breath (2/Day),5,90,One target. Hit: 22 (5d8) damage of the type to which the dragonfang has damage resistance.</attack>
 	</actions>
 	<source>THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Elizar Dryflagon</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>5.0</cr>
+	<ac>14</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 15,CON 14,INT 11,WIS 18,CHA 10</stats>
+	<skills>ARCANA 3,DECEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRUIDIC</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,7,15,7,ElizarDryflagon</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>+1 Dagger,6,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+		<effect>Summon Mephits,Recharges after a Short or Long Rest,By puffing on his pipe, Elizar can use an action to cast conjure minor elementals. If he does so, he summons four smoke mephits.</effect>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Enchanter</name>
@@ -9016,6 +9416,32 @@ d8	Minor Adaptation
 	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
+	<name>Flamewrath</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>6.0</cr>
+	<ac>15</ac>
+	<hp>105</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 16,INT 11,WIS 10,CHA 16</stats>
+	<skills>ARCANA 3,RELIGION 3</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<languages>COMMON,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,6,14,7,Flamewrath</spellcasting>
+		<passive>Wreathed in Flame,For the flamewrath, the warm version of the fire shield spell has a duration of “until dispelled.” The fire shield burns for 10 minutes after the flamewrath dies, consuming its body.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Galeb Duhr</name>
 	<size>MEDIUM</size>
 	<type>ELEMENTAL,false</type>
@@ -9194,6 +9620,32 @@ lf the medusa sees itself reflected on a polished surface within 30 feet of it a
 		<attack>Longbow,5,150,600,One target. Hit: 6 (1d8+2) piercing damage plus 7 (2d6) poison damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL,LOSTLABORATORYOFKWALISH</source>
+</creature>
+<creature>
+	<name>Miraj Vizann</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GENASI,false</type>
+	<align>NE</align>
+	<cr>6.0</cr>
+	<ac>13</ac>
+	<hp>82</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 10,CON 17,INT 13,WIS 11,CHA 18</stats>
+	<skills>ARCANA 4,DECEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,PRIMORDIAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CON,,14,,MirajVizannInnate</innatecasting>
+		<spellcasting>CHA,7,15,11,MirajVizannCasting</spellcasting>
+		<passive>Earth Walk,Moving through difficult terrain made of earth or stone costs Miraj no extra movement.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Staff,4,5,One target. Hit: 4 (1d6+1) bludgeoning damage, or 5 (1d8+1) bludgeoning damage when used with two hands.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Orchid count</name>
@@ -9441,6 +9893,35 @@ May have a familiar.</other>
 		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2} piercing damage.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Aerisi Kalinoth</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>7.0</cr>
+	<ac>16</ac>
+	<hp>66</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 16,CON 12,INT 17,WIS 10,CHA 16</stats>
+	<skills>ARCANA 6,HISTORY 6,PERCEPTION 3</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<spellcasting>INT,6,14,12,AerisiKalinoth</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Howling Defeat,When Aerisi drops to 0 hit points, her body disappears in a howling whirlwind that disperses quickly and harmlessly. Anything she is wearing or carrying is left behind.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Windvane (Spear),9,20,60,One target. Hit: 9 (1d6+6) piercing damage, or 10 (1d8+6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Air Elemental Myrmidon</name>
@@ -10300,6 +10781,33 @@ Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Bastian Thermandar</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,GENASI,false</type>
+	<align>NE</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>78</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 14,CON 15,INT 11,WIS 9,CHA 18</stats>
+	<skills>ARCANA 3,DECEPTION 7</skills>
+	<multipliers>
+		<RESISTANCE>FIRE</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CON,5,13,,BastianThermandarInnate</innatecasting>
+		<spellcasting>CHA,7,15,9,BastianThermandarCasting</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Blood Drinker Vampire</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -11015,6 +11523,39 @@ Weakening Breath. Zindar exhales gas in a 15-foot cone. Each creature in that ar
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Aerisi Kalinoth (In Lair)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>9.0</cr>
+	<ac>16</ac>
+	<hp>66</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 16,CON 12,INT 17,WIS 10,CHA 16</stats>
+	<skills>ARCANA 6,HISTORY 6,PERCEPTION 3</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<spellcasting>INT,6,14,12,AerisiKalinoth</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Howling Defeat,When Aerisi drops to 0 hit points, her body disappears in a howling whirlwind that disperses quickly and harmlessly. Anything she is wearing or carrying is left behind.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Windvane (Spear),9,20,60,One target. Hit: 9 (1d6+6) piercing damage, or 10 (1d8+6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage.</attack>
+	</actions>
+	<lair>
+		<lairaction>Aerisi casts one of her spells, up to 3rd level, without using components or a spell slot. She can’t cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Aerisi can take no other lair actions while concentrating on a spell cast as a lair action.</lairaction>
+		<lairaction>Aerisi casts invisibility, she also draws the power of the air node into herself. By doing so, she regains 15 (3d8+2) hit points.</lairaction>
+	</lair>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Ash Marshall</name>
 	<size>MEDIUM</size>
 	<type>FEY,false</type>
@@ -11278,6 +11819,37 @@ Telepathy is 120ft.</other>
 		<attack>Longbow,4,150,600,One target. Hit: 4 (1d8) piercing damage.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Gar Shatterkeel</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>9.0</cr>
+	<ac>16</ac>
+	<hp>112</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 15,DEX 15,CON 16,INT 12,WIS 18,CHA 13</stats>
+	<skills>NATURE 8,SURVIVAL 8</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<spellcasting>WIS,8,16,9,GarShatterkeel</spellcasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Water Walk,Gar can stand and move on liquid surfaces as if they were solid ground.</passive>
+		<passive>Watery Fall,When Gar drops to 0 hit points, his body collapses into a pool of inky water that rapidly disperses. Anything he was wearing or carrying is left behind.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Gar makes two melee attacks, one with his claw and one with Drown.</multiattack>
+		<attack>Claw,6,5,One target. Hit: 9 (2d6+2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can’t attack other creatures with his claw.</attack>
+		<attack>Drown (Trident),7,20,60,One target. Hit: 6 (1d6+3) piercing damage plus 4 (1d8) cold damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Grey Slaad</name>
@@ -11713,6 +12285,35 @@ Innate spellcasting is psionics.</other>
 		<effect>Meld Flesh,null,Uursovk targets two adjacent creatures, who must each make a DC 16 Constitution saving throw. If both fail, they meld into one gestalt entity, shedding any armor they were wearing. The gestalt entity is Medium and has hit points equal to the sum of their hit points, has ability scores equal to the higher of each score, and inherits any conditions of the targets. The new entity is treated as an individual in combat, but can take any action that either original target could take. At the end of each round, the two targets can make DC 16 Constitution saving throws to revert to their original forms (still sans armor), but both targets must succeed in order to end the effect. Otherwise, the effect ends after 1 hour.</effect>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Vanifer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,TIEFLING,false</type>
+	<align>NE</align>
+	<cr>9.0</cr>
+	<ac>15</ac>
+	<hp>112</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 17,INT 12,WIS 13,CHA 19</stats>
+	<skills>ARCANA 5,DECEPTION 8,PERFORMANCE 8</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,INFERNAL,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<spellcasting>CHA,8,16,10,Vanifer</spellcasting>
+		<passive>Funeral Pyre,When Vanifer drops to 0 hit points, her body is consumed in a flash of fire and smoke. Anything she was wearing or carrying is left behind among ashes.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Vanifer makes two attacks.</multiattack>
+		<attack>Tinderstrike (Dagger),9,20,60,One target. Hit: 7 (1d4+5) piercing damage plus 7 (2d6) fire damage.</attack>
+	</actions>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>War priest</name>
@@ -13173,6 +13774,39 @@ Adamantine weapons breach damage immunity.</other>
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Vanifer (In Lair)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,TIEFLING,false</type>
+	<align>NE</align>
+	<cr>12.0</cr>
+	<ac>15</ac>
+	<hp>112</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 17,INT 12,WIS 13,CHA 19</stats>
+	<skills>ARCANA 5,DECEPTION 8,PERFORMANCE 8</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,INFERNAL,IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<spellcasting>CHA,8,16,10,Vanifer</spellcasting>
+		<passive>Funeral Pyre,When Vanifer drops to 0 hit points, her body is consumed in a flash of fire and smoke. Anything she was wearing or carrying is left behind among ashes.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Vanifer makes two attacks.</multiattack>
+		<attack>Tinderstrike (Dagger),9,20,60,One target. Hit: 7 (1d4+5) piercing damage plus 7 (2d6) fire damage.</attack>
+	</actions>
+	<lair>
+		<lairaction>Vanifer casts one of her spells, up to 3rd level, without using components or a spell slot. She can’t cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Vanifer can take no other lair actions while concentrating on a spell cast as a lair action.</lairaction>
+		<lairaction>If Vanifer casts misty step, she also draws the power of the fire node into herself. By doing so, she regains 15 (3d8+2) hit points.</lairaction>
+	</lair>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
 	<name>Atropal</name>
 	<size>HUGE</size>
 	<type>UNDEAD,TITAN,false</type>
@@ -13211,6 +13845,41 @@ Understands Celestial but utters only obscene nonsense.</other>
 		<legendaryaction>Wail,3,The atropal lets out a withering wail. Any creature within 120 feet of the atropal that can hear the wail must succeed on a DC 19 Constitution saving throw or gain 1 level of exhaustion.</legendaryaction>
 	</legendaryactions>
 	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
+	<name>Gar Shatterkeel (In Lair)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>13.0</cr>
+	<ac>16</ac>
+	<hp>112</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 15,DEX 15,CON 16,INT 12,WIS 18,CHA 13</stats>
+	<skills>NATURE 8,SURVIVAL 8</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>2</legendaryresistance>
+		<spellcasting>WIS,8,16,9,GarShatterkeel</spellcasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Water Walk,Gar can stand and move on liquid surfaces as if they were solid ground.</passive>
+		<passive>Watery Fall,When Gar drops to 0 hit points, his body collapses into a pool of inky water that rapidly disperses. Anything he was wearing or carrying is left behind.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Gar makes two melee attacks, one with his claw and one with Drown.</multiattack>
+		<attack>Claw,6,5,One target. Hit: 9 (2d6+2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can’t attack other creatures with his claw.</attack>
+		<attack>Drown (Trident),7,20,60,One target. Hit: 6 (1d6+3) piercing damage plus 4 (1d8) cold damage.</attack>
+	</actions>
+	<lair>
+		<lairaction>Gar uses his Multiattack or casts one of his spells, up to 3rd level, without using components or a spell slot. He can’t cast the same spell two rounds in a row, but he can continue to concentrate on a spell he previously cast using a lair action. He can take no other lair actions while concentrating on a spell cast as a lair action.
+If Gar casts cure wounds using this lair action, he regains the maximum number of hit points from the spell (28).</lairaction>
+	</lair>
+	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Muiral</name>

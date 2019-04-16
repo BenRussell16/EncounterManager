@@ -1,0 +1,10 @@
+<spellbook>
+	<name>HowlingHatredPriest</name>
+	<slot>
+		<known>Blade ward,Gust,Light,Prestidigitation,Shocking grasp,Feather fall,Shield,Witch bolt,Dust devil,Gust of wind,Gaseous form</known>
+		<0>Blade ward,Gust,Light,Prestidigitation,Shocking grasp</0>
+		<1>4,Feather fall,Shield,Witch bolt</1>
+		<2>3,Gust of wind,Dust devil</2>
+		<3>2,Gaseous form</3>
+	</slot>
+</spellbook>

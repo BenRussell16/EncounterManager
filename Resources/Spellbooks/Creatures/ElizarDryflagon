@@ -1,0 +1,11 @@
+<spellbook>
+	<name>ElizarDryflagon</name>
+	<slot>
+		<known>Druidcraft,Guidance,Poison spray,Produce flame,Animal friendship,Faerie fire,Healing word,Jump,Thunderwave,Flame blade,Spike growth,Dispel magic,Stinking cloud,Blight,Wall of fire</known>
+		<0>Druidcraft,Guidance,Poison spray,Produce flame</0>
+		<1>4,Thunderwave,Jump,Healing word,Faerie fire,Animal friendship</1>
+		<2>3,Spike growth,Flame blade</2>
+		<3>3,Stinking cloud,Dispel magic</3>
+		<4>2,Wall of fire,Blight</4>
+	</slot>
+</spellbook>

@@ -1,0 +1,11 @@
+<spellbook>
+	<name>BastianThermandarInnate</name>
+	<daily>
+		<0>
+			<spell>Produce flame,false</spell>
+		</0>
+		<1>
+			<spell>Burning hands,false</spell>
+		</1>
+	</daily>
+</spellbook>

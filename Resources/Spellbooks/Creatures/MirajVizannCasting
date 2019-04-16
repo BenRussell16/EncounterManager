@@ -1,0 +1,13 @@
+<spellbook>
+	<name>MirajVizannCasting</name>
+	<slot>
+		<known>Acid splash,Blade ward,Friends,Light,Message,Mold earth,Chromatic orb,Mage armour,Magic missile,Maximilian's earthen grasp,Shatter,Suggestion,Counterspell,Erupting earth,Polymorph,Stoneskin,Wall of stone,Move earth</known>
+		<0>Acid splash,Blade ward,Friends,Light,Message,Mold earth</0>
+		<1>4,Chromatic orb,Mage armour,Magic missile</1>
+		<2>3,Suggestion,Shatter,Maximilian's earthen grasp</2>
+		<3>3,Erupting earth,Counterspell</3>
+		<4>3,Stoneskin,Polymorph</4>
+		<5>2,Wall of stone</5>
+		<6>1,Move earth</6>
+	</slot>
+</spellbook>

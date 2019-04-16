@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Skyweaver</name>
+	<slot>
+		<known>Blade ward,Light,Message,Ray of frost,Shocking grasp,Feather fall,Mage armour,Witch bolt,Gust of wind,Invisibility,Fly,Lightning bolt</known>
+		<0>Blade ward,Light,Message,Ray of frost,Shocking grasp</0>
+		<1>4,Feather fall,Mage armour,Witch bolt</1>
+		<2>3,Invisibility,Gust of wind</2>
+		<3>3,Lightning bolt,Fly</3>
+	</slot>
+</spellbook>

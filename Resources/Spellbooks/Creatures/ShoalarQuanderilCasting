@@ -1,0 +1,10 @@
+<spellbook>
+	<name>ShoalarQuanderilCasting</name>
+	<slot>
+		<known>Acid splash,Chill touch,Friends,Prestidigitation,Ray of frost,Disguise self,Mage armour,Magic missile,Hold person,Misty step,Tidal wave</known>
+		<0>Acid splash,Chill touch,Friends,Prestidigitation,Ray of frost</0>
+		<1>4,Disguise self,Mage armour,Magic missile</1>
+		<2>3,Hold person,Misty step</2>
+		<3>2,Tidal wave</3>
+	</slot>
+</spellbook>

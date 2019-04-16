@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Flamewrath</name>
+	<slot>
+		<known>Control flames,Fire bolt,Friends,Light,Minor illusion,Burning hands,Colour spray,Mage armour,Scorching ray,Suggestion,Fireball,Hypnotic pattern,Fire shield</known>
+		<0>Control flames,Fire bolt,Friends,Light,Minor illusion</0>
+		<1>4,Mage armour,Colour spray,Burning hands</1>
+		<2>3,Suggestion,Scorching ray</2>
+		<3>3,Fireball,Hypnotic pattern</3>
+		<4>1,Fire shield</4>
+	</slot>
+</spellbook>

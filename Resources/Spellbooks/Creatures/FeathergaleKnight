@@ -1,0 +1,8 @@
+<spellbook>
+	<name>FeathergaleKnight</name>
+	<slot>
+		<known>Gust,Light,Message,Ray of frost,Expiditious retreat,Feather fall</known>
+		<0>Gust,Light,Message,Ray of frost</0>
+		<1>2,Feather fall,Expiditious retreat</1>
+	</slot>
+</spellbook>
