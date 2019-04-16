@@ -1,0 +1,14 @@
+<spellbook>
+	<name>Imix</name>
+	<daily>
+		<0>
+			<spell>Fireball,false</spell>
+			<spell>Wall of fire,false</spell>
+		</0>
+		<3>
+			<spell>Fire storm,false</spell>
+			<spell>Haste,false</spell>
+			<spell>Teleport,false</spell>
+		</3>
+	</daily>
+</spellbook>

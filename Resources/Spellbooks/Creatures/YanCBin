@@ -1,0 +1,15 @@
+<spellbook>
+	<name>YanCBin</name>
+	<daily>
+		<0>
+			<spell>Gust of wind,false</spell>
+			<spell>Invisibility,false</spell>
+			<spell>Lightning bolt,false</spell>
+		</0>
+		<2>
+			<spell>Chain lightning,false</spell>
+			<spell>Cloudkill,false</spell>
+			<spell>Haste,false</spell>
+		</2>
+	</daily>
+</spellbook>

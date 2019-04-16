@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Ogremoch</name>
+	<daily>
+		<0>
+			<spell>Meld into stone,false</spell>
+			<spell>Move earth,false</spell>
+			<spell>Wall of stone,false</spell>
+		</0>
+	</daily>
+</spellbook>
