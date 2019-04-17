@@ -1274,6 +1274,32 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Ambush Drake</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>13</ac>
+	<hp>22</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 15,CON 14,INT 4,WIS 11,CHA 6</stats>
+	<skills>PERCEPTION 4,STEALTH 4</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+		<passive>Surprise Attack,If the drake surprises a creature and hits it with an attack during the first round of combat, the target takes an extra 7 (2d6) damage from the attack.</passive>
+	</passives>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<attack>Bite,4,5,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
+</creature>
+<creature>
 	<name>Barovian Witch</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -2314,7 +2340,7 @@ d8	Minor Adaptation
 		<multiattack>The dragonclaw attacks twice with its scimitar.</multiattack>
 		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
 	</actions>
-	<source>THERISEOFTIAMAT</source>
+	<source>HOARDOFTHEDRAGONQUEEN,THERISEOFTIAMAT</source>
 </creature>
 <creature>
 	<name>Dread Warrior</name>
@@ -2914,6 +2940,35 @@ Knows the languages it knew in life.</other>
 		<attack>Withering Touch,3,5,One target. Hit: 10 (3d6) necrotic damage.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Jamna Gleamsilver</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GNOME,false</type>
+	<align>TN</align>
+	<cr>1.0</cr>
+	<ac>15</ac>
+	<hp>22</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 8,DEX 17,CON 14,INT 15,WIS 10,CHA 12</stats>
+	<saves>DEX 5,INT 4</saves>
+	<skills>ACROBATICS 5,DECEPTION 3,INSIGHT 2,PERCEPTION 4,PERSUASION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN,SYLVAN,GNOMISH</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,4,12,4,JamnaGleamsilver</spellcasting>
+		<passive>Cunning Action,Jamna can take a bonus action to take the Dash, Disengage, or Hide action.</passive>
+		<passive>Gnome Cunning,Jamna has advantage on Intelligence, Wisdom, and Charisma saving throws against magic.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Jamna attacks twice with her shortswords.</multiattack>
+		<attack>Shortsword,5,5,One target. Hit : 6 (1d6+3) piercing damage, or 9 (1d6+3 plus 1d6) piercing damage if the target is Medium or larger.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
 </creature>
 <creature>
 	<name>Kobold Dragonshield</name>
@@ -3793,7 +3848,7 @@ Innate spellcasting is psionics.</other>
 		<multiattack>The dragonwing attacks twice with its scimitar.</multiattack>
 		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage plus 3 (1d6) damage of the type to which the cultist has damage resistance.</attack>
 	</actions>
-	<source>THERISEOFTIAMAT</source>
+	<source>HOARDOFTHEDRAGONQUEEN,THERISEOFTIAMAT</source>
 </creature>
 <creature>
 	<name>Duergar mind master</name>
@@ -4055,6 +4110,32 @@ While in serpent form, the fathomer gains a swimming speed of 40 feet, the abili
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
+	<name>Frulam Mondath</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>2.0</cr>
+	<ac>16</ac>
+	<hp>44</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 10,CON 13,INT 11,WIS 18,CHA 15</stats>
+	<saves>WIS 6,CHA 4</saves>
+	<skills>DECEPTION 4,HISTORY 2,RELIGION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,5,FrulamMondath</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Frulam attacks twice with her halberd.</multiattack>
+		<attack>Halberd,5,10,One target. Hit: 7 (1d10+2) bludgeoning damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
+</creature>
+<creature>
 	<name>Garret Levistusson</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,TIEFLING,false</type>
@@ -4250,7 +4331,7 @@ Gold. The poisoned creature is charmed and can speak Grung.</other>
 		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
 		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
 	</actions>
-	<source>THERISEOFTIAMAT</source>
+	<source>HOARDOFTHEDRAGONQUEEN,THERISEOFTIAMAT</source>
 </creature>
 <creature>
 	<name>Howling Hatred Priest</name>
@@ -5419,6 +5500,37 @@ A humanoid slain by this attack rises 24 hours later as a zombie under the wight
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Dralmorrer Borngray</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>16</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 14,CON 14,INT 16,WIS 10,CHA 8</stats>
+	<saves>STR 6,CON 4</saves>
+	<skills>ARCANA 5,DECEPTION 1,INSIGHT 2,PERCEPTION 2,RELIGION 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,ELVISH,GOBLIN,SYLVAN,BULLYWUG</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,5,13,7,DralmorrerBorngray</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Weapon Bond,Provided his longsword is on the same plane, Dralmorrer can take a bonus action to teleport it to his hand.</passive>
+		<passive>War Magic,When Dralmorrer uses his action to cast a cantrip, he can also take a bonus action to make one weapon attack.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Dralmorrer attacks twice, either with his longsword or dagger.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 8 (1d8+4) slashing damage.</attack>
+		<attack>Dagger,6,20,60,One target. Hit: 6 (1d4+4) piercing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
+</creature>
+<creature>
 	<name>Eternal flame priest</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -6171,6 +6283,37 @@ Violet		51 years or more.</other>
 	<source>CURSEOFSTRAHD</source>
 </creature>
 <creature>
+	<name>Pharblex Spattergoo</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,BULLYWUG,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>59</hp>
+	<speed>WALK 20,SWIM 40</speed>
+	<stats>STR 15,DEX 12,CON 18,INT 11,WIS 16,CHA 7</stats>
+	<saves>STR 4,CON 6</saves>
+	<skills>PERCEPTION 5,RELIGION 2,STEALTH 3</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BULLYWUG</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,5,13,6,PharblexSpattergoo</spellcasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Swamp Camouflage,Pharblex has advantage on Dexterity (Stealth) checks made to hide in swampy terrain.</passive>
+		<passive>Poison Strike (3/Day),Once per turn, when Pharblex hits with a melee attack, he can expend a use of this trait to deal an extra 9 (2d8) poison damage.</passive>
+		<passive>Standing Leap,As part of his movement and without a running start, Pharblex can long jump up to 20 feet and high jump up to 10 feet.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Pharblex attacks twice, once with his bite and once with his spear.</multiattack>
+		<attack>Bite,5,5,One target. Hit : 4 (1d4+2) piercing damage.</attack>
+		<attack>Spear,5,20,60,One target. Hit : 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
+</creature>
+<creature>
 	<name>Precognitive Mage</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -6492,6 +6635,34 @@ The orc also reverts to its true form if it dies or falls unconscious. The orc c
 		<attack>Harpoon,5,20,60,One target. Hit: 5 (1d6+2) piercing damage. Attacks with this weapon while underwater are not made with disadvantage.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Azbara Jos</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>4.0</cr>
+	<ac>16</ac>
+	<hp>39</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 16,CON 14,INT 16,WIS 13,CHA 11</stats>
+	<saves>INT 5,WIS 3</saves>
+	<skills>ARCANA 5,DECEPTION 2,INSIGHT 3,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,PRIMORDIAL,INFERNAL,THAYAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,5,13,6,AzbaraJos</spellcasting>
+		<passive>Sculpt Spells,When Azbara casts an evocation spell that affects other creatures that he can see, he can choose a number of them equal to 1+ the spell’s level to succeed on their saving throws against the spell. Those creatures take no damage if they would normally take half damage from the spell.</passive>
+		<passive>Special Equipment,Azbara has two scrolls of mage armour.</passive>
+		<passive>Potent Cantrips,When Azbara casts an evocation cantrip and misses, or the target succeeds on its saving throw, the target still takes half the cantrip’s damage but suffers no other effect.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
 </creature>
 <creature>
 	<name>Barghest</name>
@@ -7120,6 +7291,37 @@ A target that successfully saves is immune to this kelpie's hypnosis for the nex
 bludgeoning damage if used with two hands.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Langdedrosa Cyanwrath</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HALFDRAGON,false</type>
+	<align>LE</align>
+	<cr>4.0</cr>
+	<ac>17</ac>
+	<hp>57</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 13,CON 16,INT 10,WIS 14,CHA 12</stats>
+	<saves>STR 6,CON 5</saves>
+	<skills>ATHLETICS 6,INTIMIDATION 3,PERCEPTION 4</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Action Surge (Recharges After a Short or Long Rest),On his turn, Langdedrosa can take one additional action.</passive>
+		<passive>Improved Critical,Langdedrosa’s weapon attacks score a critical hit on a roll of 19 or 20.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Langdedrosa attacks twice, either with his greatsword or spear.</multiattack>
+		<attack>Greatsword,6,5,One target. Hit : 11 (2d6+4) slashing damage.</attack>
+		<attack>Spear,6,5,One target. Hit : 7 (1d6+4) piercing damage.</attack>
+		<effect>Lightning Breath,Recharge 5-6,Langdedrosa breathes lightning in a 30-foot line that is 5 feet wide. Each creature in the line must make a DC 13 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
 </creature>
 <creature>
 	<name>Liara Portyr</name>
@@ -7832,6 +8034,34 @@ Gets spell slots back on a short rest.</other>
 		<effect>Deadly Leap,null,lf the bulette jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6+4) bludgeoning damage plus 14 (3d6+4) slashing damage. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creature's choice. lf no unoccupied space is within range, the creature instead falls prone in the bulette's space.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Captain Othelstan</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>5.0</cr>
+	<ac>19</ac>
+	<hp>93</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 10,CON 16,INT 13,WIS 14,CHA 12</stats>
+	<saves>STR 7,CON 6</saves>
+	<skills>ATHLETICS 7,INTIMIDATION 4,PERCEPTION 5,RELIGION 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Tiamat's Blessing of Retribution,When Othelstan takes damage that reduces him to 0 hit points, he immediately regains 20 hit points. If he has 20 hit points or fewer at the end of his next turn, he dies.</passive>
+		<passive>Action Surge (Recharges after a Short or Long Rest),On his turn, Othelstan can take one additional action.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Othelstan attacks twice with his flail or spear, or makes two ranged attacks with his spears.</multiattack>
+		<attack>Flail,7,5,One target. Hit: 8 (1d8+4) bludgeoning damage.</attack>
+		<attack>Spear,7,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
 </creature>
 <creature>
 	<name>Cinderslag elemental</name>
@@ -8846,6 +9076,36 @@ Innate spellcasting is psionics, and can only be used when the swarm has more th
 	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
+	<name>Talis the White</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>LE</align>
+	<cr>5.0</cr>
+	<ac>18</ac>
+	<hp>58</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 14,INT 10,WIS 16,CHA 16</stats>
+	<saves>WIS 6,CHA 6</saves>
+	<skills>DECEPTION 6,INSIGHT 6,PERCEPTION 6,PERSUASION 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,ELVISH,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,9,TalisTheWhite</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Winter Strike (3/Day),Once per turn, when Talis hits with a melee attack, she can expend a use of this trait to deal an extra 9 (2d8) cold damage.</passive>
+		<passive>Special Equipment,Talis has +1 scale mail and a wand of winter (see Hoard of the Dragon Queen).</passive>
+	</passives>
+	<other>Written as a half elf.
+Spiritual weapon is a spear.</other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit : 6 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
+</creature>
+<creature>
 	<name>Transmuter</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -8874,6 +9134,72 @@ If the transmuter has the stone and casts a transmutation spell of 1st level or 
 		<attack>Quarterstaff,2,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
 	</actions>
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Troll</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>84</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 13,CON 20,INT 7,WIS 9,CHA 7</stats>
+	<skills>PERCEPTION 1</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Regeneration,The troll regains 10 hit points at the start of its turn. lf the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The troll makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,7,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<attack>Claw,7,5,One target. Hit: 11 (2d6+4) slashing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Troll (Loathsome Limbs)</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>15</ac>
+	<hp>84</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 13,CON 20,INT 7,WIS 9,CHA 7</stats>
+	<skills>PERCEPTION 1</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Regeneration,The troll regains 10 hit points at the start of its turn. lf the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate.</passive>
+		<passive>Loathsome Limbs,Whenever the troll takes at least 15 slashing damage at one time, roll a d20 to determine what else happens to it:
+1-10: Nothing else happens.
+11-14: One Ieg is severed from the troll if it has any legs left.
+15-18: One arm is severed from the troll if it has any arms left.
+19-20: The troll is decapitated, but the troll dies only if it can't regenerate. lf it dies, so does the severed head.
+lf the troll finishes a short or long rest without reattaching a severed limb or head, the part regrows. At that point, the severed part dies. Until then, a severed part acts on the troll's initiative and has its own action and movement. A severed part has AC 13, 10 hit points, and the troll's Regeneration trait.
+A severed leg is unable to attack and has a speed of 5 feet.
+A severed arm has a speed of 5 feet and can make one claw attack on its turn, with disadvantage on the attack roll unless the troll can see the arm and its target. Each time the troll loses an arm, it loses a claw attack.
+lf its head is severed, the troll loses its bite attack and its body is blinded unless the head can see it. The severed head has a speed of 0 feet and the troll's Keen Smell trait. lt can make a bite attack but only against a target in its space.
+The troll's speed is halved if it's missing a leg. lf it loses both legs, it falls prone. lf it has both arms, it can crawl. With only one arm, it can still crawl, but its speed is halved. With no arms or legs, its speed is 0, and it can't benefit from bonuses to speed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The troll makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,7,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<attack>Claw,7,5,One target. Hit: 11 (2d6+4) slashing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Umber Hulk</name>
@@ -9442,6 +9768,34 @@ d8	Minor Adaptation
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
+	<name>Four-Armed Troll</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>6.0</cr>
+	<ac>15</ac>
+	<hp>84</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 13,CON 20,INT 7,WIS 9,CHA 7</stats>
+	<skills>PERCEPTION 1</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Regeneration,The troll regains 10 hit points at the start of its turn. lf the troll takes acid or fire damage, this trait doesn't function at the start of the troll's next turn. The troll dies only if it starts its turn with 0 hit points and doesn't regenerate.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The troll attacks five times, once with its bite and four times with its claws. If two or more claws hit the same target, the troll rends the target, dealing an extra 2d6 slashing damage.</multiattack>
+		<attack>Bite,7,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
+		<attack>Claw,7,5,One target. Hit: 11 (2d6+4) slashing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
+</creature>
+<creature>
 	<name>Galeb Duhr</name>
 	<size>MEDIUM</size>
 	<type>ELEMENTAL,false</type>
@@ -9736,7 +10090,7 @@ When the giant makes an attack roll against its focus, it adds a d4 to its attac
 	<reactions>
 		<reaction>Illusory Self (Recharges after a Short or Long Rest),When a creature Rath can see makes an attack roll against him, he can interpose an illusory duplicate between the attacker and himself. The attack automatically misses Rath, then the illusion dissipates.</reaction>
 	</reactions>
-	<source>THERISEOFTIAMAT</source>
+	<source>HOARDOFTHEDRAGONQUEEN,THERISEOFTIAMAT</source>
 </creature>
 <creature>
 	<name>Source of earth</name>
@@ -10629,6 +10983,46 @@ As an action, a restrained creature can make a DC 15 Strength (Athletics) check.
 Once per turn, the cultist may choose to wound its target. At the start of each of the wounded creature's turns, it takes 1d4 necrotic damage for each time the cultist wounded it, and it can then make a DC 15 Constitution saving throw, ending the effect of all such wounds on itself on a success. Alternatively, the wounded creature, or a creature within 5 feet of it, can use an action to make a DC 15 Wisdom (Medicine) check, ending the effect of such wounds on it on a success.</attack>
 	</actions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Rezmir</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HALFDRAGON,false</type>
+	<align>NE</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>90</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 16,CON 16,INT 15,WIS 12,CHA 14</stats>
+	<saves>DEX 6,WIS 4</saves>
+	<skills>ARCANA 5,STEALTH 9</skills>
+	<multipliers>
+		<IMMUNITY>ACID</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED</conditions>
+	<senses>BLINDSIGHT 10,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC,GIANT,INFERNAL,NETHERESE</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>1</legendaryresistance>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Draconic Majesty,While wearing no armor and wearing the Black Dragon Mask, Rezmir adds her Charisma bonus to her AC (included).</passive>
+		<passive>Special Equipment,Rezmir has the Black Dragon Mask, Hazirawn, and an insignia of claws (see Hoard of the Dragon Queen).</passive>
+		<passive>Dark Advantage,Once per turn, Rezmir can deal an extra 10 (3d6) damage when she hits with a weapon attack, provided Rezmir has advantage on the attack roll.</passive>
+		<passive>Immolation,When Rezmir is reduced to 0 hit points, her body disintegrates into a pile of ash.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Greatsword (Hazirawn),9,5,One target. Hit: 13 (2d6+6) slashing damage plus 7 (2d6) necrotic damage. If the target is a creature, it can't regain hit points for 1 minute. The target can make a DC 15 Constitution saving throw at the end of each of its turns, ending this effect early on a success.</attack>
+		<attack>Caustic Bolt,8,90,One target. Hit: 18 (4d8) acid damage.</attack>
+		<effect>Acid Breath,Recharge 5-6,Rezmir breathes acid in a 30-foot line that is 5 feet wide. Each creature in the line must make a DC 14 Dexterity saving throw, taking 22 (5d8) acid damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>2
+		<legendaryaction>Darkness,2,A 15-foot radius of magical darkness extends from a point Rezmir can see within 60 feet of her and spreads around corners. The darkness lasts as long as Rezmir maintains concentration, up to 1 minute. A creature with darkvision can't see through this darkness, and no natural light can illuminate it. If any of the area overlaps with an area of light created by a spell of 2nd level or lower, the spell creating the light is dispelled.</legendaryaction>
+		<legendaryaction>Attack,1,Rezmir makes one melee attack.</legendaryaction>
+		<legendaryaction>Hide,1,Rezmir takes the hide action.</legendaryaction>
+	</legendaryactions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
 </creature>
 <creature>
 	<name>The Queen of Bones</name>
@@ -11585,6 +11979,34 @@ Weakening Breath. Zindar exhales gas in a 15-foot cone. Each creature in that ar
 		<attack>Ashsword,9,5,One target. Hit: 9 (1d8+5) piercing damage.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Blagothkus</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NE</align>
+	<cr>9.0</cr>
+	<ac>17</ac>
+	<hp>138</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 26,DEX 13,CON 20,INT 16,WIS 15,CHA 15</stats>
+	<saves>CON 9,WIS 6,CHA 6</saves>
+	<skills>ARCANA 7,INSIGHT 6,INTIMIDATION 6,PERCEPTION 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,15,,BlagothkusInnate</innatecasting>
+		<spellcasting>INT,7,15,5,BlagothkusCasting</spellcasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Blagothkus attacks twice with his morningstar.</multiattack>
+		<attack>Morningstar,10,10,One target. Hit : 21 (3d8+8) piercing damage.</attack>
+	</actions>
+	<source>HOARDOFTHEDRAGONQUEEN</source>
 </creature>
 <creature>
 	<name>Bone Devil</name>

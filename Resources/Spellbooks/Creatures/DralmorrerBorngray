@@ -1,0 +1,9 @@
+<spellbook>
+	<name>DralmorrerBorngray</name>
+	<slot>
+		<known>Fire bolt,Prestidigitation,Shocking grasp,Longstrider,Magic missile,Shield,Thunderwave,Magic weapon,Misty step</known>
+		<0>Fire bolt,Prestidigitation,Shocking grasp</0>
+		<1>4,Longstrider,Magic missile,Shield,Thunderwave</1>
+		<2>2,Misty step,Magic weapon</2>
+	</slot>
+</spellbook>

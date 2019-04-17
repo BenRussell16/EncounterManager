@@ -1,0 +1,10 @@
+<spellbook>
+	<name>BlagothkusCasting</name>
+	<slot>
+		<known>Light,Mage hand,Prestidigitation,Detect magic,Identify,Magic missile,Shield,Gust of wind,Misty step,Shatter,Fly,Lightning bolt</known>
+		<0>Light,Mage hand,Prestidigitation</0>
+		<1>4,Shield,Magic missile,Identify,Detect magic</1>
+		<2>3,Shatter,Misty step,Gust of wind</2>
+		<3>2,Lightning bolt,Fly</3>
+	</slot>
+</spellbook>

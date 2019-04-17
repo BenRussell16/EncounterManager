@@ -1,0 +1,12 @@
+<spellbook>
+	<name>TalisTheWhite</name>
+	<slot>
+		<known>Guidance,Resistance,Thaumaturgy,Command,Cure wounds,Healing word,Inflict wounds,Blindness/Deafness,Lesser restoration,Spiritual weapon,Dispel magic,Mass healing word,Sending,Death ward,Freedom of movement,Insect plague</known>
+		<0>Guidance,Resistance,Thaumaturgy</0>
+		<1>4,Inflict wounds,Healing word,Cure wounds,Command</1>
+		<2>3,Spiritual weapon,Lesser restoration,Blindness/Deafness</2>
+		<3>3,Sending,Mass healing word,Dispel magic</3>
+		<4>3,Freedom of movement,Death ward</4>
+		<5>1,Insect plague</5>
+	</slot>
+</spellbook>

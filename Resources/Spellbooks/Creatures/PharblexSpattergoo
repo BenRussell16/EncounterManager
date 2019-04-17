@@ -1,0 +1,10 @@
+<spellbook>
+	<name>PharblexSpattergoo</name>
+	<slot>
+		<known>Druidcraft,Guidance,Poison spray,Cure wounds,Entangle,Healing word,Thunderwave,Barkskin,Beast sense,Spike growth,Plant growth,Water walk</known>
+		<0>Druidcraft,Guidance,Poison spray</0>
+		<1>4,Thunderwave,Healing word,Entangle,Cure wounds</1>
+		<2>3,Spike growth,Beast sense,Barkskin</2>
+		<3>3,Water walk,Plant growth</3>
+	</slot>
+</spellbook>

@@ -1,0 +1,9 @@
+<spellbook>
+	<name>BlagothkusInnate</name>
+	<daily>
+		<3>
+			<spell>Fog cloud,false</spell>
+			<spell>Levitate,false</spell>
+		</3>
+	</daily>
+</spellbook>

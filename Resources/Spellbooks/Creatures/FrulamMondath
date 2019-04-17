@@ -1,0 +1,10 @@
+<spellbook>
+	<name>FrulamMondath</name>
+	<slot>
+		<known>Light,Sacred flame,Thaumaturgy,Command,Cure wounds,Healing word,Sanctuary,Calm emotions,Hold person,Spiritual weapon,Mass healing word,Spirit guardians</known>
+		<0>Light,Sacred flame,Thaumaturgy</0>
+		<1>4,Command,Cure wounds,Healing word,Sanctuary</1>
+		<2>3,Spiritual weapon,Hold person,Calm emotions</2>
+		<3>2,Mass healing word,Spirit guardians</3>
+	</slot>
+</spellbook>

@@ -1,0 +1,8 @@
+<spellbook>
+	<name>JamnaGleamsilver</name>
+	<slot>
+		<known>Mage hand,Minor illusion,Prestidigitation,Ray of frost,Charm person,Colour spray,Disguise self,Longstrider</known>
+		<0>Mage hand,Minor illusion,Prestidigitation,Ray of frost</0>
+		<1>3,Longstrider,Disguise self,Colour spray,Charm person</1>
+	</slot>
+</spellbook>

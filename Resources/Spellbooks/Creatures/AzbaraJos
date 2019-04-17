@@ -1,0 +1,10 @@
+<spellbook>
+	<name>AzbaraJos</name>
+	<slot>
+		<known>Mage hand,Prestidigitation,Ray of frost,Shocking grasp,Fog cloud,Magic missile,Shield,Thunderwave,Invisibility,Misty step,Scorching ray,Counterspell,Dispel magic,Fireball</known>
+		<0>Shocking grasp,Ray of frost,Prestidigitation,Mage hand</0>
+		<1>4,Fog cloud,Magic missile,Shield,Thunderwave</1>
+		<2>3,Scorching ray,Misty step,Invisibility</2>
+		<3>3,Fireball,Dispel magic,Counterspell</3>
+	</slot>
+</spellbook>
