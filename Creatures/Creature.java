@@ -392,7 +392,7 @@ public interface Creature {
 					+ name().toLowerCase().substring(1);}
 		}
 		private enum constructSubtype implements Subtype{
-			INEVITABLE;
+			SWARMOF,INEVITABLE;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}

@@ -195,6 +195,26 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<source>LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
+	<name>Guard</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>0.125</cr>
+	<ac>16</ac>
+	<hp>11</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 12,CON 12,INT 10,WIS 11,CHA 10</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<attack>Spear,3,20,60,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Howling Hatred Initiate</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -527,6 +547,31 @@ Blind beyond its blindsight radius.</other>
 	<source>CURSEOFSTRAHD</source>
 </creature>
 <creature>
+	<name>Cave Badger</name>
+	<size>MEDIUM</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>12</ac>
+	<hp>13</hp>
+	<speed>WALK 30,BURROW 15</speed>
+	<stats>STR 13,DEX 10,CON 15,INT 2,WIS 12,CHA 5</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 30,TREMORSENSE 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other>Leaves tunnels behind when it burrows.</other>
+	<actions>
+		<multiattack>The badger makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,3,5,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+		<attack>Claw,3,5,One target. Hit: 6 (2d4+1) slashing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Dimetrodon</name>
 	<size>MEDIUM</size>
 	<type>BEAST,false</type>
@@ -597,6 +642,80 @@ Is a Boros spellcaster.</other>
 	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
+	<name>Giant Badger</name>
+	<size>MEDIUM</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>10</ac>
+	<hp>13</hp>
+	<speed>WALK 30,BURROW 10</speed>
+	<stats>STR 13,DEX 10,CON 15,INT 2,WIS 12,CHA 5</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 30</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The badger makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,3,5,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+		<attack>Claw,3,5,One target. Hit: 6 (2d4+1) slashing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Giant Riding Lizard</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>12</ac>
+	<hp>19</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 15,DEX 12,CON 13,INT 2,WIS 10,CHA 5</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 30</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,4,5,One target. Hit: 6 (1d8+2) piercing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Giant Wolf Spider</name>
+	<size>MEDIUM</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>11</hp>
+	<speed>WALK 40,CLIMB 40</speed>
+	<stats>STR 12,DEX 16,CON 13,INT 3,WIS 12,CHA 4</stats>
+	<skills>PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,3,5,One creature. Hit: 4 (1d6+1) piercing damage, and the target must make a DC 11 Constitution savìng throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. lf the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Goblin</name>
 	<size>SMALL</size>
 	<type>HUMANOID,GOBLINOID,false</type>
@@ -613,7 +732,7 @@ Is a Boros spellcaster.</other>
 	<languages>COMMON,GOBLIN</languages>
 	<regions></regions>
 	<passives>
-		<passive>Nimble escape,This creature can take the diesngage or hide action as a bonus action on each of its turns.</passive>
+		<passive>Nimble escape,This creature can take the disengage or hide action as a bonus action on each of its turns.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -794,6 +913,32 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<reaction>Sticky Shield,When a creature misses the kuo-toa with a melee weapon attack, the kuo-toa uses its sticky shield to catch the weapon. The attacker must succeed on a DC 11 Strength saving throw, or the weapon becomes stuck to the kuo-toa's shield. If the weapon's wielder can't or won't let go of the weapon, the wielder is grappled while the weapon is stuck. While stuck, the weapon can't be used. A creature can pull the weapon free by taking an action to make a DC 11 Strength check and succeeding.</reaction>
 	</reactions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Lords' Alliance Guard</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>CG</align>
+	<cr>0.25</cr>
+	<ac>16</ac>
+	<hp>11</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 12,INT 10,WIS 11,CHA 10</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Dwarven Resilience,The guard has advantage on saving throws against poison.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Halberd,4,10,One target. Hit: 7 (1d10+2) slashing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Mongrelfolk</name>
@@ -1011,6 +1156,31 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
+	<name>Swarm of Books</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,SWARMOF,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 0,FLY 30</speed>
+	<stats>STR 5,DEX 15,CON 10,INT 2,WIS 12,CHA 4</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny bat. The swarm can't regain hit points or gain temporary hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Slam,4,0,One creature in the swarm's space. Hit: 5 (2d4) bludgeoning damage, or 2 (1d4) bludgeoning damage if the swarm has half of its hit points or fewer.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Tabaxi Minstrel</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,TABAXI,false</type>
@@ -1037,6 +1207,28 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Dart,4,20,60,One target. Hil: 4 (1d4+2) piercing damage.</attack>
 	</actions>
 	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
+	<name>Tiny Servant</name>
+	<size>TINY</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>15</ac>
+	<hp>10</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 4,DEX 16,CON 10,INT 2,WIS 10,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<other>Blind beyond its blindsight radius.</other>
+	<actions>
+		<attack>Slam,5,5,One target. Hit: 5 (1d4+3) bludgeoning damage.</attack>
+	</actions>
+	<source>XANATHARSGUIDETOEVERYTHING</source>
 </creature>
 <creature>
 	<name>Tortle</name>
@@ -1170,7 +1362,34 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<actions>
 		<attack>Dagger,3,20,60,One target. Hit: 3 (1d4+1) piercing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>TOMBOFANNIHILATION,WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
+	<name>Web Runner</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>TN</align>
+	<cr>0.25</cr>
+	<ac>15</ac>
+	<hp>7</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 8,DEX 14,CON 10,INT 10,WIS 8,CHA 8</stats>
+	<skills>ACROBATICS 6,ATHLETICS 3,STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Nimble escape,This creature can take the disengage or hide action as a bonus action on each of its turns.</passive>
+		<passive>Experienced,The goblin has advantage on checks made to avoid being surprised.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Scimitar,4,5,One target. Hit: 5 (1d6+2) slashing damage.</attack>
+		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Winged Kobold</name>
@@ -1376,6 +1595,65 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
+	<name>Emerald Enclave Scout</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LN</align>
+	<cr>0.5</cr>
+	<ac>16</ac>
+	<hp>19</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 11,DEX 14,CON 14,INT 11,WIS 13,CHA 11</stats>
+	<skills>NATURE 4,PERCEPTION 5,STEALTH 6,SURVIVAL 5</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Keen hearing,This creature has advantage on Wisdom (Perception) checks that rely on hearing.</passive>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Dwarven Resilience,The scout has advantage on saving throws against poison.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The scout makes two melee attacks.</multiattack>
+		<attack>Warpick,4,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Heavy Crossbow,3,100,400,One target. Hit: 5 (1d10) piercing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Fiendish Giant Spider</name>
+	<size>MEDIUM</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>13</ac>
+	<hp>11</hp>
+	<speed>WALK 40,CLIMB 40</speed>
+	<stats>STR 12,DEX 16,CON 13,INT 3,WIS 12,CHA 4</stats>
+	<skills>PERCEPTION 3,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,3,5,One creature. Hit: 4 (1d6+1) piercing damage, and the target must make a DC 11 Constitution savìng throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. lf the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Firenewt Warrior</name>
@@ -1817,6 +2095,32 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Scout</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>0.5</cr>
+	<ac>13</ac>
+	<hp>16</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 14,CON 12,INT 11,WIS 13,CHA 11</stats>
+	<skills>NATURE 4,PERCEPTION 5,STEALTH 6,SURVIVAL 5</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Keen hearing,This creature has advantage on Wisdom (Perception) checks that rely on hearing.</passive>
+		<passive>Keen sight,This creature has advantage on Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The scout makes two melee attacks or two ranged attacks.</multiattack>
+		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+		<attack>Longbow,4,150,600,One target. Hit: 6 (1d8+2) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Sharwyn Hucrele</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -1895,6 +2199,165 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 		<attack>Longsword,3,5,One target. Hit: 6 (1d8+2) slashing damage, or 7 (1d10+2) slashing damage if used with two hands.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Swarm of Beetles</name>
+	<size>MEDIUM</size>
+	<type>BEAST,SWARMOF,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 20,BURROW 5,CLIMB 20</speed>
+	<stats>STR 3,DEX 13,CON 10,INT 1,WIS 7,CHA 1</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,PARALYZED,PETRIFIED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>BLINDSIGHT 10</senses>
+	<regions></regions>
+	<passives>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bites,3,0,One target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Swarm of Centipedes</name>
+	<size>MEDIUM</size>
+	<type>BEAST,SWARMOF,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 3,DEX 13,CON 10,INT 1,WIS 7,CHA 1</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,PARALYZED,PETRIFIED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>BLINDSIGHT 10</senses>
+	<regions></regions>
+	<passives>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bites,3,0,One target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.
+A creature reduced to 0 hit points by a swarm of centipedes is stable bul poisoned for 1 hour, even after regaining hit points, and paralyzed while poisoned in this way.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Swarm of Insects</name>
+	<size>MEDIUM</size>
+	<type>BEAST,SWARMOF,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 3,DEX 13,CON 10,INT 1,WIS 7,CHA 1</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,PARALYZED,PETRIFIED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>BLINDSIGHT 10</senses>
+	<regions></regions>
+	<passives>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bites,3,0,One target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Swarm of Mechanical Spiders</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,SWARMOF,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 3,DEX 13,CON 10,INT 1,WIS 7,CHA 1</stats>
+	<multipliers>
+		<VULNERABILITY>LIGHTNING</VULNERABILITY>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>BLINDSIGHT 10</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bites,3,0,One target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
+	<name>Swarm of Spiders</name>
+	<size>MEDIUM</size>
+	<type>BEAST,SWARMOF,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 3,DEX 13,CON 10,INT 1,WIS 7,CHA 1</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,PARALYZED,PETRIFIED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>BLINDSIGHT 10</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bites,3,0,One target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Swarm of Wasps</name>
+	<size>MEDIUM</size>
+	<type>BEAST,SWARMOF,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>22</hp>
+	<speed>WALK 5,FLY 30</speed>
+	<stats>STR 3,DEX 13,CON 10,INT 1,WIS 7,CHA 1</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING,SLASHING</RESISTANCE>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,PARALYZED,PETRIFIED,PRONE,RESTRAINED,STUNNED</conditions>
+	<senses>BLINDSIGHT 10</senses>
+	<regions></regions>
+	<passives>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bites,3,0,One target in the swarm's space. Hit: 10 (4d4) piercing damage, or 5 (2d4) piercing damage if the swarm has half of its hit points or fewer.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Thorn Slinger</name>
@@ -2052,6 +2515,32 @@ Doesn't have disadvantage in melee.</attack>
 		<reaction>Self-Sacrifice,When a creature within 5 feet of the thrull is hit by an attack, the thrull swaps places with that creature and is hit instead.</reaction>
 	</reactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Zhentarim Thug</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>TN</align>
+	<cr>0.5</cr>
+	<ac>11</ac>
+	<hp>32</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 15,DEX 11,CON 14,INT 10,WIS 10,CHA 11</stats>
+	<skills>INTIMIDATION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The thug makes two melee attacks.</multiattack>
+		<attack>Mace,4,5,One creature. Hit: 5 (1d6+2) bludgeoning damage.</attack>
+		<attack>Heavy Crossbow,2,100,400,One target. Hit: 5 (1d10) piercing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Zorbo</name>
@@ -2403,7 +2892,37 @@ d8	Minor Adaptation
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
-	<name>Duergar soulblade</name>
+	<name>Duergar Alchemist</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LE</align>
+	<cr>1.0</cr>
+	<ac>16</ac>
+	<hp>26</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 14,DEX 11,CON 14,INT 11,WIS 10,CHA 9</stats>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Duergar Resilience,The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>War Pick,4,5,One target. Hit: 6 (1d8+2) piercing damage, or 11 (2d8+2) piercing damage while enlarged.</attack>
+		<attack>Acid Vial,4,20,One target. Hit: 7 (2d6) acid damage.</attack>
+		<attack>Alchemist's Fire,4,20,One target. Hit: 2 (1d4) fire damage at the start of each of the target's turns. A creature can end this damage by using its action to make a successful DC 10 Dexterity check to extenguish the flames.</attack>
+		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. lf the duergar lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
+		<effect>Invisibility,Recharges after a Short or Long Rest,The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Duergar Soulblade</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,DWARF,false</type>
 	<align>LE</align>
@@ -2430,7 +2949,7 @@ d8	Minor Adaptation
 		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. If the duergar lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
 		<effect>Invisibility,Recharges after a Short or Long Rest,The duergar magically turns invisible for up to 1 hour or until it attacks, it casts a spell, it uses its Enlarge, or its concentration is broken (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
 	</actions>
-	<source>MORDENKAINENSTOMEOFFOES</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Eblis</name>
@@ -2692,6 +3211,59 @@ Spell slots come back after a short rest.</other>
 		<attack>Claw,4,5,One target. Hit: 7 (2d4+2) slashing damage. If the target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect early on a success.</attack>
 	</actions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Giant Octopus</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>11</ac>
+	<hp>52</hp>
+	<speed>WALK 10,SWIM 60</speed>
+	<stats>STR 17,DEX 13,CON 13,INT 4,WIS 10,CHA 4</stats>
+	<skills>PERCEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Underwater Camouflage,The octopus has advantage on Dexterity (Stealth) checks made while underwater.</passive>
+		<passive>Hold Breath,While out of water, the octopus can hold its breath for 1 hour.</passive>
+		<passive>Water Breathing,The octopus can breathe only underwater.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Tentacles,5,15,One target. Hit:10 (2d6+3) bludgeoning damage. lf the target is a creature, it is grappled (escape DC 16). Until this grapple ends the target is restrained, and the octopus can't use its tentacles on another target.</attack>
+		<effect>Ink Cloud,Recharges after a Short or Long Rest,A 20-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Giant Rocktopus</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>11</ac>
+	<hp>52</hp>
+	<speed>WALK 20,CLIMB 10,SWIM 60</speed>
+	<stats>STR 17,DEX 13,CON 13,INT 4,WIS 10,CHA 4</stats>
+	<skills>PERCEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Camouflage,The octopus has advantage on Dexterity (Stealth).</passive>
+		<passive>Water Breathing,The octopus can breathe only underwater.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Tentacles,5,15,One target. Hit:10 (2d6+3) bludgeoning damage. lf the target is a creature, it is grappled (escape DC 16). Until this grapple ends the target is restrained, and the octopus can't use its tentacles on another target.</attack>
+		<effect>Ink Cloud,Recharges after a Short or Long Rest,A 20-foot-radius cloud of ink extends all around the octopus if it is underwater. The area is heavily obscured for 1 minute, although a significant current can disperse the ink. After releasing the ink, the octopus can use the Dash action as a bonus action.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Giant Spider</name>
@@ -3087,6 +3659,33 @@ Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cas
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Lords' Alliance Spy</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>TN</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 15,CON 10,INT 12,WIS 14,CHA 16</stats>
+	<skills>DECEPTION 5,INSIGHT 4,INVESTIGATION 5,PERCEPTION 6,PERSUASION 5,SLIGHTOFHAND 4,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Sneak Attack (1/Turn),The spy deals an extra 7 (2d6) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't incapacitated and the spy doesn't have disadvantage on the attack roll.</passive>
+		<passive>Cunning Action,On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The spy makes two melee attacks.</multiattack>
+		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+		<attack>Hand crossbow,4,30,120,One target. Hit: 5 (1d6+2) piercing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Mantrap</name>
 	<size>LARGE</size>
 	<type>PLANT,false</type>
@@ -3342,6 +3941,35 @@ Only has lair actions when with a group of Rakdos.</other>
 		<reaction>Parry,When an attacker hits Sildar with a melee attack and Sildar can see the attacker, he can roll1d6 and add the number rolled to his AC against the triggering attack, provided that he's wielding a melee weapon.</reaction>
 	</reactions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Spider King</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>44</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 14,DEX 16,CON 12,INT 2,WIS 11,CHA 4</stats>
+	<saves>CON 3,WIS 2</saves>
+	<skills>PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+		<passive>Two Heads,The Spider King has advantage on wisdom (Perception) checks and on saving throws against being blinded, charmed, deafened, frightened, stunned, and knocked unconsious.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One creature. Hit: 7 (1d8+3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, and paralyzed while poisoned in this way.</attack>
+		<attack>Web (Recharge 5-6),5,30,60,One creature. Hit: The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerable to fire damage; immune to bludgeoning, poison, and psychic damage).</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Spy</name>
@@ -4249,6 +4877,40 @@ An engulfed creature can try to escape by taking an action to make a DC 12 Stren
 		<effect>Blinding Spittle,Recharge 5-6,The mouther spits a chemical glob at a point it can see within 15 feet of it. The glob explodes in a blinding flash of light on impact. Each creature within 5 feet of the flash must succeed on a DC 13 Dexterity saving throw or be blinded until the end of the mouther's next turn.</effect>
 	</actions>
 	<source>MONSTERMANUAL,LOSTLABORATORYOFKWALISH</source>
+</creature>
+<creature>
+	<name>Glabbagool</name>
+	<size>LARGE</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>6</ac>
+	<hp>84</hp>
+	<speed>WALK 15</speed>
+	<stats>STR 14,DEX 3,CON 20,INT 10,WIS 6,CHA 1</stats>
+	<multipliers>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<languages>TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Transparent,Even when the cube is in plain sight, it takes a successful DC 15 Wisdom (Perception) check to spot a cube that has neither moved nor attacked. A creature that tries to enter the cube's space while unaware of the cube is surprised by the cube.</passive>
+		<passive>Ooze Cube,The cube takes up its entire space. Other creatures can enter the space, but a creature that does so is subjected to the cube's Engulf and has disadvantage on the saving throw.
+Creatures inside the cube can be seen but have total cover.
+A creature within 5 feet of the cube can take an action to pull a creature or object out of the cube. Doing so requires a successful DC 12 Strength check, and the creature making the attempt takes 10 (3d6) acid damage.
+The cube can hold only one Large creature or up to four Medium or smaller creatures inside it at a time.</passive>
+	</passives>
+	<other>Blind beyond its blindsight radius.
+Telepathy is 60ft.</other>
+	<actions>
+		<attack>Pseudopod,4,5,One creature. Hit: 10 (3d6) acid damage.</attack>
+		<effect>Engulf,null,The cube moves up to its speed. While doing so, it can enter Large or smaller creatures' spaces. Whenever the cube enters a creature's space, the creature must make a DC 12 Dexterity saving throw.
+On a successful save, the creature can choose to be pushed 5 feet back or to the side of the cube. A creature that chooses not to be pushed suffers the consequences of a failed saving throw.
+On a failed save, the cube enters the creature's space, and the creature takes 10 (3d6) acid damage and is engulfed. The engulfed creature can't breathe, is restrained, and takes 21 (6d6) acid damage at the start of each of the cube's turns. When the cube moves, the engulfed creature moves with it.
+An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Grick</name>
@@ -6064,7 +6726,7 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<reactions>
 		<reaction>Deflect Missile,In response to being hit by a ranged weapon attack, the adept deflects the missile. The damage it takes from the attack is reduced by 1d10+3. If the damage is reduced to 0, the adept catches the missile if it's small enough to hold in one hand and the adept has a hand free.</reaction>
 	</reactions>
-	<source>TALESFROMTHEYAWNINGPORTAL,LOSTLABORATORYOFKWALISH</source>
+	<source>TALESFROMTHEYAWNINGPORTAL,LOSTLABORATORYOFKWALISH,WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Merrenoloth</name>
@@ -6488,6 +7150,53 @@ Telepathy is 120ft.</other>
 This reduction to the target's hit point maximum lasts until the target finishes a long rest. It dies if this effect reduces its hit point maximum to 0.</effect>
 	</actions>
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Veteran</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>3.0</cr>
+	<ac>17</ac>
+	<hp>58</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 13,CON 14,INT 10,WIS 11,CHA 10</stats>
+	<skills>ATHLETICS 5,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The veteran makes lwo longsword attacks. lf it has a shortsword drawn, it can also make a shortsword attack.</multiattack>
+		<attack>Longsword,5,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands.</attack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<attack>Heavy Crossbow,3,100,400,One target. Hit: 5 (1d10) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Veteran of the Gauntlet</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LG</align>
+	<cr>3.0</cr>
+	<ac>17</ac>
+	<hp>58</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 13,CON 14,INT 10,WIS 11,CHA 10</stats>
+	<skills>ATHLETICS 5,PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The veteran makes lwo longsword attacks. lf it has a shortsword drawn, it can also make a shortsword attack.</multiattack>
+		<attack>Longsword,5,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands.</attack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+		<attack>Heavy Crossbow,3,100,400,One target. Hit: 5 (1d10) piercing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>White tusk shaman</name>
@@ -7503,6 +8212,39 @@ The target's hit point maximum is reduced by an amount equal to the necrotic dam
 		<effect>Ilneval's Command,Recharge 4-6,Up to three allied orcs within 120 feet of this orc that can hear it can use their reactions to each make one weapon attack.</effect>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Princess Ebonmire</name>
+	<size>LARGE</size>
+	<type>OOZE,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>7</ac>
+	<hp>85</hp>
+	<speed>WALK 20,CLIMB 20</speed>
+	<stats>STR 16,DEX 5,CON 16,INT 6,WIS 6,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>ACID,COLD,LIGHTNING,SLASHING</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PRONE</conditions>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Ooze nature,An ooze doesn't equire sleep.</passive>
+		<passive>Amorphous,The pudding can move through a space as narrow as 1 inch wide without squeezing.</passive>
+		<passive>Corrosive Form,A creature that touches the pudding or hits it with a melee attack while within 5 feet of it takes 4 (1d8) acid damage. Any nonmagical weapon made of metal or wood that hits the pudding corrodes. After dealing the damage, the weapon takes a perminent and cumulative -1 penalty to damage rolls. If its penalty drops to -5, the weapon is destroyed. Nonmagical ammunition made of metal or wood that hits the pudding is destroyed after dealing damage.
+The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</passive>
+	</passives>
+	<other>Blind beyond blindsight radius.</other>
+	<actions>
+		<attack>Pseudopod,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage plus 18 (4d8) acid damage. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+		<attack>Hurl Blob,5,30,One target. Hit: 6 (1d6+3) bludgeoning damage plus 18 (4d8) acid damage. In addition, nonmagical armor worn by the target is partly dissolved and takes a permanent and cumulative -1 penalty to the AC it offers. The armor is destroyed if the penalty reduces its AC to 10.</attack>
+	</actions>
+	<reactions>
+		<reaction>Split,When a pudding that is medium or larger is subjected to lightning or slashing damage, it splits into two new puddings if it has at least 10 hit points. Each new pudding has hit points equal to half the original pudding's, rounded down. New puddings are one size smaller than the original pudding.</reaction>
+	</reactions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Reckoner</name>
@@ -11025,6 +11767,38 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 	<source>HOARDOFTHEDRAGONQUEEN</source>
 </creature>
 <creature>
+	<name>Shield Guardian</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>7.0</cr>
+	<ac>17</ac>
+	<hp>142</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 8,CON 18,INT 7,WIS 10,CHA 3</stats>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED</conditions>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Bound,The shield guardian is magically bound to an amulet. As long as the guardian and its amulet are on the same plane of existence, the amulet's wearer can telepathically call the guardian to travel to it, and the guardian knows the distance and direction to the amulet. lf the guardian is within 60 feet of the amulet's wearer, half of any damage the wearer takes (rounded up) is transferred to the guardian.</passive>
+		<passive>Spell storing,A spellcaster who wears the shield guardian's amulet can cause the guardian to store one spell of 4th level or lower. To do so, the wearer must cast the spell on the guardian The spell has no effect but is stored within the guardian. When commanded to do so by the wearer or when a situation arises that was predefined by the spellcaster, the guardian casts the stored spell with any parameters set by the original caster, requiring no components. When the spell is cast or a new spell is stored, any previously stored spell is lost.</passive>
+		<passive>Regeneration,The shield guardian regains 10 hit points at the start of its turn if it has at least 1 hit point.</passive>
+	</passives>
+	<other>Understands commands given in any language but can't speak.</other>
+	<actions>
+		<multiattack>The guardian makes two fist attacks.</multiattack>
+		<attack>Fist,7,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Shield,When a creature makes an attack against the wearer of the guardian's amulet, the guardian grants a +2 bonus to the wearer's AC if the guardian is within 5 feet of the wearer.</reaction>
+	</reactions>
+	<source>MONSTERMANUAL,OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>The Queen of Bones</name>
 	<size>MEDIUM</size>
 	<type>ABERRATION,false</type>
@@ -11297,6 +12071,37 @@ A duplicate has the cloaker's AC and uses its saving throws. If an attack hits a
 		<attack>Ray of Salvation,7,60,One target. Hit: 10 (3d6) fire damage and 9 (2d8) radiant damage. If the ray does damage, any allies adjacent to the target gain 10 temporary hit points.</attack>
 	</actions>
 	<source>STRONGHOLDSANDFOLLOWERS</source>
+</creature>
+<creature>
+	<name>Drow Priestess of Lolth</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>8.0</cr>
+	<ac>16</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 13,WIS 17,CHA 18</stats>
+	<saves>CON 4,WIS 6,CHA 7</saves>
+	<skills>INSIGHT 6,PERCEPTION 6,RELIGION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>ELVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,15,,DrowInnate</innatecasting>
+		<spellcasting>WIS,6,14,10,DrowPriestessOfLolth</spellcasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+	</passives>
+	<other>Conjure animals creates 2 giant spiders.</other>
+	<actions>
+		<multiattack>The drow makes two scourge attacks.</multiattack>
+		<attack>Scourge,5,5,One target. Hit: 5 (1d6+2) piercing damage plus 17 (5d6) poison damage.</attack>
+		<effect>Summon Demon,1/Day,The drow attempts to magically summon a yochlol with a 30 percent chance of success. lf the attempt fails, the drow takes 5 (1d10) psychic damage. Otherwise, the summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. lt remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Ezmerelda d'Avenir</name>
@@ -13143,6 +13948,37 @@ The froghemoth's gullet can hold up to two creatures at a time. If the froghemot
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Jade Spider</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>250</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 22,DEX 9,CON 20,INT 3,WIS 11,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunities.
+Understands the languages of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes two slam attacks.</multiattack>
+		<attack>Slam,10,5,One target. Hit: 19 (3d8+6) bludgeoning damage.</attack>
+		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Lesser balor</name>
 	<size>LARGE</size>
 	<type>FIEND,DEMON,false</type>
@@ -13529,6 +14365,36 @@ Understands the languages of its creator but can't speak.</other>
 		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
 	<source>MONSTERMANUAL,LOSTLABORATORYOFKWALISH</source>
+</creature>
+<creature>
+	<name>Four Armed Statue</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>178</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 22,DEX 9,CON 20,INT 3,WIS 11,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunities.
+Understands the languages of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes four sword attacks.</multiattack>
+		<attack>Sword,10,5,One target. Hit: 10 (1d8+6) slashing damage.</attack>
+		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Sunder Shaman</name>
@@ -15717,6 +16583,39 @@ Telepathy is 120ft.</other>
 		<lairaction>Tendrils of creeping fungi reach out to ensnare the enemies of the Golgari. The Golgari choose a 15-foot-radius sphere centered on a point within 60 feet of any member of the group. Each creature in the area that isn't allied with the Golgari group must succeed on a DC 15 Dexterity saving throw or become restrained until the Golgari group uses this lair action again, all the members of the group are slain, or no member of the group is within 60 feet of the effect. A creature restrained in this way can use an action to make a DC 15 Strength check, ending the restrained effect on itself with a success.</lairaction>
 	</lair>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Quenthel Baenre</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>NE</align>
+	<cr>22.0</cr>
+	<ac>19</ac>
+	<hp>132</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 18,WIS 20,CHA 18</stats>
+	<saves>CON 8,WIS 12,CHA 11</saves>
+	<skills>INSIGHT 12,PERCEPTION 12,RELIGION 11,STEALTH 9</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>ELVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,19,,DrowInnate</innatecasting>
+		<spellcasting>WIS,12,20,20,DrowPriestessOfLolth</spellcasting>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Regency,While seated on her throne. Quenthel can use an action on her turn to cast disintegrate (save DC 19). A target that fails its saving throw takcs 10d6+40 force damage. If this damage reduces thc target to 0 hit points. it is disintegrated.</passive>
+		<passive>Special Equipment,She wields a tentacle rod.</passive>
+	</passives>
+	<other>Conjure animals creates 2 giant spiders.</other>
+	<actions>
+		<multiattack>The drow makes two scourge attacks.</multiattack>
+		<attack>Scourge,5,5,One target. Hit: 5 (1d6+2) piercing damage plus 17 (5d6) poison damage.</attack>
+		<effect>Summon Demon,1/Day,The drow attempts to magically summon a yochlol with a 30 percent chance of success. lf the attempt fails, the drow takes 5 (1d10) psychic damage. Otherwise, the summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. lt remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Trobriand</name>

@@ -1314,7 +1314,7 @@ public class CreatureBuilder {
 			    					{"Keen hearing","This creature has advantage on Wisdom (Perception) checks that rely on hearing."},
 			    					{"Keen sight","This creature has advantage on Wisdom (Perception) checks that rely on sight."},
 			    					{"Keen smell","This creature has advantage on Wisdom (Perception) checks that rely on smell."},
-			    					{"Nimble escape","This creature can take the diesngage or hide action as a bonus action on each of its turns."},
+			    					{"Nimble escape","This creature can take the disengage or hide action as a bonus action on each of its turns."},
 			    					{"Pack tactics","This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated."},
 			    					{"Shadow stealth","While in dim light or darkness, this creature can take the hide action as a bonus action."},
 			    					{"Siege monster","This creature deals double damage to objects and structures."},

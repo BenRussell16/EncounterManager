@@ -1,0 +1,12 @@
+<spellbook>
+	<name>DrowPriestessOfLolth</name>
+	<slot>
+		<known>Guidance,Poison spray,Resistance,Spare the dying,Thaumaturgy,Animal friendship,Cure wounds,Detect poison and disease,Ray of sickness,Lesser restoration,Protection from poison,Web,Conjure animals,Dispel magic,Divination,Freedom of movement,Insect plague,Mass cure wounds</known>
+		<0>Guidance,Resistance,Spare the dying,Thaumaturgy,Poison spray</0>
+		<1>4,Animal friendship,Cure wounds,Detect poison and disease,Ray of sickness</1>
+		<2>3,Web,Protection from poison,Lesser restoration</2>
+		<3>3,Dispel magic,Conjure animals</3>
+		<4>3,Freedom of movement,Divination</4>
+		<5>2,Mass cure wounds,Insect plague</5>
+	</slot>
+</spellbook>
