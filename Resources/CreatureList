@@ -266,6 +266,30 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Merfolk</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,MERFOLK,false</type>
+	<align>TN</align>
+	<cr>0.125</cr>
+	<ac>11</ac>
+	<hp>11</hp>
+	<speed>WALK 10,SWIM 40</speed>
+	<stats>STR 10,DEX 13,CON 12,INT 11,WIS 11,CHA 12</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,AQUAN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,2,20,60,One target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Monastery of the Distressed Body Monk</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -338,6 +362,32 @@ Gets spell slots back after a short rest.</other>
 		<attack>Dagger,2,20,60,One target. Hit: 2 (1d4) piercing damage.</attack>
 	</actions>
 	<source>TOMBOFANNIHILATION</source>
+</creature>
+<creature>
+	<name>Sea Elf</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>CG</align>
+	<cr>0.125</cr>
+	<ac>11</ac>
+	<hp>11</hp>
+	<speed>WALK 10,SWIM 40</speed>
+	<stats>STR 10,DEX 13,CON 12,INT 11,WIS 11,CHA 12</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ELVISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,2,20,60,One target. Hit: 3 (1d6) piercing damage, or 4 (1d8) piercing damage if used with two hands to make a melee attack.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Slaad tadpole</name>
@@ -3460,6 +3510,34 @@ Red. The poisoned creature must use its action to eat if food is within reach.</
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Ice Spider</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>26</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 14,DEX 16,CON 12,INT 2,WIS 11,CHA 4</stats>
+	<skills>STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One creature. Hit: 7 (1d8+3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, and paralyzed while poisoned in this way.</attack>
+		<attack>Web (Recharge 5-6),5,30,60,One creature. Hit: The target is restrained by webbing, and takes 1 cold damage at the start of each of its turns while restrained in this way. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerable to fire damage; immune to poison and psychic damage).</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Ice toad</name>
 	<size>MEDIUM</size>
 	<type>MONSTOSITY,false</type>
@@ -4913,6 +4991,63 @@ An engulfed creature can try to escape by taking an action to make a DC 12 Stren
 	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
+	<name>Goblin Hucker</name>
+	<size>LARGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>11</ac>
+	<hp>59</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 19,DEX 8,CON 16,INT 5,WIS 7,CHA 7</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Greatclub,6,5,One target. Hit:13 (2d8+4) bludgeoning damage.</attack>
+		<attack>Javelin,6,30,120,One target. Hit:11 (2d6+4) piercing damage.</attack>
+		<attack>Goblin Projectile,3,150,600,One target thats not within 30ft. Hit: 5 (2d4) bludgeoning damage, or 10 (4d4) piercing damage if the projectile is wearing a spiked helmet. Hit or Miss: The goblin projectile takes 1d6 bludgeoning damage per 10 feet it travels through the air (maximum 20d6).</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Green Dragon Wyrmling</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>2.0</cr>
+	<ac>17</ac>
+	<hp>38</hp>
+	<speed>WALK 30,FLY 60,SWIM 30</speed>
+	<stats>STR 15,DEX 12,CON 13,INT 14,WIS 11,CHA 13</stats>
+	<saves>DEX 3,CON 3,WIS 2,CHA 3</saves>
+	<skills>PERCEPTION 4,STEALTH 3</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<languages>DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,4,5,One target. Hit: 7 (1d10+2) piercing damage plus 3 (1d6) poison damage.</attack>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 11 Constìtution saving throw, taking 21 (6d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<lair>
+		<lairaction>Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check ancl sttcceerls. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>A wall of tangled brush bristling with thorns springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in its area must make a DC 15 Dexterity saving throw. A creature that fails the save takes 18 (4d8) piercing damage and is pushed 5 feet out of the wall's space, appearing on whichever side of the wall it wants. A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, a creature in the wall's space must make a DC 15 Dexterity saving throw once each round it's in contact with the wall, taking 18 (4d8) piercing damage on a failed save' or half as much damage on a successful one. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to psychic damage. The wall sinks back into the ground when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Grick</name>
 	<size>MEDIUM</size>
 	<type>MONSTOSITY,false</type>
@@ -5098,6 +5233,35 @@ Gold. The poisoned creature is charmed and can speak Grung.</other>
 		<attack>Spit Acid,5,20,60,One target. Hit: 10 (4d4) acid damage.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Ice Spider Queen</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>44</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 14,DEX 16,CON 12,INT 2,WIS 11,CHA 4</stats>
+	<skills>STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 10,DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
+		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
+		<passive>Chilled Aura,Any creature that starts its turn within 5 feet of the queen takes 5 (2d4) cold damage.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One creature. Hit: 7 (1d8+3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, and paralyzed while poisoned in this way.</attack>
+		<attack>Web (Recharge 5-6),5,30,60,One creature. Hit: The target is restrained by webbing, and takes 2 (1d4) cold damage at the start of each of its turns while restrained in this way. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerable to fire damage; immune to poison and psychic damage).</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Intellect devourer</name>
@@ -5902,6 +6066,25 @@ Can't speak in raven form.</other>
 		<effect>Belch Fire,Recharge 4-6,The stove belches fire in a 15-foot cone. Each creature in the area must make a DC 10 Dexterity saving throw, taking 22 (4d10) fire damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Ankylosaurus</name>
+	<size>HUGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>68</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 11,CON 15,INT 2,WIS 12,CHA 5</stats>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Tail,7,10,One target. Hit: 18 (4d6+4) bludgeoning damage. lf the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Ankylosaurus Zombie</name>
@@ -7091,6 +7274,29 @@ Telepathy is 120ft.</other>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Thunderbeast Skeleton</name>
+	<size>HUGE</size>
+	<type>UNDEAD,false</type>
+	<align>UNALIGNED</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>68</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 11,CON 15,INT 2,WIS 12,CHA 5</stats>
+	<multipliers>
+		<VULNERABILITY>BLUDGEONING</VULNERABILITY>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<attack>Bite,7,5,One target. Hit: 18 (4d6+4) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Thurl Merosska</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -7641,6 +7847,40 @@ In a new form, the couatl retains its game statistics and ability to speak, but 
 	<source>WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
+	<name>Eigeron's Spirit</name>
+	<size>HUGE</size>
+	<type>UNDEAD,false</type>
+	<align>NG</align>
+	<cr>4.0</cr>
+	<ac>11</ac>
+	<hp>65</hp>
+	<speed>WALK 0,FLY 40</speed>
+	<stats>STR 7,DEX 13,CON 10,INT 10,WIS 12,CHA 17</stats>
+	<multipliers>
+		<RESISTANCE>ACID,FIRE,LIGHTNING,THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>COLD,POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Incorporeal movement,This creature can move through other creatures and objects as if they were difficult terrain. It takes 5(1d10) force damage if it ends its turn inside an object.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Bound,The ghost can't leave the Eye of Annam. If a creature possessed by the ghost is forcibly removed from the Eye of Annam, the ghost is expelled from its host and re-forms in the middle of this room.</passive>
+		<passive>Ethereal Sight,The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.</passive>
+		<passive>Unfinished Bussiness,If it is destroyed, it re-forms after 24 hours. To truly destroy the ghost, characters must lay Eigeron's spirit to rest by killing Blagothkus.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Withering Touch,5,5,One target. Hit: 17 (4d6+3) necrotic damage.</attack>
+		<effect>Etheralness,null,The ghost enters the Ethereal Plane from the Material Plane, or vice versa. lt is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can't affect or be affected by anything on the other plane.</effect>
+		<effect>Possession,Recharge 6,One humanoid or giant that the ghost can see within 5 feet of it must succeed on a DC 13 Charìsma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control ofits body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, lntelligence, Wisdom, Charisma, and immunity to being charmed and frightened. lt otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies
+The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 feet of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession end.</effect>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Elder Black Pudding</name>
 	<size>HUGE</size>
 	<type>OOZE,false</type>
@@ -7703,6 +7943,38 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 		<attack>Fire Ray,5,30,One target. Hit: 10 (3d6) fire damage.</attack>
 	</actions>
 	<source>LOSTMINEOFPHANDELVER</source>
+</creature>
+<creature>
+	<name>Ghost</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>LG,NG,CG,LN,TN,CN,LE,NE,CE</align>
+	<cr>4.0</cr>
+	<ac>11</ac>
+	<hp>45</hp>
+	<speed>WALK 0,FLY 40</speed>
+	<stats>STR 7,DEX 13,CON 10,INT 10,WIS 12,CHA 17</stats>
+	<multipliers>
+		<RESISTANCE>ACID,FIRE,LIGHTNING,THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>COLD,POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Incorporeal movement,This creature can move through other creatures and objects as if they were difficult terrain. It takes 5(1d10) force damage if it ends its turn inside an object.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Ethereal Sight,The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane, and vice versa.</passive>
+	</passives>
+	<other>Knows the languages it knew in life.</other>
+	<actions>
+		<attack>Withering Touch,5,5,One target. Hit: 17 (4d6+3) necrotic damage.</attack>
+		<effect>Etheralness,null,The ghost enters the Ethereal Plane from the Material Plane, or vice versa. lt is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can't affect or be affected by anything on the other plane.</effect>
+		<effect>Horrifying Visage,null,Each non-undead creature within 60 feet of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. lf the save fails by 5 or more, the target also ages 1d4x10 years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itselfon a success. lf a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed wilh a greater restoration spell, but only within 24 hours of it occurring.</effect>
+		<effect>Possession,Recharge 6,One humanoid that the ghost can see within 5 feet of it must succeed on a DC 13 Charìsma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control ofits body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, lntelligence, Wisdom, Charisma, and immunity to being charmed and frightened. lt otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies
+The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 feet of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession end.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Giant Subterranean Lizard</name>
@@ -9317,6 +9589,29 @@ Only has lair actions when with a group of Golgari.</other>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
+	<name>Hill Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>13</ac>
+	<hp>105</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 21,DEX 8,CON 19,INT 5,WIS 9,CHA 6</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatclub attacks.</multiattack>
+		<attack>Greatclub,8,10,One target. Hit: 18 (3d8+5) bludgeoning damage.</attack>
+		<attack>Rock,8,60,240,One target. Hit: 21 (3d10+5) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Izek Strazni</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -9971,6 +10266,29 @@ Unless surprised, a creature can avert its eyes to avoid the saving throw at the
 		<attack>Mandibles,8,5,One target. Hit: 14 (2d8+5) slashing damage.</attack>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
+</creature>
+<creature>
+	<name>Unarmed Hill Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>13</ac>
+	<hp>105</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 21,DEX 8,CON 19,INT 5,WIS 9,CHA 6</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatclub attacks.</multiattack>
+		<attack>Unarmed Attack,8,10,One target. Hit: 12 (3d4+5) bludgeoning damage.</attack>
+		<attack>Rock,8,60,240,One target. Hit: 21 (3d10+5) bludgeoning damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Undead Bulette</name>
@@ -12189,6 +12507,31 @@ The transformed creature can repeat the saving throw whenever it finishes a long
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Frost Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NE</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>138</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 9,CON 21,INT 9,WIS 10,CHA 12</stats>
+	<saves>CON 8,WIS 3,CHA 4</saves>
+	<skills>ATHLETICS 9,PERCEPTION 3</skills>
+	<multipliers>
+		<IMMUNITY>COLD</IMMUNITY>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greataxe attacks.</multiattack>
+		<attack>Greataxe,9,10,One target. Hit: 25 (3d12+6) slashing damage.</attack>
+		<attack>Rock,9,60,240,One target. Hit: 28 (4d10+6) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Gloamwing</name>
 	<size>LARGE</size>
 	<type>UNDEAD,false</type>
@@ -12667,7 +13010,7 @@ Only has legendary actions when all 5 Obzedat ghosts are there, and they share t
 	<cr>8.0</cr>
 	<ac>18</ac>
 	<hp>136</hp>
-	<speed>WALK 40,FLY 60,SWIM 40</speed>
+	<speed>WALK 40,FLY 80,SWIM 40</speed>
 	<stats>STR 19,DEX 12,CON 17,INT 16,WIS 13,CHA 15</stats>
 	<saves>DEX 4,CON 6,WIS 4,CHA 5</saves>
 	<skills>DECEPTION 5,PERCEPTION 7,STEALTH 4</skills>
@@ -12683,12 +13026,17 @@ Only has legendary actions when all 5 Obzedat ghosts are there, and they share t
 	</passives>
 	<other></other>
 	<actions>
-		<multiattack>The dragon makes three attacks, one with its bite and two with its claws.</multiattack>
+		<multiattack>The dragon makes three attacks: one with its bite and two with its claws.</multiattack>
 		<attack>Bite,7,10,One target. Hit: 15 (2d10+4) piercing damage plus 7 (2d6) poison damage.</attack>
 		<attack>Claw,7,5,One target. Hit: 11 (2d6+4) slashing damage.</attack>
-		<effect>Poison Breath,Recharge 5-6,The dragon breathes poisonous gas in a 30-foot cone. Each creature in the cone must make a DC 16 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constìtution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<lair>
+		<lairaction>Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check ancl sttcceerls. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>A wall of tangled brush bristling with thorns springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in its area must make a DC 15 Dexterity saving throw. A creature that fails the save takes 18 (4d8) piercing damage and is pushed 5 feet out of the wall's space, appearing on whichever side of the wall it wants. A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, a creature in the wall's space must make a DC 15 Dexterity saving throw once each round it's in contact with the wall, taking 18 (4d8) piercing damage on a failed save' or half as much damage on a successful one. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to psychic damage. The wall sinks back into the ground when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Zindar</name>
@@ -13112,6 +13460,36 @@ Telepathy is 120ft.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Harshnag</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CG</align>
+	<cr>9.0</cr>
+	<ac>21</ac>
+	<hp>204</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 9,CON 21,INT 9,WIS 10,CHA 12</stats>
+	<saves>CON 8,WIS 3,CHA 4</saves>
+	<skills>ATHLETICS 9,PERCEPTION 3</skills>
+	<multipliers>
+		<IMMUNITY>COLD</IMMUNITY>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>1</legendaryresistance>
+		<passive>Special Equipment,Harshnag wields Gurt's greataxe, which has a long history as
+well as some cold-related properties (see Storm King's Thunder).</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greataxe attacks.</multiattack>
+		<attack>Greataxe,11,10,One target. Hit: 26 (3d12+7) slashing damage, or 39 (5d12+7) slashing damage if the target is human.</attack>
+		<attack>Rock,9,60,240,One target. Hit: 28 (4d10+6) bludgeoning damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Master of Cruelties</name>
 	<size>LARGE</size>
 	<type>FIEND,DEMON,false</type>
@@ -13447,6 +13825,36 @@ d4	Feature
 		<effect>Animate Trees,1/Day,The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
+</creature>
+<creature>
+	<name>Turlang</name>
+	<size>HUGE</size>
+	<type>PLANT,false</type>
+	<align>CG</align>
+	<cr>9.0</cr>
+	<ac>16</ac>
+	<hp>200</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 23,DEX 8,CON 21,INT 12,WIS 16,CHA 12</stats>
+	<multipliers>
+		<VULNERABILITY>FIRE</VULNERABILITY>
+		<RESISTANCE>BLUDGEONING,PIERCING</RESISTANCE>
+	</multipliers>
+	<languages>COMMON,ELVISH,DRUIDIC,SYLVAN</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,7,15,9,Turlang</spellcasting>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>False Appearance,While the treant remains motionless, it is indistinguishable from a normal tree.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The treant makes two slam attacks.</multiattack>
+		<attack>Slam,10,5,One target. Hit: 16 (3d6+6) bludgeoning damage.</attack>
+		<attack>Rock,10,60,180,One target. Hit: 28 (4d10+6) bludgeoning damage.</attack>
+		<effect>Animate Trees,1/Day,The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible.</effect>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Ulitharid</name>
@@ -13796,6 +14204,36 @@ Understands Gith but can't speak.</other>
 		<attack>Greatsword,9,5,One target. Hit: 12 (2d6+5) slashing damage plus 7 (2d6) necrotic damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Four Armed Statue</name>
+	<size>LARGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>178</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 22,DEX 9,CON 20,INT 3,WIS 11,CHA 1</stats>
+	<multipliers>
+		<IMMUNITY>POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunities.
+Understands the languages of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The golem makes four sword attacks.</multiattack>
+		<attack>Sword,10,5,One target. Hit: 10 (1d8+6) slashing damage.</attack>
+		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Froghemoth</name>
@@ -14367,36 +14805,6 @@ Understands the languages of its creator but can't speak.</other>
 	<source>MONSTERMANUAL,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
-	<name>Four Armed Statue</name>
-	<size>LARGE</size>
-	<type>CONSTRUCT,false</type>
-	<align>UNALIGNED</align>
-	<cr>10.0</cr>
-	<ac>17</ac>
-	<hp>178</hp>
-	<speed>WALK 30</speed>
-	<stats>STR 22,DEX 9,CON 20,INT 3,WIS 11,CHA 1</stats>
-	<multipliers>
-		<IMMUNITY>POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
-	</multipliers>
-	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED</conditions>
-	<regions></regions>
-	<passives>
-		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Magic weapons,It's weapon attacks are magical.</passive>
-		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
-		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
-	</passives>
-	<other>Adamantine weapons breach damage immunities.
-Understands the languages of its creator but can't speak.</other>
-	<actions>
-		<multiattack>The golem makes four sword attacks.</multiattack>
-		<attack>Sword,10,5,One target. Hit: 10 (1d8+6) slashing damage.</attack>
-		<effect>Slow,Recharge 5-6,The golem targets one or more creatures it can see within 10 feet of it. Each target must make a DC 17 Wisdom saving throw against this magic. On a failed save, a target can't use reactions, its speed is halved, and it can't make more than one attack on its turn. ln addition, the target can take either an action or a bonus action on its turn, not both. These effects last for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
-	</actions>
-	<source>OUTOFTHEABYSS</source>
-</creature>
-<creature>
 	<name>Sunder Shaman</name>
 	<size>HUGE</size>
 	<type>GIANT,false</type>
@@ -14425,6 +14833,35 @@ Understands the languages of its creator but can't speak.</other>
 		<attack>Rock,10,60,240,One target . Hit: 28 (4d10+6) bludgeoning damage. If the target is a creature, it must succeed on a DC 18 Strength saving throw or be knocked prone.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Thullen</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NG</align>
+	<cr>10.0</cr>
+	<ac>16</ac>
+	<hp>200</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 27,DEX 10,CON 22,INT 18,WIS 16,CHA 16</stats>
+	<saves>CON 9,WIS 7,CHA 7</saves>
+	<skills>INSIGHT 7,PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DRACONIC,GIANT,DRUIDIC</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,,,CloudGiant</innatecasting>
+		<spellcasting>WIS,7,15,9,Thullen</spellcasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two morningstar attacks.</multiattack>
+		<attack>Morningstar,12,10,One target. Hit: 21 (3d8+8) piercing damage.</attack>
+		<attack>Rock,12,60,240,One target. Hit: 30 (4d10+8) bludgeoning damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>White Maw</name>
@@ -14590,6 +15027,35 @@ Understands Abyssal but can't speak.</other>
 		<attack>Rock,12,120,One target. Hit: 21 (3d8+8) bludgeoning damage.</attack>
 	</actions>
 	<source>CURSEOFSTRAHD</source>
+</creature>
+<creature>
+	<name>Countess Sansuri</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NE</align>
+	<cr>11.0</cr>
+	<ac>14</ac>
+	<hp>200</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 27,DEX 10,CON 22,INT 16,WIS 16,CHA 16</stats>
+	<saves>CON 9,WIS 7,CHA 7</saves>
+	<skills>INSIGHT 7,PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,GIANT,AURAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,,,CloudGiant</innatecasting>
+		<spellcasting>INT,7,15,13,CountessSansuri</spellcasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two spear attacks.</multiattack>
+		<attack>Spear,12,10,One target. Hit: 21 (3d8+8) piercing damage.</attack>
+		<attack>Rock,12,60,240,One target. Hit: 30 (4d10+8) bludgeoning damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Enhanced Sphinx</name>
@@ -15170,6 +15636,37 @@ If Gar casts cure wounds using this lair action, he regains the maximum number o
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
+	<name>Hekaton</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CG</align>
+	<cr>13.0</cr>
+	<ac>16</ac>
+	<hp>330</hp>
+	<speed>WALK 50,SWIM 50</speed>
+	<stats>STR 29,DEX 14,CON 20,INT 16,WIS 18,CHA 18</stats>
+	<saves>STR 14,CON 10,WIS 9,CHA 9</saves>
+	<skills>ARCANA 8,ATHLETICS 14,HISTORY 8,PERCEPTION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+		<IMMUNITY>LIGHTNING,THUNDER</IMMUNITY>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,StormGiant</innatecasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two chain attacks.</multiattack>
+		<attack>Chains,14,15,One target. Hit: 19 (3d6+9) bludgeoning damage.</attack>
+		<attack>Ballista,7,120,480,One target. Hit: 16 (3d10+2) piercing damage.</attack>
+		<effect>Lightning Strike,Recharge 5-6,The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Muiral</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -15258,6 +15755,37 @@ If the skyswimmer takes 30 damage or more on a single turn from the swallowed cr
 		<attack>Slam,11,30,One target. Hit: 19 (2d12+6) bludgeoning damage.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Storm Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CG</align>
+	<cr>13.0</cr>
+	<ac>16</ac>
+	<hp>230</hp>
+	<speed>WALK 50,SWIM 50</speed>
+	<stats>STR 29,DEX 14,CON 20,INT 16,WIS 18,CHA 18</stats>
+	<saves>STR 14,CON 10,WIS 9,CHA 9</saves>
+	<skills>ARCANA 8,ATHLETICS 14,HISTORY 8,PERCEPTION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+		<IMMUNITY>LIGHTNING,THUNDER</IMMUNITY>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,StormGiant</innatecasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatsword attacks.</multiattack>
+		<attack>Greatsword,14,10,One target. Hit: 30 (6d6+9) slashing damage.</attack>
+		<attack>Rock,14,60,240,One target. Hit: 35 (4d12+9) bludgeoning damage.</attack>
+		<effect>Lightning Strike,Recharge 5-6,The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Tarul Var</name>
@@ -15547,6 +16075,50 @@ Its 7 legs each have AC 20 and 50 hit points. The shockstomper must use a reacti
 If the wurm takes 30 damage or more on a single turn from a creature inside it, the wurm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the wurm. If the wurm dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 20 feet of movement, exiting prone.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Adult Green Dragon</name>
+	<size>HUGE</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>15.0</cr>
+	<ac>19</ac>
+	<hp>207</hp>
+	<speed>WALK 40,FLY 80,SWIM 40</speed>
+	<stats>STR 23,DEX 12,CON 21,INT 18,WIS 15,CHA 17</stats>
+	<saves>DEX 6,CON 10,WIS 7,CHA 8</saves>
+	<skills>DECEPTION 8,INSIGHT 7,PERCEPTION 12,PERSUASION 8,STEALTH 6</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragon can use its Frightful Presence. lt then makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,11,10,One target. Hit: 17 (2d10+6) piercing damage plus 7 (2d6) poison damage.</attack>
+		<attack>Claw,11,5,One target. Hit: 13 (2d6+6) slashing damage.</attack>
+		<attack>Tail,11,15,One target. Hit: 15 (2d8+6) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area must make a DC 18 Constìtution saving throw, taking 56 (16d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 10 feet ofthe dragon must succeed on a DC 19 Dexterity saving throw or take 13 (2d6+6) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check ancl sttcceerls. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>A wall of tangled brush bristling with thorns springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in its area must make a DC 15 Dexterity saving throw. A creature that fails the save takes 18 (4d8) piercing damage and is pushed 5 feet out of the wall's space, appearing on whichever side of the wall it wants. A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, a creature in the wall's space must make a DC 15 Dexterity saving throw once each round it's in contact with the wall, taking 18 (4d8) piercing damage on a failed save' or half as much damage on a successful one. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to psychic damage. The wall sinks back into the ground when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Purple worm</name>
@@ -16488,6 +17060,50 @@ In battle, the phoenix is a unit with Attack +17 and Power +15 and can affect ev
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Ancient Green Dragon</name>
+	<size>GARGANTUAN</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>22.0</cr>
+	<ac>21</ac>
+	<hp>385</hp>
+	<speed>WALK 40,FLY 80,SWIM 40</speed>
+	<stats>STR 27,DEX 12,CON 25,INT 20,WIS 17,CHA 19</stats>
+	<saves>DEX 8,CON 14,WIS 10,CHA 11</saves>
+	<skills>DECEPTION 11,INSIGHT 10,PERCEPTION 17,PERSUASION 11,STEALTH 8</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragon can use its Frightful Presence. lt then makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,15,15,One target. Hit: 19 (2d10+8) piercing damage plus 10 (3d6) poison damage.</attack>
+		<attack>Claw,15,10,One target. Hit: 22 (4d6+8) slashing damage.</attack>
+		<attack>Tail,15,20,One target. Hit: 17 (2d8+8) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constìtution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 15 feet ofthe dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6+8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check ancl sttcceerls. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>A wall of tangled brush bristling with thorns springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in its area must make a DC 15 Dexterity saving throw. A creature that fails the save takes 18 (4d8) piercing damage and is pushed 5 feet out of the wall's space, appearing on whichever side of the wall it wants. A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, a creature in the wall's space must make a DC 15 Dexterity saving throw once each round it's in contact with the wall, taking 18 (4d8) piercing damage on a failed save' or half as much damage on a successful one. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to psychic damage. The wall sinks back into the ground when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Illithilich</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -16777,6 +17393,52 @@ Understands the languages of its creator but can't speak.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Claugiyliamatar</name>
+	<size>GARGANTUAN</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>23.0</cr>
+	<ac>21</ac>
+	<hp>385</hp>
+	<speed>WALK 40,FLY 80,SWIM 40</speed>
+	<stats>STR 27,DEX 12,CON 25,INT 20,WIS 17,CHA 19</stats>
+	<saves>DEX 8,CON 14,WIS 10,CHA 11</saves>
+	<skills>DECEPTION 11,INSIGHT 10,PERCEPTION 17,PERSUASION 11,STEALTH 8</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,19,,ClaugiyliamatarInnate</innatecasting>
+		<spellcasting>WIS,10,18,8,ClaugiyliamatarCasting</spellcasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragon can use its Frightful Presence. lt then makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,15,15,One target. Hit: 19 (2d10+8) piercing damage plus 10 (3d6) poison damage.</attack>
+		<attack>Claw,15,10,One target. Hit: 22 (4d6+8) slashing damage.</attack>
+		<attack>Tail,15,20,One target. Hit: 17 (2d8+8) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constìtution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 15 feet ofthe dragon must succeed on a DC 23 Dexterity saving throw or take 15 (2d6+8) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check ancl sttcceerls. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>A wall of tangled brush bristling with thorns springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in its area must make a DC 15 Dexterity saving throw. A creature that fails the save takes 18 (4d8) piercing damage and is pushed 5 feet out of the wall's space, appearing on whichever side of the wall it wants. A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, a creature in the wall's space must make a DC 15 Dexterity saving throw once each round it's in contact with the wall, taking 18 (4d8) piercing damage on a failed save' or half as much damage on a successful one. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to psychic damage. The wall sinks back into the ground when the dragon uses this lair action again or when the dragon dies.</lairaction>
+		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
+	</lair>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Halaster Blackcloak</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -16817,6 +17479,51 @@ Halaster also wears a horned ring (a very rare magic item that requires attuneme
 		<lairaction>Halaster deactivates or reactivates one of Undermountain's magic gates. The gate must be within 120 feet of him.</lairaction>
 	</lair>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Kraken</name>
+	<size>GARGANTUAN</size>
+	<type>MONSTOSITY,TITAN,false</type>
+	<align>CE</align>
+	<cr>23.0</cr>
+	<ac>18</ac>
+	<hp>472</hp>
+	<speed>WALK 20,SWIM 60</speed>
+	<stats>STR 30,DEX 11,CON 25,INT 22,WIS 18,CHA 20</stats>
+	<saves>STR 18,DEX 8,CON 15,INT 14,WIS 12</saves>
+	<multipliers>
+		<IMMUNITY>LIGHTNING,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>FRIGHTENED,PARALYZED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Freedom of Movement,The kraken ignores difficult terrain, and magical effects can't reduce its speed or cause it to be restrained. lt can spend 5 feet of movement to escape from nonmagical restraints or being grappled.</passive>
+	</passives>
+	<other>Understands Celestial, Primordial, Abyssal, and lnfernal but can't speak.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The kraken makes three tentacle attacks, each of which it can replace with one use of Fling.</multiattack>
+		<attack>Bite,18,5,One target. Hit: 23 (3d8+10) piercing damage. lf the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes 42 (12d6) acid damage at the start of each of the kraken's turns.
+lf the kraken takes 50 damage or more on a single turn from a creature inside lt, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. lf the kraken dìes, a swallowed creature is no longer restrained by it and can escape from the corpse usrng 15 feet of movement, exiting prone.</attack>
+		<attack>Tentacle,18,30,One target. Hit: 20 (3d6+10) bludgeoning damage, and the target is grappled (escape DC 18). Until this grapple ends, the target is restrained. The kraken has ten tentacles, each of which can grapple one target.</attack>
+		<effect>Fling,null,One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. Ifa thrown target strikes a soìid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. lf the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.</effect>
+		<effect>Lightning Storm,null,The kraken magicalìy creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Tentacle Attack or Fling,1,The kraken makes one tentacle attack or uses its Fling.</legendaryaction>
+		<legendaryaction>Lightning Storm,2,The kraken uses Lightning Storm.</legendaryaction>
+		<legendaryaction>Ink Cloud,3,While underwater, the kraken expels an ink cloud in a 60-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than the kraken. Each creature other than the kraken that ends its turn there must succeed on a DC 23 Constitution saving throw, taking 16 (3d10) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end ofthe kraken's next turn.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>A strong current moves through the kraken's lair. Each creature within 60 feet of the kraken must succeed on a DC 23 Strength saving throw or be pushed up to 60 feet away from the kraken. On a succcss, the creature is pushed 10 feet away from the kraken.</lairaction>
+		<lairaction>Creatures in the water within 60 feet of the kraken have vulnerability to lightning damage until initiative count 20 on the next round.</lairaction>
+		<lairaction>The water in the kraken's lair becomes electrically charged. All creatures within 120 feet of the kraken must succeed on a DC 23 Constitution saving throw, taking 10 (3d6) lightning damage on a failed save, or half as much damage on a successful one.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Ancient Red Dragon</name>
@@ -16905,6 +17612,100 @@ Halaster also wears a horned ring (a very rare magic item that requires attuneme
 		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
 	</lair>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Klauth</name>
+	<size>GARGANTUAN</size>
+	<type>DRAGON,false</type>
+	<align>CE</align>
+	<cr>25.0</cr>
+	<ac>22</ac>
+	<hp>546</hp>
+	<speed>WALK 40,CLIMB 40,FLY 80</speed>
+	<stats>STR 30,DEX 10,CON 29,INT 18,WIS 15,CHA 23</stats>
+	<saves>DEX 7,CON 16,WIS 9,CHA 13</saves>
+	<skills>PERCEPTION 16,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,22,,KlauthInnate</innatecasting>
+		<spellcasting>INT,12,20,14,KlauthCasting</spellcasting>
+		<passive>Special Equipment,Klauth carries a wand of fireballs and a wand of lightning bolts, and he wears a ring of cold resistance.</passive>
+		<passive>Dual Wand Wielder,If Klauth is carrying two wands, he can use an action to expend l charge from each wand, triggering the effects of both wands simultaneously.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The dragon can use its Frightful Presence. It then makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,17,15,One target. Hit: 21 (2d10+10) piercing damage plus 14 (4d6) fire damage.</attack>
+		<attack>Claw,17,10,One target. Hit: 17 (2d6+10) slashing damage.</attack>
+		<attack>Tail,17,20,One target. Hit: 19 (2d8+10) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120ft of the dragon and aware of it must succeed on a DC 21 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragons Frightful Presence for the next 24 hours.</effect>
+		<effect>Fire Breath,Recharge 5-6,The dragon exhales fire in a 90ft cone. Each creature in that area must make a DC 24 Dexterity saving throw, taking 91 (26d6) fire damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 15ft of the dragon must succeed on a DC 25 Dexterity saving throw or take 17 (2d6+10) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Magma erupts from a point on the ground the dragon can see within 120ft of it, creating a 20ft high, 5ft radius geyser. Each creature in the geyser's area must make a DC15 Dexterity saving throw, taking 21 (6d6) fire damage on a failed save, or half as much damage on a successful one.</lairaction>
+		<lairaction>A tremor shakes the lair in a 60ft radius around the dragon. Each creature other than the dragon on the ground in that area must succeed on a DC 15 Dexterity saving throw or be knocked prone.</lairaction>
+		<lairaction>Volcanic gasses form a cloud in a 20ft radius sphere centered on a point the dragon can see within 120ft of it. The sphere spreads around corners, and its area is lightly obscured. It lasts until initiative count 20 on the next round. Each creature that starts its turn in the cloud must succeed on a DC 13 Constitution saving throw or be poisoned until the end of its next turn. While poisoned in this way, a creature is incapacitated.</lairaction>
+	</lair>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Slarkrethel</name>
+	<size>GARGANTUAN</size>
+	<type>MONSTOSITY,TITAN,false</type>
+	<align>CE</align>
+	<cr>25.0</cr>
+	<ac>18</ac>
+	<hp>472</hp>
+	<speed>WALK 20,SWIM 60</speed>
+	<stats>STR 30,DEX 11,CON 25,INT 22,WIS 18,CHA 20</stats>
+	<saves>STR 18,DEX 8,CON 15,INT 14,WIS 12</saves>
+	<multipliers>
+		<IMMUNITY>LIGHTNING,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>FRIGHTENED,PARALYZED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<spellcasting>INT,14,22,20,Slarkrethel</spellcasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Freedom of Movement,The kraken ignores difficult terrain, and magical effects can't reduce its speed or cause it to be restrained. lt can spend 5 feet of movement to escape from nonmagical restraints or being grappled.</passive>
+	</passives>
+	<other>Understands Celestial, Primordial, Abyssal, and lnfernal but can't speak.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The kraken makes three tentacle attacks, each of which it can replace with one use of Fling.</multiattack>
+		<attack>Bite,18,5,One target. Hit: 23 (3d8+10) piercing damage. lf the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes 42 (12d6) acid damage at the start of each of the kraken's turns.
+lf the kraken takes 50 damage or more on a single turn from a creature inside lt, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. lf the kraken dìes, a swallowed creature is no longer restrained by it and can escape from the corpse usrng 15 feet of movement, exiting prone.</attack>
+		<attack>Tentacle,18,30,One target. Hit: 20 (3d6+10) bludgeoning damage, and the target is grappled (escape DC 18). Until this grapple ends, the target is restrained. The kraken has ten tentacles, each of which can grapple one target.</attack>
+		<effect>Fling,null,One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. Ifa thrown target strikes a soìid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. lf the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.</effect>
+		<effect>Lightning Storm,null,The kraken magicalìy creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Tentacle Attack or Fling,1,The kraken makes one tentacle attack or uses its Fling.</legendaryaction>
+		<legendaryaction>Lightning Storm,2,The kraken uses Lightning Storm.</legendaryaction>
+		<legendaryaction>Ink Cloud,3,While underwater, the kraken expels an ink cloud in a 60-foot radius. The cloud spreads around corners, and that area is heavily obscured to creatures other than the kraken. Each creature other than the kraken that ends its turn there must succeed on a DC 23 Constitution saving throw, taking 16 (3d10) poison damage on a failed save, or half as much damage on a successful one. A strong current disperses the cloud, which otherwise disappears at the end ofthe kraken's next turn.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>A strong current moves through the kraken's lair. Each creature within 60 feet of the kraken must succeed on a DC 23 Strength saving throw or be pushed up to 60 feet away from the kraken. On a succcss, the creature is pushed 10 feet away from the kraken.</lairaction>
+		<lairaction>Creatures in the water within 60 feet of the kraken have vulnerability to lightning damage until initiative count 20 on the next round.</lairaction>
+		<lairaction>The water in the kraken's lair becomes electrically charged. All creatures within 120 feet of the kraken must succeed on a DC 23 Constitution saving throw, taking 10 (3d6) lightning damage on a failed save, or half as much damage on a successful one.</lairaction>
+	</lair>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Niv-Mizzet</name>

@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Turlang</name>
+	<slot>
+		<known>Druidcraft,Guidance,Resistance,Detect magic,Entangle,Goodberry,Speak with animals,Animal messenger,Gust of wind,Pass without trace,Plant growth,Speak with plants,Conjure woodland beings,Hallucinatory terrain,Commune with nature</known>
+		<0>Druidcraft,Guidance,Resistance</0>
+		<1>4,Speak with animals,Goodberry,Entangle,Detect magic</1>
+		<2>3,Pass without trace,Gust of wind,Animal messenger</2>
+		<3>3,Plant growth,Speak with plants</3>
+		<4>3,Hallucinatory terrain,Conjure woodland beings</4>
+		<5>1,Commune with nature</5>
+	</slot>
+</spellbook>

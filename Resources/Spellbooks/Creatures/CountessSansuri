@@ -1,0 +1,14 @@
+<spellbook>
+	<name>CountessSansuri</name>
+	<slot>
+		<known>Mage hand,Mending,Message,Prestidigitation,Ray of frost,Identify,Magic missile,Shield,Unseen servant,Arcane lock,Gust of wind,Invisibility,Haste,Hypnotic pattern,Lightning bolt,Ice storm,Stoneskin,Bigby's hand,Wall of force,Globe of invulnerability,Mordenkainen's sword</known>
+		<0>Mage hand,Mending,Message,Prestidigitation,Ray of frost</0>
+		<1>4,Identify,Magic missile,Shield,Unseen servant</1>
+		<2>3,Invisibility,Gust of wind,Arcane lock</2>
+		<3>3,Haste,Hypnotic pattern,Lightning bolt</3>
+		<4>3,Stoneskin,Ice storm</4>
+		<5>2,Bigby's hand,Wall of force</5>
+		<6>1,Globe of invulnerability</6>
+		<7>1,Mordenkainen's sword</7>
+	</slot>
+</spellbook>

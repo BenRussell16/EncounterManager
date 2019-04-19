@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Thullen</name>
+	<slot>
+		<known>Druidcraft,Mending,Produce flame,Cure wounds,Entangle,Thunderwave,Animal messenger,Barkskin,Gust of wind,Call lightning,Conjure animals,Speak with plants,Freedom of movement,Grasping vine,Conjure elemental</known>
+		<0>Druidcraft,Mending,Produce flame</0>
+		<1>4,Cure wounds,Entangle,Thunderwave</1>
+		<2>3,Animal messenger,Barkskin,Gust of wind</2>
+		<3>3,Call lightning,Conjure animals,Speak with plants</3>
+		<4>3,Freedom of movement,Grasping vine</4>
+		<5>1,Conjure elemental</5>
+	</slot>
+</spellbook>

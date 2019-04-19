@@ -1,0 +1,14 @@
+<spellbook>
+	<name>KlauthCasting</name>
+	<slot>
+		<known>Mage hand,Mending,Minor illusion,Prestidigitation,Comprehend languages,Detect magic,Expiditious retreat,Identify,Darkness,Detect thoughts,Melf's acid arrow,Clairvoyance,Haste,Nondetection,Greater invisibility,Ice storm,Stoneskin,Bigby's hand,Cloudkill,Scrying,Disintegrate,Mass suggestion,Mirage arcane</known>
+		<0>Mage hand,Mending,Minor illusion,Prestidigitation</0>
+		<1>4,Identify,Expiditious retreat,Detect magic,Comprehend languages</1>
+		<2>3,Melf's acid arrow,Detect thoughts,Darkness</2>
+		<3>3,Clairvoyance,Haste,Nondetection</3>
+		<4>3,Stoneskin,Ice storm,Greater invisibility</4>
+		<5>2,Scrying,Cloudkill,Bigby's hand</5>
+		<6>1,Mass suggestion,Disintegrate</6>
+		<7>1,Mirage arcane</7>
+	</slot>
+</spellbook>

@@ -1,0 +1,15 @@
+<spellbook>
+	<name>StormGiant</name>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Feather fall,false</spell>
+			<spell>Levitate,false</spell>
+			<spell>Light,false</spell>
+		</0>
+		<3>
+			<spell>Control weather,false</spell>
+			<spell>Water breathing,false</spell>
+		</3>
+	</daily>
+</spellbook>

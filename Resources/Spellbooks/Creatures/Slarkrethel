@@ -1,0 +1,15 @@
+<spellbook>
+	<name>Slarkrethel</name>
+	<slot>
+		<known>Comprehend languages,Detect magic,Identify,Sleep,Blindness/Deafness,Detect thoughts,Suggestion,Fly,Nondetection,Sending,Arcane eye,Ice storm,Locate creature,Cloudkill,Scrying,Telekinesis,Chain lightning,Flesh to stone,Mass suggestion,Delayed blast fireball,Sequester,Teleport,Control weather,Feeblemind,Foresight,Power word kill</known>
+		<1>4,Comprehend languages,Detect magic,Identify,Sleep</1>
+		<2>3,Blindness/Deafness,Detect thoughts,Suggestion</2>
+		<3>3,Sending,Nondetection,Fly</3>
+		<4>3,Arcane eye,Ice storm,Locate creature</4>
+		<5>3,Cloudkill,Scrying,Telekinesis</5>
+		<6>2,Chain lightning,Flesh to stone,Mass suggestion</6>
+		<7>2,Teleport,Sequester,Delayed blast fireball</7>
+		<8>1,Feeblemind,Control weather</8>
+		<9>1,Power word kill,Foresight</9>
+	</slot>
+</spellbook>

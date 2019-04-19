@@ -1,0 +1,11 @@
+<spellbook>
+	<name>ClaugiyliamatarCasting</name>
+	<slot>
+		<known>Druidcraft,Mending,Produce flame,Cure wounds,Detect magic,Entangle,Speak with animals,Animal messenger,Pass without trace,Dispel magic,Plant growth,Blight,Locate creature,Stoneskin</known>
+		<0>Druidcraft,Mending,Produce flame</0>
+		<1>4,Speak with animals,Entangle,Detect magic,Cure wounds</1>
+		<2>3,Pass without trace,Animal messenger</2>
+		<3>3,Plant growth,Dispel magic</3>
+		<4>2,Stoneskin,Locate creature,Blight</4>
+	</slot>
+</spellbook>
