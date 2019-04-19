@@ -1,0 +1,16 @@
+<spellbook>
+	<name>VajraSafahr</name>
+	<slot>
+		<known>Fire bolt,Light,Mage hand,Message,Prestidigitation,Detect magic,Identify,Mage armour,Thunderwave,Invisibility,Misty step,Web,Counterspell,Fly,Sending,Banishment,Fire shield,Stoneskin,Bigby's hand,Geas,Telekinesis,Chain lightning,Globe of invulnerability,Forcecage,Prismatic spray,Antimagic field,Power word stun,Imprisonment</known>
+		<0>Fire bolt,Light,Mage hand,Message,Prestidigitation</0>
+		<1>4,Detect magic,Identify,Mage armour,Thunderwave</1>
+		<2>3,Invisibility,Misty step,Web</2>
+		<3>3,Sending,Fly,Counterspell</3>
+		<4>3,Stoneskin,Fire shield,Banishment</4>
+		<5>3,Telekinesis,Geas,Bigby's hand</5>
+		<6>1,Globe of invulnerability,Chain lightning</6>
+		<7>1,Forcecage,Prismatic spray</7>
+		<8>1,Antimagic field,Power word stun</8>
+		<9>1,Imprisonment</9>
+	</slot>
+</spellbook>

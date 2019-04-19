@@ -1,0 +1,12 @@
+<spellbook>
+	<name>ManshoonSimulacrum</name>
+	<slot>
+		<known>Fire bolt,Light,Mage hand,Prestidigitation,Shocking grasp,Detect magic,Mage armour,Magic missile,Shield,Detect thoughts,Mirror image,Misty step,Counterspell,Lightning bolt,Sending,Fire shield,Greater invisibility,Polymorph,Bigby's hand,Scrying,Wall of force</known>
+		<0>Fire bolt,Light,Mage hand,Prestidigitation,Shocking grasp</0>
+		<1>4,Detect magic,Mage armour,Magic missile,Shield</1>
+		<2>3,Detect thoughts,Mirror image,Misty step</2>
+		<3>3,Counterspell,Lightning bolt,Sending</3>
+		<4>3,Fire shield,Greater invisibility,Polymorph</4>
+		<5>3,Bigby's hand,Scrying,Wall of force</5>
+	</slot>
+</spellbook>

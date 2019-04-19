@@ -1,0 +1,15 @@
+<spellbook>
+	<name>VictoroCassalanter</name>
+	<slot>
+		<known>Guidance,Light,Mending,Spare the dying,Thaumaturgy,Charm person,Command,Detect magic,Disguise self,Protection from evil and good,Sanctuary,Aid,Lesser restoration,Mirror image,Pass without trace,Spiritual weapon,Blink,Clairvoyance,Dispel magic,Magic circle,Protection from energy,Banishment,Dimension door,Divination,Freedom of movement,Polymorph,Dominate person,Flame strike,Insect plague,Modify memory,Heal,Divine word,Earthquake</known>
+		<0>Guidance,Light,Mending,Spare the dying,Thaumaturgy</0>
+		<1>4,Sanctuary,Protection from evil and good,Disguise self,Detect magic,Command,Charm person</1>
+		<2>3,Spiritual weapon,Pass without trace,Mirror image,Lesser restoration,Aid</2>
+		<3>3,Blink,Clairvoyance,Dispel magic,Magic circle,Protection from energy</3>
+		<4>3,Polymorph,Freedom of movement,Divination,Dimension door,Banishment</4>
+		<5>2,Dominate person,Flame strike,Insect plague,Modify memory</5>
+		<6>1,Heal</6>
+		<7>1,Divine word</7>
+		<8>1,Earthquake</8>
+	</slot>
+</spellbook>

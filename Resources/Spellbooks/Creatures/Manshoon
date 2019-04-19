@@ -1,0 +1,16 @@
+<spellbook>
+	<name>Manshoon</name>
+	<slot>
+		<known>Fire bolt,Light,Mage hand,Prestidigitation,Shocking grasp,Detect magic,Mage armour,Magic missile,Shield,Detect thoughts,Mirror image,Misty step,Counterspell,Lightning bolt,Sending,Fire shield,Greater invisibility,Polymorph,Bigby's hand,Scrying,Wall of force,Flesh to stone,Globe of invulnerability,Finger of death,Simulacrum,Feeblemind,Mind blank,Imprisonment,Power word kill</known>
+		<0>Fire bolt,Light,Mage hand,Prestidigitation,Shocking grasp</0>
+		<1>4,Shield,Magic missile,Mage armour,Detect magic</1>
+		<2>3,Detect thoughts,Mirror image,Misty step</2>
+		<3>3,Counterspell,Lightning bolt,Sending</3>
+		<4>3,Fire shield,Greater invisibility,Polymorph</4>
+		<5>3,Bigby's hand,Scrying,Wall of force</5>
+		<6>1,Flesh to stone,Globe of invulnerability</6>
+		<7>1,Finger of death,Simulacrum</7>
+		<8>1,Feeblemind,Mind blank</8>
+		<9>1,Imprisonment,Power word kill</9>
+	</slot>
+</spellbook>

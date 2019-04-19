@@ -117,6 +117,29 @@
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Goldfish</name>
+	<size>TINY</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.0</cr>
+	<ac>13</ac>
+	<hp>1</hp>
+	<speed>WALK 0,SWIM 40</speed>
+	<stats>STR 2,DEX 16,CON 9,INT 1,WIS 7,CHA 2</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Water Breathing,The fish can breathe only underwater.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 1 piercing damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Homonculus</name>
 	<size>TINY</size>
 	<type>CONSTRUCT,false</type>
@@ -170,6 +193,30 @@ The process that creates a living spell changes the nature of its magic. A livin
 		<attack>Slam,2,5,One target. Hit: 1 bludgeoning damage.</attack>
 	</actions>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+</creature>
+<creature>
+	<name>Quipper</name>
+	<size>TINY</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.0</cr>
+	<ac>13</ac>
+	<hp>1</hp>
+	<speed>WALK 0,SWIM 40</speed>
+	<stats>STR 2,DEX 16,CON 9,INT 1,WIS 7,CHA 2</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Water Breathing,The quipper can breathe only underwater.</passive>
+		<passive>Blood Frenzy,The quipper has advantage on melee attack rolls against any creature that doesn't have all its hit points.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 1 piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Tressym</name>
@@ -7653,6 +7700,32 @@ Telepathy is 120ft.</other>
 	<source>LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
+	<name>Swashbuckler</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ANYRACE,false</type>
+	<align>NG,CG,TN,CN,NE,CE</align>
+	<cr>3.0</cr>
+	<ac>17</ac>
+	<hp>66</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 18,CON 12,INT 14,WIS 11,CHA 15</stats>
+	<skills>ACROBATICS 8,ATHLETICS 5,PERSUASION 6</skills>
+	<multipliers>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>Light Footed,The swashbuckler can take the Dash or Disengage action as a bonus action on each of its turns.</passive>
+		<passive>Suave Defense,While the swashbuckler is wearing light or no armor and wielding no shield, its AC includes its Charisma modifier.</passive>
+	</passives>
+	<other>Knows any one language (usually Common).</other>
+	<actions>
+		<multiattack>The swashbuckler makes three attacks: one with a dagger and two with its rapier.</multiattack>
+		<attack>Rapier,6,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<attack>Dagger,6,20,60,One target. Hit: 6 (1d4+4) piercing damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Thunderbeast Skeleton</name>
 	<size>HUGE</size>
 	<type>UNDEAD,false</type>
@@ -8860,6 +8933,42 @@ The target's hit point maximum is reduced by an amount equal to the necrotic dam
 		<effect>Mind Siphon,Recharge 5-6,The vampire targets a creature it can see within 30 feet of it. The target must make a DC 14 Intelligence saving throw, with disadvantage if the vampire has previously consumed the target's blood. On a failed save, the target takes 28 (8d6) psychic damage, and the vampire discerns the target's surface emotions and thoughts. On a successful save, the target takes half as much damage, and the vampire discerns the target's general emotional state but not its thoughts.</effect>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Nimblewright</name>
+	<size>MEDIUM</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>18</ac>
+	<hp>45</hp>
+	<speed>WALK 60</speed>
+	<stats>STR 12,DEX 18,CON 17,INT 8,WIS 10,CHA 6</stats>
+	<saves>DEX 6</saves>
+	<skills>ACROBATICS 8,PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<conditions>EXHAUSTION,FRIGHTENED,PETRIFIED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Repairable,As long as it has at least 1 hit point remaining, the nimblewright regains 1 hit point when a mending spell is cast on it.</passive>
+		<passive>Sure-Footed,The nimblewright has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.</passive>
+	</passives>
+	<other>Understands one language of its creator but can't speak.</other>
+	<actions>
+		<multiattack>The nimblewright makes three attacks: two with its rapier and one with its dagger.</multiattack>
+		<attack>Rapier,6,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
+		<attack>Dagger,6,20,60,One target. Hit: 6 (1d4+4) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,The nimblewright adds 2 to Its AC against one melee attack that would hit it. To do so, the nimblewright must see the attacker and be wielding-a melee weapon.</reaction>
+	</reactions>
+	<source>WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Orc blade of Ilneval</name>
@@ -13297,6 +13406,32 @@ The Staff of Changing is not a magic item outside of Lord Rall's "hands".</other
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Manshoon Simulacrum</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>8.0</cr>
+	<ac>12</ac>
+	<hp>126</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 23,WIS 15,CHA 16</stats>
+	<saves>STR 2,DEX 4,CON 3,INT 13,WIS 9,CHA 5</saves>
+	<skills>ARCANA 11,HISTORY 11</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,GOBLIN,ORCISH,UNDERCOMMON,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,15,21,18,ManshoonSimulacrum</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Metal Fist,6,5,One target. Hit: 4 (1d4+2) bludgeoning damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Marlos Urnrayle</name>
 	<size>MEDIUM</size>
 	<type>MONSTOSITY,false</type>
@@ -14157,6 +14292,98 @@ well as some cold-related properties (see Storm King's Thunder).</passive>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Meloon Wardragon</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>143</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 15,CON 14,INT 10,WIS 14,CHA 15</stats>
+	<saves>STR 9,CON 6</saves>
+	<skills>ATHLETICS 9,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DEEPSPEECH,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Second Wind (Recharges after a Short or Long Rest),As a bonus action, Meloon can regain 20 hit points.</passive>
+		<passive>Indomitable (2/Day),Meloon can reroll a saving throw that he fails. He must use the new roll.</passive>
+		<passive>Special Equipment,Meloon wields Azuredge (see Waterdeep: Dragon Heist) but can't attune to it, and thus gains none of its benefits.</passive>
+	</passives>
+	<other>Telepathy is 60ft.
+He is an intillect devourer.</other>
+	<actions>
+		<multiattack>Meloon makes four attacks with Azuredge.</multiattack>
+		<attack>Azuredge,9,5,One target. Hit: 11 (1d12+5) slashing damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
+	<name>Meloon Wardragon (No Intellect Devourer)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NG</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>143</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 15,CON 14,INT 10,WIS 14,CHA 15</stats>
+	<saves>STR 9,CON 6</saves>
+	<skills>ATHLETICS 9,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Second Wind (Recharges after a Short or Long Rest),As a bonus action, Meloon can regain 20 hit points.</passive>
+		<passive>Indomitable (2/Day),Meloon can reroll a saving throw that he fails. He must use the new roll.</passive>
+		<passive>Special Equipment,Meloon wields Azuredge (see Waterdeep: Dragon Heist).</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Meloon makes four attacks with Azuredge.</multiattack>
+		<attack>Azuredge,9,5,One target. Hit: 11 (1d12+5) slashing damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
+	<name>Mirt</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CG</align>
+	<cr>9.0</cr>
+	<ac>16</ac>
+	<hp>153</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 18,CON 18,INT 15,WIS 12,CHA 15</stats>
+	<saves>DEX 8,WIS 5</saves>
+	<skills>ACROBATICS 8,ATHLETICS 8,PERCEPTION 5,PERSUASION 6,STEALTH 8</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DWARVISH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Evasion,lf he is subjected to an effect that allows him to make a Dexterity saving throw to take only half damage, Mirt instead takes no damage if he succeeds on the saving throw, and only half damage if he fails. He can't use this trait if he's incapacitated.</passive>
+		<passive>Brute,A melee weapon deals one extra die of its damage when Mirt hits with it (included in the attacks below).</passive>
+		<passive>Special Equipment,Mirt wears bracers of defense and a ring of regeneration. He wields a +1 longsword and a +1 dagger.</passive>
+		<passive>Sneak Attack (1/Turn),Mirt deals an extra 14 (4d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Mirt's that isn't incapacitated and Mirt doesn't have disadvantage on the attack roll.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Mirt makes three attacks: two with his +1 longsword and one with his +1 dagger.</multiattack>
+		<attack>+1 Longsword,9,5,One target. Hit: 14 (2d8+5) slashing damage, or 16 (2d10+5) slashing damage when used with two hands.</attack>
+		<attack>+1 Dagger,9,20,60,One target. Hit: 10 (2d4+5) piercing damage when used as a melee weapon, or 7 (1d4+5) piercing damage when used as a ranged weapon.</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,Mirt adds 2 to his AC against one melee attack that would hit him. To do so, Mirt must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Monastery of the Distressed Body Grand Master</name>
 	<size>LARGE</size>
 	<type>FIEND,DEVIL,false</type>
@@ -14252,6 +14479,35 @@ When the devil rolls a 20 on an attack roll with a claw, the target is decapitat
 		<legendaryaction>Cast a Spell,3,The Slaughter Lord casts an innate spell.</legendaryaction>
 	</legendaryactions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Remallia Haventree</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>CG</align>
+	<cr>9.0</cr>
+	<ac>15</ac>
+	<hp>66</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 13,INT 18,WIS 15,CHA 17</stats>
+	<saves>INT 8,WIS 6</saves>
+	<skills>ARCANA 8,DECEPTION 7,HISTORY 8,PERSUASION 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,DWARVISH,ELVISH,HALFLING</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,8,16,13,RemalliaHaventree</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Arcane Ward,Remallia has a magical ward that has 30 hit points. Whenever she takes damage, the ward takes the damage instead. If the ward is reduced to 0 hit points, Remallia takes any remaining damage. When Remallia casts an abjuration spell of 1st level or higher, the ward regains a number of hit points equal to twice the level of the spell.</passive>
+		<passive>Special Equipment,Remallia has a figurine of wondrous power (silver raven).</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Dagger,6,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Shadow Assassin</name>
@@ -15497,6 +15753,39 @@ Understands the languages of its creator but can't speak.</other>
 	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
+	<name>Victoro Cassalanter</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ELF,false</type>
+	<align>LE</align>
+	<cr>10.0</cr>
+	<ac>15</ac>
+	<hp>97</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 13,DEX 13,CON 14,INT 16,WIS 17,CHA 18</stats>
+	<saves>CON 6,WIS 7</saves>
+	<skills>HISTORY 7,INSIGHT 7,PERSUASION 8,RELIGION 7</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>DISEASE,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,ELVISH,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,7,15,15,VictoroCassalanter</spellcasting>
+		<passive>Fey ancestry,This creature has advantage on saving throws against being charmed, and magic can't put it to sleep.</passive>
+		<passive>Special Equipment,Victoro wears a ring of protection and glamoured studded leather disguised to look like fine clothing. He carries a rod of rulership shaped like a ruby-tipped cane.</passive>
+	</passives>
+	<other>Is written as a half-elf.</other>
+	<actions>
+		<multiattack>Victoro makes two attacks with his rapier.</multiattack>
+		<attack>Rapier,5,5,One target. Hit: 5 (1d8+1) piercing damage.</attack>
+		<effect>Cloak of Shadows,2/Day,Victoro becomes invisible until the end of his next turn. He becomes visible early immediately after he attacks or casts a spell.</effect>
+		<effect>Summon Devil,Recharges after 9 Days,Victoro summons a barbed devil. The devil appears in an unoccupied space within 30 feet of Victoro, acts as Victoro's ally, and can't summon other devils. It remains for 1 minute, until it or Victoro dies, or until Victoro dismisses it as an action.</effect>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>White Maw</name>
 	<size>GARGANTUAN</size>
 	<type>OOZE,false</type>
@@ -16234,6 +16523,49 @@ Understands Celestial but utters only obscene nonsense.</other>
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Beholder</name>
+	<size>LARGE</size>
+	<type>ABERRATION,false</type>
+	<align>LE</align>
+	<cr>13.0</cr>
+	<ac>18</ac>
+	<hp>180</hp>
+	<speed>WALK 0,FLY 20</speed>
+	<stats>STR 10,DEX 14,CON 18,INT 17,WIS 15,CHA 17</stats>
+	<saves>INT 8,WIS 7,CHA 8</saves>
+	<skills>PERCEPTION 12</skills>
+	<multipliers>
+	</multipliers>
+	<conditions>PRONE</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON,DEEPSPEECH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Antimagic Cone,The beholder's central eye creates an area of antimagic, as in the antimagic field spell, in a 150-foot cone. At the start of each of its turns, the beholder decides which way the cone faces and whether the cone is active. The area works against the beholder's own eye rays.</passive>
+	</passives>
+	<other>Fly speed is hover.</other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 14 (4d6) piercing damage.</attack>
+		<effect>Eye Rays,null,The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:
+ - 1. Charm Ray. The targeted creature must succeed on a DC 16 Wlsdom saving throw or be charmed by the beholder for 1 hour, or until the beholder harms the creature.
+ - 2. Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+ - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itseìfon a success.
+ - 4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. ln addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+ - 5. Enervation Ray. The targeted creature must make a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.
+ - 6. Telekinetic Ray. lf the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. lt is restrained by the ray's telekinetic grip until the start ofthe beholder's next turn or until the beholder is incapacitated.
+lf the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
+ - 7. Sleep Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain unconscious for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.
+ - 8. Petrifcation Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. lt must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
+ - 9. Disintegratíon Ray. lf the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
+lf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
+ - 10. Death Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Eye Ray,1,The beholder uses one random eye ray.</legendaryaction>
+	</legendaryactions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
 	<name>Gar Shatterkeel (In Lair)</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -16298,6 +16630,35 @@ If Gar casts cure wounds using this lair action, he regains the maximum number o
 		<effect>Lightning Strike,Recharge 5-6,The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Manshoon</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LE</align>
+	<cr>13.0</cr>
+	<ac>19</ac>
+	<hp>126</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 23,WIS 15,CHA 16</stats>
+	<saves>STR 2,DEX 4,CON 3,INT 13,WIS 9,CHA 5</saves>
+	<skills>ARCANA 11,HISTORY 11</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,GOBLIN,ORCISH,UNDERCOMMON,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,15,21,18,Manshoon</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Special Equipment,Manshoon wears a black robe of the archmagi and wields a staff of power (both accounted for in his statistics). Roll 2d10 to determine how many charges the staff has remaining.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Metal Fist,6,5,One target. Hit: 4 (1d4+2) bludgeoning damage.</attack>
+		<attack>Staff of Power,7,5,One target. Hit: 5 (1d6+2) bludgeoning damage. or 6 (1d8+2) bludgeoning damage when used with two hands. Manshoon can expend 1 of the staff's charges to deal an extra 3 (1d6) force damage on a hit.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Muiral</name>
@@ -16493,6 +16854,33 @@ If the skyswimmer takes 30 damage or more on a single turn from the swallowed cr
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
+	<name>Vajra Safahr</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>LN</align>
+	<cr>13.0</cr>
+	<ac>17</ac>
+	<hp>126</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 20,WIS 11,CHA 16</stats>
+	<saves>STR 2,DEX 4,CON 3,INT 12,WIS 7,CHA 5</saves>
+	<skills>ARCANA 10,HISTORY 10</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,DWARVISH,ELVISH,GIANT,UNDERCOMMON,HALFLING</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,12,18,18,VajraSafahr</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Special Equipment,Vajra wields the Blackstaff (see a Waterdeep:Dragon Heist), accounted for in her statistics. Roll 2d10 to determine how many charges the staff has remaining.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Blackstaff,7,5,One target. Hit: 5 (1d6+2) bludgeoning damage, or 6 (1d8+2) bludgeoning damage when used with two hands. Vajra can expend 1 of the staff's charges to deal an extra 3 (1d6) force damage on a hit.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
+</creature>
+<creature>
 	<name>Vampire</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,true</type>
@@ -16608,6 +16996,54 @@ While mounted and not incapacitated, the archon can't be surprised, and both it 
 		<legendaryaction>Detention,3,The archon targets a creature it can see within 60 feet of it. The target must succeed on a DC 18 Charisma saving throw or be magically teleported to a harmless demiplane until the end of the archon's next turn, whereupon the target reappears in the space it left or the nearest unoccupied space if that space is occupied.</legendaryaction>
 	</legendaryactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Beholder (In Lair)</name>
+	<size>LARGE</size>
+	<type>ABERRATION,false</type>
+	<align>LE</align>
+	<cr>14.0</cr>
+	<ac>18</ac>
+	<hp>180</hp>
+	<speed>WALK 0,FLY 20</speed>
+	<stats>STR 10,DEX 14,CON 18,INT 17,WIS 15,CHA 17</stats>
+	<saves>INT 8,WIS 7,CHA 8</saves>
+	<skills>PERCEPTION 12</skills>
+	<multipliers>
+	</multipliers>
+	<conditions>PRONE</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON,DEEPSPEECH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Antimagic Cone,The beholder's central eye creates an area of antimagic, as in the antimagic field spell, in a 150-foot cone. At the start of each of its turns, the beholder decides which way the cone faces and whether the cone is active. The area works against the beholder's own eye rays.</passive>
+	</passives>
+	<other>Fly speed is hover.</other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 14 (4d6) piercing damage.</attack>
+		<effect>Eye Rays,null,The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:
+ - 1. Charm Ray. The targeted creature must succeed on a DC 16 Wlsdom saving throw or be charmed by the beholder for 1 hour, or until the beholder harms the creature.
+ - 2. Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+ - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itseìfon a success.
+ - 4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. ln addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+ - 5. Enervation Ray. The targeted creature must make a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.
+ - 6. Telekinetic Ray. lf the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. lt is restrained by the ray's telekinetic grip until the start ofthe beholder's next turn or until the beholder is incapacitated.
+lf the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
+ - 7. Sleep Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain unconscious for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.
+ - 8. Petrifcation Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. lt must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
+ - 9. Disintegratíon Ray. lf the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
+lf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
+ - 10. Death Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Eye Ray,1,The beholder uses one random eye ray.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>A 50-foot square area of ground within 120 feet of the beholder becomes slimy; that area is difficult terrain until initiative count 20 on the next round.</lairaction>
+		<lairaction>Walls within 120 feet of the beholder sprout grasping appendages until initiative count 20 on the round after next. Each creature of the beholder's choice that starts its turn within 10 feet of such a wall must succeed on a DC 15 Dexterity saving throw or be grappled. Escaping requires a successful DC 15 Strength (Athletics) or Dexterity (Acrobatics) check.</lairaction>
+		<lairaction>An eye opens on a solid surface within 60 feet of the behoider. One random eye ray of the beholder shoots from that eye at a target of the beholder's choice that it can see. The eye then closes and disappears.</lairaction>
+	</lair>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Deathpact Angel</name>
@@ -16740,6 +17176,57 @@ Its 7 legs each have AC 20 and 50 hit points. The shockstomper must use a reacti
 If the wurm takes 30 damage or more on a single turn from a creature inside it, the wurm must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the wurm. If the wurm dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 20 feet of movement, exiting prone.</attack>
 	</actions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Xanathar</name>
+	<size>LARGE</size>
+	<type>ABERRATION,false</type>
+	<align>LE</align>
+	<cr>14.0</cr>
+	<ac>18</ac>
+	<hp>180</hp>
+	<speed>WALK 0,FLY 20</speed>
+	<stats>STR 10,DEX 14,CON 18,INT 17,WIS 15,CHA 17</stats>
+	<saves>INT 8,WIS 7,CHA 8</saves>
+	<skills>PERCEPTION 12</skills>
+	<multipliers>
+		<RESISTANCE>FORCE</RESISTANCE>
+	</multipliers>
+	<conditions>PRONE</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON,DEEPSPEECH</languages>
+	<regions></regions>
+	<passives>
+		<passive>Special Equipment,Xanathar wears a ring of invisibility on its fear ray eyestalk, a ring of mind shielding on its sleep ray eyestalk , and a ring of resistance (force) on its slowing ray eyestalk.</passive>
+		<passive>Antimagic Cone,The beholder's central eye creates an area of antimagic, as in the antimagic field spell, in a 150-foot cone. At the start of each of its turns, the beholder decides which way the cone faces and whether the cone is active. The area works against the beholder's own eye rays.</passive>
+	</passives>
+	<other>Fly speed is hover.</other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 14 (4d6) piercing damage.</attack>
+		<effect>Eye Rays,null,The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:
+ - 1. Charm Ray. The targeted creature must succeed on a DC 16 Wlsdom saving throw or be charmed by the beholder for 1 hour, or until the beholder harms the creature.
+ - 2. Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+ - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itseìfon a success.
+ - 4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. ln addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+ - 5. Enervation Ray. The targeted creature must make a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.
+ - 6. Telekinetic Ray. lf the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. lt is restrained by the ray's telekinetic grip until the start ofthe beholder's next turn or until the beholder is incapacitated.
+lf the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
+ - 7. Sleep Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain unconscious for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.
+ - 8. Petrifcation Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. lt must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
+ - 9. Disintegratíon Ray. lf the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
+lf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
+ - 10. Death Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.</effect>
+		<effect>Ring of Invisibility,null,Xanathar turns invisible as if through the Invisibility spell.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Eye Ray,1,The beholder uses one random eye ray.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>A 50-foot square area of ground within 120 feet of the beholder becomes slimy; that area is difficult terrain until initiative count 20 on the next round.</lairaction>
+		<lairaction>Walls within 120 feet of the beholder sprout grasping appendages until initiative count 20 on the round after next. Each creature of the beholder's choice that starts its turn within 10 feet of such a wall must succeed on a DC 15 Dexterity saving throw or be grappled. Escaping requires a successful DC 15 Strength (Athletics) or Dexterity (Acrobatics) check.</lairaction>
+		<lairaction>An eye opens on a solid surface within 60 feet of the behoider. One random eye ray of the beholder shoots from that eye at a target of the beholder's choice that it can see. The eye then closes and disappears.</lairaction>
+	</lair>
+	<source>WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Adult Green Dragon</name>
@@ -17420,6 +17907,37 @@ Third Roar. Each creature makes a DC 18 Constitution saving throw. On a failed s
 		<legendaryaction>Awaken Grove Guardians,3,Trostani animates one or two trees she can see within 120 feet of her, causing them to uproot themselves and become awakened trees (see the Monster Manual for their stat blocks) for 1 minute or until Trostani uses a bonus action to end the effect. These trees understand Druidic and obey Trostani's spoken commands, but can't speak. If she issues no commands to them, the trees do nothing but follow her and take the Dodge action.</legendaryaction>
 	</legendaryactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Walking Statue of Waterdeep</name>
+	<size>GARGANTUAN</size>
+	<type>CONSTRUCT,false</type>
+	<align>UNALIGNED</align>
+	<cr>18.0</cr>
+	<ac>17</ac>
+	<hp>314</hp>
+	<speed>WALK 60</speed>
+	<stats>STR 30,DEX 8,CON 27,INT 1,WIS 10,CHA 1</stats>
+	<saves>CON 14</saves>
+	<multipliers>
+		<IMMUNITY>COLD,FIRE,POISON,PSYCHIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,PARALYZED,PETRIFIED,POISONED,STUNNED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+		<passive>Crumbling Colossus,When the statue drops to 0 hit points, It crumbles and is destroyed. Any creature on the ground within 30 feet of the crumbling statue must make a DC 22 Dexterity saving throw, taking 22 (4d10) bludgeoning damage on a failed save, or half as much damage on a successful one.</passive>
+	</passives>
+	<other>Adamantine weapons breach damage immunity.</other>
+	<actions>
+		<attack>Slam,16,5,One target. Hit: 29 (3d12+10) bludgeoning damage.</attack>
+		<attack>Hurled Stone,16,200,800,One target. Hit: 43 (6d10+10) bludgeoning damage.</attack>
+	</actions>
+	<source>WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Yan-C-Bin</name>
