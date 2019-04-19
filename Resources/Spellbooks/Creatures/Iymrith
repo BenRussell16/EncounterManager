@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Iymrith</name>
+	<daily>
+		<1>
+			<spell>Counterspell,false</spell>
+			<spell>Detect magic,false</spell>
+			<spell>Ice storm,false</spell>
+			<spell>Stone shape,false</spell>
+			<spell>Teleport,false</spell>
+		</1>
+	</daily>
+</spellbook>

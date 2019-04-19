@@ -1,0 +1,8 @@
+<spellbook>
+	<name>MaegeraTheDawnTitan</name>
+	<daily>
+		<0>
+			<spell>Fireball,false</spell>
+		</0>
+	</daily>
+</spellbook>

@@ -1,0 +1,11 @@
+<spellbook>
+	<name>YakfolkPriest</name>
+	<slot>
+		<known>Light,Mending,Sacred flame,Thaumaturgy,Bane,Command,Cure wounds,Sanctuary,Augury,Hold person,Spiritual weapon,Bestow curse,Protection from energy,Sending,Banishment</known>
+		<0>Light,Mending,Sacred flame,Thaumaturgy</0>
+		<1>4,Sanctuary,Cure wounds,Command,Bane</1>
+		<2>3,Augury,Hold person,Spiritual weapon</2>
+		<3>3,Sending,Protection from energy,Bestow curse</3>
+		<4>1,Banishment</4>
+	</slot>
+</spellbook>

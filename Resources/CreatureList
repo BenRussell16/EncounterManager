@@ -172,6 +172,34 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Tressym</name>
+	<size>TINY</size>
+	<type>BEAST,false</type>
+	<align>CN</align>
+	<cr>0.0</cr>
+	<ac>12</ac>
+	<hp>5</hp>
+	<speed>WALK 40,CLIMB 30,FLY 40</speed>
+	<stats>STR 3,DEX 15,CON 10,INT 11,WIS 12,CHA 12</stats>
+	<skills>PERCEPTION 5,STEALTH 4</skills>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Detect Invisibility,Within 60 feet of the tressym, magical invisibility fails to conceal anything from the tressym's sight.</passive>
+		<passive>Poison Sense,A tressym can detect whether a substance is poisonous by taste, touch, or smell.</passive>
+	</passives>
+	<other>Understands Common but can't speak.</other>
+	<actions>
+		<attack>Claws,0,5,One target. Hit: 1 slashing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Cultist</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -2827,6 +2855,33 @@ d8	Minor Adaptation
 		<attack>Tentacle,5,10,One target. Hit: 5 (1d4+3) bludgeoning damage plus 3 (1d6) piercing damage. If the target is a Large or smaller creature, it is grappled (escape DC 15). Until this grapple ends, the target is restrained, and the choker can't use this tentacle on another target (the choker has two tentacles). If this attack is a critical hit, the target also can't breathe or speak until the grapple ends.</attack>
 	</actions>
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
+</creature>
+<creature>
+	<name>Crag Cat</name>
+	<size>LARGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>34</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 16,DEX 17,CON 16,INT 4,WIS 14,CHA 8</stats>
+	<skills>PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Pounce,If the cat moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the cat can make one bite attack against it as a bonus action.</passive>
+		<passive>Spell Turning,The cat has advantage on saving throws against any spell that targets only the cat (not an area). If the cat's saving throw succeeds and the spell is of 7th level or lower, the spell has no effect on the cat and instead targets the caster.</passive>
+		<passive>Nondetection,The cat can't be targeted or detected by any divination magic or perceived through magical scrying sensors.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 8 (1d10+3) piercing damage.</attack>
+		<attack>Claw,5,5,One target. Hit: 7 (1d8+3) slashing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Deinonychus</name>
@@ -5651,6 +5706,30 @@ Doesn't have disadvantage in melee.</attack>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Purple Wormling</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>12</ac>
+	<hp>42</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 16,DEX 7,CON 16,INT 1,WIS 6,CHA 2</stats>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 30,TREMORSENSE 30</senses>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The wormling makes two attacks: one with its bite and one with its stinger.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage, and if the target is a Small or smaller creature, it must succeed on a DC 13 Dexterity saving throw or be swallowed by the wormling. A swallowed creature is blinded and restrained, it has total cover against attacks and other effects outside the wormling, and it takes 3 (1d6) acid damage at the start of each of the wormling's turns.
+If the wormling takes 10 damage or more on a single turn from a creature inside it, the wormling must succeed on a DC 21 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the wormling. If the worm ling dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 5 feet of movement, exiting prone.</attack>
+		<attack>Tail Stinger,5,5,One creature. Hit: 5 (1d4+3) piercing damage, and the target
+must make a DC 13 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Quetzalcoatlus</name>
 	<size>HUGE</size>
 	<type>BEAST,false</type>
@@ -5865,6 +5944,306 @@ Only has lair actions when with a group of Rakdos.</other>
 		<effect>Shell Defense,null,The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell the tortle is prone, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge.</effect>
 	</actions>
 	<source>TORTLEPACKAGE</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman</innatecasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Black Lion)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_BlackLion</innatecasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Black Raven)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_BlackRaven</innatecasting>
+	</passives>
+	<other>Animal Messenger can only target ravens, and Polymorph can only apply a raven form.</other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Blue Bear)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_BlueBear</innatecasting>
+	</passives>
+	<other>Enchance Ability can only apply bear's endurance.</other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Elk)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_Elk</innatecasting>
+	</passives>
+	<other>Find Steed only summons Elk</other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Gray Wolf)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_GrayWolf</innatecasting>
+	</passives>
+	<other>Beast Sense and Speak with Animals can only target wolves.</other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Great Worm)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_GreatWorm</innatecasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Griffon)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_Griffon</innatecasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Red Tiger)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_RedTiger</innatecasting>
+	</passives>
+	<other>Beast Sense can only target tigers, and Enhance Ability can only apply cat's grace.</other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Sky Pony)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_SkyPony</innatecasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Thunderbeast)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_Thunderbeast</innatecasting>
+	</passives>
+	<other>Enhance Ability can only apply bull's strength.</other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Uthgardt Shaman (Tree Ghost)</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>38</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 13,INT 10,WIS 15,CHA 12</stats>
+	<skills>MEDICINE 4,NATURE 4,PERCEPTION 4,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,BOTHII</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>WIS,4,12,,UthgardtShaman_TreeGhost</innatecasting>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Spear,5,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
+		<attack>Shortbow,3,80,320,One target. Hit: 4 (1d6+1) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Vegepygmy Chief</name>
@@ -7493,6 +7872,33 @@ The orc also reverts to its true form if it dies or falls unconscious. The orc c
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
+	<name>Yakfolk Warrior</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>NE</align>
+	<cr>3.0</cr>
+	<ac>11</ac>
+	<hp>60</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 11,CON 15,INT 14,WIS 15,CHA 14</stats>
+	<skills>DECEPTION 4,SURVIVAL 4</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,YIKARIA</languages>
+	<regions></regions>
+	<passives>
+		<passive>Possession (Recharges after a Short or Long Rest),The yakfolk attempts to magically possess a humanoid or giant. The yakfolk must touch the target throughout a short rest, or the attempt fails. At the end of the rest, the target must succeed on a DC 12 Constitution saving throw or be possessed by the yakfolk, which disappears with everything it is carrying and wearing. Until the possession ends, the target is incapacitated, loses control of its body, and is unaware of its surroundings. The yakfolk now controls the body and can't be targeted by any attack, spell, or other effect, and it retains its alignment; its Intelligence, Wisdom, and Charisma scores; and its proficiencies. It otherwise uses the target's statistics, except the target's knowledge, class features, feats, and proficiencies.
+The possession lasts until either the body drops to 0 hit points, the yakfolk ends the possession as an action, or the yakfolk is forced out of the body by an effect such as the dispel evil and good spell. When the possession ends, the yakfolk reappears in an unoccupied space within 5 feet of the body and is stunned until the end of its next turn. If the host body dies while it is possessed by the yakfolk, the yakfolk dies as well, and its body doesn't reappear.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The yakfolk makes two attacks, either with its greatsword or its longbow.</multiattack>
+		<attack>Greatsword,6,5,One target. Hit: 18 (4d6+4) slashing damage.</attack>
+		<attack>Logbow,2,150,600,One target. Hit: 9 (2d8) piercing damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Zegdar</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -8799,6 +9205,34 @@ Also, if the orc is reduced to 0 hit points while in a cold fury, unless it was 
 	<source>STRONGHOLDSANDFOLLOWERS</source>
 </creature>
 <creature>
+	<name>Yakfolk Priest</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>NE</align>
+	<cr>4.0</cr>
+	<ac>12</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 11,CON 15,INT 14,WIS 18,CHA 14</stats>
+	<skills>DECEPTION 4,MEDICINE 6,SURVIVAL 6</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,YIKARIA</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,6,14,7,YakfolkPriest</spellcasting>
+		<passive>Possession (Recharges after a Short or Long Rest),The yakfolk attempts to magically possess a humanoid or giant. The yakfolk must touch the target throughout a short rest, or the attempt fails. At the end of the rest, the target must succeed on a DC 12 Constitution saving throw or be possessed by the yakfolk, which disappears with everything it is carrying and wearing. Until the possession ends, the target is incapacitated, loses control of its body, and is unaware of its surroundings. The yakfolk now controls the body and can't be targeted by any attack, spell, or other effect, and it retains its alignment; its Intelligence, Wisdom, and Charisma scores; and its proficiencies. It otherwise uses the target's statistics, except the target's knowledge, class features, feats, and proficiencies.
+The possession lasts until either the body drops to 0 hit points, the yakfolk ends the possession as an action, or the yakfolk is forced out of the body by an effect such as the dispel evil and good spell. When the possession ends, the yakfolk reappears in an unoccupied space within 5 feet of the body and is stunned until the end of its next turn. If the host body dies while it is possessed by the yakfolk, the yakfolk dies as well, and its body doesn't reappear.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The yakfolk makes two melee attacks.</multiattack>
+		<attack>Quaterstaff,5,5,One target. Hit: 10 (2d6+3) bludgeoning damage, or 12 (2d8+3) bludgeoning damage if used with two hands.</attack>
+		<effect>Summon Earth Elemental,1/Day,The yakfolk summons an earth elemental. The summoned elemental appears in an unoccupied space within 60 feet of its summoner and acts as an ally of the summoner. It remains for 10 minutes, until it dies, or until its summoner dismisses it as an action.</effect>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Yuan-Ti Nightmare Speaker</name>
 	<size>MEDIUM</size>
 	<type>MONSTOSITY,YUANTI,true</type>
@@ -9610,6 +10044,56 @@ Only has lair actions when with a group of Golgari.</other>
 		<attack>Rock,8,60,240,One target. Hit: 21 (3d10+5) bludgeoning damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Hill Giant (Variant)</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CE</align>
+	<cr>5.0</cr>
+	<ac>13</ac>
+	<hp>105</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 21,DEX 8,CON 19,INT 5,WIS 9,CHA 6</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatclub attacks.</multiattack>
+		<attack>Greatclub,8,10,One target. Hit: 18 (3d8+5) bludgeoning damage.</attack>
+		<attack>Squash,8,5,One Medium or smaller creature. Hit: 26 (6d6+5) bludgeoning damage, the giant lands prone in the target's space, and the target is grappled (escape DC 15). Until this grapple ends, the target is prone. The grapple ends early if the giant stands up.</attack>
+		<attack>Rock,8,60,240,One target. Hit: 21 (3d10+5) bludgeoning damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Hulking Crab</name>
+	<size>HUGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>5.0</cr>
+	<ac>17</ac>
+	<hp>76</hp>
+	<speed>WALK 20,SWIM 30</speed>
+	<stats>STR 19,DEX 8,CON 16,INT 3,WIS 11,CHA 3</stats>
+	<skills>STEALTH 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 30</senses>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+		<passive>Shell Camoflauge,While the crab remains motionless with its eyestalks and pincers tucked close to its body, it resembles a natural formation or a pile of detritus. A creature within 30 feet of it can discern its true nature with a successful DC 15 Intelligence (Nature) check.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The crab makes two attacks with its claws.</multiattack>
+		<attack>Claw,7,10,One target. Hit: 20 (3d10+4) bludgeoning damage, and the target is grappled (escape DC 15). The crab has two claws, each of which can grapple only one target.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Izek Strazni</name>
@@ -12117,6 +12601,70 @@ Once per turn, the cultist may choose to wound its target. At the start of each 
 	<source>MONSTERMANUAL,OUTOFTHEABYSS</source>
 </creature>
 <creature>
+	<name>Stone Giant</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>TN</align>
+	<cr>7.0</cr>
+	<ac>17</ac>
+	<hp>126</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 15,CON 20,INT 10,WIS 12,CHA 9</stats>
+	<saves>DEX 5,CON 8,WIS 4</saves>
+	<skills>ATHLETICS 12,PERCEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Stone Camouflage,The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatclub attacks.</multiattack>
+		<attack>Greatclub,9,15,One target. Hit: 19 (3d8+6) bludgeoning damage.</attack>
+		<attack>Rock,9,60,240,One target. Hit: 28 (4d10+6) bludgeoning damage. lf the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<reactions>
+		<reaction>Rock Catching,lf a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it.</reaction>
+	</reactions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Stone Giant (Variant)</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>TN</align>
+	<cr>7.0</cr>
+	<ac>17</ac>
+	<hp>126</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 15,CON 20,INT 10,WIS 12,CHA 9</stats>
+	<saves>DEX 5,CON 8,WIS 4</saves>
+	<skills>ATHLETICS 12,PERCEPTION 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Stone Camouflage,The giant has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatclub attacks.</multiattack>
+		<attack>Greatclub,9,15,One target. Hit: 19 (3d8+6) bludgeoning damage.</attack>
+		<attack>Rock,9,60,240,One target. Hit: 28 (4d10+6) bludgeoning damage. lf the target is a creature, it must succeed on a DC 17 Strength saving throw or be knocked prone.</attack>
+		<effect>Fling,null,The giant tries to throw a Small or Medium creature within 10 feet of it. The target must succeed on a DC 17 Dexterity saving throw or be hurled up to 60 feet horizontally in a direction of the giant's choice and land prone, taking 1d6 bludgeoning damage for every 10 feet it was thrown.</effect>
+		<effect>Rolling Rock,null,The giant sends a rock tumbling along the ground in a 30-foot line that is 5 feet wide. Each creature in that line must make a DC 17 Dexterity saving throw, taking 22 (3d10+6) bludgeoning damage and falling prone on a failed save.</effect>
+	</actions>
+	<reactions>
+		<reaction>Rock Catching,lf a rock or similar object is hurled at the giant, the giant can, with a successful DC 10 Dexterity saving throw, catch the missile and take no bludgeoning damage from it.</reaction>
+	</reactions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>The Queen of Bones</name>
 	<size>MEDIUM</size>
 	<type>ABERRATION,false</type>
@@ -12530,6 +13078,32 @@ The transformed creature can repeat the saving throw whenever it finishes a long
 		<attack>Rock,9,60,240,One target. Hit: 28 (4d10+6) bludgeoning damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Frost Giant (Variant)</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NE</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>138</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 23,DEX 9,CON 21,INT 9,WIS 10,CHA 12</stats>
+	<saves>CON 8,WIS 3,CHA 4</saves>
+	<skills>ATHLETICS 9,PERCEPTION 3</skills>
+	<multipliers>
+		<IMMUNITY>COLD</IMMUNITY>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greataxe attacks.</multiattack>
+		<attack>Greataxe,9,10,One target. Hit: 25 (3d12+6) slashing damage.</attack>
+		<attack>Rock,9,60,240,One target. Hit: 28 (4d10+6) bludgeoning damage.</attack>
+		<attack>Weighted Net,5,20,60,One Small, Medium, or Large creature. Hit: The target is restrained until it escapes the net. Any creature can use its action to make a DC 17 Strength check to free itself or another creature in the net, ending the effect on a success. Dealing 15 slashing damage to the net (AC 12) destroys the net and frees the target.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Gloamwing</name>
@@ -13284,6 +13858,36 @@ Telepathy is 120ft.</other>
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Cloud Giant (Variant)</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>NG,NE</align>
+	<cr>9.0</cr>
+	<ac>14</ac>
+	<hp>200</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 27,DEX 10,CON 22,INT 12,WIS 16,CHA 16</stats>
+	<saves>CON 9,WIS 7,CHA 7</saves>
+	<skills>INSIGHT 7,PERCEPTION 7</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,,,CloudGiant</innatecasting>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two morningstar attacks.</multiattack>
+		<attack>Morningstar,12,10,One target. Hit: 21 (3d8+8) piercing damage.</attack>
+		<attack>Rock,12,60,240,One target. Hit: 30 (4d10+8) bludgeoning damage.</attack>
+		<effect>Fling,null,The giant tries to throw a Small or Medium creature within 10 feet of it. The target must succeed on a DC 20 Dexterity saving throw or be hurled up to 60 feet horizontally in a direction of the giant's choice and land prone, taking 1d8 bludgeoning damage for every 10 feet it was thrown.</effect>
+		<effect>Wind Aura,null,A magical aura of wind surrounds the giant. The aura is a 10-foot-radius sphere that lasts as long as the giant maintains concentration on it (as if concentrating on a spell). While the aura is in effect, the giant gains a +2 bonus to its AC against ranged weapon attacks, and all open flames within the aura are extinguished unless they are magical.</effect>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Conclave Dryad</name>
 	<size>MEDIUM</size>
 	<type>FEY,false</type>
@@ -13364,6 +13968,35 @@ Telepathy is 120ft.</other>
 		<attack>Rock,11,60,240,One target. Hit: 29 (4d10+7) bludgeoning damage.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Fire Giant (Variant)</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>LE</align>
+	<cr>9.0</cr>
+	<ac>18</ac>
+	<hp>162</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 25,DEX 9,CON 23,INT 10,WIS 14,CHA 13</stats>
+	<saves>DEX 3,CON 10,CHA 5</saves>
+	<skills>ATHLETICS 11,PERCEPTION 6</skills>
+	<multipliers>
+		<IMMUNITY>FIRE</IMMUNITY>
+	</multipliers>
+	<languages>GIANT</languages>
+	<regions></regions>
+	<passives>
+		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
+		<passive>Tackle,When the giant enters any enemy's space for the first time on a turn, the enemy must succeed on a DC 19 Strength saving throw or be knocked prone.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatsword attacks.</multiattack>
+		<attack>Greatsword,11,10,One target. Hit: 28 (6d6+7) slashing damage.</attack>
+		<attack>Rock,11,60,240,One target. Hit: 29 (4d10+7) bludgeoning damage.</attack>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Flind</name>
@@ -15785,7 +16418,39 @@ If the skyswimmer takes 30 damage or more on a single turn from the swallowed cr
 		<attack>Rock,14,60,240,One target. Hit: 35 (4d12+9) bludgeoning damage.</attack>
 		<effect>Lightning Strike,Recharge 5-6,The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<source>MONSTERMANUAL</source>
+	<source>MONSTERMANUAL,STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Storm Giant (Variant)</name>
+	<size>HUGE</size>
+	<type>GIANT,false</type>
+	<align>CG</align>
+	<cr>13.0</cr>
+	<ac>16</ac>
+	<hp>230</hp>
+	<speed>WALK 50,SWIM 50</speed>
+	<stats>STR 29,DEX 14,CON 20,INT 16,WIS 18,CHA 18</stats>
+	<saves>STR 14,CON 10,WIS 9,CHA 9</saves>
+	<skills>ARCANA 8,ATHLETICS 14,HISTORY 8,PERCEPTION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+		<IMMUNITY>LIGHTNING,THUNDER</IMMUNITY>
+	</multipliers>
+	<languages>COMMON,GIANT</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,StormGiant</innatecasting>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The giant makes two greatsword attacks.</multiattack>
+		<attack>Greatsword,14,10,One target. Hit: 30 (6d6+9) slashing damage.</attack>
+		<attack>Rock,14,60,240,One target. Hit: 35 (4d12+9) bludgeoning damage.</attack>
+		<effect>Lightning Strike,Recharge 5-6,The giant hurls a magical lightning bolt at a point it can see within 500 feet of it. Each creature within 10 feet of that point must make a DC 17 Dexterity saving throw, taking 54 (12d8) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Lightning Strike,Recharge 6,The storm giant stomps the ground, triggering a thunderclap. All other creatures within 15 feet of the giant must succeed on a DC 17 Constitution saving throw or take 33 (6d10) thunder damage and be deafened until the start of the giant's next turn. On a successful save, a creature takes half as much damage and isn't deafened. The thunderclap can be heard out to a range of 1,200 feet.</effect>
+	</actions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Tarul Var</name>
@@ -17308,7 +17973,7 @@ Understands the languages of its creator but can't speak.</other>
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
-	<name>Ancient blue dragon</name>
+	<name>Ancient Blue Dragon</name>
 	<size>GARGANTUAN</size>
 	<type>DRAGON,false</type>
 	<align>LE</align>
@@ -17481,6 +18146,51 @@ Halaster also wears a horned ring (a very rare magic item that requires attuneme
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Iymrith</name>
+	<size>GARGANTUAN</size>
+	<type>DRAGON,false</type>
+	<align>LE</align>
+	<cr>23.0</cr>
+	<ac>22</ac>
+	<hp>481</hp>
+	<speed>WALK 40,BURROW 40,FLY 80</speed>
+	<stats>STR 29,DEX 10,CON 27,INT 18,WIS 17,CHA 21</stats>
+	<saves>DEX 7,CON 15,WIS 10,CHA 12</saves>
+	<skills>PERCEPTION 17,STEALTH 7</skills>
+	<multipliers>
+		<IMMUNITY>LIGHTNING</IMMUNITY>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>COMMON,DRACONIC,GIANT,TERRAN</languages>
+	<regions>DESERT</regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,20,,Iymrith</innatecasting>
+		<passive>Change Shape,Iymrith magically polymorphs into a female storm giant or back into her true form. She reverts to her true form if she dies. Any equipment she is wearing or carrying is absorbed or borne by the new form (the dragon's choice).
+In storm giant form, lymrith retains her alignment, hit points, Hit Dice, ability to speak, proficiencies, Legendary Resistance, lair actions, and Intelligence, Wisdom, and Charisma scores, as well as this action. Her statistics are otherwise replaced by those of the new form.</passive>
+	</passives>
+	<other>When she casts her stone shape spell, Iymrith can shape the targeted stone into a living gargoyle instead of altering the stone as described in the spell's description. This transformation is permanent and can't be reversed or dispelled.</other>
+	<actions>
+		<multiattack>The dragon can use its Frightful Presence. It then makes three attacks; one with its bite and two with its claws.</multiattack>
+		<attack>Bite,16,15,One target. Hit: 20 (2d10+9) piercing damage plus 11 (2d10) lightning damage.</attack>
+		<attack>Claw,16,10,One target. Hit: 16 (2d6+9) slashing damage.</attack>
+		<attack>Tail,16,20,One target. Hit: 18 (2d8+9) bludgeoning damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 20 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
+		<effect>Lightning Breath,Recharge 5-6,The dragon exhales lightning in an 120-foot line that is 10 feet wide. Each creature in that line must make a DC 23 Dexterity saving throw, taking 88 (16d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Tail Attack,1,The dragon makes a tail attack.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The dragon beats its wings. Each creature within 10 feet of the dragon must succeed on a DC 24 Dexterity saving throw or take 16 (2d6+9) bludgeoning damage and be knocked prone. The dragon can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Part of the ceiling collapses above one creature that the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) bludgeoning damage and be knocked prone and buried. The buried target is restrained and unable to breathe or stand up. A creature can take an action to make a DC 10 Strength check, ending the buried state on a success.</lairaction>
+		<lairaction>A cloud of sand swirls about in a 20-foot-radius sphere centered on a point the dragon can see within 120 feet of it. The cloud spreads around corners. Each creature in the cloud must succeed on a DC 15 Constitution saving throw or be blinded for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</lairaction>
+		<lairaction>Lightning arcs, forming a 5-foot-wide line between two of the lair's solid surfaces that the dragon can see. They must be within 120 feet of the dragon and 120 feet of each other. Each creature in that line must succeed on a DC 15 Dexterity saving throw or take 10 (3d6) lightning damage.</lairaction>
+	</lair>
+	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
 	<name>Kraken</name>
 	<size>GARGANTUAN</size>
 	<type>MONSTOSITY,TITAN,false</type>
@@ -17524,6 +18234,45 @@ lf the kraken takes 50 damage or more on a single turn from a creature inside lt
 		<lairaction>The water in the kraken's lair becomes electrically charged. All creatures within 120 feet of the kraken must succeed on a DC 23 Constitution saving throw, taking 10 (3d6) lightning damage on a failed save, or half as much damage on a successful one.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Maegera the Dawn Titan</name>
+	<size>GARGANTUAN</size>
+	<type>ELEMENTAL,false</type>
+	<align>CN</align>
+	<cr>23.0</cr>
+	<ac>16</ac>
+	<hp>341</hp>
+	<speed>WALK 50</speed>
+	<stats>STR 21,DEX 22,CON 20,INT 10,WIS 10,CHA 19</stats>
+	<saves>CON 12,WIS 7,CHA 11</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>BLINDSIGHT 120</senses>
+	<languages>IGNAN</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,19,,MaegeraTheDawnTitan</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Empowered Attacks,Maegera's slam attacks are treated as magical for the purpose of overcoming resistance and immunity to damage from nonmagical attacks.</passive>
+		<passive>Illumination,Maegera sheds bright light in a 120-foot radius and dim light for an additional 120 feet.</passive>
+		<passive>Fire Aura,At the start of each of Maegera's turns, each creature within 30 feet of it takes 35 (10d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature also takes 35 (10d6) fire damage from touching Maegera or from hitting it with a melee attack while within 10 feet of it, and a creature takes that damage the first time on a turn that Maegera moves into its space. Nonmagical weapons that hit Maegera are destroyed by fire immediately after dealing damage to it.</passive>
+		<passive>Fire Form,Maegera can enter a hostile creature's space and stop there. It can move through a space as narrow as 1 inch without squeezing if fire could pass through that space.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Maegera makes three slam attacks.</multiattack>
+		<attack>Slam,12,15,One target. Hit: 15 (3d6+5) bludgeoning damage plus 35 (10d6) fire damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Quench Magic,1,Maegera targets one creature that it can see within 60 feet of it. Any resistance or immunity to fire damage that the target gains from a spell or a magic item is suppressed. This effect lasts until the end of Maegera's next turn.</legendaryaction>
+		<legendaryaction>Smoke Cloud,2,Maegera exhales a billowing cloud of hot smoke and embers that fills a 60-foot cube. Each creature in that area takes 11 (2d10) fire damage. The cloud lasts until the end of Maegera's next turn. Creatures completely within the cloud are blinded and can't be seen.</legendaryaction>
+		<legendaryaction>Create Fire Elemental,3,Maegera's hit points are reduced by 50 as part of it separates and becomes a fire elemental with 102 hit points. The fire elemental appears in an unoccupied space within 15 feet of Maegera and acts on Maegera's initiative count. Maegera can't use this action if it has 50 hit points or fewer. The fire elemental obeys Maegera's commands and fights until destroyed.</legendaryaction>
+	</legendaryactions>
+	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
 	<name>Ancient Red Dragon</name>

@@ -1,0 +1,21 @@
+<spellbook>
+	<name>UthgardtShaman</name>
+	<daily>
+		<0>
+			<spell>Dancing lights,false</spell>
+			<spell>Mage hand,false</spell>
+			<spell>Message,false</spell>
+			<spell>Thaumaturgy,false</spell>
+		</0>
+		<1>
+			<spell>Augury,false</spell>
+			<spell>Bestow curse,false</spell>
+			<spell>Cordon of arrows,false</spell>
+			<spell>Detect magic,false</spell>
+			<spell>Hex,false</spell>
+			<spell>Prayer of healing,false</spell>
+			<spell>Speak with dead,false</spell>
+			<spell>Spirit guardians,false</spell>
+		</1>
+	</daily>
+</spellbook>
