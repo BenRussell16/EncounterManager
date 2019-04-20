@@ -1,0 +1,10 @@
+<spellbook>
+	<name>DerroSavantVariant</name>
+	<slot>
+		<known>Acid splash,Light,Mage hand,Message,Ray of frost,Burning hands,Chromatic orb,Sleep,Invisibility,Spider climb,Blink,Lightning bolt</known>
+		<0>Acid splash,Light,Mage hand,Message,Ray of frost</0>
+		<1>4,Burning hands,Chromatic orb,Sleep</1>
+		<2>3,Invisibility,Spider climb</2>
+		<3>2,Blink,Lightning bolt</3>
+	</slot>
+</spellbook>

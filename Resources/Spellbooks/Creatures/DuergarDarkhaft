@@ -1,0 +1,13 @@
+<spellbook>
+	<name>DuergarDarkhaft</name>
+	<daily>
+		<0>
+			<spell>Friends,false</spell>
+			<spell>Mage hand,false</spell>
+		</0>
+		<1>
+			<spell>Disguise self,false</spell>
+			<spell>Sleep,false</spell>
+		</1>
+	</daily>
+</spellbook>

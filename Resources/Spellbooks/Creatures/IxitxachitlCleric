@@ -1,0 +1,10 @@
+<spellbook>
+	<name>IxitxachitlCleric</name>
+	<slot>
+		<known>Guidance,Thaumaturgy,Charm person,Create or destroy water,Hold person,Silence,Dispel magic,Tongues</known>
+		<0>Guidance,Thaumaturgy</0>
+		<1>4,Create or destroy water,Charm person</1>
+		<2>3,Hold person,Silence</2>
+		<3>2,Tongues,Dispel magic</3>
+	</slot>
+</spellbook>

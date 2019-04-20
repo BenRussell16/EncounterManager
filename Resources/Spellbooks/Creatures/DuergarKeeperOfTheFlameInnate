@@ -1,0 +1,12 @@
+<spellbook>
+	<name>DuergarKeeperOfTheFlameInnate</name>
+	<daily>
+		<0>
+			<spell>Friends,false</spell>
+			<spell>Message,false</spell>
+		</0>
+		<3>
+			<spell>Command,false</spell>
+		</3>
+	</daily>
+</spellbook>

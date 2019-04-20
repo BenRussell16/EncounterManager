@@ -1,0 +1,9 @@
+<spellbook>
+	<name>DuergarKeeperOfTheFlameCasting</name>
+	<slot>
+		<known>Guidance,Mending,Sacred flame,Bane,Inflict wounds,Shield of faith,Enhance ability,Spiritual weapon</known>
+		<0>Guidance,Mending,Sacred flame</0>
+		<1>4,Bane,Inflict wounds,Shield of faith</1>
+		<2>2,Spiritual weapon,Enhance ability</2>
+	</slot>
+</spellbook>
