@@ -1,0 +1,9 @@
+<spellbook>
+	<name>ZirajTheHunter</name>
+	<slot>
+		<known>Command,Protection from evil and good,Thunderous smite,Branding smite,Find steed,Blinding smite,Dispel magic</known>
+		<1>4,Thunderous smite,Protection from evil and good,Command</1>
+		<2>3,Find steed,Branding smite</2>
+		<3>2,Blinding smite,Dispel magic</3>
+	</slot>
+</spellbook>

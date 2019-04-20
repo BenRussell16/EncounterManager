@@ -1,0 +1,13 @@
+<spellbook>
+	<name>DavilStarsong</name>
+	<slot>
+		<known>Mage hand,Mending,Minor illusion,Vicious mockery,Cure wounds,Disguise self,Sleep,Crown of madness,Invisibility,Suggestion,Nondetection,Sending,Tongues,Compulsion,Freedom of movement,Polymorph,Dominate person,Greater restoration,Otto's irresistable dance</known>
+		<0>Mage hand,Mending,Minor illusion,Vicious mockery</0>
+		<1>4,Cure wounds,Disguise self,Sleep</1>
+		<2>3,Suggestion,Invisibility,Crown of madness</2>
+		<3>3,Nondetection,Sending,Tongues</3>
+		<4>3,Polymorph,Freedom of movement,Compulsion</4>
+		<5>2,Dominate person,Greater restoration</5>
+		<6>1,Otto's irresistable dance</6>
+	</slot>
+</spellbook>

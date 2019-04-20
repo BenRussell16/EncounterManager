@@ -1,0 +1,12 @@
+<spellbook>
+	<name>AmmaliaCassalanter</name>
+	<slot>
+		<known>Friends,Mage hand,Mending,Message,Charm person,Mage armour,Magic missile,Hold person,Invisibility,Suggestion,Fireball,Haste,Tongues,Confusion,Stoneskin,Hold monster</known>
+		<0>Friends,Mage hand,Mending,Message</0>
+		<1>4,Magic missile,Mage armour,Charm person</1>
+		<2>3,Hold person,Suggestion,Invisibility</2>
+		<3>3,Tongues,Haste,Fireball</3>
+		<4>3,Stoneskin,Confusion</4>
+		<5>1,Hold monster</5>
+	</slot>
+</spellbook>

@@ -1,0 +1,12 @@
+<spellbook>
+	<name>IstridHorn</name>
+	<slot>
+		<known>Light,Mending,Sacred flame,Spare the dying,Divine favour,Guiding bolt,Healing word,Shield of faith,Hold person,Lesser restoration,Magic weapon,Silence,Spiritual weapon,Beacon of hope,Crusaders mantle,Dispel magic,Revivify,Spirit guardians,Water walk,Banishment,Freedom of movement,Guardian of faith,Stoneskin,Flame strike,Hold monster,Mass cure wounds</known>
+		<0>Light,Mending,Sacred flame,Spare the dying</0>
+		<1>4,Divine favour,Guiding bolt,Healing word,Shield of faith</1>
+		<2>3,Hold person,Lesser restoration,Magic weapon,Silence,Spiritual weapon</2>
+		<3>3,Water walk,Spirit guardians,Revivify,Dispel magic,Crusaders mantle,Beacon of hope</3>
+		<4>3,Stoneskin,Guardian of faith,Freedom of movement,Banishment</4>
+		<5>1,Flame strike,Hold monster,Mass cure wounds</5>
+	</slot>
+</spellbook>

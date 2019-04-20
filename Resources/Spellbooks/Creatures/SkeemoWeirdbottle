@@ -1,0 +1,12 @@
+<spellbook>
+	<name>SkeemoWeirdbottle</name>
+	<slot>
+		<known>Fire bolt,Light,Mage hand,Prestidigitation,Detect magic,Mage armour,Magic missile,Shield,Misty step,Suggestion,Counterspell,Fireball,Fly,Greater invisibility,Ice storm,Cone of cold</known>
+		<0>Fire bolt,Light,Mage hand,Prestidigitation</0>
+		<1>4,Detect magic,Mage armour,Magic missile,Shield</1>
+		<2>3,Misty step,Suggestion</2>
+		<3>3,Counterspell,Fireball,Fly</3>
+		<4>3,Greater invisibility,Ice storm</4>
+		<5>1,Cone of cold</5>
+	</slot>
+</spellbook>

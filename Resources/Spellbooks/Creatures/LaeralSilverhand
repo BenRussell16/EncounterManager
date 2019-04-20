@@ -1,0 +1,16 @@
+<spellbook>
+	<name>LaeralSilverhand</name>
+	<slot>
+		<known>Light,Mage hand,Minor illusion,Prestidigitation,Ray of frost,Detect magic,Disguise self,Magic missile,Shield,Detect thoughts,Invisibility,Misty step,Counterspell,Fly,Sending,Tongues,Banishment,Greater invisibility,Otiluke's resilient sphere,Cone of cold,Geas,Rary's telepathic bond,Globe of invulnerability,Mass suggestion,Prismatic spray,Teleport,Feeblemind,Power word stun,Time stop</known>
+		<0>Light,Mage hand,Minor illusion,Prestidigitation,Ray of frost</0>
+		<1>0,Shield,Magic missile,Disguise self,Detect magic</1>
+		<2>0,Misty step,Invisibility,Detect thoughts</2>
+		<3>3,Tongues,Sending,Fly,Counterspell</3>
+		<4>3,Otiluke's resilient sphere,Greater invisibility,Banishment</4>
+		<5>3,Cone of cold,Geas,Rary's telepathic bond</5>
+		<6>2,Mass suggestion,Globe of invulnerability</6>
+		<7>1,Teleport,Prismatic spray</7>
+		<8>1,Power word stun,Feeblemind</8>
+		<9>1,Time stop</9>
+	</slot>
+</spellbook>

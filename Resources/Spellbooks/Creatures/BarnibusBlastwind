@@ -1,0 +1,11 @@
+<spellbook>
+	<name>BarnibusBlastwind</name>
+	<slot>
+		<known>Blade ward,Light,Mage hand,Message,Comprehend languages,Identify,Mage armour,Shield,Detect thoughts,Suggestion,Clairvoyance,Sending,Locate creature,Otiluke's resilient sphere</known>
+		<0>Blade ward,Light,Mage hand,Message</0>
+		<1>4,Shield,Mage armour,Identify,Comprehend languages</1>
+		<2>3,Detect thoughts,Suggestion</2>
+		<3>3,Clairvoyance,Sending</3>
+		<4>1,Locate creature,Otiluke's resilient sphere</4>
+	</slot>
+</spellbook>

@@ -1,0 +1,9 @@
+<spellbook>
+	<name>Bard</name>
+	<slot>
+		<known>Friends,Mage hand,Vicious mockery,Charm person,Healing word,Heroism,Sleep,Thunderwave,Invisibility,Shatter</known>
+		<0>Friends,Mage hand,Vicious mockery</0>
+		<1>4,Charm person,Healing word,Heroism,Sleep,Thunderwave</1>
+		<2>3,Invisibility,Shatter</2>
+	</slot>
+</spellbook>

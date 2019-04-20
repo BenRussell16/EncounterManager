@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Hlam</name>
+	<slot>
+		<known>Guidance,Light,Sacred flame,Spare the dying,Detect evil and good,Healing word,Sanctuary,Shield of faith,Calm emotions,Prayer of healing,Silence,Protection from energy,Remove curse,Sending</known>
+		<0>Guidance,Light,Sacred flame,Spare the dying</0>
+		<1>4,Detect evil and good,Healing word,Sanctuary,Shield of faith</1>
+		<2>3,Calm emotions,Prayer of healing,Silence</2>
+		<3>2,Protection from energy,Remove curse,Sending</3>
+	</slot>
+</spellbook>

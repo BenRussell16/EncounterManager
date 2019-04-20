@@ -1,0 +1,8 @@
+<spellbook>
+	<name>ApprenticeWizard</name>
+	<slot>
+		<known>Fire bolt,Mending,Prestidigitation,Burning hands,Disguise self,Shield</known>
+		<0>Fire bolt,Mending,Prestidigitation</0>
+		<1>2,Shield,Disguise self,Burning hands</1>
+	</slot>
+</spellbook>
