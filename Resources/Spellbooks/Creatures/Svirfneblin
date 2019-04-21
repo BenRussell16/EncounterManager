@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Svirfneblin</name>
+	<daily>
+		<0>
+			<spell>Nondetection,true</spell>
+		</0>
+		<1>
+			<spell>Blindness/Deafness,false</spell>
+			<spell>Blur,false</spell>
+			<spell>Disguise self,false</spell>
+		</1>
+	</daily>
+</spellbook>

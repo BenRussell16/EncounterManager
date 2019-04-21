@@ -1,0 +1,10 @@
+<spellbook>
+	<name>Grisha</name>
+	<slot>
+		<known>Guidance,Light,Sacred flame,Thaumaturgy,Cure wounds,Divine favour,Inflict wounds,Protection from evil and good,Shield of faith,Continual flame,Hold person,Magic weapon,Spiritual weapon,Bestow curse,Dispel magic,Spirit guardians</known>
+		<0>Guidance,Light,Sacred flame,Thaumaturgy</0>
+		<1>4,Shield of faith,Protection from evil and good,Inflict wounds,Divine favour,Cure wounds</1>
+		<2>3,Continual flame,Hold person,Magic weapon,Spiritual weapon</2>
+		<3>3,Bestow curse,Dispel magic,Spirit guardians</3>
+	</slot>
+</spellbook>

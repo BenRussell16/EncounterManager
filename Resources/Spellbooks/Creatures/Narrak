@@ -1,0 +1,14 @@
+<spellbook>
+	<name>Narrak</name>
+	<slot>
+		<known>Eldritch blast,Friends,Poison spray,Armor of Agathys,Charm person,Hex,Hold person,Ray of enfeeblement,Spider climb</known>
+		<0>Eldritch blast,Friends,Poison spray</0>
+		<1>0,Armor of Agathys,Charm person,Hex</1>
+		<2>2,Hold person,Ray of enfeeblement,Spider climb</2>
+	</slot>
+	<daily>
+		<0>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

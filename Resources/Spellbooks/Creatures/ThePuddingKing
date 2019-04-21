@@ -1,0 +1,12 @@
+<spellbook>
+	<name>ThePuddingKing</name>
+	<slot>
+		<known>Acid splash,Light,Mage hand,Poison spray,Prestidigitation,False life,Mage armour,Ray of sickness,Shield,Crown of madness,Misty step,Gaseous form,Stinking cloud,Blight,Confusion,Cloudkill</known>
+		<0>Acid splash,Light,Mage hand,Poison spray,Prestidigitation</0>
+		<1>4,False life,Mage armour,Ray of sickness,Shield</1>
+		<2>3,Crown of madness,Misty step</2>
+		<3>3,Gaseous form,Stinking cloud</3>
+		<4>3,Confusion,Blight</4>
+		<5>1,Cloudkill</5>
+	</slot>
+</spellbook>

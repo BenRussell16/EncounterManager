@@ -272,6 +272,30 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
+	<name>Bridesmaid of Zuggtmoy</name>
+	<size>MEDIUM</size>
+	<type>PLANT,false</type>
+	<align>CE</align>
+	<cr>0.125</cr>
+	<ac>13</ac>
+	<hp>22</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 14,DEX 11,CON 11,INT 14,WIS 8,CHA 18</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Fungus Stride,Once on its turn, the bridesmaid can use 10 feet of its movement to step magically into one living mushroom or fungus patch within 5 feet and emerge from another within 60 feet of the first one, appearing in an unoccupied space within 5 feet of the second mushroom or fungus patch. The mushrooms and patches must be large or bigger.</passive>
+	</passives>
+	<other>Understands Abyssal but can't speak.</other>
+	<actions>
+		<effect>Hallucination Spores,null,The bridesmaid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 10 Constitution saving throw or be poisoned for 1 minute. The poisoned target is incapacitated while it hallucinates. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+		<effect>Infestation Spores,1/Day,The bridesmaid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 10 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Cultist</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -1210,6 +1234,32 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<other></other>
 	<actions>
 		<attack>Halberd,4,10,One target. Hit: 7 (1d10+2) slashing damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Male Steeder</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>12</ac>
+	<hp>13</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 15,DEX 12,CON 14,INT 2,WIS 10,CHA 3</stats>
+	<skills>PERCEPTION 4,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Leap,The steeder can expend all its movement on its turn to jump up to 60 feet vertically or horizontally, provided its speed is at least 30 feet.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,4,5,One target. Hit: 6 (1d8+2) piercing damage plus 4 (1d8) poison damage.</attack>
+		<attack>Sticky Leg,4,5,One Small or Tiny creature. Hit: The target is stuck to the steeder's leg and grappled until it escapes (escape DC 12). The steeder can have only one creature grappled at a time.</attack>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -3599,6 +3649,32 @@ Violet		51 years or more.</other>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
+	<name>Female Steeder</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>14</ac>
+	<hp>30</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 15,DEX 16,CON 14,INT 2,WIS 10,CHA 3</stats>
+	<skills>PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Leap,The steeder can expend all its movement on its turn to jump up to 90 feet vertically or horizontally, provided its speed is at least 30 feet.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage plus 9 (2d8) poison damage.</attack>
+		<attack>Sticky Leg,5,5,One Medium or smaller creature. Hit: The target is stuck to the steeder's leg and grappled until it escapes (escape DC 12). The steeder can have only one creature grappled at a time.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Firenewt Warlock of Imix</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,FIRENEWT,false</type>
@@ -4745,6 +4821,55 @@ Innate spellcasting is psionics.</other>
 	<source>TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Awakened Tree</name>
+	<size>HUGE</size>
+	<type>PLANT,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>59</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 19,DEX 6,CON 15,INT 10,WIS 10,CHA 7</stats>
+	<multipliers>
+		<VULNERABILITY>FIRE</VULNERABILITY>
+		<RESISTANCE>BLUDGEONING,PIERCING</RESISTANCE>
+	</multipliers>
+	<regions></regions>
+	<passives>
+		<passive>False Appearance,While the tree remains motionless, it is indistinguìshable from a normal tree.</passive>
+	</passives>
+	<other>Knows one language of its creator.</other>
+	<actions>
+		<attack>Slam,6,10,One target. Hit: 14 (3d6+4) bludgeoning damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Awakened Zurkhwood</name>
+	<size>HUGE</size>
+	<type>PLANT,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>59</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 19,DEX 6,CON 15,INT 10,WIS 10,CHA 7</stats>
+	<multipliers>
+		<VULNERABILITY>FIRE</VULNERABILITY>
+		<RESISTANCE>BLUDGEONING,PIERCING</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>False Appearance,While the tree remains motionless, it is indistinguìshable from a normal zurkhwood mushroom.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Slam,6,10,One target. Hit: 14 (3d6+4) bludgeoning damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Bandit Captain</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -4920,6 +5045,34 @@ Innate spellcasting is psionics.</other>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Chamberlain of Zuggtmoy</name>
+	<size>LARGE</size>
+	<type>PLANT,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>45</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 17,DEX 7,CON 14,INT 11,WIS 8,CHA 12</stats>
+	<multipliers>
+		<RESISTANCE>BLUDGEONING,PIERCING</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>UNDERCOMMON,ABYSSAL</languages>
+	<regions></regions>
+	<passives>
+		<passive>Mushroom Portal,The chamberlain counts as a mushroom for the Fungus Stride feature of the bridesmaids of Zuggtmoy.</passive>
+		<passive>Poison Spores,Whenever the chamberlain takes damage, it releases a cloud of spores. Creatures within 5 feet of the chamberlain when this happens must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on a success.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The chamberlain makes two slam attacks.</multiattack>
+		<attack>Slam,5,5,One target. Hit: 10 (2d6+3) bludgeoning damage.</attack>
+		<effect>Infestation Spores,1/Day,The chamberlain releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 12 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Counterflux Blastseeker</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ANYRACE,false</type>
@@ -5024,6 +5177,40 @@ Innate spellcasting is psionics.</other>
 		<attack>Scimitar,5,5,One target. Hit: 6 (1d6+3) slashing damage plus 3 (1d6) damage of the type to which the cultist has damage resistance.</attack>
 	</actions>
 	<source>HOARDOFTHEDRAGONQUEEN,THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Droki</name>
+	<size>SMALL</size>
+	<type>HUMANOID,DERRO,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>31</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 16,CON 13,INT 10,WIS 5,CHA 16</stats>
+	<skills>STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,13,,Droki</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Special Equipment,Droki wears boots of speed.</passive>
+		<passive>Insanity,Droki has advantage on saving throws against being charmed or frightened.</passive>
+		<passive>Sneak Attack (1/Turn),Droki deals an extra 7 (2d6) damage when he hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of Droki that isn't incapacitated and Droki doesn't have disadvantage on the attack roll.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Droki makes two attacks with his shortsword.</multiattack>
+		<attack>Shortsword,5,5,One target. Hit: 6 (1d6+3) piercing damage. The sword is coated with serpent venom that wears off after the first hit. A target subjected to the venom must make a DC 11 Constitution saving throw, taking 10 (3d6) poison damage on a failed save, or half as much damage on a successful one,</attack>
+	</actions>
+	<reactions>
+		<reaction>Parry,Droki adds 3 to his AC against one melee attack that would hit him. To do so, Droki must see the attacker and be wielding a melee weapon.</reaction>
+	</reactions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Duergar (Variant: Kavalrachni)</name>
@@ -5719,6 +5906,32 @@ The attack is made with disadvantage against a target within 5 ft.</attack>
 	<source>WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
+	<name>Grisha</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,HUMAN,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>18</ac>
+	<hp>33</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 14,DEX 12,CON 12,INT 11,WIS 14,CHA 16</stats>
+	<saves>WIS 4,CHA 5</saves>
+	<skills>PERSUASION 5,RELIGION 2</skills>
+	<multipliers>
+	</multipliers>
+	<languages>COMMON,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>WIS,4,12,6,Grisha</spellcasting>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Gnsha makes two attacks with his +1 flail.</multiattack>
+		<attack>+1 Flail,5,5,One target. Hit: 7 (1d8+3) bludgeoning damage.</attack>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Grung Elite Warrior</name>
 	<size>SMALL</size>
 	<type>HUMANOID,GRUNG,false</type>
@@ -6111,6 +6324,36 @@ Doesn't have disadvantage in melee.</attack>
 		<effect>Caustic Spores,1/Day,The myconid releases spores in a 30-foot-cone. Each creature inside the cone must succeed on a DC 12 Dexterity saving throw or take 1d6 acid damage at the start of each of the myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success.</effect>
 		<effect>Infestation Spores,1/Day,The myconid releases spores that burst out in a cloud that fills a 10-foot—radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 12 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
 		<effect>Euphoria Spores,1/Day,The myconid releases a cloud of spores in a 20—foot—radius sphere centered on itself. Other creatures in that area must each succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of exhaustion.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Narrak</name>
+	<size>SMALL</size>
+	<type>HUMANOID,DERRO,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>40</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 13,INT 14,WIS 5,CHA 16</stats>
+	<saves>DEX 4,CHA 5</saves>
+	<skills>ARCANA 4,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,5,13,5,Narrak</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Insanity,Narrak has advantage on saving throws against being charmed or frightened.</passive>
+	</passives>
+	<other>Spell slots come back after a short rest.</other>
+	<actions>
+		<attack>Shortsword,4,5,One creature. Hit: 5 (1d6+2) piercing damage.</attack>
+		<effect>One with Shadows,null,While he is in dim light or darkness, Narrak can become invisible, He remains so until he moves or takes an action or reaction.</effect>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -10023,6 +10266,40 @@ fighting.
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
+	<name>The Pudding King</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GNOME,true</type>
+	<align>CE</align>
+	<cr>4.0</cr>
+	<ac>16</ac>
+	<hp>49</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 16,CON 14,INT 12,WIS 8,CHA 17</stats>
+	<saves>CON 5,CHA 6</saves>
+	<skills>ARCANA 4,PERCEPTION 2,STEALTH 6,SURVIVAL 2</skills>
+	<multipliers>
+		<RESISTANCE>ACID,POISON</RESISTANCE>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>UNDERCOMMON,ABYSSAL,TERRAN,GNOMISH</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,,12,,Svirfneblin</innatecasting>
+		<spellcasting>CHA,6,14,9,ThePuddingKing</spellcasting>
+		<passive>Gnome Cunning,The gnome has advantage on lntelligence, Wisdom, and Charisma saving throws against magic.</passive>
+		<passive>Stone Camouflage,The gnome has advantage on Dexterity (Stealth) checks made to hide in rocky terrain.</passive>
+		<passive>Insanity,The Pudding King has advantage on saving throws against being charmed or frightened.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>War Pick,3,5,One target. Hit: 4 (1d8) piercing damage.</attack>
+		<effect>Change Shape,null,The Pudding King magically transforms into an ooze, or back into his true form. He reverts to his true form if he dies. Any equipment he is wearing or carrying is absorbed by the new form. In ooze form, the Pudding King retains his alignment, hit points, Hit Dice, and Intelligence, Wisdom, and Charisma scores, as well as this action. His statistics and capabilities are otherwise replaced by those of the new form.</effect>
+		<effect>Create Green Slime,1/Day,The Pudding King creates a patch of green slime (see “Dungeon Hazards" in chapter 5 of the Dungeon masters Guide). The slime appears on a section of wall, ceiling, or floor within 30 Feet of the Pudding King.</effect>
+	</actions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Two-headed Plesiosaurus</name>
 	<size>LARGE</size>
 	<type>BEAST,false</type>
@@ -10136,6 +10413,38 @@ The possession lasts until either the body drops to 0 hit points, the yakfolk en
 		<effect>Summon Earth Elemental,1/Day,The yakfolk summons an earth elemental. The summoned elemental appears in an unoccupied space within 60 feet of its summoner and acts as an ally of the summoner. It remains for 10 minutes, until it dies, or until its summoner dismisses it as an action.</effect>
 	</actions>
 	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Yestabrod</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>CE</align>
+	<cr>4.0</cr>
+	<ac>15</ac>
+	<hp>75</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 12,DEX 10,CON 14,INT 13,WIS 15,CHA 10</stats>
+	<multipliers>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>ABYSSAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>1</legendaryresistance>
+	</passives>
+	<other>Telepathy is 60ft.</other>
+	<actions>
+		<attack>Slam,3,5,One target. Hit: 8 (3d4+1) bludgeoning damage plus 7 (3d4) poison damage.</attack>
+		<effect>Caustic Spores,1/Day,Yestabrod releases spores in a 30-foot-cone. Each creature inside the cone must succeed on a DC 12 Dexterity saving throw or take 1d6 acid damage at the start of each of the myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success.</effect>
+		<effect>Infestation Spores,1/Day,Yestabrod releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 12 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
+	</actions>
+	<legendaryactions>2
+		<legendaryaction>Corpse Burst,1,Gore, offal. and acid erupt from a corpse within 20 Feet of Vestabrod. Creatures within 10 feet of the corpse must succeed on a DC 12 Dexterity saving throw or take 7 (2d6) acid damage</legendaryaction>
+		<legendaryaction>Foul Absorption,1,Yestabrod absorbs putrescence from a corpse within 5 feet of it, regaining 1d8+2 hit points.</legendaryaction>
+	</legendaryactions>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Yuan-Ti Nightmare Speaker</name>

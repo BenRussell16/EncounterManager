@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Droki</name>
+	<daily>
+		<0>
+			<spell>Minor illusion,false</spell>
+		</0>
+		<1>
+			<spell>Darkness,false</spell>
+			<spell>Fear,false</spell>
+			<spell>Shatter,false</spell>
+		</1>
+	</daily>
+</spellbook>
