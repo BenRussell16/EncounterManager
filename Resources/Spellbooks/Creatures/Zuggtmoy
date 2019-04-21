@@ -1,0 +1,20 @@
+<spellbook>
+	<name>Zuggtmoy</name>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Locate animals or plants,false</spell>
+			<spell>Ray of sickness,false</spell>
+		</0>
+		<1>
+			<spell>Etherealness,false</spell>
+			<spell>Teleport,false</spell>
+		</1>
+		<3>
+			<spell>Dispel magic,false</spell>
+			<spell>Ensnaring strike,false</spell>
+			<spell>Entangle,false</spell>
+			<spell>Plant growth,false</spell>
+		</3>
+	</daily>
+</spellbook>

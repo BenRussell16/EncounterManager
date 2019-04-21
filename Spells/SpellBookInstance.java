@@ -118,7 +118,28 @@ public class SpellBookInstance {
 					if(innateSelfOnly.get(0).get(index)
 							&&innateCastLevel.get(0).get(index)!=null){builtString+=", ";}
 					if(innateCastLevel.get(0).get(index)!=null){
-						builtString+="cast at "+innateCastLevel.get(0).get(index)+"level";}
+						if(s.getLevel()==0){
+							builtString+="cast as a level "+innateCastLevel.get(0).get(index)+" caster";
+						}else{
+							int castLevel = innateCastLevel.get(0).get(index);
+							builtString+="cast at "+castLevel;
+							switch (castLevel) {
+							case 1:
+								builtString+="st";
+								break;
+							case 2:
+								builtString+="nd";
+								break;
+							case 3:
+								builtString+="rd";
+								break;
+							default:
+								builtString+="th";
+								break;
+							}
+							builtString+=" level";
+						}
+					}
 					builtString+=")";
 				}
 				first = false;

@@ -1,0 +1,23 @@
+<spellbook>
+	<name>FrazUrbluu</name>
+	<daily>
+		<0>
+			<spell>Alter self,false</spell>
+			<spell>Detect magic,false</spell>
+			<spell>Dispel magic,false</spell>
+			<spell>Phantasmal force,false</spell>
+		</0>
+		<1>
+			<spell>Mirage arcane,false</spell>
+			<spell>Modify memory,false</spell>
+			<spell>Project image,false</spell>
+		</1>
+		<3>
+			<spell>Confusion,false</spell>
+			<spell>Dream,false</spell>
+			<spell>Mislead,false</spell>
+			<spell>Programmed illusion,false</spell>
+			<spell>Seeming,false</spell>
+		</3>
+	</daily>
+</spellbook>

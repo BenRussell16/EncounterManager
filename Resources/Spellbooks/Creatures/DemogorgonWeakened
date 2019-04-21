@@ -1,0 +1,15 @@
+<spellbook>
+	<name>DemogorgonWeakened</name>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Major image,false</spell>
+		</0>
+		<1>
+			<spell>Project image,false</spell>
+			<spell>Dispel magic,false</spell>
+			<spell>Fear,false</spell>
+			<spell>Telekinesis,false</spell>
+		</1>
+	</daily>
+</spellbook>

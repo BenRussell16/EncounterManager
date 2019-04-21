@@ -1,0 +1,14 @@
+<spellbook>
+	<name>Jubilex</name>
+	<daily>
+		<0>
+			<spell>Acid splash,false,17</spell>
+			<spell>Detect magic,false</spell>
+		</0>
+		<3>
+			<spell>Blight,false</spell>
+			<spell>Contagion,false</spell>
+			<spell>Gaseous form,false</spell>
+		</3>
+	</daily>
+</spellbook>

@@ -20064,6 +20064,64 @@ Understands the languages of its creator but can't speak.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Baphomet</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>23.0</cr>
+	<ac>22</ac>
+	<hp>275</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 30,DEX 14,CON 26,INT 18,WIS 24,CHA 16</stats>
+	<saves>DEX 9,CON 15,WIS 14</saves>
+	<skills>INTIMIDATION 17,PERCEPTION 14</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,18,,Baphomet</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Charge,If Baphomet moves at least 10 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 16 (3d10) piercing damage. If the target is a creature, it must succeed on a DC 25 Strength saving throw or be pushed up to 10 feet away and knocked prone.</passive>
+		<passive>Reckless,At the start of his turn, Baphomet can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against him have advantage until the start of his next turn.</passive>
+		<passive>Labyrinthine Recall,Baphomet can perfectly recall any path he has traveled, and he is immune to the maze spell.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF BAPHOMET
+If a creature goes mad in Baphomet's lair or within line of sight of the demon lord, roll on the Madness of Baphomet table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01 - 20	"My anger consumes me. I can't be reasoned with when my rage has been stoked."
+21 - 40	"I degenerate into beastly behavior, seeming more like a wild animal than a thinking being."
+41- 60	"The world is my hunting ground. Others are my prey."
+61 - 80	"Hate comes easily to me and explodes into rage."
+81 - 00	"I see those who oppose me not as people, but as beasts meant to be preyed upon."</other>
+	<actions>
+		<multiattack>Baphomet makes three attacks: one with Heartcleaver, one with his bite, and one with his gore attack.</multiattack>
+		<attack>Heartcleaver,17,15,One target. Hit: 21 (2d10+10) slashing damage.</attack>
+		<attack>Bite,17,10,One target. Hit: 19 (2d8+10) piercing damage.</attack>
+		<attack>Gore,17,10,One target. Hit: 17 (2d6+10) piercing damage.</attack>
+		<effect>Frightful Presence,null,Each creature of Baphomet's choice with in 120 feet of him and aware of him must succeed on a DC 18 Wisdom saving throw or become frightened for 1 minute. A frightened creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. These later saves have disadvantage if Baphomet is within line of sight of the creature.
+If a creature succeeds on any of these saves or the effect ends on it, the creature is immune to Baphomet's Frightful Presence for the next 24 hours.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Heartcleaver Attack,1,Baphomet makes a melee attack with Heartcleaver.</legendaryaction>
+		<legendaryaction>Charge,2,Baphomet moves up to his speed, then makes a gore attack.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Baphomet seals one doorway or other entryway within the lair. The opening must be unoccupied. It is filled with solid stone for 1 minute or until Baphomet creates this effect again.</lairaction>
+		<lairaction>Baphomet chooses a room within the lair that is no larger in any dimension than 100 feet. Until the next initiative count 20, gravity is reversed within that room. Any creatures or objects in the room when this happens fall in the direction of the new pull of gravity, unless they have some means of remaining aloft. Baphomet can ignore the gravity reversal if he's in the room, although he likes to use this action to land on a ceiling to attack targets flying near it.</lairaction>
+		<lairaction>Baphomet casts mirage arcane, affecting a room within the lair that is no larger in any dimension than 100 feet. The effect ends on the next initiative count 20.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Claugiyliamatar</name>
 	<size>GARGANTUAN</size>
 	<type>DRAGON,false</type>
@@ -20108,6 +20166,61 @@ Understands the languages of its creator but can't speak.</other>
 		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
 	</lair>
 	<source>STORMKINGSTHUNDER</source>
+</creature>
+<creature>
+	<name>Fraz-Urb'luu</name>
+	<size>LARGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>23.0</cr>
+	<ac>18</ac>
+	<hp>337</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 29,DEX 12,CON 25,INT 26,WIS 24,CHA 26</stats>
+	<saves>DEX 8,CON 14,INT 15,WIS 14</saves>
+	<skills>DECEPTION 15,PERCEPTION 14,STEALTH 8</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,23,,FrazUrbluu</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Undetectable,Fraz-Urb'luu can't be targeted by divination magic, perceived through magical scrying sensors, or detected by abilities that sense demons or fiends.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+Alter self can make him medium.
+
+MADNESS OF FRAZ-URB'LUU
+If a creature goes mad in Fraz-Urb'luu's lair or within line of sight of the demon lord, roll on the Madness of Fraz-Urb'luu table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"I never let anyone know the truth about my actions or intentions, even if doing so would be beneficial to me."
+21-40	"I have intermittent hallucinations and fits of catatonia."
+41-60	"My mind wanders as I have elaborate fantasies that have no bearing on reality. When I return my focus to the world, I have a hard time remembering that it was just a daydream."
+61-80	"I convince myself that things are true, even in the face of overwhelming evidence to the contrary."
+81-00	"My perception of real ity doesn't match anyone else's. It makes me prone to violent delusions that make no sense to anyone else."</other>
+	<actions>
+		<multiattack>Fraz-Urb'luu makes three attacks: one with his bite and two with his fists.</multiattack>
+		<attack>Bite,16,10,One target. Hit: 19 (3d6+9) piercing damage.</attack>
+		<attack>Fist,16,10,One target. Hit: 22 (3d8+9) bludgeoning damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Tail,1,Melee Weapon Attack: +16 to hit, reach 15 ft., one target. Hit: 20 (2d10+9) bludgeoning damage. If the target is a Large or smaller creature, it is also grappled (escape DC 24). The grappled target is also restrained. Fraz-Urb'luu can grapple only one creature with his tail at a time.</legendaryaction>
+		<legendaryaction>Phantasmal Killer,2,Fraz-Urb'luu casts phantasmal killer, no concentration required.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Fraz-Urb'luu causes up to five doors within the lair to become walls, and an equal number of doors to appear on walls where there previously were none.</lairaction>
+		<lairaction>Fraz-Urb'luu chooses one humanoid within the lair and instantly creates a simulacrum of that creature (as if created with the simulacrum spell). This simulacrum obeys Fraz-Urb'luu's commands and is destroyed on the next initiative count 20.</lairaction>
+		<lairaction>Fraz-Urb'luu creates a wave of anguish. Each creature he can see within the lair must succeed on a DC 23 Wisdom saving throw or take 33 (6d10) psychic damage.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Halaster Blackcloak</name>
@@ -20197,6 +20310,117 @@ In storm giant form, lymrith retains her alignment, hit points, Hit Dice, abilit
 	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
+	<name>Juiblex</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>23.0</cr>
+	<ac>18</ac>
+	<hp>350</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 24,DEX 10,CON 23,INT 20,WIS 20,CHA 16</stats>
+	<saves>DEX 7,CON 13,WIS 12</saves>
+	<skills>PERCEPTION 12</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,STUNNED,UNCONCIOUS</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,10,18,,Juiblex</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Foul,Any creature, other than an ooze, that starts its turn within 10 feet of Juiblex must succeed on a DC 21 Constitution saving throw or be poisoned until the start of the creature's next turn.</passive>
+		<passive>Regeneration,Juiblex regains 20 hit points at the start of its turn. lf it takes fire or radiant damage, this trait doesn't function at the start of its next turn. Juiblex dies only if it starts its turn with 0 hit points and doesn't regenerate.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF JUIBLEX
+If a creature goes mad in juiblex's lair or within line of sight of the demon lord, roll on the Madness of Juiblex table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"I must consume everything I can!"
+21-40	"I refuse to part with any of my possessions."
+41-60	"I'll do everything I can to get others to eat and drink beyond their normal limits."
+61-80	"I must possess as many material goods as I can."
+81-00	"My persona lity is irrelevant. I am defined by what I consume."</other>
+	<actions>
+		<multiattack>Juiblex makes three acid lash attacks.</multiattack>
+		<attack>Acid Lash,14,10,One target. Hit: 21 (4d6+7) acid damage. Any creature killed by this attack is drawn into Juiblex's body, and the corpse is obliterated after 1 minute.</attack>
+		<effect>Eject Slime,Recharge 5-6,Juiblex spews out a corrosive slime, targeting one creature that it can see within 60 feet of it. The target must make a DC 21 Dexterity saving throw. On a failure, the target takes 55 (10d10) acid damage. Unless the target avoids taking any of this damage, any metal armor worn by the target takes a permanent -1 penalty to the AC it offers, and any metal weapon it is carrying or wearing takes a permanent -1 penalty to damage rolls. The penalty worsens each time a target is subjected to this effect. If the penalty on an object drops to -5, the object is destroyed.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Acid Splash,1,Juiblex casts acid splash.</legendaryaction>
+		<legendaryaction>Attack,1,Juiblex makes one acid lash attack.</legendaryaction>
+		<legendaryaction>Corrupting Touch,2,Melee Weapon Attack: +14 to hit, reach 10 ft., one creature. Hit: 21 (4d6+7) poison damage, and the target is slimed. Until the slime is scraped off with an action, the target is poisoned, and any creature, other than an ooze, is poisoned while within 10 feet of the target.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Juiblex slimes a square area of ground it can see within the lair. The area can be up to 10 feet on a side. The slime lasts for 1 hour or until it is burned awaywith fire. When the slime appears, each creature in that area must s ucceed on a DC 21 Strength saving throw or become restrained. When a creature enters the area for the first time on a turn or ends its turn there, that creature must make the same save.
+A restrained creature is stuck as long as it remains in the slimy area or until it breaks free. The restrained creature, or another creature that can reach it, can use its action to try to break free and must succeed on a DC 21 Strength check.
+If the slime is set on fire, it burns away after 1 round. Any creature that starts its turn in the burning slime takes 22 (4d10) fire damage.</lairaction>
+		<lairaction>Juiblex slimes a square area of ground it can see within the lair. The area can be up to 10 feet on a side. The slime lasts for 1 hour or until it is burned away with fire. When the slime appears, each creature on it must succeed on a DC 21 Dexterity saving throw or fall prone and slide 10 feet in a random direction determined by a d8 roll. When a creature enters the area for the first time on a turn or ends its turn there, that creature must make the same save.
+If the slime is set on fire, it burns away after 1 round. Any creature that starts its turn in the burning slime takes 22 (4d10) fire damage.</lairaction>
+		<lairaction>A green slime (see the Dungeon Master's Guide) appears on a spot on the ceiling that Jubiblex chooses within the lair. The slime disintegrates after 1 hour.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Juiblex (Weakened)</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>23.0</cr>
+	<ac>18</ac>
+	<hp>200</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 24,DEX 10,CON 23,INT 20,WIS 20,CHA 16</stats>
+	<saves>DEX 7,CON 13,WIS 12</saves>
+	<skills>PERCEPTION 12</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED,STUNNED,UNCONCIOUS</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,10,18,,Juiblex</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Foul,Any creature, other than an ooze, that starts its turn within 10 feet of Juiblex must succeed on a DC 21 Constitution saving throw or be poisoned until the start of the creature's next turn.</passive>
+		<passive>Regeneration,Juiblex regains 20 hit points at the start of its turn. lf it takes fire or radiant damage, this trait doesn't function at the start of its next turn. Juiblex dies only if it starts its turn with 0 hit points and doesn't regenerate.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+Eject Slime starts expended.
+
+MADNESS OF JUIBLEX
+If a creature goes mad in juiblex's lair or within line of sight of the demon lord, roll on the Madness of Juiblex table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"I must consume everything I can!"
+21-40	"I refuse to part with any of my possessions."
+41-60	"I'll do everything I can to get others to eat and drink beyond their normal limits."
+61-80	"I must possess as many material goods as I can."
+81-00	"My persona lity is irrelevant. I am defined by what I consume."</other>
+	<actions>
+		<multiattack>Juiblex makes three acid lash attacks.</multiattack>
+		<attack>Acid Lash,14,10,One target. Hit: 21 (4d6+7) acid damage. Any creature killed by this attack is drawn into Juiblex's body, and the corpse is obliterated after 1 minute.</attack>
+		<effect>Eject Slime,Recharge 5-6,Juiblex spews out a corrosive slime, targeting one creature that it can see within 60 feet of it. The target must make a DC 21 Dexterity saving throw. On a failure, the target takes 55 (10d10) acid damage. Unless the target avoids taking any of this damage, any metal armor worn by the target takes a permanent -1 penalty to the AC it offers, and any metal weapon it is carrying or wearing takes a permanent -1 penalty to damage rolls. The penalty worsens each time a target is subjected to this effect. If the penalty on an object drops to -5, the object is destroyed.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Acid Splash,1,Juiblex casts acid splash.</legendaryaction>
+		<legendaryaction>Attack,1,Juiblex makes one acid lash attack.</legendaryaction>
+		<legendaryaction>Corrupting Touch,2,Melee Weapon Attack: +14 to hit, reach 10 ft., one creature. Hit: 21 (4d6+7) poison damage, and the target is slimed. Until the slime is scraped off with an action, the target is poisoned, and any creature, other than an ooze, is poisoned while within 10 feet of the target.</legendaryaction>
+	</legendaryactions>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Kraken</name>
 	<size>GARGANTUAN</size>
 	<type>MONSTOSITY,TITAN,false</type>
@@ -20281,6 +20505,62 @@ lf the kraken takes 50 damage or more on a single turn from a creature inside lt
 	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
+	<name>Zuggtmoy</name>
+	<size>LARGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>23.0</cr>
+	<ac>18</ac>
+	<hp>304</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 22,DEX 15,CON 18,INT 20,WIS 19,CHA 24</stats>
+	<saves>DEX 9,CON 11,WIS 11</saves>
+	<skills>PERCEPTION 11</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,22,,Zuggtmoy</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF ZUGGTMOY
+If a creature goes mad in Zuggtmoy's lair or within line of sight of the demon lord, roll on the Madness of Zuggtmoy table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"I see visions in the world around me that others do not."
+21-40	"I periodically slip into a catatonic state, staring off into the distance for long stretches at a time."
+41-60	"I see an altered version of reality, with my mind convincing itself that things are true even in the face of overwhelming evidence to the contrary."
+61-80	"My mind is slipping away, and my intelligence seems to wax and wane."
+81-00	"I am constantly scratching at unseen fungal infections."</other>
+	<actions>
+		<multiattack>Zuggtmoy makes three pseudopod attacks.</multiattack>
+		<attack>Pseudopod,13,10,One target. Hit: 15 (2d8+6) bludgeoning damage plus 9 (2d8) poison damage.</attack>
+		<effect>Infestation Spores,3/Day,Zuggtmoy releases spores that burst out in a cloud that fills a 20-foot-radius sphere centered on her, and it lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 19 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the spores of Zuggtmoy and also gains a random form of madness (determined by rolling on the Madness of Zuggtmoy table) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature can't be reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves, the creature dies and is reanimated as a spore servant if it's a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
+		<effect>Mind Control Spores,Recharge 5-6,Zuggtmoy releases spores that burst out in a cloud that fills a 20-foot-radius sphere centered on her, and it lingers for 1 minute. Humanoids and beasts in the cloud when it appears, or that enter it later, must make a DC 19 Wisdom saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On a failed save, the creature is infected with a disease called the influence of Zuggtmoy for 24 hours. While infected in this way, the creature is charmed by her and can't be reinfected by these spores.</effect>
+	</actions>
+	<reactions>
+		<reaction>Protective Thrall,When Zuggtmoy is hit by an attack, one creature within 5 feet of Zuggtmoy that is charmed by her must use its reaction to be hit by the attack instead.</reaction>
+	</reactions>
+	<legendaryactions>3
+		<legendaryaction>Attack,1,Zuggtmoy makes one pseudopod attack.</legendaryaction>
+		<legendaryaction>Exert Will,1,One creature charmed by Zuggtmoy that she can see must use its reaction to move up to its speed as she directs or to make a weapon attack against a target that she designates.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Zuggtmoy causes four gas spores or violet fungi (see the Monster Manual) to appear in unoccupied spaces that she chooses within the lair. They vanish after 1 hour.</lairaction>
+		<lairaction>Up to four plant creatures that are friendly to Zuggtmoy and that Zuggtmoy can see can use their reactions to move up to their speed and make one weapon attack.</lairaction>
+		<lairaction>Zuggtmoy uses either her Infestation Spores or her Mind Control Spores, centered on a mushroom or other fungus within her lair, instead of on herself.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Ancient Red Dragon</name>
 	<size>GARGANTUAN</size>
 	<type>DRAGON,false</type>
@@ -20321,6 +20601,62 @@ lf the kraken takes 50 damage or more on a single turn from a creature inside lt
 		<lairaction>Volcanic gasses form a cloud in a 20ft radius sphere centered on a point the dragon can see within 120ft of it. The sphere spreads around corners, and its area is lightly obscured. It lasts until initiative count 20 on the next round. Each creature that starts its turn in the cloud must succeed on a DC 13 Constitution saving throw or be poisoned until the end of its next turn. While poisoned in this way, a creature is incapacitated.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Graz'zt</name>
+	<size>LARGE</size>
+	<type>FIEND,DEMON,true</type>
+	<align>CE</align>
+	<cr>24.0</cr>
+	<ac>20</ac>
+	<hp>346</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 22,DEX 15,CON 21,INT 23,WIS 21,CHA 26</stats>
+	<saves>DEX 9,CON 12,WIS 12</saves>
+	<skills>DECEPTION 15,INSIGHT 12,PERCEPTION 12,PERSUASION 15</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,23,,Grazzt</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Shapechanger,Graz'zt can use his action to polymorph into a form that resembles a Medium humanoid, or back into his true form. Aside from his size, his statistics are the same in each form. Any equipment he is wearing or carrying isn't transformed.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF GRAZ'ZT
+If a creature goes mad in Graz'zt's lair or within line of sight of the demon lord, roll on the Madness of Graz'zt table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+MADNESS OF GRAZ'ZT
+d100	Flaw (lasts until cured)
+01-20	"Nothing is more important to me than admiring my own reflection. Anyone who doesn't appreciate my beauty is a fool."
+21-40	"Sex is a great solution to all of life's problems. Why doesn't anyone else get this?"
+41-60	"My appetite for delicious, pleasurable substances knows no bounds. I'll do anything to get more."
+61-80	"Rumors spread easily, and I know many of them. Who cares if they're true?"
+81-90	"To properly honor my dark, beautiful lord, I must prepare intricate, debauched rituals."
+91-00	"Anyone who doesn't do exactly what I say deserves no happiness."</other>
+	<actions>
+		<multiattack>Graz'zt attacks twice with Wave of Sorrow.</multiattack>
+		<attack>Wave of Sorrow (Greatsword),13,10,One target. Hit: 20 (4d6+6) slashing damage plus 10 (3d6) acid damage.</attack>
+		<effect>Teleport,null,Graz'zt magically teleports, a long with any equipment he is wearing or carrying, up to 120 feet to an unoccupied space he can see.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Attack,1,Graz'zt attacks once with Wave of Sorrow.</legendaryaction>
+		<legendaryaction>Dance My Puppet!,1,One creature charmed by Graz'zt that Graz'zt can see must use its reaction to move up to its speed as Graz'zt directs.</legendaryaction>
+		<legendaryaction>Sow Discord,1,Graz'zt casts crown of madness or dissonant whispers.</legendaryaction>
+		<legendaryaction>Teleport,1,Graz'zt uses his Teleport action.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Graz'zt casts the command spell on every creature of his choice in the lair. He needn't see each one, but he must be aware that an individual is in the lair to target that creature. He issues the same command to all the targets.</lairaction>
+		<lairaction>Smooth surfaces within the lair become as reflective as a polished mirror. Until a different lair action is used, creatures within the lair have disadvantage on Dexterity (Stealth) checks made to hide.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Rakdos</name>
@@ -20367,6 +20703,64 @@ lf the kraken takes 50 damage or more on a single turn from a creature inside lt
 		<lairaction>Blood splashes all creatures in a 20-foot-radius sphere centered on a point within the carnival. Each creature in that area becomes the target of a confusion spell (save DC 15).</lairaction>
 	</lair>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Yeenoghu</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>24.0</cr>
+	<ac>20</ac>
+	<hp>333</hp>
+	<speed>WALK 50</speed>
+	<stats>STR 29,DEX 16,CON 23,INT 15,WIS 24,CHA 15</stats>
+	<saves>DEX 10,CON 15,WIS 14</saves>
+	<skills>INTIMIDATION 9,PERCEPTION 14</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,9,17,,Yeenoghu</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Rampage,When Yeenoghu reduces a creature to 0 hit points with a melee attack on his turn, Yeenoghu can take a bonus action to move u p to half his speed and make a bite attack.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF YEENOGHU
+If a creature goes mad in Yeenoghu's lair or within line of sight of the demon lord, roll on the Madness of Yeenoghu table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"I get caught up in the flow of anger, and try to stoke others around me into forming an angry mob."
+21-40	"The flesh of other intelligent creatures is delicious!"
+41-60	"I rail against the laws and customs of civilization, attempting to return to a more primitive time."
+61-80	"I hunger for the deaths of others, and am constantly starting fights in the hope of seeing bloodshed."
+81 -00	"I keep trophies from the bodies I have slain, turning them into adornments."</other>
+	<actions>
+		<multiattack>Yeenoghu makes three flail attacks.</multiattack>
+		<attack>Flail,16,15,One target. Hit: 15 (1d12+9) bludgeoning damage.
+If an attack hits, he can cause it to create an additional effect of his choice or at random (each effect can be used only once per Multiattack):
+ - 1. The attack deals an extra 13 (2d12) bludgeoning damage.
+ - 2. The target must succeed on a DC 17 Constitution saving throw or be paralyzed until the start of Yeenoghu's next turn.
+ - 3. The target must succeed on a DC 17 Wisdom saving throw or be affected by the confusion spell until the start of Yeenoghu's next turn.</attack>
+		<attack>Bite,16,10,One target. Hit: 14 (1d10+9) piercing damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Charge,1,Yeenoghu moves up to his speed.</legendaryaction>
+		<legendaryaction>Swat Away,1,Yeenoghu makes a flail attack. If the attack hits, the target must succeed on a DC 24 Strength saving throw or be pushed 15 feet in a straight line away from Yeenoghu. If the saving throw fails by 5 or more, the target falls prone.</legendaryaction>
+		<legendaryaction>Savage,2,Yeenoghu makes a bite attack against each creature within 10 feet of him.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Yeenoghu causes an iron spike- 5 feet tall and 1 inch in diameter-to burst from the ground at a point he can see within 100 feet of him. Any creature in the space where the spike emerges must make a DC 24 Dexterity saving throw. On a failed save, the creature takes 27 (6d8) piercing damage and is restrained by being impaled on the spike. A creature can use an action to remove itself (or a creature it can reach) from the spike, ending the restrained condition.</lairaction>
+		<lairaction>Each gnoll or hyena that Yeenoghu can see can use its reaction to move up to its speed.</lairaction>
+		<lairaction>Until the next initiative count 20, all gnolls and hyenas within the lair are enraged, causing them to have advantage on melee weapon attack rolls and causing attack rolls to have advantage against them.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Klauth</name>
@@ -20463,6 +20857,118 @@ lf the kraken takes 50 damage or more on a single turn from a creature inside lt
 	<source>STORMKINGSTHUNDER</source>
 </creature>
 <creature>
+	<name>Demogorgon</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>26.0</cr>
+	<ac>22</ac>
+	<hp>406</hp>
+	<speed>WALK 50,SWIM 50</speed>
+	<stats>STR 29,DEX 14,CON 26,INT 20,WIS 17,CHA 25</stats>
+	<saves>DEX 10,CON 16,WIS 11,CHA 15</saves>
+	<skills>INSIGHT 11,PERCEPTION 19</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,,23,,Demogorgon</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Two Heads,Demogorgon has advantage on saving throws against being blinded, deafened, stunned, or knocked unconscious.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF DEMOGORGON
+If a creature goes mad in Demogorgon's lair or within line of sight of the demon lord, roll on the Madness of Demogorgon table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"Someone is plotting to kill me. I need to strike first to stop them!"
+21-40	"There is only one solution to my problems: kill them all!"
+41-60	"There is more than one mind inside my head."
+61-80	"If you don't agree with me, I'll beat you into submission to get my way."
+81-00	"I can't allow anyone to touch anything that belongs to me. They might try to take it away from me!"</other>
+	<actions>
+		<multiattack>Demogorgon makes two tentacle attacks.</multiattack>
+		<attack>Tentacle,17,10,One target. Hit: 28 (3d12+9) bludgeoning damage. If the target is a creature, it must succeed on a DC 23 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0.</attack>
+		<effect>Gaze,null,Demogorgon turns his magical gaze toward one creature that he can see within 120 feet of him. That target must make a DC 23 Wisdom saving throw. Unless the target is incapacitated, it can avert its eyes to avoid the gaze and to automatically succeed on the save. If the target does so, it can't see Demogorgon until the start of his next turn. If the target looks at him in the meantime, it must immediately make the save. 
+If the target fails the save, the target suffers one of the following effects of Demogorgon's choice or at random:
+ - 1. Beguiling Gaze. The target is stunned until the start of Demogorgon's next turn or until Demogorgon is no longer within line of sight.
+ - 2. Hypnotic Gaze. The target is charmed by Demogorgon until the start of Demogorgon's next turn. Demogorgon chooses how the charmed target uses its actions, reactions, and movement. Because this gaze requires Demogorgon to focus both heads on the target, he can't use his Maddening Gaze legendary action until the start of his next turn.
+ - 3. Insanity Gaze. The target suffers the effect of the confusion spell without making a saving throw. The effect lasts until the start of Demogorgon's next turn. Demogorgon doesn't need to concentrate on the spell.</effect>
+	</actions>
+	<legendaryactions>2
+		<legendaryaction>Tail,1,Melee Weapon Attack: +17 to hit, reach 15 ft., one target. Hit: 20 (2d10+9) bludgeoning damage plus 11 (2d10) necrotic damage.</legendaryaction>
+		<legendaryaction>Maddening Gaze,1,Demogorgon uses his Gaze action, and must choose either the Beguiling Gaze or the Insanity Gaze effect.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Demogorgon creates an illusory duplicate of himself, which appears in his own space and lasts until initiative count 20 of the next round. On his turn, Demogorgon can move the illusory duplicate a distance equal to his walking speed (no action required). The first time a creature or object interacts physically with Demogorgon (for example, by hitting him with an attack), there is a 50 percent chance that the illusory duplicate is being affected, not Demogorgon himself, in which case the illusion disappears.</lairaction>
+		<lairaction>Demogorgon casts the darkness spell four times at its lowest level, targeting different are as with the spell. Demogorgon doesn't need to concentrate on the spells, which end on initiative count 20 of the next round.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Demogorgon (Weakened)</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>26.0</cr>
+	<ac>22</ac>
+	<hp>290</hp>
+	<speed>WALK 50,SWIM 50</speed>
+	<stats>STR 29,DEX 14,CON 26,INT 20,WIS 17,CHA 25</stats>
+	<saves>STR 4,DEX 5,CON 11,INT 0,WIS 6,CHA 10</saves>
+	<skills>ACROBATICS -3,ANIMALHANDLING -2,ARCANA 0,ATHLETICS 4,DECEPTION 2,HISTORY 0,INSIGHT 6,INTIMIDATION 2,INVESTIGATION 0,MEDICINE -2,NATURE 0,PERCEPTION 14,PERFORMANCE 2,PERSUASION 2,RELIGION 0,SLIGHTOFHAND -3,STEALTH -3,SURVIVAL -2</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>1</legendaryresistance>
+		<innatecasting>CHA,,23,,DemogorgonWeakened</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Two Heads,Demogorgon has advantage on saving throws against being blinded, deafened, stunned, or knocked unconscious.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF DEMOGORGON
+If a creature goes mad in Demogorgon's lair or within line of sight of the demon lord, roll on the Madness of Demogorgon table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"Someone is plotting to kill me. I need to strike first to stop them!"
+21-40	"There is only one solution to my problems: kill them all!"
+41-60	"There is more than one mind inside my head."
+61-80	"If you don't agree with me, I'll beat you into submission to get my way."
+81-00	"I can't allow anyone to touch anything that belongs to me. They might try to take it away from me!"</other>
+	<actions>
+		<multiattack>Demogorgon makes two tentacle attacks.</multiattack>
+		<attack>Tentacle,12,10,One target. Hit: 28 (3d12+9) bludgeoning damage. If the target is a creature, it must succeed on a DC 23 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0.</attack>
+		<effect>Gaze,null,Demogorgon turns his magical gaze toward one creature that he can see within 120 feet of him. That target must make a DC 23 Wisdom saving throw. Unless the target is incapacitated, it can avert its eyes to avoid the gaze and to automatically succeed on the save. If the target does so, it can't see Demogorgon until the start of his next turn. If the target looks at him in the meantime, it must immediately make the save. 
+If the target fails the save, the target suffers one of the following effects of Demogorgon's choice or at random:
+ - 1. Beguiling Gaze. The target is stunned until the start of Demogorgon's next turn or until Demogorgon is no longer within line of sight.
+ - 2. Hypnotic Gaze. The target is charmed by Demogorgon until the start of Demogorgon's next turn. Demogorgon chooses how the charmed target uses its actions, reactions, and movement. Because this gaze requires Demogorgon to focus both heads on the target, he can't use his Maddening Gaze legendary action until the start of his next turn.
+ - 3. Insanity Gaze. The target suffers the effect of the confusion spell without making a saving throw. The effect lasts until the start of Demogorgon's next turn. Demogorgon doesn't need to concentrate on the spell.</effect>
+	</actions>
+	<legendaryactions>2
+		<legendaryaction>Tail,1,Melee Weapon Attack: +12 to hit, reach 15 ft., one target. Hit: 20 (2d10+9) bludgeoning damage plus 11 (2d10) necrotic damage.</legendaryaction>
+		<legendaryaction>Maddening Gaze,1,Demogorgon uses his Gaze action, and must choose either the Beguiling Gaze or the Insanity Gaze effect.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Demogorgon creates an illusory duplicate of himself, which appears in his own space and lasts until initiative count 20 of the next round. On his turn, Demogorgon can move the illusory duplicate a distance equal to his walking speed (no action required). The first time a creature or object interacts physically with Demogorgon (for example, by hitting him with an attack), there is a 50 percent chance that the illusory duplicate is being affected, not Demogorgon himself, in which case the illusion disappears.</lairaction>
+		<lairaction>Demogorgon casts the darkness spell four times at its lowest level, targeting different are as with the spell. Demogorgon doesn't need to concentrate on the spells, which end on initiative count 20 of the next round.</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
 	<name>Niv-Mizzet</name>
 	<size>GARGANTUAN</size>
 	<type>DRAGON,false</type>
@@ -20504,6 +21010,62 @@ lf the kraken takes 50 damage or more on a single turn from a creature inside lt
 		<legendaryaction>Dracogenius,3,Niv-Mizzet regains a spell slot of 3rd level or lower.</legendaryaction>
 	</legendaryactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Orcus</name>
+	<size>HUGE</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>26.0</cr>
+	<ac>20</ac>
+	<hp>405</hp>
+	<speed>WALK 40,FLY 40</speed>
+	<stats>STR 27,DEX 14,CON 25,INT 20,WIS 20,CHA 25</stats>
+	<saves>DEX 10,CON 15,WIS 13</saves>
+	<skills>ARCANA 12,PERCEPTION 12</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC,NONMAGICALBASIC</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,FRIGHTENED,POISONED</conditions>
+	<senses>TRUESIGHT 120</senses>
+	<languages>ALL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<legendaryresistance>3</legendaryresistance>
+		<innatecasting>CHA,15,23,,Orcus</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Master of Undeath,When Orcus casts animate dead or create undead, he chooses the level at which the spell is cast, and the creatures created by the spells remain under his control indefinitely. Additionally, he can cast create undead even when it isn't night.</passive>
+		<passive>Wand of Orcus,The wand has 7 charges, and any of its properties that require a saving throw have a save DC of 18. While holding it, Orcus can use an action to cast animate dead, blight, or speak with dead. Alternatively, he can expend 1 or more of the wand's charges to cast one of the following spells from it: circle of death (1 charge), finger of death (1 charge), or power word kill (2 charges). The wand regains 1d4+3 charges daily at dawn.
+While holding the wand, Orcus can use an action to conjure undead creatures whose combined average hit points don't exceed 500. These undead magically rise up from the ground or otherwise form in unoccupied spaces within 300 feet of Orcus and obey his commands until they are destroyed or until he dismisses them as an action. Once this property of the wand is used, the property can't be used again until the next dawn.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+
+MADNESS OF ORCUS
+If a creature goes mad in Orcus's lair or within line of sight of the demon lord, roll on the Madness of Orcus table to determine the nature of the madness, which is a character flaw that lasts until cured. See the Dungeon Master's Guide for more on madness.
+d100	Flaw (lasts until cured)
+01-20	"I often become withdrawn and moody, dwelling on the insufferable state of life."
+21-40	"I am compelled to make the weak suffer."
+41-60	"I have no compunction against tampering with the dead in my search to better understand death."
+61-80	"I want to achieve the everlasting existence of undeath."
+81-00	"I am awash in the awareness of life's futility."</other>
+	<actions>
+		<multiattack>Orcus makes two Wand of Orcus attacks.</multiattack>
+		<attack>Wand of Orcus,19,10,One target. Hit: 21 (3d8+8) bludgeoning damage plus 13 (2d12) necrotic damage.</attack>
+		<attack>Tail,16,10,One target. Hit: 21 (3d8+8) piercing damage plus 9 (2d8) poison damage.</attack>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Tail,1,Orcus makes one tail attack.</legendaryaction>
+		<legendaryaction>A Taste of Undeath,1,Orcus casts chill touch.</legendaryaction>
+		<legendaryaction>Creeping Death,2,Orcus chooses a point on the ground that he can see within 100 feet of him. A cylinder of swirling necrotic energy 60 feet tall and with a 10-foot radius rises from that point and lasts until the end of Orcus's next turn. Creatures in that area have vulnerability to necrotic damage.</legendaryaction>
+	</legendaryactions>
+	<lair>
+		<lairaction>Orcus's voice booms throughout the lair. His utterance causes one creature of his choice to be subjected to power word kill (save DC 23). Orcus needn't see the creature, but he must be aware that the individual is in the lair.</lairaction>
+		<lairaction>Orcus causes up to six corpses within the lair to rise as skeletons, zombies, or ghouls. These undead obey his telepathic commands, which can reach anywhere in the lair.</lairaction>
+		<lairaction>Orcus causes skeletal arms to rise from an area on the ground in a 20-foot square that he can see. They last until the next initiative count 20. Each creature in that area when the arms appear must succeed on a DC 23 Strength saving throw or be restrained until the arms disappear or until Orcus releases them (no action required).</lairaction>
+	</lair>
+	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Tiamat</name>
