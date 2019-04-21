@@ -703,7 +703,7 @@ Understands Common but doesn't speak.</other>
 	<actions>
 		<attack>Dagger,2,20,60,One target. Hit: 2 (1d4) piercing damage.</attack>
 	</actions>
-	<source>WATERDEEPDRAGONHEIST</source>
+	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Ash Zombie</name>
@@ -815,7 +815,7 @@ Blind beyond its blindsight radius.</other>
 		<attack>Hooked Shortspear,2,5,One target. Hit: 1 (1d4-1) piercing damage. lf the target is a creature, the derro can choose to deal no damage and try to trip the target instead, in which case the target must succeed on a DC 9 Strength saving throw or fall prone.</attack>
 		<attack>Light Repeating Crossbow,4,40,160,One target. Hit: 5 (1d8+2) piercing damage.</attack>
 	</actions>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Dimetrodon</name>
@@ -835,7 +835,7 @@ Blind beyond its blindsight radius.</other>
 	<actions>
 		<attack>Bite,4,5,One target. Hit: 9 (2d6+2) piercing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Frontline medic</name>
@@ -1044,7 +1044,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<actions>
 		<attack>Dagger,4,20,60,One target. Hit: 4 (1d4+2) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 (2d4) poison damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Hadrosaurus</name>
@@ -1064,7 +1064,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<actions>
 		<attack>Tail,4,5,One target. Hit: 7 (1d10+2) bludgeoning damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Ixitxachitl</name>
@@ -1261,7 +1261,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Bite,4,5,One target. Hit: 6 (1d8+2) piercing damage plus 4 (1d8) poison damage.</attack>
 		<attack>Sticky Leg,4,5,One Small or Tiny creature. Hit: The target is stuck to the steeder's leg and grappled until it escapes (escape DC 12). The steeder can have only one creature grappled at a time.</attack>
 	</actions>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Mongrelfolk</name>
@@ -1578,7 +1578,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Light Crossbow,2,80,320,One target. Hit: 4 (1d8) piercing damage.</attack>
 		<effect>Shell Defense,null,The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell the tortle is prone, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge.</effect>
 	</actions>
-	<source>TORTLEPACKAGE</source>
+	<source>MORDENKAINENSTOMEOFFOES,TORTLEPACKAGE</source>
 </creature>
 <creature>
 	<name>Troglodyte</name>
@@ -1635,7 +1635,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Claws,4,5,One target. Hit: 5 (1d6+2) slashing damage.</attack>
 		<attack>Sling,4,30,120,One target. Hit: 4 (1d4+2) bludgeoning damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Velociraptor</name>
@@ -1660,7 +1660,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Bite,4,5,One creature. Hit: 5 (1d6+2) piercing damage.</attack>
 		<attack>Claws,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Volothamp "Volo" Geddarm</name>
@@ -2024,7 +2024,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Scimitar,3,5,One target. Hit: 4 (1d6+1) slashing damage.</attack>
 		<effect>Spit Fire,Recharges after a Short or Long Rest,The firenewt spits fire at a creature within 10 feet of it. The creature must make a DC 11 Dexterity saving throw, taking 9 (2d8) fire damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Gas spore</name>
@@ -2086,7 +2086,7 @@ Blind beyond blindsight radius.</other>
  - 4. Telekinetic Ray. If the target is a creature that is Medium or smaller, it must succeed on a DC 12 Strength saving throw or be moved up to 30 feet directly away from the gazer.
 If the target is an object weighing 10 pounds or less that isn't being worn or carried, the gazer moves it up to 30 feet in any direction. The gazer can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a container.</effect>
 	</actions>
-	<source>WATERDEEPDRAGONHEIST</source>
+	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Giant Wasp</name>
@@ -3258,6 +3258,7 @@ d8	Minor Adaptation
 	<regions></regions>
 	<passives>
 		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
+		<passive>Boneless,The choker can move through and occupy a space as narrow as 4 inches wide without squeezing.</passive>
 		<passive>Aberrant Quickness (Recharge after a Short or Long Rest),The choker can take an extra action on its turn.</passive>
 	</passives>
 	<other></other>
@@ -3265,7 +3266,7 @@ d8	Minor Adaptation
 		<multiattack>The choker makes two tentacle attacks.</multiattack>
 		<attack>Tentacle,5,10,One target. Hit: 5 (1d4+3) bludgeoning damage plus 3 (1d6) piercing damage. If the target is a Large or smaller creature, it is grappled (escape DC 15). Until this grapple ends, the target is restrained, and the choker can't use this tentacle on another target (the choker has two tentacles). If this attack is a critical hit, the target also can't breathe or speak until the grapple ends.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>MORDENKAINENSTOMEOFFOES,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Crag Cat</name>
@@ -3317,7 +3318,7 @@ d8	Minor Adaptation
 		<attack>Bite,4,5,One target. Hit: 6 (1d8+2) piercing damage.</attack>
 		<attack>Claw,4,5,One target. Hit: 6 (1d8+2) slashing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Dragonclaw</name>
@@ -3672,7 +3673,7 @@ Violet		51 years or more.</other>
 		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage plus 9 (2d8) poison damage.</attack>
 		<attack>Sticky Leg,5,5,One Medium or smaller creature. Hit: The target is stuck to the steeder's leg and grappled until it escapes (escape DC 12). The steeder can have only one creature grappled at a time.</attack>
 	</actions>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Firenewt Warlock of Imix</name>
@@ -3701,7 +3702,7 @@ Spell slots come back after a short rest.</other>
 	<actions>
 		<attack>Morningstar,3,5,One target. Hit: 5 (1d8+1) piercing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Galvanice Weird</name>
@@ -3856,7 +3857,7 @@ Spell slots come back after a short rest.</other>
 		<attack>Bite,6,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
 		<effect>Fire Burst,Recharge 5-6,The giant strider hurls a gout of flame at a point it can see within 60 feet of it. Each creature in a 10-foot-radius sphere centered on that point must make a DC 12 Dexterity saving throw, taking 14 (4d6) fire damage on a failed save, or half as much damage on a successful one. The fire spreads around corners, and it ignites flammable objects in that area that aren't being worn or carried.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Grung Wildling</name>
@@ -3889,7 +3890,7 @@ Red. The poisoned creature must use its action to eat if food is within reach.</
 		<attack>Dagger,5,20,60,One target. Hit: 5 (1d4+3) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 (2d4) poison damage.</attack>
 		<attack>Shortbow,5,80,320,One target. Hit: 6 (1d6+3) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 (2d4) poison damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Guardian Portrait</name>
@@ -4389,7 +4390,7 @@ Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cas
 		<multiattack>The quickling makes three dagger attacks.</multiattack>
 		<attack>Dagger,8,20,60,One target. Hit: 8 (1d4+6) piercing damage.</attack>
 	</actions>
-	<source>LOSTLABORATORYOFKWALISH</source>
+	<source>VOLOSGUIDETOMONSTERS,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
 	<name>Rakdos Performer (Blade Juggler)</name>
@@ -4680,7 +4681,7 @@ The zombie's speed is halved if it's missing a leg. lf it loses both legs, it fa
 	<actions>
 		<attack>Bite,3,5,One target. Hit: 8 (2d6+1) piercing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Thought Spy</name>
@@ -4920,7 +4921,7 @@ Innate spellcasting is psionics.</other>
 		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
-	<source>WATERDEEPDRAGONHEIST</source>
+	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Barnibus Blastwind</name>
@@ -5274,6 +5275,36 @@ Innate spellcasting is psionics.</other>
 	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
+	<name>Duergar Kavalrachni</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,DWARF,false</type>
+	<align>LE</align>
+	<cr>2.0</cr>
+	<ac>16</ac>
+	<hp>26</hp>
+	<speed>WALK 25</speed>
+	<stats>STR 14,DEX 11,CON 14,INT 11,WIS 10,CHA 9</stats>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+		<passive>Duergar Resilience,The duergar has advantage on saving throws against poison, spells, and illusions, as well as to resist being charmed or paralyzed.</passive>
+		<passive>Cavalry Training,When the duergar hits a target with a melee attack while mounted on a female steeder, the steeder can make a melee attack against the same target as a reaction.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The duergar makes two war pick attacks.</multiattack>
+		<attack>War Pick,4,5,One target. Hit: 6 (1d8+2) piercing damage plus 5 (2d4) poison damage.</attack>
+		<attack>Heavy Crossbow,4,100,400,One target. Hit: 5 (1d10) piercing damage.</attack>
+		<effect>Shared Invisibility,Recharges after a Short or Long Rest,The duergar magically turns invisible for up to l hour or until it attacks, it casts a spell, or its concentration is broken (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it. While the invisible duergar is mounted on a female steeder, the steeder is invisible as well. The invisibility ends early on the steeder immediately after it attacks.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Duergar Keeper of the Flame</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,DWARF,false</type>
@@ -5397,7 +5428,7 @@ Innate spellcasting is psionics.</other>
 		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. lf the duergar lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
 		<effect>Invisibility,Recharges after a Short or Long Rest,The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
 	</actions>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Duergar Xarrorn</name>
@@ -5426,7 +5457,7 @@ Innate spellcasting is psionics.</other>
 		<effect>Enlarge,Recharges after a Short or Long Rest,For 1 minute, the duergar magically increases in size, along with anything it is wearing or carrying. While enlarged, the duergar is Large, doubles its damage dice on Strength-based weapon attacks (included in the attacks), and makes Strength checks and Strength saving throws with advantage. lf the duergar lacks the room to become Large, it attains the maximum size possible in the space available.</effect>
 		<effect>Invisibility,Recharges after a Short or Long Rest,The duergar magically turns invisible until it attacks, casts a spell, or uses its Enlarge, or until its concentration is broken, up to 1 hour (as if concentrating on a spell). Any equipment the duergar wears or carries is invisible with it.</effect>
 	</actions>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Eternal Flame Guardian</name>
@@ -5963,10 +5994,10 @@ Gold. The poisoned creature is charmed and can speak Grung.</other>
 		<attack>Shortbow,5,80,320,One target. Hit: 6 (1d6+3) piercing damage, and the target must succeed on a DC 12 Constitution saving throw or take 5 (2d4) poison damage.</attack>
 		<effect>Mesmerizing Chirr,Recharge 6,The grung makes a chirring noise to which grungs are immune. Each humanoid or beast that is within 15 feet of the grung and able to hear it must succeed on a DC 12 Wisdom saving throw or be stunned until the end of the grung's next turn.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
-	<name>Guard drake</name>
+	<name>Guard Drake</name>
 	<size>MEDIUM</size>
 	<type>DRAGON,false</type>
 	<align>UNALIGNED</align>
@@ -5988,6 +6019,155 @@ Gold. The poisoned creature is charmed and can speak Grung.</other>
 		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
 	</actions>
 	<source>HOARDOFTHEDRAGONQUEEN,THERISEOFTIAMAT</source>
+</creature>
+<creature>
+	<name>Guard Drake</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 4,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<multiattack>The drake makes two attacks: one with its bite and one with its tail.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Guard Drake (Variant: Black)</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 4,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>ACID</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<multiattack>The drake makes two attacks: one with its bite and one with its tail.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Guard Drake (Variant: Blue)</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30,BURROW 20</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 4,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>LIGHTNING</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<multiattack>The drake makes two attacks: one with its bite and one with its tail.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Guard Drake (Variant: Green)</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 4,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Amphibious,This creature can breathe air and water.</passive>
+	</passives>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<multiattack>The drake makes two attacks: one with its bite and one with its tail.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Guard Drake (Variant: Red)</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 4,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>FIRE</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<multiattack>The drake makes two attacks: one with its bite and one with its tail.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Guard Drake (Variant: White)</name>
+	<size>MEDIUM</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>2.0</cr>
+	<ac>14</ac>
+	<hp>52</hp>
+	<speed>WALK 30,BURROW 20,CLIMB 30</speed>
+	<stats>STR 16,DEX 11,CON 16,INT 4,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 2</skills>
+	<multipliers>
+		<RESISTANCE>COLD</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other>Understands Draconic but can't speak.</other>
+	<actions>
+		<multiattack>The drake makes two attacks: one with its bite and one with its tail.</multiattack>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Tail,5,5,One target. Hit: 6 (1d6+3) bludgeoning damage.</attack>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
 	<name>Howling Hatred Priest</name>
@@ -6646,7 +6826,7 @@ must make a DC 13 Constitution saving throw, taking 10 (3d6) poison damage on a 
 	<actions>
 		<attack>Bite,4,10,One creature. Hit: 12 (3d6+2) piercing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Rakdos Lampooner</name>
@@ -6838,7 +7018,7 @@ Only has lair actions when with a group of Rakdos.</other>
 		<attack>Quarterstaff,4,5,One target. Hit: 5 (1d6+2) bludgeoning damage, or 6 (1d8+2) bludgeoning damage when used with two hands.</attack>
 		<effect>Shell Defense,null,The tortle withdraws into its shell. Until it emerges, it gains a +4 bonus to AC and has advantage on Strength and Constitution saving throws. While in its shell the tortle is prone, its speed is 0 and can't increase, it has disadvantage on Dexterity saving throws, it can't take reactions, and the only action it can take is a bonus action to emerge.</effect>
 	</actions>
-	<source>TORTLEPACKAGE</source>
+	<source>MORDENKAINENSTOMEOFFOES,TORTLEPACKAGE</source>
 </creature>
 <creature>
 	<name>Uthgardt Shaman</name>
@@ -7223,7 +7403,7 @@ Only has lair actions when with a group of Rakdos.</other>
 		<attack>Spear,4,20,60,One target. Hit: 5 (1d6+2) piercing damage, or 6 (1d8+2) piercing damage if used with two hands to make a melee attack.</attack>
 		<effect>Spores,1/Day,A 15-foot-radius cloud of toxic spores extends out from the vegepygmy. The spores spread around corners. Each creature in that area that isn't a plant must succeed on a DC 12 Constitution saving throw or be poisoned. While poisoned in this way, a target takes 9 (2d8) poison damage at the start of each of its turns. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Werebat</name>
@@ -7373,7 +7553,7 @@ Can't speak in raven form.</other>
 		<attack>Bite,4,5,One target. Hit: 6 (1d8+2) piercing damage.</attack>
 		<attack>Claws,4,5,One target. Hit: 5 (1d6+2) slashing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Animated Stove</name>
@@ -7641,7 +7821,7 @@ Can't speak in raven form.</other>
 		<attack>Life Drain,4,5,One creature. Hit: 9 (2d6+2) necrotic damage. The target must succeed on a DC 13 Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken. This reduction lasts until the target finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.
 A humanoid slain by this attack rises 24 hours later as a zombie under the wight's control, unless the humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at one time.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>MORDENKAINENSTOMEOFFOES,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Derro (Variant: Savant)</name>
@@ -7671,6 +7851,33 @@ A humanoid slain by this attack rises 24 hours later as a zombie under the wight
 		<attack>Light Repeating Crossbow,4,40,160,One target. Hit: 5 (1d8+2) piercing damage.</attack>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Derro Savant</name>
+	<size>SMALL</size>
+	<type>HUMANOID,DERRO,false</type>
+	<align>CE</align>
+	<cr>3.0</cr>
+	<ac>13</ac>
+	<hp>49</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 9,DEX 14,CON 12,INT 11,WIS 5,CHA 14</stats>
+	<skills>STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>DWARVISH,UNDERCOMMON</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>CHA,4,12,5,DerroSavant</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Quaterstaff,1,5,One target. Hit: 2 (1d6-1) bludgeoning damage.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Doppelganger</name>
@@ -7818,7 +8025,7 @@ A humanoid slain by this attack rises 24 hours later as a zombie under the wight
 		<effect>Scintillating Shell,Recharges after a Short or Long Rest,The snail's shell emits dazzling, colored light until the end of the snail's next turn. During this time, the shell sheds bright light in a 30-foot radius and dim light for an additional 30 feet, and creatures that can see the snail have disadvantage on attack rolls against it. In addition, any creature within the bright light and able to see the snail when this power is activated must succeed on a DC 15 Wisdom saving throw or be stunned until the light ends.</effect>
 		<effect>Shell Defense,null,The flail snail withdraws in to its shell, gaining a +4 bonus to AC until it emerges. It can emerge from its shell as a bonus action on its turn.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Flying Horror</name>
@@ -8137,11 +8344,12 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 		<spellcasting>INT,5,13,7,Illusionist</spellcasting>
 		<passive>Displacement (Recharges after the Illusionist Casts an Illusion Spell of 1st Level or Higher),As a bonus action, the illusionist projects an illusion that makes the illusionist appear to be standing in a place a few inches from its actual location, causing any creature to have disadvantage on attack rolls against the illusionist. The effect ends if the illusionist takes damage, it is incapacitated, or its speed becomes 0.</passive>
 	</passives>
-	<other>Knows any four languages.</other>
+	<other>Knows any four languages.
+May have a familiar.</other>
 	<actions>
 		<attack>Quaterstaff,1,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Kalka-Kylla</name>
@@ -8258,7 +8466,7 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 		<attack>Bite,6,5,One target. Hit: 8 (1d8+4) piercing damage. lf the leucrotta scores a critical hit, it rolls the damage dice three times, instead of twice.</attack>
 		<attack>Hooves,6,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Martial Arts Adept</name>
@@ -8289,7 +8497,7 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 	<reactions>
 		<reaction>Deflect Missile,In response to being hit by a ranged weapon attack, the adept deflects the missile. The damage it takes from the attack is reduced by 1d10+3. If the damage is reduced to 0, the adept catches the missile if it's small enough to hold in one hand and the adept has a hand free.</reaction>
 	</reactions>
-	<source>TALESFROMTHEYAWNINGPORTAL,LOSTLABORATORYOFKWALISH,WATERDEEPDRAGONHEIST</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL,LOSTLABORATORYOFKWALISH,WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Merrenoloth</name>
@@ -8328,7 +8536,7 @@ Every other keg of gunpowder within 20 feet of an exploding keg has a 50 percent
 		<lairaction>A strong wind propels the ship, increasing its speed by 30 feet until initiative count 20 on the next round.</lairaction>
 		<lairaction>The air within 60 feet of the ship is filled with howling wind. Until initiative count 20 on the next round, that area is difficult terrain, and when a Medium or smaller creature flies into that area or starts its turn flying there, it must succeed on a DC 13 Strength saving throw or be knocked prone.</lairaction>
 	</lair>
-	<source>LOSTLABORATORYOFKWALISH</source>
+	<source>MORDENKAINENSTOMEOFFOES,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
 	<name>Minotaur</name>
@@ -8677,7 +8885,7 @@ Telepathy is 120ft.</other>
 		<attack>Rapier,6,5,One target. Hit: 8 (1d8+4) piercing damage.</attack>
 		<attack>Dagger,6,20,60,One target. Hit: 6 (1d4+4) piercing damage.</attack>
 	</actions>
-	<source>WATERDEEPDRAGONHEIST</source>
+	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Thunderbeast Skeleton</name>
@@ -8792,7 +9000,7 @@ Telepathy is 120ft.</other>
 		<effect>Blood Drain,null,One creature in the vampiric mist's space must make a DC 13 Constitution saving throw (undead and constructs automatically succeed). On a failed save, the target takes 10 (2d6+3) necrotic damage, its hit point maximum is reduced by an amount equal to the necrotic damage taken, and the mist regains hit points equal to that amount.
 This reduction to the target's hit point maximum lasts until the target finishes a long rest. It dies if this effect reduces its hit point maximum to 0.</effect>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>MORDENKAINENSTOMEOFFOES,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Veteran</name>
@@ -9074,7 +9282,7 @@ Telepathy is 60ft.</other>
 		<attack>Bite (true form only),6,5,One target. Hit: 13 (2d8+4) piercing damage.</attack>
 		<attack>Claws,6,5,One target. Hit: 8 (1d8+4) slashing damage.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Black pudding</name>
@@ -9512,7 +9720,7 @@ If the lizard dies, a swallowed creature is no longer restrained by it and can e
 		<attack>Bite,6,5,One creature. Hit: 7 (1d6+4) piercing damage.</attack>
 		<attack>Claw,6,10,One target. Hit: 7 (1d6+4) slashing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Goliath stormborn</name>
@@ -10145,7 +10353,7 @@ Is a Boros spellcaster.</other>
 	<actions>
 		<attack>Tail,7,10,One target. Hit: 26 (6d6+5) piercing damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Stone Defender</name>
@@ -10482,7 +10690,7 @@ Gets spell slots back on a short rest.</other>
 		<attack>Scimitar (Yuan-ti Form Only),5,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
 		<effect>Invoke Nightmare,Recharges after a Short or Long Rest,The yuan-ti taps into the nightmares of a creature it can see within 60 feet of it and creates an illusory, immobile manifestation of the creature's deepest fears, visible only to that creature. The target must make a DC 13 Intelligence saving throw. On a failed save, the target takes 11 (2d10) psychic damage and is frightened of the manifestation, believing it to be real. The yuan-ti must concentrate to maintain the illusion (as if concentrating on a spell), which lasts for up to 1 minute and can't be harmed. The target can repeat the saving throw at the end of each of its turns, ending the illusion on a success, or taking 11 (2d10) psychic damage on a failure.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Alicorn</name>
@@ -10697,7 +10905,7 @@ Gets spell slots back on a short rest.</other>
 		<attack>Stomp,8,20,One target. Hit : 27 (5d8+5) bludgeoning damage, and the target must succeed on a DC 14 Strength saving throw or be knocked prone.</attack>
 		<attack>Tail,8,20,One target. Hit: 32 (6d8+5) bludgeoning damage.</attack>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Bulette</name>
@@ -10723,6 +10931,130 @@ Gets spell slots back on a short rest.</other>
 		<effect>Deadly Leap,null,lf the bulette jumps at least 15 feet as part of its movement, it can then use this action to land on its feet in a space that contains one or more other creatures. Each of those creatures must succeed on a DC 16 Strength or Dexterity saving throw (target's choice) or be knocked prone and take 14 (3d6+4) bludgeoning damage plus 14 (3d6+4) slashing damage. On a successful save, the creature takes only half the damage, isn't knocked prone, and is pushed 5 feet out of the bulette's space into an unoccupied space of the creature's choice. lf no unoccupied space is within range, the creature instead falls prone in the bulette's space.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Cambion</name>
+	<size>MEDIUM</size>
+	<type>FIEND,false</type>
+	<align>LE,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>19</ac>
+	<hp>82</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 18,DEX 18,CON 16,INT 14,WIS 12,CHA 16</stats>
+	<saves>STR 7,CON 6,INT 5,CHA 6</saves>
+	<skills>DECEPTION 6,INTIMIDATION 6,PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,POISON,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ABYSSAL,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,14,,Cambion</innatecasting>
+		<passive>Fiendish Blessing,The AC of the cambion includes its charisma bonus.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The cambion makes two melee attacks or uses its Fire Ray twice.</multiattack>
+		<attack>Spear,7,20,60,One target. Hit: 7 (1d6+4) piercing damage, or 8 (1d8+4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.</attack>
+		<attack>Fire Ray,7,120,One target. Hit: 10 (3d6) fire damage.</attack>
+		<effect>Fiendish Charm,null,One humanoid the cambion can see within 30 feet of it must succeed on a DC 14 Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the cambion's spoken commands. lf the target suffers any harm from the cambion or another creature or receives a suicidal command from the cambion, the target can repeat the saving throw, ending the effect on itself on a success. lf a target's saving throw is successful, or if the effect ends for it, the creature is immune to the cambion's Fiendish Charm for the next 24 hours.</effect>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Cambion (Baphomet)</name>
+	<size>MEDIUM</size>
+	<type>FIEND,false</type>
+	<align>LE,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>19</ac>
+	<hp>82</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 18,DEX 18,CON 16,INT 14,WIS 12,CHA 16</stats>
+	<saves>STR 7,CON 6,INT 5,CHA 6</saves>
+	<skills>DECEPTION 6,INTIMIDATION 6,PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,POISON,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ABYSSAL,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,14,,Cambion</innatecasting>
+		<passive>Fiendish Blessing,The AC of the cambion includes its charisma bonus.</passive>
+		<passive>Horned One's Call,When the cambion targets only one creature with the attacks of its Multiattack, it can choose one ally it can see within 30 feet. That ally can use its reaction to make one melee attack against a target of its choice.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The cambion makes two melee attacks or uses its Fire Ray twice.</multiattack>
+		<attack>Spear,7,20,60,One target. Hit: 7 (1d6+4) piercing damage, or 8 (1d8+4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.</attack>
+		<attack>Fire Ray,7,120,One target. Hit: 10 (3d6) fire damage.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Cambion (Graz'zt)</name>
+	<size>MEDIUM</size>
+	<type>FIEND,false</type>
+	<align>LE,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>19</ac>
+	<hp>82</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 18,DEX 18,CON 16,INT 14,WIS 12,CHA 16</stats>
+	<saves>STR 7,CON 6,INT 5,CHA 6</saves>
+	<skills>DECEPTION 6,INTIMIDATION 6,PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,POISON,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ABYSSAL,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,14,,Cambion</innatecasting>
+		<passive>Fiendish Blessing,The AC of the cambion includes its charisma bonus.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The cambion makes two melee attacks or uses its Fire Ray twice.</multiattack>
+		<attack>Spear,7,20,60,One target. Hit: 7 (1d6+4) piercing damage, or 8 (1d8+4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.</attack>
+		<attack>Fire Ray,7,120,One target. Hit: 10 (3d6) fire damage.</attack>
+		<effect>Fiendish Charm,null,One humanoid the cambion can see within 30 feet of it must succeed on a DC 14 Wisdom saving throw or be magically charmed for 1 day. The charmed target obeys the cambion's spoken commands. lf the target suffers any harm from the cambion or another creature or receives a suicidal command from the cambion, the target can repeat the saving throw, ending the effect on itself on a success. lf a target's saving throw is successful, or if the effect ends for it, the creature is immune to the cambion's Fiendish Charm for the next 24 hours.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
+	<name>Cambion (Orcus)</name>
+	<size>MEDIUM</size>
+	<type>FIEND,false</type>
+	<align>LE,NE,CE</align>
+	<cr>5.0</cr>
+	<ac>19</ac>
+	<hp>82</hp>
+	<speed>WALK 30,FLY 60</speed>
+	<stats>STR 18,DEX 18,CON 16,INT 14,WIS 12,CHA 16</stats>
+	<saves>STR 7,CON 6,INT 5,CHA 6</saves>
+	<skills>DECEPTION 6,INTIMIDATION 6,PERCEPTION 4,STEALTH 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD,FIRE,LIGHTNING,POISON,NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ABYSSAL,INFERNAL</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,14,,CambionOrcus</innatecasting>
+		<passive>Spawn of the Grave,At the end of each of the cambion's turns, each undead of its choice that it can see within 30 feet gains 10 temporary hit points, provided the cambion isn't incapacitated.</passive>
+		<passive>Fiendish Blessing,The AC of the cambion includes its charisma bonus.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The cambion makes two melee attacks or uses its Fire Ray twice.</multiattack>
+		<attack>Spear,7,20,60,One target. Hit: 7 (1d6+4) piercing damage, or 8 (1d8+4) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) fire damage.</attack>
+		<attack>Fire Ray,7,120,One target. Hit: 10 (3d6) fire damage.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Captain Othelstan</name>
@@ -11919,11 +12251,12 @@ Spiritual weapon is a spear.</other>
  - Resistance to acid, cold, fire, lightning, or thunder damage (transmuter's choice whenever the transmuter chooses this benefit)
 If the transmuter has the stone and casts a transmutation spell of 1st level or higher, it can change the effect of the stone.</passive>
 	</passives>
-	<other>Knows any four languages.</other>
+	<other>Knows any four languages.
+May have a familiar.</other>
 	<actions>
 		<attack>Quarterstaff,2,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Troll</name>
@@ -12318,7 +12651,7 @@ Knows the languages it knew in life.</other>
 		<attack>Fist,5,5,One target. Hit: 4 (1d4+2) bludgeoning damage plus 9 (2d8) necrotic damage.</attack>
 		<effect>Withering Gaze,null,One creature that the bodak can see within 60 feet of it must make a DC 13 Constitution saving throw, taking 22 (4d10) necrotic damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Bonebreaker Dorokor</name>
@@ -12485,11 +12818,12 @@ d8	Minor Adaptation
 		<spellcasting>INT,6,14,9,Conjurer</spellcasting>
 		<passive>Benign Transportation (Recharges after the Conjurer Casts a Conjuration Spell of 1st Level or Higher),As a bonus action, the conjurer teleports up to 30 feet to an unoccupied space that it can see. If it instead chooses a space within range that is occupied by a willing Small or Medium creature, they both teleport, swapping places.</passive>
 	</passives>
-	<other>Knows any four languages.</other>
+	<other>Knows any four languages.
+May have a familiar.</other>
 	<actions>
 		<attack>Dagger,5,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Davil Starsong</name>
@@ -13171,7 +13505,7 @@ May have a familiar.</other>
 		<attack>Flail,7,5,One target. Hit: 8 (1d8+4) bludgeoning damage.</attack>
 		<effect>Lightning Strike,Recharge 6,The myrmidon makes one flail attack. If the attack hits, it deals an extra 18 (4d8) lightning damage, and the target must succeed on a DC 14 Constitution saving throw or be stunned until the end of the myrmidon's next turn.</effect>
 	</actions>
-	<source>PRINCESOFTHEAPOCALYPSE</source>
+	<source>MORDENKAINENSTOMEOFFOES,PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Artus Cimber</name>
@@ -13507,7 +13841,7 @@ Only has lair actions when with a group of Rakdos.</other>
 		<attack>Maul,7,5,One target. Hit: 11 (2d6+4) bludgeoning damage.</attack>
 		<effect>Thunderous Strike,Recharge 6,The myrmidon makes one maul attack. If the attack hits, it deals an extra 16 (3d10) thunder damage, and the target must succeed on a DC 14 Strength saving throw or be knocked prone.</effect>
 	</actions>
-	<source>PRINCESOFTHEAPOCALYPSE</source>
+	<source>MORDENKAINENSTOMEOFFOES,PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Fire Elemental Myrmidon</name>
@@ -13538,7 +13872,7 @@ Only has lair actions when with a group of Rakdos.</other>
 		<attack>Scimitar,7,5,One target. Hit: 7 (1d6+4) slashing damage.</attack>
 		<effect>Fiery Strikes,Recharge 6,The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) fire damage.</effect>
 	</actions>
-	<source>PRINCESOFTHEAPOCALYPSE</source>
+	<source>MORDENKAINENSTOMEOFFOES,PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Firefist</name>
@@ -14109,7 +14443,7 @@ Chorus of Damnation. While the Virtue sings, any extraplanar evil creatures have
 		<attack>Trident,7,5,One target. Hit: 7 (1d6+4) piercing damage.</attack>
 		<effect>Freezing Strikes,Recharge 6,The myrmidon uses Multiattack. Each attack that hits deals an extra 5 (1d10) cold damage, and the target's speed is reduced by 10 feet until the end of the myrmidon's next turn.</effect>
 	</actions>
-	<source>PRINCESOFTHEAPOCALYPSE</source>
+	<source>MORDENKAINENSTOMEOFFOES,PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Xandala</name>
@@ -14740,6 +15074,36 @@ Innate spellcasting is psionics.</other>
 	<source>MONSTERMANUAL,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
+	<name>Mind Flayer Psion</name>
+	<size>MEDIUM</size>
+	<type>ABERRATION,false</type>
+	<align>LE</align>
+	<cr>8.0</cr>
+	<ac>15</ac>
+	<hp>71</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 11,DEX 12,CON 12,INT 19,WIS 17,CHA 17</stats>
+	<saves>INT 7,WIS 6,CHA 6</saves>
+	<skills>ARCANA 7,DECEPTION 6,INSIGHT 6,PERCEPTION 6,PERSUASION 6,STEALTH 4</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 120</senses>
+	<languages>UNDERCOMMON,DEEPSPEECH,TELEPATHY</languages>
+	<regions>UNDERDARK</regions>
+	<passives>
+		<innatecasting>INT,7,15,10,MindFlayerPsion</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+	</passives>
+	<other>Telepathy is 120ft.
+Innate spellcasting is psionics, and is as a 10th level caster.</other>
+	<actions>
+		<attack>Tentacles,7,5,One creature. Hit: 15 (2d10+4) psychic damage. lf the target is Medium or smaller, it is grappled (escape DC 15) and must succeed on a DC 15 lntelligence saving throw or be stunned until this grapple ends.</attack>
+		<attack>Extract Brain,7,5,One incapacitated humanoid grappled by the mind flayer. Hit: The target takes 55 (10d10) piercing damage. lf this damage reduces the target to 0 hit points, the mind flayer kills the target by extracting and devouring its brain.</attack>
+		<effect>Mind Blast,Recharge 5-6,The mind flayer magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 15 lntelligence saving throw or take 22 (4d8+4) psychic damage and be stunned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
+	</actions>
+	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
 	<name>Nivix Cyclops</name>
 	<size>LARGE</size>
 	<type>GIANT,false</type>
@@ -15266,7 +15630,7 @@ Telepathy is 120ft.</other>
 		<attack>Greatsword,9,5,One target. Hit: 12 (2d6+5) slashing damage, plus 7 (2d6) slashing damage if the champion has more than half of its total hit points remaining.</attack>
 		<attack>Shortbow,6,80,320,One target. Hit: 5 (1d6+2) piercing damage, plus 7 (2d6) piercing damage if the champion has more than half of its total hit points remaining.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL,TOMBOFANNIHILATION,WATERDEEPDUNGEONOFTHEMADMAGE</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL,TOMBOFANNIHILATION,WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Cloud Giant</name>
@@ -15406,11 +15770,12 @@ Telepathy is 120ft.</other>
 		<spellcasting>INT,7,15,12,Evoker</spellcasting>
 		<passive>Sculpt Spells,When the evoker casts an evocation spell that forces other creatures it can see, it can choose a number of them equal to 1+ the spell's level. These creatures automatically succeed on their saving throws against the spell. If a successful save means a chosen creature would take half damage from the spell, it instead takes no damage from it.</passive>
 	</passives>
-	<other>Knows any four languages.</other>
+	<other>Knows any four languages.
+May have a familiar.</other>
 	<actions>
 		<attack>Quarterstaff,3,5,One target. Hit: 2 (1d6-1) bludgeoning damage, or 3 (1d8-1) bludgeoning damage if used with two hands.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL,LOSTLABORATORYOFKWALISH</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
 	<name>Fire Giant</name>
@@ -15771,11 +16136,12 @@ When the devil rolls a 20 on an attack roll with a claw, the target is decapitat
 		<spellcasting>INT,7,15,12,Necromancer</spellcasting>
 		<passive>Grim Harvest (1/Turn),When necromancer kills a creature that is neither a construct nor undead with a spell of 1st level or higher, the necromancer regains hit points equal to twice the spell's level, or three times if it is a necromancy spell.</passive>
 	</passives>
-	<other>Knows any four languages.</other>
+	<other>Knows any four languages.
+May have a familiar.</other>
 	<actions>
 		<attack>Withering Touch,7,5,One creature. Hit: 5 (2d4) necrotic damage.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>VOLOSGUIDETOMONSTERS,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Ravager slaughter lord</name>
@@ -16136,7 +16502,7 @@ Innate spellcasting is psionics.</other>
 		<attack>Extract Brain,9,5,One incapacitated humanoid grappled by the ulitharid. Hit: 55 (10d10) piercing damage. If this damage reduces the target to 0 hit points, the ulitharid kills the target by extracting and devouring its brain.</attack>
 		<effect>Mind Blast,Recharge 5-6,The ulitharid magically emits psychic energy in a 60-foot cone. Each creature in that area must succeed on a DC 17 Intelligence saving throw or take 31 (4d12+5) psychic damage and be stunned for 1 minute. A target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
-	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Uursovk</name>
@@ -16514,7 +16880,7 @@ Understands the languages of its creator but can't speak.</other>
 The froghemoth's gullet can hold up to two creatures at a time. If the froghemoth takes 20 damage or more on a single turn from a creature inside it, the froghemoth must succeed on a DC 20 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls prone in a space within 10 feet of the froghemoth. If the froghemoth dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 10 feet of movement, exiting prone,</attack>
 		<effect>Tongue,null,The froghemoth targets one Medium or smaller creature that it can see with in 20 feet of it. The target must make a DC 18 Strength saving throw. On a failed save, the target is pulled into an unoccupied space within 5 feet of the froghemoth, and the froghemoth can make a bite attack against it as a bonus action.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION,LOSTLABORATORYOFKWALISH</source>
+	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION,LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
 	<name>Giant Four-Armed Gargoyle</name>
@@ -16573,7 +16939,7 @@ The froghemoth's gullet can hold up to two creatures at a time. If the froghemot
 		<multiattack>The githyanki makes two longsword attacks.</multiattack>
 		<attack>Longsword,7,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands, plus 18 (4d8} psychic damage.</attack>
 	</actions>
-	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+	<source>MORDENKAINENSTOMEOFFOES,WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Githzerai Enlightened</name>
@@ -17549,7 +17915,7 @@ A humanoid slain by this attack rises 24 hours later as a zombie under Naergoth'
 While in a new form, the archdruid retains its game statistics and ability to speak, but its AC, movement modes, Strength, and Dexterity are replaced by those of the new form, and it gains any special senses, proficiencies, traits, actions, and reactions (except class features, legendary actions, and lair actions) that the new form has but that it lacks . It can cast its spells with verbal or somatic components in its new form.
 The new form's attacks count as magical for the purpose of overcoming resistances and immunity to nonmagical attacks.</effect>
 	</actions>
-	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Arclight Phoenix</name>
@@ -18081,7 +18447,7 @@ If Gar casts cure wounds using this lair action, he regains the maximum number o
 If the neothelid takes 30 damage or more on a single turn from a creature inside it, the neothelid must succeed on a DC 18 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fa ll prone in a space within 10 feet of the neothelid. If the neothelid dies, a swallowed creature is no longer restrained by it and can escape from the corpse by using 20 feet of movement, exiting prone.</attack>
 		<effect>Acid Breath,Recharge 5-6,The neothelid exhales acid in a 60-foot cone. Each creature in that area must make a DC 18 Dexterity saving throw, taking 35 (10d6) acid damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
+	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
 	<name>Skyswimmer</name>
@@ -20119,7 +20485,7 @@ If a creature succeeds on any of these saves or the effect ends on it, the creat
 		<lairaction>Baphomet chooses a room within the lair that is no larger in any dimension than 100 feet. Until the next initiative count 20, gravity is reversed within that room. Any creatures or objects in the room when this happens fall in the direction of the new pull of gravity, unless they have some means of remaining aloft. Baphomet can ignore the gravity reversal if he's in the room, although he likes to use this action to land on a ceiling to attack targets flying near it.</lairaction>
 		<lairaction>Baphomet casts mirage arcane, affecting a room within the lair that is no larger in any dimension than 100 feet. The effect ends on the next initiative count 20.</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Claugiyliamatar</name>
@@ -20220,7 +20586,7 @@ d100	Flaw (lasts until cured)
 		<lairaction>Fraz-Urb'luu chooses one humanoid within the lair and instantly creates a simulacrum of that creature (as if created with the simulacrum spell). This simulacrum obeys Fraz-Urb'luu's commands and is destroyed on the next initiative count 20.</lairaction>
 		<lairaction>Fraz-Urb'luu creates a wave of anguish. Each creature he can see within the lair must succeed on a DC 23 Wisdom saving throw or take 33 (6d10) psychic damage.</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Halaster Blackcloak</name>
@@ -20366,7 +20732,7 @@ If the slime is set on fire, it burns away after 1 round. Any creature that star
 If the slime is set on fire, it burns away after 1 round. Any creature that starts its turn in the burning slime takes 22 (4d10) fire damage.</lairaction>
 		<lairaction>A green slime (see the Dungeon Master's Guide) appears on a spot on the ceiling that Jubiblex chooses within the lair. The slime disintegrates after 1 hour.</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Juiblex (Weakened)</name>
@@ -20558,7 +20924,7 @@ d100	Flaw (lasts until cured)
 		<lairaction>Up to four plant creatures that are friendly to Zuggtmoy and that Zuggtmoy can see can use their reactions to move up to their speed and make one weapon attack.</lairaction>
 		<lairaction>Zuggtmoy uses either her Infestation Spores or her Mind Control Spores, centered on a mushroom or other fungus within her lair, instead of on herself.</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Ancient Red Dragon</name>
@@ -20656,7 +21022,7 @@ d100	Flaw (lasts until cured)
 		<lairaction>Graz'zt casts the command spell on every creature of his choice in the lair. He needn't see each one, but he must be aware that an individual is in the lair to target that creature. He issues the same command to all the targets.</lairaction>
 		<lairaction>Smooth surfaces within the lair become as reflective as a polished mirror. Until a different lair action is used, creatures within the lair have disadvantage on Dexterity (Stealth) checks made to hide.</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Rakdos</name>
@@ -20760,7 +21126,7 @@ If an attack hits, he can cause it to create an additional effect of his choice 
 		<lairaction>Each gnoll or hyena that Yeenoghu can see can use its reaction to move up to its speed.</lairaction>
 		<lairaction>Until the next initiative count 20, all gnolls and hyenas within the lair are enraged, causing them to have advantage on melee weapon attack rolls and causing attack rolls to have advantage against them.</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Klauth</name>
@@ -20910,7 +21276,7 @@ If the target fails the save, the target suffers one of the following effects of
 		<lairaction>Demogorgon creates an illusory duplicate of himself, which appears in his own space and lasts until initiative count 20 of the next round. On his turn, Demogorgon can move the illusory duplicate a distance equal to his walking speed (no action required). The first time a creature or object interacts physically with Demogorgon (for example, by hitting him with an attack), there is a 50 percent chance that the illusory duplicate is being affected, not Demogorgon himself, in which case the illusion disappears.</lairaction>
 		<lairaction>Demogorgon casts the darkness spell four times at its lowest level, targeting different are as with the spell. Demogorgon doesn't need to concentrate on the spells, which end on initiative count 20 of the next round.</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Demogorgon (Weakened)</name>
@@ -21065,7 +21431,7 @@ d100	Flaw (lasts until cured)
 		<lairaction>Orcus causes up to six corpses within the lair to rise as skeletons, zombies, or ghouls. These undead obey his telepathic commands, which can reach anywhere in the lair.</lairaction>
 		<lairaction>Orcus causes skeletal arms to rise from an area on the ground in a 20-foot square that he can see. They last until the next initiative count 20. Each creature in that area when the arms appear must succeed on a DC 23 Strength saving throw or be restrained until the arms disappear or until Orcus releases them (no action required).</lairaction>
 	</lair>
-	<source>OUTOFTHEABYSS</source>
+	<source>MORDENKAINENSTOMEOFFOES,OUTOFTHEABYSS</source>
 </creature>
 <creature>
 	<name>Tiamat</name>

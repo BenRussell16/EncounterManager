@@ -819,6 +819,7 @@ public class CreatureParser {
 							sources);
 					creatures.add(current);
 					//System.out.println(current.toString());
+					//System.out.println(current.getName());
 				}
 				else {/*System.out.println(*/scan.next()/*)*/;}//Skip to next creature
 			}//where parsing ends

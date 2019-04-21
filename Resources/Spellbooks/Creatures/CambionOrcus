@@ -1,0 +1,14 @@
+<spellbook>
+	<name>CambionOrcus</name>
+	<daily>
+		<1>
+			<spell>Plane shift,true</spell>
+		</1>
+		<3>
+			<spell>Alter self,false</spell>
+			<spell>Command,false</spell>
+			<spell>Detect magic,false</spell>
+			<spell>Animate dead,false</spell>
+		</3>
+	</daily>
+</spellbook>

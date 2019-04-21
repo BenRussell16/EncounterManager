@@ -1,0 +1,22 @@
+<spellbook>
+	<name>MindFlayerPsion</name>
+	<slot>
+		<known>Guidance,Mage hand,True strike,Vicious mockery,Charm person,Command,Comprehend languages,Sanctuary,Crown of madness,Phantasmal force,See invisibility,Clairvoyance,Fear,Meld into stone,Confusion,Stone shape,Scrying,Telekinesis</known>
+		<0>Guidance,Mage hand,True strike,Vicious mockery</0>
+		<1>4,Charm person,Command,Comprehend languages,Sanctuary</1>
+		<2>3,Crown of madness,Phantasmal force,See invisibility</2>
+		<3>3,Clairvoyance,Fear,Meld into stone</3>
+		<4>3,Confusion,Stone shape</4>
+		<5>2,Scrying,Telekinesis</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect thoughts,false</spell>
+			<spell>Levitate,false</spell>
+		</0>
+		<1>
+			<spell>Dominate monster,false</spell>
+			<spell>Plane shift,true</spell>
+		</1>
+	</daily>
+</spellbook>
