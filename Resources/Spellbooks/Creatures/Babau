@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Babau</name>
+	<daily>
+		<0>
+			<spell>Darkness,false</spell>
+			<spell>Dispel magic,false</spell>
+			<spell>Fear,false</spell>
+			<spell>Heat metal,false</spell>
+			<spell>Levitate,false</spell>
+		</0>
+	</daily>
+</spellbook>

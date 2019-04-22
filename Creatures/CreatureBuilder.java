@@ -1175,11 +1175,6 @@ public class CreatureBuilder {
 			    			label = new Label("\tLevel: ");
 			    			innatePane.add(label, 6, 1);
 			    			innateLevel = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20));
-			    			innateLevel.setConverter(new StringConverter<Integer>() {
-		  						@Override public Integer fromString(String string) {return null;}
-		  						@Override public String toString(Integer object) {
-		  							if(object==null){return "Level";}
-		  							else{return object.toString();}}});
 			    			innateLevel.setValue(null);
 			    			innatePane.add(innateLevel, 7, 1);
 			    			
@@ -1249,11 +1244,6 @@ public class CreatureBuilder {
 			    			label = new Label("\tLevel: ");
 			    			castingPane.add(label, 6, 1);
 			    			castLevel = new ChoiceBox<Integer>(FXCollections.observableArrayList(null,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20));
-			    			castLevel.setConverter(new StringConverter<Integer>() {
-		  						@Override public Integer fromString(String string) {return null;}
-		  						@Override public String toString(Integer object) {
-		  							if(object==null){return "Level";}
-		  							else{return object.toString();}}});
 			    			castLevel.setValue(null);
 			    			castingPane.add(castLevel, 7, 1);
 			    			//First line
@@ -1485,7 +1475,7 @@ public class CreatureBuilder {
 				    				
 				    				TextArea desc = new TextArea();
 				    				desc.setWrapText(true);
-				    				desc.setMaxSize(350, 80);
+				    				desc.setMaxSize(400, 80);
 				    				attackDesc.add(desc);
 				    				attacksPanel.add(desc, 4, attackCount);
 				    				
@@ -1527,7 +1517,7 @@ public class CreatureBuilder {
 			    				otherActLimits.add(limit);
 			    				effectsPanel.add(limit, 1, otherActionCount);
 			    				TextArea description = new TextArea();
-			    				description.setMaxSize(300, 80);
+			    				description.setMaxSize(350, 80);
 			    				description.setWrapText(true);
 			    				otherActDesc.add(description);
 			    				effectsPanel.add(description, 2, otherActionCount);
@@ -1563,7 +1553,7 @@ public class CreatureBuilder {
 						@Override public void handle(ActionEvent event) {//Add a new reaction field set
 							TextField reactName = new TextField();
 							TextArea reactDesc = new TextArea();
-							reactDesc.setMaxSize(350, 50);
+							reactDesc.setMaxSize(600, 50);
 							reactDesc.setWrapText(true);
 							Button remove = new Button("x");
 							reactionSet.add(reactName, 0, reactionCount);
@@ -1608,7 +1598,7 @@ public class CreatureBuilder {
 		    				legendActCosts.add(cost);
 		    				legActSet.add(cost, 1, legendActEntryCount);
 		    				TextArea description = new TextArea();
-		    				description.setMaxSize(350, 50);
+		    				description.setMaxSize(550, 50);
 		    				description.setWrapText(true);
 		    				legendActDesc.add(description);
 		    				legActSet.add(description, 2, legendActEntryCount);
@@ -1641,7 +1631,7 @@ public class CreatureBuilder {
 		    		lairActions = new ArrayList<TextArea>();
 		    			for(j=0; j<3; j++){
 		    				TextArea lairaction = new TextArea();
-		    				lairaction.setMaxSize(400,50);
+		    				lairaction.setMaxSize(1000,50);
 		    				lairaction.setWrapText(true);
 		    				lairActions.add(lairaction);
 		    				lairSet.add(lairaction, 0, j);

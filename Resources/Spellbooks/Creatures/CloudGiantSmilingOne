@@ -1,0 +1,10 @@
+<spellbook>
+	<name>CloudGiantSmilingOne</name>
+	<slot>
+		<known>Minor illusion,Prestidigitation,Vicious mockery,Cure wounds,Disguise self,Silent image,Tasha's hideous laughter,Invisibility,Suggestion,Major image,Tongues</known>
+		<0>Minor illusion,Prestidigitation,Vicious mockery</0>
+		<1>4,Cure wounds,Disguise self,Silent image,Tasha's hideous laughter</1>
+		<2>3,Invisibility,Suggestion</2>
+		<3>2,Major image,Tongues</3>
+	</slot>
+</spellbook>

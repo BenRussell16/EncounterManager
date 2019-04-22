@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Draegloth</name>
+	<daily>
+		<0>
+			<spell>Darkness,false</spell>
+		</0>
+		<1>
+			<spell>Confusion,false</spell>
+			<spell>Dancing lights,false</spell>
+			<spell>Faerie fire,false</spell>
+		</1>
+	</daily>
+</spellbook>

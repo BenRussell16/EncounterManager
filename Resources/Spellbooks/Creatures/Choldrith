@@ -1,0 +1,9 @@
+<spellbook>
+	<name>Choldrith</name>
+	<slot>
+		<known>Guidance,Mending,Resistance,Thaumaturgy,Bane,Healing word,Sanctuary,Shield of faith,Hold person,Spiritual weapon</known>
+		<0>Guidance,Mending,Resistance,Thaumaturgy</0>
+		<1>4,Bane,Healing word,Sanctuary,Shield of faith</1>
+		<2>3,Spiritual weapon,Hold person</2>
+	</slot>
+</spellbook>
