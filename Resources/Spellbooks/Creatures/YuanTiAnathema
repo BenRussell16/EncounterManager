@@ -1,0 +1,19 @@
+<spellbook>
+	<name>YuanTiAnathema</name>
+	<daily>
+		<0>
+			<spell>Animal friendship,false</spell>
+		</0>
+		<1>
+			<spell>Divine word,false</spell>
+		</1>
+		<3>
+			<spell>Darkness,false</spell>
+			<spell>Entangle,false</spell>
+			<spell>Fear,false</spell>
+			<spell>Haste,false</spell>
+			<spell>Suggestion,false</spell>
+			<spell>Polymorph,false</spell>
+		</3>
+	</daily>
+</spellbook>

@@ -1,0 +1,15 @@
+<spellbook>
+	<name>Diviner</name>
+	<slot>
+		<known>Fire bolt,Light,Mage hand,Message,True strike,Detect magic,Feather fall,Mage armour,Detect thoughts,Locate object,Scorching ray,Clairvoyance,Fireball,Fly,Arcane eye,Ice storm,Stoneskin,Rary's telepathic bond,Scrying,Mass suggestion,True seeing,Delayed blast fireball,Teleport,Maze</known>
+		<0>Fire bolt,Light,Mage hand,Message,True strike</0>
+		<1>4,Mage armour,Feather fall,Detect magic</1>
+		<2>3,Scorching ray,Locate object,Detect thoughts</2>
+		<3>3,Clairvoyance,Fireball,Fly</3>
+		<4>3,Stoneskin,Ice storm,Arcane eye</4>
+		<5>2,Rary's telepathic bond,Scrying</5>
+		<6>1,True seeing,Mass suggestion</6>
+		<7>1,Teleport,Delayed blast fireball</7>
+		<8>1,Maze</8>
+	</slot>
+</spellbook>

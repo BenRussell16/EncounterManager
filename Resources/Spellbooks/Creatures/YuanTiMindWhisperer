@@ -1,0 +1,10 @@
+<spellbook>
+	<name>YuanTiMindWhisperer</name>
+	<slot>
+		<known>Eldritch blast,Friends,Message,Minor illusion,Poison spray,Prestidigitation,Charm person,Expiditious retreat,Illusory script,Crown of madness,Detect thoughts,Fly,Hypnotic pattern</known>
+		<0>Eldritch blast,Friends,Minor illusion,Poison spray,Prestidigitation,Message</0>
+		<1>0,Charm person,Expiditious retreat,Illusory script</1>
+		<2>0,Crown of madness,Detect thoughts</2>
+		<3>2,Hypnotic pattern,Fly</3>
+	</slot>
+</spellbook>

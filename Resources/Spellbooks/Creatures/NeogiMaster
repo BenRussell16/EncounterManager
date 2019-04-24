@@ -1,0 +1,11 @@
+<spellbook>
+	<name>NeogiMaster</name>
+	<slot>
+		<known>Eldritch blast,Guidance,Mage hand,Minor illusion,Prestidigitation,Vicious mockery,Arms of Hadar,Unseen servant,Hold person,Invisibility,Counterspell,Fear,Hunger of Hadar,Dimension door</known>
+		<0>Eldritch blast,Mage hand,Minor illusion,Prestidigitation,Vicious mockery,Guidance</0>
+		<1>0,Unseen servant,Arms of Hadar</1>
+		<2>0,Invisibility,Hold person</2>
+		<3>0,Counterspell,Fear,Hunger of Hadar</3>
+		<4>2,Dimension door</4>
+	</slot>
+</spellbook>

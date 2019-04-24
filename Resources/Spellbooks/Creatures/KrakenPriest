@@ -1,0 +1,19 @@
+<spellbook>
+	<name>KrakenPriest</name>
+	<daily>
+		<0>
+			<spell>Command,false</spell>
+			<spell>Create or destroy water,false</spell>
+		</0>
+		<1>
+			<spell>Call lightning,false</spell>
+			<spell>Evard's black tentacles,false</spell>
+		</1>
+		<3>
+			<spell>Control water,false</spell>
+			<spell>Darkness,false</spell>
+			<spell>Water breathing,false</spell>
+			<spell>Water walk,false</spell>
+		</3>
+	</daily>
+</spellbook>

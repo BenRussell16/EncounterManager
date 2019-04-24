@@ -1,0 +1,10 @@
+<spellbook>
+	<name>YuanTiPitMaster</name>
+	<slot>
+		<known>Eldritch blast,Friends,Guidance,Mage hand,Message,Poison spray,Command,Hellish rebuke,Unseen servant,Invisibility,Misty step,Counterspell,Vampiric touch</known>
+		<0>Eldritch blast,Friends,Mage hand,Poison spray,Guidance,Message</0>
+		<1>0,Hellish rebuke,Unseen servant,Command</1>
+		<2>0,Invisibility,Misty step</2>
+		<3>2,Vampiric touch,Counterspell</3>
+	</slot>
+</spellbook>

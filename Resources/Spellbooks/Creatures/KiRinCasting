@@ -1,0 +1,16 @@
+<spellbook>
+	<name>KiRinCasting</name>
+	<slot>
+		<known>Light,Mending,Sacred flame,Spare the dying,Thaumaturgy,Command,Cure wounds,Detect evil and good,Protection from evil and good,Sanctuary,Calm emotions,Lesser restoration,Silence,Dispel magic,Remove curse,Sending,Banishment,Freedom of movement,Guardian of faith,Greater restoration,Mass cure wounds,Scrying,Heroes feast,True seeing,Etherealness,Plane shift,Control weather,True resurrection</known>
+		<0>Light,Mending,Sacred flame,Spare the dying,Thaumaturgy</0>
+		<1>4,Sanctuary,Protection from evil and good,Detect evil and good,Cure wounds,Command</1>
+		<2>3,Calm emotions,Lesser restoration,Silence</2>
+		<3>3,Dispel magic,Remove curse,Sending</3>
+		<4>3,Banishment,Freedom of movement,Guardian of faith</4>
+		<5>3,Scrying,Mass cure wounds,Greater restoration</5>
+		<6>1,Heroes feast,True seeing</6>
+		<7>1,Etherealness,Plane shift</7>
+		<8>1,Control weather</8>
+		<9>1,True resurrection</9>
+	</slot>
+</spellbook>

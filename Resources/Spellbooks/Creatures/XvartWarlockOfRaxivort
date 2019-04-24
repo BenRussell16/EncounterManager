@@ -1,0 +1,15 @@
+<spellbook>
+	<name>XvartWarlockOfRaxivort</name>
+	<slot>
+		<known>Eldritch blast,Mage hand,Minor illusion,Poison spray,Prestidigitation,Burning hands,Expiditious retreat,Invisibility,Scorching ray</known>
+		<0>Eldritch blast,Mage hand,Minor illusion,Poison spray,Prestidigitation</0>
+		<1>0,Expiditious retreat,Burning hands</1>
+		<2>2,Scorching ray,Invisibility</2>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Mage armour,true</spell>
+		</0>
+	</daily>
+</spellbook>

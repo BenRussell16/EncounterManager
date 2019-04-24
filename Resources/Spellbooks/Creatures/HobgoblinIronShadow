@@ -1,0 +1,8 @@
+<spellbook>
+	<name>HobgoblinIronShadow</name>
+	<slot>
+		<known>Minor illusion,Prestidigitation,True strike,Charm person,Disguise self,Expiditious retreat,Silent image</known>
+		<0>Minor illusion,Prestidigitation,True strike</0>
+		<1>3,Charm person,Disguise self,Expiditious retreat,Silent image</1>
+	</slot>
+</spellbook>

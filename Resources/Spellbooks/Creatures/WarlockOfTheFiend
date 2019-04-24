@@ -1,0 +1,26 @@
+<spellbook>
+	<name>WarlockOfTheFiend</name>
+	<slot>
+		<known>Eldritch blast,Fire bolt,Friends,Mage hand,Minor illusion,Prestidigitation,Shocking grasp,Burning hands,Hellish rebuke,Scorching ray,Suggestion,Magic circle,Stinking cloud,Banishment,Wall of fire,Flame strike,Scrying</known>
+		<0>Eldritch blast,Friends,Mage hand,Minor illusion,Prestidigitation,Shocking grasp,Fire bolt</0>
+		<1>0,Burning hands,Hellish rebuke</1>
+		<2>0,Scorching ray,Suggestion</2>
+		<3>0,Magic circle,Stinking cloud</3>
+		<4>0,Banishment,Wall of fire</4>
+		<5>4,Flame strike,Scrying</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Alter self,false</spell>
+			<spell>False life,false</spell>
+			<spell>Levitate,true</spell>
+			<spell>Mage armour,true</spell>
+			<spell>Silent image,false</spell>
+		</0>
+		<1>
+			<spell>Feeblemind,false</spell>
+			<spell>Finger of death,false</spell>
+			<spell>Plane shift,false</spell>
+		</1>
+	</daily>
+</spellbook>

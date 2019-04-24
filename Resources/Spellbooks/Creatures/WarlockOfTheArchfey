@@ -1,0 +1,23 @@
+<spellbook>
+	<name>WarlockOfTheArchfey</name>
+	<slot>
+		<known>Dancing lights,Eldritch blast,Friends,Mage hand,Minor illusion,Prestidigitation,Vicious mockery,Charm person,Faerie fire,Sleep,Misty step,Phantasmal force,Blink,Fear,Dimension door,Dominate beast,Hold monster,Seeming</known>
+		<0>Dancing lights,Eldritch blast,Friends,Mage hand,Minor illusion,Prestidigitation,Vicious mockery</0>
+		<1>0,Charm person,Faerie fire,Sleep</1>
+		<2>0,Misty step,Phantasmal force</2>
+		<3>0,Blink,Fear</3>
+		<4>0,Dimension door,Dominate beast</4>
+		<5>3,Hold monster,Seeming</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,true</spell>
+			<spell>Silent image,false</spell>
+			<spell>Speak with animals,false</spell>
+		</0>
+		<1>
+			<spell>Conjure fey,false</spell>
+		</1>
+	</daily>
+</spellbook>

@@ -1,0 +1,10 @@
+<spellbook>
+	<name>OrcClawOfLuthic</name>
+	<slot>
+		<known>Guidance,Mending,Resistance,Thaumaturgy,Bane,Cure wounds,Guiding bolt,Augury,Warding bond,Bestow curse,Create food and water</known>
+		<0>Guidance,Mending,Resistance,Thaumaturgy</0>
+		<1>4,Guiding bolt,Cure wounds,Bane</1>
+		<2>3,Warding bond,Augury</2>
+		<3>2,Create food and water,Bestow curse</3>
+	</slot>
+</spellbook>

@@ -1,0 +1,8 @@
+<spellbook>
+	<name>DeepRothe</name>
+	<daily>
+		<0>
+			<spell>Dancing lights,false</spell>
+		</0>
+	</daily>
+</spellbook>

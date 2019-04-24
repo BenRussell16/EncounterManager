@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Morkoth</name>
+	<slot>
+		<known>Acid splash,Mage hand,Mending,Ray of frost,Shocking grasp,Detect magic,Identify,Shield,Witch bolt,Darkness,Detect thoughts,Shatter,Dispel magic,Lightning bolt,Sending,Dimension door,Evard's black tentacles,Geas,Scrying,Chain lightning</known>
+		<0>Acid splash,Mage hand,Mending,Ray of frost,Shocking grasp</0>
+		<1>4,Witch bolt,Shield,Identify,Detect magic</1>
+		<2>3,Shatter,Detect thoughts,Darkness</2>
+		<3>3,Dispel magic,Lightning bolt,Sending</3>
+		<4>3,Evard's black tentacles,Dimension door</4>
+		<5>3,Scrying,Geas</5>
+		<6>1,Chain lightning</6>
+	</slot>
+</spellbook>

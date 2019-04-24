@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Alhoon</name>
+	<slot>
+		<known>Chill touch,Dancing lights,Mage hand,Prestidigitation,Shocking grasp,Detect magic,Disguise self,Magic missile,Shield,Invisibility,Mirror image,Scorching ray,Counterspell,Fly,Lightning bolt,Confusion,Evard's black tentacles,Phantasmal killer,Modify memory,Wall of force,Disintegrate,Globe of invulnerability</known>
+		<0>Chill touch,Dancing lights,Mage hand,Prestidigitation,Shocking grasp</0>
+		<1>4,Shield,Magic missile,Disguise self,Detect magic</1>
+		<2>3,Invisibility,Mirror image,Scorching ray</2>
+		<3>3,Lightning bolt,Fly,Counterspell</3>
+		<4>3,Phantasmal killer,Evard's black tentacles,Confusion</4>
+		<5>2,Modify memory,Wall of force</5>
+		<6>1,Globe of invulnerability,Disintegrate</6>
+	</slot>
+</spellbook>

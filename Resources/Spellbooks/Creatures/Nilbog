@@ -1,0 +1,13 @@
+<spellbook>
+	<name>Nilbog</name>
+	<daily>
+		<0>
+			<spell>Mage hand,false</spell>
+			<spell>Tasha's hideous laughter,false</spell>
+			<spell>Vicious mockery,false</spell>
+		</0>
+		<1>
+			<spell>Confusion,false</spell>
+		</1>
+	</daily>
+</spellbook>

@@ -1,0 +1,14 @@
+<spellbook>
+	<name>Korred</name>
+	<daily>
+		<0>
+			<spell>Commune with nature,false</spell>
+			<spell>Meld into stone,false</spell>
+			<spell>Stone shape,false</spell>
+		</0>
+		<1>
+			<spell>Conjure elemental,false,6</spell>
+			<spell>Otto's irresistable dance,false</spell>
+		</1>
+	</daily>
+</spellbook>

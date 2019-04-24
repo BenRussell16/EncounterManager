@@ -1,0 +1,13 @@
+<spellbook>
+	<name>KiRinInnate</name>
+	<daily>
+		<0>
+			<spell>Gaseous form,false</spell>
+			<spell>Major image,false,6</spell>
+			<spell>Wind walk,false</spell>
+		</0>
+		<1>
+			<spell>Create food and water,false</spell>
+		</1>
+	</daily>
+</spellbook>

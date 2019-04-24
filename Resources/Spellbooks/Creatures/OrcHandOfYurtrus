@@ -1,0 +1,9 @@
+<spellbook>
+	<name>OrcHandOfYurtrus</name>
+	<slot>
+		<known>Guidance,Mending,Resistance,Thaumaturgy,Bane,Detect magic,Inflict wounds,Protection from evil and good,Blindness/Deafness,Silence</known>
+		<0>Guidance,Mending,Resistance,Thaumaturgy</0>
+		<1>4,Protection from evil and good,Inflict wounds,Detect magic,Bane</1>
+		<2>3,Silence,Blindness/Deafness</2>
+	</slot>
+</spellbook>
