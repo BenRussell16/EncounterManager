@@ -1,0 +1,11 @@
+<spellbook>
+	<name>Berbalang</name>
+	<daily>
+		<0>
+			<spell>Speak with dead,false</spell>
+		</0>
+		<1>
+			<spell>Plane shift,true</spell>
+		</1>
+	</daily>
+</spellbook>

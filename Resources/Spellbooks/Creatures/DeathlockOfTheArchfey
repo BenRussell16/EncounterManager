@@ -1,0 +1,17 @@
+<spellbook>
+	<name>DeathlockOfTheArchfey</name>
+	<slot>
+		<known>Chill touch,Eldritch blast,Mage hand,Arms of Hadar,Faerie fire,Sleep,Hold person,Invisibility,Phantasmal force,Spider climb,Blink,Dispel magic,Hunger of Hadar,Hypnotic pattern</known>
+		<0>Chill touch,Eldritch blast,Mage hand</0>
+		<1>0,Arms of Hadar,Sleep,Faerie fire</1>
+		<2>0,Spider climb,Invisibility,Hold person,Phantasmal force</2>
+		<3>2,Hunger of Hadar,Dispel magic,Hypnotic pattern,Blink</3>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

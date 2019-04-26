@@ -1,0 +1,19 @@
+<spellbook>
+	<name>DeathlockMastermindOfTheFiend</name>
+	<slot>
+		<known>Chill touch,Mage hand,Minor illusion,Poison spray,Arms of Hadar,Burning hands,Command,Hellish rebuke,Blindness/Deafness,Crown of madness,Darkness,Invisibility,Scorching ray,Counterspell,Dispel magic,Fireball,Fly,Stinking cloud,Blight,Dimension door,Fire shield,Wall of fire,Flame strike,Hold monster</known>
+		<0>Chill touch,Mage hand,Minor illusion,Poison spray</0>
+		<1>0,Arms of Hadar,Hellish rebuke,Command,Burning hands</1>
+		<2>0,Crown of madness,Darkness,Invisibility,Scorching ray,Blindness/Deafness</2>
+		<3>0,Counterspell,Dispel magic,Fly,Stinking cloud,Fireball</3>
+		<4>0,Blight,Dimension door,Wall of fire,Fire shield</4>
+		<5>2,Hold monster,Flame strike</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

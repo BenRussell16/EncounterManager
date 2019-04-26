@@ -1,0 +1,14 @@
+<spellbook>
+	<name>Sibriex</name>
+	<daily>
+		<0>
+			<spell>Charm person,false</spell>
+			<spell>Command,false</spell>
+			<spell>Dispel magic,false</spell>
+			<spell>Hold monster,false</spell>
+		</0>
+		<3>
+			<spell>Feeblemind,false</spell>
+		</3>
+	</daily>
+</spellbook>

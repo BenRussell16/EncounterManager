@@ -1,0 +1,19 @@
+<spellbook>
+	<name>DeathlockMastermind</name>
+	<slot>
+		<known>Chill touch,Mage hand,Minor illusion,Poison spray,Arms of Hadar,Crown of madness,Darkness,Invisibility,Counterspell,Dispel magic,Fly,Blight,Dimension door,Hold monster</known>
+		<0>Chill touch,Mage hand,Minor illusion,Poison spray</0>
+		<1>0,Arms of Hadar</1>
+		<2>0,Invisibility,Darkness,Crown of madness</2>
+		<3>0,Fly,Dispel magic,Counterspell</3>
+		<4>0,Dimension door,Blight</4>
+		<5>2,Hold monster</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

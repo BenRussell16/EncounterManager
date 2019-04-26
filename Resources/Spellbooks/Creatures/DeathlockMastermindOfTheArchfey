@@ -1,0 +1,19 @@
+<spellbook>
+	<name>DeathlockMastermindOfTheArchfey</name>
+	<slot>
+		<known>Chill touch,Mage hand,Minor illusion,Poison spray,Arms of Hadar,Faerie fire,Sleep,Crown of madness,Darkness,Invisibility,Phantasmal force,Blink,Counterspell,Dispel magic,Fly,Hunger of Hadar,Hypnotic pattern,Blight,Dimension door,Dominate beast,Greater invisibility,Dominate person,Hold monster,Seeming</known>
+		<0>Chill touch,Mage hand,Minor illusion,Poison spray</0>
+		<1>0,Arms of Hadar,Sleep,Faerie fire</1>
+		<2>0,Invisibility,Darkness,Crown of madness,Phantasmal force</2>
+		<3>0,Fly,Dispel magic,Counterspell,Hypnotic pattern,Hunger of Hadar,Blink</3>
+		<4>0,Dimension door,Blight,Greater invisibility,Dominate beast</4>
+		<5>2,Hold monster,Seeming,Dominate person</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

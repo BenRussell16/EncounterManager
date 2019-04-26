@@ -1,0 +1,17 @@
+<spellbook>
+	<name>DeathlockOfTheGreatOldOne</name>
+	<slot>
+		<known>Chill touch,Eldritch blast,Mage hand,Armor of Agathys,Arms of Hadar,Dissonant whispers,Tasha's hideous laughter,Detect thoughts,Hold person,Invisibility,Phantasmal force,Spider climb,Dispel magic,Hunger of Hadar</known>
+		<0>Chill touch,Eldritch blast,Mage hand</0>
+		<1>0,Arms of Hadar,Tasha's hideous laughter,Dissonant whispers,Armor of Agathys</1>
+		<2>0,Hold person,Invisibility,Spider climb,Phantasmal force,Detect thoughts</2>
+		<3>2,Dispel magic,Hunger of Hadar</3>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

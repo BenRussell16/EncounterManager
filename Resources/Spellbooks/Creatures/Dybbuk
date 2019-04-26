@@ -1,0 +1,12 @@
+<spellbook>
+	<name>Dybbuk</name>
+	<daily>
+		<0>
+			<spell>Dimension door,false</spell>
+		</0>
+		<3>
+			<spell>Fear,false</spell>
+			<spell>Phantasmal force,false</spell>
+		</3>
+	</daily>
+</spellbook>

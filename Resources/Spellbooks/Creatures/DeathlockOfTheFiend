@@ -1,0 +1,17 @@
+<spellbook>
+	<name>DeathlockOfTheFiend</name>
+	<slot>
+		<known>Chill touch,Eldritch blast,Mage hand,Arms of Hadar,Burning hands,Command,Hellish rebuke,Blindness/Deafness,Hold person,Invisibility,Scorching ray,Spider climb,Dispel magic,Fireball,Hunger of Hadar</known>
+		<0>Chill touch,Eldritch blast,Mage hand</0>
+		<1>0,Arms of Hadar,Hellish rebuke,Command,Burning hands</1>
+		<2>0,Hold person,Invisibility,Spider climb,Scorching ray,Blindness/Deafness</2>
+		<3>2,Dispel magic,Hunger of Hadar,Fireball</3>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>

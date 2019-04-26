@@ -1,0 +1,19 @@
+<spellbook>
+	<name>DeathlockMastermindOfTheGreatOldOne</name>
+	<slot>
+		<known>Chill touch,Mage hand,Minor illusion,Poison spray,Arms of Hadar,Dissonant whispers,Tasha's hideous laughter,Crown of madness,Darkness,Detect thoughts,Invisibility,Phantasmal force,Clairvoyance,Counterspell,Dispel magic,Fly,Hunger of Hadar,Sending,Blight,Dimension door,Evard's black tentacles,Dominate person,Hold monster,Telekinesis</known>
+		<0>Chill touch,Mage hand,Minor illusion,Poison spray</0>
+		<1>0,Arms of Hadar,Tasha's hideous laughter,Dissonant whispers</1>
+		<2>0,Crown of madness,Darkness,Invisibility,Phantasmal force,Detect thoughts</2>
+		<3>0,Counterspell,Dispel magic,Fly,Sending,Hunger of Hadar,Clairvoyance</3>
+		<4>0,Blight,Dimension door,Evard's black tentacles</4>
+		<5>2,Hold monster,Telekinesis,Dominate person</5>
+	</slot>
+	<daily>
+		<0>
+			<spell>Detect magic,false</spell>
+			<spell>Disguise self,false</spell>
+			<spell>Mage armour,false</spell>
+		</0>
+	</daily>
+</spellbook>
