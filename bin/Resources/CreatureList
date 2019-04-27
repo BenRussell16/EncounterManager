@@ -2810,6 +2810,36 @@ slashing darrrage if used with two hands.</attack>
 	<source>OUTOFTHEABYSS</source>
 </creature>
 <creature>
+	<name>Nupperibo</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>0.5</cr>
+	<ac>13</ac>
+	<hp>11</hp>
+	<speed>WALK 20</speed>
+	<stats>STR 16,DEX 11,CON 13,INT 3,WIS 8,CHA 1</stats>
+	<skills>PERCEPTION 1</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,FRIGHTENED,POISONED</conditions>
+	<senses>BLINDSIGHT 10</senses>
+	<regions></regions>
+	<passives>
+		<passive>Cloud of Vermin,Any creature, other than a devil, that starts its turn within 20 feet of the nupperibo must make a DC 11 Constitution saving throw. A creature within the areas of two or more nupperibos makes the saving throw with disadvantage. On a failure, the creature takes 2 (1d4) piercing damage.</passive>
+		<passive>Hunger-Driven,In the Nine Hells, the nupperibos can flawlessly track any creature that has taken damage from any nupperibo's Cloud of Vermin within the previous 24 hours.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Blind beyond its blindsight radius.
+Understands Infernal but can't speak.</other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 6 (1d6+3) piercing damage.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Ooze-Folk</name>
 	<size>MEDIUM</size>
 	<type>OOZE,false</type>
@@ -3044,6 +3074,38 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 		<multiattack>The scout makes two melee attacks or two ranged attacks.</multiattack>
 		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 		<attack>Longbow,4,150,600,One target. Hit: 6 (1d8+2) piercing damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Shadow</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>CE</align>
+	<cr>0.5</cr>
+	<ac>12</ac>
+	<hp>16</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 6,DEX 14,CON 13,INT 6,WIS 10,CHA 8</stats>
+	<skills>STEALTH 6</skills>
+	<multipliers>
+		<VULNERABILITY>RADIANT</VULNERABILITY>
+		<RESISTANCE>ACID,COLD,FIRE,LIGHTNING,THUNDER,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>POISON,NECROTIC</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,FRIGHTENED,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Shadow stealth,While in dim light or darkness, this creature can take the hide action as a bonus action.</passive>
+		<passive>Undead nature,An undead doesn't require air, food, drink, or sleep.</passive>
+		<passive>Amorphous,The shadow can move through a space as narrow as 1 inch wide without squeezing.</passive>
+		<passive>Sunlight Weakness,While in sunlight, the shadow has disadvantage on attack rolls, ability checks, and saving throws</passive>
+	</passives>
+	<other>Stealth only has +4 in bright light.</other>
+	<actions>
+		<attack>Strength Drain,4,5,One creature. Hit: 9 (2d6+2) necrotic damage, and the target's Strength score is reduced by 1d4. The target dies if this reduces its Strength to 0. Otherwise, the reduction lasts until the target finishes a short or long rest.
+lf a non-evil humanoid dies from this attack, a new shadow rises from the corpse 1d4 hours later.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -4217,7 +4279,7 @@ Spell slots come back after a short rest.</other>
 		<attack>Bite,2,5,One target. Hit: 9 (2d6+2) piercing damage.</attack>
 		<attack>Claw,4,5,One target. Hit: 7 (2d4+2) slashing damage. If the target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect early on a success.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
 </creature>
 <creature>
 	<name>Giant Octopus</name>
@@ -6452,6 +6514,35 @@ On a failed save, the cube enters the creature's space, and the creature takes 1
 An engulfed creature can try to escape by taking an action to make a DC 12 Strength check. On a success, the creature escapes and enters a space of its choice within 5 feet of the cube.</effect>
 	</actions>
 	<source>LOSTLABORATORYOFKWALISH</source>
+</creature>
+<creature>
+	<name>Ghast</name>
+	<size>MEDIUM</size>
+	<type>UNDEAD,false</type>
+	<align>CE</align>
+	<cr>2.0</cr>
+	<ac>13</ac>
+	<hp>36</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 17,CON 10,INT 11,WIS 10,CHA 8</stats>
+	<multipliers>
+		<RESISTANCE>NECROTIC</RESISTANCE>
+		<IMMUNITY>POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON</languages>
+	<regions></regions>
+	<passives>
+		<passive>Stench,Any creature that starts its turn wìthin 5 feet of the ghast must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.</passive>
+		<passive>Turning Defiance,The ghast and any ghouls within 30 feet of it have advantage on saving throws against effects that turn undead.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,3,5,One creature. Hit: 12 (2d8+3) piercing damage.</attack>
+		<attack>Claws,5,5,One target. Hit: 10 (2d6+3) slashing damage. lf the target is a creature other than an undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Giant Crayfish</name>
@@ -11491,6 +11582,41 @@ Understands the languages of its creator but can't speak.</other>
 	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
+	<name>Merregon</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>4.0</cr>
+	<ac>16</ac>
+	<hp>45</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 18,DEX 14,CON 17,INT 6,WIS 12,CHA 8</stats>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>FRIGHTENED,POISONED</conditions>
+	<senses>DARKVISION 60</senses>
+	<languages>TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Understands Infernal but can't speak.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The merregon makes two halberd attacks, or if an allied fiend of challenge rating 6 or higher is within 60 feet of it, the merregon makes three halberd attacks.</multiattack>
+		<attack>Halberd,6,10,One target. Hit: 9 (1d10+4) slashing damage.</attack>
+		<attack>Heavy Crossbow,4,100,400,One target. Hit: 7 (1d10+2) piercing damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Loyal Bodyguard,When another fiend within 5 feet of the merregon is hit by an attack, the merregon causes itself to be hit instead.</reaction>
+	</reactions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Mind Drinker Vampire</name>
 	<size>MEDIUM</size>
 	<type>UNDEAD,false</type>
@@ -11686,6 +11812,38 @@ Is a Boros spellcaster.</other>
 		<reaction>Lightning Backlash (Recharge 5-6),When a creature hits the reckoner with an attack, the attacker takes lightning damage equal to half the damage dealt by the attack.</reaction>
 	</reactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Shadow Demon</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEMON,false</type>
+	<align>CE</align>
+	<cr>4.0</cr>
+	<ac>13</ac>
+	<hp>66</hp>
+	<speed>WALK 30,FLY 30</speed>
+	<stats>STR 1,DEX 17,CON 12,INT 14,WIS 13,CHA 14</stats>
+	<saves>DEX 5,CHA 4</saves>
+	<skills>STEALTH 7</skills>
+	<multipliers>
+		<VULNERABILITY>RADIANT</VULNERABILITY>
+		<RESISTANCE>ACID,FIRE,THUNDER,NECROTIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>COLD,LIGHTNING,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>EXHAUSTION,GRAPPLED,PARALYZED,PETRIFIED,POISONED,PRONE,RESTRAINED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>ABYSSAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Incorporeal movement,This creature can move through other creatures and objects as if they were difficult terrain. It takes 5(1d10) force damage if it ends its turn inside an object.</passive>
+		<passive>Shadow stealth,While in dim light or darkness, this creature can take the hide action as a bonus action.</passive>
+		<passive>Light Sensitivity,While in bright light, the demon has disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other>Telepathy is 120ft.</other>
+	<actions>
+		<attack>Claws,5,5,One creature. Hit: 10 (2d6+3) psychic damage or, if the demon had advantage on the attack roll, 17 (4d6+3) psychic damage.</attack>
+	</actions>
+	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
 	<name>Shoalar Quanderil</name>
@@ -15364,6 +15522,44 @@ May have a familiar.</other>
 	<source>VOLOSGUIDETOMONSTERS</source>
 </creature>
 <creature>
+	<name>White Abishai</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>6.0</cr>
+	<ac>15</ac>
+	<hp>68</hp>
+	<speed>WALK 30,FLY 40</speed>
+	<stats>STR 16,DEX 11,CON 18,INT 11,WIS 12,CHA 13</stats>
+	<saves>STR 6,CON 7</saves>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>COLD,FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>DRACONIC,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+		<passive>Reckless,At the start of its turn, the abishai can gain advantage on all melee weapon attack rolls during that turn, but attack rolls against it have advantage until the start of its next turn.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The abishai makes two attacks: one with its longsword and one with its claw.</multiattack>
+		<attack>Longsword,6,5,One target. Hit: 7 (1d8+3) slashing damage, or 8 (1d10+3) slashing damage if used with two hands.</attack>
+		<attack>Claw,6,5,One target. Hit: 8 (1d10+3) slashing damage.</attack>
+		<attack>Bite,6,5,One target. Hit: 5 (1d4+3) piercing damage plus 3 (1d6) cold damage.</attack>
+	</actions>
+	<reactions>
+		<reaction>Vicious Reprisal,In response to taking damage, the abishai makes a bite attack against a random creature within 5 feet of it. If no creature is within reach, the abishai moves up to half its speed toward an enemy it can see, without provoking opportunity attacks.</reaction>
+	</reactions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Aerisi Kalinoth</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -15548,6 +15744,42 @@ Artus wields Bookmark, a +3 dagger with additional magical properties. As a bonu
 		<reaction>Skin to Stone,When the stoneguard is attacked, it may gain resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks until the end of the attacker's turn.</reaction>
 	</reactions>
 	<source>TALDOREICAMPAIGNSETTING</source>
+</creature>
+<creature>
+	<name>Black Abishai</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>7.0</cr>
+	<ac>15</ac>
+	<hp>58</hp>
+	<speed>WALK 30,FLY 40</speed>
+	<stats>STR 14,DEX 17,CON 14,INT 13,WIS 16,CHA 11</stats>
+	<saves>DEX 6,WIS 6</saves>
+	<skills>PERCEPTION 6,STEALTH 6</skills>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>ACID,FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>DRACONIC,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+		<passive>Shadow stealth,While in dim light or darkness, this creature can take the hide action as a bonus action.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The abishai makes three attacks: two with its scimitar and one with it s bite.</multiattack>
+		<attack>Scimitar,6,5,One target. Hit: 6 (1d6+3) slashing damage.</attack>
+		<attack>Bite,6,5,One target. Hit: 8 (1d10+3) piercing damage plus 9 (2d8) acid damage.</attack>
+		<effect>Creeping Darkness,Recharge 6,The abishai casts darkness at a point within 120 feet of it, requiring no components. Wisdom is its spellcasting ability for this spell. While the spell persists, the abishai can move the area of darkness up to 60 feet as a bonus action.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Blood Witch</name>
@@ -19677,6 +19909,47 @@ The Ooze Master can eat through 2-inch-thick, nonmagical wood or metal in 1 roun
 	<source>TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
+	<name>Orthon</name>
+	<size>LARGE</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>10.0</cr>
+	<ac>17</ac>
+	<hp>105</hp>
+	<speed>WALK 30,CLIMB 30</speed>
+	<stats>STR 22,DEX 16,CON 21,INT 15,WIS 15,CHA 16</stats>
+	<saves>DEX 7,CON 9,WIS 6</saves>
+	<skills>PERCEPTION 10,STEALTH 11,SURVIVAL 10</skills>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,EXHAUSTION,POISONED</conditions>
+	<senses>DARKVISION 120,TRUESIGHT 30</senses>
+	<languages>COMMON,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Invisibility Field,The orthon can use a bonus action to become invisible. Any equipment the orthon wears or carries is also invisible as long as the equipment is on its person . This invisibility ends immediately after the orthon makes an attack roll or is hit by an attack.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 120ft.</other>
+	<actions>
+		<attack>Infernal Dagger,10,5,One target. Hit: 11 (2d4+6) slashing damage, and the target must make a DC 17 Constitution saving throw, taking 22 (4d10) poison damage on a failed save, or half as much damage on a successful one. On a failure , the target is also poisoned for 1 minute. The poisoned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
+		<attack>Brass Crossbow,7,100,400,One target. Hit: 14 (2d10+3) piercing damage, plus one of the following effects:
+	1. Acid. The target must make a DC 17 Constitution saving throw, taking an additional 17 (5d6) acid damage on a failed save, or half as much damage on a successful one.
+	2. Blindness (1/Day). The target takes 5 (1d10) radiant damage. In addition, the target and all other creatures within 20 feet of it must each make a successful DC 17 Dexterity saving throw or be blinded until the end of the orthon's next turn.
+	3. Concussion. The target and each creature within 20 feet of it must make a DC 17 Constitution saving throw, taking 13 (2d12) thunder damage on a failed save, or half as much damage on a successful one.
+	4. Entanglement. The target must make a successful DC 17 Dexterity saving throw or be restrained for 1 hour by strands of sticky webbing. A restrained creature can escape by using an action to make a successful DC 17 Dexterity or Strength check. Any creature other than an orthon that touches the restrained creature must make a successful DC 17 Dexterity saving throw or become similarly restrained.
+	5. Paralysis (1/Day). The target takes 22 (4d10) lightning damage and must make a successful DC 17 Constitution saving throw or be paralyzed for 1 minute. The paralyzed target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
+	6. Tracking. For the next 24 hours, the orthon knows the direction and distance to the target, as long as it's on the same plane of existence. If the target is on a different plane, the orthon knows which one, but not the exact location there.</attack>
+	</actions>
+	<reactions>
+		<reaction>Explosive Retribution,When it is reduced to 15 hit points or fewer, the orthon causes itself to explode. All other creatures within 30 feet of it must each make a DC 17 Dexterity saving throw, taking 9 (2d8) fire damage plus 9 (2d8) thunder damage on a failed save, or half as much damage on a successful one. This explosion destroys the orthon, its infernal dagger, and its brass crossbow.</reaction>
+	</reactions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Rahadin</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -21246,6 +21519,42 @@ If Gar casts cure wounds using this lair action, he regains the maximum number o
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Narzugon</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>13.0</cr>
+	<ac>20</ac>
+	<hp>112</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 20,DEX 10,CON 17,INT 16,WIS 14,CHA 19</stats>
+	<saves>DEX 5,CON 8,CHA 9</saves>
+	<skills>PERCEPTION 7</skills>
+	<multipliers>
+		<RESISTANCE>ACID,COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,FRIGHTENED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Infernal Tack,The narzugon wears spurs that are part of infernal tack, which allow it to summon its nightmare companion.</passive>
+		<passive>Diabolical Sense,The narzugon has advantage on Wisdom (Perception) checks made to perceive good-aligned creatures.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The narzugon uses its Infernal Command or Terrifying Command. It also makes three hellfire lance attacks.</multiattack>
+		<attack>Hellfire Lance,10,10,One target. Hit: 11 (1d12+5) piercing damage plus 16 (3d10) fire damage. If this damage kills a creature, the creature's soul rises from the River Styx as a lemure in Avernus in 1d4 hours. If the creature isn't revived before then, only a wish spell or killing the lemure and casting true resurrection on the creature's original body can restore it to life. Constructs and devils are immune to this effect.</attack>
+		<effect>Infernal Command,null,Each ally of the narzugon within 60 feet of it can't be charmed or frightened until the end of the narzugon's next turn.</effect>
+		<effect>Terrifying Command,null,Each creature that isn' t a fiend within 60 feet of the narzugon that can hear it must succeed on a DC 17 Charisma saving throw or become frightened of it for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. A creature that makes a successful saving throw is immune to this narzugon's Terrifying Command for 24 hours.</effect>
+		<effect>Healing,1/Day,The narzugon, or one creature it touches, regains up to 100 hit points.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Neothelid</name>
 	<size>GARGANTUAN</size>
 	<type>ABERRATION,false</type>
@@ -21965,6 +22274,41 @@ lf the target is a Large or smaller nonmagical object or creation of magical for
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Green Abishai</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>15.0</cr>
+	<ac>18</ac>
+	<hp>187</hp>
+	<speed>WALK 30,FLY 40</speed>
+	<stats>STR 12,DEX 17,CON 16,INT 17,WIS 12,CHA 19</stats>
+	<saves>INT 8,CHA 9</saves>
+	<skills>DECEPTION 9,INSIGHT 6,PERCEPTION 6,PERSUASION 9</skills>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>DRACONIC,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>CHA,,17,,GreenAbishai</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The abishai makes two attacks, one with its claws and one with its longsword, or it casts one spell from its Innate Spellcasting trait and makes one claw attack.</multiattack>
+		<attack>Longsword,6,5,One target. Hit : 5 (1d8+1) slashing damage, or 6 (1d10+1) slashing damage if used with two hands.</attack>
+		<attack>Claws,8,5,One target. Hit: 12 (2d8+3) piercing damage. If the target is a creature, it must succeed on a DC 16 Constitution saving throw or take 11 (2d10) poison damage and become poisoned for 1 minute. The poisoned target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Jarlaxle Baenre</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -22394,6 +22738,42 @@ d8	Minor Adaptation
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Hellfire Engine</name>
+	<size>HUGE</size>
+	<type>CONSTRUCT,false</type>
+	<align>LE</align>
+	<cr>16.0</cr>
+	<ac>18</ac>
+	<hp>216</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 20,DEX 16,CON 24,INT 2,WIS 10,CHA 1</stats>
+	<saves>DEX 8,WIS 5,CHA 0</saves>
+	<multipliers>
+		<RESISTANCE>COLD,PSYCHIC,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,DEAFENED,EXHAUSTION,FRIGHTENED,PARALYZED,POISONED,UNCONCIOUS</conditions>
+	<senses>DARKVISION 120</senses>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Immutable form,This creature is immune to any spell or effect that would alter its form.</passive>
+		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Understands Infernal but can't speak.</other>
+	<actions>
+		<effect>Flesh-Crushing Stride,null,The hellfire engine moves up to its speed in a straight line. During this move, it can enter Large or smaller creatures' spaces. A creature whose space the hellfire engine enters must make a DC 18 Dexterity saving throw. On a successful save, the creature is pushed 5 feet to the nearest space out of the hellfire engine's path . On a failed save, the creature falls prone and takes 28 (8d6) bludgeoning damage.
+If the hellfire engine remains in the prone creature's space, the creature is also restrained until it's no longer in the same space as the hellfire engine. While restrained in this way, the creature, or another creature within 5 feet of it, can make a DC 18 Strength check. On a success, the creature is shunted to an unoccupied space of its choice within 5 feet of the hellfire engine and is no longer restrained.</effect>
+		<effect>Hellfire Weapons,null,The hellfire engine uses one of the following options:
+	Bonemelt Sprayer. The hellfire engine spews acidic flame in a 60-foot cone. Each creature in the cone must make a DC 20 Dexterity saving throw, taking 11 (2d10) fire damage plus 18 (4d8) acid damage on a failed save, or half as much damage on a successful one. Creatures that fail the saving throw are drenched in burning acid and take 5 (1d10) fire damage plus 9 (2d8) acid damage at the end of their turns. An affected creature or another creature within 5 feet of it can take an action to scrape off the burning fuel.
+	Lightning Flail. Melee Weapon Attack: +11 to hit, reach 15 ft., One creature. Hit: 18 (3d8+5) bludgeoning damage plus 22 (5d8) lightning damage. Up to three other creatures of the hellfire engine's choice that it can see within 30 feet of the target must each make a DC 20 Dexterity saving throw, taking 22 (5d8) lightning damage on a failed save, or half as much damage on a successful one.
+	Thunder Cannon. The hellfire engine targets a point within 120 feet of it that it can see. Each creature within 30 feet of that point must make a DC 20 Dexterity saving throw, taking 27 (5d10) bludgeoning damage plus 13 (2d12) thunder damage on a failed save, or half as much damage on a successful one.
+If the chosen option kills a creature, the creature's soul rises from the River Styx as a lemure in Avernus in 1d4 hours. If the creature isn't revived before then, only a wish spell or killing the lemure and casting true resurrection on the creature's original body can restore it to life. Constructs and devils are immune to this effect.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Hlam</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -22596,6 +22976,41 @@ Third Roar. Each creature makes a DC 18 Constitution saving throw. On a failed s
 	<source>MONSTERMANUAL</source>
 </creature>
 <creature>
+	<name>Blue Abishai</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>17.0</cr>
+	<ac>19</ac>
+	<hp>195</hp>
+	<speed>WALK 30,FLY 50</speed>
+	<stats>STR 15,DEX 14,CON 17,INT 22,WIS 23,CHA 18</stats>
+	<saves>INT 12,WIS 12</saves>
+	<skills>ARCANA 12</skills>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,LIGHTNING,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>DRACONIC,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<spellcasting>INT,12,20,13,BlueAbishai</spellcasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The abishai makes two attacks: one with its quarterstaff and one with its bite.</multiattack>
+		<attack>Quarterstaff,8,5,One target. Hit: 5 (1d6+2) bludgeoning damage, or 6 (1d8+2) bludgeoning damage if used with two hands.</attack>
+		<attack>Bite,8,5,One target. Hit: 13 (2d10+2) piercing damage plus 14 (4d6) lightning damage.</attack>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
+</creature>
+<creature>
 	<name>Laeral Silverhand</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -22675,6 +23090,46 @@ While the silver fire is present, she has the following additional action option
 		<legendaryaction>Shifting Nightmare,3,Lazav rapidly takes the form of several nightmarish creatures, lashing out at all nearby. Each creature within 10 feet of Lazav must succeed on a DC 21 Dexterity saving throw or take 18 (4d8) damage of a type chosen by Lazav: acid, cold, fire, lightning, or necrotic.</legendaryaction>
 	</legendaryactions>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
+</creature>
+<creature>
+	<name>Amnizu</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>18.0</cr>
+	<ac>21</ac>
+	<hp>202</hp>
+	<speed>WALK 30,FLY 40</speed>
+	<stats>STR 11,DEX 13,CON 16,INT 20,WIS 12,CHA 18</stats>
+	<saves>DEX 7,CON 9,WIS 7,CHA 10</saves>
+	<skills>PERCEPTION 7</skills>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>CHARMED,POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>COMMON,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<innatecasting>INT,11,19,,Amnizu</innatecasting>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 1000ft.</other>
+	<actions>
+		<multiattack>The amnizu uses Poison Mind. It also makes two attacks: one with its whip and one with its Disruptive Touch.</multiattack>
+		<attack>Taskmaster Whip,11,10,One target. Hit: 10 (2d4+5) slashing damage plus 33 (6d10) force damage.</attack>
+		<attack>Disruptive Touch,11,5,One target. Hit: 44 (8d10) necrotic damage.</attack>
+		<effect>Poison Mind,null,The amnizu targets one or two creatures that it can see within 60 feet of it. Each target must succeed on a DC 19 Wisdom saving throw or take 26 (4d12) necrotic damage and be blinded until the start of the amnizu's next turn.</effect>
+		<effect>Forgetfulness,Recharge 6,The amnizu targets one creature it can see within 60 feet of it. That creature must succeed on a DC 18 Intelligence saving throw or become stunned for 1 minute. A stunned creature repeats the saving throw at the end of each of its turns, ending the effect on itself on a success. If the target is stunned for the full minute, it forgets everything it sensed, experienced, and learned during the last 5 hours.</effect>
+		<effect>Summon Devil,1/Day,The amnizu summons 2d4 bearded devils or 1d4 barbed devils. A summoned devil appears in an unoccupied space within 60 feet of the amnizu, acts as an ally of the amnizu, and can't summon other devils. It remains for l minute, until the amnizu dies, or until its summoner dismisses it as an action.</effect>
+	</actions>
+	<reactions>
+		<reaction>Instinctive Charm,When a creature within 60 feet of the amnizu makes an attack roll against it, and another creature is within the attack's range, the attacker must make a DC 19 Wisdom saving throw. On a failed save, the attacker must target the creature that is closest to it, not including the amnizu or itself. If multiple creatures are closest, the attacker chooses which one to target. If the saving throw is successful, the attacker is immune to the amnizu's Instinctive Charm for 24 hours.</reaction>
+	</reactions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Borborygmos</name>
@@ -23034,6 +23489,44 @@ d100	Effect
 		<lairaction>A wave of searing heat fills the lair in a 300-foot radius around Imix for an instant. Each creature other than Imix in the area must succeed on a DC 15 Constitution saving throw or take 1d8 fire damage. Creatures that take fire damage from this effect gain one level of exhaustion. In addition, there is a fifty percent chance that any container of fluid held or carried by an affected creature (for example, a magic potion) is destroyed.</lairaction>
 	</lair>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
+</creature>
+<creature>
+	<name>Red Abishai</name>
+	<size>MEDIUM</size>
+	<type>FIEND,DEVIL,false</type>
+	<align>LE</align>
+	<cr>19.0</cr>
+	<ac>22</ac>
+	<hp>255</hp>
+	<speed>WALK 30,FLY 50</speed>
+	<stats>STR 23,DEX 16,CON 19,INT 14,WIS 15,CHA 19</stats>
+	<saves>STR 12,CON 10,WIS 8</saves>
+	<skills>INTIMIDATION 10,PERCEPTION 8</skills>
+	<multipliers>
+		<RESISTANCE>COLD,NONMAGICALBASIC</RESISTANCE>
+		<IMMUNITY>FIRE,POISON</IMMUNITY>
+	</multipliers>
+	<conditions>POISONED</conditions>
+	<senses>DARKVISION 120</senses>
+	<languages>DRACONIC,INFERNAL,TELEPATHY</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Magic weapons,It's weapon attacks are magical.</passive>
+		<passive>Devil's sight,Magical darkness doesn't impede this creatures darkvision.</passive>
+	</passives>
+	<other>Silvered weapons breach damage resistance.
+Telepathy is 120ft.</other>
+	<actions>
+		<multiattack>The abishai can use its Frightful Presence. It also makes three attacks: one with its morningstar, one with its claw, and one with its bite.</multiattack>
+		<attack>Morningstar,12,5,One target. Hit: 10 (1d8+6) piercing damage.</attack>
+		<attack>Claw,12,5,One target. Hit: 17 (2d10+6) slashing damage.</attack>
+		<attack>Bite,15,5,One target. Hit: 22 (5d10+6) piercing damage plus 38 (7d10) fire damage.</attack>
+		<effect>Frightful Presence,null,Each creature of the abishai's choice that is within 120 feet and aware of it must succeed on a DC 18 Wisdom saving throw or become frightened of it for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. If a creature's saving throw is successful or the effect ends for it, the creature is immune to the abishai's Frightful Presence for the next 24 hours.</effect>
+		<effect>Incite Fanaticism,null,The abishai chooses up to four of its allies within 60 feet of it that can see it. For 1 minute, each of those allies makes attack rolls with advantage and can't be frightened.</effect>
+		<effect>Power of the Dragon Queen,null,The abishai targets one dragon it can see within 120 feet of it. The dragon must make a DC 18 Charisma saving throw. A chromatic dragon makes this save with disadvantage. On a successful save, the target is immune to the abishai's Power of the Dragon Queen for 1 hour. On a failed save, the target is charmed by the abishai for 1 hour. While charmed in this way, the target regards the abishai as a trusted friend to be heeded and protected. This effect ends if the abishai or its companions deal damage to the target.</effect>
+	</actions>
+	<source>MORDENKAINENSTOMEOFFOES</source>
 </creature>
 <creature>
 	<name>Ogremoch</name>

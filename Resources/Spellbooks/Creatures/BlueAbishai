@@ -1,0 +1,14 @@
+<spellbook>
+	<name>BlueAbishai</name>
+	<slot>
+		<known>Friends,Mage hand,Message,Minor illusion,Shocking grasp,Charm person,Chromatic orb,Disguise self,Expiditious retreat,Magic missile,Thunderwave,Darkness,Mirror image,Misty step,Dispel magic,Fear,Lightning bolt,Dimension door,Greater invisibility,Ice storm,Cone of cold,Wall of force,Chain lightning,Teleport</known>
+		<0>Friends,Mage hand,Message,Minor illusion,Shocking grasp</0>
+		<1>4,Charm person,Chromatic orb,Disguise self,Expiditious retreat,Magic missile,Thunderwave</1>
+		<2>3,Misty step,Mirror image,Darkness</2>
+		<3>3,Dispel magic,Fear,Lightning bolt</3>
+		<4>3,Dimension door,Greater invisibility,Ice storm</4>
+		<5>2,Wall of force,Cone of cold</5>
+		<6>1,Chain lightning</6>
+		<7>1,Teleport</7>
+	</slot>
+</spellbook>
