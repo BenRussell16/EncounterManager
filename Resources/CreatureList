@@ -233,7 +233,7 @@ The process that creates a living spell changes the nature of its magic. A livin
 	<other></other>
 	<actions>
 		<attack>Fist,1,5,One target. Hit:1 (1d4-1) bludgeoning damage plus 2 (1d4) poison damage.</attack>
-		<effect>Rapport Spores,3/Day,A 10-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically wìth one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
+		<effect>Rapport Spores,3/Day,A 10-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -1183,7 +1183,7 @@ Is a Boros spellcaster.</other>
 	</passives>
 	<other></other>
 	<actions>
-		<attack>Bite,3,5,One creature. Hit: 4 (1d6+1) piercing damage, and the target must make a DC 11 Constitution savìng throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. lf the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
+		<attack>Bite,3,5,One creature. Hit: 4 (1d6+1) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. lf the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -2379,7 +2379,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	</passives>
 	<other></other>
 	<actions>
-		<attack>Bite,3,5,One creature. Hit: 4 (1d6+1) piercing damage, and the target must make a DC 11 Constitution savìng throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. lf the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
+		<attack>Bite,3,5,One creature. Hit: 4 (1d6+1) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 7 (2d6) poison damage on a failed save, or half as much damage on a successful one. lf the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.</attack>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -2721,7 +2721,7 @@ slashing darrrage if used with two hands.</attack>
 	<actions>
 		<attack>Fist,2,5,One target. Hit: 5 (2d4) bludgeoning damage plus 5 (2d4) poison damage.</attack>
 		<effect>Pacifying Spores,3/Day,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 11 Constitution saving throw or be stunned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
-		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically wìth one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
+		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -2747,9 +2747,9 @@ slashing darrrage if used with two hands.</attack>
 	<actions>
 		<attack>Fist,2,5,One target. Hit: 5 (2d4) bludgeoning damage plus 5 (2d4) poison damage.</attack>
 		<effect>Pacifying Spores,3/Day,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 11 Constitution saving throw or be stunned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
-		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically wìth one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
+		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
 		<effect>Caustic Spores,1/Day,The myconid releases spores in a 30-foot-cone. Each creature inside the cone must succeed on a DC 11 Dexterity saving throw or take 1d6 acid damage at the start of each of the myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success.</effect>
-		<effect>Infestation Spores,1/Day,The myconid releases spores that burst out in a cloud that fills a 10-foot—radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 11 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
+		<effect>Infestation Spores,1/Day,The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 11 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -2775,9 +2775,9 @@ slashing darrrage if used with two hands.</attack>
 	<actions>
 		<attack>Fist,2,5,One target. Hit: 5 (2d4) bludgeoning damage plus 5 (2d4) poison damage.</attack>
 		<effect>Pacifying Spores,3/Day,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 11 Constitution saving throw or be stunned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
-		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically wìth one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
+		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
 		<effect>Caustic Spores,1/Day,The myconid releases spores in a 30-foot-cone. Each creature inside the cone must succeed on a DC 11 Dexterity saving throw or take 1d6 acid damage at the start of each of the myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success.</effect>
-		<effect>Euphoria Spores,1/Day,The myconid releases a cloud of spores in a 20—foot—radius sphere centered on itself. Other creatures in that area must each succeed on a DC 11 Constitution saving throw or become poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of exhaustion.</effect>
+		<effect>Euphoria Spores,1/Day,The myconid releases a cloud of spores in a 20-foot-radius sphere centered on itself. Other creatures in that area must each succeed on a DC 11 Constitution saving throw or become poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of exhaustion.</effect>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -2803,9 +2803,9 @@ slashing darrrage if used with two hands.</attack>
 	<actions>
 		<attack>Fist,2,5,One target. Hit: 5 (2d4) bludgeoning damage plus 5 (2d4) poison damage.</attack>
 		<effect>Pacifying Spores,3/Day,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 11 Constitution saving throw or be stunned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
-		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically wìth one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
-		<effect>Infestation Spores,1/Day,The myconid releases spores that burst out in a cloud that fills a 10-foot—radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 11 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
-		<effect>Euphoria Spores,1/Day,The myconid releases a cloud of spores in a 20—foot—radius sphere centered on itself. Other creatures in that area must each succeed on a DC 11 Constitution saving throw or become poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of exhaustion.</effect>
+		<effect>Rapport Spores,null,A 20-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
+		<effect>Infestation Spores,1/Day,The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 11 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
+		<effect>Euphoria Spores,1/Day,The myconid releases a cloud of spores in a 20-foot-radius sphere centered on itself. Other creatures in that area must each succeed on a DC 11 Constitution saving throw or become poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of exhaustion.</effect>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -3206,7 +3206,7 @@ lf a non-evil humanoid dies from this attack, a new shadow rises from the corpse
 	<senses>BLINDSIGHT 10</senses>
 	<regions></regions>
 	<passives>
-		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -3231,7 +3231,7 @@ lf a non-evil humanoid dies from this attack, a new shadow rises from the corpse
 	<senses>BLINDSIGHT 10</senses>
 	<regions></regions>
 	<passives>
-		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -3257,7 +3257,7 @@ A creature reduced to 0 hit points by a swarm of centipedes is stable bul poison
 	<senses>BLINDSIGHT 10</senses>
 	<regions></regions>
 	<passives>
-		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -3287,7 +3287,7 @@ A creature reduced to 0 hit points by a swarm of centipedes is stable bul poison
 		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
 		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
 		<passive>Constructed nature,This creature doesn't require air, food, drink, or sleep.</passive>
-		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -3341,7 +3341,7 @@ If a target infested by rot grubs ends its turn with 0 hit points, it dies as th
 		<passive>Spider climb,This creature can climb difficult surfaces, including upside down on cielings, without needing to make an ability check.</passive>
 		<passive>Web sense,While in contact with a web, this creature knows the exact location of any other creature in contact with the same web.</passive>
 		<passive>Web walker,This creature ignores movement restrictions caused by webbing.</passive>
-		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -3366,7 +3366,7 @@ If a target infested by rot grubs ends its turn with 0 hit points, it dies as th
 	<senses>BLINDSIGHT 10</senses>
 	<regions></regions>
 	<passives>
-		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gaìn temporary hit points.</passive>
+		<passive>Swarm,The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny insect. The swarm can't regain hit points or gain temporary hit points.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -5553,7 +5553,7 @@ Innate spellcasting is psionics.</other>
 	</multipliers>
 	<regions></regions>
 	<passives>
-		<passive>False Appearance,While the tree remains motionless, it is indistinguìshable from a normal tree.</passive>
+		<passive>False Appearance,While the tree remains motionless, it is indistinguishable from a normal tree.</passive>
 	</passives>
 	<other>Knows one language of its creator.</other>
 	<actions>
@@ -5578,7 +5578,7 @@ Innate spellcasting is psionics.</other>
 	<senses>DARKVISION 120</senses>
 	<regions></regions>
 	<passives>
-		<passive>False Appearance,While the tree remains motionless, it is indistinguìshable from a normal zurkhwood mushroom.</passive>
+		<passive>False Appearance,While the tree remains motionless, it is indistinguishable from a normal zurkhwood mushroom.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -6417,11 +6417,11 @@ Violet		51 years or more.</other>
 	<passives>
 		<spellcasting>CHA,4,12,5,Fathomer</spellcasting>
 		<passive>Shapechanger (2/Day),The fathomer can use its action to polymorph into a Medium serpent composed of water, or back into its true form. Anything the fathomer is wearing or carrying is subsumed into the serpent form during the change, inaccessible until the fathomer returns to its true form. The fathomer reverts to its true form after 4 hours, unless it can expend another use of this trait. If the fathomer is knocked unconscious or dies, it also reverts to its true form.
-While in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical weapons. It also has immunity to the following conditions: exhaustion, grappled, paralyzed, poisoned, restrained, prone, unconscious. The serpent form can enter a hostile creature’s space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing.</passive>
+While in serpent form, the fathomer gains a swimming speed of 40 feet, the ability to breathe underwater, immunity to poison damage, as well as resistance to fire damage and bludgeoning, piercing, and slashing damage from nonmagical weapons. It also has immunity to the following conditions: exhaustion, grappled, paralyzed, poisoned, restrained, prone, unconscious. The serpent form can enter a hostile creature's space and stop there. In addition, if water can pass through a space, the serpent can do so without squeezing.</passive>
 	</passives>
 	<other>Spell slots come back after a short rest.</other>
 	<actions>
-		<attack>Constrict (Serpent Form Only),4,5,One target. Hit: 9 (2d6+2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can’t constrict another target.</attack>
+		<attack>Constrict (Serpent Form Only),4,5,One target. Hit: 9 (2d6+2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can't constrict another target.</attack>
 		<attack>Dagger (Human Form Only),4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
 	</actions>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
@@ -6534,7 +6534,7 @@ An engulfed creature can try to escape by taking an action to make a DC 12 Stren
 	<languages>COMMON</languages>
 	<regions></regions>
 	<passives>
-		<passive>Stench,Any creature that starts its turn wìthin 5 feet of the ghast must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.</passive>
+		<passive>Stench,Any creature that starts its turn within 5 feet of the ghast must succeed on a DC 10 Constitution saving throw or be poisoned until the start of its next turn. On a successful saving throw, the creature is immune to the ghast's Stench for 24 hours.</passive>
 		<passive>Turning Defiance,The ghast and any ghouls within 30 feet of it have advantage on saving throws against effects that turn undead.</passive>
 	</passives>
 	<other></other>
@@ -6678,7 +6678,7 @@ An engulfed creature can try to escape by taking an action to make a DC 12 Stren
 	<other></other>
 	<actions>
 		<attack>Bite,4,5,One target. Hit: 7 (1d10+2) piercing damage plus 3 (1d6) poison damage.</attack>
-		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 11 Constìtution saving throw, taking 21 (6d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 15-foot cone. Each creature in that area must make a DC 11 Constitution saving throw, taking 21 (6d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<lair>
 		<lairaction>Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check ancl sttcceerls. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.</lairaction>
@@ -7308,7 +7308,7 @@ Doesn't have disadvantage in melee.</attack>
 		<effect>Animating Spores,3/Day,The myconid targets one corpse of a humanoid or a Large or smaller beast within 5 feet of it and releases spores at the corpse. ln 24 hours, the corpse rises as a spore servant. The corpse stays animated for 1d4+1 weeks or until destroyed, and it can't be animated again in this way.</effect>
 		<effect>Hallucination Spores,null,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. The poisoned target is incapacitated while it hallucinates. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 		<effect>Pacifying Spores,null,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 12 Constitution saving throw or be stunned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
-		<effect>Rapport Spores,null,A 30-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically wìth one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
+		<effect>Rapport Spores,null,A 30-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
 </creature>
@@ -7337,10 +7337,10 @@ Doesn't have disadvantage in melee.</attack>
 		<effect>Animating Spores,3/Day,The myconid targets one corpse of a humanoid or a Large or smaller beast within 5 feet of it and releases spores at the corpse. ln 24 hours, the corpse rises as a spore servant. The corpse stays animated for 1d4+1 weeks or until destroyed, and it can't be animated again in this way.</effect>
 		<effect>Hallucination Spores,null,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 12 Constitution saving throw or be poisoned for 1 minute. The poisoned target is incapacitated while it hallucinates. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 		<effect>Pacifying Spores,null,The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a DC 12 Constitution saving throw or be stunned for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
-		<effect>Rapport Spores,null,A 30-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically wìth one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
+		<effect>Rapport Spores,null,A 30-foot radius of spores extends from the myconid. These spores can go around corners and affect only creatures with an lntelligence of 2 or higher that aren't undead, constructs, or elementals. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other. The effect lasts for 1 hour.</effect>
 		<effect>Caustic Spores,1/Day,The myconid releases spores in a 30-foot-cone. Each creature inside the cone must succeed on a DC 12 Dexterity saving throw or take 1d6 acid damage at the start of each of the myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success.</effect>
-		<effect>Infestation Spores,1/Day,The myconid releases spores that burst out in a cloud that fills a 10-foot—radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 12 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
-		<effect>Euphoria Spores,1/Day,The myconid releases a cloud of spores in a 20—foot—radius sphere centered on itself. Other creatures in that area must each succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of exhaustion.</effect>
+		<effect>Infestation Spores,1/Day,The myconid releases spores that burst out in a cloud that fills a 10-foot-radius sphere centered on it, and the cloud lingers for 1 minute. Any flesh-and-blood creature in the cloud when it appears, or that enters it later, must make a DC 12 Constitution saving throw. On a successful save, the creature can't be infected by these spores for 24 hours. On 3 failed save, the creature is infected with at disease called the spores of Zuggtmoy and also gains a random form of indefinite madness (determined by rolling on the Madness of Zuggtmoy table in Out of the Abyss) that lasts until the creature is cured of the disease or dies. While infected in this way, the creature cant he reinfected, and it must repeat the saving throw at the end of every 24 hours, ending the infection on a success. On a failure, the infected creature's body is slowly taken over by fungal growth, and after three such failed saves. the creature dies and is reanimated as a spore servant if its a type of creature that can be (see the "Myconids" entry in the Monster Manual).</effect>
+		<effect>Euphoria Spores,1/Day,The myconid releases a cloud of spores in a 20-foot-radius sphere centered on itself. Other creatures in that area must each succeed on a DC 12 Constitution saving throw or become poisoned for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect early on itself on a success. When the effect ends on it, the creature gains one level of exhaustion.</effect>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -7586,8 +7586,8 @@ Doesn't have disadvantage in melee.</attack>
 	<regions></regions>
 	<passives>
 		<spellcasting>INT,5,13,6,Oreioth</spellcasting>
-		<passive>Grim Harvest,Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell’s level.</passive>
-		<passive>Swift Animation (Recharges after a Long Rest),When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast animate dead on that humanoid’s corpse, instead of using the spell’s normal casting time.</passive>
+		<passive>Grim Harvest,Once per turn when Oreioth kills one or more creatures with a spell of 1st level or higher, he regains hit points equal to twice the spell's level.</passive>
+		<passive>Swift Animation (Recharges after a Long Rest),When a living Medium or Small humanoid within 30 feet of Oreioth dies, he can use an action on his next turn to cast animate dead on that humanoid's corpse, instead of using the spell's normal casting time.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -10482,9 +10482,9 @@ The possession lasts until either the body drops to 0 hit points, the yakfolk en
 	<regions></regions>
 	<passives>
 		<spellcasting>INT,5,13,6,AzbaraJos</spellcasting>
-		<passive>Sculpt Spells,When Azbara casts an evocation spell that affects other creatures that he can see, he can choose a number of them equal to 1+ the spell’s level to succeed on their saving throws against the spell. Those creatures take no damage if they would normally take half damage from the spell.</passive>
+		<passive>Sculpt Spells,When Azbara casts an evocation spell that affects other creatures that he can see, he can choose a number of them equal to 1+ the spell's level to succeed on their saving throws against the spell. Those creatures take no damage if they would normally take half damage from the spell.</passive>
 		<passive>Special Equipment,Azbara has two scrolls of mage armour.</passive>
-		<passive>Potent Cantrips,When Azbara casts an evocation cantrip and misses, or the target succeeds on its saving throw, the target still takes half the cantrip’s damage but suffers no other effect.</passive>
+		<passive>Potent Cantrips,When Azbara casts an evocation cantrip and misses, or the target succeeds on its saving throw, the target still takes half the cantrip's damage but suffers no other effect.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -11004,7 +11004,7 @@ The possession lasts until the temporary hit points are lost (at which point the
 	<actions>
 		<attack>Withering Touch,5,5,One target. Hit: 17 (4d6+3) necrotic damage.</attack>
 		<effect>Etheralness,null,The ghost enters the Ethereal Plane from the Material Plane, or vice versa. lt is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can't affect or be affected by anything on the other plane.</effect>
-		<effect>Possession,Recharge 6,One humanoid or giant that the ghost can see within 5 feet of it must succeed on a DC 13 Charìsma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control ofits body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, lntelligence, Wisdom, Charisma, and immunity to being charmed and frightened. lt otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies
+		<effect>Possession,Recharge 6,One humanoid or giant that the ghost can see within 5 feet of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control ofits body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, lntelligence, Wisdom, Charisma, and immunity to being charmed and frightened. lt otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies
 The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 feet of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession end.</effect>
 	</actions>
 	<source>STORMKINGSTHUNDER</source>
@@ -11100,7 +11100,7 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 		<attack>Withering Touch,5,5,One target. Hit: 17 (4d6+3) necrotic damage.</attack>
 		<effect>Etheralness,null,The ghost enters the Ethereal Plane from the Material Plane, or vice versa. lt is visible on the Material Plane while it is in the Border Ethereal, and vice versa, yet it can't affect or be affected by anything on the other plane.</effect>
 		<effect>Horrifying Visage,null,Each non-undead creature within 60 feet of the ghost that can see it must succeed on a DC 13 Wisdom saving throw or be frightened for 1 minute. lf the save fails by 5 or more, the target also ages 1d4x10 years. A frightened target can repeat the saving throw at the end of each of its turns, ending the frightened condition on itselfon a success. lf a target's saving throw is successful or the effect ends for it, the target is immune to this ghost's Horrifying Visage for the next 24 hours. The aging effect can be reversed wilh a greater restoration spell, but only within 24 hours of it occurring.</effect>
-		<effect>Possession,Recharge 6,One humanoid that the ghost can see within 5 feet of it must succeed on a DC 13 Charìsma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control ofits body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, lntelligence, Wisdom, Charisma, and immunity to being charmed and frightened. lt otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies
+		<effect>Possession,Recharge 6,One humanoid that the ghost can see within 5 feet of it must succeed on a DC 13 Charisma saving throw or be possessed by the ghost; the ghost then disappears, and the target is incapacitated and loses control ofits body. The ghost now controls the body but doesn't deprive the target of awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that turn undead, and it retains its alignment, lntelligence, Wisdom, Charisma, and immunity to being charmed and frightened. lt otherwise uses the possessed target's statistics, but doesn't gain access to the target's knowledge, class features, or proficiencies
 The possession lasts until the body drops to 0 hit points, the ghost ends it as a bonus action, or the ghost is turned or forced out by an effect like the dispel evil and good spell. When the possession ends, the ghost reappears in an unoccupied space within 5 feet of the body. The target is immune to this ghost's Possession for 24 hours after succeeding on the saving throw or after the possession end.</effect>
 	</actions>
 	<source>MONSTERMANUAL</source>
@@ -11453,7 +11453,7 @@ bludgeoning damage if used with two hands.</attack>
 	<regions></regions>
 	<passives>
 		<passive>Action Surge (Recharges After a Short or Long Rest),On his turn, Langdedrosa can take one additional action.</passive>
-		<passive>Improved Critical,Langdedrosa’s weapon attacks score a critical hit on a roll of 19 or 20.</passive>
+		<passive>Improved Critical,Langdedrosa's weapon attacks score a critical hit on a roll of 19 or 20.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -12039,7 +12039,7 @@ fighting.
 	<actions>
 		<attack>War Pick,3,5,One target. Hit: 4 (1d8) piercing damage.</attack>
 		<effect>Change Shape,null,The Pudding King magically transforms into an ooze, or back into his true form. He reverts to his true form if he dies. Any equipment he is wearing or carrying is absorbed by the new form. In ooze form, the Pudding King retains his alignment, hit points, Hit Dice, and Intelligence, Wisdom, and Charisma scores, as well as this action. His statistics and capabilities are otherwise replaced by those of the new form.</effect>
-		<effect>Create Green Slime,1/Day,The Pudding King creates a patch of green slime (see “Dungeon Hazards" in chapter 5 of the Dungeon masters Guide). The slime appears on a section of wall, ceiling, or floor within 30 Feet of the Pudding King.</effect>
+		<effect>Create Green Slime,1/Day,The Pudding King creates a patch of green slime (see "Dungeon Hazards" in chapter 5 of the Dungeon masters Guide). The slime appears on a section of wall, ceiling, or floor within 30 Feet of the Pudding King.</effect>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
 </creature>
@@ -14938,7 +14938,7 @@ May have a familiar.</other>
 	<regions></regions>
 	<passives>
 		<spellcasting>CHA,6,14,7,Flamewrath</spellcasting>
-		<passive>Wreathed in Flame,For the flamewrath, the warm version of the fire shield spell has a duration of “until dispelled.” The fire shield burns for 10 minutes after the flamewrath dies, consuming its body.</passive>
+		<passive>Wreathed in Flame,For the flamewrath, the warm version of the fire shield spell has a duration of until dispelled. The fire shield burns for 10 minutes after the flamewrath dies, consuming its body.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -17899,7 +17899,7 @@ Only has legendary actions when all 5 Obzedat ghosts are there, and they share t
 		<multiattack>The dragon makes three attacks: one with its bite and two with its claws.</multiattack>
 		<attack>Bite,7,10,One target. Hit: 15 (2d10+4) piercing damage plus 7 (2d6) poison damage.</attack>
 		<attack>Claw,7,5,One target. Hit: 11 (2d6+4) slashing damage.</attack>
-		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constìtution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 30-foot cone. Each creature in that area must make a DC 14 Constitution saving throw, taking 42 (12d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<lair>
 		<lairaction>Grasping roots and vines erupt in a 20-foot radius centered on a point on the ground that the dragon can see within 120 feet of it. That area becomes difficult terrain, and each creature there must succeed on a DC 15 Strength saving throw or be restrained by the roots and vines. A creature can be freed if it or another creature takes an action to make a DC 15 Strength check ancl sttcceerls. The roots and vines wilt away when the dragon uses this lair action again or when the dragon dies.</lairaction>
@@ -18022,7 +18022,7 @@ May have a familiar.</other>
 		<attack>Windvane (Spear),9,20,60,One target. Hit: 9 (1d6+6) piercing damage, or 10 (1d8+6) piercing damage if used with two hands to make a melee attack, plus 3 (1d6) lightning damage.</attack>
 	</actions>
 	<lair>
-		<lairaction>Aerisi casts one of her spells, up to 3rd level, without using components or a spell slot. She can’t cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Aerisi can take no other lair actions while concentrating on a spell cast as a lair action.</lairaction>
+		<lairaction>Aerisi casts one of her spells, up to 3rd level, without using components or a spell slot. She can't cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Aerisi can take no other lair actions while concentrating on a spell cast as a lair action.</lairaction>
 		<lairaction>Aerisi casts invisibility, she also draws the power of the air node into herself. By doing so, she regains 15 (3d8+2) hit points.</lairaction>
 	</lair>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
@@ -18466,7 +18466,7 @@ May have a familiar.</other>
 	<other></other>
 	<actions>
 		<multiattack>Gar makes two melee attacks, one with his claw and one with Drown.</multiattack>
-		<attack>Claw,6,5,One target. Hit: 9 (2d6+2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can’t attack other creatures with his claw.</attack>
+		<attack>Claw,6,5,One target. Hit: 9 (2d6+2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw.</attack>
 		<attack>Drown (Trident),7,20,60,One target. Hit: 6 (1d6+3) piercing damage plus 4 (1d8) cold damage.</attack>
 	</actions>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
@@ -21204,7 +21204,7 @@ Adamantine weapons breach damage immunity.</other>
 		<attack>Tinderstrike (Dagger),9,20,60,One target. Hit: 7 (1d4+5) piercing damage plus 7 (2d6) fire damage.</attack>
 	</actions>
 	<lair>
-		<lairaction>Vanifer casts one of her spells, up to 3rd level, without using components or a spell slot. She can’t cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Vanifer can take no other lair actions while concentrating on a spell cast as a lair action.</lairaction>
+		<lairaction>Vanifer casts one of her spells, up to 3rd level, without using components or a spell slot. She can't cast the same spell two rounds in a row, although she can continue to concentrate on a spell she previously cast using a lair action. Vanifer can take no other lair actions while concentrating on a spell cast as a lair action.</lairaction>
 		<lairaction>If Vanifer casts misty step, she also draws the power of the fire node into herself. By doing so, she regains 15 (3d8+2) hit points.</lairaction>
 	</lair>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
@@ -21343,15 +21343,15 @@ Understands Celestial but utters only obscene nonsense.</other>
 		<effect>Eye Rays,null,The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:
  - 1. Charm Ray. The targeted creature must succeed on a DC 16 Wlsdom saving throw or be charmed by the beholder for 1 hour, or until the beholder harms the creature.
  - 2. Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
- - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itseìfon a success.
+ - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itselfon a success.
  - 4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. ln addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
  - 5. Enervation Ray. The targeted creature must make a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.
  - 6. Telekinetic Ray. lf the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. lt is restrained by the ray's telekinetic grip until the start ofthe beholder's next turn or until the beholder is incapacitated.
-lf the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
+If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
  - 7. Sleep Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain unconscious for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.
  - 8. Petrifcation Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. lt must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
- - 9. Disintegratíon Ray. lf the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
-lf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
+ - 9. Disintegration Ray. lf the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
+If the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
  - 10. Death Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.</effect>
 	</actions>
 	<legendaryactions>3
@@ -21415,11 +21415,11 @@ lf the target is a Large or smaller nonmagical object or creation of magical for
 	<other></other>
 	<actions>
 		<multiattack>Gar makes two melee attacks, one with his claw and one with Drown.</multiattack>
-		<attack>Claw,6,5,One target. Hit: 9 (2d6+2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can’t attack other creatures with his claw.</attack>
+		<attack>Claw,6,5,One target. Hit: 9 (2d6+2) bludgeoning damage, and the target is grappled (escape DC 13). Until the grapple ends, Gar can't attack other creatures with his claw.</attack>
 		<attack>Drown (Trident),7,20,60,One target. Hit: 6 (1d6+3) piercing damage plus 4 (1d8) cold damage.</attack>
 	</actions>
 	<lair>
-		<lairaction>Gar uses his Multiattack or casts one of his spells, up to 3rd level, without using components or a spell slot. He can’t cast the same spell two rounds in a row, but he can continue to concentrate on a spell he previously cast using a lair action. He can take no other lair actions while concentrating on a spell cast as a lair action.
+		<lairaction>Gar uses his Multiattack or casts one of his spells, up to 3rd level, without using components or a spell slot. He can't cast the same spell two rounds in a row, but he can continue to concentrate on a spell he previously cast using a lair action. He can take no other lair actions while concentrating on a spell cast as a lair action.
 If Gar casts cure wounds using this lair action, he regains the maximum number of hit points from the spell (28).</lairaction>
 	</lair>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
@@ -21920,15 +21920,15 @@ While mounted and not incapacitated, the archon can't be surprised, and both it 
 		<effect>Eye Rays,null,The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:
  - 1. Charm Ray. The targeted creature must succeed on a DC 16 Wlsdom saving throw or be charmed by the beholder for 1 hour, or until the beholder harms the creature.
  - 2. Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
- - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itseìfon a success.
+ - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
  - 4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. ln addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
  - 5. Enervation Ray. The targeted creature must make a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.
  - 6. Telekinetic Ray. lf the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. lt is restrained by the ray's telekinetic grip until the start ofthe beholder's next turn or until the beholder is incapacitated.
-lf the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
+If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
  - 7. Sleep Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain unconscious for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.
  - 8. Petrifcation Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. lt must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
- - 9. Disintegratíon Ray. lf the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
-lf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
+ - 9. Disintegration Ray. If the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
+If the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
  - 10. Death Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.</effect>
 	</actions>
 	<legendaryactions>3
@@ -22207,15 +22207,15 @@ If the wurm takes 30 damage or more on a single turn from a creature inside it, 
 		<effect>Eye Rays,null,The beholder shoots three of the following magical eye rays at random (reroll duplicates), choosing one to three targets it can see within 120 feet of it:
  - 1. Charm Ray. The targeted creature must succeed on a DC 16 Wlsdom saving throw or be charmed by the beholder for 1 hour, or until the beholder harms the creature.
  - 2. Paralyzing Ray. The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
- - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itseìfon a success.
+ - 3. Fear Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
  - 4. Slowing Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. ln addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.
  - 5. Enervation Ray. The targeted creature must make a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.
  - 6. Telekinetic Ray. lf the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. lt is restrained by the ray's telekinetic grip until the start ofthe beholder's next turn or until the beholder is incapacitated.
-lf the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
+If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. The beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or a container.
  - 7. Sleep Ray. The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain unconscious for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.
  - 8. Petrifcation Ray. The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. lt must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.
- - 9. Disintegratíon Ray. lf the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
-lf the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
+ - 9. DisintegratIon Ray. If the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. lf this damage reduces the creature to 0 hit points, its body becomes a pile of fine gray dust.
+If the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. lf the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.
  - 10. Death Ray. The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.</effect>
 		<effect>Ring of Invisibility,null,Xanathar turns invisible as if through the Invisibility spell.</effect>
 	</actions>
@@ -22259,7 +22259,7 @@ lf the target is a Large or smaller nonmagical object or creation of magical for
 		<attack>Claw,11,5,One target. Hit: 13 (2d6+6) slashing damage.</attack>
 		<attack>Tail,11,15,One target. Hit: 15 (2d8+6) bludgeoning damage.</attack>
 		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 16 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
-		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area must make a DC 18 Constìtution saving throw, taking 56 (16d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 60-foot cone. Each creature in that area must make a DC 18 Constitution saving throw, taking 56 (16d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
@@ -23193,8 +23193,8 @@ Telepathy is 1000ft.</other>
 		<legendaryresistance>3</legendaryresistance>
 		<innatecasting>CHA,12,20,,Olhydra</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Empowered Attacks,Olhydra’s slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
-		<passive>Water Form,Olhydra can enter a hostile creature’s space and stop there. She can move through a space as narrow as 1 inch wide without squeezing.</passive>
+		<passive>Empowered Attacks,Olhydra's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
+		<passive>Water Form,Olhydra can enter a hostile creature's space and stop there. She can move through a space as narrow as 1 inch wide without squeezing.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -23206,11 +23206,11 @@ Telepathy is 1000ft.</other>
 	<legendaryactions>3
 		<legendaryaction>Crush,1,One creature that Olhydra is grappling is crushed for 21 (3d10+5) bludgeoning damage.</legendaryaction>
 		<legendaryaction>Fling,2,Olhydra releases one creature she is grappling by flinging the creature up to 60 feet away from her, in a direction of her choice. If the flung creature comes into contact with a solid surface, such as a wall or floor, the creature takes 1d6 bludgeoning damage for every 10 feet it was flung.</legendaryaction>
-		<legendaryaction>Water to Acid,3,Olhydra transforms her watery body into acid. This effect lasts until Olhydra’s next turn. Any creature that comes into contact with Olhydra or hits her with a melee attack while standing within 5 feet of her takes 11 (2d10) acid damage. Any creature grappled by Olhydra takes 22 (4d10) acid damage at the start of its turn.</legendaryaction>
+		<legendaryaction>Water to Acid,3,Olhydra transforms her watery body into acid. This effect lasts until Olhydra's next turn. Any creature that comes into contact with Olhydra or hits her with a melee attack while standing within 5 feet of her takes 11 (2d10) acid damage. Any creature grappled by Olhydra takes 22 (4d10) acid damage at the start of its turn.</legendaryaction>
 	</legendaryactions>
 	<lair>
 		<lairaction>Pools of water in the lair surge outward in a grasping tide. Any creature within 20 feet of such a pool must succeed on a DC 20 Strength saving throw or be pulled up to 20 feet into the water and knocked prone.</lairaction>
-		<lairaction>Water within 120 feet of Olhydra becomes murky and opaque until initiative count 20 of the next round. A creature with darkvision can’t see through the water, and light can’t illuminate it.</lairaction>
+		<lairaction>Water within 120 feet of Olhydra becomes murky and opaque until initiative count 20 of the next round. A creature with darkvision can't see through the water, and light can't illuminate it.</lairaction>
 		<lairaction>A freezing fog fills a 40-foot-radius sphere within 120 feet of Olhydra, lasting until initiative count 20 of the next round. Creatures and objects within or beyond the fog are heavily obscured. A creature that enters the freezing cloud for the first time on a turn or starts its turn there takes 10 (3d6) cold damage.</lairaction>
 	</lair>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
@@ -23420,21 +23420,21 @@ d100	Effect
 		<legendaryresistance>3</legendaryresistance>
 		<innatecasting>CHA,12,20,,YanCBin</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Empowered Attacks,Yan-C-Bin’s slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
-		<passive>Air Form,Yan-C-Bin can enter a hostile creature’s space and stop there. He can move through a space as narrow as 1 inch wide without squeezing if air could pass through that space.</passive>
+		<passive>Empowered Attacks,Yan-C-Bin's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
+		<passive>Air Form,Yan-C-Bin can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch wide without squeezing if air could pass through that space.</passive>
 	</passives>
 	<other></other>
 	<actions>
 		<multiattack>Yan-C-Bin makes two slam attacks.</multiattack>
 		<attack>Slam,14,10,One target. Hit: 20 (3d8+7) force damage plus 10 (3d6) lightning damage.</attack>
-		<effect>Thundercrack,Recharges after a Short or Long Rest,Yan-C-Bin unleashes a terrible thundercrack in a 100-foot-radius sphere centered on himself. All other creatures in the area must succeed on a DC 24 Constitution saving throw or take 31 (9d6) thunder damage and be deafened for 1 minute. On a successful save, a creature takes half as much damage and is deafened until the start of Yan-C-Bin’s next turn.</effect>
+		<effect>Thundercrack,Recharges after a Short or Long Rest,Yan-C-Bin unleashes a terrible thundercrack in a 100-foot-radius sphere centered on himself. All other creatures in the area must succeed on a DC 24 Constitution saving throw or take 31 (9d6) thunder damage and be deafened for 1 minute. On a successful save, a creature takes half as much damage and is deafened until the start of Yan-C-Bin's next turn.</effect>
 		<effect>Change Shape,null,Yan-C-Bin polymorphs into a Medium humanoid. While in polymorphed form, a swirling breeze surrounds him, his eyes are pale and cloudy, and he loses the Air Form trait. He can remain in polymorphed form for up to 1 hour. Reverting to his true form requires an action.</effect>
 		<effect>Summon Elementals,1/Day,Yan-C-Bin summons up to three air elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Yan-C-Bin, and disappear if Yan-C-Bin is reduced to 0 hit points.</effect>
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Peal of Thunder,1,Yan-C-Bin unleashes a peal of thunder that can be heard out to a range of 300 feet. Each creature within 30 feet of Yan-C-Bin takes 5 (1d10) thunder damage.</legendaryaction>
 		<legendaryaction>Teleport,2,Yan-C-Bin magically teleports up to 120 feet to an unoccupied space he can see. Anything Yan-C-Bin is wearing or carrying is teleported with him.</legendaryaction>
-		<legendaryaction>Suffocate,3,Yan-C-Bin steals the air of one breathing creature he can see within 60 feet of him. The target must make a DC 21 Constitution saving throw. On a failed save, the target drops to 0 hit points and is dying. On a successful save, the target can’t breathe or speak until the start of its next turn.</legendaryaction>
+		<legendaryaction>Suffocate,3,Yan-C-Bin steals the air of one breathing creature he can see within 60 feet of him. The target must make a DC 21 Constitution saving throw. On a failed save, the target drops to 0 hit points and is dying. On a successful save, the target can't breathe or speak until the start of its next turn.</legendaryaction>
 	</legendaryactions>
 	<lair>
 		<lairaction>Yan-C-Bin drops the temperature of the air, covering all surfaces with ice. This effect is identical to the sleet storm spell.</lairaction>
@@ -23466,10 +23466,10 @@ d100	Effect
 		<legendaryresistance>3</legendaryresistance>
 		<innatecasting>CHA,12,20,,Imix</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
-		<passive>Fire Aura,At the start of each of Imix’s turns, each creature within 10 feet of him takes 17 (5d6) fire damage, and flammable objects in the aura that aren’t being worn or carried ignite. A creature also takes 17 (5d6) fire damage if it touches Imix or hits him with a melee attack while within 10 feet of him, and a creature takes that damage the first time on a turn that Imix moves into its space. Nonmagical weapons that hit Imix are destroyed by fire immediately after dealing damage to him.</passive>
+		<passive>Fire Aura,At the start of each of Imix's turns, each creature within 10 feet of him takes 17 (5d6) fire damage, and flammable objects in the aura that aren't being worn or carried ignite. A creature also takes 17 (5d6) fire damage if it touches Imix or hits him with a melee attack while within 10 feet of him, and a creature takes that damage the first time on a turn that Imix moves into its space. Nonmagical weapons that hit Imix are destroyed by fire immediately after dealing damage to him.</passive>
 		<passive>Illumination,Imix sheds bright light in a 60-foot radius and dim light for an additional 60 feet.</passive>
 		<passive>Fire Form,Imix can enter a hostile creature's space and stop there. He can move through a space as narrow as 1 inch without squeezing if fire could pass through that space.</passive>
-		<passive>Empowered Attacks,Imix’s slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
+		<passive>Empowered Attacks,Imix's slam attacks are treated as magical for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -23479,9 +23479,9 @@ d100	Effect
 		<effect>Summon Elementals,1/Day,Imix summons up to three fire elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Imix, and disappear if Imix is reduced to 0 hit points.</effect>
 	</actions>
 	<legendaryactions>3
-		<legendaryaction>Heat Wave,1,Imix creates a blast of heat within 300 feet of himself. Each creature in the area in physical contact with metal objects (for example, carrying metal weapons or wearing metal armor) takes 9 (2d8) fire damage. Each creature in the area that isn’t resistant or immune to fire damage must make a DC 21 Constitution saving throw or gain one level of exhaustion.</legendaryaction>
-		<legendaryaction>Teleport,2,Imix magically teleports up to 120 feet to an unoccupied space he can see. Anything Imix is wearing or carrying isn’t teleported with him.</legendaryaction>
-		<legendaryaction>Combustion,3,Imix causes one creature he can see within 30 feet of him to burst into flames. The target must make a DC 21 Constitution saving throw. On a failed save, the target takes 70 (20d6) fire damage and catches fire. A target on fire takes 10 (3d6) fire damage when it starts its turn, and remains on fire until it or another creature takes an action to douse the flames. On a successful save, the target takes half as much damage and doesn’t catch fire.</legendaryaction>
+		<legendaryaction>Heat Wave,1,Imix creates a blast of heat within 300 feet of himself. Each creature in the area in physical contact with metal objects (for example, carrying metal weapons or wearing metal armor) takes 9 (2d8) fire damage. Each creature in the area that isn't resistant or immune to fire damage must make a DC 21 Constitution saving throw or gain one level of exhaustion.</legendaryaction>
+		<legendaryaction>Teleport,2,Imix magically teleports up to 120 feet to an unoccupied space he can see. Anything Imix is wearing or carrying isn't teleported with him.</legendaryaction>
+		<legendaryaction>Combustion,3,Imix causes one creature he can see within 30 feet of him to burst into flames. The target must make a DC 21 Constitution saving throw. On a failed save, the target takes 70 (20d6) fire damage and catches fire. A target on fire takes 10 (3d6) fire damage when it starts its turn, and remains on fire until it or another creature takes an action to douse the flames. On a successful save, the target takes half as much damage and doesn't catch fire.</legendaryaction>
 	</legendaryactions>
 	<lair>
 		<lairaction>Any fires in the lair flare up drastically, quadrupling in size (for example, a fire blazing in a 5-foot by 5-foot area expands to a 10-foot by 10-foot area). Pools or streams of lava or other molten material are also affected. Creatures caught in the area of an expanded fire are subject to the normal damage for entering or being in the fire. Creatures caught by a sudden flood of lava must succeed on a DC 20 Strength saving throw or be knocked prone, in addition to the normal damage for contact with molten rock.</lairaction>
@@ -23552,7 +23552,7 @@ Telepathy is 120ft.</other>
 		<innatecasting>CHA,12,20,,Ogremoch</innatecasting>
 		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
 		<passive>Siege monster,This creature deals double damage to objects and structures.</passive>
-		<passive>Empowered Attacks,Ogremoch’s slam attacks are treated as magical and adamantine for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
+		<passive>Empowered Attacks,Ogremoch's slam attacks are treated as magical and adamantine for the purpose of bypassing resistance and immunity to nonmagical weapons.</passive>
 	</passives>
 	<other></other>
 	<actions>
@@ -23562,14 +23562,14 @@ Telepathy is 120ft.</other>
 		<effect>Summon Elementals,1/Day,Ogremoch summons up to three earth elementals and loses 30 hit points for each elemental he summons. Summoned elementals have maximum hit points, appear within 100 feet of Ogremoch, and disappear if Ogremoch is reduced to 0 hit points.</effect>
 	</actions>
 	<legendaryactions>3
-		<legendaryaction>Illuminating Crystals,1,Ogremoch’s crystalline protrusions flare. Each creature within 30 feet of Ogremoch becomes outlined in orange light, shedding dim light in a 10-foot radius. Any attack roll against an affected creature has advantage if the attacker can see it, and the affected creature can’t benefit from being invisible.</legendaryaction>
+		<legendaryaction>Illuminating Crystals,1,Ogremoch's crystalline protrusions flare. Each creature within 30 feet of Ogremoch becomes outlined in orange light, shedding dim light in a 10-foot radius. Any attack roll against an affected creature has advantage if the attacker can see it, and the affected creature can't benefit from being invisible.</legendaryaction>
 		<legendaryaction>Stomp,2,Ogremoch stomps the ground, creating an earth tremor that extends in a 30-foot radius. Other creatures standing on the ground in that radius must succeed on a DC 23 Dexterity saving throw or fall prone.</legendaryaction>
-		<legendaryaction>Create Gargoyle,3,Ogremoch’s hit points are reduced by 50 as he breaks off a chunk of his body and places it on the ground in an unoccupied space within 15 feet of him. The chunk of rock instantly transforms into a gargoyle and acts on the same initiative count as Ogremoch. Ogremoch can’t use this action if he has 50 hit points or fewer. The gargoyle obeys Ogremoch’s commands and fights until destroyed.</legendaryaction>
+		<legendaryaction>Create Gargoyle,3,Ogremoch's hit points are reduced by 50 as he breaks off a chunk of his body and places it on the ground in an unoccupied space within 15 feet of him. The chunk of rock instantly transforms into a gargoyle and acts on the same initiative count as Ogremoch. Ogremoch can't use this action if he has 50 hit points or fewer. The gargoyle obeys Ogremoch's commands and fights until destroyed.</legendaryaction>
 	</legendaryactions>
 	<lair>
 		<lairaction>A 10-foot-radius area of rocky or earthy ground within 60 feet of Ogremoch turns to sticky mud. Any creature on the ground in the area must succeed on a DC 15 Dexterity saving throw or sink 5 feet into the mud and be restrained. A creature can take an action to make a DC 15 Strength check, ending the effect on itself or another creature within its reach on a success.</lairaction>
 		<lairaction>Crystalline spikes grow from the ground in a 20-foot-radius area within 60 feet of Ogremoch. The area becomes difficult terrain. A creature that moves through the affected area takes 1d8 piercing damage for every 5 feet it moves there. Creatures that are knocked prone in the area also take this damage.</lairaction>
-		<lairaction>A violent tremor shakes the lair in a 120-foot-radius around Ogremoch. Each creature other than Ogremoch on the ground in the area must succeed on a DC 15 Strength or Dexterity saving throw (target’s choice) or be knocked prone.</lairaction>
+		<lairaction>A violent tremor shakes the lair in a 120-foot-radius around Ogremoch. Each creature other than Ogremoch on the ground in the area must succeed on a DC 15 Strength or Dexterity saving throw (target's choice) or be knocked prone.</lairaction>
 	</lair>
 	<source>PRINCESOFTHEAPOCALYPSE</source>
 </creature>
@@ -23849,7 +23849,7 @@ In battle, the phoenix is a unit with Attack +17 and Power +15 and can affect ev
 		<attack>Claw,15,10,One target. Hit: 22 (4d6+8) slashing damage.</attack>
 		<attack>Tail,15,20,One target. Hit: 17 (2d8+8) bludgeoning damage.</attack>
 		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
-		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constìtution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
@@ -24242,7 +24242,7 @@ If a creature succeeds on any of these saves or the effect ends on it, the creat
 		<attack>Claw,15,10,One target. Hit: 22 (4d6+8) slashing damage.</attack>
 		<attack>Tail,15,20,One target. Hit: 17 (2d8+8) bludgeoning damage.</attack>
 		<effect>Frightful Presence,null,Each creature of the dragon's choice that is within 120 feet of the dragon and aware of it must succeed on a DC 19 Wisdom saving throw or become frightened for 1 minute. A creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success. lf a creature's saving throw is successful or the effect ends for it, the creature is immune to the dragon's Frightful Presence for the next 24 hours.</effect>
-		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constìtution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Poison Breath,Recharge 5-6,The dragon exhales poisonous gas in a 90-foot cone. Each creature in that area must make a DC 22 Constitution saving throw, taking 77 (22d6) poison damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Detect,1,The dragon makes a Wisdom (Perception) check.</legendaryaction>
@@ -24537,10 +24537,10 @@ Telepathy is 120ft.</other>
 	<actions>
 		<multiattack>The kraken makes three tentacle attacks, each of which it can replace with one use of Fling.</multiattack>
 		<attack>Bite,18,5,One target. Hit: 23 (3d8+10) piercing damage. lf the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes 42 (12d6) acid damage at the start of each of the kraken's turns.
-lf the kraken takes 50 damage or more on a single turn from a creature inside lt, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. lf the kraken dìes, a swallowed creature is no longer restrained by it and can escape from the corpse usrng 15 feet of movement, exiting prone.</attack>
+lf the kraken takes 50 damage or more on a single turn from a creature inside lt, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. If the kraken does, a swallowed creature is no longer restrained by it and can escape from the corpse usrng 15 feet of movement, exiting prone.</attack>
 		<attack>Tentacle,18,30,One target. Hit: 20 (3d6+10) bludgeoning damage, and the target is grappled (escape DC 18). Until this grapple ends, the target is restrained. The kraken has ten tentacles, each of which can grapple one target.</attack>
-		<effect>Fling,null,One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. Ifa thrown target strikes a soìid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. lf the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.</effect>
-		<effect>Lightning Storm,null,The kraken magicalìy creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Fling,null,One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. Ifa thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. lf the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.</effect>
+		<effect>Lightning Storm,null,The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Tentacle Attack or Fling,1,The kraken makes one tentacle attack or uses its Fling.</legendaryaction>
@@ -24928,10 +24928,10 @@ Telepathy is 120ft.</other>
 	<actions>
 		<multiattack>The kraken makes three tentacle attacks, each of which it can replace with one use of Fling.</multiattack>
 		<attack>Bite,18,5,One target. Hit: 23 (3d8+10) piercing damage. lf the target is a Large or smaller creature grappled by the kraken, that creature is swallowed, and the grapple ends. While swallowed, the creature is blinded and restrained, it has total cover against attacks and other effects outside the kraken, and it takes 42 (12d6) acid damage at the start of each of the kraken's turns.
-lf the kraken takes 50 damage or more on a single turn from a creature inside lt, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. lf the kraken dìes, a swallowed creature is no longer restrained by it and can escape from the corpse usrng 15 feet of movement, exiting prone.</attack>
+lf the kraken takes 50 damage or more on a single turn from a creature inside lt, the kraken must succeed on a DC 25 Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, which fall prone in a space within 10 feet of the kraken. If the kraken does, a swallowed creature is no longer restrained by it and can escape from the corpse usrng 15 feet of movement, exiting prone.</attack>
 		<attack>Tentacle,18,30,One target. Hit: 20 (3d6+10) bludgeoning damage, and the target is grappled (escape DC 18). Until this grapple ends, the target is restrained. The kraken has ten tentacles, each of which can grapple one target.</attack>
-		<effect>Fling,null,One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. Ifa thrown target strikes a soìid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. lf the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.</effect>
-		<effect>Lightning Storm,null,The kraken magicalìy creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
+		<effect>Fling,null,One Large or smaller object held or creature grappled by the kraken is thrown up to 60 feet in a random direction and knocked prone. If a thrown target strikes a solid surface, the target takes 3 (1d6) bludgeoning damage for every 10 feet it was thrown. lf the target is thrown at another creature, that creature must succeed on a DC 18 Dexterity saving throw or take the same damage and be knocked prone.</effect>
+		<effect>Lightning Storm,null,The kraken magically creates three bolts of lightning, each of which can strike a target the kraken can see within 120 feet of it. A target must make a DC 23 Dexterity saving throw, taking 22 (4d10) lightning damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
 	<legendaryactions>3
 		<legendaryaction>Tentacle Attack or Fling,1,The kraken makes one tentacle attack or uses its Fling.</legendaryaction>

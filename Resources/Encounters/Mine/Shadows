@@ -1,0 +1,7 @@
+<encounter>
+	<name>Shadows</name>
+	<creature>1,Shadow Demon</creature>
+	<creature>8,Shadow</creature>
+	<mult>Standard</mult>
+	<party>9,9,9</party>
+</encounter>

@@ -1,0 +1,6 @@
+<encounter>
+	<name>PortalDemon</name>
+	<creature>1,Alkilith</creature>
+	<mult>Standard</mult>
+	<party>9,9,9</party>
+</encounter>

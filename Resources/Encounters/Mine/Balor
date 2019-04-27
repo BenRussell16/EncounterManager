@@ -1,0 +1,6 @@
+<encounter>
+	<name>Balor</name>
+	<creature>1,Lesser balor</creature>
+	<mult>Standard</mult>
+	<party>9,9,9</party>
+</encounter>

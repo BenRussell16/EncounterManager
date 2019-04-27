@@ -1,0 +1,7 @@
+<encounter>
+	<name>MasterOfCruelties</name>
+	<creature>5,Cackler</creature>
+	<creature>1,Master of Cruelties</creature>
+	<mult>Standard</mult>
+	<party>9,9,9</party>
+</encounter>

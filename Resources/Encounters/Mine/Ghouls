@@ -1,0 +1,7 @@
+<encounter>
+	<name>Ghouls</name>
+	<creature>4,Ghoul</creature>
+	<creature>1,Maurezhi</creature>
+	<mult>Standard</mult>
+	<party>9,9,9</party>
+</encounter>
