@@ -671,6 +671,7 @@ public class EncounterBuilder {
 		      	            }
 							if(newValue.isEmpty()) {cusValue.setText("0");}//ensure not empty
 							cusValue.setText(""+Double.parseDouble(cusValue.getText()));//remove leading 0's
+							cusValue.getOnAction().handle(null);//Update values if you forget to hit enter.
 						}
 		      	    });
 					cusValue.setOnAction(new EventHandler<ActionEvent>() {//when text is confirmed update the xp panel
@@ -887,6 +888,38 @@ public class EncounterBuilder {
 			else {difficultyLabel="Deadly";}
 			label = new Label(postMultValue()+"XP is "+difficultyLabel);		tables.add(label, 0, 22, 4, 23);
 			partyPanel.add(tables, 0, 2, 3, 2);
+			
+			
+	      	GridPane randomButtons = new GridPane();							//TODO - Label for random encounter generation.
+	      	randomButtons.setHgap(10);
+	      	randomButtons.setVgap(10);
+	      		randomButtons.add(new Label("Generate Random Encounter."), 0, 0);
+	      		for(int i=0; i<4; i++){
+	      			Button gen = new Button();
+	      			switch (i) {
+	      				case 0:
+	      					gen.setText("Easy");
+	      					break;
+	      				case 1:
+	      					gen.setText("Medium");
+	      					break;
+	      				case 2:
+	      					gen.setText("Hard");
+	      					break;
+	      				case 3:
+	      					gen.setText("Deadly");
+	      					break;
+					}
+	      			randomButtons.add(gen, i+1, 0);
+	      			final int j = i;
+	      			gen.setOnAction(new EventHandler<ActionEvent>() {
+						@Override public void handle(ActionEvent event) {
+							// TODO Auto-generated method stub
+							System.out.println(thresholds[j]);
+						}
+					});
+	      		}
+	      	partyPanel.add(randomButtons, 0, 5, 3, 1);
 		}
 	}
 	
