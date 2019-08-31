@@ -11,6 +11,7 @@ public enum Source{
 	SWORDCOASTADVENTURERSGUIDE("Sword Coast Adventurer's Guide"),
 		
 	CURSEOFSTRAHD("Curse of Strahd"),
+	GHOSTSOFSALTMARSH("Ghosts of Saltmarsh"),
 	GUILDMASTERSGUIDETORAVNICA("Guildmasters' Guide to Ravnica"),
 	HOARDOFTHEDRAGONQUEEN("Hoard of the Dragon Queen"),
 	LOSTLABORATORYOFKWALISH("Lost Laboratory of Kwalish"),
@@ -25,6 +26,9 @@ public enum Source{
 	WATERDEEPDUNGEONOFTHEMADMAGE("Waterdeep: Dungeon of the Mad Mage"),
 	
 	TORTLEPACKAGE("The Tortle Package"),
+	
+	ACQUISITIONSINCORPORATED("Acquisitions Incorporated."),
+	STRANGERTHINGS("D&D Starter Set: Stranger Things"),
 	
 	HUNTERSMARK("Hunter's Mark"),
 	KARTHUNLANDSOFCONFLICT("Karthun: Lands of Conflict"),

@@ -367,7 +367,7 @@ If the oil is sticky, any creature that enters the puddle's area or starts its t
 	<actions>
 		<attack>Scimitar,3,5,One target. Hit: 4 (1d6+1) slashing damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH</source>
+	<source>LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Dolphin</name>
@@ -678,7 +678,7 @@ Gets spell slots back after a short rest.</other>
 		<attack>Blood Drain,5,5,One creature. Hit: 5 (1d4+3) piercing damage, and the stirge attaches to the target. While attached, the stirge doesn't attack. lnstead, at the start of each of the stirge's turns, the target loses 5 (1d4+3) hit points due to blood loss.
 The stirge can detach itself by spending 5 feet of its movement. It does so after it drains 10 hit points of blood from the target or the target dies. A creature, including the target, can use its action to detach the stirge.</attack>
 	</actions>
-	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH</source>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Twig Blight</name>
@@ -705,7 +705,7 @@ Understands Common but doesn't speak.</other>
 	<actions>
 		<attack>Claws,3,5,One target. Hit: 3 (1d4+1) piercing damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Xvart</name>
@@ -1242,7 +1242,7 @@ Is a Boros spellcaster.</other>
 		<attack>Scimitar,4,5,One target. Hit: 5 (1d6+2) slashing damage.</attack>
 		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Goblin Gang Member</name>
@@ -1674,7 +1674,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH</source>
+	<source>LOSTMINEOFPHANDELVER,LOSTLABORATORYOFKWALISH,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Small Yellow Musk Zombie</name>
@@ -1935,7 +1935,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 		<attack>Bite,4,5,One target. Hit: 4 (1d4+2) piercing damage.</attack>
 		<attack>Claw,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
 	</actions>
-	<source>MONSTERMANUAL</source>
+	<source>MONSTERMANUAL,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Vegepygmy</name>
@@ -2091,7 +2091,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<actions>
 		<attack>Bite,4,5,one target. Hit: 7 (2d4+2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Yellow Musk Zombie</name>
@@ -2141,7 +2141,7 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<actions>
 		<attack>Slam,3,5,One target. Hit: 4 (1d6+1) bludgeoning damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Ambush Drake</name>
@@ -2596,7 +2596,7 @@ The ooze can eat through 2-inch-thick, nonmagical metal in 1 round.</passive>
 slashing darrrage if used with two hands.</attack>
 		<attack>Longbow,3,150,600,One target. Hit: 5 (1d8+1) piercing damage.</attack>
 	</actions>
-	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Hybrid Spy</name>
@@ -2890,7 +2890,7 @@ Understands Infernal but can't speak.</other>
 		<attack>Greataxe,5,5,One target. Hit: 9 (1d12+3) slashing damage.</attack>
 		<attack>Javelin,5,30,120,One target. Hit: 6 (1d6+3) piercing damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Orc Nurtured One of Yurtrus</name>
@@ -3319,7 +3319,7 @@ A creature reduced to 0 hit points by a swarm of centipedes is stable bul poison
 		<attack>Bites,0,0,One creature in the swarm's space. Hit: The target is infested by 1d4 rot grubs. At the start of each of the target's turns, the target takes 1d6 piercing damage per rot grub infesting it. Applying fire to the bite wound before the end of the target's next turn deals 1 fire damage to the target and kills these rot grubs. After this time, these rot grubs are too far under the skin to be burned.
 If a target infested by rot grubs ends its turn with 0 hit points, it dies as the rot grubs burrow into its heart and kill it. Any effect that cures disease kills all rot grubs infesting the target.</attack>
 	</actions>
-	<source>VOLOSGUIDETOMONSTERS</source>
+	<source>VOLOSGUIDETOMONSTERS,GHOSTSOFSALTMARSH</source>
 </creature>
 <creature>
 	<name>Swarm of Spiders</name>
@@ -3717,7 +3717,7 @@ fighting.
 		<attack>Morningstar,4,5,One target. Hit: 11 (2d8+2) piercing damage.</attack>
 		<attack>Javelin,4,30,120,One target. Hit: 5 (1d6+2) piercing damage, or 9 (2d6+2) piercing damage in melee.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Category 1 Krasis</name>
@@ -4042,7 +4042,7 @@ d8	Minor Adaptation
 	<actions>
 		<attack>Quarterstaff,1,5,One target. Hit: 3 (1d8-1) bludgeoning damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Faerie Dragon (Orange)</name>
@@ -4279,7 +4279,7 @@ Spell slots come back after a short rest.</other>
 		<attack>Bite,2,5,One target. Hit: 9 (2d6+2) piercing damage.</attack>
 		<attack>Claw,4,5,One target. Hit: 7 (2d4+2) slashing damage. If the target is a creature other than an elf or undead, it must succeed on a DC 10 Constitution saving throw or be paralyzed for 1 minute. The creature can repeat the saving throw at the end of each of its turns, ending the effect early on a success.</attack>
 	</actions>
-	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Giant Octopus</name>
@@ -4359,7 +4359,7 @@ Spell slots come back after a short rest.</other>
 		<attack>Bite,5,5,One creature. Hit: 7 (1d8+3) piercing damage, and the target must make a DC 11 Constitution saving throw, taking 9 (2d8) poison damage on a failed save, or half as much damage on a successful one. If the poison reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, and paralyzed while poisoned in this way.</attack>
 		<attack>Web (Recharge 5-6),5,30,60,One creature. Hit: The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerable to fire damage; immune to bludgeoning, poison, and psychic damage).</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Giant Strider</name>
@@ -4859,7 +4859,7 @@ Subtle Spell: When the kobold casts a spell, it can spend 1 sorcery point to cas
 	<actions>
 		<attack>Bite,4,5,One target. Hit: 11 (2d8+2) piercing damage</attack>
 	</actions>
-	<source>VOLOSGUIDETOMONSTERS</source>
+	<source>VOLOSGUIDETOMONSTERS,GHOSTSOFSALTMARSH</source>
 </creature>
 <creature>
 	<name>Nilbog</name>
@@ -5637,7 +5637,7 @@ Innate spellcasting is psionics.</other>
 		<attack>Shortsword,4,5,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 		<attack>Shortbow,4,80,320,One target. Hit: 5 (1d6+2) piercing damage.</attack>
 	</actions>
-	<source>VOLOSGUIDETOMONSTERS,WATERDEEPDRAGONHEIST</source>
+	<source>VOLOSGUIDETOMONSTERS,GHOSTSOFSALTMARSH,WATERDEEPDRAGONHEIST</source>
 </creature>
 <creature>
 	<name>Barnibus Blastwind</name>
@@ -6424,7 +6424,7 @@ While in serpent form, the fathomer gains a swimming speed of 40 feet, the abili
 		<attack>Constrict (Serpent Form Only),4,5,One target. Hit: 9 (2d6+2) bludgeoning damage. If the target is Medium or smaller, it is grappled (escape DC 12). Until the grapple ends, the target is restrained, and the fathomer can't constrict another target.</attack>
 		<attack>Dagger (Human Form Only),4,20,60,One target. Hit: 4 (1d4+2) piercing damage.</attack>
 	</actions>
-	<source>PRINCESOFTHEAPOCALYPSE</source>
+	<source>GHOSTSOFSALTMARSH,PRINCESOFTHEAPOCALYPSE</source>
 </creature>
 <creature>
 	<name>Frulam Mondath</name>
@@ -7492,7 +7492,7 @@ Doesn't have disadvantage in melee.</attack>
 	<reactions>
 		<reaction>Split,When a jelly that is Medium or larger is subjected to lightning or slashing damage, it splits into two new jellies if it has at least 10 hit points. Each new jelly has hit points equal to half the original jelly's, rounded down. New jellies are one size smaller than the original jelly.</reaction>
 	</reactions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Ogre</name>
@@ -7514,7 +7514,7 @@ Doesn't have disadvantage in melee.</attack>
 		<attack>Greatclub,6,5,One target. Hit:13 (2d8+4) bludgeoning damage.</attack>
 		<attack>Javelin,6,30,120,One target. Hit:11 (2d6+4) piercing damage.</attack>
 	</actions>
-	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Orc Claw of Luthic</name>
@@ -7567,6 +7567,40 @@ Doesn't have disadvantage in melee.</attack>
 		<attack>Touch of the White Hand,3,5,One target. Hit: 9 (2d8) necrotic damage.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS</source>
+</creature>
+<creature>
+	<name>Orcish Disarmer</name>
+	<size>MEDIUM</size>
+	<type>HUMANOID,ORC,false</type>
+	<align>NG,CG,TN,CN,NE,CE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>50</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 14,DEX 15,CON 16,INT 10,WIS 15,CHA 11</stats>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,ORCISH</languages>
+	<regions>FOREST,GRASSLAND,HILL,MOUNTAIN</regions>
+	<passives>
+		<passive>Unarmoured Defense,While the disarmer is wearing no armour and wielding no shield, its AC includes its Wisdom modifier.</passive>
+		<passive>Vengeful Rage,When the disarmer is bloodied (has less than half of its maximum hitpoints) whenever it makes an attack it may make two attacks.</passive>
+		<passive>Aggressive,As a bonus action, the orc can move up to its speed toward a hostile creature that it can see.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The orc makes one attack with either a one handed weapon or an Unarmed Strike, and an attack with its Clawed Left Hand.</multiattack>
+		<attack>Improvised Weapon,4,5,One target. Hit: Damage appropriate for the stolen weapon with +2 Strength.</attack>
+		<attack>Clawed Left Hand,4,5,One target. Hit: 7 (1d8+2) slashing damage.</attack>
+		<attack>Emergency Handaxe,4,20,60,One target. Hit: 6 (1d6+2) slashing damage.</attack>
+		<attack>Unarmed Strike,4,5,One target. Hit: 5 (1d4+2) bludgeoning damage.</attack>
+		<attack>Disarming Strike (Recharge 6),4,5,One target. Hit: 8 (1d6+1d4+2) bludgeoning damage. The target must make DC 12 Strength saving throw, dropping their weapon on a failure. If the target drops their weapon you may pick it up if no other attacks are made this turn.</attack>
+	</actions>
+	<reactions>
+		<reaction>Deflect Missiles,When the disarmer is hit by a ranged weapon attack, it reduces the damage from the attack by 1d10+2. If the damage is reduced to 0, the disarmer can catch the missile if it is small enough to hold in one hand and the disarmer has at least one hand free.</reaction>
+	</reactions>
+	<source>CUSTOM</source>
 </creature>
 <creature>
 	<name>Oreioth</name>
@@ -8644,7 +8678,7 @@ A spell such as lesser restoraton or remove curse can end the transformation pro
 		<attack>Constrict,6,20,One creature. Hit: The target takes 11 (2d6+4) bludgeoning damage, and It is grappled (escape DC 14). Until this grapple ends, the target is restrained, and it takes 21 (6d6) poison damage at the start of each of its turns. The vine can constrict only one target at a time.</attack>
 		<effect>Entangling Vines,null,The assassin vine can animate normal vines and roots on the ground in a 15-foot square within 30 feet of it. These plants turn the ground in that area in to difficult terrain. A creature in that area when the effect begins must succeed on a DC 13 Strength saving throw or be restrained by entangling vines and roots. A creature restrained by the plants can use its action to make a DC 13 Strength (Athletics) check, freeing itself on a successful check. The effect ends after 1 minute or when the assassin vine dies or uses Entangling Vines again.</effect>
 	</actions>
-	<source>TOMBOFANNIHILATION</source>
+	<source>GHOSTSOFSALTMARSH,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Black Earth Priest</name>
@@ -8915,7 +8949,7 @@ A humanoid slain by this attack rises 24 hours later as a zombie under the wight
 		<attack>Claw (Hybrid Form Only),6,5,One target. Hit: 7 (1d6+4) slashing damage.</attack>
 		<effect>Psychic Screech,Hybrid Form Only; Recharges after a Short or Long Rest,The deep scion emits a terrible scream audible within 300 feet. Creatures within 30 feet of the deep scion must succeed on a DC 13 Wisdom saving throw or be stunned until the end of the deep scion's next turn. In water, the psychic screech also telepathically transmits the deep scion's memories of the last 24 hours to its master, regardless of distance, so long as it and its master are in the same body of water.</effect>
 	</actions>
-	<source>VOLOSGUIDETOMONSTERS</source>
+	<source>VOLOSGUIDETOMONSTERS,GHOSTSOFSALTMARSH</source>
 </creature>
 <creature>
 	<name>Derro (Variant: Savant)</name>
@@ -9835,7 +9869,7 @@ Violet		51 years or more.</other>
 		<attack>Beak,7,5,One target. Hit: 10 (1d10+5) piercing damage.</attack>
 		<attack>Claws,7,5,One target. Hit: 14 (2d8+5) slashing damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Phantom Warrior</name>
@@ -11071,7 +11105,7 @@ The pudding can eat through 2-inch-thick, nonmagical wood or metal in 1 round.</
 		<multiattack>The flameskull makes two attacks with its Fire Ray.</multiattack>
 		<attack>Fire Ray,5,30,One target. Hit: 10 (3d6) fire damage.</attack>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Ghost</name>
@@ -13499,7 +13533,7 @@ Only has lair actions when with a group of Golgari.</other>
 		<attack>Thunderous Touch,5,5,One creature. Hit: 27 (5d10) thunder damage.</attack>
 		<effect>Voice of the Kraken,Recharges after a Short or Long Rest,A kraken speaks through the priest with a thunderous voice audible within 300 feet. Creatures of the priest's choice that can hear the kraken's words (which are spoken in Abyssal, Infernal, or Primordial) must succeed on a DC 14 Charisma saving throw or be frightened for 1 minute. A frightened target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</effect>
 	</actions>
-	<source>VOLOSGUIDETOMONSTERS</source>
+	<source>VOLOSGUIDETOMONSTERS,GHOSTSOFSALTMARSH</source>
 </creature>
 <creature>
 	<name>Lesser marilith</name>
@@ -13897,7 +13931,7 @@ lf the disease is cured before the tadpole's emergence, the unborn slaad is disi
 		<attack>Bite,6,5,One target. Hit: 12 (2d8+3) piercing damage.</attack>
 		<attack>Claw,6,5,One target. Hit: 12 (2d8+3) piercing damage.</attack>
 	</actions>
-	<source>TALESFROMTHEYAWNINGPORTAL</source>
+	<source>GHOSTSOFSALTMARSH,TALESFROMTHEYAWNINGPORTAL</source>
 </creature>
 <creature>
 	<name>Shambling bone mound</name>
@@ -14656,7 +14690,7 @@ Get spell slots back on a short rest.</other>
 		<attack>Fist,5,5,One target. Hit: 4 (1d4+2) bludgeoning damage plus 9 (2d8) necrotic damage.</attack>
 		<effect>Withering Gaze,null,One creature that the bodak can see within 60 feet of it must make a DC 13 Constitution saving throw, taking 22 (4d10) necrotic damage on a failed save, or half as much damage on a successful one.</effect>
 	</actions>
-	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
+	<source>VOLOSGUIDETOMONSTERS,GHOSTSOFSALTMARSH,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
 	<name>Bonebreaker Dorokor</name>
@@ -17906,7 +17940,7 @@ Only has legendary actions when all 5 Obzedat ghosts are there, and they share t
 		<lairaction>A wall of tangled brush bristling with thorns springs into existence on a solid surface within 120 feet of the dragon. The wall is up to 60 feet long, 10 feet high, and 5 feet thick, and it blocks line of sight. When the wall appears, each creature in its area must make a DC 15 Dexterity saving throw. A creature that fails the save takes 18 (4d8) piercing damage and is pushed 5 feet out of the wall's space, appearing on whichever side of the wall it wants. A creature can move through the wall, albeit slowly and painfully. For every 1 foot a creature travels through the wall, it must spend 4 feet of movement. Furthermore, a creature in the wall's space must make a DC 15 Dexterity saving throw once each round it's in contact with the wall, taking 18 (4d8) piercing damage on a failed save' or half as much damage on a successful one. Each 10-foot section of wall has AC 5, 15 hit points, vulnerability to fire damage, resistance to bludgeoning and piercing damage, and immunity to psychic damage. The wall sinks back into the ground when the dragon uses this lair action again or when the dragon dies.</lairaction>
 		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
 	</lair>
-	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER</source>
+	<source>MONSTERMANUAL,LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Zindar</name>
@@ -20568,6 +20602,38 @@ Telepathy is 1 mile.</other>
 	<source>LOSTLABORATORYOFKWALISH</source>
 </creature>
 <creature>
+	<name>Greater Wyvern</name>
+	<size>HUGE</size>
+	<type>DRAGON,false</type>
+	<align>UNALIGNED</align>
+	<cr>11.0</cr>
+	<ac>18</ac>
+	<hp>200</hp>
+	<speed>WALK 40,FLY 80</speed>
+	<stats>STR 22,DEX 10,CON 20,INT 8,WIS 12,CHA 8</stats>
+	<saves>DEX 5,CON 10</saves>
+	<skills>ATHLETICS 11,PERCEPTION 6</skills>
+	<multipliers>
+		<RESISTANCE>FIRE,POISON</RESISTANCE>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<regions>DESERT,GRASSLAND,HILL,MOUNTAIN</regions>
+	<other></other>
+	<actions>
+		<multiattack>If flying the Wyvern makes a bite attack and 2 claw attacks, if grounded it makes a bite attack and a tail attack.</multiattack>
+		<attack>Bite,11,10,One target. Hit: 15 (2d8+6) piercing damage. The target must also make a DC 19 Strength saving throw against being knocked prone.</attack>
+		<attack>Claw,11,5,One target. Hit: 13 (2d6+6) slashing damage. This can only be used if the Wyvern is flying or the target is prone, if used against a prone creature while grounded they also become grappled and restrained (DC 19 to escape).</attack>
+		<attack>Tail,11,15,One target. Hit: 12 (1d10+6) bludgeoning damage and 5 (1d10) piercing damage. The target must make a DC 18 Constitution saving throw, taking 36 (8d8) poison damage on a failed save, or half as much damage on a successful one.</attack>
+		<effect>Fire Breath,Recharge 6,The Wyvern chooses a point within 60ft and spits a ball of fire at it. Creatures within a 10ft radius of that point must make a DC 18 Dexterity saving throw, taking 49 (14d6) fire damage, or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>1
+		<legendaryaction>Detect,1,The Wyvern makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Bite attack,1,The Wyvern makes a bite attack.</legendaryaction>
+		<legendaryaction>Charge,1,The Wyvern moves up to half its walking speed without provoking attacks of opportunity. Any creatures in this path must make a DC 19 Dexterity saving throw or take 1d6 bludgeoning damage and be knocked prone. On a successful save the creature can move 5ft out of the way, if they are still in the path after this movement they take the effects of a failed save.</legendaryaction>
+	</legendaryactions>
+	<source>CUSTOM</source>
+</creature>
+<creature>
 	<name>Gynosphinx</name>
 	<size>LARGE</size>
 	<type>MONSTOSITY,false</type>
@@ -22890,7 +22956,7 @@ Understands the languages of its creator but can't speak.</other>
 		<lairaction>The giant creates a 20-foot-radius sphere of fog (or murky water within water) centered on a point anywhere in its lair. The sphere spreads around corners, and its area is heavily obscured. The fog lasts until the giant disperses it (no action required), and it can't be dispersed by wind.</lairaction>
 		<lairaction>The giant creates a 60-foot-long, 10-foot-wide line of strong wind (or strong current within water) originating from a point anywhere in its lair. Each creature in that line must succeed on a DC 18 Strength saving throw or be pushed 15 feet in the direction the wind is blowing. The gust disperses gas or vapor, and it extinguishes candles, torches, and similar unprotected flames in its area. Protected flames, such as those of lanterns, have a 50 percent chance of being extinguished.</lairaction>
 	</lair>
-	<source>VOLOSGUIDETOMONSTERS</source>
+	<source>VOLOSGUIDETOMONSTERS,GHOSTSOFSALTMARSH</source>
 </creature>
 <creature>
 	<name>Zegana</name>
