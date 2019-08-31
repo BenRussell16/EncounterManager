@@ -27,7 +27,7 @@ public enum Source{
 	
 	TORTLEPACKAGE("The Tortle Package"),
 	
-	ACQUISITIONSINCORPORATED("Acquisitions Incorporated."),
+	ACQUISITIONSINCORPORATED("Acquisitions Incorporated"),
 	STRANGERTHINGS("D&D Starter Set: Stranger Things"),
 	
 	HUNTERSMARK("Hunter's Mark"),

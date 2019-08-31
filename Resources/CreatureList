@@ -7950,6 +7950,39 @@ Only has lair actions when with a group of Rakdos.</other>
 	<source>WATERDEEPDUNGEONOFTHEMADMAGE</source>
 </creature>
 <creature>
+	<name>Splugoth the Returned</name>
+	<size>SMALL</size>
+	<type>HUMANOID,GOBLINOID,false</type>
+	<align>NE</align>
+	<cr>2.0</cr>
+	<ac>15</ac>
+	<hp>27</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 10,DEX 14,CON 12,INT 14,WIS 11,CHA 10</stats>
+	<saves>INT 4,WIS 2</saves>
+	<skills>STEALTH 6</skills>
+	<multipliers>
+	</multipliers>
+	<senses>DARKVISION 60</senses>
+	<languages>COMMON,DRACONIC,ELVISH,GOBLIN</languages>
+	<regions></regions>
+	<passives>
+		<passive>Nimble escape,This creature can take the disengage or hide action as a bonus action on each of its turns.</passive>
+		<passive>Defensive Advantage,As long as two or more of Splugoth's allies are within 5 feet of him and are not incapacitated, attack rolls against him are made with disadvantage.</passive>
+		<passive>Touch of Madness,Splugoth has advantage on saving throws against being charmed or frightened.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>Splugoth makes two attacks with his dagger.</multiattack>
+		<attack>Dagger,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
+		<effect>Word from Beyond,1/Day,Splugoth remembers and repeats aloud a few words from a place he entered while walking back from the next world to this one. Each creature of his choice within 30 feet of him that can hear him must succeed on a DC 12 Wisdom saving throw or be stunned until the end of its next turn.</effect>
+	</actions>
+	<reactions>
+		<reaction>Absorb Attack,When a creature Splugoth can see hits him with a melee weapon attack, the weapon snags on a pocket of residual resurrectional energy and is caught fast. The attack is negated and the weapon cannot be used until the creature succeeds on a DC 12 Strength (Athletics) check as an action to pull it out of Splugoth. Natural weapons can have their attacks negated by this feature, but can then be retracted automatically at the end of the attacking creature's turn.</reaction>
+	</reactions>
+	<source>ACQUISITIONSINCORPORATED</source>
+</creature>
+<creature>
 	<name>Thayan Apprentice</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -9035,7 +9068,7 @@ A humanoid slain by this attack rises 24 hours later as a zombie under the wight
 		<attack>Slam,6,5,One target. Hit: 7 (1d6+4) bludgeoning damage.</attack>
 		<effect>Read Thoughts,null,The doppelganger magically reads the surface thoughts of one creature within 60 feet of it. The effect can penetrate barriers, but 3 feet of wood or dirt, 2 feet of stone, 2 inches of metal, or a thin sheet of lead blocks it. While the target is within range, the doppelganger can continue reading its thoughts as long as the doppelganger's concentration isn't broken. While reading the target's mind, the doppelganger has advantage on Wisdom (Insight) and Charisma (Deception, Intimidation, and Persuasion) checks against the target.</effect>
 	</actions>
-	<source>LOSTMINEOFPHANDELVER</source>
+	<source>LOSTMINEOFPHANDELVER,STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Dralmorrer Borngray</name>
@@ -10945,6 +10978,33 @@ Spell slots come back on a short rest.</other>
 	<source>TORTLEPACKAGE</source>
 </creature>
 <creature>
+	<name>Demogorgon (Stranger Things)</name>
+	<size>MEDIUM</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>15</ac>
+	<hp>60</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 16,DEX 12,CON 16,INT 3,WIS 12,CHA 5</stats>
+	<skills>PERCEPTION 3,STEALTH 5</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 60</senses>
+	<regions></regions>
+	<passives>
+		<passive>Keen smell,This creature has advantage on Wisdom (Perception) checks that rely on smell.</passive>
+		<passive>Blood Frenzy,The demogorgon has advantage on melee attack rolls against any creature that doesn't have all its hit points.</passive>
+		<passive>Regeneration,The demogorgon regains 10 hit points at the start of its turn. If the demogorgon takes acid or fire damage. this trait doesn't function at the start of the demogorgon's next turn. The demogorgon dies only if it starts its turn with 0 hit points and doesn't regenerate.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<attack>Bite,5,5,One target. Hit: 7 (1d8+3) piercing damage.</attack>
+		<attack>Claw,5,5,One target. Hit: 12 (2d8+3) slashing damage.</attack>
+	</actions>
+	<source>STRANGERTHINGS</source>
+</creature>
+<creature>
 	<name>Drow gunslinger</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,ELF,false</type>
@@ -12076,6 +12136,37 @@ fighting.
 		<effect>Create Green Slime,1/Day,The Pudding King creates a patch of green slime (see "Dungeon Hazards" in chapter 5 of the Dungeon masters Guide). The slime appears on a section of wall, ceiling, or floor within 30 Feet of the Pudding King.</effect>
 	</actions>
 	<source>OUTOFTHEABYSS</source>
+</creature>
+<creature>
+	<name>Thessalhydra (Stranger Things)</name>
+	<size>HUGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>4.0</cr>
+	<ac>14</ac>
+	<hp>69</hp>
+	<speed>WALK 30,SWIM 30</speed>
+	<stats>STR 19,DEX 12,CON 20,INT 5,WIS 10,CHA 7</stats>
+	<skills>PERCEPTION 4</skills>
+	<multipliers>
+		<IMMUNITY>ACID</IMMUNITY>
+	</multipliers>
+	<conditions>BLINDED,CHARMED,DEAFENED,FRIGHTENED,STUNNED</conditions>
+	<senses>DARKVISION 60</senses>
+	<regions></regions>
+	<other></other>
+	<actions>
+		<multiattack>The thessalhydra makes one maw attack and one Flurry of Bites.</multiattack>
+		<attack>Flurry of Bites,7,10,One target. Hit: 7 (1d6+4) piercing damage plus 10 (4d4) poison damage.</attack>
+		<attack>Maw,7,5,One target. Hit: 9 (1d10+4) piercing damage plus 5 (1d10) acid damage.</attack>
+		<attack>Tail Pincer,7,10,One target. Hit: 10 (1d12+4) slashing damage, and the target is grappled. As on action, the target can escape the grapple by succeeding on a DC 14 Strength (Athletics) or Dexterity (Acrobatics) check (its choice). Until this grapple ends, the thessalhydra can't use its tail pincer.</attack>
+		<effect>Acid Saliva,Recharge 5-6,The thessalhydra spits a glob of acid at a point it con see within 30 feet of it. Each creature within 10 feet of that point must make a DC 15 Dexterity saving throw, taking 18 (4d8) acid damage on a failed save. or half as much damage on a successful one.</effect>
+	</actions>
+	<legendaryactions>2
+		<legendaryaction>Detect,1,The thessalhydra makes a Wisdom (Perception) check with advantage.</legendaryaction>
+		<legendaryaction>Tail Swipe,1,The thessalhydra makes a tail pincer attack.</legendaryaction>
+	</legendaryactions>
+	<source>STRANGERTHINGS</source>
 </creature>
 <creature>
 	<name>Two-headed Plesiosaurus</name>
@@ -18336,6 +18427,36 @@ Telepathy is 120ft.</other>
 	<source>GUILDMASTERSGUIDETORAVNICA</source>
 </creature>
 <creature>
+	<name>Deep Crow</name>
+	<size>LARGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>9.0</cr>
+	<ac>17</ac>
+	<hp>133</hp>
+	<speed>WALK 20,FLY 80</speed>
+	<stats>STR 20,DEX 16,CON 18,INT 8,WIS 15,CHA 14</stats>
+	<saves>CON 8,WIS 6</saves>
+	<skills>PERCEPTION 6,STEALTH 11</skills>
+	<multipliers>
+	</multipliers>
+	<senses>BLINDSIGHT 30,DARKVISION 120</senses>
+	<languages>DEEPCROW</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Shadow stealth,While in dim light or darkness, this creature can take the hide action as a bonus action.</passive>
+		<passive>Sunlight sensitivity,While in sunlight, this creature has disadvantage on attack rolls, as well as Wisdom (Perception) checks that rely on sight.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The deep crow makes three attacks: one with its mandibles and two with its claws.</multiattack>
+		<attack>Mandibles,9,10,One target. Hit: 16 (2d10+5) piercing damage, and the target is grappled (escape DC 17). Until this grapple ends, the target is restrained, and the deep crow can't use its mandibles on another target.</attack>
+		<attack>Claw,9,5,One target. Hit: 12 (2d6+5) slashing damage.</attack>
+	</actions>
+	<source>ACQUISITIONSINCORPORATED</source>
+</creature>
+<creature>
 	<name>Durnan</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -22338,6 +22459,42 @@ If the target is a Large or smaller nonmagical object or creation of magical for
 		<lairaction>Magical fog billows around one creature the dragon can see within 120 feet of it. The creature must succeed on a DC 15 Wisdom saving throw or be charmed by the dragon until initiative count 20 on the next round.</lairaction>
 	</lair>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Ancient Deep Crow</name>
+	<size>HUGE</size>
+	<type>MONSTOSITY,false</type>
+	<align>UNALIGNED</align>
+	<cr>15.0</cr>
+	<ac>18</ac>
+	<hp>187</hp>
+	<speed>WALK 20,FLY 80</speed>
+	<stats>STR 23,DEX 16,CON 23,INT 10,WIS 15,CHA 19</stats>
+	<saves>CON 11,WIS 7</saves>
+	<skills>PERCEPTION 7,STEALTH 13</skills>
+	<multipliers>
+		<RESISTANCE>NONMAGICALBASIC</RESISTANCE>
+	</multipliers>
+	<senses>BLINDSIGHT 60,DARKVISION 120</senses>
+	<languages>DEEPCROW</languages>
+	<regions></regions>
+	<passives>
+		<passive>Magic resistance,Has advantage on saving throws against spells and other magical effects.</passive>
+		<passive>Shadow stealth,While in dim light or darkness, this creature can take the hide action as a bonus action.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The ancient deep crow makes three attacks: one with its mandibles and two with its claws.</multiattack>
+		<attack>Mandibles,11,10,One target. Hit: 17 (2d10+6) piercing damage, and the target is grappled (escape DC 19). Until this grapple ends, the target is restrained, and the ancient deep crow can't use its mandibles on another target.</attack>
+		<attack>Claw,11,5,One target. Hit: 13 (2d6+6) slashing damage.</attack>
+		<effect>Shadow Caw,null,The ancient deep crow releases an ear-splitting caw. Each creature within 60 feet of the crow and able to hear it must make a DC 17 Constitution saving throw. On a failure, a creature takes 10 (3d6) psychic damage.</effect>
+	</actions>
+	<legendaryactions>3
+		<legendaryaction>Detect,1,The deep crow makes a Wisdom (Perception) check.</legendaryaction>
+		<legendaryaction>Shadow Caw,2,The ancient deep crow uses Shadow Caw.</legendaryaction>
+		<legendaryaction>Wing Attack,2,The ancient deep crow beats its wings. Each creature within 10 feet of the deep crow must succeed on a DC 19 Dexterity saving throw or take 13 (2d6+6) bludgeoning damage and be knocked prone. The ancient deep crow can then fly up to half its flying speed.</legendaryaction>
+	</legendaryactions>
+	<source>ACQUISITIONSINCORPORATED</source>
 </creature>
 <creature>
 	<name>Green Abishai</name>

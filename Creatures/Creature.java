@@ -413,12 +413,11 @@ public interface Creature {
 			HUMAN,DWARF,ELF,//General races
 			GITH,GNOLL,GOBLINOID,KOBOLD,ORC,//Common NPC races
 			AARAKOCRA,BULLYWUG,DERRO,ELADRIN,FIRENEWT,GENASI,GNOME,//Uncommon races
-			GOLIATH,GRIMLOCK,GRUNG,
-			HALFDRAGON,HALFLING,KENKU,KRAUL,
-			KUOTOA,LAVACHILD,LIZARDFOLK,MEAZEL,MERFOLK,MONGRELFOLK,
-			NAGPA,QUAGGOTH,SAHUAGIN,SAURIAL,
+			GOLIATH,GRIMLOCK,GRUNG,HALFDRAGON,HALFLING,KENKU,KRAUL,
+			KUOTOA,LAVACHILD,LIZARDFOLK,LOCATHAH,MEAZEL,
+			MERFOLK,MONGRELFOLK,NAGPA,QUAGGOTH,SAHUAGIN,SAURIAL,
 			SIMICHYBRID,TABAXI,THRIKREEN,TIEFLING,
-			TORTLE,TROGLODYTE,XVART,YUANTI
+			TORTLE,TRITON,TROGLODYTE,XVART,YUANTI
 			;//TODO humanoid subtypes
 			//I refuse to acknowledge half races.
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
@@ -431,7 +430,7 @@ public interface Creature {
 					+ name().toLowerCase().substring(1);}
 		}
 		private enum undeadSubtype implements Subtype{
-			TITAN;
+			SWARMOF,TITAN;
 			public String toNiceString(){return name().toUpperCase().substring(0, 1)
 					+ name().toLowerCase().substring(1);}
 		}
@@ -526,7 +525,7 @@ public interface Creature {
 		UMBERHULK,VEGEPYGMY,YIKARIA,YETI,
 		BOTHII,NETHERESE,OLMAN,THAYAN,
 		BLINKDOG,GIANTEAGLE,GIANTELK,KRUTHIK,WINTERWOLF,WORG,
-		ICETOAD;
+		DEEPCROW,ICETOAD;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}
