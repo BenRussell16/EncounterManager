@@ -9,20 +9,20 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import Creatures.Creature.Alignment;
 import Creatures.Creature.DamageMultiplier;
 import Creatures.Creature.DamageType;
-import Creatures.Creature.Languages;
 import Creatures.Creature.Region;
 import Creatures.Creature.Senses;
 import Creatures.Creature.Size;
-import Creatures.Creature.Skills;
 import Creatures.Creature.Speeds;
-import Creatures.Creature.Stats;
 import Creatures.Creature.StatusCondition;
 import Creatures.Creature.Type;
 import Creatures.Creature.Type.Subtype;
+import Resources.Alignment;
+import Resources.Languages;
+import Resources.Skills;
 import Resources.Source;
+import Resources.Stats;
 import Spells.Spell;
 
 public class CreatureParser {

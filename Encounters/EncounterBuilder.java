@@ -10,7 +10,6 @@ import java.util.Map;
 import java.util.Scanner;
 
 import Creatures.Creature;
-import Creatures.Creature.Alignment;
 import Creatures.Creature.DamageType;
 import Creatures.Creature.Region;
 import Creatures.Creature.Senses;
@@ -18,6 +17,7 @@ import Creatures.Creature.Size;
 import Creatures.Creature.Speeds;
 import Creatures.Creature.Type;
 import Creatures.Creature.Type.Subtype;
+import Resources.Alignment;
 import Resources.Source;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;

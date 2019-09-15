@@ -3,7 +3,7 @@ package Creatures;
 import java.io.File;
 import java.util.List;
 
-import Creatures.Creature.Stats;
+import Resources.Stats;
 import Spells.Spell;
 import Spells.SpellBookInstance;
 

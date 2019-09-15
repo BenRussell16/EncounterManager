@@ -1991,6 +1991,31 @@ Purple. The poisoned creature feels a desperate need to soak itself in liquid or
 	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
 </creature>
 <creature>
+	<name>Juvenile Genprey</name>
+	<size>TINY</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>0.25</cr>
+	<ac>13</ac>
+	<hp>10</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 6,DEX 14,CON 13,INT 4,WIS 12,CHA 6</stats>
+	<skills>PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<regions>Desert</regions>
+	<passives>
+		<passive>Pack tactics,This creature has advantage on an attack roll against a creature if at least one of this creature's allies is within 5 feet of the creature and the ally isn't incapacitated.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The genprey makes two attacks: one with its bite and one with its claws.</multiattack>
+		<attack>Bite,4,5,One creature. Hit: 5 (1d6+2) piercing damage. The target must make a DC 8 Constitution saving throw or be paralyzed until the end of its next turn.</attack>
+		<attack>Claws,4,5,One target. Hit: 4 (1d4+2) slashing damage.</attack>
+	</actions>
+	<source>CUSTOM</source>
+</creature>
+<creature>
 	<name>Volothamp "Volo" Geddarm</name>
 	<size>MEDIUM</size>
 	<type>HUMANOID,HUMAN,false</type>
@@ -3845,6 +3870,31 @@ d8	Minor Adaptation
 		<attack>Claw,4,5,One target. Hit: 6 (1d8+2) slashing damage.</attack>
 	</actions>
 	<source>VOLOSGUIDETOMONSTERS,TOMBOFANNIHILATION</source>
+</creature>
+<creature>
+	<name>Genprey</name>
+	<size>MEDIUM</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>1.0</cr>
+	<ac>13</ac>
+	<hp>26</hp>
+	<speed>WALK 40</speed>
+	<stats>STR 15,DEX 15,CON 14,INT 4,WIS 12,CHA 6</stats>
+	<skills>PERCEPTION 3</skills>
+	<multipliers>
+	</multipliers>
+	<regions>Desert</regions>
+	<passives>
+		<passive>Pounce,If the deinonychus moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn. that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the deinonychus can make one bite attack against it as a bonus action.</passive>
+	</passives>
+	<other></other>
+	<actions>
+		<multiattack>The Genprey makes three attacks: one with its bite and two with its claws.</multiattack>
+		<attack>Bite,4,5,One target. Hit: 6 (1d8+2) piercing damage. The target must make a DC 12 Constitution saving throw or be paralyzed until the end of its next turn.</attack>
+		<attack>Claw,4,5,One target. Hit: 6 (1d8+2) slashing damage.</attack>
+	</actions>
+	<source>CUSTOM</source>
 </creature>
 <creature>
 	<name>Dragonclaw</name>
@@ -8633,9 +8683,29 @@ A spell such as lesser restoraton or remove curse can end the transformation pro
 	<regions></regions>
 	<other></other>
 	<actions>
-		<attack>Tail,7,10,One target. Hit: 18 (4d6+4) bludgeoning damage. lf the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.</attack>
+		<attack>Tail,7,10,One target. Hit: 18 (4d6+4) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.</attack>
 	</actions>
 	<source>MONSTERMANUAL</source>
+</creature>
+<creature>
+	<name>Apceros</name>
+	<size>HUGE</size>
+	<type>BEAST,false</type>
+	<align>UNALIGNED</align>
+	<cr>3.0</cr>
+	<ac>15</ac>
+	<hp>68</hp>
+	<speed>WALK 30</speed>
+	<stats>STR 19,DEX 11,CON 15,INT 2,WIS 12,CHA 5</stats>
+	<multipliers>
+	</multipliers>
+	<regions>DESERT</regions>
+	<other></other>
+	<actions>
+		<attack>Headbutt,7,5,One target. Hit: 13 (2d8+4) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.</attack>
+		<attack>Tail,7,10,One target. Hit: 18 (4d6+4) bludgeoning damage. If the target is a creature, it must succeed on a DC 14 Strength saving throw or be knocked prone.</attack>
+	</actions>
+	<source>CUSTOM</source>
 </creature>
 <creature>
 	<name>Ankylosaurus Zombie</name>

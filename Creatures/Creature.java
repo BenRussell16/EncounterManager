@@ -5,7 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import Creatures.Creature.Type.Subtype;
+import Resources.Alignment;
+import Resources.Languages;
+import Resources.Skills;
 import Resources.Source;
+import Resources.Stats;
 
 public interface Creature {
 	public void constructor(String name, Size size, Type type, Subtype subtype, boolean isShapechanger,
@@ -96,7 +100,7 @@ public interface Creature {
 	public Map<Skills,Integer> getSkills();
 		public default int getSkillMod(Skills s){
 			if(getSkills().containsKey(s)){return getSkills().get(s);}
-			else{return scoreToMod(getStats().get(s.standardStat));}
+			else{return scoreToMod(getStats().get(s.getStandardStat()));}
 		}
 
 	public Map<DamageMultiplier, List<DamageType>> getMultipliers();
@@ -436,43 +440,10 @@ public interface Creature {
 		}
 	}
 	
-	public enum Alignment{
-		LG("Lawful Good"),NG("Neutral Good"),CG("Chaotic Good"),
-		LN("Lawful Neutral"),TN("True Neutral"),CN("Chaotic Neutral"),
-		LE("Lawful Evil"),NE("Neutral Evil"),CE("Chaotic Evil"),
-		UNALIGNED("Unaligned");
-		private String niceFormat;
-		private Alignment(String niceFormat){this.niceFormat = niceFormat;}
-		public String toNiceString(){return niceFormat;}
-	}
-	
 	public enum Speeds{
 		WALK,BURROW,CLIMB,FLY,SWIM;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
-	}
-	
-	public enum Stats{
-		STR("Strength"),DEX("Deterity"),CON("Constitution"),
-		INT("Intellegence"),WIS("Wisdom"),CHA("Charisma");
-		private String niceFormat;
-		private Stats(String niceFormat){this.niceFormat = niceFormat;}
-		public String toNiceString(){return niceFormat;}
-	}
-	
-	public enum Skills{
-		ACROBATICS("Acrobatics",Stats.DEX),ANIMALHANDLING("Animal Handling",Stats.WIS),ARCANA("Arcana",Stats.INT),ATHLETICS("Athletics",Stats.STR),
-		DECEPTION("Deception",Stats.CHA),HISTORY("History",Stats.INT),INSIGHT("Insight",Stats.WIS),INTIMIDATION("Intimidation",Stats.CHA),
-		INVESTIGATION("Investigation",Stats.INT),MEDICINE("Medicine",Stats.WIS),NATURE("Nature",Stats.INT),PERCEPTION("Perception",Stats.WIS),
-		PERFORMANCE("Performance",Stats.CHA),PERSUASION("Persuasion",Stats.CHA),RELIGION("Religion",Stats.INT),SLIGHTOFHAND("Slight of Hand",Stats.DEX),
-		STEALTH("Stealth",Stats.DEX),SURVIVAL("Survival",Stats.WIS);
-		private String niceFormat;
-		private Stats standardStat;
-		private Skills(String niceFormat, Stats standardStat){
-			this.niceFormat = niceFormat;
-			this.standardStat = standardStat;
-		}
-		public String toNiceString(){return niceFormat;}
 	}
 	
 	public enum DamageMultiplier{
@@ -507,25 +478,6 @@ public interface Creature {
 	
 	public enum Senses{
 		BLINDSIGHT,DARKVISION,TREMORSENSE,TRUESIGHT;
-		public String toNiceString(){return name().toUpperCase().substring(0, 1)
-				+ name().toLowerCase().substring(1);}
-	}
-	
-	public enum Languages{//TODO complete
-		COMMON,DRACONIC,DWARVISH,ELVISH,//Common languages
-		GIANT,GOBLIN,ORCISH,UNDERCOMMON,//Uncommon languages
-		CELESTIAL,DEEPSPEECH,DRUIDIC,SYLVAN,THIEVESCANT,PRIMORDIAL,//Rare languages
-		ABYSSAL,INFERNAL,//Fiendish languages
-		AURAN,AQUAN,IGNAN,TERRAN,//Elemental languages
-		ALL,TELEPATHY,//Universal languages
-		
-		BULLYWUG,GITH,GNOLL,GNOMISH,GRELL,GRUNG,//Other languages
-		HALFLING,HOOKHORROR,IXITXACHITL,KRAUL,MERFOLK,MODRON,OTYUGH,SAHUAGIN,
-		SLAAD,SPHINX,THRIKREEN,TLINCALLI,TROGLODYTE,
-		UMBERHULK,VEGEPYGMY,YIKARIA,YETI,
-		BOTHII,NETHERESE,OLMAN,THAYAN,
-		BLINKDOG,GIANTEAGLE,GIANTELK,KRUTHIK,WINTERWOLF,WORG,
-		DEEPCROW,ICETOAD;
 		public String toNiceString(){return name().toUpperCase().substring(0, 1)
 				+ name().toLowerCase().substring(1);}
 	}

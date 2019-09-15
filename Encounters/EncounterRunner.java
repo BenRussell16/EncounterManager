@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 import Creatures.Creature;
 import Creatures.Creature.DamageType;
-import Creatures.Creature.Stats;
+import Resources.Stats;
 import Spells.Spell;
 import Spells.SpellBookInstance;
 import javafx.scene.layout.GridPane;
